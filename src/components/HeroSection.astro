@@ -1,0 +1,130 @@
+---
+import IdahoImg from '../assets/Idaho.jpg';
+import ColoradoImg from '../assets/Colorado.jpg';
+import FloridaImg from '../assets/Florida.jpg';
+import TexasImg from '../assets/Texas.jpg';
+const images = [
+  { src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=800&fit=crop", label: "Utah", alt: "Delicate Arch en Utah" },
+  { src: IdahoImg.src, label: "Idaho", alt: "Sawtooth Mountains en Idaho" },
+  { src: "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=1200&h=800&fit=crop", label: "Nevada", alt: "Las Vegas Strip en Nevada" },
+  { src: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=1200&h=800&fit=crop", label: "California", alt: "Golden Gate Bridge en California" },
+  { src: TexasImg.src, label: "Texas", alt: "El Álamo en Texas" },
+  { src: FloridaImg.src, label: "Florida", alt: "Miami Beach en Florida" },
+  { src: ColoradoImg.src, label: "Colorado", alt: "Rocky Mountains en Colorado" }
+];
+// Hero Section component
+---
+
+<section class="bg-white py-12 lg:py-20">
+  <div class="w-full mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
+      <!-- Left side - Carousel Image -->
+      <div class="order-2 lg:order-1">
+        <div class="relative h-full min-h-[500px] rounded-2xl overflow-hidden">
+          <div id="heroCarousel" class="relative w-full h-full">
+            <!-- Slides -->
+            
+            {images.map((img, i) => (
+              <figure class={`absolute inset-0 transition-opacity duration-700 ${i === 0 ? 'opacity-100' : 'opacity-0'}`} data-index={i}>
+                <img src={img.src} alt={img.alt} class="w-full h-full object-cover" onerror="this.src='/HeroBuy.jpg'; this.onerror=null;" />
+                <figcaption class="absolute bottom-4 left-4 bg-black/60 text-white text-sm font-medium px-3 py-1 rounded-full">
+                  {img.label}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+          <!-- Dots -->
+          <div id="heroCarouselDots" class="absolute bottom-4 right-4 flex gap-2">
+            {images.map((_, i) => (
+              <button class={`w-2.5 h-2.5 rounded-full border border-white ${i === 0 ? 'bg-white' : 'bg-white/30'}`} data-dot={i} aria-label={`Slide ${i + 1}`}></button>
+            ))}
+          </div>
+        </div>
+      </div>
+      
+      <!-- Right side - Form -->
+      <div class="order-1 lg:order-2">
+        <div class="bg-gray-50 p-8 rounded-2xl h-full min-h-[500px] flex flex-col justify-center">
+          <h2 class="text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-6">
+            Home loans made for your lifestyle
+          </h2>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 h-[200px]">
+            <!-- Left Column: Refinancing and Buying stacked -->
+            <div class="flex flex-col gap-4 h-full">
+              <!-- Refinancing Card -->
+              <a href="/refinance" class="bg-white p-6 rounded-[48px] border-2 border-transparent hover:border-gray-300 hover:scale-105 transition-all group flex-1 block">
+                <div class="flex items-center justify-between h-full">
+                  <span class="text-lg font-semibold text-gray-900">Refinancing</span>
+                  <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center group-hover:bg-gray-200 transition-colors">
+                    <svg class="w-5 h-5 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                  </div>
+                </div>
+              </a>
+              
+              <!-- Buying Card -->
+              <a href="/buy" class="bg-white p-6 rounded-[48px] border-2 border-transparent hover:border-gray-300 hover:scale-105 transition-all group flex-1 block">
+                <div class="flex items-center justify-between h-full">
+                  <span class="text-lg font-semibold text-gray-900">Buying</span>
+                  <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center group-hover:bg-gray-200 transition-colors">
+                    <svg class="w-5 h-5 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                  </div>
+                </div>
+              </a>
+            </div>
+            
+            <!-- Right Column: Today's rates (full height) -->
+            <a href="/rates" class="bg-white p-6 rounded-[48px] border-2 border-transparent hover:border-gray-300 hover:scale-105 transition-all group relative h-full block">
+              <div class="flex items-center justify-between h-full">
+                <span class="text-lg font-semibold text-gray-900">Today's rates</span>
+                <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center group-hover:bg-gray-200 transition-colors">
+                  <svg class="w-5 h-5 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </div>
+              </div>
+              <span class="absolute -top-2 -right-2 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                Live
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  const slides = Array.from(document.querySelectorAll('#heroCarousel figure'));
+  const dots = Array.from(document.querySelectorAll('#heroCarouselDots button'));
+  let current = 0;
+  let timer;
+  function show(index) {
+    slides.forEach((s, i) => {
+      s.style.opacity = i === index ? '1' : '0';
+      s.style.pointerEvents = i === index ? 'auto' : 'none';
+    });
+    dots.forEach((d, i) => {
+      if (i === index) {
+        d.classList.add('bg-white');
+        d.classList.remove('bg-white/30');
+      } else {
+        d.classList.remove('bg-white');
+        d.classList.add('bg-white/30');
+      }
+    });
+    current = index;
+  }
+  function next() { show((current + 1) % slides.length); }
+  function start() { stop(); timer = setInterval(next, 4500); }
+  function stop() { if (timer) clearInterval(timer); }
+  dots.forEach((d, i) => d.addEventListener('click', () => { show(i); start(); }));
+  show(0); start();
+  const container = document.getElementById('heroCarousel');
+  container.addEventListener('mouseenter', stop);
+  container.addEventListener('mouseleave', start);
+</script>

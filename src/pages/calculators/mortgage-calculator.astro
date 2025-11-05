@@ -1,0 +1,1300 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Contact from '../../components/Contact.astro';
+import ImportantLegal from '../../components/ImportantLegal.astro';
+import NextMoveSection from '../../components/NextMoveSection.astro';
+---
+
+<Layout title="Mortgage Calculator - Broker Lenders®">
+	<!-- Breadcrumb -->
+	<section class="bg-white py-4">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<nav class="flex" aria-label="Breadcrumb">
+				<ol class="flex items-center space-x-4">
+					<li>
+						<div>
+							<a href="/" class="text-gray-400 hover:text-gray-500 text-sm font-medium">
+								Home
+							</a>
+						</div>
+					</li>
+					<li>
+						<div class="flex items-center">
+							<svg class="flex-shrink-0 h-5 w-5 text-gray-300" viewBox="0 0 20 20" fill="currentColor">
+								<path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+							</svg>
+							<a href="/calculators" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700">Calculators</a>
+						</div>
+					</li>
+					<li>
+						<div class="flex items-center">
+							<svg class="flex-shrink-0 h-5 w-5 text-gray-300" viewBox="0 0 20 20" fill="currentColor">
+								<path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+							</svg>
+							<span class="ml-4 text-sm font-medium text-gray-500">Mortgage Calculator</span>
+						</div>
+					</li>
+				</ol>
+			</nav>
+		</div>
+	</section>
+
+	<!-- Main Calculator Section -->
+	<section class="py-8 bg-white">
+		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-8">
+				<h1 class="text-2xl font-bold text-gray-900 mb-3">Mortgage calculator</h1>
+				<p class="text-base text-gray-600 max-w-2xl mx-auto">
+					Calculate your monthly mortgage payment and see how much home you can afford. 
+					Our calculator includes principal, interest, taxes, insurance, and more.
+				</p>
+			</div>
+
+			<!-- 2-Column Layout Container -->
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
+				<!-- Left Column: Calculator Form -->
+				<div class="bg-gray-100 p-4 rounded-xl shadow-lg border border-gray-200">
+					<form id="mortgage-form" class="space-y-4">
+						<!-- Home Price -->
+						<div class="bg-white p-1.5 rounded-lg">
+							<!-- Label positioned above input, aligned with placeholder text -->
+							<div class="flex justify-start px-1.5 mb-0.5">
+								<span class="text-xs font-medium text-gray-700">Home price</span>
+							</div>
+							<!-- Input Field -->
+							<div class="relative">
+								<span class="absolute left-1.5 top-1/2 transform -translate-y-1/2 text-gray-500 text-sm">$</span>
+								<input 
+									type="text" 
+									id="homePrice" 
+									name="homePrice"
+									class="w-full pl-5 pr-1.5 py-1.5 bg-transparent border-0 focus:outline-none text-sm"
+									placeholder="0"
+								>
+							</div>
+						</div>
+
+						<!-- Down Payment -->
+						<div class="bg-white p-1.5 rounded-lg">
+							<!-- Label positioned above input, aligned with placeholder text -->
+							<div class="flex justify-start px-1.5 mb-0.5">
+								<span class="text-xs font-medium text-gray-700">Down payment</span>
+							</div>
+							<!-- Input Field with Toggle Buttons -->
+							<div class="flex space-x-2">
+								<div class="relative flex-1">
+									<span id="downPaymentSymbol" class="absolute left-1.5 top-1/2 transform -translate-y-1/2 text-gray-500 text-sm">$</span>
+									<input 
+										type="text" 
+										id="downPayment" 
+										name="downPayment"
+										class="w-full pl-5 pr-1.5 py-1.5 bg-transparent border-0 focus:outline-none text-sm"
+										placeholder="0"
+									>
+								</div>
+								<!-- Toggle Button -->
+								<div class="flex space-x-1">
+									<button 
+										type="button" 
+										id="toggleDollar" 
+										class="px-2 py-1.5 text-xs font-medium rounded-md transition-all duration-200 bg-gray-900 border border-gray-900 text-white hover:bg-gray-800"
+									>
+										$
+									</button>
+									<button 
+										type="button" 
+										id="togglePercent" 
+										class="px-2 py-1.5 text-xs font-medium rounded-md transition-all duration-200 bg-white border border-gray-300 text-gray-600 hover:bg-gray-50"
+									>
+										%
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<!-- Loan Term and Interest Rate (Same Row) -->
+						<div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+							<!-- Loan Term -->
+							<div class="bg-white p-1.5 rounded-lg">
+								<!-- Label positioned above input, aligned with placeholder text -->
+								<div class="flex justify-start items-center px-1.5 mb-0.5">
+									<span class="text-xs font-medium text-gray-700">Loan term</span>
+									<!-- Info Icon with Tooltip -->
+									<div class="relative ml-2 group">
+										<div class="w-4 h-4 bg-black hover:bg-gray-800 rounded-full flex items-center justify-center cursor-help transition-colors">
+											<span class="text-white text-xs font-bold">i</span>
+										</div>
+										<!-- Tooltip -->
+										<div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-1 px-2 py-1 bg-black text-white text-[9px] rounded opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 w-32 text-center leading-tight">
+											Plazo: 30 años pagos bajos, 15 años menos interés
+											<!-- Arrow pointing down -->
+											<div class="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-2 border-r-2 border-t-2 border-transparent border-t-black"></div>
+										</div>
+									</div>
+								</div>
+								<!-- Select Field -->
+								<select 
+									id="loanTerm" 
+									name="loanTerm"
+									class="w-full px-1.5 py-1.5 bg-transparent border-0 focus:outline-none text-sm"
+								>
+									<option value="15">15 years</option>
+									<option value="20">20 years</option>
+									<option value="30" selected>30 years</option>
+								</select>
+							</div>
+
+							<!-- Interest Rate -->
+							<div class="bg-white p-1.5 rounded-lg">
+								<!-- Label positioned above input, aligned with placeholder text -->
+								<div class="flex justify-start items-center px-1.5 mb-0.5">
+									<span class="text-xs font-medium text-gray-700">Interest rate</span>
+									<!-- Info Icon with Tooltip -->
+									<div class="relative ml-2 group">
+										<div class="w-4 h-4 bg-black hover:bg-gray-800 rounded-full flex items-center justify-center cursor-help transition-colors">
+											<span class="text-white text-xs font-bold">i</span>
+										</div>
+										<!-- Tooltip -->
+										<div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-1 px-2 py-1 bg-black text-white text-[9px] rounded opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-10 w-32 text-center leading-tight">
+											Tasa de interés: mayor tasa = pagos más altos
+											<!-- Arrow pointing down -->
+											<div class="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-2 border-r-2 border-t-2 border-transparent border-t-black"></div>
+										</div>
+									</div>
+								</div>
+								<!-- Input Field -->
+								<div class="relative">
+									<input 
+										type="text" 
+										id="interestRate" 
+										name="interestRate"
+										value="5.99"
+										maxlength="4"
+										class="w-full pl-1.5 pr-5 py-1.5 bg-transparent border-0 focus:outline-none text-sm"
+										placeholder="5.99"
+									>
+									<span class="absolute right-1.5 top-1/2 transform -translate-y-1/2 text-gray-500 text-sm">%</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- ZIP Code Container -->
+						<div class="bg-white p-1.5 rounded-lg">
+							<!-- Label positioned above input, aligned with placeholder text -->
+							<div class="flex justify-start px-1.5 mb-0.5">
+								<span class="text-xs font-medium text-gray-700">ZIP code</span>
+							</div>
+							<!-- Input Field -->
+							<input 
+								type="text" 
+								id="zipCode" 
+								name="zipCode"
+								value=""
+								class="w-full px-1.5 py-1.5 bg-transparent border-0 focus:outline-none text-sm"
+								placeholder="Value"
+							>
+						</div>
+
+						<!-- Optional Collapsible Section -->
+						<div class="pt-3">
+							<button 
+								type="button"
+								id="optionalToggle"
+								class="flex items-center justify-between w-full text-left text-sm font-medium text-gray-600 hover:text-gray-800 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-lg p-1.5"
+								aria-expanded="false"
+								aria-controls="optionalFields"
+							>
+								<span>Optional: Enter taxes & insurance</span>
+								<svg 
+									id="chevronIcon"
+									class="w-5 h-5 transform transition-transform duration-200" 
+									fill="none" 
+									stroke="currentColor" 
+									viewBox="0 0 24 24"
+								>
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+								</svg>
+							</button>
+							
+							<div 
+								id="optionalFields" 
+								class="overflow-hidden transition-all duration-300 ease-in-out"
+								style="max-height: 0;"
+								aria-hidden="true"
+							>
+								<div class="pt-3 space-y-4">
+									<!-- Yearly Property Tax -->
+									<div class="bg-white p-1.5 rounded-lg">
+										<!-- Label positioned above input, aligned with placeholder text -->
+										<div class="flex justify-start items-center px-1.5 mb-0.5">
+											<span class="text-xs font-medium text-gray-700">Yearly property taxes</span>
+											<!-- Info Icon with Tooltip -->
+											<div class="relative ml-2 group">
+												<div class="w-4 h-4 bg-black hover:bg-gray-800 rounded-full flex items-center justify-center cursor-help transition-colors">
+													<span class="text-white text-xs font-bold">i</span>
+												</div>
+												<!-- Tooltip -->
+												<div class="absolute top-full left-1/2 transform -translate-x-1/2 mt-1 px-2 py-1 bg-black text-white text-[9px] rounded opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 w-32 text-center leading-tight">
+													Impuestos anuales: varían por ciudad y valor de propiedad
+													<!-- Arrow pointing up -->
+													<div class="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-2 border-r-2 border-b-2 border-transparent border-b-black"></div>
+												</div>
+											</div>
+										</div>
+										<!-- Input Field -->
+										<div class="relative">
+											<span class="absolute left-1.5 top-1/2 transform -translate-y-1/2 text-gray-500 text-sm">$</span>
+											<input 
+												type="text" 
+												id="propertyTax" 
+												name="propertyTax"
+												class="w-full pl-5 pr-1.5 py-1.5 bg-transparent border-0 focus:outline-none text-sm"
+												placeholder="0"
+											>
+										</div>
+									</div>
+
+									<!-- Yearly Home Insurance -->
+									<div class="bg-white p-1.5 rounded-lg">
+										<!-- Label positioned above input, aligned with placeholder text -->
+										<div class="flex justify-start items-center px-1.5 mb-0.5">
+											<span class="text-xs font-medium text-gray-700">Yearly homeowners insurance</span>
+											<!-- Info Icon with Tooltip -->
+											<div class="relative ml-2 group">
+												<div class="w-4 h-4 bg-black hover:bg-gray-800 rounded-full flex items-center justify-center cursor-help transition-colors">
+													<span class="text-white text-xs font-bold">i</span>
+												</div>
+												<!-- Tooltip -->
+												<div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-1 px-2 py-1 bg-black text-white text-[9px] rounded opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 w-32 text-center leading-tight">
+													Seguro anual: protege contra daños y desastres naturales
+													<!-- Arrow pointing down -->
+													<div class="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-2 border-r-2 border-t-2 border-transparent border-t-black"></div>
+												</div>
+											</div>
+										</div>
+										<!-- Input Field -->
+										<div class="relative">
+											<span class="absolute left-1.5 top-1/2 transform -translate-y-1/2 text-gray-500 text-sm">$</span>
+											<input 
+												type="text" 
+												id="homeInsurance" 
+												name="homeInsurance"
+												class="w-full pl-5 pr-1.5 py-1.5 bg-transparent border-0 focus:outline-none text-sm"
+												placeholder="0"
+											>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+					
+					<!-- Calculate Button -->
+					<div class="mt-4">
+						<button 
+							id="calculateButton"
+							type="button"
+							class="w-full bg-black text-white py-3 px-4 rounded-[48px] text-base font-semibold hover:bg-gray-800 transition-colors duration-200"
+						>
+							Calculate
+						</button>
+					</div>
+					
+					<!-- Logo and Legal Disclosures -->
+					<div class="mt-4 flex items-center justify-center space-x-2 text-xs text-gray-500">
+						<img 
+							src="/BL logo negro.png" 
+							alt="Broker Lenders Logo" 
+							class="h-6 w-auto"
+						>
+						<span>|</span>
+						<button 
+							id="legalDisclosuresBtn"
+							class="underline hover:text-gray-700 transition-colors cursor-pointer"
+						>
+							Legal disclosures
+						</button>
+					</div>
+				</div>
+
+				<!-- Right Column: Results and Message Cards -->
+				<div class="space-y-4">
+					<!-- Results Card -->
+					<div id="resultsCard" class="bg-blue-600/10 px-3 py-3 rounded-xl shadow-lg text-gray-900 max-h-60 flex flex-col justify-center">
+						<div class="mt-2 mb-6 text-center">
+							<div class="text-sm font-bold text-gray-700 mb-2">Estimate monthly payment</div>
+							<div class="text-5xl font-bold mb-2" id="monthlyPayment">$0</div>
+						</div>
+
+						<!-- Breakdown in horizontal layout -->
+						<div class="grid grid-cols-3 gap-1 mb-3">
+							<div class="text-center">
+								<div class="text-xl font-bold mb-0.5" id="principalInterest">$0</div>
+								<div class="text-[10px] text-gray-600">Principal & Interest</div>
+							</div>
+							<div class="text-center">
+								<div class="text-xl font-bold mb-0.5" id="monthlyPropertyTax">$0</div>
+								<div class="text-[10px] text-gray-600">Property tax</div>
+							</div>
+							<div class="text-center">
+								<div class="text-xl font-bold mb-0.5" id="monthlyHomeInsurance">$0</div>
+								<div class="text-[10px] text-gray-600">Home insurance</div>
+							</div>
+						</div>
+
+						<!-- Button -->
+						<div class="text-left">
+							<button class="mt-2 mb-2 px-6 py-3 border border-gray-400 text-gray-700 bg-transparent rounded-full hover:bg-gray-100 transition-colors text-xs font-bold">
+								I want real number →
+							</button>
+						</div>
+					</div>
+
+					<!-- Message Card -->
+					<div id="messageCard" class="bg-gray-100 p-4 rounded-xl shadow-lg">
+						<div class="text-center">
+							<p class="text-gray-700 text-base mb-4">Ready to take the next step? Our mortgage specialists are here to help you make your dream of homeownership a reality.</p>
+							<button id="callNowBtn" class="bg-black hover:bg-gray-800 text-white font-bold py-2.5 px-6 rounded-full transition-colors duration-200 flex items-center justify-center mx-auto text-sm">
+								<svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+								</svg>
+								Call Now
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Legal Disclosures Modal -->
+	<div id="legalModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
+		<div class="bg-white rounded-[48px] max-w-4xl w-full max-h-[80vh] overflow-y-auto p-8 relative">
+			<!-- Close Button -->
+			<button 
+				id="closeModal" 
+				class="absolute top-6 right-6 text-gray-400 hover:text-gray-600 transition-colors"
+			>
+				<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+				</svg>
+			</button>
+			
+			<!-- Modal Content -->
+			<div class="pr-8">
+				<h2 class="text-2xl font-bold text-gray-900 mb-6">Legal Disclosures</h2>
+				
+				<div class="space-y-6 text-gray-700 leading-relaxed">
+					<p>
+						The Broker Lenders mortgage calculator is for estimation purposes only. Results do not reflect all loan programs and are subject to individual program loan limits. Qualification, rates and payments will vary based on timing and individual circumstances. This is not a commitment to lend.
+					</p>
+					
+					<div>
+						<h3 class="text-lg font-semibold text-gray-900 mb-3">Payment Example</h3>
+						<p class="mb-3">Here's a payment example based on an average home price and the most common loan type:</p>
+						
+						<div class="bg-gray-50 p-4 rounded-lg space-y-2">
+							<p><strong>Loan amount:</strong> $300,000</p>
+							<p><strong>Loan type:</strong> 30-year Fixed-Rate Loan</p>
+							<p><strong>Interest rate/APR:</strong> 7.375% (7.692% APR)</p>
+							<p><strong>Monthly payment:</strong> $2,072.03</p>
+							<p><strong>Points:</strong> 1.875 points, costs due at closing</p>
+							<p><strong>Loan-to-value (LTV):</strong> 80.00%</p>
+						</div>
+					</div>
+					
+					<div class="space-y-3">
+						<p>
+							One point is equal to one percent of your loan amount. Payment does not include taxes and insurance. The actual payment amount will be greater. Some state and county maximum loan amount restrictions may apply. Rates shown are valid on publication date of April 18, 2024.
+						</p>
+						
+						<p class="text-sm">
+							¹If you didn't enter taxes and insurance amounts, an estimate of your taxes is based on the state selected. This does not include all fees.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Next Move Section -->
+	<NextMoveSection />
+
+	<!-- How to use section -->
+	<section class="py-16 bg-white">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-12">
+				<h2 class="text-3xl font-bold text-gray-900 mb-4">How to use a mortgage calculator</h2>
+				<p class="text-lg text-gray-600">
+					Our mortgage calculator helps you estimate your monthly payments and understand the true cost of homeownership.
+				</p>
+			</div>
+
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+				<div class="bg-gray-50 p-6 rounded-xl shadow-sm">
+					<div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+						</svg>
+					</div>
+					<h3 class="text-xl font-semibold text-gray-900 mb-3">Enter Home Details</h3>
+					<p class="text-gray-600">
+						Start by entering the home price and your down payment amount. The calculator will automatically 
+						update your loan amount and monthly payment estimates.
+					</p>
+				</div>
+
+				<div class="bg-gray-50 p-6 rounded-xl shadow-sm">
+					<div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+						</svg>
+					</div>
+					<h3 class="text-xl font-semibold text-gray-900 mb-3">Adjust Loan Terms</h3>
+					<p class="text-gray-600">
+						Choose your loan term (15, 20, or 30 years) and interest rate. Shorter terms mean higher 
+						monthly payments but less interest paid over time.
+					</p>
+				</div>
+
+				<div class="bg-gray-50 p-6 rounded-xl shadow-sm">
+					<div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+						</svg>
+					</div>
+					<h3 class="text-xl font-semibold text-gray-900 mb-3">Include Additional Costs</h3>
+					<p class="text-gray-600">
+						Don't forget to include property taxes, home insurance, PMI, and HOA fees. These can 
+						significantly impact your total monthly housing payment.
+					</p>
+				</div>
+
+				<div class="bg-gray-50 p-6 rounded-xl shadow-sm">
+					<div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+						</svg>
+					</div>
+					<h3 class="text-xl font-semibold text-gray-900 mb-3">Review Your Results</h3>
+					<p class="text-gray-600">
+						See your complete monthly payment breakdown and total cost. Use this information to 
+						determine what you can comfortably afford.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Tips Section -->
+	<section class="py-16 bg-white">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-12">
+				<h2 class="text-3xl font-bold text-gray-900 mb-4">Mortgage calculator tips</h2>
+				<p class="text-lg text-gray-600">
+					Get the most accurate results with these helpful tips and considerations.
+				</p>
+			</div>
+
+			<div class="space-y-8">
+				<div class="bg-blue-50 p-6 rounded-xl">
+					<h3 class="text-xl font-semibold text-gray-900 mb-3">Understanding PMI</h3>
+					<p class="text-gray-700">
+						Private Mortgage Insurance (PMI) is typically required when your down payment is less than 20% 
+						of the home's value. PMI can usually be removed once you reach 20% equity in your home.
+					</p>
+				</div>
+
+				<div class="bg-green-50 p-6 rounded-xl">
+					<h3 class="text-xl font-semibold text-gray-900 mb-3">Property Tax Considerations</h3>
+					<p class="text-gray-700">
+						Property taxes vary significantly by location and can change over time. Check with local 
+						tax assessors for accurate rates in your area, as they can impact your monthly payment substantially.
+					</p>
+				</div>
+
+				<div class="bg-yellow-50 p-6 rounded-xl">
+					<h3 class="text-xl font-semibold text-gray-900 mb-3">Interest Rate Impact</h3>
+					<p class="text-gray-700">
+						Even small changes in interest rates can significantly affect your monthly payment and total 
+						loan cost. A 1% rate difference on a $300,000 loan can mean over $150 difference per month.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Mortgage Calculator FAQs Section -->
+	<section class="py-16 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+				<!-- Left Column: Title and Description -->
+				<div>
+					<h2 class="text-3xl font-bold text-gray-900 mb-4">
+						Mortgage Calculator FAQs
+					</h2>
+					<p class="text-lg text-gray-600 leading-relaxed">
+						Don't see your question here? We love helping people understand how mortgage calculations work and what yours could be. Just talk to us.
+					</p>
+				</div>
+
+				<!-- Right Column: FAQ Items -->
+				<div class="space-y-4">
+					<!-- FAQ Item 1 -->
+					<div class="border border-gray-200 rounded-lg">
+						<button class="faq-button w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset">
+							<span class="font-medium text-gray-900">How accurate are mortgage calculator estimates?</span>
+							<svg class="faq-icon w-5 h-5 text-gray-500 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+							</svg>
+						</button>
+						<div class="faq-content hidden px-6 pb-4">
+							<p class="text-gray-600">
+								Mortgage calculators provide very accurate estimates for principal and interest payments when you input correct loan terms. However, your total monthly payment will also include property taxes, homeowners insurance, and possibly PMI, which can vary significantly by location and property value.
+							</p>
+						</div>
+					</div>
+
+					<!-- FAQ Item 2 -->
+					<div class="border border-gray-200 rounded-lg">
+						<button class="faq-button w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset">
+							<span class="font-medium text-gray-900">What factors affect my monthly mortgage payment?</span>
+							<svg class="faq-icon w-5 h-5 text-gray-500 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+							</svg>
+						</button>
+						<div class="faq-content hidden px-6 pb-4">
+							<p class="text-gray-600">
+								Your monthly payment is determined by four main factors: loan amount (home price minus down payment), interest rate, loan term (15 or 30 years), and additional costs like property taxes, insurance, and PMI. Even small changes in interest rate or down payment can significantly impact your monthly payment.
+							</p>
+						</div>
+					</div>
+
+					<!-- FAQ Item 3 -->
+					<div class="border border-gray-200 rounded-lg">
+						<button class="faq-button w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset">
+							<span class="font-medium text-gray-900">What's the difference between principal and interest?</span>
+							<svg class="faq-icon w-5 h-5 text-gray-500 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+							</svg>
+						</button>
+						<div class="faq-content hidden px-6 pb-4">
+							<p class="text-gray-600">
+								Principal is the amount you borrowed to buy your home, while interest is the cost of borrowing that money. Early in your loan, most of your payment goes toward interest. As you pay down the loan, more of your payment goes toward principal, building equity in your home.
+							</p>
+						</div>
+					</div>
+
+					<!-- FAQ Item 4 -->
+					<div class="border border-gray-200 rounded-lg">
+						<button class="faq-button w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset">
+							<span class="font-medium text-gray-900">When is PMI required and how much does it cost?</span>
+							<svg class="faq-icon w-5 h-5 text-gray-500 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+							</svg>
+						</button>
+						<div class="faq-content hidden px-6 pb-4">
+							<p class="text-gray-600">
+								Private Mortgage Insurance (PMI) is typically required when you put down less than 20% on a conventional loan. PMI usually costs between 0.3% to 1.5% of your loan amount annually, added to your monthly payment. You can remove PMI once you reach 20% equity in your home.
+							</p>
+						</div>
+					</div>
+
+					<!-- FAQ Item 5 -->
+					<div class="border border-gray-200 rounded-lg">
+						<button class="faq-button w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset">
+							<span class="font-medium text-gray-900">How do property taxes and insurance affect my payment?</span>
+							<svg class="faq-icon w-5 h-5 text-gray-500 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+							</svg>
+						</button>
+						<div class="faq-content hidden px-6 pb-4">
+							<p class="text-gray-600">
+								Property taxes and homeowners insurance are typically included in your monthly mortgage payment through an escrow account. These costs vary significantly by location and property value. Property taxes can range from 0.3% to 2.5% of home value annually, while insurance costs depend on location, home value, and coverage level.
+							</p>
+						</div>
+					</div>
+
+					<!-- FAQ Item 6 -->
+					<div class="border border-gray-200 rounded-lg">
+						<button class="faq-button w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset">
+							<span class="font-medium text-gray-900">How much should I put down on a home?</span>
+							<svg class="faq-icon w-5 h-5 text-gray-500 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+							</svg>
+						</button>
+						<div class="faq-content hidden px-6 pb-4">
+							<p class="text-gray-600">
+								While 20% down eliminates PMI and reduces your monthly payment, many buyers put down less. FHA loans allow as little as 3.5% down, and conventional loans can go as low as 3%. Consider your budget, available cash for closing costs and emergencies, and whether paying PMI is worth preserving your savings.
+							</p>
+						</div>
+					</div>
+
+					<!-- FAQ Item 7 -->
+					<div class="border border-gray-200 rounded-lg">
+						<button class="faq-button w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset">
+							<span class="font-medium text-gray-900">What's the difference between interest rate and APR?</span>
+							<svg class="faq-icon w-5 h-5 text-gray-500 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+							</svg>
+						</button>
+						<div class="faq-content hidden px-6 pb-4">
+							<p class="text-gray-600">
+								The interest rate is the cost of borrowing money, while APR (Annual Percentage Rate) includes the interest rate plus other loan costs like origination fees, discount points, and closing costs. APR gives you a more complete picture of the loan's true cost and is better for comparing different loan offers.
+							</p>
+						</div>
+					</div>
+
+					<!-- FAQ Item 8 -->
+					<div class="border border-gray-200 rounded-lg">
+						<button class="faq-button w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset">
+							<span class="font-medium text-gray-900">Should I choose a 15-year or 30-year mortgage?</span>
+							<svg class="faq-icon w-5 h-5 text-gray-500 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+							</svg>
+						</button>
+						<div class="faq-content hidden px-6 pb-4">
+							<p class="text-gray-600">
+								A 15-year mortgage typically offers lower interest rates and saves you significant money in total interest, but has higher monthly payments. A 30-year mortgage has lower monthly payments but costs more in total interest. Choose based on your budget, financial goals, and how long you plan to stay in the home.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Contact Section -->
+	<Contact />
+
+	<!-- Important Legal Disclosures -->
+	<ImportantLegal />
+</Layout>
+
+<script>
+	
+	// Mortgage Calculator Logic
+	class MortgageCalculator {
+		isPercentMode;
+		lastCalculation;
+		
+		constructor() {
+			this.isPercentMode = false;
+			this.initializeEventListeners();
+			// Cards are visible by default - no need to clear results on init
+		}
+
+		initializeEventListeners() {
+			// Remove automatic calculation - only format inputs on change
+			const inputs = document.querySelectorAll('#mortgage-form input, #mortgage-form select');
+			inputs.forEach(input => {
+				input.addEventListener('input', () => {
+					this.clearFieldValidation(input.id);
+					this.formatInputs();
+				});
+				input.addEventListener('change', () => {
+					this.clearFieldValidation(input.id);
+					this.formatInputs();
+				});
+			});
+
+			// Toggle button event listeners
+			const toggleDollar = document.getElementById('toggleDollar');
+			const togglePercent = document.getElementById('togglePercent');
+			
+			if (toggleDollar) {
+				toggleDollar.addEventListener('click', () => this.setToggleMode(false));
+			}
+			if (togglePercent) {
+				togglePercent.addEventListener('click', () => this.setToggleMode(true));
+			}
+
+			// Calculate button event listener - now with validation
+			const calculateButton = document.getElementById('calculateButton');
+			console.log('Calculate button found:', calculateButton);
+			if (calculateButton) {
+				calculateButton.addEventListener('click', () => this.handleCalculateClick());
+			}
+
+			// Down payment input listener with validation
+			const downPaymentInput = document.getElementById('downPayment');
+			if (downPaymentInput) {
+				downPaymentInput.addEventListener('input', () => this.handleDownPaymentChange());
+				downPaymentInput.addEventListener('blur', () => this.validateDownPayment());
+			}
+
+			// Interest rate input validation
+			const interestRateInput = document.getElementById('interestRate');
+			if (interestRateInput) {
+				interestRateInput.addEventListener('input', (e) => this.validateInterestRate(e));
+			}
+
+			// ZIP code validation
+			const zipCodeInput = document.getElementById('zipCode');
+			if (zipCodeInput) {
+				zipCodeInput.addEventListener('input', (e) => this.validateZipCode(e));
+				zipCodeInput.addEventListener('blur', (e) => this.validateZipCodeExists(e));
+			}
+
+			// Optional section toggle
+			const optionalToggle = document.getElementById('optionalToggle');
+			if (optionalToggle) {
+				optionalToggle.addEventListener('click', () => this.toggleOptionalSection());
+			}
+
+			// Legal disclosures modal event listeners
+			const legalDisclosuresBtn = document.getElementById('legalDisclosuresBtn');
+			const legalModal = document.getElementById('legalModal');
+			const closeModal = document.getElementById('closeModal');
+
+			if (legalDisclosuresBtn && legalModal) {
+				legalDisclosuresBtn.addEventListener('click', () => {
+					legalModal.classList.remove('hidden');
+				});
+			}
+
+			if (closeModal && legalModal) {
+				closeModal.addEventListener('click', () => {
+					legalModal.classList.add('hidden');
+				});
+			}
+
+			// Close modal when clicking outside
+			if (legalModal) {
+				legalModal.addEventListener('click', (e) => {
+					if (e.target === legalModal) {
+						legalModal.classList.add('hidden');
+					}
+				});
+			}
+
+			// Call Now button event listener
+			const callNowBtn = document.getElementById('callNowBtn');
+			if (callNowBtn) {
+				callNowBtn.addEventListener('click', () => {
+					window.location.href = 'tel:+1234567890'; // Replace with actual phone number
+				});
+			}
+		}
+
+		setToggleMode(isPercent) {
+			this.isPercentMode = isPercent;
+			
+			const toggleDollar = document.getElementById('toggleDollar');
+			const togglePercent = document.getElementById('togglePercent');
+			const downPaymentSymbol = document.getElementById('downPaymentSymbol');
+			const downPaymentInput = document.getElementById('downPayment') as HTMLInputElement;
+			
+			if (toggleDollar && togglePercent && downPaymentSymbol && downPaymentInput) {
+				if (isPercent) {
+					// Switch to percent mode
+					toggleDollar.className = 'px-3 py-2 text-sm font-medium rounded-md transition-all duration-200 bg-white border border-gray-300 text-gray-600 hover:bg-gray-50';
+					togglePercent.className = 'px-3 py-2 text-sm font-medium rounded-md transition-all duration-200 bg-gray-900 border border-gray-900 text-white hover:bg-gray-800';
+					downPaymentSymbol.textContent = '%';
+					
+					// Convert current dollar value to percentage
+					const homePrice = this.parseNumber((document.getElementById('homePrice') as HTMLInputElement)?.value || '0');
+					const currentAmount = this.parseNumber(downPaymentInput.value);
+					if (homePrice > 0 && currentAmount > 0) {
+						const percentage = (currentAmount / homePrice * 100).toFixed(1);
+						downPaymentInput.value = percentage;
+					} else {
+						// Auto-set to 1% if value is 0 or invalid
+						downPaymentInput.value = '1';
+					}
+				} else {
+					// Switch to dollar mode
+					toggleDollar.className = 'px-3 py-2 text-sm font-medium rounded-md transition-all duration-200 bg-gray-900 border border-gray-900 text-white hover:bg-gray-800';
+					togglePercent.className = 'px-3 py-2 text-sm font-medium rounded-md transition-all duration-200 bg-white border border-gray-300 text-gray-600 hover:bg-gray-50';
+					downPaymentSymbol.textContent = '$';
+					
+					// Convert current percentage to dollar value
+					const homePrice = this.parseNumber((document.getElementById('homePrice') as HTMLInputElement)?.value || '0');
+					const currentPercent = parseFloat(downPaymentInput.value) || 0;
+					const amount = Math.round(homePrice * currentPercent / 100);
+					downPaymentInput.value = amount > 0 ? this.formatNumber(amount) : '0';
+				}
+			}
+			
+			this.calculate();
+		}
+
+		handleDownPaymentChange() {
+			// This method handles changes to the down payment input
+			// The actual calculation will be triggered by the input event
+		}
+
+		validateDownPayment() {
+			if (this.isPercentMode) {
+				const downPaymentInput = document.getElementById('downPayment') as HTMLInputElement;
+				if (downPaymentInput) {
+					const value = parseFloat(downPaymentInput.value) || 0;
+					if (value < 1) {
+						downPaymentInput.value = '1';
+						this.calculate();
+					}
+				}
+			}
+		}
+
+		validateInterestRate(e) {
+			const input = e.target;
+			let value = input.value;
+			
+			// Remove any non-numeric characters except decimal point
+			value = value.replace(/[^0-9.]/g, '');
+			
+			// Ensure only one decimal point
+			const parts = value.split('.');
+			if (parts.length > 2) {
+				value = parts[0] + '.' + parts.slice(1).join('');
+			}
+			
+			// Limit to 4 characters total (e.g., 5.99, 12.5, 99.9)
+			if (value.length > 4) {
+				value = value.substring(0, 4);
+			}
+			
+			// Update the input value
+			input.value = value;
+		}
+
+		validateZipCode(e) {
+			const input = e.target;
+			let value = input.value;
+			
+			// Remove any non-numeric characters
+			value = value.replace(/[^0-9]/g, '');
+			
+			// Limit to 5 digits for US ZIP codes
+			if (value.length > 5) {
+				value = value.substring(0, 5);
+			}
+			
+			// Update the input value
+			input.value = value;
+		}
+
+		async validateZipCodeExists(e) {
+			const input = e.target;
+			const zipCode = input.value;
+			
+			// Reset border color
+			input.classList.remove('border-red-500');
+			input.classList.add('border-gray-300');
+			
+			if (zipCode.length === 5) {
+				try {
+					// Use a free ZIP code API to validate
+					const response = await fetch(`https://api.zippopotam.us/us/${zipCode}`);
+					if (!response.ok) {
+						// ZIP code doesn't exist
+						input.classList.remove('border-gray-300');
+						input.classList.add('border-red-500');
+						input.title = 'ZIP code not found';
+					} else {
+						input.title = '';
+					}
+				} catch (error) {
+					// If API fails, don't show error (graceful degradation)
+					console.log('ZIP code validation API unavailable');
+				}
+			}
+		}
+
+		toggleOptionalSection() {
+			const optionalFields = document.getElementById('optionalFields');
+			const chevronIcon = document.getElementById('chevronIcon');
+			const toggleButton = document.getElementById('optionalToggle');
+			
+			if (optionalFields && chevronIcon && toggleButton) {
+				const isExpanded = toggleButton.getAttribute('aria-expanded') === 'true';
+				
+				if (isExpanded) {
+					// Close the section
+					optionalFields.style.maxHeight = '0px';
+					optionalFields.setAttribute('aria-hidden', 'true');
+					toggleButton.setAttribute('aria-expanded', 'false');
+					chevronIcon.style.transform = 'rotate(0deg)';
+				} else {
+					// Open the section
+					optionalFields.style.maxHeight = optionalFields.scrollHeight + 'px';
+					optionalFields.setAttribute('aria-hidden', 'false');
+					toggleButton.setAttribute('aria-expanded', 'true');
+					chevronIcon.style.transform = 'rotate(180deg)';
+				}
+			}
+		}
+
+		formatNumber(num) {
+			return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+		}
+
+		parseNumber(str) {
+			return parseFloat(str.replace(/,/g, '')) || 0;
+		}
+
+		getDownPaymentAmount() {
+			const downPaymentInput = document.getElementById('downPayment') as HTMLInputElement;
+			const homePrice = this.parseNumber((document.getElementById('homePrice') as HTMLInputElement)?.value || '0');
+			
+			if (!downPaymentInput) return 0;
+			
+			if (this.isPercentMode) {
+				const percentage = parseFloat(downPaymentInput.value) || 0;
+				return homePrice * percentage / 100;
+			} else {
+				return this.parseNumber(downPaymentInput.value);
+			}
+		}
+
+		// New method to handle calculate button click with validation
+		handleCalculateClick() {
+			console.log('handleCalculateClick called');
+			
+			// Clear previous validation errors
+			this.clearAllValidationErrors();
+			
+			// Validate all required fields
+			if (!this.validateAllFields()) {
+				console.log('Validation failed, not calculating');
+				return;
+			}
+			
+			// Clear previous results and calculate
+			this.clearResults();
+			this.calculate();
+		}
+
+		// Clear field validation styling and messages
+		clearFieldValidation(fieldId: string) {
+			const field = document.getElementById(fieldId);
+			if (field) {
+				// Remove red border from container
+				const container = field.closest('.bg-white');
+				if (container) {
+					container.classList.remove('border-red-500', 'border-2');
+				}
+				
+				// Remove error message
+				const errorMsg = document.getElementById(`${fieldId}-error`);
+				if (errorMsg) {
+					errorMsg.remove();
+				}
+			}
+		}
+
+		// Clear all validation errors
+		clearAllValidationErrors() {
+			const requiredFields = ['homePrice', 'downPayment', 'loanTerm', 'interestRate', 'propertyTax', 'homeInsurance', 'zipCode'];
+			requiredFields.forEach(fieldId => {
+				this.clearFieldValidation(fieldId);
+			});
+		}
+
+		// Validate all required fields
+		validateAllFields(): boolean {
+			let isValid = true;
+			const requiredFields = [
+				{ id: 'homePrice', name: 'Home price', type: 'currency' },
+				{ id: 'downPayment', name: 'Down payment', type: 'currency' },
+				{ id: 'loanTerm', name: 'Loan term', type: 'select' },
+				{ id: 'interestRate', name: 'Interest rate', type: 'percentage' },
+				{ id: 'propertyTax', name: 'Property tax', type: 'currency' },
+				{ id: 'homeInsurance', name: 'Home insurance', type: 'currency' },
+				{ id: 'zipCode', name: 'ZIP code', type: 'zipcode' }
+			];
+
+			requiredFields.forEach(field => {
+				const element = document.getElementById(field.id) as HTMLInputElement | HTMLSelectElement;
+				if (element) {
+					const value = element.value.trim();
+					let fieldValid = true;
+					let errorMessage = '';
+
+					// Check if field is empty or invalid
+					if (!value || (field.type !== 'select' && field.type !== 'zipcode' && (value === '0' || value === '$0'))) {
+						fieldValid = false;
+						errorMessage = `${field.name} is required`;
+					} else {
+						// Additional validation based on field type
+						switch (field.type) {
+							case 'currency':
+								const numValue = this.parseNumber(value);
+								if (field.id === 'homePrice' && numValue <= 0) {
+									fieldValid = false;
+									errorMessage = `${field.name} must be greater than $0`;
+								} else if (field.id === 'downPayment' && numValue < 0) {
+									fieldValid = false;
+									errorMessage = `${field.name} cannot be negative`;
+								} else if ((field.id === 'propertyTax' || field.id === 'homeInsurance') && numValue < 0) {
+									fieldValid = false;
+									errorMessage = `${field.name} cannot be negative`;
+								}
+								break;
+							case 'percentage':
+								const percentValue = parseFloat(value);
+								if (percentValue <= 0 || percentValue > 50) {
+									fieldValid = false;
+									errorMessage = `${field.name} must be between 0.1% and 50%`;
+								}
+								break;
+							case 'select':
+								if (!value || value === '') {
+									fieldValid = false;
+									errorMessage = `Please select ${field.name.toLowerCase()}`;
+								}
+								break;
+							case 'zipcode':
+								if (!value || value.length !== 5 || !/^\d{5}$/.test(value)) {
+									fieldValid = false;
+									errorMessage = 'Please enter a valid 5-digit ZIP code';
+								}
+								break;
+						}
+					}
+
+					if (!fieldValid) {
+						this.showFieldError(field.id, errorMessage);
+						isValid = false;
+					}
+				}
+			});
+
+			return isValid;
+		}
+
+		// Show error for specific field
+		showFieldError(fieldId: string, message: string) {
+			const field = document.getElementById(fieldId);
+			if (field) {
+				// Add red border to the container instead of just the input
+				const container = field.closest('.bg-white');
+				if (container) {
+					container.classList.add('border-red-500', 'border-2');
+				}
+				
+				// Add error message
+				const errorDiv = document.createElement('div');
+				errorDiv.id = `${fieldId}-error`;
+				errorDiv.className = 'text-red-500 text-sm mt-1 px-2';
+				errorDiv.textContent = message;
+				
+				// Insert error message after the field's parent container
+				if (container && container.parentNode) {
+					container.parentNode.insertBefore(errorDiv, container.nextSibling);
+				}
+			}
+		}
+
+		// Clear results display (but keep cards visible)
+		clearResults() {
+			const monthlyPaymentEl = document.getElementById('monthlyPayment');
+			const principalInterestEl = document.getElementById('principalInterest');
+			const monthlyPropertyTaxEl = document.getElementById('monthlyPropertyTax');
+			const monthlyHomeInsuranceEl = document.getElementById('monthlyHomeInsurance');
+
+			// Reset to placeholder values instead of hiding cards
+			if (monthlyPaymentEl) monthlyPaymentEl.textContent = '$0';
+			if (principalInterestEl) principalInterestEl.textContent = '$0';
+			if (monthlyPropertyTaxEl) monthlyPropertyTaxEl.textContent = '$0';
+			if (monthlyHomeInsuranceEl) monthlyHomeInsuranceEl.textContent = '$0';
+
+			// Cards remain visible - no hiding logic needed
+		}
+
+
+
+		calculate() {
+			console.log('Starting mortgage calculation...');
+			
+			// Get input values
+			const homePrice = this.parseNumber((document.getElementById('homePrice') as HTMLInputElement)?.value || '0');
+			const downPayment = this.getDownPaymentAmount();
+			const loanTerm = parseInt((document.getElementById('loanTerm') as HTMLSelectElement)?.value || '30');
+			const annualInterestRate = parseFloat((document.getElementById('interestRate') as HTMLInputElement)?.value || '0');
+			const propertyTax = this.parseNumber((document.getElementById('propertyTax') as HTMLInputElement)?.value || '0');
+			const homeInsurance = this.parseNumber((document.getElementById('homeInsurance') as HTMLInputElement)?.value || '0');
+
+			console.log('Input values:', { homePrice, downPayment, loanTerm, annualInterestRate, propertyTax, homeInsurance });
+
+			// Validate inputs
+			if (homePrice <= 0) {
+				console.log('Invalid home price');
+				return;
+			}
+
+			// Calculate loan amount (Principal)
+			const loanAmount = Math.max(0, homePrice - downPayment);
+			console.log('Loan amount (Principal):', loanAmount);
+
+			// Convert annual interest rate to monthly decimal rate
+			const monthlyInterestRate = (annualInterestRate / 100) / 12;
+			const numberOfPayments = loanTerm * 12;
+
+			console.log('Monthly interest rate:', monthlyInterestRate);
+			console.log('Number of payments:', numberOfPayments);
+
+			// Calculate monthly principal and interest using the standard mortgage formula
+			// M = P [ r(1 + r)^n ] / [ (1 + r)^n – 1 ]
+			let monthlyPrincipalAndInterest = 0;
+			
+			if (loanAmount > 0) {
+				if (monthlyInterestRate > 0) {
+					// Standard mortgage formula for interest-bearing loans
+					const numerator = loanAmount * (monthlyInterestRate * Math.pow(1 + monthlyInterestRate, numberOfPayments));
+					const denominator = Math.pow(1 + monthlyInterestRate, numberOfPayments) - 1;
+					monthlyPrincipalAndInterest = numerator / denominator;
+				} else {
+					// For 0% interest loans, simply divide principal by number of payments
+					monthlyPrincipalAndInterest = loanAmount / numberOfPayments;
+				}
+			}
+
+			console.log('Monthly Principal & Interest:', monthlyPrincipalAndInterest);
+
+			// Calculate total interest paid over the life of the loan
+			const totalPrincipalAndInterestPaid = monthlyPrincipalAndInterest * numberOfPayments;
+			const totalInterestPaid = totalPrincipalAndInterestPaid - loanAmount;
+
+			console.log('Total interest paid over loan life:', totalInterestPaid);
+
+			// Calculate monthly amounts for other costs
+			const monthlyPropertyTax = propertyTax / 12;
+			const monthlyHomeInsurance = homeInsurance / 12;
+
+			// Calculate total monthly payment (PITI - Principal, Interest, Taxes, Insurance)
+			const totalMonthlyPayment = monthlyPrincipalAndInterest + monthlyPropertyTax + monthlyHomeInsurance;
+
+			console.log('Total monthly payment (PITI):', totalMonthlyPayment);
+
+			// Calculate additional useful metrics
+			const totalAmountPaid = (totalMonthlyPayment * numberOfPayments);
+			const loanToValueRatio = (loanAmount / homePrice) * 100;
+			const downPaymentPercentage = (downPayment / homePrice) * 100;
+
+			console.log('Additional metrics:', {
+				totalAmountPaid,
+				loanToValueRatio,
+				downPaymentPercentage
+			});
+
+			// Update display elements
+			const monthlyPaymentEl = document.getElementById('monthlyPayment');
+			const principalInterestEl = document.getElementById('principalInterest');
+			const monthlyPropertyTaxEl = document.getElementById('monthlyPropertyTax');
+			const monthlyHomeInsuranceEl = document.getElementById('monthlyHomeInsurance');
+
+			// Format and display results with proper currency formatting
+			if (monthlyPaymentEl) {
+				// Animate the monthly payment with speedometer effect
+				this.animateValue(monthlyPaymentEl, 0, Math.round(totalMonthlyPayment), 1500);
+			}
+			if (principalInterestEl) {
+				principalInterestEl.textContent = '$' + this.formatNumber(Math.round(monthlyPrincipalAndInterest));
+			}
+			if (monthlyPropertyTaxEl) {
+				monthlyPropertyTaxEl.textContent = '$' + this.formatNumber(Math.round(monthlyPropertyTax));
+			}
+			if (monthlyHomeInsuranceEl) {
+				monthlyHomeInsuranceEl.textContent = '$' + this.formatNumber(Math.round(monthlyHomeInsurance));
+			}
+
+			// Store calculation results for potential future use
+			this.lastCalculation = {
+				homePrice,
+				downPayment,
+				loanAmount,
+				loanTerm,
+				annualInterestRate,
+				monthlyPrincipalAndInterest,
+				monthlyPropertyTax,
+				monthlyHomeInsurance,
+				totalMonthlyPayment,
+				totalInterestPaid,
+				totalAmountPaid,
+				loanToValueRatio,
+				downPaymentPercentage
+			};
+
+			console.log('Calculation completed successfully');
+
+			// Format input values for better user experience
+			this.formatInputs();
+		}
+
+		formatInputs() {
+			const moneyInputs = ['homePrice', 'propertyTax', 'homeInsurance'];
+			moneyInputs.forEach(id => {
+				const input = document.getElementById(id) as HTMLInputElement;
+				if (input) {
+					const value = this.parseNumber(input.value);
+					if (value > 0) {
+						input.value = this.formatNumber(value);
+					}
+				}
+			});
+
+			// Handle down payment formatting separately
+			if (!this.isPercentMode) {
+				const downPaymentInput = document.getElementById('downPayment') as HTMLInputElement;
+				if (downPaymentInput) {
+					const value = this.parseNumber(downPaymentInput.value);
+					if (value > 0) {
+						downPaymentInput.value = this.formatNumber(value);
+					}
+				}
+			}
+		}
+
+		// Animate value from start to end with speedometer effect
+		animateValue(element: HTMLElement, start: number, end: number, duration: number) {
+			const startTime = performance.now();
+			const startValue = start;
+			const endValue = end;
+			
+			const animate = (currentTime: number) => {
+				const elapsed = currentTime - startTime;
+				const progress = Math.min(elapsed / duration, 1);
+				
+				// Easing function for speedometer effect (ease-out)
+				const easeOut = 1 - Math.pow(1 - progress, 3);
+				
+				const currentValue = Math.round(startValue + (endValue - startValue) * easeOut);
+				element.textContent = '$' + this.formatNumber(currentValue);
+				
+				if (progress < 1) {
+					requestAnimationFrame(animate);
+				}
+			};
+			
+			requestAnimationFrame(animate);
+		}
+	}
+
+	// Initialize calculator when DOM is loaded
+	document.addEventListener('DOMContentLoaded', () => {
+		console.log('DOM loaded, creating calculator');
+		new MortgageCalculator();
+
+		// FAQ Accordion functionality
+		const faqButtons = document.querySelectorAll('.faq-button');
+		faqButtons.forEach((button) => {
+			const btn = button as HTMLButtonElement;
+			btn.addEventListener('click', function(this: HTMLButtonElement) {
+				const content = this.nextElementSibling as HTMLElement;
+				const icon = this.querySelector('.faq-icon') as HTMLElement;
+				
+				if (content && icon) {
+					if (content.classList.contains('hidden')) {
+						content.classList.remove('hidden');
+						icon.style.transform = 'rotate(180deg)';
+					} else {
+						content.classList.add('hidden');
+						icon.style.transform = 'rotate(0deg)';
+					}
+				}
+			});
+		});
+	});
+</script>

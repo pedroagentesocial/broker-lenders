@@ -6,9 +6,18 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "update-rates": "node scripts/update-rates.js",
+    "setup-cron": "node scripts/setup-cron.js",
+    "test-automation": "node scripts/test-automation.js",
+    "setup-notifications": "node scripts/setup-notifications.js",
+    "test-notifications": "node scripts/test-notifications.js"
   },
   "dependencies": {
-    "astro": "^5.15.2"
+    "@tailwindcss/vite": "^4.1.16",
+    "astro": "^5.15.2",
+    "tailwindcss": "^4.1.16",
+    "nodemailer": "^6.9.7",
+    "dotenv": "^16.3.1"
   }
 }

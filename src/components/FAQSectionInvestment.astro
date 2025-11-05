@@ -1,0 +1,75 @@
+---
+export interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+const faqItems: FAQItem[] = [
+  { question: "What is an investment property loan?", answer: "Financing for properties you do not occupy as a primary residence. Terms and requirements differ from primary homes, focusing on rental income and reserves." },
+  { question: "How much down payment is required?", answer: "Typical down payments start at 15–20% for single-unit properties. Multi-unit and short-term rentals may require higher down payments." },
+  { question: "Can I use projected rent to qualify?", answer: "Yes, lenders often use market rent from the appraisal (or lease agreements) to help qualify. DSCR programs may qualify based on rental coverage ratios." },
+  { question: "What are DSCR loans?", answer: "Debt Service Coverage Ratio loans qualify primarily on the property’s cash flow rather than personal income. Helpful for investors with multiple properties or complex income." },
+  { question: "Are reserves required?", answer: "Investment loans commonly require several months of reserves after closing to strengthen the file, especially for larger portfolios." },
+  { question: "Do rates differ from primary homes?", answer: "Yes, investment loans typically have higher rates and pricing adjustments due to increased risk. We'll structure the best option for your goals." },
+  { question: "Can I finance short-term rentals (Airbnb/VRBO)?", answer: "Some programs allow short-term rentals with specific documentation and market requirements. We'll guide you through eligible options." }
+];
+---
+
+<section class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+      <div class="lg:col-span-4">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">FAQ's about Investment property loans</h2>
+        <p class="text-gray-600">Answers for rental and portfolio financing.</p>
+      </div>
+      <div class="lg:col-span-8" id="faq-accordion">
+        <div class="space-y-4">
+          {faqItems.map((item, index) => (
+            <div class="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden">
+              <button type="button" class="faq-question w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors" data-index={index} aria-expanded="false" aria-controls={`faq-answer-${index}`}>
+                <span class="font-semibold text-gray-900">{item.question}</span>
+                <svg class="faq-icon w-5 h-5 text-gray-400 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+              </button>
+              <div id={`faq-answer-${index}`} class="faq-content px-6 py-0 border-t border-gray-100" style="display: none;">
+                <div class="py-4 text-gray-600">{item.answer}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+  <script is:inline>
+    document.addEventListener('DOMContentLoaded', function() {
+      const accordion = document.getElementById('faq-accordion');
+      if (!accordion) return;
+      accordion.addEventListener('click', function(e) {
+        const question = e.target.closest('.faq-question');
+        if (!question) return;
+        e.preventDefault();
+        const index = question.getAttribute('data-index');
+        const content = document.getElementById(`faq-answer-${index}`);
+        const icon = question.querySelector('.faq-icon');
+        if (!content || !icon) return;
+        const isExpanded = question.getAttribute('aria-expanded') === 'true';
+        const allContents = accordion.querySelectorAll('.faq-content');
+        const allIcons = accordion.querySelectorAll('.faq-icon');
+        const allQuestions = accordion.querySelectorAll('.faq-question');
+        allContents.forEach((item, i) => {
+          if (item.id !== `faq-answer-${index}`) {
+            item.style.display = 'none';
+            allIcons[i].classList.remove('rotate-180');
+            allQuestions[i].setAttribute('aria-expanded', 'false');
+          }
+        });
+        if (isExpanded) {
+          content.style.display = 'none';
+          icon.classList.remove('rotate-180');
+          question.setAttribute('aria-expanded', 'false');
+        } else {
+          content.style.display = 'block';
+          icon.classList.add('rotate-180');
+          question.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });

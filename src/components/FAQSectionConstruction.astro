@@ -1,0 +1,77 @@
+---
+export interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+const faqItems: FAQItem[] = [
+  { question: "What is a construction-to-permanent loan?", answer: "It finances the build and then converts to a standard mortgage at completion, often with one closing to save on costs." },
+  { question: "How are draws handled?", answer: "Funds are disbursed in stages (draws) as work is completed, verified by inspections per lender guidelines." },
+  { question: "Do I need a builder contract?", answer: "Yes, a detailed contract and budget are required, including timelines, materials, and cost breakdowns." },
+  { question: "Is an appraisal required?", answer: "Typically yes, based on plans and specs (the 'as-completed' appraised value)." },
+  { question: "Can I lock my rate during construction?", answer: "Extended rate locks may be available; we’ll help evaluate timing and options." },
+  { question: "How do interest-only payments work?", answer: "During construction, payments are often interest-only on funds disbursed, then convert to full principal and interest." },
+  { question: "What about contingency reserves?", answer: "A reserve may be required to account for unforeseen costs and change orders." }
+];
+---
+
+<section class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+      <div class="lg:col-span-4">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">FAQ's about Construction Loans</h2>
+        <p class="text-gray-600">Build confidently with clear financing steps.</p>
+      </div>
+      <div class="lg:col-span-8" id="faq-accordion">
+        <div class="space-y-4">
+          {faqItems.map((item, index) => (
+            <div class="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden">
+              <button type="button" class="faq-question w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors" data-index={index} aria-expanded="false" aria-controls={`faq-answer-${index}`}>
+                <span class="font-semibold text-gray-900">{item.question}</span>
+                <svg class="faq-icon w-5 h-5 text-gray-400 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+              </button>
+              <div id={`faq-answer-${index}`} class="faq-content px-6 py-0 border-t border-gray-100" style="display: none;">
+                <div class="py-4 text-gray-600">{item.answer}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+  <script is:inline>
+    document.addEventListener('DOMContentLoaded', function() {
+      const accordion = document.getElementById('faq-accordion');
+      if (!accordion) return;
+      accordion.addEventListener('click', function(e) {
+        const question = e.target.closest('.faq-question');
+        if (!question) return;
+        e.preventDefault();
+        const index = question.getAttribute('data-index');
+        const content = document.getElementById(`faq-answer-${index}`);
+        const icon = question.querySelector('.faq-icon');
+        if (!content || !icon) return;
+        const isExpanded = question.getAttribute('aria-expanded') === 'true';
+        const allContents = accordion.querySelectorAll('.faq-content');
+        const allIcons = accordion.querySelectorAll('.faq-icon');
+        const allQuestions = accordion.querySelectorAll('.faq-question');
+        allContents.forEach((item, i) => {
+          if (item.id !== `faq-answer-${index}`) {
+            item.style.display = 'none';
+            allIcons[i].classList.remove('rotate-180');
+            allQuestions[i].setAttribute('aria-expanded', 'false');
+          }
+        });
+        if (isExpanded) {
+          content.style.display = 'none';
+          icon.classList.remove('rotate-180');
+          question.setAttribute('aria-expanded', 'false');
+        } else {
+          content.style.display = 'block';
+          icon.classList.add('rotate-180');
+          question.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+  </script>
+</section>

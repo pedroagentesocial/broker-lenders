@@ -1,0 +1,139 @@
+---
+export interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+const faqItems: FAQItem[] = [
+  {
+    question: "What is an FHA loan?",
+    answer: "An FHA loan is a mortgage insured by the Federal Housing Administration. It allows borrowers to purchase a home with as little as 3.5% down payment and more flexible credit requirements than conventional loans."
+  },
+  {
+    question: "Who qualifies for an FHA loan?",
+    answer: "FHA loans are available to first-time homebuyers and repeat buyers. You'll need a credit score of at least 580 for 3.5% down payment, or 500-579 for 10% down payment. You must also have steady employment and sufficient income to afford the mortgage payments."
+  },
+  {
+    question: "What are the benefits of an FHA loan?",
+    answer: "Benefits include lower down payment requirements (as low as 3.5%), more lenient credit score requirements, competitive interest rates, and the ability to use gift funds for your down payment. FHA loans also allow higher debt-to-income ratios compared to conventional loans."
+  },
+  {
+    question: "How much can I borrow with an FHA loan?",
+    answer: "FHA loan limits vary by county and property type. In most areas, the limit is $472,030 for single-family homes in 2023, but can be higher in expensive markets. Your actual loan amount will also depend on your income, debts, and credit profile."
+  },
+  {
+    question: "What documents do I need for an FHA loan?",
+    answer: "You'll typically need: recent pay stubs, W-2 forms from the past 2 years, tax returns from the past 2 years, bank statements, employment verification, and identification. Additional documents may be required based on your specific situation."
+  },
+  {
+    question: "Can I refinance an FHA loan?",
+    answer: "Yes, FHA loans can be refinanced. You can use an FHA Streamline Refinance to lower your rate with minimal documentation, or refinance to a conventional loan if you have sufficient equity. Streamline refinances don't require an appraisal in most cases."
+  },
+  {
+    question: "What is mortgage insurance for FHA loans?",
+    answer: "FHA loans require both an upfront mortgage insurance premium (1.75% of loan amount) and annual mortgage insurance (0.55% to 1.05% annually). The upfront premium can be financed into the loan, while the annual premium is paid monthly with your mortgage payment."
+  },
+  {
+    question: "How long does the FHA loan process take?",
+    answer: "The typical FHA loan process takes 30-45 days from application to closing. This can vary based on factors like appraisal timing, documentation completeness, and current market conditions. Working with an experienced FHA lender can help expedite the process."
+  }
+];
+---
+
+<section class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+      <!-- Left column - Heading -->
+      <div class="lg:col-span-4">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">
+          FAQ's about FHA loans
+        </h2>
+        <p class="text-gray-600">
+          Everything you need to know about FHA loans
+        </p>
+      </div>
+      
+      <!-- Right column - FAQ Accordion -->
+      <div class="lg:col-span-8" id="faq-accordion">
+        <div class="space-y-4">
+          {faqItems.map((item, index) => (
+            <div class="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden">
+              <button 
+                type="button"
+                class="faq-question w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
+                data-index={index}
+                aria-expanded="false"
+                aria-controls={`faq-answer-${index}`}
+              >
+                <span class="font-semibold text-gray-900">{item.question}</span>
+                <svg 
+                  class="faq-icon w-5 h-5 text-gray-400 transform transition-transform duration-200" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div 
+                id={`faq-answer-${index}`}
+                class="faq-content px-6 py-0 border-t border-gray-100" 
+                style="display: none;"
+              >
+                <div class="py-4 text-gray-600">
+                  {item.answer}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script is:inline>
+    document.addEventListener('DOMContentLoaded', function() {
+      const accordion = document.getElementById('faq-accordion');
+      if (!accordion) return;
+
+      accordion.addEventListener('click', function(e) {
+        const question = e.target.closest('.faq-question');
+        if (!question) return;
+
+        e.preventDefault();
+        
+        const index = question.getAttribute('data-index');
+        const content = document.getElementById(`faq-answer-${index}`);
+        const icon = question.querySelector('.faq-icon');
+        
+        if (!content || !icon) return;
+
+        const isExpanded = question.getAttribute('aria-expanded') === 'true';
+        
+        // Close all other FAQ items
+        const allContents = accordion.querySelectorAll('.faq-content');
+        const allIcons = accordion.querySelectorAll('.faq-icon');
+        const allQuestions = accordion.querySelectorAll('.faq-question');
+        
+        allContents.forEach((item, i) => {
+          if (item.id !== `faq-answer-${index}`) {
+            item.style.display = 'none';
+            allIcons[i].classList.remove('rotate-180');
+            allQuestions[i].setAttribute('aria-expanded', 'false');
+          }
+        });
+        
+        // Toggle current item
+        if (isExpanded) {
+          content.style.display = 'none';
+          icon.classList.remove('rotate-180');
+          question.setAttribute('aria-expanded', 'false');
+        } else {
+          content.style.display = 'block';
+          icon.classList.add('rotate-180');
+          question.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+  </script>
+</section>

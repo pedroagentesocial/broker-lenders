@@ -1,0 +1,359 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Contact from '../components/Contact.astro';
+import ImportantLegal from '../components/ImportantLegal.astro';
+
+export interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+const generalFAQs: FAQItem[] = [
+  { question: "What is a mortgage?", answer: "A mortgage is a loan used to purchase or maintain a home, land, or other types of real estate. The borrower agrees to pay the lender over time, typically in a series of regular payments that are divided into principal and interest." },
+  { question: "How do I qualify for a mortgage?", answer: "To qualify for a mortgage, lenders typically look at your credit score, income, employment history, debt-to-income ratio, and down payment amount. Each lender has different requirements, but generally, you'll need a credit score of 620 or higher and stable income." },
+  { question: "What's the difference between pre-qualification and pre-approval?", answer: "Pre-qualification is an informal estimate of how much you might be able to borrow based on basic financial information. Pre-approval is a more formal process where the lender verifies your financial information and commits to lending you a specific amount." },
+  { question: "How much down payment do I need?", answer: "Down payment requirements vary by loan type. Conventional loans typically require 3-20% down, FHA loans require 3.5% down, VA loans may require 0% down for eligible veterans, and USDA loans also offer 0% down for eligible rural properties." },
+  { question: "What are closing costs?", answer: "Closing costs are fees and expenses you pay when finalizing your mortgage. They typically include loan origination fees, appraisal fees, title insurance, attorney fees, and prepaid items like property taxes and insurance. Closing costs usually range from 2-5% of the loan amount." }
+];
+
+const processFAQs: FAQItem[] = [
+  { question: "How long does the mortgage process take?", answer: "The mortgage process typically takes 30-45 days from application to closing, but this can vary depending on factors like the type of loan, your financial situation, and current market conditions. Some loans may close faster, while others may take longer." },
+  { question: "What documents do I need to apply for a mortgage?", answer: "You'll typically need recent pay stubs, W-2 forms or tax returns, bank statements, employment verification, identification, and information about your debts and assets. If you're self-employed, you may need additional documentation like profit and loss statements." },
+  { question: "What happens during the appraisal?", answer: "A licensed appraiser will evaluate the property to determine its market value. They'll examine the home's condition, size, features, and compare it to similar recently sold properties in the area. The appraisal helps ensure the loan amount is appropriate for the property's value." },
+  { question: "What is underwriting?", answer: "Underwriting is the process where the lender reviews your financial information and the property details to determine if you qualify for the loan. The underwriter assesses your creditworthiness, income stability, and the property's value to make a final lending decision." },
+  { question: "Can I back out after making an offer?", answer: "Yes, you can typically back out during the inspection period or if your financing falls through. Your purchase agreement should outline specific contingencies that allow you to cancel the contract without penalty. Always review these terms carefully with your real estate agent." }
+];
+
+const ratesFAQs: FAQItem[] = [
+  { question: "How are mortgage rates determined?", answer: "Mortgage rates are influenced by several factors including the overall economy, inflation, Federal Reserve policies, your credit score, loan amount, down payment, loan type, and loan term. Lenders also consider your debt-to-income ratio and employment history." },
+  { question: "Should I choose a fixed-rate or adjustable-rate mortgage?", answer: "Fixed-rate mortgages offer predictable payments for the life of the loan, making budgeting easier. Adjustable-rate mortgages (ARMs) typically start with lower rates that can change over time. Choose fixed if you plan to stay long-term; consider ARM if you plan to move or refinance within a few years." },
+  { question: "When should I lock my interest rate?", answer: "Rate locks are typically recommended once you've found a property and are under contract. Most lenders offer rate locks for 30-60 days. Locking protects you from rate increases during your home buying process, but you won't benefit if rates decrease unless you have a float-down option." },
+  { question: "What is APR?", answer: "APR (Annual Percentage Rate) represents the total cost of borrowing, including the interest rate plus fees and other costs associated with the loan. It provides a more complete picture of the loan's cost and allows you to compare different loan offers more accurately." },
+  { question: "Can I negotiate my mortgage rate?", answer: "Yes, you can often negotiate your rate by comparing offers from multiple lenders, improving your credit score, increasing your down payment, or buying discount points. Working with a mortgage broker can also help you access better rates from multiple lenders." }
+];
+---
+
+<Layout title="Frequently Asked Questions - Broker Lenders">
+  <!-- Breadcrumb Section -->
+  <div class="bg-white py-4">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="text-sm">
+        <a href="/" class="text-gray-700 hover:text-gray-900">Home</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <span class="text-gray-700">FAQs</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+        Frequently Asked Questions
+      </h1>
+      <p class="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
+        Find answers to the most common questions about mortgages, the home buying process, and working with Broker Lenders.
+      </p>
+      <div class="flex items-center justify-center gap-4">
+        <a href="tel:8013070273" class="bg-black text-white px-8 py-3 rounded-[48px] font-semibold hover:bg-red-600 hover:text-white transition-colors inline-flex items-center justify-center">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          Call (801) 307-0273
+        </a>
+        <a href="https://pedrolira.my1003app.com/318973/register" target="_blank" rel="noopener noreferrer" class="bg-white text-black border border-black px-6 py-3 rounded-[48px] font-semibold transition-colors inline-flex items-center justify-center hover:bg-black hover:text-white">
+          Get started
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- General Mortgage FAQs -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">General Mortgage Questions</h2>
+        <p class="text-lg text-gray-600">Understanding the basics of home financing</p>
+      </div>
+      
+      <div class="max-w-4xl mx-auto">
+        <div class="space-y-4" id="general-faqs">
+          {generalFAQs.map((item, index) => (
+            <div class="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden">
+              <button type="button" class="faq-question w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors" data-index={index} aria-expanded="false" aria-controls={`general-answer-${index}`}>
+                <span class="font-semibold text-gray-900">{item.question}</span>
+                <svg class="faq-icon w-5 h-5 text-gray-400 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+              </button>
+              <div id={`general-answer-${index}`} class="faq-content px-6 py-0 border-t border-gray-100" style="display: none;">
+                <div class="py-4 text-gray-600">{item.answer}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process FAQs -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">The Home Buying Process</h2>
+        <p class="text-lg text-gray-600">Understanding what to expect during your mortgage journey</p>
+      </div>
+      
+      <div class="max-w-4xl mx-auto">
+        <div class="space-y-4" id="process-faqs">
+          {processFAQs.map((item, index) => (
+            <div class="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden">
+              <button type="button" class="faq-question w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors" data-index={index} aria-expanded="false" aria-controls={`process-answer-${index}`}>
+                <span class="font-semibold text-gray-900">{item.question}</span>
+                <svg class="faq-icon w-5 h-5 text-gray-400 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+              </button>
+              <div id={`process-answer-${index}`} class="faq-content px-6 py-0 border-t border-gray-100" style="display: none;">
+                <div class="py-4 text-gray-600">{item.answer}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rates & Terms FAQs -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Rates & Terms</h2>
+        <p class="text-lg text-gray-600">Understanding mortgage rates, terms, and costs</p>
+      </div>
+      
+      <div class="max-w-4xl mx-auto">
+        <div class="space-y-4" id="rates-faqs">
+          {ratesFAQs.map((item, index) => (
+            <div class="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden">
+              <button type="button" class="faq-question w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors" data-index={index} aria-expanded="false" aria-controls={`rates-answer-${index}`}>
+                <span class="font-semibold text-gray-900">{item.question}</span>
+                <svg class="faq-icon w-5 h-5 text-gray-400 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+              </button>
+              <div id={`rates-answer-${index}`} class="faq-content px-6 py-0 border-t border-gray-100" style="display: none;">
+                <div class="py-4 text-gray-600">{item.answer}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Still Have Questions Section -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            Still have questions?
+          </h2>
+          <p class="text-lg text-gray-600 mb-8">
+            Our team of mortgage experts is here to help. Contact us today for personalized answers to your specific situation.
+          </p>
+          <div class="space-y-4">
+            <div class="flex items-center space-x-3">
+              <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <span class="text-gray-700">Personalized guidance for your situation</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <span class="text-gray-700">Expert advice from licensed professionals</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <span class="text-gray-700">Multiple loan options to fit your needs</span>
+            </div>
+          </div>
+        </div>
+        <div class="bg-gray-100 p-8 rounded-2xl">
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">Contact Information</h3>
+          <div class="space-y-4">
+            <div>
+              <h4 class="font-semibold text-gray-900">Phone</h4>
+              <a href="tel:8013070273" class="text-gray-600 hover:text-gray-900">(801) 307-0273</a>
+            </div>
+            <div>
+              <h4 class="font-semibold text-gray-900">Email</h4>
+              <a href="mailto:info@brokerlenders.com" class="text-gray-600 hover:text-gray-900">info@brokerlenders.com</a>
+            </div>
+            <div>
+              <h4 class="font-semibold text-gray-900">Hours</h4>
+              <p class="text-gray-600">Monday - Friday: 8:00 AM - 6:00 PM</p>
+              <p class="text-gray-600">Saturday: 9:00 AM - 4:00 PM</p>
+            </div>
+          </div>
+          <a href="https://pedrolira.my1003app.com/318973/register" target="_blank" rel="noopener noreferrer" class="w-full bg-black text-white py-3 px-6 rounded-[48px] font-semibold hover:bg-red-600 hover:text-white transition-colors inline-flex items-center justify-center mt-6">
+            Get started today
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <Contact />
+
+  <!-- Final CTA -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold text-gray-900 mb-8">
+        Ready to start your home buying journey?
+      </h2>
+      <div class="flex items-center justify-center gap-4">
+        <a href="https://pedrolira.my1003app.com/318973/register" target="_blank" rel="noopener noreferrer" class="bg-black text-white px-8 py-3 rounded-[48px] font-semibold hover:bg-red-600 hover:text-white transition-colors inline-flex items-center justify-center">
+          Get started
+        </a>
+        <a href="tel:8013070273" class="bg-white text-black border border-black px-6 py-3 rounded-[48px] font-semibold transition-colors inline-flex items-center justify-center hover:bg-black hover:text-white">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          Call (801) 307-0273
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Legal disclaimer -->
+  <ImportantLegal />
+
+  <script is:inline>
+    // FAQ Accordion functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      // General FAQs
+      const generalAccordion = document.getElementById('general-faqs');
+      if (generalAccordion) {
+        generalAccordion.addEventListener('click', function(e) {
+          const question = e.target.closest('.faq-question');
+          if (!question) return;
+          e.preventDefault();
+          const index = question.getAttribute('data-index');
+          const content = document.getElementById(`general-answer-${index}`);
+          const icon = question.querySelector('.faq-icon');
+          if (!content || !icon) return;
+          
+          const isExpanded = question.getAttribute('aria-expanded') === 'true';
+          
+          // Close all other FAQs in this section
+          const allContents = generalAccordion.querySelectorAll('.faq-content');
+          const allIcons = generalAccordion.querySelectorAll('.faq-icon');
+          const allQuestions = generalAccordion.querySelectorAll('.faq-question');
+          
+          allContents.forEach((item, i) => {
+            if (item.id !== `general-answer-${index}`) {
+              item.style.display = 'none';
+              allIcons[i].classList.remove('rotate-180');
+              allQuestions[i].setAttribute('aria-expanded', 'false');
+            }
+          });
+          
+          if (isExpanded) {
+            content.style.display = 'none';
+            icon.classList.remove('rotate-180');
+            question.setAttribute('aria-expanded', 'false');
+          } else {
+            content.style.display = 'block';
+            icon.classList.add('rotate-180');
+            question.setAttribute('aria-expanded', 'true');
+          }
+        });
+      }
+
+      // Process FAQs
+      const processAccordion = document.getElementById('process-faqs');
+      if (processAccordion) {
+        processAccordion.addEventListener('click', function(e) {
+          const question = e.target.closest('.faq-question');
+          if (!question) return;
+          e.preventDefault();
+          const index = question.getAttribute('data-index');
+          const content = document.getElementById(`process-answer-${index}`);
+          const icon = question.querySelector('.faq-icon');
+          if (!content || !icon) return;
+          
+          const isExpanded = question.getAttribute('aria-expanded') === 'true';
+          
+          // Close all other FAQs in this section
+          const allContents = processAccordion.querySelectorAll('.faq-content');
+          const allIcons = processAccordion.querySelectorAll('.faq-icon');
+          const allQuestions = processAccordion.querySelectorAll('.faq-question');
+          
+          allContents.forEach((item, i) => {
+            if (item.id !== `process-answer-${index}`) {
+              item.style.display = 'none';
+              allIcons[i].classList.remove('rotate-180');
+              allQuestions[i].setAttribute('aria-expanded', 'false');
+            }
+          });
+          
+          if (isExpanded) {
+            content.style.display = 'none';
+            icon.classList.remove('rotate-180');
+            question.setAttribute('aria-expanded', 'false');
+          } else {
+            content.style.display = 'block';
+            icon.classList.add('rotate-180');
+            question.setAttribute('aria-expanded', 'true');
+          }
+        });
+      }
+
+      // Rates FAQs
+      const ratesAccordion = document.getElementById('rates-faqs');
+      if (ratesAccordion) {
+        ratesAccordion.addEventListener('click', function(e) {
+          const question = e.target.closest('.faq-question');
+          if (!question) return;
+          e.preventDefault();
+          const index = question.getAttribute('data-index');
+          const content = document.getElementById(`rates-answer-${index}`);
+          const icon = question.querySelector('.faq-icon');
+          if (!content || !icon) return;
+          
+          const isExpanded = question.getAttribute('aria-expanded') === 'true';
+          
+          // Close all other FAQs in this section
+          const allContents = ratesAccordion.querySelectorAll('.faq-content');
+          const allIcons = ratesAccordion.querySelectorAll('.faq-icon');
+          const allQuestions = ratesAccordion.querySelectorAll('.faq-question');
+          
+          allContents.forEach((item, i) => {
+            if (item.id !== `rates-answer-${index}`) {
+              item.style.display = 'none';
+              allIcons[i].classList.remove('rotate-180');
+              allQuestions[i].setAttribute('aria-expanded', 'false');
+            }
+          });
+          
+          if (isExpanded) {
+            content.style.display = 'none';
+            icon.classList.remove('rotate-180');
+            question.setAttribute('aria-expanded', 'false');
+          } else {
+            content.style.display = 'block';
+            icon.classList.add('rotate-180');
+            question.setAttribute('aria-expanded', 'true');
+          }
+        });
+      }
+    });
+  </script>
+</Layout>

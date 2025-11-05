@@ -1,0 +1,248 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ImportantLegal from '../components/ImportantLegal.astro';
+import Contact from '../components/Contact.astro';
+import TestimonialsSection from '../components/TestimonialsSection.astro';
+---
+
+<Layout title="Loan Options - Broker Lenders">
+	<!-- Breadcrumb Section -->
+	<div class="bg-white py-4">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<nav class="text-sm">
+				<a href="/" class="text-gray-700 hover:text-gray-900">Home</a>
+				<span class="mx-2 text-gray-500">/</span>
+				<span class="text-gray-700">Loan Options</span>
+			</nav>
+		</div>
+	</div>
+
+	<!-- Hero Section -->
+	<section class="py-16 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
+				<!-- Left side - Content in gray rectangle -->
+				<div class="bg-gray-100 p-8 lg:p-12 rounded-[48px] flex flex-col justify-center h-96">
+					<h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+						Home financing that fits your goals
+					</h1>
+					<p class="text-lg text-gray-600">
+						Personalized loan options for first-time buyers and refinances.
+					</p>
+				</div>
+				
+				<!-- Right side - Image -->
+				<div>
+					<img 
+						src="https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=happy%20family%20couple%20at%20home%2C%20smiling%20together%2C%20warm%20lighting%2C%20professional%20photography&image_size=landscape_4_3" 
+						alt="Happy family at home" 
+						class="w-full h-96 object-cover rounded-[48px]"
+					/>
+				</div>
+
+		</div>
+	</section>
+
+	<!-- Find your best-fit loan -->
+	<section class="py-16 bg-white">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="bg-gray-100 p-8 lg:p-12 rounded-[48px]">
+				<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+					<!-- Columna 1: Texto -->
+					<div class="lg:col-span-2">
+						<h2 class="text-3xl font-bold text-gray-900 mb-6">Find your best-fit loan</h2>
+						<p class="text-lg text-gray-600">
+							Get recommendations tailored to your budget, timeline, and goals—so you can move forward with confidence.
+						</p>
+					</div>
+					
+					<!-- Columna 2: Botón -->
+					<div class="lg:col-span-1 flex justify-center lg:justify-end">
+						<a href="tel:+1-801-307-0273" class="bg-black text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-600 hover:text-white transition-colors inline-flex items-center justify-center">
+							See my options
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Loan options from Rocket Mortgage® -->
+	<section class="py-16 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Broker Lenders® loan options, built around you</h2>
+			
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+				<!-- FHA loans -->
+				<a href="/loan-options/fha-loan" class="block bg-gray-50 p-8 rounded-2xl border border-transparent hover:border-black transition-colors">
+					<h3 class="text-xl font-bold text-gray-900 mb-4">FHA loans</h3>
+					<p class="text-gray-600 mb-6">
+						Government-backed loans with lower down payment requirements and flexible credit guidelines.
+					</p>
+					<span class="text-black font-semibold hover:underline">Learn more</span>
+				</a>
+
+				<!-- VA loans -->
+				<a href="/loan-options/va-loan" class="block bg-gray-50 p-8 rounded-2xl border border-transparent hover:border-black transition-colors">
+					<h3 class="text-xl font-bold text-gray-900 mb-4">VA loans</h3>
+					<p class="text-gray-600 mb-6">
+						Exclusive benefits for military members, veterans, and eligible spouses with no down payment required.
+					</p>
+					<span class="text-black font-semibold hover:underline">Learn more</span>
+				</a>
+
+				<!-- USDA loans -->
+				<a href="/loan-options/usda-loan" class="block bg-gray-50 p-8 rounded-2xl border border-transparent hover:border-black transition-colors">
+					<h3 class="text-xl font-bold text-gray-900 mb-4">USDA loans</h3>
+					<p class="text-gray-600 mb-6">
+						Rural development loans with no down payment for eligible properties in qualifying areas.
+					</p>
+					<span class="text-black font-semibold hover:underline">Learn more</span>
+				</a>
+
+				<!-- Conventional loans -->
+				<a href="/loan-options/conventional-loan" class="block bg-gray-50 p-8 rounded-2xl border border-transparent hover:border-black transition-colors">
+					<h3 class="text-xl font-bold text-gray-900 mb-4">Conventional loans</h3>
+					<p class="text-gray-600 mb-6">
+						Traditional mortgages with competitive rates and flexible terms for qualified borrowers.
+					</p>
+					<span class="text-black font-semibold hover:underline">Learn more</span>
+				</a>
+
+				<!-- Jumbo loans -->
+				<a href="/loan-options/jumbo-loan" class="block bg-gray-50 p-8 rounded-2xl border border-transparent hover:border-black transition-colors">
+					<h3 class="text-xl font-bold text-gray-900 mb-4">Jumbo loans</h3>
+					<p class="text-gray-600 mb-6">
+						Financing for luxury homes and properties that exceed conventional loan limits.
+					</p>
+					<span class="text-black font-semibold hover:underline">Learn more</span>
+				</a>
+
+				<!-- First-time homebuyer loans -->
+				<a href="/loan-options/first-time-loan" class="block bg-gray-50 p-8 rounded-2xl border border-transparent hover:border-black transition-colors">
+					<h3 class="text-xl font-bold text-gray-900 mb-4">First-time homebuyer loans</h3>
+					<p class="text-gray-600 mb-6">
+						Special programs designed to help first-time buyers achieve homeownership with lower barriers.
+					</p>
+					<span class="text-black font-semibold hover:underline">Learn more</span>
+				</a>
+
+				<!-- Investment property loans -->
+				<a href="/loan-options/investment-loan" class="block bg-gray-50 p-8 rounded-2xl border border-transparent hover:border-black transition-colors">
+					<h3 class="text-xl font-bold text-gray-900 mb-4">Investment property loans</h3>
+					<p class="text-gray-600 mb-6">
+						Financing options for rental properties and real estate investments.
+					</p>
+					<span class="text-black font-semibold hover:underline">Learn more</span>
+				</a>
+
+				<!-- Construction loans -->
+				<a href="/loan-options/construction-loan" class="block bg-gray-50 p-8 rounded-2xl border border-transparent hover:border-black transition-colors">
+					<h3 class="text-xl font-bold text-gray-900 mb-4">Construction loans</h3>
+					<p class="text-gray-600 mb-6">
+						Short-term financing to build your dream home from the ground up.
+					</p>
+					<span class="text-black font-semibold hover:underline">Learn more</span>
+				</a>
+
+				<!-- Refinance loans -->
+				<a href="/loan-options/refinance-loan" class="block bg-gray-50 p-8 rounded-2xl border border-transparent hover:border-black transition-colors">
+					<h3 class="text-xl font-bold text-gray-900 mb-4">Refinance loans</h3>
+					<p class="text-gray-600 mb-6">
+						Lower your rate, reduce your payment, or access your home's equity.
+					</p>
+					<span class="text-black font-semibold hover:underline">Learn more</span>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Questions about mortgage? -->
+	<section class="py-16 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+				<!-- Left side - Content in gray rectangle -->
+				<div class="bg-gray-100 p-8 lg:p-12 rounded-[48px]">
+					<h2 class="text-3xl font-bold text-gray-900 mb-6">Ready to find your perfect loan?</h2>
+					<p class="text-lg text-gray-600 mb-8">
+						Our mortgage experts are here to help you understand your options and find the right loan for your situation. Get personalized guidance every step of the way.
+					</p>
+					<a href="tel:+1-801-307-0273" class="bg-black text-white px-8 py-3 rounded-[48px] font-semibold hover:bg-red-600 hover:text-white transition-colors inline-flex items-center justify-center">
+						Talk with a expert
+					</a>
+				</div>
+				
+				<!-- Right side - Image -->
+				<div>
+					<img 
+						src="https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=smiling%20mortgage%20advisor%20helping%20couple%20choose%20home%20loan%20options%2C%20bright%20natural%20light%2C%20professional%20photography%2C%20warm%20and%20friendly&image_size=portrait_4_3" 
+						alt="Mortgage advisor" 
+						class="w-full h-96 object-cover rounded-2xl"
+					/>
+				</div>
+			</div>
+	</section>
+
+	<!-- Expert guidance for your home loan journey -->
+	<section class="py-16 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-12">
+				<h2 class="text-3xl font-bold text-gray-900 mb-4">Expert guidance for your home loan journey</h2>
+			</div>
+			
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+				<!-- Step 1 -->
+				<div class="text-center">
+					<div class="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-4">
+						<span class="text-white font-bold text-xl">1</span>
+					</div>
+					<h3 class="text-lg font-bold text-gray-900 mb-2">Apply online</h3>
+					<p class="text-gray-600">
+						Start your application online and get pre-approved in minutes.
+					</p>
+				</div>
+
+				<!-- Step 2 -->
+				<div class="text-center">
+					<div class="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-4">
+						<span class="text-white font-bold text-xl">2</span>
+					</div>
+					<h3 class="text-lg font-bold text-gray-900 mb-2">Know your next steps</h3>
+					<p class="text-gray-600">
+						Get a clear roadmap of what to expect throughout the process.
+					</p>
+				</div>
+
+				<!-- Step 3 -->
+				<div class="text-center">
+					<div class="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-4">
+						<span class="text-white font-bold text-xl">3</span>
+					</div>
+					<h3 class="text-lg font-bold text-gray-900 mb-2">Finalize your loan</h3>
+					<p class="text-gray-600">
+						Work with our team to finalize your loan and close on your home.
+					</p>
+				</div>
+
+				<!-- Step 4 -->
+				<div class="text-center">
+					<div class="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-4">
+						<span class="text-white font-bold text-xl">4</span>
+					</div>
+					<h3 class="text-lg font-bold text-gray-900 mb-2">Check if the goal</h3>
+					<p class="text-gray-600">
+						Celebrate your homeownership achievement and enjoy your new home.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<TestimonialsSection />
+
+	<!-- Contact Section -->
+	<Contact />
+
+	<!-- Important Legal Disclosures -->
+	<ImportantLegal />
+</Layout>

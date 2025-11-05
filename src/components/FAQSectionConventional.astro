@@ -1,0 +1,77 @@
+---
+export interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+const faqItems: FAQItem[] = [
+  { question: "What is a conventional loan?", answer: "A conventional loan is not insured by a government agency (FHA, VA, USDA). It typically offers competitive rates and flexible terms for well-qualified borrowers." },
+  { question: "How much is the minimum down payment?", answer: "Down payments typically start at 3% for primary residences (first-time buyers) and 5%+, depending on occupancy, credit, and loan type." },
+  { question: "Do conventional loans require PMI?", answer: "Private Mortgage Insurance (PMI) is required when the down payment is less than 20%. PMI can be removed once you reach 80% loan-to-value." },
+  { question: "What credit score do I need?", answer: "Most lenders look for a 620+ FICO score. Better scores generally help you qualify for lower rates and better terms." },
+  { question: "Fixed vs. Adjustable (ARM): which should I choose?", answer: "Fixed-rate loans keep the same rate for the life of the loan. ARMs start lower but can adjust later. The right choice depends on your timeline and risk tolerance." },
+  { question: "Can I use a conventional loan for investment properties?", answer: "Yes. Conventional loans can finance primary homes, second homes, and investment properties. Requirements are stricter for investment properties." },
+  { question: "How long does closing take?", answer: "Typical timelines are 25–35 days, depending on appraisal timing, documentation, and underwriting. We help you move efficiently." }
+];
+---
+
+<section class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+      <div class="lg:col-span-4">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">FAQ's about Conventional loans</h2>
+        <p class="text-gray-600">Answers to common questions about conventional financing.</p>
+      </div>
+      <div class="lg:col-span-8" id="faq-accordion">
+        <div class="space-y-4">
+          {faqItems.map((item, index) => (
+            <div class="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden">
+              <button type="button" class="faq-question w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors" data-index={index} aria-expanded="false" aria-controls={`faq-answer-${index}`}>
+                <span class="font-semibold text-gray-900">{item.question}</span>
+                <svg class="faq-icon w-5 h-5 text-gray-400 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+              </button>
+              <div id={`faq-answer-${index}`} class="faq-content px-6 py-0 border-t border-gray-100" style="display: none;">
+                <div class="py-4 text-gray-600">{item.answer}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+  <script is:inline>
+    document.addEventListener('DOMContentLoaded', function() {
+      const accordion = document.getElementById('faq-accordion');
+      if (!accordion) return;
+      accordion.addEventListener('click', function(e) {
+        const question = e.target.closest('.faq-question');
+        if (!question) return;
+        e.preventDefault();
+        const index = question.getAttribute('data-index');
+        const content = document.getElementById(`faq-answer-${index}`);
+        const icon = question.querySelector('.faq-icon');
+        if (!content || !icon) return;
+        const isExpanded = question.getAttribute('aria-expanded') === 'true';
+        const allContents = accordion.querySelectorAll('.faq-content');
+        const allIcons = accordion.querySelectorAll('.faq-icon');
+        const allQuestions = accordion.querySelectorAll('.faq-question');
+        allContents.forEach((item, i) => {
+          if (item.id !== `faq-answer-${index}`) {
+            item.style.display = 'none';
+            allIcons[i].classList.remove('rotate-180');
+            allQuestions[i].setAttribute('aria-expanded', 'false');
+          }
+        });
+        if (isExpanded) {
+          content.style.display = 'none';
+          icon.classList.remove('rotate-180');
+          question.setAttribute('aria-expanded', 'false');
+        } else {
+          content.style.display = 'block';
+          icon.classList.add('rotate-180');
+          question.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+  </script>
+</section>

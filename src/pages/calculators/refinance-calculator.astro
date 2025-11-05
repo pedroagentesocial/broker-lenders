@@ -1,0 +1,1179 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Contact from '../../components/Contact.astro';
+import ImportantLegal from '../../components/ImportantLegal.astro';
+import NextMoveSection from '../../components/NextMoveSection.astro';
+---
+
+<Layout title="Refinance Calculator - Broker Lenders®">
+	<!-- Breadcrumb -->
+	<section class="bg-white py-4">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<nav class="flex" aria-label="Breadcrumb">
+				<ol class="flex items-center space-x-4">
+					<li>
+						<div>
+							<a href="/" class="text-gray-400 hover:text-gray-500 text-sm font-medium">
+								Home
+							</a>
+						</div>
+					</li>
+					<li>
+						<div class="flex items-center">
+							<svg class="flex-shrink-0 h-5 w-5 text-gray-300" viewBox="0 0 20 20" fill="currentColor">
+								<path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+							</svg>
+							<a href="/calculators" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700">Calculators</a>
+						</div>
+					</li>
+					<li>
+						<div class="flex items-center">
+							<svg class="flex-shrink-0 h-5 w-5 text-gray-300" viewBox="0 0 20 20" fill="currentColor">
+								<path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+							</svg>
+							<span class="ml-4 text-sm font-medium text-gray-500">Refinance Calculator</span>
+						</div>
+					</li>
+				</ol>
+			</nav>
+		</div>
+	</section>
+
+	<!-- Main Calculator Section -->
+	<section class="py-8 bg-white">
+		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-8">
+				<h1 class="text-2xl font-bold text-gray-900 mb-3">Refinance calculator</h1>
+				<p class="text-base text-gray-600 max-w-2xl mx-auto">
+					See if refinancing makes sense for you and calculate potential savings. 
+					Compare your current mortgage with new loan options to find the best deal.
+				</p>
+			</div>
+
+			<!-- 2-Column Layout Container -->
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
+				<!-- Left Column: Calculator Form -->
+				<div class="bg-gray-100 p-4 rounded-xl shadow-lg border border-gray-200">
+					<form id="mortgage-form" class="space-y-4">
+						<!-- Current Mortgage Balance -->
+						<div class="bg-white p-1.5 rounded-lg">
+							<!-- Label positioned above input, aligned with placeholder text -->
+							<div class="flex justify-start items-center px-1.5 mb-0.5">
+								<span class="text-xs font-medium text-gray-700">Current mortgage balance</span>
+								<!-- Info Icon with Tooltip -->
+								<div class="relative ml-2 group">
+									<div class="w-4 h-4 bg-black hover:bg-gray-800 rounded-full flex items-center justify-center cursor-help transition-colors">
+										<span class="text-white text-xs font-bold">i</span>
+									</div>
+									<!-- Tooltip -->
+									<div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-1 px-2 py-1 bg-black text-white text-[9px] rounded opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 w-48 text-center leading-tight">
+										Example: $250,000 - Enter the remaining balance on your current mortgage
+										<!-- Arrow pointing down -->
+										<div class="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-2 border-r-2 border-t-2 border-transparent border-t-black"></div>
+									</div>
+								</div>
+							</div>
+							<!-- Input Field -->
+							<div class="relative">
+								<span class="absolute left-1.5 top-1/2 transform -translate-y-1/2 text-gray-500 text-sm">$</span>
+								<input 
+									type="text" 
+									id="currentMortgageBalance" 
+									name="currentMortgageBalance"
+									class="w-full pl-5 pr-1.5 py-1.5 bg-transparent border-0 focus:outline-none text-sm"
+									placeholder="0"
+								>
+							</div>
+						</div>
+
+						<!-- Current Monthly Payment -->
+						<div class="bg-white p-1.5 rounded-lg">
+							<!-- Label positioned above input, aligned with placeholder text -->
+							<div class="flex justify-start items-center px-1.5 mb-0.5">
+								<span class="text-xs font-medium text-gray-700">Current monthly payment</span>
+								<!-- Info Icon with Tooltip -->
+								<div class="relative ml-2 group">
+									<div class="w-4 h-4 bg-black hover:bg-gray-800 rounded-full flex items-center justify-center cursor-help transition-colors">
+										<span class="text-white text-xs font-bold">i</span>
+									</div>
+									<!-- Tooltip -->
+									<div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-1 px-2 py-1 bg-black text-white text-[9px] rounded opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 w-48 text-center leading-tight">
+										Example: $1,850 - Enter your current monthly mortgage payment (principal + interest)
+										<!-- Arrow pointing down -->
+										<div class="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-2 border-r-2 border-t-2 border-transparent border-t-black"></div>
+									</div>
+								</div>
+							</div>
+							<!-- Input Field -->
+							<div class="relative">
+								<span class="absolute left-1.5 top-1/2 transform -translate-y-1/2 text-gray-500 text-sm">$</span>
+								<input 
+									type="text" 
+									id="currentMonthlyPayment" 
+									name="currentMonthlyPayment"
+									class="w-full pl-5 pr-1.5 py-1.5 bg-transparent border-0 focus:outline-none text-sm"
+									placeholder="0"
+								>
+							</div>
+						</div>
+
+						<!-- Current Home Value -->
+						<div class="bg-white p-1.5 rounded-lg">
+							<!-- Label positioned above input, aligned with placeholder text -->
+							<div class="flex justify-start items-center px-1.5 mb-0.5">
+								<span class="text-xs font-medium text-gray-700">Current home value</span>
+								<!-- Info Icon with Tooltip -->
+								<div class="relative ml-2 group">
+									<div class="w-4 h-4 bg-black hover:bg-gray-800 rounded-full flex items-center justify-center cursor-help transition-colors">
+										<span class="text-white text-xs font-bold">i</span>
+									</div>
+									<!-- Tooltip -->
+									<div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-1 px-2 py-1 bg-black text-white text-[9px] rounded opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 w-48 text-center leading-tight">
+										Example: $400,000 - Enter the current estimated value of your home
+										<!-- Arrow pointing down -->
+										<div class="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-2 border-r-2 border-t-2 border-transparent border-t-black"></div>
+									</div>
+								</div>
+							</div>
+							<!-- Input Field -->
+							<div class="relative">
+								<span class="absolute left-1.5 top-1/2 transform -translate-y-1/2 text-gray-500 text-sm">$</span>
+								<input 
+									type="text" 
+									id="currentHomeValue" 
+									name="currentHomeValue"
+									class="w-full pl-5 pr-1.5 py-1.5 bg-transparent border-0 focus:outline-none text-sm"
+									placeholder="0"
+								>
+							</div>
+						</div>
+
+						<!-- Credit Profile and ZIP Code (Same Row) -->
+						<div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+							<!-- Credit Profile -->
+							<div class="bg-white p-1.5 rounded-lg">
+								<!-- Label positioned above input, aligned with placeholder text -->
+								<div class="flex justify-start px-1.5 mb-0.5">
+									<span class="text-xs font-medium text-gray-700">Credit profile</span>
+								</div>
+								<!-- Select Field -->
+								<select 
+									id="creditProfile" 
+									name="creditProfile"
+									class="w-full px-1.5 py-1.5 bg-transparent border-0 focus:outline-none text-sm credit-profile-select"
+								>
+									<option value="" selected disabled class="text-gray-400">Select Range</option>
+									<option value="less-than-580" class="text-gray-900">Less than 580</option>
+									<option value="580-619" class="text-gray-900">580-619</option>
+									<option value="620-659" class="text-gray-900">620-659</option>
+									<option value="660-719" class="text-gray-900">660-719</option>
+									<option value="720-plus" class="text-gray-900">720+</option>
+								</select>
+							</div>
+
+							<!-- ZIP Code -->
+							<div class="bg-white p-1.5 rounded-lg">
+								<!-- Label positioned above input, aligned with placeholder text -->
+								<div class="flex justify-start px-1.5 mb-0.5">
+									<span class="text-xs font-medium text-gray-700">ZIP code</span>
+								</div>
+								<!-- Input Field -->
+								<input 
+									type="text" 
+									id="zipCode" 
+									name="zipCode"
+									value=""
+									class="w-full px-1.5 py-1.5 bg-transparent border-0 focus:outline-none text-sm"
+									placeholder="Value"
+								>
+							</div>
+						</div>
+
+
+					</form>
+					
+					<!-- Calculate Button -->
+					<div class="mt-4">
+						<button 
+							id="calculateButton"
+							type="button"
+							class="w-full bg-black text-white py-3 px-4 rounded-[48px] text-base font-semibold hover:bg-gray-800 transition-colors duration-200"
+						>
+							Calculate
+						</button>
+					</div>
+					
+					<!-- Logo and Legal Disclosures -->
+					<div class="mt-4 flex items-center justify-center space-x-2 text-xs text-gray-500">
+						<img 
+							src="/BL logo negro.png" 
+							alt="Broker Lenders Logo" 
+							class="h-6 w-auto"
+						>
+						<span>|</span>
+						<button 
+							id="legalDisclosuresBtn"
+							class="underline hover:text-gray-700 transition-colors cursor-pointer"
+						>
+							Legal disclosures
+						</button>
+					</div>
+				</div>
+
+				<!-- Right Column: Results and Message Cards -->
+				<div class="space-y-4">
+					<!-- Results Card -->
+					<div id="resultsCard" class="bg-purple-600/10 px-8 py-8 rounded-xl shadow-lg text-gray-900 min-h-80 flex flex-col justify-between">
+						<div class="text-left space-y-4">
+							<div class="text-sm font-bold text-gray-700">You could save</div>
+							<div class="text-8xl font-bold speedometer-value" id="monthlySavings">$0</div>
+							<div class="text-sm font-medium text-gray-600 opacity-0 transition-opacity duration-500" id="eachMonthLabel">each month</div>
+						</div>
+
+						<!-- Button -->
+						<div class="text-left mt-2">
+							<button class="px-8 py-4 border border-gray-400 text-gray-700 bg-transparent rounded-full hover:bg-gray-100 transition-colors text-sm font-bold">
+								Apply now →
+							</button>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Legal Disclosures Modal -->
+	<div id="legalModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
+		<div class="bg-white rounded-[48px] max-w-4xl w-full max-h-[80vh] overflow-y-auto p-8 relative">
+			<!-- Close Button -->
+			<button 
+				id="closeModal" 
+				class="absolute top-6 right-6 text-gray-400 hover:text-gray-600 transition-colors"
+			>
+				<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+				</svg>
+			</button>
+			
+			<!-- Modal Content -->
+			<div class="pr-8">
+				<h2 class="text-2xl font-bold text-gray-900 mb-6">Legal Disclosures</h2>
+				
+				<div class="space-y-6 text-gray-700 leading-relaxed">
+					<p>
+						The Broker Lenders refinance calculator is for estimation purposes only. Results do not reflect all loan programs and are subject to individual program loan limits. Qualification, rates and payments will vary based on timing and individual circumstances. This is not a commitment to lend.
+					</p>
+					
+					<div>
+						<h3 class="text-lg font-semibold text-gray-900 mb-3">Payment Example</h3>
+						<p class="mb-3">Here's a payment example based on an average home price and the most common loan type:</p>
+						
+						<div class="bg-gray-50 p-4 rounded-lg space-y-2">
+							<p><strong>Loan amount:</strong> $300,000</p>
+							<p><strong>Loan type:</strong> 30-year Fixed-Rate Loan</p>
+							<p><strong>Interest rate/APR:</strong> 7.375% (7.692% APR)</p>
+							<p><strong>Monthly payment:</strong> $2,072.03</p>
+							<p><strong>Points:</strong> 1.875 points, costs due at closing</p>
+							<p><strong>Loan-to-value (LTV):</strong> 80.00%</p>
+						</div>
+					</div>
+					
+					<div class="space-y-3">
+						<p>
+							One point is equal to one percent of your loan amount. Payment does not include taxes and insurance. The actual payment amount will be greater. Some state and county maximum loan amount restrictions may apply. Rates shown are valid on publication date of April 18, 2024.
+						</p>
+						
+						<p class="text-sm">
+							¹If you didn't enter taxes and insurance amounts, an estimate of your taxes is based on the state selected. This does not include all fees.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Next Move Section -->
+	<NextMoveSection />
+
+	<!-- How to use section -->
+	<section class="py-16 bg-white">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-12">
+				<h2 class="text-3xl font-bold text-gray-900 mb-4">How to use a refinance calculator</h2>
+				<p class="text-lg text-gray-600">
+					Our refinance calculator helps you determine if refinancing your current mortgage makes financial sense.
+				</p>
+			</div>
+
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+				<div class="bg-gray-50 p-6 rounded-xl shadow-sm">
+					<div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+						</svg>
+					</div>
+					<h3 class="text-xl font-semibold text-gray-900 mb-3">Enter Current Home Value</h3>
+					<p class="text-gray-600">
+						Start by entering your home's current market value and remaining loan balance. 
+						This helps determine your equity and refinancing options.
+					</p>
+				</div>
+
+				<div class="bg-gray-50 p-6 rounded-xl shadow-sm">
+					<div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+						</svg>
+					</div>
+					<h3 class="text-xl font-semibold text-gray-900 mb-3">Compare New Loan Terms</h3>
+					<p class="text-gray-600">
+						Enter the new interest rate and loan term you're considering. 
+						Lower rates or shorter terms can lead to significant savings.
+					</p>
+				</div>
+
+				<div class="bg-gray-50 p-6 rounded-xl shadow-sm">
+					<div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+						</svg>
+					</div>
+					<h3 class="text-xl font-semibold text-gray-900 mb-3">Factor in Closing Costs</h3>
+					<p class="text-gray-600">
+						Consider refinancing costs like appraisal fees, title insurance, and origination fees. 
+						These affect your break-even timeline.
+					</p>
+				</div>
+
+				<div class="bg-gray-50 p-6 rounded-xl shadow-sm">
+					<div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+						</svg>
+					</div>
+					<h3 class="text-xl font-semibold text-gray-900 mb-3">Calculate Your Savings</h3>
+					<p class="text-gray-600">
+						See your potential monthly savings and total interest savings over the life of the loan. 
+						Determine if refinancing is worth it for your situation.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Tips Section -->
+	<section class="py-16 bg-white">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-12">
+				<h2 class="text-3xl font-bold text-gray-900 mb-4">Refinance calculator tips</h2>
+				<p class="text-lg text-gray-600">
+					Make the most of your refinancing decision with these helpful insights.
+				</p>
+			</div>
+
+			<div class="space-y-8">
+				<div class="bg-blue-50 p-6 rounded-xl">
+					<h3 class="text-xl font-semibold text-gray-900 mb-3">When to Refinance</h3>
+					<p class="text-gray-700">
+						Generally, refinancing makes sense when you can lower your interest rate by at least 0.5-1%. 
+						Also consider refinancing to switch from an adjustable to fixed rate, or to access home equity.
+					</p>
+				</div>
+
+				<div class="bg-green-50 p-6 rounded-xl">
+					<h3 class="text-xl font-semibold text-gray-900 mb-3">Break-Even Analysis</h3>
+					<p class="text-gray-700">
+						Calculate how long it will take to recoup your closing costs through monthly savings. 
+						If you plan to stay in your home longer than the break-even period, refinancing likely makes sense.
+					</p>
+				</div>
+
+				<div class="bg-yellow-50 p-6 rounded-xl">
+					<h3 class="text-xl font-semibold text-gray-900 mb-3">Cash-Out Refinancing</h3>
+					<p class="text-gray-700">
+						If your home has appreciated significantly, you might consider cash-out refinancing to access 
+						equity for home improvements, debt consolidation, or other major expenses.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Refinance Calculator FAQs Section -->
+	<section class="py-16 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+				<!-- Left Column: Title and Description -->
+				<div>
+					<h2 class="text-3xl font-bold text-gray-900 mb-4">
+						Refinance Calculator FAQs
+					</h2>
+					<p class="text-lg text-gray-600 leading-relaxed">
+						Don't see your question here? We love helping people understand how refinancing works and what yours could be. Just talk to us.
+					</p>
+				</div>
+
+				<!-- Right Column: FAQ Items -->
+				<div class="space-y-4">
+					<!-- FAQ Item 1 -->
+					<div class="border border-gray-200 rounded-lg">
+						<button class="faq-button w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset">
+							<span class="font-medium text-gray-900">When should I consider refinancing my mortgage?</span>
+							<svg class="faq-icon w-5 h-5 text-gray-500 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+							</svg>
+						</button>
+						<div class="faq-content hidden px-6 pb-4">
+							<p class="text-gray-600">
+								Consider refinancing when interest rates drop significantly (typically 0.5-1% below your current rate), when your credit score has improved, when you want to change loan terms, or when you need to access home equity. Also consider refinancing to remove PMI or switch from an adjustable to fixed-rate mortgage.
+							</p>
+						</div>
+					</div>
+
+					<!-- FAQ Item 2 -->
+					<div class="border border-gray-200 rounded-lg">
+						<button class="faq-button w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset">
+							<span class="font-medium text-gray-900">How much can I save by refinancing?</span>
+							<svg class="faq-icon w-5 h-5 text-gray-500 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+							</svg>
+						</button>
+						<div class="faq-content hidden px-6 pb-4">
+							<p class="text-gray-600">
+								Savings depend on your current rate, new rate, loan balance, and how long you stay in the home. A 1% rate reduction on a $300,000 loan could save you about $300/month. However, you must factor in closing costs (typically 2-5% of loan amount) and break-even time to determine if refinancing makes financial sense.
+							</p>
+						</div>
+					</div>
+
+					<!-- FAQ Item 3 -->
+					<div class="border border-gray-200 rounded-lg">
+						<button class="faq-button w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset">
+							<span class="font-medium text-gray-900">What are the costs associated with refinancing?</span>
+							<svg class="faq-icon w-5 h-5 text-gray-500 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+							</svg>
+						</button>
+						<div class="faq-content hidden px-6 pb-4">
+							<p class="text-gray-600">
+								Refinancing costs typically include application fees, appraisal fees, title insurance, attorney fees, and origination fees. Total costs usually range from 2-5% of your loan amount. Some lenders offer "no-cost" refinancing, but this usually means higher interest rates or rolling costs into the loan balance.
+							</p>
+						</div>
+					</div>
+
+					<!-- FAQ Item 4 -->
+					<div class="border border-gray-200 rounded-lg">
+						<button class="faq-button w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset">
+							<span class="font-medium text-gray-900">What is cash-out refinancing?</span>
+							<svg class="faq-icon w-5 h-5 text-gray-500 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+							</svg>
+						</button>
+						<div class="faq-content hidden px-6 pb-4">
+							<p class="text-gray-600">
+								Cash-out refinancing allows you to borrow more than you owe on your current mortgage and receive the difference in cash. This lets you access your home's equity for home improvements, debt consolidation, or other major expenses. However, it increases your loan balance and monthly payments.
+							</p>
+						</div>
+					</div>
+
+					<!-- FAQ Item 5 -->
+					<div class="border border-gray-200 rounded-lg">
+						<button class="faq-button w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset">
+							<span class="font-medium text-gray-900">How long does the refinancing process take?</span>
+							<svg class="faq-icon w-5 h-5 text-gray-500 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+							</svg>
+						</button>
+						<div class="faq-content hidden px-6 pb-4">
+							<p class="text-gray-600">
+								The refinancing process typically takes 30-45 days from application to closing. This includes time for application processing, home appraisal, underwriting, and final approval. The timeline can vary based on lender efficiency, loan complexity, and how quickly you provide required documentation.
+							</p>
+						</div>
+					</div>
+
+					<!-- FAQ Item 6 -->
+					<div class="border border-gray-200 rounded-lg">
+						<button class="faq-button w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset">
+							<span class="font-medium text-gray-900">Do I need to get my home appraised again?</span>
+							<svg class="faq-icon w-5 h-5 text-gray-500 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+							</svg>
+						</button>
+						<div class="faq-content hidden px-6 pb-4">
+							<p class="text-gray-600">
+								Yes, most refinances require a new appraisal to determine your home's current market value. This affects your loan-to-value ratio and available loan programs. Some lenders offer appraisal waivers for certain low-risk loans, but most borrowers should expect an appraisal as part of the process.
+							</p>
+						</div>
+					</div>
+
+					<!-- FAQ Item 7 -->
+					<div class="border border-gray-200 rounded-lg">
+						<button class="faq-button w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset">
+							<span class="font-medium text-gray-900">Can I refinance if I have bad credit?</span>
+							<svg class="faq-icon w-5 h-5 text-gray-500 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+							</svg>
+						</button>
+						<div class="faq-content hidden px-6 pb-4">
+							<p class="text-gray-600">
+								Refinancing with bad credit is possible but challenging. You may face higher interest rates, limited loan options, or need more equity in your home. Consider improving your credit score first, or explore government programs like FHA Streamline refinancing if you have an existing FHA loan.
+							</p>
+						</div>
+					</div>
+
+					<!-- FAQ Item 8 -->
+					<div class="border border-gray-200 rounded-lg">
+						<button class="faq-button w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset">
+							<span class="font-medium text-gray-900">Should I refinance from a 30-year to a 15-year mortgage?</span>
+							<svg class="faq-icon w-5 h-5 text-gray-500 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+							</svg>
+						</button>
+						<div class="faq-content hidden px-6 pb-4">
+							<p class="text-gray-600">
+								Refinancing to a 15-year mortgage can save you significant money in total interest and help you build equity faster. However, monthly payments will be higher. This makes sense if you can comfortably afford the higher payments and want to pay off your home sooner or save on total interest costs.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Contact Section -->
+	<Contact />
+
+	<!-- Important Legal Disclosures -->
+	<ImportantLegal />
+</Layout>
+
+<script>
+	
+	// Mortgage Calculator Logic
+	class MortgageCalculator {
+		isPercentMode;
+		lastCalculation;
+		
+		constructor() {
+			this.isPercentMode = false;
+			this.initializeEventListeners();
+			// Cards are visible by default - no need to clear results on init
+		}
+
+		initializeEventListeners() {
+			// Remove automatic calculation - only format inputs on change
+			const inputs = document.querySelectorAll('#mortgage-form input, #mortgage-form select');
+			inputs.forEach(input => {
+				input.addEventListener('input', () => {
+					this.clearFieldValidation(input.id);
+					this.formatInputs();
+				});
+				input.addEventListener('change', () => {
+					this.clearFieldValidation(input.id);
+					this.formatInputs();
+				});
+			});
+
+			// No toggle buttons needed for refinance calculator
+
+			// Calculate button event listener - now with validation
+			const calculateButton = document.getElementById('calculateButton');
+			console.log('Calculate button found:', calculateButton);
+			if (calculateButton) {
+				calculateButton.addEventListener('click', () => this.handleCalculateClick());
+			}
+
+			// Current monthly payment input listener
+			const currentMonthlyPaymentInput = document.getElementById('currentMonthlyPayment');
+			if (currentMonthlyPaymentInput) {
+				currentMonthlyPaymentInput.addEventListener('input', () => this.formatInputs());
+			}
+
+			// Current home value input listener
+			const currentHomeValueInput = document.getElementById('currentHomeValue');
+			if (currentHomeValueInput) {
+				currentHomeValueInput.addEventListener('input', () => this.formatInputs());
+			}
+
+			// ZIP code validation
+			const zipCodeInput = document.getElementById('zipCode');
+			if (zipCodeInput) {
+				zipCodeInput.addEventListener('input', (e) => this.validateZipCode(e));
+				zipCodeInput.addEventListener('blur', (e) => this.validateZipCodeExists(e));
+			}
+
+			// Optional section toggle
+			const optionalToggle = document.getElementById('optionalToggle');
+			if (optionalToggle) {
+				optionalToggle.addEventListener('click', () => this.toggleOptionalSection());
+			}
+
+			// Legal disclosures modal event listeners
+			const legalDisclosuresBtn = document.getElementById('legalDisclosuresBtn');
+			const legalModal = document.getElementById('legalModal');
+			const closeModal = document.getElementById('closeModal');
+
+			if (legalDisclosuresBtn && legalModal) {
+				legalDisclosuresBtn.addEventListener('click', () => {
+					legalModal.classList.remove('hidden');
+				});
+			}
+
+			if (closeModal && legalModal) {
+				closeModal.addEventListener('click', () => {
+					legalModal.classList.add('hidden');
+				});
+			}
+
+			// Close modal when clicking outside
+			if (legalModal) {
+				legalModal.addEventListener('click', (e) => {
+					if (e.target === legalModal) {
+						legalModal.classList.add('hidden');
+					}
+				});
+			}
+
+			// Call Now button event listener
+			const callNowBtn = document.getElementById('callNowBtn');
+			if (callNowBtn) {
+				callNowBtn.addEventListener('click', () => {
+					window.location.href = 'tel:+1234567890'; // Replace with actual phone number
+				});
+			}
+		}
+
+		// Methods removed - not needed for refinance calculator
+
+		validateInterestRate(e) {
+			const input = e.target;
+			let value = input.value;
+			
+			// Remove any non-numeric characters except decimal point
+			value = value.replace(/[^0-9.]/g, '');
+			
+			// Ensure only one decimal point
+			const parts = value.split('.');
+			if (parts.length > 2) {
+				value = parts[0] + '.' + parts.slice(1).join('');
+			}
+			
+			// Limit to 4 characters total (e.g., 5.99, 12.5, 99.9)
+			if (value.length > 4) {
+				value = value.substring(0, 4);
+			}
+			
+			// Update the input value
+			input.value = value;
+		}
+
+		validateZipCode(e) {
+			const input = e.target;
+			let value = input.value;
+			
+			// Remove any non-numeric characters
+			value = value.replace(/[^0-9]/g, '');
+			
+			// Limit to 5 digits for US ZIP codes
+			if (value.length > 5) {
+				value = value.substring(0, 5);
+			}
+			
+			// Update the input value
+			input.value = value;
+		}
+
+		async validateZipCodeExists(e) {
+			const input = e.target;
+			const zipCode = input.value;
+			
+			// Reset border color
+			input.classList.remove('border-red-500');
+			input.classList.add('border-gray-300');
+			
+			if (zipCode.length === 5) {
+				try {
+					// Use a free ZIP code API to validate
+					const response = await fetch(`https://api.zippopotam.us/us/${zipCode}`);
+					if (!response.ok) {
+						// ZIP code doesn't exist
+						input.classList.remove('border-gray-300');
+						input.classList.add('border-red-500');
+						input.title = 'ZIP code not found';
+					} else {
+						input.title = '';
+					}
+				} catch (error) {
+					// If API fails, don't show error (graceful degradation)
+					console.log('ZIP code validation API unavailable');
+				}
+			}
+		}
+
+		toggleOptionalSection() {
+			const optionalFields = document.getElementById('optionalFields');
+			const chevronIcon = document.getElementById('chevronIcon');
+			const toggleButton = document.getElementById('optionalToggle');
+			
+			if (optionalFields && chevronIcon && toggleButton) {
+				const isExpanded = toggleButton.getAttribute('aria-expanded') === 'true';
+				
+				if (isExpanded) {
+					// Close the section
+					optionalFields.style.maxHeight = '0px';
+					optionalFields.setAttribute('aria-hidden', 'true');
+					toggleButton.setAttribute('aria-expanded', 'false');
+					chevronIcon.style.transform = 'rotate(0deg)';
+				} else {
+					// Open the section
+					optionalFields.style.maxHeight = optionalFields.scrollHeight + 'px';
+					optionalFields.setAttribute('aria-hidden', 'false');
+					toggleButton.setAttribute('aria-expanded', 'true');
+					chevronIcon.style.transform = 'rotate(180deg)';
+				}
+			}
+		}
+
+		formatNumber(num) {
+			return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+		}
+
+		parseNumber(str) {
+			return parseFloat(str.replace(/,/g, '')) || 0;
+		}
+
+		// Method removed - not needed for refinance calculator
+
+		// New method to handle calculate button click with validation
+		handleCalculateClick() {
+			console.log('handleCalculateClick called');
+			
+			// Clear previous validation errors
+			this.clearAllValidationErrors();
+			
+			// Validate all required fields
+			if (!this.validateAllFields()) {
+				console.log('Validation failed, not calculating');
+				return;
+			}
+			
+			// Clear previous results and calculate
+			this.clearResults();
+			this.calculate();
+		}
+
+		// Clear field validation styling and messages
+		clearFieldValidation(fieldId: string) {
+			const field = document.getElementById(fieldId);
+			if (field) {
+				// Remove red border from container
+				const container = field.closest('.bg-white');
+				if (container) {
+					// Special handling for credit profile
+					if (fieldId === 'creditProfile') {
+						container.classList.remove('credit-profile-error');
+					} else {
+						container.classList.remove('border-red-500', 'border-2');
+					}
+				}
+				
+				// Remove error message
+				const errorMsg = document.getElementById(`${fieldId}-error`);
+				if (errorMsg) {
+					errorMsg.remove();
+				}
+			}
+		}
+
+		// Clear all validation errors
+		clearAllValidationErrors() {
+			const requiredFields = ['currentMortgageBalance', 'currentMonthlyPayment', 'currentHomeValue', 'creditProfile', 'zipCode'];
+			requiredFields.forEach(fieldId => {
+				this.clearFieldValidation(fieldId);
+			});
+		}
+
+		// Validate all required fields
+		validateAllFields(): boolean {
+			let isValid = true;
+			const requiredFields = [
+				{ id: 'currentMortgageBalance', name: 'Current mortgage balance', type: 'currency' },
+				{ id: 'currentMonthlyPayment', name: 'Current monthly payment', type: 'currency' },
+				{ id: 'currentHomeValue', name: 'Current home value', type: 'currency' },
+				{ id: 'creditProfile', name: 'Credit profile', type: 'select' },
+				{ id: 'zipCode', name: 'ZIP code', type: 'zipcode' }
+			];
+
+			requiredFields.forEach(field => {
+				const element = document.getElementById(field.id) as HTMLInputElement | HTMLSelectElement;
+				if (element) {
+					const value = element.value.trim();
+					let fieldValid = true;
+					let errorMessage = '';
+
+					// Check if field is empty or invalid
+					if (!value || (field.type !== 'select' && field.type !== 'zipcode' && (value === '0' || value === '$0'))) {
+						fieldValid = false;
+						errorMessage = `${field.name} is required`;
+					} else {
+						// Additional validation based on field type
+						switch (field.type) {
+							case 'currency':
+								const numValue = this.parseNumber(value);
+								if ((field.id === 'currentMortgageBalance' || field.id === 'currentMonthlyPayment' || field.id === 'currentHomeValue') && numValue <= 0) {
+									fieldValid = false;
+									errorMessage = `${field.name} must be greater than $0`;
+								}
+								break;
+							case 'select':
+								if (!value || value === '') {
+									fieldValid = false;
+									errorMessage = `Please select ${field.name.toLowerCase()}`;
+								}
+								break;
+							case 'zipcode':
+								if (!value || value.length !== 5 || !/^\d{5}$/.test(value)) {
+									fieldValid = false;
+									errorMessage = 'Please enter a valid 5-digit ZIP code';
+								}
+								break;
+						}
+					}
+
+					if (!fieldValid) {
+						this.showFieldError(field.id, errorMessage);
+						isValid = false;
+					}
+				}
+			});
+
+			return isValid;
+		}
+
+		// Show error for specific field
+		showFieldError(fieldId: string, message: string) {
+			const field = document.getElementById(fieldId);
+			if (field) {
+				// Add red border to the container instead of just the input
+				const container = field.closest('.bg-white');
+				if (container) {
+					// Special handling for credit profile
+					if (fieldId === 'creditProfile') {
+						container.classList.add('credit-profile-error');
+					} else {
+						container.classList.add('border-red-500', 'border-2');
+					}
+				}
+				
+				// Add error message
+				const errorDiv = document.createElement('div');
+				errorDiv.id = `${fieldId}-error`;
+				errorDiv.className = 'text-red-500 text-sm mt-1 px-2';
+				errorDiv.textContent = message;
+				
+				// Insert error message after the field's parent container
+				if (container && container.parentNode) {
+					container.parentNode.insertBefore(errorDiv, container.nextSibling);
+				}
+			}
+		}
+
+		// Clear results display (but keep cards visible)
+		clearResults() {
+			const monthlySavingsEl = document.getElementById('monthlySavings');
+			const eachMonthLabelEl = document.getElementById('eachMonthLabel');
+
+			// Reset to placeholder values instead of hiding cards
+			if (monthlySavingsEl) monthlySavingsEl.textContent = '$0';
+
+			// Hide the "each month" label
+			if (eachMonthLabelEl) {
+				eachMonthLabelEl.classList.remove('opacity-100');
+				eachMonthLabelEl.classList.add('opacity-0');
+			}
+
+			// Cards remain visible - no hiding logic needed
+		}
+
+
+
+		calculate() {
+			console.log('Starting professional refinance calculation...');
+			
+			// Get input values for refinance calculator
+			const currentMortgageBalance = this.parseNumber((document.getElementById('currentMortgageBalance') as HTMLInputElement)?.value || '0');
+			const currentMonthlyPayment = this.parseNumber((document.getElementById('currentMonthlyPayment') as HTMLInputElement)?.value || '0');
+			const currentHomeValue = this.parseNumber((document.getElementById('currentHomeValue') as HTMLInputElement)?.value || '0');
+			const creditProfile = (document.getElementById('creditProfile') as HTMLSelectElement)?.value || '';
+			
+			console.log('Refinance input values:', { currentMortgageBalance, currentMonthlyPayment, currentHomeValue, creditProfile });
+
+			// Professional validation according to industry standards
+			if (currentMortgageBalance <= 0) {
+				this.showFieldError('currentMortgageBalance', 'Please enter a valid mortgage balance');
+				return;
+			}
+			
+			if (currentMonthlyPayment <= 0) {
+				this.showFieldError('currentMonthlyPayment', 'Please enter a valid monthly payment');
+				return;
+			}
+			
+			if (currentHomeValue <= 0) {
+				this.showFieldError('currentHomeValue', 'Please enter a valid home value');
+				return;
+			}
+			
+			if (!creditProfile) {
+				this.showFieldError('creditProfile', 'Please select your credit profile');
+				return;
+			}
+
+			// 1. Calculate Loan-to-Value (LTV) ratio - Industry standard calculation
+			const loanToValueRatio = (currentMortgageBalance / currentHomeValue) * 100;
+			
+			// Validate LTV doesn't exceed 95% (industry standard)
+			if (loanToValueRatio > 95) {
+				this.showFieldError('currentMortgageBalance', 'Loan-to-value ratio exceeds 95%. Refinancing may not be available.');
+				return;
+			}
+			
+			// Validate mortgage balance is less than home value
+			if (currentMortgageBalance >= currentHomeValue) {
+				this.showFieldError('currentMortgageBalance', 'Mortgage balance must be less than home value');
+				return;
+			}
+
+			// 2. Determine base rate - Current market rate
+			const baseRate = 7.2; // Current market base rate
+			
+			// 3. Credit Profile adjustments - Professional industry standards
+			let creditAdjustment = 0;
+			switch(creditProfile) {
+				case '720-plus':
+					creditAdjustment = -1.5; // Best rates for 720+
+					break;
+				case '660-719':
+					creditAdjustment = -0.8; // Good rates for 660-719
+					break;
+				case '620-659':
+					creditAdjustment = -0.3; // Fair rates for 620-659
+					break;
+				case '580-619':
+					creditAdjustment = 0.5; // Higher rates for 580-619
+					break;
+				case 'less-than-580':
+					creditAdjustment = 1.8; // Highest rates for less than 580
+					break;
+				default:
+					creditAdjustment = 0;
+					break;
+			}
+			
+			// 4. LTV-based risk adjustments - Industry standard risk pricing
+			let ltvAdjustment = 0;
+			if (loanToValueRatio <= 60) {
+				ltvAdjustment = -0.25; // Low risk - better rate
+			} else if (loanToValueRatio <= 70) {
+				ltvAdjustment = -0.125; // Moderate low risk
+			} else if (loanToValueRatio <= 80) {
+				ltvAdjustment = 0; // Standard risk
+			} else if (loanToValueRatio <= 90) {
+				ltvAdjustment = 0.25; // Higher risk
+			} else {
+				ltvAdjustment = 0.75; // High risk
+			}
+			
+			// Calculate final interest rate
+			const estimatedNewRate = Math.max(3.0, baseRate + creditAdjustment + ltvAdjustment);
+
+			// 5. Calculate new monthly payment using standard amortization formula
+			// M = P * [r(1+r)^n] / [(1+r)^n - 1]
+			const monthlyInterestRate = (estimatedNewRate / 100) / 12;
+			const numberOfPayments = 30 * 12; // 30-year term (360 payments)
+			
+			let newMonthlyPrincipalAndInterest = 0;
+			if (currentMortgageBalance > 0 && monthlyInterestRate > 0) {
+				const numerator = currentMortgageBalance * (monthlyInterestRate * Math.pow(1 + monthlyInterestRate, numberOfPayments));
+				const denominator = Math.pow(1 + monthlyInterestRate, numberOfPayments) - 1;
+				newMonthlyPrincipalAndInterest = numerator / denominator;
+			}
+
+			// 6. Calculate monthly savings
+			let monthlySavings = currentMonthlyPayment - newMonthlyPrincipalAndInterest;
+			
+			console.log('Professional refinance calculations:', {
+				loanToValueRatio: loanToValueRatio.toFixed(2) + '%',
+				baseRate: baseRate + '%',
+				creditAdjustment: creditAdjustment + '%',
+				ltvAdjustment: ltvAdjustment + '%',
+				estimatedNewRate: estimatedNewRate.toFixed(3) + '%',
+				newMonthlyPrincipalAndInterest: newMonthlyPrincipalAndInterest.toFixed(2),
+				monthlySavings: monthlySavings.toFixed(2)
+			});
+
+			// Update display elements
+			const monthlySavingsEl = document.getElementById('monthlySavings');
+			const eachMonthLabelEl = document.getElementById('eachMonthLabel');
+
+			// Check if there are positive savings
+			if (monthlySavings > 0) {
+				// Format and display results with proper currency formatting
+				if (monthlySavingsEl) {
+					// Animate the monthly savings with speedometer effect
+					this.animateValue(monthlySavingsEl, 0, Math.round(monthlySavings), 1500);
+				}
+
+				// Show the "each month" label with animation
+				if (eachMonthLabelEl) {
+					setTimeout(() => {
+						eachMonthLabelEl.classList.remove('opacity-0');
+						eachMonthLabelEl.classList.add('opacity-100');
+					}, 800); // Show label after half the animation completes
+				}
+			} else {
+				// No savings available - show message
+				if (monthlySavingsEl) {
+					monthlySavingsEl.textContent = 'No savings available';
+					monthlySavingsEl.classList.add('text-red-500');
+				}
+				
+				// Hide the "each month" label
+				if (eachMonthLabelEl) {
+					eachMonthLabelEl.classList.add('opacity-0');
+					eachMonthLabelEl.classList.remove('opacity-100');
+				}
+			}
+			
+			// Store calculation results for potential future use
+			this.lastCalculation = {
+				currentMortgageBalance,
+				currentMonthlyPayment,
+				currentHomeValue,
+				creditProfile,
+				estimatedNewRate,
+				newMonthlyPrincipalAndInterest,
+				monthlySavings,
+				loanToValueRatio
+			};
+
+			console.log('Calculation completed successfully');
+
+			// Format input values for better user experience
+			this.formatInputs();
+		}
+
+		formatInputs() {
+			const moneyInputs = ['currentMortgageBalance', 'currentMonthlyPayment', 'currentHomeValue'];
+			moneyInputs.forEach(id => {
+				const input = document.getElementById(id) as HTMLInputElement;
+				if (input) {
+					const value = this.parseNumber(input.value);
+					if (value > 0) {
+						input.value = this.formatNumber(value);
+					}
+				}
+			});
+
+			// No additional formatting needed for refinance calculator
+		}
+
+		// Animate value from start to end with speedometer effect
+		animateValue(element: HTMLElement, start: number, end: number, duration: number) {
+			const startTime = performance.now();
+			const startValue = start;
+			const endValue = end;
+			
+			// Add animating class for CSS animation
+			element.classList.add('animating');
+			
+			const animate = (currentTime: number) => {
+				const elapsed = currentTime - startTime;
+				const progress = Math.min(elapsed / duration, 1);
+				
+				// Easing function for speedometer effect (ease-out)
+				const easeOut = 1 - Math.pow(1 - progress, 3);
+				
+				const currentValue = Math.round(startValue + (endValue - startValue) * easeOut);
+				element.textContent = '$' + this.formatNumber(currentValue);
+				
+				if (progress < 1) {
+					requestAnimationFrame(animate);
+				} else {
+					// Remove animating class when done
+					element.classList.remove('animating');
+				}
+			};
+			
+			requestAnimationFrame(animate);
+		}
+	}
+
+	// Initialize calculator when DOM is loaded
+	document.addEventListener('DOMContentLoaded', () => {
+		console.log('DOM loaded, creating calculator');
+		new MortgageCalculator();
+
+		// FAQ Accordion functionality
+		const faqButtons = document.querySelectorAll('.faq-button');
+		faqButtons.forEach((button) => {
+			const btn = button as HTMLButtonElement;
+			btn.addEventListener('click', function(this: HTMLButtonElement) {
+				const content = this.nextElementSibling as HTMLElement;
+				const icon = this.querySelector('.faq-icon') as HTMLElement;
+				
+				if (content && icon) {
+					if (content.classList.contains('hidden')) {
+						content.classList.remove('hidden');
+						icon.style.transform = 'rotate(180deg)';
+					} else {
+						content.classList.add('hidden');
+						icon.style.transform = 'rotate(0deg)';
+					}
+				}
+			});
+		});
+	});
+</script>
+
+<style>
+	/* Credit profile select styling */
+	.credit-profile-select {
+		color: #9CA3AF; /* Gray-400 for placeholder */
+	}
+	
+	.credit-profile-select:valid {
+		color: #111827; /* Gray-900 for selected value */
+	}
+	
+	.credit-profile-select option {
+		color: #111827; /* Gray-900 for all options */
+	}
+	
+	.credit-profile-select option[value=""] {
+		color: #9CA3AF; /* Gray-400 for placeholder option */
+	}
+	
+	/* Error state for credit profile container */
+	.credit-profile-error {
+		border: 2px solid #EF4444 !important; /* Red border */
+		border-radius: 0.5rem;
+	}
+	
+	/* Speedometer animation for the value */
+	.speedometer-value {
+		transition: all 0.3s ease-out;
+		transform-origin: left center;
+	}
+	
+	.speedometer-value.animating {
+		animation: speedometer-pulse 0.1s ease-in-out;
+	}
+	
+	@keyframes speedometer-pulse {
+		0% { transform: scale(1); }
+		50% { transform: scale(1.05); }
+		100% { transform: scale(1); }
+	}
+</style>

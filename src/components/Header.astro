@@ -1,0 +1,235 @@
+---
+// Header component
+---
+
+<header class="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50 transition-all duration-300">
+  <div class="w-full mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center h-24">
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <a href="/">
+          <img src="/BL logo negro.png" alt="Broker Lenders" class="h-14 w-auto hover:opacity-80 transition-opacity">
+        </a>
+      </div>
+      
+      <!-- Navigation -->
+      <nav class="hidden md:flex space-x-8 pl-[35px]">
+        <!-- Buy Dropdown -->
+        <div class="relative group">
+          <button class="text-black hover:text-red-600 px-4 py-2 text-base font-medium flex items-center">
+            Buy
+            <svg class="ml-1 w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          
+          <!-- First Level Dropdown -->
+          <div class="absolute left-0 top-full mt-1 w-48 bg-white rounded-lg shadow-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <!-- Buy a home with submenu -->
+            <div class="relative group/submenu">
+              <div class="flex items-center justify-between px-4 py-3 hover:bg-gray-50 cursor-pointer">
+                <span class="text-gray-900 font-medium">Buy a home</span>
+                <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </div>
+              
+              <!-- Second Level Dropdown -->
+              <div class="absolute left-full top-0 ml-1 w-64 bg-white rounded-lg shadow-lg border border-gray-100 opacity-0 invisible group-hover/submenu:opacity-100 group-hover/submenu:visible transition-all duration-200 z-50">
+                <!-- Get Started -->
+                <div class="px-4 py-3 border-b border-gray-100">
+                  <a href="/buy" class="flex items-center justify-between text-gray-900 hover:text-red-600 font-medium">
+                    Get started
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                  </a>
+                </div>
+                
+                <!-- Popular Section -->
+                <div class="px-4 py-2">
+                  <div class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Popular</div>
+                  <div class="space-y-1">
+                    <a href="/loan-options/conventional-loan" class="block px-2 py-2 text-sm text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded">Conventional Loans</a>
+                    <a href="/loan-options/fha-loan" class="block px-2 py-2 text-sm text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded">FHA Loans</a>
+                    <a href="/loan-options/first-time-loan" class="block px-2 py-2 text-sm text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded">First-Time Homebuyer</a>
+                    <a href="/loan-options/va-loan" class="block px-2 py-2 text-sm text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded">VA Loans</a>
+                    <a href="/loan-options/usda-loan" class="block px-2 py-2 text-sm text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded">USDA Loans</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Calculators -->
+            <div class="px-4 py-3 hover:bg-gray-50">
+              <a href="/calculators" class="text-gray-900 font-medium">Calculators</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Refinance Dropdown -->
+        <div class="relative group">
+          <button class="text-black hover:text-red-600 px-4 py-2 text-base font-medium flex items-center">
+            Refinance
+            <svg class="ml-1 w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          
+          <!-- First Level Dropdown -->
+          <div class="absolute left-0 top-full mt-1 w-48 bg-white rounded-lg shadow-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <!-- Refinance your home with submenu -->
+            <div class="relative group/submenu">
+              <div class="flex items-center justify-between px-4 py-3 hover:bg-gray-50 cursor-pointer">
+                <span class="text-gray-900 font-medium">Refinance your home</span>
+                <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </div>
+              
+              <!-- Second Level Dropdown -->
+              <div class="absolute left-full top-0 ml-1 w-64 bg-white rounded-lg shadow-lg border border-gray-100 opacity-0 invisible group-hover/submenu:opacity-100 group-hover/submenu:visible transition-all duration-200 z-50">
+                <!-- Get Started -->
+                <div class="px-4 py-3 border-b border-gray-100">
+                  <a href="/refinance" class="flex items-center justify-between text-gray-900 hover:text-red-600 font-medium">
+                    Get started
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                  </a>
+                </div>
+                
+                <!-- Popular Section -->
+                <div class="px-4 py-2">
+                  <div class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Popular</div>
+                  <div class="space-y-1">
+                    <a href="/loan-options/refinance-loan" class="block px-2 py-2 text-sm text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded">Refinance Options</a>
+                    <a href="/loan-options/conventional-loan" class="block px-2 py-2 text-sm text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded">Conventional Refinance</a>
+                    <a href="/loan-options/fha-loan" class="block px-2 py-2 text-sm text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded">FHA Refinance</a>
+                    <a href="/loan-options/va-loan" class="block px-2 py-2 text-sm text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded">VA Refinance</a>
+                    <a href="/loan-options/refinance-loan" class="block px-2 py-2 text-sm text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded">Cash-out Options</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Calculators -->
+            <div class="px-4 py-3 hover:bg-gray-50">
+              <a href="/calculators" class="text-gray-900 font-medium">Calculators</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rates Dropdown -->
+        <div class="relative group">
+          <button class="text-black hover:text-red-600 px-4 py-2 text-base font-medium flex items-center">
+            Rates
+            <svg class="ml-1 w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          
+          <!-- First Level Dropdown -->
+          <div class="absolute left-0 top-full mt-1 w-48 bg-white rounded-lg shadow-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <!-- Current rates with submenu -->
+            <div class="relative group/submenu">
+              <div class="flex items-center justify-between px-4 py-3 hover:bg-gray-50 cursor-pointer">
+                <span class="text-gray-900 font-medium">Current rates</span>
+                <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </div>
+              
+              <!-- Second Level Dropdown -->
+              <div class="absolute left-full top-0 ml-1 w-64 bg-white rounded-lg shadow-lg border border-gray-100 opacity-0 invisible group-hover/submenu:opacity-100 group-hover/submenu:visible transition-all duration-200 z-50">
+                <!-- Get Started -->
+                <div class="px-4 py-3 border-b border-gray-100">
+                  <a href="/rates" class="flex items-center justify-between text-gray-900 hover:text-red-600 font-medium">
+                    Get started
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                  </a>
+                </div>
+                
+                <!-- Popular Section -->
+                <div class="px-4 py-2">
+                  <div class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Popular</div>
+                  <div class="space-y-1">
+                    <a href="/rates?state=utah" class="block px-2 py-2 text-sm text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded">Utah</a>
+                    <a href="/rates?state=idaho" class="block px-2 py-2 text-sm text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded">Idaho</a>
+                    <a href="/rates?state=nevada" class="block px-2 py-2 text-sm text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded">Nevada</a>
+                    <a href="/rates?state=california" class="block px-2 py-2 text-sm text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded">California</a>
+                    <a href="/rates?state=texas" class="block px-2 py-2 text-sm text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded">Texas</a>
+                    <a href="/rates?state=florida" class="block px-2 py-2 text-sm text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded">Florida</a>
+                    <a href="/rates?state=colorado" class="block px-2 py-2 text-sm text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded">Colorado</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+
+          </div>
+        </div>
+
+        <!-- Loan Options Dropdown -->
+        <div class="relative group">
+          <button class="text-black hover:text-red-600 px-4 py-2 text-base font-medium flex items-center">
+            Loan Options
+            <svg class="ml-1 w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          
+          <!-- First Level Dropdown -->
+          <div class="absolute left-0 top-full mt-1 w-48 bg-white rounded-lg shadow-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <!-- Loan programs with submenu -->
+            <div class="relative group/submenu">
+              <div class="flex items-center justify-between px-4 py-3 hover:bg-gray-50 cursor-pointer">
+                <span class="text-gray-900 font-medium">Loan programs</span>
+                <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </div>
+              
+              <!-- Second Level Dropdown -->
+              <div class="absolute left-full top-0 ml-1 w-64 bg-white rounded-lg shadow-lg border border-gray-100 opacity-0 invisible group-hover/submenu:opacity-100 group-hover/submenu:visible transition-all duration-200 z-50">
+                <!-- Get Started -->
+                <div class="px-4 py-3 border-b border-gray-100">
+                  <a href="/loan-options" class="flex items-center justify-between text-gray-900 hover:text-red-600 font-medium">
+                    Get started
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                  </a>
+                </div>
+                
+                <!-- Popular Section -->
+                <div class="px-4 py-2">
+                  <div class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Popular</div>
+                  <div class="space-y-1">
+                    <a href="/loan-options/conventional-loan" class="block px-2 py-2 text-sm text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded">Conventional Loans</a>
+                    <a href="/loan-options/jumbo-loan" class="block px-2 py-2 text-sm text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded">Jumbo Loans</a>
+                    <a href="/loan-options/investment-loan" class="block px-2 py-2 text-sm text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded">Investment Loans</a>
+                    <a href="/loan-options/construction-loan" class="block px-2 py-2 text-sm text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded">Construction Loans</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      
+      <!-- Actions -->
+      <div class="ml-auto flex items-center space-x-4">
+        <a href="tel:+18013070273" class="hidden md:inline-flex items-center gap-2 text-black hover:text-red-600">
+           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+           </svg>
+           (801) 307-0273
+         </a>
+        <a href="https://pedrolira.my1003app.com/318973/register" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2 rounded-full bg-black text-white hover:bg-red-600 transition-colors">Apply now</a>
+      </div>
+    </div>
+  </div>
+</header>
