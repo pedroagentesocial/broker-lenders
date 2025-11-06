@@ -336,8 +336,12 @@ import ImportantLegal from '../components/ImportantLegal.astro';
       const utm_content = params.get('utm_content') || '';
       const utm_term = params.get('utm_term') || '';
 
-      // Compose a readable body including UTM attribution
-      const bodyText = `Hello Broker Lenders,\n\nI would like to get in touch.\n\nUTM Attribution:\n- Source: ${utm_source || '(none)'}\n- Campaign: ${utm_campaign || '(none)'}\n- Medium: ${utm_medium || '(none)'}\n- Content: ${utm_content || '(none)'}\n- Term: ${utm_term || '(none)'}\n\nThanks.`;
+      // First landing page in session and referrer
+      const landing = sessionStorage.getItem('landing_page') || window.location.href;
+      const referrer = document.referrer || '';
+
+      // Compose a readable body including UTM attribution and session context
+      const bodyText = `Hello Broker Lenders,\n\nI would like to get in touch.\n\nUTM Attribution:\n- Source: ${utm_source || '(none)'}\n- Campaign: ${utm_campaign || '(none)'}\n- Medium: ${utm_medium || '(none)'}\n- Content: ${utm_content || '(none)'}\n- Term: ${utm_term || '(none)'}\n\nSession Context:\n- Landing Page: ${landing}\n- Referrer: ${referrer || '(none)'}\n\nThanks.`;
       const body = encodeURIComponent(bodyText);
 
       // Open default mail client
