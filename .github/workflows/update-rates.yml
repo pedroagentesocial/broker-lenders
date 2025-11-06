@@ -33,14 +33,14 @@ jobs:
       - name: Build Astro
         run: npm run build
 
-      - name: Deploy via SFTP to Hostinger
-        uses: wlixcc/SFTP-Deploy-Action@v1.0.4
+      - name: Deploy via FTPS to Hostinger
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.SFTP_HOST }}
-          port: ${{ secrets.SFTP_PORT }}
           username: ${{ secrets.SFTP_USERNAME }}
           password: ${{ secrets.SFTP_PASSWORD }}
-          local_path: "dist"
-          remote_path: ${{ secrets.REMOTE_DIR }}
-          sftp_only: true
+          port: ${{ secrets.SFTP_PORT }}
+          protocol: ftps
+          local-dir: dist
+          server-dir: ${{ secrets.REMOTE_DIR }}
           timeout: 120000
