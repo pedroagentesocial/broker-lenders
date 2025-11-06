@@ -33,7 +33,7 @@ import ImportantLegal from '../components/ImportantLegal.astro';
           </svg>
           Call (801) 307-0273
         </a>
-        <a href="#contact-form" class="bg-white text-black border border-black px-8 py-3 rounded-[48px] font-semibold hover:bg-black hover:text-white transition-colors inline-flex items-center justify-center">
+        <a id="heroSendBtn" href="#contact-form" class="bg-white text-black border border-black px-8 py-3 rounded-[48px] font-semibold hover:bg-black hover:text-white transition-colors inline-flex items-center justify-center">
           <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
           </svg>
@@ -115,11 +115,25 @@ import ImportantLegal from '../components/ImportantLegal.astro';
       </div>
 
       <div class="bg-gray-50 rounded-2xl p-8">
-        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-webhook="https://hook.us1.make.com/yd95nje3piy9cyvq216re54x34uuh2ok" data-formsubmit-email="support@agentesocial.com">
           <input type="hidden" name="form-name" value="contact" />
           <p class="hidden">
             <label>Don't fill this out if you're human: <input name="bot-field" /></label>
           </p>
+
+          <!-- Hidden UTM fields for marketing attribution -->
+          <input type="hidden" name="utm_source" />
+          <input type="hidden" name="utm_campaign" />
+          <input type="hidden" name="utm_medium" />
+          <input type="hidden" name="utm_content" />
+          <input type="hidden" name="utm_term" />
+
+          <!-- Hidden extra analytics fields -->
+          <input type="hidden" name="referrer" />
+          <input type="hidden" name="landing_page" />
+          <input type="hidden" name="submit_timestamp" />
+          <input type="hidden" name="user_agent" />
+          <input type="hidden" name="ip_address" />
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
             <div>
@@ -172,13 +186,25 @@ import ImportantLegal from '../components/ImportantLegal.astro';
             <textarea id="message" name="message" rows="6" required placeholder="Please tell us how we can help you..." class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent transition-colors resize-vertical"></textarea>
           </div>
 
-          <div class="text-center">
-            <button type="submit" class="bg-black text-white px-8 py-3 rounded-[48px] font-semibold hover:bg-red-600 hover:text-white transition-colors inline-flex items-center">
+          <div class="text-center flex flex-col items-center relative" id="submitContainer">
+            <button id="submitBtn" type="submit" class="bg-black text-white px-8 py-3 rounded-[48px] font-semibold hover:bg-red-600 hover:text-white transition-colors inline-flex items-center">
               <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
               </svg>
               Send Message
             </button>
+            <div id="submitSuccess" class="hidden inline-flex items-center justify-center bg-green-100 text-green-800 px-4 py-3 rounded-[48px] font-semibold" style="display:none" aria-hidden="true">
+              <svg class="w-5 h-5 mr-2 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Datos enviados correctamente
+            </div>
+            <div id="submitError" class="hidden inline-flex items-center justify-center bg-red-100 text-red-800 px-4 py-3 rounded-[48px] font-semibold" style="display:none" aria-hidden="true">
+              <svg class="w-5 h-5 mr-2 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+              Error al enviar. Intenta nuevamente.
+            </div>
           </div>
         </form>
       </div>
@@ -194,3 +220,216 @@ import ImportantLegal from '../components/ImportantLegal.astro';
   <!-- Important Legal Disclosures -->
   <ImportantLegal />
 </Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const successEl = document.getElementById('submitSuccess');
+    const errorEl = document.getElementById('submitError');
+    const submitContainer = document.getElementById('submitContainer');
+    const heroBtn = document.getElementById('heroSendBtn');
+
+    // Animations helpers
+    function showAnimated(el) {
+      if (!el) return;
+      // Ensure element is displayed and visible
+      el.style.display = 'inline-flex';
+      el.classList.remove('hidden');
+      el.classList.add('fade-in');
+      el.classList.add('slide-in-up');
+      el.addEventListener('animationend', () => {
+        el.classList.remove('fade-in');
+        el.classList.remove('slide-in-up');
+      }, { once: true });
+    }
+
+    function hideButtonAnimated(btn) {
+      if (!btn) return;
+      btn.classList.add('fade-out');
+      btn.addEventListener('animationend', () => {
+        btn.classList.add('hidden');
+        btn.classList.remove('fade-out');
+      }, { once: true });
+    }
+
+    // Populate hidden UTM inputs from current URL query params
+    (function populateUTM() {
+      if (!form) return;
+      const params = new URLSearchParams(window.location.search || '');
+      const utmFields = ['utm_source', 'utm_campaign', 'utm_medium', 'utm_content', 'utm_term'];
+      utmFields.forEach((name) => {
+        const input = form.querySelector(`input[name="${name}"]`);
+        if (input) {
+          input.value = params.get(name) || '';
+        }
+      });
+    })();
+
+    // Populate extra analytics fields
+    (async function populateExtra() {
+      if (!form) return;
+      const refInput = form.querySelector('input[name="referrer"]');
+      const landInput = form.querySelector('input[name="landing_page"]');
+      const uaInput = form.querySelector('input[name="user_agent"]');
+      const ipInput = form.querySelector('input[name="ip_address"]');
+
+      try {
+        // Referrer
+        if (refInput) refInput.value = document.referrer || '';
+        // Landing page: first page in session
+        const existingLanding = sessionStorage.getItem('landing_page');
+        if (!existingLanding) {
+          sessionStorage.setItem('landing_page', window.location.href);
+        }
+        if (landInput) landInput.value = sessionStorage.getItem('landing_page') || window.location.href;
+        // User agent
+        if (uaInput) uaInput.value = navigator.userAgent || '';
+        // IP address (best-effort)
+        try {
+          const res = await fetch('https://api.ipify.org?format=json');
+          const data = await res.json();
+          if (ipInput) ipInput.value = data.ip || '';
+        } catch (ipErr) {
+          console.warn('No se pudo obtener IP:', ipErr);
+        }
+      } catch (err) {
+        console.warn('Error poblando campos extra:', err);
+      }
+    })();
+
+    async function sendWebhook(url, payload) {
+      if (!url) return;
+      await fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+    }
+
+    async function sendFormSubmit(email, payload) {
+      if (!email) return;
+      await fetch(`https://formsubmit.co/ajax/${encodeURIComponent(email)}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      });
+    }
+
+    // Hero button: open mailto including UTM params and scroll to form
+    heroBtn?.addEventListener('click', (evt) => {
+      evt.preventDefault();
+      const formSection = document.getElementById('contact-form');
+      formSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+      const email = 'info@brokerlenders.com';
+      const subject = encodeURIComponent('Contact Request from website');
+
+      // Read current UTM params from URL
+      const params = new URLSearchParams(window.location.search || '');
+      const utm_source = params.get('utm_source') || '';
+      const utm_campaign = params.get('utm_campaign') || '';
+      const utm_medium = params.get('utm_medium') || '';
+      const utm_content = params.get('utm_content') || '';
+      const utm_term = params.get('utm_term') || '';
+
+      // Compose a readable body including UTM attribution
+      const bodyText = `Hello Broker Lenders,\n\nI would like to get in touch.\n\nUTM Attribution:\n- Source: ${utm_source || '(none)'}\n- Campaign: ${utm_campaign || '(none)'}\n- Medium: ${utm_medium || '(none)'}\n- Content: ${utm_content || '(none)'}\n- Term: ${utm_term || '(none)'}\n\nThanks.`;
+      const body = encodeURIComponent(bodyText);
+
+      // Open default mail client
+      window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+    });
+
+    form?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Ocultar botón con animación
+      hideButtonAnimated(submitBtn);
+      // Reset messages before a new attempt
+      errorEl?.classList.add('hidden');
+      successEl?.classList.add('hidden');
+      if (errorEl) errorEl.style.display = 'none';
+      if (successEl) successEl.style.display = 'none';
+
+      // Recolectar datos del formulario
+      const fd = new FormData(form);
+      // Timestamp del envío (ISO)
+      const tsInput = form.querySelector('input[name="submit_timestamp"]');
+      if (tsInput) tsInput.value = new Date().toISOString();
+      // Reconstruir con timestamp
+      const fdWithTs = new FormData(form);
+      const payload = {};
+      fdWithTs.forEach((value, key) => { payload[key] = value; });
+
+      const webhookUrl = form.dataset.webhook || '';
+      const formSubmitEmail = form.dataset.formsubmitEmail || '';
+
+      try {
+        await Promise.all([
+          sendWebhook(webhookUrl, payload),
+          sendFormSubmit(formSubmitEmail, payload)
+        ]);
+        // Mostrar mensaje éxito con animación
+        // Ocultar mensaje de error si estuviera visible
+        errorEl?.classList.add('hidden');
+        if (errorEl) errorEl.style.display = 'none';
+        showAnimated(successEl);
+        // Auto-ocultar éxito y restaurar el botón tras 3.5s
+        setTimeout(() => {
+          // Ocultar éxito
+          successEl?.classList.add('hidden');
+          if (successEl) successEl.style.display = 'none';
+          // Reaparecer botón con animación
+          submitBtn?.classList.remove('hidden');
+          submitBtn?.classList.add('fade-in');
+          submitBtn?.classList.add('slide-in-up');
+          submitBtn?.addEventListener('animationend', () => {
+            submitBtn?.classList.remove('fade-in');
+            submitBtn?.classList.remove('slide-in-up');
+          }, { once: true });
+        }, 3500);
+      } catch (err) {
+        console.warn('Error enviando el formulario:', err);
+        // Ocultar mensaje de éxito si estuviera visible
+        successEl?.classList.add('hidden');
+        if (successEl) successEl.style.display = 'none';
+        showAnimated(errorEl);
+        // Reaparecer botón y auto-ocultar error después de unos segundos
+        setTimeout(() => {
+          submitBtn?.classList.remove('hidden');
+          submitBtn?.classList.add('fade-in');
+          submitBtn?.classList.add('slide-in-up');
+          submitBtn?.addEventListener('animationend', () => {
+            submitBtn?.classList.remove('fade-in');
+            submitBtn?.classList.remove('slide-in-up');
+          }, { once: true });
+          errorEl?.classList.add('hidden');
+          if (errorEl) errorEl.style.display = 'none';
+        }, 4500);
+      }
+    });
+  });
+</script>
+
+<style>
+  /* Smooth, subtle animations */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+  @keyframes slideInUp {
+    from { transform: translateY(8px); }
+    to { transform: translateY(0); }
+  }
+  .fade-in { animation: fadeIn 220ms ease-out forwards; }
+  .fade-out { animation: fadeOut 180ms ease-in forwards; }
+  .slide-in-up { animation: slideInUp 220ms ease-out forwards; }
+</style>
