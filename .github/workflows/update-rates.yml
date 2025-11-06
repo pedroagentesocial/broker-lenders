@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          persist-credentials: true
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -29,6 +31,10 @@ jobs:
           git config user.email 'github-actions@github.com'
           git add src/data/rates-data.json public/rates-data.json src/data/update-log.txt
           git commit -m "chore: daily rates update" || echo 'No changes to commit'
+
+      - name: Push updated rates to main
+        run: |
+          git push origin HEAD:main
 
       - name: Build Astro
         run: npm run build
