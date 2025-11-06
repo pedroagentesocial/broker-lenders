@@ -41,6 +41,6 @@ jobs:
           password: ${{ secrets.SFTP_PASSWORD }}
           port: ${{ secrets.SFTP_PORT }}
           protocol: ftps
-          local-dir: dist
+          local-dir: dist/
           server-dir: ${{ secrets.REMOTE_DIR }}
           timeout: 120000
