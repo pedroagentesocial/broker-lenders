@@ -1,4 +1,6 @@
 name: Update Rates Daily
+permissions:
+  contents: write
 
 on:
   schedule:
