@@ -24,7 +24,7 @@ jobs:
         run: npm run build
 
       - name: Deploy via SFTP to Hostinger
-        uses: wlixcc/SFTP-Deploy-Action@v1.3
+        uses: wlixcc/SFTP-Deploy-Action@v1.0.3
         with:
           server: ${{ secrets.SFTP_HOST }}
           port: ${{ secrets.SFTP_PORT }}
