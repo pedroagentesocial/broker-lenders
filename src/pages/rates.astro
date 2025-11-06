@@ -726,7 +726,7 @@ const formattedTimestamp = formatTimestamp(ratesData.timestamp);
   <script>
     async function hydrateRates() {
       try {
-        const res = await fetch('/api/rates.json', { cache: 'no-store' });
+        const res = await fetch('/rates-data.json', { cache: 'no-store' });
         if (!res.ok) return;
         const data = await res.json();
         // Actualizar timestamp dinámico
@@ -736,13 +736,13 @@ const formattedTimestamp = formatTimestamp(ratesData.timestamp);
           const formatted = d.toLocaleString('en-US', { timeZone: 'UTC', hour: '2-digit', minute: '2-digit', hour12: true, month: 'long', day: 'numeric', year: 'numeric' }) + ' UTC';
           footerTs.textContent = `Rates are current as of ${formatted}`;
         }
-        // Rehidratar stateRates usando data del endpoint
+        // Rehidratar stateRates usando data del archivo público
         window.__ratesData = data;
         if (typeof window.rebuildRates === 'function') {
           window.rebuildRates(data);
         }
       } catch (e) {
-        console.warn('Failed to fetch dynamic rates:', e);
+        console.warn('Failed to fetch static rates-data.json:', e);
       }
     }
     document.addEventListener('DOMContentLoaded', hydrateRates);

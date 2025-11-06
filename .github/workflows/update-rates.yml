@@ -1,0 +1,46 @@
+name: Update Rates Daily
+
+on:
+  schedule:
+    - cron: '0 12 * * *' # 12:00 UTC = 6:00 AM MDT
+  workflow_dispatch:
+
+jobs:
+  update-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Update rates JSON
+        run: npm run update-rates
+
+      - name: Commit updated rates
+        run: |
+          git config user.name 'github-actions'
+          git config user.email 'github-actions@github.com'
+          git add src/data/rates-data.json public/rates-data.json src/data/update-log.txt
+          git commit -m "chore: daily rates update" || echo 'No changes to commit'
+
+      - name: Build Astro
+        run: npm run build
+
+      - name: Deploy via SFTP to Hostinger
+        uses: wlixcc/SFTP-Deploy-Action@v1.3
+        with:
+          server: ${{ secrets.SFTP_HOST }}
+          port: ${{ secrets.SFTP_PORT }}
+          username: ${{ secrets.SFTP_USERNAME }}
+          password: ${{ secrets.SFTP_PASSWORD }}
+          local_path: './dist/*'
+          remote_path: ${{ secrets.REMOTE_DIR }}
+          sftp_only: true
+          args: '-o StrictHostKeyChecking=no'

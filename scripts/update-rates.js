@@ -153,18 +153,27 @@ async function scrapeBankrate() {
 
 // Función para guardar los datos
 function saveData(data) {
-  const dataPath = path.join(__dirname, '..', 'src', 'data', 'rates-data.json');
+  const srcDataPath = path.join(__dirname, '..', 'src', 'data', 'rates-data.json');
+  const publicDataPath = path.join(__dirname, '..', 'public', 'rates-data.json');
   
   try {
-    // Crear directorio si no existe
-    const dir = path.dirname(dataPath);
-    if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true });
+    // Crear directorios si no existen
+    const srcDir = path.dirname(srcDataPath);
+    if (!fs.existsSync(srcDir)) {
+      fs.mkdirSync(srcDir, { recursive: true });
+    }
+    const publicDir = path.dirname(publicDataPath);
+    if (!fs.existsSync(publicDir)) {
+      fs.mkdirSync(publicDir, { recursive: true });
     }
     
-    // Guardar datos
-    fs.writeFileSync(dataPath, JSON.stringify(data, null, 2));
-    console.log(`✅ Datos guardados en: ${dataPath}`);
+    // Guardar datos en src
+    fs.writeFileSync(srcDataPath, JSON.stringify(data, null, 2));
+    console.log(`✅ Datos guardados en: ${srcDataPath}`);
+
+    // Guardar copia en public para hosting estático
+    fs.writeFileSync(publicDataPath, JSON.stringify(data, null, 2));
+    console.log(`✅ Copia pública actualizada en: ${publicDataPath}`);
     
     // También guardar un log de la actualización
     const logEntry = `[${new Date().toISOString()}] Rates actualizados exitosamente\n`;
