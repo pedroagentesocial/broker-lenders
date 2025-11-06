@@ -23,14 +23,13 @@ jobs:
       - name: Build Astro
         run: npm run build
 
-      - name: Deploy via SFTP to Hostinger
-        uses: wlixcc/SFTP-Deploy-Action@v1.0.3
+      - name: Deploy via SCP to Hostinger
+        uses: appleboy/scp-action@v0.1.7
         with:
-          server: ${{ secrets.SFTP_HOST }}
+          host: ${{ secrets.SFTP_HOST }}
           port: ${{ secrets.SFTP_PORT }}
           username: ${{ secrets.SFTP_USERNAME }}
           password: ${{ secrets.SFTP_PASSWORD }}
-          local_path: './dist/*'
-          remote_path: ${{ secrets.REMOTE_DIR }}
-          sftp_only: true
-          args: '-o StrictHostKeyChecking=no'
+          source: "dist/*"
+          target: ${{ secrets.REMOTE_DIR }}
+          overwrite: true
