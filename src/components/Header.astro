@@ -228,6 +228,22 @@
            </svg>
            (801) 307-0273
          </a>
+        <!-- Language Selector -->
+        <div class="relative group hidden md:block">
+          <button class="inline-flex items-center gap-2 text-black hover:text-red-600 px-2 py-2">
+            <!-- Globe icon -->
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 12h20M12 2c3 3.5 3 16.5 0 20M4.5 7.5c2 .833 4.5 1.5 7.5 1.5s5.5-.667 7.5-1.5M4.5 16.5c2-.833 4.5-1.5 7.5-1.5s5.5.667 7.5 1.5"></path>
+            </svg>
+            <span class="text-sm font-medium">EN</span>
+          </button>
+          <!-- Dropdown -->
+          <div class="absolute right-0 top-full mt-1 w-32 bg-white rounded-lg shadow-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <a href="/?lang=en" class="block px-4 py-2 text-sm text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-t">English</a>
+            <a href="/?lang=es" class="block px-4 py-2 text-sm text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-b">Español</a>
+          </div>
+        </div>
         <a href="https://pedrolira.my1003app.com/318973/register" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2 rounded-full bg-black text-white hover:bg-red-600 transition-colors">Apply now</a>
       </div>
     </div>
