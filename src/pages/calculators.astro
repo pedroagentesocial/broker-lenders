@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import ImportantLegal from '../components/ImportantLegal.astro';
 import Contact from '../components/Contact.astro';
+import TestimonialsSection from '../components/TestimonialsSection.astro';
 ---
 
 <Layout title="Mortgage Calculators - Broker Lenders">
@@ -63,7 +64,7 @@ import Contact from '../components/Contact.astro';
 				</p>
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 					<!-- Calculator 1 - Mortgage Calculator -->
-					<a href="/calculators/mortgage-calculator" class="bg-white p-6 rounded-xl shadow-sm cursor-pointer transition-all duration-300 hover:shadow-md hover:bg-gray-50 hover:scale-[1.02] block">
+					<a href="/calculators/mortgage-calculator" class="bg-white p-6 rounded-xl shadow-sm cursor-pointer transition-all duration-300 hover:shadow-md hover:bg-gray-50 border-2 border-transparent hover:border-blue-600 block">
 						<div class="flex items-center">
 							<!-- Icon on the left -->
 							<div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -90,7 +91,7 @@ import Contact from '../components/Contact.astro';
 					</a>
 
 					<!-- Calculator 2 - Refinance Calculator -->
-					<a href="/calculators/refinance-calculator" class="bg-white p-6 rounded-xl shadow-sm cursor-pointer transition-all duration-300 hover:shadow-md hover:bg-gray-50 hover:scale-[1.02] block">
+					<a href="/calculators/refinance-calculator" class="bg-white p-6 rounded-xl shadow-sm cursor-pointer transition-all duration-300 hover:shadow-md hover:bg-gray-50 border-2 border-transparent hover:border-green-600 block">
 						<div class="flex items-center">
 							<!-- Icon on the left -->
 							<div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -117,7 +118,7 @@ import Contact from '../components/Contact.astro';
 					</a>
 
 					<!-- Calculator 3 - Mortgage Payoff Calculator -->
-					<a href="/calculators/mortgage-payoff-calculator" class="bg-white p-6 rounded-xl shadow-sm cursor-pointer transition-all duration-300 hover:shadow-md hover:bg-gray-50 hover:scale-[1.02] block">
+					<a href="/calculators/mortgage-payoff-calculator" class="bg-white p-6 rounded-xl shadow-sm cursor-pointer transition-all duration-300 hover:shadow-md hover:bg-gray-50 border-2 border-transparent hover:border-purple-600 block">
 						<div class="flex items-center">
 							<!-- Icon on the left -->
 							<div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -144,7 +145,7 @@ import Contact from '../components/Contact.astro';
 					</a>
 
 					<!-- Calculator 4 - Home Valuation Tool -->
-					<button id="openValuationModal" class="bg-white p-6 rounded-xl shadow-sm cursor-pointer transition-all duration-300 hover:shadow-md hover:bg-gray-50 hover:scale-[1.02] block w-full">
+					<button id="openValuationModal" class="bg-white p-6 rounded-xl shadow-sm cursor-pointer transition-all duration-300 hover:shadow-md hover:bg-gray-50 border-2 border-transparent hover:border-orange-600 block w-full">
 						<div class="flex items-center">
 							<!-- Icon on the left -->
 							<div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -203,6 +204,9 @@ import Contact from '../components/Contact.astro';
 
 	<!-- Contact Section -->
 	<Contact />
+
+	<!-- Testimonials Section -->
+	<TestimonialsSection />
 
 	<!-- Important Legal Disclosures -->
 	<ImportantLegal />
