@@ -5,6 +5,20 @@ import ImportantLegal from '../components/ImportantLegal.astro';
 import RewardsCard from '../components/RewardsCard.astro';
 import WaysHelp from '../components/WaysHelp.astro';
 import Contact from '../components/Contact.astro';
+import IdahoImg from '../assets/Idaho.jpg';
+import ColoradoImg from '../assets/Colorado.jpg';
+import FloridaImg from '../assets/Florida.jpg';
+import TexasImg from '../assets/Texas.jpg';
+import NevadaImg from '../assets/Nevada.jpg';
+const images = [
+  { src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=800&fit=crop", label: "Utah", alt: "Delicate Arch en Utah" },
+  { src: IdahoImg.src, label: "Idaho", alt: "Sawtooth Mountains en Idaho" },
+  { src: NevadaImg.src, label: "Nevada", alt: "Nevada landscape" },
+  { src: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=1200&h=800&fit=crop", label: "California", alt: "Golden Gate Bridge en California" },
+  { src: TexasImg.src, label: "Texas", alt: "El Álamo en Texas" },
+  { src: FloridaImg.src, label: "Florida", alt: "Miami Beach en Florida" },
+  { src: ColoradoImg.src, label: "Colorado", alt: "Rocky Mountains en Colorado" }
+];
 ---
 
 <Layout title="Buy a Home - Broker Lenders">
@@ -12,18 +26,26 @@ import Contact from '../components/Contact.astro';
 	<section class="relative pb-0 h-[500px]">
 		<!-- Background Image -->
 		<div class="absolute inset-0">
-			<img 
-				src="/HeroBuy.jpg" 
-				alt="Happy family at home" 
-				class="w-full h-full object-cover"
-				style="width: 1920px; height: 660px;"
-			/>
+			<div id="buyHeroCarousel" class="relative w-full h-full">
+				{images.map((img, i) => (
+					<figure class={`absolute inset-0 transition-opacity duration-700 ${i === 0 ? 'opacity-100' : 'opacity-0'}`} data-index={i}>
+						<img src={img.src} alt={img.alt} class="w-full h-full object-cover" onerror="this.src='/HeroBuy.jpg'; this.onerror=null;" />
+						<figcaption class="absolute bottom-4 left-4 px-3 py-1 rounded-full bg-black/40 text-white text-xs font-medium backdrop-blur-sm">{img.label}</figcaption>
+					</figure>
+				))}
+			</div>
 			<!-- Overlay for text readability -->
-			<!-- <div class="absolute inset-0 bg-black bg-opacity-10"></div> -->
+			<div class="absolute inset-0 bg-black/30"></div>
+			<!-- Dots -->
+			<div id="buyHeroCarouselDots" class="absolute bottom-4 right-4 flex gap-2 z-10">
+				{images.map((_, i) => (
+					<button class={`w-2.5 h-2.5 rounded-full border border-white ${i === 0 ? 'bg-white' : 'bg-white/30'}`} data-dot={i} aria-label={`Slide ${i + 1}`}></button>
+				))}
+			</div>
 		</div>
 		
 		<!-- Content -->
-		<div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-start pt-32">
+		<div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-center">
 			<div class="max-w-2xl bg-black/30 rounded-[48px] p-8 lg:p-12">
 				<h1 class="text-4xl lg:text-5xl font-bold text-white mb-6">
 					Thinking of buying?<br>
@@ -42,10 +64,42 @@ import Contact from '../components/Contact.astro';
 				</div>
 			</div>
 		</div>
-	</section>
+</section>
+
+<script is:inline>
+  const slides = Array.from(document.querySelectorAll('#buyHeroCarousel figure'));
+  const dots = Array.from(document.querySelectorAll('#buyHeroCarouselDots button'));
+  let current = 0;
+  let timer;
+  function show(index) {
+    slides.forEach((s, i) => {
+      s.style.opacity = i === index ? '1' : '0';
+      s.style.pointerEvents = i === index ? 'auto' : 'none';
+    });
+    dots.forEach((d, i) => {
+      if (i === index) {
+        d.classList.add('bg-white');
+        d.classList.remove('bg-white/30');
+      } else {
+        d.classList.remove('bg-white');
+        d.classList.add('bg-white/30');
+      }
+    });
+    current = index;
+  }
+  function next() { show((current + 1) % slides.length); }
+  function start() { stop(); timer = setInterval(next, 4500); }
+  function stop() { if (timer) clearInterval(timer); }
+  dots.forEach((d, i) => d.addEventListener('click', () => { show(i); start(); }));
+  show(0); start();
+  const container = document.getElementById('buyHeroCarousel');
+  container.addEventListener('mouseenter', stop);
+  container.addEventListener('mouseleave', start);
+</script>
+
 
 	<!-- Three Cards Section -->
-	<section class="pt-[224px] pb-18 bg-white">
+	<section class="pt-10 pb-18 bg-white">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 			<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 				<!-- Ready to own your home? -->
@@ -104,11 +158,11 @@ import Contact from '../components/Contact.astro';
 						<p class="text-gray-600 mb-8 text-lg">
 							Get exclusive rates and save thousands on your home purchase with our preferred pricing program.
 						</p>
-						<div class="mb-8">
-							<a href="/calculators" class="bg-black text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-600 hover:text-white transition-colors inline-block">
-								Calculate my savings
-							</a>
-						</div>
+					<div class="mb-8">
+						<a href="/calculators" class="bg-black text-white px-8 py-3 rounded-[48px] font-semibold hover:bg-red-600 hover:text-white transition-colors inline-block">
+							Calculate my savings
+						</a>
+					</div>
 					</div>
 					
 					<!-- Right side - Image -->

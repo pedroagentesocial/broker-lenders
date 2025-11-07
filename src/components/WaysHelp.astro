@@ -1,5 +1,7 @@
 ---
 import calculatorIcon from "../assets/icons/calculator.png";
+import dolarIcon from "../assets/icons/dolar.png";
+import ratesIcon from "../assets/icons/rates.png";
 ---
 
 <!-- More ways we can help -->
@@ -12,7 +14,11 @@ import calculatorIcon from "../assets/icons/calculator.png";
 			<!-- Card 1 -->
 			<a href="/calculators/refinance-calculator" class="text-center bg-blue-600/10 text-gray-900 p-8 rounded-xl transition-all hover:bg-blue-600/30 block">
 				<div class="w-16 h-16 flex items-center justify-center mx-auto mb-4">
-					<img src={calculatorIcon.src} width={calculatorIcon.width} height={calculatorIcon.height} class="w-12 h-12" alt="Calculator icon" />
+					<div
+						class="w-12 h-12 bg-blue-600"
+						style={`mask-image: url(${calculatorIcon.src}); -webkit-mask-image: url(${calculatorIcon.src}); mask-size: contain; -webkit-mask-size: contain; mask-repeat: no-repeat; -webkit-mask-repeat: no-repeat; mask-position: center; -webkit-mask-position: center;`}
+						aria-label="Calculator icon"
+					></div>
 				</div>
 				<h3 class="text-lg font-semibold">Payment calculator</h3>
 			</a>
@@ -20,9 +26,11 @@ import calculatorIcon from "../assets/icons/calculator.png";
 			<!-- Card 2 -->
 			<a href="/calculators/mortgage-calculator" class="text-center bg-green-600/10 text-gray-900 p-8 rounded-xl transition-all hover:bg-green-600/30 block">
 				<div class="w-16 h-16 flex items-center justify-center mx-auto mb-4">
-					<svg class="w-12 h-12 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
-					</svg>
+					<div
+						class="w-12 h-12 bg-green-600"
+						style={`mask-image: url(${dolarIcon.src}); -webkit-mask-image: url(${dolarIcon.src}); mask-size: contain; -webkit-mask-size: contain; mask-repeat: no-repeat; -webkit-mask-repeat: no-repeat; mask-position: center; -webkit-mask-position: center;`}
+						aria-label="Dollar icon"
+					></div>
 				</div>
 				<h3 class="text-lg font-semibold">Calculate your buying power</h3>
 			</a>
@@ -30,9 +38,11 @@ import calculatorIcon from "../assets/icons/calculator.png";
 			<!-- Card 3 -->
 			<a href="/rates" class="text-center bg-purple-600/10 text-gray-900 p-8 rounded-xl transition-all hover:bg-purple-600/30 block">
 				<div class="w-16 h-16 flex items-center justify-center mx-auto mb-4">
-					<svg class="w-12 h-12 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
-						<text x="12" y="16" text-anchor="middle" font-size="20" font-weight="bold">%</text>
-					</svg>
+					<div
+						class="w-12 h-12 bg-purple-600"
+						style={`mask-image: url(${ratesIcon.src}); -webkit-mask-image: url(${ratesIcon.src}); mask-size: contain; -webkit-mask-size: contain; mask-repeat: no-repeat; -webkit-mask-repeat: no-repeat; mask-position: center; -webkit-mask-position: center;`}
+						aria-label="Rates icon"
+					></div>
 				</div>
 				<h3 class="text-lg font-semibold">See the latest rates</h3>
 			</a>
