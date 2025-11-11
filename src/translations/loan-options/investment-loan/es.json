@@ -1,0 +1,40 @@
+{
+  "title": "Préstamo para Propiedad de Inversión - Broker Lenders",
+  "breadcrumb": {
+    "home": "Inicio",
+    "loanOptions": "Opciones de préstamos",
+    "investmentPropertyLoan": "Préstamo para propiedad de inversión"
+  },
+  "hero": {
+    "title": "Préstamo para propiedad de inversión",
+    "subtitle": "Financia o refinancia propiedades de alquiler e inversión con programas flexibles.",
+    "getStarted": "Comenzar"
+  },
+  "whyChoose": {
+    "title": "¿Por qué elegir Broker Lenders para propiedades de inversión?",
+    "dscrPrograms": {
+      "title": "Programas DSCR y amigables para inversores",
+      "description": "Calificación flexible utilizando el flujo de caja de la propiedad para inversores."
+    },
+    "purchaseOptions": {
+      "title": "Opciones de compra o refinanciamiento",
+      "description": "Ya sea adquiriendo una nueva propiedad o aprovechando el capital, podemos ayudar."
+    },
+    "competitiveRates": {
+      "title": "Tarifas y términos competitivos",
+      "description": "Encuentra financiamiento que se alinee con tu estrategia de inversión."
+    },
+    "getStarted": "Comenzar"
+  },
+  "answersSection": {
+    "title": "Respuestas cuando las necesitas.",
+    "subtitle": "Personas reales cuando importa.",
+    "description": "Obtén apoyo con análisis de propiedades, estructuras de financiamiento y planificación a largo plazo.",
+    "getStarted": "Comenzar"
+  },
+  "finalCTA": {
+    "title": "Haz crecer tu portafolio con un préstamo para propiedad de inversión",
+    "getStarted": "Comenzar",
+    "callNow": "Llamar (801) 307-0273"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "hero": {
+    "title": "Broker Lenders® calculators",
+    "subtitle": "Get accurate estimates and make informed decisions with our easy-to-use mortgage calculators. Plan your home financing with confidence."
+  },
+  "help": {
+    "title": "Find your ideal mortgage calculator",
+    "description": "Our mortgage experts can help you choose the right tool for your situation and guide you through the process.",
+    "button": "Talk to an expert"
+  },
+  "mortgageCalculators": {
+    "title": "Mortgage Calculators",
+    "description": "Use our powerful mortgage calculators to make informed decisions about your home financing. Get accurate estimates and plan your mortgage strategy with confidence.",
+    "cards": {
+      "mortgage": {
+        "title": "Mortgage Calculator",
+        "description": "Calculate your monthly mortgage payment and see how much home you can afford"
+      },
+      "refinance": {
+        "title": "Refinance Calculator",
+        "description": "See if refinancing makes sense for you and calculate potential savings"
+      },
+      "payoff": {
+        "title": "Mortgage Payoff Calculator",
+        "description": "Calculate how much you can save by making extra payments on your mortgage"
+      },
+      "valuation": {
+        "title": "Home Valuation Tool",
+        "description": "Get an instant estimate of your property's current market value"
+      }
+    },
+    "modal": {
+      "title": "Home Valuation Tool"
+    }
+  }
+}

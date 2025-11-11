@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "title": "Loan Options - Broker Lenders"
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "loanOptions": "Loan Options"
+  },
+  "hero": {
+    "title": "Home financing that fits your goals",
+    "subtitle": "Personalized loan options for first-time buyers and refinances."
+  },
+  "findBestFit": {
+    "title": "Find your best-fit loan",
+    "description": "Get recommendations tailored to your budget, timeline, and goals—so you can move forward with confidence.",
+    "button": "See my options"
+  },
+  "loanOptions": {
+    "title": "Broker Lenders® loan options, built around you",
+    "learnMore": "Learn more →",
+    "loans": {
+      "fha": {
+        "title": "FHA loans",
+        "description": "Government-backed loans with lower down payment requirements and flexible credit guidelines."
+      },
+      "va": {
+        "title": "VA loans",
+        "description": "Exclusive benefits for military members, veterans, and eligible spouses with no down payment required."
+      },
+      "usda": {
+        "title": "USDA loans",
+        "description": "Rural development loans with no down payment for eligible properties in qualifying areas."
+      },
+      "conventional": {
+        "title": "Conventional loans",
+        "description": "Traditional mortgages with competitive rates and flexible terms for qualified borrowers."
+      },
+      "jumbo": {
+        "title": "Jumbo loans",
+        "description": "Financing for luxury homes and properties that exceed conventional loan limits."
+      },
+      "firstTime": {
+        "title": "First-time homebuyer loans",
+        "description": "Special programs designed to help first-time buyers achieve homeownership with lower barriers."
+      },
+      "investment": {
+        "title": "Investment property loans",
+        "description": "Financing options for rental properties and real estate investments."
+      },
+      "construction": {
+        "title": "Construction loans",
+        "description": "Short-term financing to build your dream home from the ground up."
+      },
+      "refinance": {
+        "title": "Refinance loans",
+        "description": "Lower your rate, reduce your payment, or access your home's equity."
+      }
+    }
+  },
+  "readyToFind": {
+    "title": "Ready to find your perfect loan?",
+    "description": "Our mortgage experts are here to help you understand your options and find the right loan for your situation. Get personalized guidance every step of the way.",
+    "button": "Talk with a expert"
+  },
+  "expertGuidance": {
+    "title": "Expert guidance for your home loan journey",
+    "steps": {
+      "step1": {
+        "title": "Apply online",
+        "description": "Start your application online and get pre-approved in minutes."
+      },
+      "step2": {
+        "title": "Know your next steps",
+        "description": "Get a clear roadmap of what to expect throughout the process."
+      },
+      "step3": {
+        "title": "Finalize your loan",
+        "description": "Work with our team to finalize your loan and close on your home."
+      },
+      "step4": {
+        "title": "Check if the goal",
+        "description": "Celebrate your homeownership achievement and enjoy your new home."
+      }
+    }
+  }
+}

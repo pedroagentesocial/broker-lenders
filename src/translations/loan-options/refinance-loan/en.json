@@ -1,0 +1,40 @@
+{
+  "title": "Refinance Loan - Broker Lenders",
+  "breadcrumb": {
+    "home": "Home",
+    "loanOptions": "Loan options",
+    "refinanceLoan": "Refinance loan"
+  },
+  "hero": {
+    "title": "Refinance loan",
+    "subtitle": "Lower your rate, reduce your payment, or access your home's equity.",
+    "getStarted": "Get started"
+  },
+  "whyChoose": {
+    "title": "Why choose Broker Lenders for your refinance?",
+    "lowerPayments": {
+      "title": "Lower monthly payments",
+      "description": "Reduce your monthly mortgage payment with better rates."
+    },
+    "cashOutEquity": {
+      "title": "Cash-out equity",
+      "description": "Access your home equity for renovations, debt consolidation, or investments."
+    },
+    "shorterTerms": {
+      "title": "Shorter loan terms",
+      "description": "Pay off your mortgage faster with a shorter term and lower rates."
+    },
+    "getStarted": "Get started"
+  },
+  "answersSection": {
+    "title": "Answers when you need them.",
+    "subtitle": "Real people when it matters.",
+    "description": "Talk to a home advisor about refinance options, closing costs, equity and timing.",
+    "getStarted": "Get started"
+  },
+  "finalCTA": {
+    "title": "Achieve your financial goals with a Refinance loan",
+    "getStarted": "Get started",
+    "callNow": "Call (801) 307-0273"
+  }
+}

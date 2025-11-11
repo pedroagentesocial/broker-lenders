@@ -1,0 +1,49 @@
+{
+  "title": "Préstamo Convencional - Broker Lenders",
+  "breadcrumb": {
+    "home": "Inicio",
+    "loanOptions": "Opciones de préstamos",
+    "conventionalLoan": "Préstamo convencional"
+  },
+  "hero": {
+    "title": "Préstamo convencional",
+    "subtitle": "Financiamiento flexible para viviendas principales, segundas viviendas e inversiones inmobiliarias.",
+    "getStarted": "Comenzar",
+    "callNow": "Llamar (801) 307-0273"
+  },
+  "whyChoose": {
+    "title": "¿Por qué elegir Broker Lenders para préstamos convencionales?",
+    "flexibleOptions": {
+      "title": "Opciones de préstamo flexibles",
+      "description": "Elija tasas fijas o ajustables para viviendas principales o propiedades de inversión."
+    },
+    "competitiveRates": {
+      "title": "Tasas competitivas",
+      "description": "Acceda a excelentes precios con términos transparentes y orientación clara."
+    },
+    "personalizedGuidance": {
+      "title": "Orientación personalizada",
+      "description": "Trabaje con expertos que entienden sus metas y necesidades de financiamiento."
+    },
+    "getStarted": "Comenzar"
+  },
+  "answersSection": {
+    "title": "Respuestas cuando las necesita.",
+    "subtitle": "Personas reales cuando importa.",
+    "description": "Explore los requisitos del préstamo convencional, cronogramas de cierre y estrategias de pago.",
+    "clearGuidelines": {
+      "title": "Pautas claras de suscripción",
+      "description": "Entienda los ingresos, activos y reglas de propiedad desde el principio."
+    },
+    "fastClosings": {
+      "title": "Cierres rápidos",
+      "description": "Planifique su cronograma con confianza y menos sorpresas."
+    },
+    "paymentStrategy": {
+      "title": "Asesoramiento en estrategia de pago",
+      "description": "Obtenga ayuda para elegir entre tasas fijas o ajustables según sus objetivos."
+    },
+    "getStarted": "Comenzar",
+    "callNow": "Llamar (801) 307-0273"
+  }
+}

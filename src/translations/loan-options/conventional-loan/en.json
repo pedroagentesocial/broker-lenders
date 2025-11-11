@@ -1,0 +1,49 @@
+{
+  "title": "Conventional Loan - Broker Lenders",
+  "breadcrumb": {
+    "home": "Home",
+    "loanOptions": "Loan options",
+    "conventionalLoan": "Conventional loan"
+  },
+  "hero": {
+    "title": "Conventional loan",
+    "subtitle": "Flexible financing for primary, second homes, and investment properties.",
+    "getStarted": "Get started",
+    "callNow": "Call (801) 307-0273"
+  },
+  "whyChoose": {
+    "title": "Why choose Broker Lenders for conventional loans?",
+    "flexibleOptions": {
+      "title": "Flexible loan options",
+      "description": "Choose fixed or adjustable rates for primary or investment properties."
+    },
+    "competitiveRates": {
+      "title": "Competitive rates",
+      "description": "Access great pricing with transparent terms and clear guidance."
+    },
+    "personalizedGuidance": {
+      "title": "Personalized guidance",
+      "description": "Work with experts who understand your goals and financing needs."
+    },
+    "getStarted": "Get started"
+  },
+  "answersSection": {
+    "title": "Answers when you need them.",
+    "subtitle": "Real people when it matters.",
+    "description": "Explore conventional loan requirements, closing timelines, and payment strategy.",
+    "clearGuidelines": {
+      "title": "Clear underwriting guidelines",
+      "description": "Understand income, assets, and property rules up front."
+    },
+    "fastClosings": {
+      "title": "Fast closings",
+      "description": "Plan your timeline with confidence and fewer surprises."
+    },
+    "paymentStrategy": {
+      "title": "Payment strategy advice",
+      "description": "Get help choosing fixed vs. adjustable rates for your goals."
+    },
+    "getStarted": "Get started",
+    "callNow": "Call (801) 307-0273"
+  }
+}

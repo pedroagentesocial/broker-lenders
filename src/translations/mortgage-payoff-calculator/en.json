@@ -1,0 +1,127 @@
+{
+  "page_title": "Mortgage Payoff Calculator - Broker Lenders®",
+  "breadcrumb": {
+    "home": "Home",
+    "calculators": "Calculators",
+    "current": "Mortgage Payoff Calculator"
+  },
+  "hero": {
+    "title": "Mortgage payoff calculator",
+    "description": "Calculate how much you can save by making extra payments on your mortgage. See how additional payments can reduce your loan term and total interest paid."
+  },
+  "form": {
+    "labels": {
+      "current_mortgage_balance": "Current mortgage balance",
+      "years_left": "Years left on your loan",
+      "current_home_value": "Current home value",
+      "credit_profile": "Credit profile",
+      "zip_code": "ZIP code"
+    },
+    "placeholders": {
+      "value": "Value"
+    },
+    "options": {
+      "select_range": "Select Range",
+      "less_than_580": "Less than 580",
+      "580_619": "580-619",
+      "620_659": "620-659",
+      "660_719": "660-719",
+      "720_759": "720-759",
+      "760_plus": "760+"
+    },
+    "buttons": {
+      "calculate": "Calculate",
+      "legal_disclosures": "Legal disclosures"
+    }
+  },
+  "howToUse": {
+    "title": "How to use a mortgage payoff calculator",
+    "description": "Our mortgage payoff calculator helps you see how extra payments can save you money and time.",
+    "cards": {
+      "enter_details": {
+        "title": "Enter your loan details",
+        "text": "Start by entering your current home value, remaining loan balance, interest rate, and term. This sets your baseline payment schedule."
+      },
+      "extra_payment": {
+        "title": "Add extra payment amount",
+        "text": "Enter the additional amount you plan to pay each month toward principal. Even small extra payments can make a big difference."
+      },
+      "time_savings": {
+        "title": "See time savings",
+        "text": "The calculator shows how many years and months you'll save by making extra payments. Paying off your mortgage sooner means fewer monthly payments."
+      },
+      "interest_savings": {
+        "title": "Calculate interest savings",
+        "text": "See how much you'll save in total interest over the life of the loan. These savings can be substantial—often tens of thousands of dollars."
+      }
+    }
+  },
+  "tips": {
+    "title": "Mortgage payoff calculator tips",
+    "description": "Maximize your mortgage payoff strategy with these helpful insights.",
+    "items": {
+      "start_small": {
+        "title": "Start small",
+        "text": "Even $50–100 extra per month can save you thousands in interest and years off your loan term. Start with what you can and increase payments when possible."
+      },
+      "apply_windfalls": {
+        "title": "Apply windfalls",
+        "text": "Use tax refunds, bonuses, or other unexpected income toward your mortgage principal. These one-time payments can dramatically reduce your balance and interest costs."
+      },
+      "consider_debts": {
+        "title": "Consider other debts",
+        "text": "Before making extra payments, make sure you've paid off higher-interest debts like credit cards. Also ensure you have an emergency fund and are contributing to retirement savings."
+      }
+    }
+  },
+  "results": {
+    "heading": "You can shorten your term by up to"
+  },
+  "cta": {
+    "apply_now": "Apply now",
+    "see_rate": "See today's rate"
+  },
+  "faqs": {
+    "title": "Mortgage payoff calculator FAQs",
+    "subtitle": "Don't see your question here? We love helping people understand how payoff calculations work and what yours could be. Just talk to us.",
+    "items": {
+      "q1": {
+        "title": "How does a mortgage payoff calculator work?",
+        "body": "A mortgage payoff calculator uses your current loan balance, remaining term, and interest rate to show how extra payments can reduce your loan term and total interest paid. It calculates the potential time and money savings from different payment strategies."
+      },
+      "q2": {
+        "title": "What are the benefits of making extra mortgage payments?",
+        "body": "Making extra payments can reduce the total interest paid and shorten your loan term. Even small additional payments can lead to significant savings over time."
+      },
+      "q3": {
+        "title": "Should I make extra payments or invest the money instead?",
+        "body": "This depends on your mortgage rate versus potential investment returns. If your mortgage rate is higher than expected investment returns, paying extra makes sense. Also consider your risk tolerance, emergency fund, and other high-interest debt."
+      },
+      "q4": {
+        "title": "How much extra should I pay toward my mortgage?",
+        "body": "Start with what you can comfortably afford without straining your budget. Even an extra $50-100 per month can make a significant difference. Use our calculator to see how different amounts affect your payoff timeline and savings."
+      },
+      "q5": {
+        "title": "Is refinancing better than making extra payments?",
+        "body": "It depends on your rate, term, and goals. Refinancing can lower your rate or shorten your term, while extra payments directly reduce your principal. Compare scenarios to determine the best option."
+      }
+    }
+  },
+  "modal": {
+    "title": "Legal Disclosures",
+    "payment_example_title": "Payment Example",
+    "payment_example_intro": "Here's a payment example based on an average home price and the most common loan type:",
+    "labels": {
+      "loan_amount": "Loan amount:",
+      "loan_type": "Loan type:",
+      "interest_apr": "Interest rate/APR:",
+      "monthly_payment": "Monthly payment:",
+      "points": "Points:",
+      "ltv": "Loan-to-value (LTV):"
+    },
+    "paragraph2": "One point is equal to one percent of your loan amount. Payment does not include taxes and insurance. The actual payment amount will be greater. Some state and county maximum loan amount restrictions may apply. Rates shown are valid on publication date of April 18, 2024.",
+    "footer": {
+      "note": "¹If you didn't enter taxes and insurance amounts, an estimate of your taxes is based on the state selected. This does not include all fees."
+    }
+  }
+}

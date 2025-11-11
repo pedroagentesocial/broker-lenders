@@ -1,0 +1,40 @@
+{
+  "title": "Préstamo USDA - Broker Lenders",
+  "breadcrumb": {
+    "home": "Inicio",
+    "loanOptions": "Opciones de préstamo",
+    "usdaLoan": "Préstamo USDA"
+  },
+  "hero": {
+    "title": "Préstamo USDA",
+    "subtitle": "Préstamos para desarrollo rural sin pago inicial para propiedades elegibles en áreas calificadas. Hacemos que la propiedad de vivienda sea asequible en comunidades rurales.",
+    "getStarted": "Comenzar"
+  },
+  "whyChoose": {
+    "title": "¿Por qué elegir Broker Lenders para su préstamo USDA?",
+    "ruralPropertyExpertise": {
+      "title": "Experiencia en propiedades rurales",
+      "description": "Entendemos los requisitos de elegibilidad de USDA y podemos ayudar a identificar propiedades rurales calificadas."
+    },
+    "zeroDownPayment": {
+      "title": "Especialistas en pago inicial cero",
+      "description": "Le ayudamos a aprovechar la opción de financiamiento 100% de USDA sin pago inicial requerido."
+    },
+    "competitiveRates": {
+      "title": "Tarifas competitivas para préstamos rurales",
+      "description": "Acceso a múltiples prestamistas asegurando que obtenga las mejores tasas de préstamo USDA disponibles para propiedades rurales."
+    },
+    "getStarted": "Comenzar"
+  },
+  "answers": {
+    "title": "Respuestas cuando las necesita.",
+    "subtitle": "Personas reales cuando importa.",
+    "description": "Hable con un especialista en préstamos USDA sobre elegibilidad rural, requisitos de propiedad y límites de ingresos.",
+    "getStarted": "Comenzar"
+  },
+  "finalCTA": {
+    "title": "Logre sus sueños de propiedad de vivienda rural con un préstamo USDA",
+    "getStarted": "Comenzar",
+    "callButton": "Llamar (801) 307-0273"
+  }
+}

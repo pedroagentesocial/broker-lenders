@@ -5,13 +5,14 @@ import Footer from '../components/Footer.astro';
 
 export interface Props {
 	title: string;
+  lang?: string;
 }
 
-const { title } = Astro.props;
+const { title, lang = 'en' } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Broker Lenders - Home loans made for your lifestyle" />
@@ -19,13 +20,36 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+    <!-- Early i18n sync: persist SSR lang to localStorage/cookie and URL -->
+    <script is:inline>
+      (() => {
+        try {
+          const ssrLang = document.documentElement.getAttribute('lang') || 'en';
+          // Persist to localStorage early so components pick it up
+          try { localStorage.setItem('lang', ssrLang); } catch {}
+          // Persist to cookie for SSR fallbacks across navigations
+          try { document.cookie = `lang=${ssrLang};path=/;max-age=31536000;SameSite=Lax`; } catch {}
+          // Ensure URL reflects current lang without reload
+          try {
+            const url = new URL(window.location.href);
+            const current = (url.searchParams.get('lang') || '').toLowerCase();
+            if (current !== ssrLang) {
+              url.searchParams.set('lang', ssrLang);
+              window.history.replaceState({}, '', url.toString());
+            }
+          } catch {}
+        } catch (e) {
+          console.warn('[i18n][layout] early sync failed', e);
+        }
+      })();
+    </script>
 	</head>
 	<body class="bg-white text-gray-900 font-sans">
-		<Header />
+		<Header lang={lang} />
 		<main>
 			<slot />
 		</main>
-		<Footer />
+		<Footer lang={lang} />
 	</body>
 </html>
 

@@ -1,6 +1,10 @@
 ---
 // Carousel Rates component
 import { getRatesData } from '../utils/ratesData';
+import en from "../translations/carousel-rates/en.json";
+import es from "../translations/carousel-rates/es.json";
+const enB64 = Buffer.from(JSON.stringify(en)).toString('base64');
+const esB64 = Buffer.from(JSON.stringify(es)).toString('base64');
 
 const ratesData = await getRatesData();
 const utahRates = ratesData.utah;
@@ -34,10 +38,11 @@ function getVaRates() {
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <!-- Header with title and button -->
     <div class="flex justify-between items-center mb-6">
-      <h2 class="text-2xl font-bold text-gray-900">Stay updated on today’s rates</h2>
+      <h2 class="text-2xl font-bold text-gray-900" data-i18n="stay_updated_title">Stay updated on today’s rates</h2>
       <a 
         href="/rates" 
         class="bg-gray-100 border border-gray-300 text-gray-700 px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-200 transition-colors"
+        data-i18n="see_all_rates"
       >
         See all rates
       </a>
@@ -50,7 +55,7 @@ function getVaRates() {
         <div class="rate-item bg-gray-200 rounded-lg p-4 shadow-sm border border-gray-300">
           <div class="grid grid-cols-[2fr_1fr_1fr] gap-3 items-start">
             <div class="flex flex-col">
-              <div class="text-xs text-gray-700 font-medium mb-1">30-year fixed</div>
+              <div class="text-xs text-gray-700 font-medium mb-1" data-i18n="30_year_fixed">30-year fixed</div>
               <div class="flex items-center gap-2">
                 <div class="text-lg font-bold text-gray-900">{utahRates['30-year-fixed'].rate}</div>
                 {(() => {
@@ -60,11 +65,11 @@ function getVaRates() {
               </div>
             </div>
             <div class="text-center">
-              <div class="text-xs text-gray-500 mb-1">APR</div>
+              <div class="text-xs text-gray-500 mb-1" data-i18n="apr">APR</div>
               <div class="text-sm font-bold text-gray-900">{utahRates['30-year-fixed'].apr}</div>
             </div>
             <div class="text-right">
-              <div class="text-xs text-gray-500 mb-1">Points</div>
+              <div class="text-xs text-gray-500 mb-1" data-i18n="points">Points</div>
               <div class="text-sm font-semibold text-gray-900">{utahRates['30-year-fixed'].points}</div>
             </div>
           </div>
@@ -74,7 +79,7 @@ function getVaRates() {
         <div class="rate-item bg-gray-200 rounded-lg p-4 shadow-sm border border-gray-300">
           <div class="grid grid-cols-[2fr_1fr_1fr] gap-3 items-start">
             <div class="flex flex-col">
-              <div class="text-xs text-gray-700 font-medium mb-1">20-year fixed</div>
+              <div class="text-xs text-gray-700 font-medium mb-1" data-i18n="20_year_fixed">20-year fixed</div>
               <div class="flex items-center gap-2">
                 <div class="text-lg font-bold text-gray-900">{utahRates['20-year-fixed'].rate}</div>
                 {(() => {
@@ -84,11 +89,11 @@ function getVaRates() {
               </div>
             </div>
             <div class="text-center">
-              <div class="text-xs text-gray-500 mb-1">APR</div>
+              <div class="text-xs text-gray-500 mb-1" data-i18n="apr">APR</div>
               <div class="text-sm font-bold text-gray-900">{utahRates['20-year-fixed'].apr}</div>
             </div>
             <div class="text-right">
-              <div class="text-xs text-gray-500 mb-1">Points</div>
+              <div class="text-xs text-gray-500 mb-1" data-i18n="points">Points</div>
               <div class="text-sm font-semibold text-gray-900">{utahRates['20-year-fixed'].points}</div>
             </div>
           </div>
@@ -98,7 +103,7 @@ function getVaRates() {
         <div class="rate-item bg-gray-200 rounded-lg p-4 shadow-sm border border-gray-300">
           <div class="grid grid-cols-[2fr_1fr_1fr] gap-3 items-start">
             <div class="flex flex-col">
-              <div class="text-xs text-gray-700 font-medium mb-1">15-year fixed</div>
+              <div class="text-xs text-gray-700 font-medium mb-1" data-i18n="15_year_fixed">15-year fixed</div>
               <div class="flex items-center gap-2">
                 <div class="text-lg font-bold text-gray-900">{utahRates['15-year-fixed'].rate}</div>
                 {(() => {
@@ -108,11 +113,11 @@ function getVaRates() {
               </div>
             </div>
             <div class="text-center">
-              <div class="text-xs text-gray-500 mb-1">APR</div>
+              <div class="text-xs text-gray-500 mb-1" data-i18n="apr">APR</div>
               <div class="text-sm font-bold text-gray-900">{utahRates['15-year-fixed'].apr}</div>
             </div>
             <div class="text-right">
-              <div class="text-xs text-gray-500 mb-1">Points</div>
+              <div class="text-xs text-gray-500 mb-1" data-i18n="points">Points</div>
               <div class="text-sm font-semibold text-gray-900">{utahRates['15-year-fixed'].points}</div>
             </div>
           </div>
@@ -122,7 +127,7 @@ function getVaRates() {
         <div class="rate-item bg-gray-200 rounded-lg p-4 shadow-sm border border-gray-300">
           <div class="grid grid-cols-[2fr_1fr_1fr] gap-3 items-start">
             <div class="flex flex-col">
-              <div class="text-xs text-gray-700 font-medium mb-1">30-year FHA</div>
+              <div class="text-xs text-gray-700 font-medium mb-1" data-i18n="30_year_fha">30-year FHA</div>
               <div class="flex items-center gap-2">
                 <div class="text-lg font-bold text-gray-900">{utahRates['30-year-fha'].rate}</div>
                 {(() => {
@@ -132,11 +137,11 @@ function getVaRates() {
               </div>
             </div>
             <div class="text-center">
-              <div class="text-xs text-gray-500 mb-1">APR</div>
+              <div class="text-xs text-gray-500 mb-1" data-i18n="apr">APR</div>
               <div class="text-sm font-bold text-gray-900">{utahRates['30-year-fha'].apr}</div>
             </div>
             <div class="text-right">
-              <div class="text-xs text-gray-500 mb-1">Points</div>
+              <div class="text-xs text-gray-500 mb-1" data-i18n="points">Points</div>
               <div class="text-sm font-semibold text-gray-900">{utahRates['30-year-fha'].points}</div>
             </div>
           </div>
@@ -149,7 +154,7 @@ function getVaRates() {
             <div class="rate-item bg-gray-200 rounded-lg p-4 shadow-sm border border-gray-300">
               <div class="grid grid-cols-[2fr_1fr_1fr] gap-3 items-start">
                 <div class="flex flex-col">
-                  <div class="text-xs text-gray-700 font-medium mb-1">30-year VA</div>
+                  <div class="text-xs text-gray-700 font-medium mb-1" data-i18n="30_year_va">30-year VA</div>
                   <div class="flex items-center gap-2">
                     <div class="text-lg font-bold text-gray-900">{vaRates.rate}</div>
                     {(() => {
@@ -159,11 +164,11 @@ function getVaRates() {
                   </div>
                 </div>
                 <div class="text-center">
-                  <div class="text-xs text-gray-500 mb-1">APR</div>
+                  <div class="text-xs text-gray-500 mb-1" data-i18n="apr">APR</div>
                   <div class="text-sm font-bold text-gray-900">{vaRates.apr}</div>
                 </div>
                 <div class="text-right">
-                  <div class="text-xs text-gray-500 mb-1">Points</div>
+                  <div class="text-xs text-gray-500 mb-1" data-i18n="points">Points</div>
                   <div class="text-sm font-semibold text-gray-900">{vaRates.points}</div>
                 </div>
               </div>
@@ -175,7 +180,7 @@ function getVaRates() {
         <div class="rate-item bg-gray-200 rounded-lg p-4 shadow-sm border border-gray-300">
           <div class="grid grid-cols-[2fr_1fr_1fr] gap-3 items-start">
             <div class="flex flex-col">
-              <div class="text-xs text-gray-700 font-medium mb-1">30-year Jumbo</div>
+              <div class="text-xs text-gray-700 font-medium mb-1" data-i18n="30_year_jumbo">30-year Jumbo</div>
               <div class="flex items-center gap-2">
                 <div class="text-lg font-bold text-gray-900">{utahRates['30-year-jumbo'].rate}</div>
                 {(() => {
@@ -185,11 +190,11 @@ function getVaRates() {
               </div>
             </div>
             <div class="text-center">
-              <div class="text-xs text-gray-500 mb-1">APR</div>
+              <div class="text-xs text-gray-500 mb-1" data-i18n="apr">APR</div>
               <div class="text-sm font-bold text-gray-900">{utahRates['30-year-jumbo'].apr}</div>
             </div>
             <div class="text-right">
-              <div class="text-xs text-gray-500 mb-1">Points</div>
+              <div class="text-xs text-gray-500 mb-1" data-i18n="points">Points</div>
               <div class="text-sm font-semibold text-gray-900">{utahRates['30-year-jumbo'].points}</div>
             </div>
           </div>
@@ -199,17 +204,9 @@ function getVaRates() {
 
     <div class="mt-6 flex justify-between items-center text-xs">
       <p class="text-gray-500">
-        *Compared week over week. Rates are current as of {new Date(ratesData.timestamp).toLocaleString('en-US', { 
-          timeZone: 'America/Denver',
-          month: 'long',
-          day: 'numeric',
-          year: 'numeric',
-          hour: '2-digit',
-          minute: '2-digit',
-          timeZoneName: 'short'
-        })}.
+        *<span data-i18n="compared_week_over_week">Compared week over week.</span> <span data-i18n="rates_current_as_of">Rates are current as of</span> <span id="rates-date" data-ts={ratesData.timestamp}></span>.
       </p>
-      <button id="openModal" class="text-gray-600 hover:text-gray-800 underline cursor-pointer">View legal disclosures</button>
+      <button id="openModal" class="text-gray-600 hover:text-gray-800 underline cursor-pointer" data-i18n="view_legal_disclosures">View legal disclosures</button>
     </div>
   </div>
 
@@ -217,29 +214,29 @@ function getVaRates() {
   <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
     <div class="bg-white rounded-lg p-6 max-w-2xl mx-4 max-h-[80vh] overflow-y-auto">
       <div class="flex justify-between items-center mb-4">
-        <h3 class="text-lg font-semibold">Legal Disclosures</h3>
+        <h3 class="text-lg font-semibold" data-i18n="legal_disclosures_title">Legal Disclosures</h3>
         <button id="closeModal" class="text-gray-500 hover:text-gray-700 text-2xl font-bold">&times;</button>
       </div>
       <div class="text-sm text-gray-700 space-y-4">
-        <p>
+        <p data-i18n="legal_disclosures_text">
           The Broker Lenders purchase rates are for estimation purposes only. Every situation is different. Results do not reflect all loan programs and are subject to individual program loan limits. Qualification, rates and payments will vary based on timing and individual circumstances. Mortgage rates and pricing could change daily. Actual payments will vary based on your individual situation and current rates. Some products may not be available in all states. Some jumbo products may not be available to first time home buyers. Lending services may not be available in all areas. Some restrictions may apply. This is not a commitment to lend.
         </p>
         
         <div class="space-y-3">
           <p>
-            <strong>30-year Fixed-Rate Loan:</strong> An interest rate of 6.375% (6.663% APR) is for the cost of 2.00 point(s) ($7,000.00) paid at closing. On a $350,000 mortgage, you would make monthly payments of $2,183.55. Monthly payment does not include taxes and insurance premiums. The actual payment amount will be greater. Payment assumes a loan-to-value (LTV) of 80.00%.
+            <strong data-i18n="30_year_fixed_example">30-year Fixed-Rate Loan:</strong> <span data-i18n="30_year_fixed_example_text">An interest rate of 6.375% (6.663% APR) is for the cost of 2.00 point(s) ($7,000.00) paid at closing. On a $350,000 mortgage, you would make monthly payments of $2,183.55. Monthly payment does not include taxes and insurance premiums. The actual payment amount will be greater. Payment assumes a loan-to-value (LTV) of 80.00%.</span>
           </p>
           
           <p>
-            <strong>30-year Fixed-Rate VA Loan:</strong> An interest rate of 5.99% (6.372% APR) is for a cost of 1.75 Point(s) ($6,125.00) paid at closing. On a $350,000 mortgage, you would make monthly payments of $2,096.18. Monthly payment does not include taxes and insurance premiums. The actual payment amount will be greater. Payment assumes a loan-to-value (LTV) of 80.00%.
+            <strong data-i18n="30_year_va_example">30-year Fixed-Rate VA Loan:</strong> <span data-i18n="30_year_va_example_text">An interest rate of 5.99% (6.372% APR) is for a cost of 1.75 Point(s) ($6,125.00) paid at closing. On a $350,000 mortgage, you would make monthly payments of $2,096.18. Monthly payment does not include taxes and insurance premiums. The actual payment amount will be greater. Payment assumes a loan-to-value (LTV) of 80.00%.</span>
           </p>
           
-          <p>
+          <p data-i18n="va_loans_note">
             VA loans do not require PMI. The VA loan is a benefit of military service and only offered to veterans, surviving spouses and active duty military.
           </p>
           
           <p>
-            <strong>30-year Fixed-Rate Loan (Jumbo):</strong> An interest rate of 5.625% (5.829% APR) is for the cost of 1.75 point(s) ($19,250.00) paid at closing. On a $1,100,000 mortgage, you would make monthly payments of $6,332.23. Monthly payment does not include taxes and insurance premiums. The actual payment amount will be greater. Payment assumes a loan-to-value (LTV) of 70.00%.
+            <strong data-i18n="30_year_jumbo_example">30-year Fixed-Rate Loan (Jumbo):</strong> <span data-i18n="30_year_jumbo_example_text">An interest rate of 5.625% (5.829% APR) is for the cost of 1.75 point(s) ($19,250.00) paid at closing. On a $1,100,000 mortgage, you would make monthly payments of $6,332.23. Monthly payment does not include taxes and insurance premiums. The actual payment amount will be greater. Payment assumes a loan-to-value (LTV) of 70.00%.</span>
           </p>
           
         </div>
@@ -295,7 +292,11 @@ function getVaRates() {
   }
 </style>
 
-<script>
+<!-- Inline i18n payloads encoded -->
+<div id="i18n-carousel" data-en={enB64} data-es={esB64} style="display:none"></div>
+
+<script is:inline>
+  (function(){
   // Modal functionality
   const modal = document.getElementById('modal');
   const openModalBtn = document.getElementById('openModal');
@@ -318,4 +319,78 @@ function getVaRates() {
       modal?.classList.remove('flex');
     }
   });
+
+  // i18n for CarouselRates
+  const i18nEl = document.getElementById('i18n-carousel');
+  const decode = (val) => {
+    try {
+      const b64 = val || '';
+      const bin = atob(b64);
+      const bytes = new Uint8Array(bin.length);
+      for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+      const jsonText = new TextDecoder('utf-8').decode(bytes);
+      return JSON.parse(jsonText);
+    } catch { return {}; }
+  };
+  const translations = {
+    en: decode(i18nEl?.getAttribute('data-en') || ''),
+    es: decode(i18nEl?.getAttribute('data-es') || ''),
+  };
+  const getInitialLang = () => {
+    const urlLang = new URLSearchParams(window.location.search).get('lang');
+    const stored = localStorage.getItem('lang');
+    return (urlLang || stored || 'en');
+  };
+  const applyTranslations = (lang) => {
+    const dict = translations[lang] || translations.en;
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (key && dict[key]) el.textContent = dict[key];
+    });
+  };
+  const formatDateForLang = (lang) => {
+    const span = document.getElementById('rates-date');
+    if (!span) return;
+    const tsAttr = span.getAttribute('data-ts');
+    let d;
+    if (tsAttr) {
+      // Try numeric (epoch ms), else parse ISO/date string
+      const num = Number(tsAttr);
+      if (!Number.isNaN(num) && isFinite(num)) {
+        d = new Date(num);
+      } else {
+        const parsed = new Date(tsAttr);
+        d = isNaN(parsed.getTime()) ? new Date() : parsed;
+      }
+    } else {
+      d = new Date();
+    }
+    const locale = lang === 'es' ? 'es-ES' : 'en-US';
+    const text = d.toLocaleString(locale, {
+      timeZone: 'America/Denver',
+      month: 'long',
+      day: 'numeric',
+      year: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+      timeZoneName: 'short'
+    });
+    span.textContent = text;
+  };
+  const setLanguage = (lang) => {
+    applyTranslations(lang);
+    formatDateForLang(lang);
+  };
+  // Initialize
+  setLanguage(getInitialLang());
+  // React to language menu clicks handled globally in Header
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest('a[href*="?lang="]');
+    if (a) {
+      const href = new URL(a.href);
+      const lang = href.searchParams.get('lang');
+      if (lang) setLanguage(lang);
+    }
+  });
+  })();
 </script>

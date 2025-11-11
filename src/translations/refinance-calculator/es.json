@@ -1,0 +1,121 @@
+{
+  "page_title": "Calculadora de Refinanciamiento - Broker Lenders®",
+  "breadcrumb": {
+    "home": "Inicio",
+    "calculators": "Calculadoras",
+    "current": "Calculadora de Refinanciamiento"
+  },
+  "hero": {
+    "title": "Calculadora de refinanciamiento",
+    "subtitle": "Descubre si el refinanciamiento tiene sentido para ti y calcula ahorros potenciales. Compara tu hipoteca actual con nuevas opciones de préstamo para encontrar la mejor oferta."
+  },
+  "form": {
+    "labels": {
+      "current_mortgage_balance": "Saldo actual de la hipoteca",
+      "current_monthly_payment": "Pago mensual actual",
+      "current_home_value": "Valor actual de la vivienda",
+      "credit_profile": "Perfil de crédito",
+      "zip_code": "Código postal"
+    },
+    "tooltips": {
+      "current_mortgage_balance": "Ejemplo: $250,000 - Ingresa el saldo restante de tu hipoteca actual",
+      "current_monthly_payment": "Ejemplo: $1,850 - Ingresa tu pago mensual actual de la hipoteca (capital + interés)",
+      "current_home_value": "Ejemplo: $400,000 - Ingresa el valor estimado actual de tu vivienda"
+    },
+    "options": {
+      "select_range": "Selecciona rango",
+      "less_than_580": "Menos de 580",
+      "580_619": "580-619",
+      "620_659": "620-659",
+      "660_719": "660-719",
+      "720_plus": "720+"
+    },
+    "placeholders": {
+      "zip_value": "Valor"
+    },
+    "buttons": {
+      "calculate": "Calcular",
+      "legal_disclosures": "Divulgaciones legales"
+    }
+  },
+  "results": {
+    "heading": "Podrías ahorrar",
+    "each_month": "cada mes",
+    "no_savings": "No hay ahorros disponibles"
+  },
+  "cta": {
+    "apply_now": "Aplicar ahora →"
+  },
+  "modal": {
+    "title": "Divulgaciones Legales",
+    "paragraph1": "La calculadora de refinanciamiento de Broker Lenders es solo para fines de estimación. Los resultados no reflejan todos los programas de préstamo y están sujetos a límites individuales del programa. La calificación, tasas y pagos variarán según el momento y las circunstancias individuales. Esto no es un compromiso de préstamo.",
+    "payment_example_title": "Ejemplo de pago",
+    "payment_example_intro": "Aquí tienes un ejemplo de pago basado en un precio promedio de vivienda y el tipo de préstamo más común:",
+    "labels": {
+      "loan_amount": "Monto del préstamo:",
+      "loan_type": "Tipo de préstamo:",
+      "interest_apr": "Tasa de interés/APR:",
+      "monthly_payment": "Pago mensual:",
+      "points": "Puntos:",
+      "ltv": "Relación préstamo-valor (LTV):"
+    },
+    "paragraph2": "Un punto equivale al uno por ciento del monto de tu préstamo. El pago no incluye impuestos y seguro. El monto real del pago será mayor. Pueden aplicar restricciones de monto máximo de préstamo en algunos estados y condados. Las tasas mostradas son válidas en la fecha de publicación del 18 de abril de 2024.",
+    "footer": {
+      "note": "¹Si no ingresaste montos de impuestos y seguro, una estimación de tus impuestos se basa en el estado seleccionado. Esto no incluye todas las tarifas."
+    }
+  },
+  "howto": {
+    "title": "Cómo usar una calculadora de refinanciamiento",
+    "subtitle": "Nuestra calculadora de refinanciamiento te ayuda a determinar si refinanciar tu hipoteca actual tiene sentido financiero.",
+    "cards": {
+      "enter_value": {
+        "title": "Ingresa el valor actual de la vivienda",
+        "text": "Empieza ingresando el valor de mercado actual de tu vivienda y el saldo restante del préstamo. Esto ayuda a determinar tu capital y opciones de refinanciamiento."
+      },
+      "compare_terms": {
+        "title": "Compara nuevas condiciones de préstamo",
+        "text": "Ingresa la nueva tasa de interés y plazo de préstamo que estás considerando. Tasas más bajas o plazos más cortos pueden generar ahorros significativos."
+      },
+      "closing_costs": {
+        "title": "Considera los costos de cierre",
+        "text": "Ten en cuenta costos de refinanciamiento como tasación, seguro de título y comisión de originación. Estos afectan tu tiempo de punto de equilibrio."
+      },
+      "calculate_savings": {
+        "title": "Calcula tus ahorros",
+        "text": "Observa tus posibles ahorros mensuales y el ahorro total de intereses durante la vida del préstamo. Determina si el refinanciamiento vale la pena para tu situación."
+      }
+    }
+  },
+  "tips": {
+    "title": "Consejos de la calculadora de refinanciamiento",
+    "subtitle": "Aprovecha al máximo tu decisión de refinanciar con estos consejos útiles.",
+    "items": {
+      "when_to_refi": {
+        "title": "Cuándo refinanciar",
+        "text": "Generalmente, refinanciar tiene sentido cuando puedes reducir tu tasa de interés al menos 0.5-1%. También considera refinanciar para cambiar de tasa variable a fija, o para acceder al capital de la vivienda."
+      },
+      "break_even": {
+        "title": "Análisis de punto de equilibrio",
+        "text": "Calcula cuánto tiempo tomará recuperar los costos de cierre a través de los ahorros mensuales. Si planeas quedarte en tu casa más tiempo que el periodo de equilibrio, probablemente tenga sentido refinanciar."
+      },
+      "cash_out": {
+        "title": "Refinanciamiento con retiro de efectivo",
+        "text": "Si tu vivienda ha apreciado significativamente, podrías considerar un refinanciamiento con retiro de efectivo para acceder al capital para mejoras del hogar, consolidación de deudas u otros gastos importantes."
+      }
+    }
+  },
+  "faqs": {
+    "title": "Preguntas frecuentes de la calculadora de refinanciamiento",
+    "subtitle": "¿No ves tu pregunta aquí? Nos encanta ayudar a las personas a entender cómo funciona el refinanciamiento y qué podría ser el tuyo. Háblanos.",
+    "items": [
+      {"q": "¿Cuándo debo considerar refinanciar mi hipoteca?", "a": "Considera refinanciar cuando las tasas de interés bajen significativamente (típicamente 0.5-1% por debajo de tu tasa actual), cuando tu puntaje de crédito haya mejorado, cuando quieras cambiar términos del préstamo o cuando necesites acceder al capital de tu vivienda. También considera refinanciar para eliminar el PMI o cambiar de hipoteca variable a fija."},
+      {"q": "¿Cuánto puedo ahorrar al refinanciar?", "a": "Los ahorros dependen de tu tasa actual, nueva tasa, saldo del préstamo y cuánto tiempo te quedes en la vivienda. Una reducción de 1% en la tasa sobre un préstamo de $300,000 podría ahorrar alrededor de $300/mes. Sin embargo, debes considerar los costos de cierre (típicamente 2-5% del monto del préstamo) y el tiempo de equilibrio para determinar si el refinanciamiento tiene sentido financiero."},
+      {"q": "¿Cuáles son los costos asociados al refinanciamiento?", "a": "Los costos de refinanciamiento generalmente incluyen tarifas de solicitud, tasación, seguro de título, honorarios de abogado y comisión de originación. Los costos totales suelen oscilar entre 2-5% del monto del préstamo. Algunos prestamistas ofrecen refinanciamiento 'sin costo', pero esto usualmente significa tasas más altas o incluir los costos en el saldo del préstamo."},
+      {"q": "¿Qué es el refinanciamiento con retiro de efectivo?", "a": "El refinanciamiento con retiro de efectivo te permite pedir prestado más de lo que debes en tu hipoteca actual y recibir la diferencia en efectivo. Esto te permite acceder al capital de tu vivienda para mejoras del hogar, consolidación de deudas u otros gastos importantes. Sin embargo, aumenta tu saldo de préstamo y pagos mensuales."},
+      {"q": "¿Cuánto tiempo tarda el proceso de refinanciamiento?", "a": "El proceso de refinanciamiento generalmente toma de 30 a 45 días desde la solicitud hasta el cierre. Esto incluye tiempo para el procesamiento de la solicitud, tasación de la vivienda, suscripción y aprobación final. El cronograma puede variar según la eficiencia del prestamista, la complejidad del préstamo y cuán rápido proporciones la documentación requerida."},
+      {"q": "¿Necesito tasar mi vivienda nuevamente?", "a": "Sí, la mayoría de los refinanciamientos requieren una nueva tasación para determinar el valor de mercado actual de tu vivienda. Esto afecta tu relación préstamo-valor y los programas de préstamo disponibles. Algunos prestamistas ofrecen exenciones de tasación para ciertos préstamos de bajo riesgo, pero la mayoría de los prestatarios deben esperar una tasación como parte del proceso."},
+      {"q": "¿Puedo refinanciar si tengo mal crédito?", "a": "Refinanciar con mal crédito es posible pero difícil. Podrías enfrentar tasas de interés más altas, opciones de préstamo limitadas o necesitar más capital en tu vivienda. Considera mejorar tu puntaje de crédito primero, o explora programas gubernamentales como el refinanciamiento simplificado FHA si tienes una hipoteca FHA existente."},
+      {"q": "¿Debo refinanciar de una hipoteca de 30 años a una de 15 años?", "a": "Refinanciar a una hipoteca de 15 años puede ahorrarte dinero significativo en intereses totales y ayudarte a construir capital más rápido. Sin embargo, los pagos mensuales serán más altos. Esto tiene sentido si puedes afrontar cómodamente los pagos más altos y quieres pagar tu vivienda antes o ahorrar en costos totales de intereses."}
+    ]
+  }
+}

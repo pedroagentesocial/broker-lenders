@@ -1,0 +1,61 @@
+import { e as createComponent, f as createAstro, k as renderComponent, r as renderTemplate, m as maybeRenderHead } from '../chunks/astro/server_DtYm6sr6.mjs';
+import { $ as $$Layout } from '../chunks/Layout_CrnZoUeJ.mjs';
+import { $ as $$Contact } from '../chunks/Contact_CQxpJEPD.mjs';
+import { $ as $$WaysHelp } from '../chunks/WaysHelp_A8UvI0oV.mjs';
+import { $ as $$ImportantLegal } from '../chunks/ImportantLegal_D8fhlbac.mjs';
+export { renderers } from '../renderers.mjs';
+
+const $$Astro = createAstro();
+const $$Feedback = createComponent(($$result, $$props, $$slots) => {
+  const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
+  Astro2.self = $$Feedback;
+  return renderTemplate`// Ensure UTF-8 response to render accents correctly
+Astro.response.headers.set('Content-Type', 'text/html; charset=UTF-8');
+${renderComponent($$result, "Layout", $$Layout, { "title": "Feedback - Broker Lenders" }, { "default": ($$result2) => renderTemplate`${maybeRenderHead()}<div class="bg-white py-4"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><nav class="text-sm"><a href="/" class="text-gray-700 hover:text-gray-900">Home</a><span class="mx-2 text-gray-500">/</span><span class="text-gray-700">Feedback</span></nav></div></div><section class="py-16 bg-white"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"><h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+We Value Your Feedback
+</h1><p class="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
+Your opinion matters to us. Help us improve our services by sharing your experience and suggestions.
+</p><div class="flex items-center justify-center gap-4"><a href="#feedback-form" class="bg-black text-white px-8 py-3 rounded-[48px] font-semibold hover:bg-red-600 hover:text-white transition-colors inline-flex items-center justify-center"><svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"></path></svg>
+Share Feedback
+</a><a href="tel:8013070273" class="bg-white text-black border border-black px-8 py-3 rounded-[48px] font-semibold hover:bg-black hover:text-white transition-colors inline-flex items-center justify-center"><svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+Call Us
+</a></div></div></section><section class="py-16 bg-gray-50"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="text-center mb-12"><h2 class="text-3xl font-bold text-gray-900 mb-4">Why Your Feedback Matters</h2><p class="text-lg text-gray-600 max-w-2xl mx-auto">
+Your insights help us serve you better and improve our mortgage services for everyone.
+</p></div><div class="grid grid-cols-1 md:grid-cols-3 gap-8"><div class="text-center p-6 bg-white rounded-lg border border-gray-200"><div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4"><svg class="w-8 h-8 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg></div><h3 class="text-xl font-semibold text-gray-900 mb-2">Improve Services</h3><p class="text-gray-600">
+Your feedback helps us identify areas where we can enhance our mortgage products and services.
+</p></div><div class="text-center p-6 bg-white rounded-lg border border-gray-200"><div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4"><svg class="w-8 h-8 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg></div><h3 class="text-xl font-semibold text-gray-900 mb-2">Faster Response</h3><p class="text-gray-600">
+We use your input to streamline our processes and respond to your needs more quickly.
+</p></div><div class="text-center p-6 bg-white rounded-lg border border-gray-200"><div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4"><svg class="w-8 h-8 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1.01M15 10h1.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div><h3 class="text-xl font-semibold text-gray-900 mb-2">Better Experience</h3><p class="text-gray-600">
+Your suggestions help us create a more personalized and satisfying mortgage experience.
+</p></div></div></div></section><section id="feedback-form" class="py-16 bg-white"><div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"><div class="text-center mb-12"><h2 class="text-3xl font-bold text-gray-900 mb-4">Share Your Experience</h2><p class="text-lg text-gray-600">
+We appreciate you taking the time to provide feedback about your experience with Broker Lenders.
+</p></div><div class="bg-gray-50 rounded-2xl p-8"><form name="feedback" method="POST" data-netlify="true" netlify-honeypot="bot-field"><input type="hidden" name="form-name" value="feedback"><p class="hidden"><label>Don't fill this out if you're human: <input name="bot-field"></label></p><!-- Personal Information --><div class="mb-8"><h3 class="text-lg font-semibold text-gray-900 mb-4">Your Information</h3><div class="grid grid-cols-1 md:grid-cols-2 gap-6"><div><label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">
+First Name *
+</label><input type="text" id="firstName" name="firstName" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent transition-colors"></div><div><label for="lastName" class="block text-sm font-medium text-gray-700 mb-2">
+Last Name *
+</label><input type="text" id="lastName" name="lastName" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent transition-colors"></div></div></div><!-- Experience Rating --><div class="mb-8"><h3 class="text-lg font-semibold text-gray-900 mb-4">Rate Your Experience</h3><div class="flex items-center space-x-4"><label class="flex items-center"><input type="radio" name="rating" value="excellent" class="w-4 h-4 text-black border-gray-300 focus:ring-black"><span class="ml-2 text-gray-700">Excellent</span></label><label class="flex items-center"><input type="radio" name="rating" value="good" class="w-4 h-4 text-black border-gray-300 focus:ring-black"><span class="ml-2 text-gray-700">Good</span></label><label class="flex items-center"><input type="radio" name="rating" value="average" class="w-4 h-4 text-black border-gray-300 focus:ring-black"><span class="ml-2 text-gray-700">Average</span></label><label class="flex items-center"><input type="radio" name="rating" value="poor" class="w-4 h-4 text-black border-gray-300 focus:ring-black"><span class="ml-2 text-gray-700">Poor</span></label></div></div><!-- Service Type --><div class="mb-6"><label for="serviceType" class="block text-sm font-medium text-gray-700 mb-2">
+Which service did you use? *
+</label><select id="serviceType" name="serviceType" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent transition-colors"><option value="">Select a service</option><option value="new-mortgage">New Mortgage</option><option value="refinance">Refinancing</option><option value="rate-quote">Rate Quote</option><option value="consultation">Consultation</option><option value="other">Other</option></select></div><!-- Feedback Type --><div class="mb-6"><label for="feedbackType" class="block text-sm font-medium text-gray-700 mb-2">
+What type of feedback are you providing? *
+</label><select id="feedbackType" name="feedbackType" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent transition-colors"><option value="">Select feedback type</option><option value="compliment">Compliment</option><option value="suggestion">Suggestion</option><option value="complaint">Complaint</option><option value="question">Question</option><option value="other">Other</option></select></div><!-- Detailed Feedback --><div class="mb-6"><label for="feedback" class="block text-sm font-medium text-gray-700 mb-2">
+Please share your detailed feedback *
+</label><textarea id="feedback" name="feedback" rows="6" required placeholder="Please provide specific details about your experience, suggestions, or concerns..." class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent transition-colors resize-vertical"></textarea></div><!-- Contact Permission --><div class="mb-6"><label class="flex items-center"><input type="checkbox" name="contactPermission" class="w-4 h-4 text-black border-gray-300 rounded focus:ring-black"><span class="ml-2 text-sm text-gray-700">
+I would like to be contacted about my feedback
+</span></label></div><div class="text-center"><button type="submit" class="bg-black text-white px-8 py-3 rounded-[48px] font-semibold hover:bg-red-600 hover:text-white transition-colors inline-flex items-center"><svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"></path></svg>
+Submit Feedback
+</button></div></form></div></div></section>${renderComponent($$result2, "Contact", $$Contact, {})}${renderComponent($$result2, "WaysHelp", $$WaysHelp, {})}${renderComponent($$result2, "ImportantLegal", $$ImportantLegal, {})}` })}`;
+}, "/Users/pamplona/Documents/trae_projects/broker-lenders/src/pages/feedback.astro", void 0);
+
+const $$file = "/Users/pamplona/Documents/trae_projects/broker-lenders/src/pages/feedback.astro";
+const $$url = "/feedback";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Feedback,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

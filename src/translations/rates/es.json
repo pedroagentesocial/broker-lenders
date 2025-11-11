@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "title": "Tasas hipotecarias de hoy - Broker Lenders"
+  },
+  "breadcrumb": {
+    "home": "Inicio",
+    "rates": "Tasas"
+  },
+  "hero": {
+    "title": "Las tasas hipotecarias de hoy",
+    "subtitle": "Compara las tasas hipotecarias de hoy de los principales prestamistas. Encuentra la mejor tasa para tu compra o refinanciamiento de vivienda.",
+    "ctaPrimary": "Llama ahora",
+    "ctaSecondary": "Solicita ahora"
+  },
+  "grid": {
+    "states": {
+      "utah": "Utah",
+      "idaho": "Idaho",
+      "nevada": "Nevada",
+      "california": "California",
+      "texas": "Texas",
+      "florida": "Florida",
+      "colorado": "Colorado"
+    },
+    "disclaimer": "Los ejemplos de pago mensual a continuación son para un monto de préstamo de $350k ($1,100k en Jumbo). Los impuestos y seguros no están incluidos en la estimación; el monto del pago real será mayor.",
+    "cards": {
+      "fixed30": {
+        "title": "30 años fija"
+      },
+      "fixed20": {
+        "title": "20 años fija"
+      },
+      "fha30": {
+        "title": "30 años FHA"
+      },
+      "va30": {
+        "title": "30 años VA"
+      },
+      "jumboFixed30": {
+        "title": "30 años Jumbo fija"
+      }
+    },
+    "labels": {
+      "rate": "Tasa",
+      "monthlyPayment": "Pago mensual",
+      "apr": "APR",
+      "points": "Puntos"
+    },
+    "cta": "Explorar esta tasa",
+    "personalized": {
+      "title": "¿Necesitas recomendaciones de tasas personalizadas?",
+      "subtitle": "Habla con nuestros expertos hipotecarios",
+      "description": "Llámanos para recibir asesoría personalizada y encontrar la mejor opción para ti.",
+      "cta": "Llama ahora"
+    },
+    "footer": {
+      "legal": "Ver divulgaciones legales",
+      "timestampPrefix": "Las tasas están actualizadas al"
+    }
+  }
+  ,
+  "modal": {
+    "title": "Divulgaciones legales",
+    "p1": "Cada situación es diferente. Estas cifras son solo para fines de estimación y pueden no reflejar los términos exactos de su préstamo. Esto no constituye un compromiso de préstamo.",
+    "p2Strong": "Préstamo fijo a 30 años:",
+    "p2Rest": " El pago asume una relación préstamo-valor (LTV) de 80.00%.",
+    "p3Strong": "Préstamo fijo a 20 años:",
+    "p3Rest": " El pago asume una relación préstamo-valor (LTV) de 80.00%.",
+    "p4Strong": "Préstamo FHA fijo a 30 años:",
+    "p4Rest": " El pago asume una relación préstamo-valor (LTV) de 80.00%.",
+    "p5": "El pago incluye una prima de seguro hipotecario inicial única del 1.75% del monto base del préstamo y una prima de seguro hipotecario mensual (MIP) calculada al 0.5% del monto base del préstamo. Para hipotecas con una relación préstamo-valor (LTV) de 80.00%, el MIP mensual del 0.5% se pagará durante los primeros 11 años del plazo hipotecario. Posteriormente, el pago mensual del préstamo consistirá en pagos mensuales iguales de capital e interés hasta el final del préstamo.",
+    "p6Strong": "Préstamo Jumbo fijo a 30 años:",
+    "p6Rest": " El pago asume una relación préstamo-valor (LTV) de 70.00%.",
+    "p7Strong": "Préstamo VA fijo a 30 años:",
+    "p7Rest": " El pago asume una relación préstamo-valor (LTV) de 80.00%.",
+    "p8": "Los préstamos VA no requieren PMI. El préstamo VA es un beneficio del servicio militar y solo se ofrece a veteranos, cónyuges sobrevivientes y militares en servicio activo.",
+    "assumptionsTitle": "Supuestos",
+    "assumptionsIntro": "Para todas las tasas mostradas, salvo que se indique lo contrario, asumimos:",
+    "assumptions": [
+      "Está comprando una casa unifamiliar que es su residencia principal.",
+      "Los costos de cierre se pagarán por adelantado, no se agregarán al préstamo.",
+      "Su relación deuda-ingresos es inferior al 43%.",
+      "Su puntaje de crédito es 740.",
+      "Tendrá una cuenta de depósito en garantía para el pago de impuestos y seguros.",
+      "Un punto equivale al uno por ciento del monto del préstamo."
+    ]
+  },
+  "faqs": {
+    "title": "Preguntas frecuentes sobre tasas hipotecarias",
+    "intro": "¿No ves tu pregunta aquí? Nos encanta ayudar a las personas a entender cómo funcionan las tasas y cuál podría ser la tuya. Solo háblanos.",
+    "items": {
+      "q1": {
+        "title": "¿Qué es una tasa hipotecaria?",
+        "body": "Una tasa hipotecaria es el interés que se cobra sobre un préstamo hipotecario. Es el costo que pagas cada año por pedir dinero prestado para comprar tu casa, expresado como un porcentaje del monto del préstamo."
+      },
+      "q2": {
+        "title": "¿Cómo funcionan las tasas hipotecarias?",
+        "body": "Las tasas hipotecarias determinan cuánto interés pagarás por tu préstamo de vivienda. Una tasa más baja significa pagos mensuales más bajos y menos interés pagado durante la vida del préstamo. Las tasas pueden ser fijas (se mantienen iguales) o ajustables (cambian con el tiempo)."
+      },
+      "q3": {
+        "title": "¿Qué factores determinan las tasas hipotecarias?",
+        "body": "Varios factores afectan las tasas hipotecarias, incluyendo tu puntaje de crédito, el monto del pago inicial, el plazo del préstamo, la relación deuda-ingresos, el historial laboral y las condiciones económicas actuales como la inflación y las políticas de la Reserva Federal."
+      },
+      "q4": {
+        "title": "¿Cómo obtengo la mejor tasa hipotecaria?",
+        "body": "Para obtener la mejor tasa, mejora tu puntaje de crédito, ahorra para un pago inicial más grande, compara con varios prestamistas, considera plazos de préstamo más cortos y obtén una preaprobación para mostrar que eres un comprador serio."
+      },
+      "q5": {
+        "title": "¿Qué es un bloqueo de tasa hipotecaria y debería hacerlo?",
+        "body": "Un bloqueo de tasa garantiza tu tasa de interés por un período específico (generalmente 30–60 días) mientras completas la compra de tu vivienda. Te protege de aumentos en las tasas, pero no te beneficia si las tasas bajan. Generalmente se recomienda en entornos de tasas en aumento."
+      },
+      "q6": {
+        "title": "¿Cuál es la diferencia entre tasa de interés y APR?",
+        "body": "La tasa de interés es el costo de pedir dinero prestado, mientras que el APR (Tasa de Porcentaje Anual) incluye la tasa de interés más otros costos del préstamo como cargos de originación, puntos de descuento y seguro hipotecario, brindándote el costo real del préstamo."
+      },
+      "q7": {
+        "title": "¿Qué son los puntos hipotecarios?",
+        "body": "Los puntos hipotecarios son tarifas que se pagan por adelantado para reducir tu tasa de interés. Un punto generalmente cuesta el 1% de tu monto de préstamo y reduce tu tasa en aproximadamente 0.25%. Los puntos tienen sentido si planeas quedarte en la casa el tiempo suficiente para recuperar el costo inicial."
+      },
+      "q8": {
+        "title": "¿Con qué frecuencia cambian las tasas hipotecarias?",
+        "body": "Las tasas hipotecarias pueden cambiar diariamente o incluso varias veces al día según factores económicos, movimientos del mercado de bonos y políticas de los prestamistas. Las tasas son más volátiles durante periodos de incertidumbre económica o anuncios de políticas importantes."
+      }
+    }
+  }
+}

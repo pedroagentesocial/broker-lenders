@@ -1,0 +1,40 @@
+{
+  "title": "Préstamo VA - Broker Lenders",
+  "breadcrumb": {
+    "home": "Inicio",
+    "loanOptions": "Opciones de préstamo",
+    "vaLoan": "Préstamo VA"
+  },
+  "hero": {
+    "title": "Préstamo VA",
+    "subtitle": "Beneficios exclusivos para miembros militares, veteranos y cónyuges elegibles sin pago inicial requerido y tasas competitivas.",
+    "getStarted": "Comenzar"
+  },
+  "whyChoose": {
+    "title": "¿Por qué elegir Broker Lenders para su préstamo VA?",
+    "vaLoanSpecialists": {
+      "title": "Especialistas en préstamos VA",
+      "description": "Nuestro equipo entiende los beneficios militares y los requisitos de VA para maximizar sus ventajas."
+    },
+    "zeroDownPayment": {
+      "title": "Experiencia en pago inicial cero",
+      "description": "Le ayudamos a aprovechar al máximo su beneficio de VA sin pago inicial requerido."
+    },
+    "competitiveVARates": {
+      "title": "Tasas competitivas de VA",
+      "description": "Acceso a múltiples prestamistas asegurando que obtenga las mejores tasas de préstamo VA disponibles."
+    },
+    "getStarted": "Comenzar"
+  },
+  "answers": {
+    "title": "Respuestas cuando las necesita.",
+    "subtitle": "Personas reales cuando importa.",
+    "description": "Hable con un especialista en préstamos VA sobre elegibilidad, beneficios y cómo maximizar sus ventajas militares.",
+    "getStarted": "Comenzar"
+  },
+  "finalCTA": {
+    "title": "Honre su servicio con los beneficios que merece",
+    "getStarted": "Comenzar",
+    "callButton": "Llamar (801) 307-0273"
+  }
+}

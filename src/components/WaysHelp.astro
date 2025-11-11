@@ -2,17 +2,24 @@
 import calculatorIcon from "../assets/icons/calculator.png";
 import dolarIcon from "../assets/icons/dolar.png";
 import ratesIcon from "../assets/icons/rates.png";
+import enDict from "../translations/ways-help/en.json";
+import esDict from "../translations/ways-help/es.json";
+
+const langParam = (Astro.url.searchParams.get('lang') || 'en').toLowerCase();
+const lang = ['en', 'es'].includes(langParam) ? langParam : 'en';
+const dict = lang === 'es' ? esDict : enDict;
+console.log('[i18n][ways-help][SSR] resolve', { href: Astro.url.href, lang });
 ---
 
 <!-- More ways we can help -->
 <section class="py-18 bg-white">
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 		<div class="text-center mb-12">
-			<h2 class="text-3xl font-bold text-gray-900 mb-4">More ways we can help</h2>
+			<h2 id="wayshelp-title" class="text-3xl font-bold text-gray-900 mb-4">{dict.title}</h2>
 		</div>
 		<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 			<!-- Card 1 -->
-			<a href="/calculators/refinance-calculator" class="text-center bg-blue-600/10 text-gray-900 p-8 rounded-xl transition-all hover:bg-blue-600/30 block">
+			<a id="wayshelp-card1-link" href={`/calculators/refinance-calculator?lang=${lang}`} class="text-center bg-blue-600/10 text-gray-900 p-8 rounded-xl transition-all hover:bg-blue-600/30 block">
 				<div class="w-16 h-16 flex items-center justify-center mx-auto mb-4">
 					<div
 						class="w-12 h-12 bg-blue-600"
@@ -20,11 +27,11 @@ import ratesIcon from "../assets/icons/rates.png";
 						aria-label="Calculator icon"
 					></div>
 				</div>
-				<h3 class="text-lg font-semibold">Payment calculator</h3>
+				<h3 id="wayshelp-card1-title" class="text-lg font-semibold">{dict.cards.paymentCalculator}</h3>
 			</a>
 
 			<!-- Card 2 -->
-			<a href="/calculators/mortgage-calculator" class="text-center bg-green-600/10 text-gray-900 p-8 rounded-xl transition-all hover:bg-green-600/30 block">
+			<a id="wayshelp-card2-link" href={`/calculators/mortgage-calculator?lang=${lang}`} class="text-center bg-green-600/10 text-gray-900 p-8 rounded-xl transition-all hover:bg-green-600/30 block">
 				<div class="w-16 h-16 flex items-center justify-center mx-auto mb-4">
 					<div
 						class="w-12 h-12 bg-green-600"
@@ -32,11 +39,11 @@ import ratesIcon from "../assets/icons/rates.png";
 						aria-label="Dollar icon"
 					></div>
 				</div>
-				<h3 class="text-lg font-semibold">Calculate your buying power</h3>
+				<h3 id="wayshelp-card2-title" class="text-lg font-semibold">{dict.cards.buyingPower}</h3>
 			</a>
 
 			<!-- Card 3 -->
-			<a href="/rates" class="text-center bg-purple-600/10 text-gray-900 p-8 rounded-xl transition-all hover:bg-purple-600/30 block">
+			<a id="wayshelp-card3-link" href={`/rates?lang=${lang}`} class="text-center bg-purple-600/10 text-gray-900 p-8 rounded-xl transition-all hover:bg-purple-600/30 block">
 				<div class="w-16 h-16 flex items-center justify-center mx-auto mb-4">
 					<div
 						class="w-12 h-12 bg-purple-600"
@@ -44,8 +51,57 @@ import ratesIcon from "../assets/icons/rates.png";
 						aria-label="Rates icon"
 					></div>
 				</div>
-				<h3 class="text-lg font-semibold">See the latest rates</h3>
+				<h3 id="wayshelp-card3-title" class="text-lg font-semibold">{dict.cards.latestRates}</h3>
 			</a>
 		</div>
 	</div>
 </section>
+<script type="module">
+import enDict from '/src/translations/ways-help/en.json';
+import esDict from '/src/translations/ways-help/es.json';
+
+(() => {
+  const translations = { en: enDict, es: esDict };
+  const getInitialLang = () => {
+    const urlLang = new URLSearchParams(window.location.search).get('lang');
+    const stored = localStorage.getItem('lang');
+    const raw = (urlLang || stored || 'en').toLowerCase();
+    return raw === 'es' ? 'es' : 'en';
+  };
+  const setText = (id, value) => {
+    const el = document.getElementById(id);
+    if (el && typeof value === 'string') el.textContent = value;
+  };
+  const preserveLangOnLinks = (lang) => {
+    const l1 = document.getElementById('wayshelp-card1-link');
+    const l2 = document.getElementById('wayshelp-card2-link');
+    const l3 = document.getElementById('wayshelp-card3-link');
+    if (l1) l1.setAttribute('href', `/calculators/refinance-calculator?lang=${lang}`);
+    if (l2) l2.setAttribute('href', `/calculators/mortgage-calculator?lang=${lang}`);
+    if (l3) l3.setAttribute('href', `/rates?lang=${lang}`);
+  };
+  const applyTranslations = (lang) => {
+    const dict = translations[lang] || translations.en;
+    setText('wayshelp-title', dict.title);
+    setText('wayshelp-card1-title', dict.cards?.paymentCalculator);
+    setText('wayshelp-card2-title', dict.cards?.buyingPower);
+    setText('wayshelp-card3-title', dict.cards?.latestRates);
+    preserveLangOnLinks(lang);
+  };
+  // Init
+  applyTranslations(getInitialLang());
+  // React to language menu clicks (Header intercepts and updates URL/localStorage)
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest('a[href*="?lang="]');
+    if (!a) return;
+    let href;
+    try { href = new URL(a.href, window.location.origin); } catch { return; }
+    const lang = href.searchParams.get('lang');
+    if (lang) applyTranslations(lang);
+  });
+  // Also respond to storage events (Header sets lang)
+  window.addEventListener('storage', (ev) => {
+    if (ev.key === 'lang' && ev.newValue) applyTranslations(ev.newValue);
+  });
+})();
+</script>

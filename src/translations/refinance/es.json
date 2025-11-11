@@ -1,0 +1,48 @@
+{
+  "meta": {
+    "title": "Refinancia tu hogar - Broker Lenders"
+  },
+  "hero": {
+    "title": "Refinancia hoy y desbloquea nuevas posibilidades",
+    "subtitle": "Baja tu tasa, reduce tu pago o accede al capital de tu vivienda. Te ayudaremos a encontrar la opción de refinanciamiento adecuada para tus metas.",
+    "ctaPrimary": "Solicitar un refinanciamiento",
+    "ctaSecondary": "Ver mis opciones"
+  },
+  "newStart": {
+    "title": "Tu nuevo comienzo empieza ahora.",
+    "card1": {
+      "title": "Empieza ahora",
+      "description": "Accede al capital de tu vivienda para mejoras en el hogar, consolidación de deudas u otras metas financieras."
+    },
+    "card2": {
+      "title": "Empieza a ahorrar",
+      "description": "Reduce tu pago mensual de hipoteca asegurando una tasa de interés más baja o extendiendo el plazo de tu préstamo."
+    },
+    "card3": {
+      "title": "Encuentra mi presupuesto de vivienda",
+      "description": "Usa nuestra calculadora para ver cuánto podrías ahorrar con un refinanciamiento basado en las tasas actuales."
+    }
+  },
+  "steps": {
+    "title": "Empieza inteligentemente, compra con confianza",
+    "step1": {
+      "title": "Empieza tu refinanciamiento en 5 min",
+      "description": "Obtén una precalificación con una verificación de crédito suave que no afectará tu puntaje."
+    },
+    "step2": {
+      "title": "Solicita en menos de 10 minutos",
+      "description": "Completa tu solicitud completa en línea con nuestro proceso optimizado."
+    },
+    "step3": {
+      "title": "Obtén aprobación y cierra rápido",
+      "description": "Nuestro equipo trabaja rápidamente para aprobarte y cerrar en tan solo 14 días."
+    },
+    "cta": "Estoy listo"
+  },
+  "options": {
+    "title": "Más opciones de refinanciamiento que nunca",
+    "subtitle": "Ya sea que quieras bajar tu tasa, reducir tu pago o acceder al capital de tu hogar, tenemos soluciones de refinanciamiento adaptadas a tus necesidades.",
+    "ctaPrimary": "Empezar",
+    "ctaSecondary": "(801) 307-0273"
+  }
+}

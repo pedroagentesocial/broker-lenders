@@ -1,0 +1,39 @@
+{
+  "title": "Préstamo para Compradores de Casa por Primera Vez - Broker Lenders",
+  "breadcrumb": {
+    "home": "Inicio",
+    "loanOptions": "Opciones de préstamo",
+    "firstTimeLoan": "Préstamo para compradores por primera vez"
+  },
+  "hero": {
+    "title": "Préstamo para compradores de casa por primera vez",
+    "subtitle": "Haga su primera compra de vivienda más fácil con orientación personalizada y opciones flexibles.",
+    "getStarted": "Comenzar"
+  },
+  "whyChoose": {
+    "title": "¿Por qué elegir Broker Lenders para compradores por primera vez?",
+    "lowDownPayment": {
+      "title": "Opciones de pago inicial bajo",
+      "description": "Acceda a programas diseñados para compradores por primera vez con costos iniciales mínimos."
+    },
+    "personalizedGuidance": {
+      "title": "Orientación personalizada",
+      "description": "Obtenga soporte práctico durante la pre-aprobación, presupuesto y cierre."
+    },
+    "competitiveRates": {
+      "title": "Tarifas competitivas",
+      "description": "Asegure pagos mensuales asequibles con opciones transparentes."
+    }
+  },
+  "answersSection": {
+    "title": "Respuestas cuando las necesite.",
+    "subtitle": "Personas reales cuando importa.",
+    "description": "Le ayudaremos a navegar la pre-aprobación, opciones de pago inicial y pasos de cierre con confianza.",
+    "getStarted": "Comenzar"
+  },
+  "finalCTA": {
+    "title": "Comience su viaje como comprador de vivienda por primera vez",
+    "getStarted": "Comenzar",
+    "callNow": "Llamar (801) 307-0273"
+  }
+}

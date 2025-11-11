@@ -3,17 +3,27 @@
 import houseIcon from "../assets/icons/house.png";
 import dolarIcon from "../assets/icons/dolar.png";
 import formIcon from "../assets/icons/form.png";
+import enDict from "../translations/next-move/en.json";
+import esDict from "../translations/next-move/es.json";
+
+export interface Props { lang?: string }
+// Prefer prop lang, fallback to request URL for SSR reliability
+const { lang: propLang } = Astro.props as Props;
+const rawLang = ((propLang || new URL(Astro.request.url).searchParams.get('lang') || 'en')).toLowerCase();
+const lang = ['en', 'es'].includes(rawLang) ? rawLang : 'en';
+const dict = lang === 'es' ? esDict : enDict;
+console.log('[i18n][next-move][SSR] resolve', { href: Astro.request.url, lang });
 ---
 
 <section class="py-16 bg-white">
   <div class="w-full mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-12">
-      <h2 class="text-3xl font-bold text-gray-900 mb-4">What's your next move?</h2>
+      <h2 id="nextmove-title" class="text-3xl font-bold text-gray-900 mb-4" data-i18n="next_move.title">{dict.title}</h2>
     </div>
     
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       <!-- Buy smart. Save more. -->
-      <a href="/buy" class="bg-red-500/10 p-6 rounded-xl text-center hover:bg-red-500/40 transition-colors block">
+      <a href={`/buy?lang=${lang}`} class="bg-red-500/10 p-6 rounded-xl text-center hover:bg-red-500/40 transition-colors block">
         <div class="w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4">
           <div
             class="w-8 h-8 bg-red-600"
@@ -21,21 +31,21 @@ import formIcon from "../assets/icons/form.png";
             aria-label="House icon"
           ></div>
         </div>
-        <h3 class="font-semibold text-gray-900">Buy smart. Save more.</h3>
+        <h3 id="nextmove-buy" class="font-semibold text-gray-900" data-i18n="next_move.buy_smart">{dict.buy_smart}</h3>
       </a>
       
       <!-- Refinance made simple. -->
-      <a href="/refinance" class="bg-blue-500/10 p-6 rounded-xl text-center hover:bg-blue-500/40 transition-colors block">
+      <a href={`/refinance?lang=${lang}`} class="bg-blue-500/10 p-6 rounded-xl text-center hover:bg-blue-500/40 transition-colors block">
         <div class="w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4">
           <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
           </svg>
         </div>
-        <h3 class="font-semibold text-gray-900">Refinance made simple.</h3>
+        <h3 id="nextmove-refi" class="font-semibold text-gray-900" data-i18n="next_move.refinance_simple">{dict.refinance_simple}</h3>
       </a>
       
       <!-- Transform equity into opportunity. -->
-      <a href="/calculators" class="bg-green-500/10 p-6 rounded-xl text-center hover:bg-green-500/40 transition-colors block">
+      <a href={`/calculators?lang=${lang}`} class="bg-green-500/10 p-6 rounded-xl text-center hover:bg-green-500/40 transition-colors block">
         <div class="w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4">
           <div
             class="w-8 h-8 bg-green-600"
@@ -43,11 +53,11 @@ import formIcon from "../assets/icons/form.png";
             aria-label="Dollar icon"
           ></div>
         </div>
-        <h3 class="font-semibold text-gray-900">Transform equity into opportunity.</h3>
+        <h3 id="nextmove-equity" class="font-semibold text-gray-900" data-i18n="next_move.transform_equity">{dict.transform_equity}</h3>
       </a>
       
       <!-- Explore your VA loan benefits. -->
-      <a href="/loan-options" class="bg-purple-500/10 p-6 rounded-xl text-center hover:bg-purple-500/40 transition-colors block">
+      <a href={`/loan-options?lang=${lang}`} class="bg-purple-500/10 p-6 rounded-xl text-center hover:bg-purple-500/40 transition-colors block">
         <div class="w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4">
           <div
             class="w-8 h-8 bg-purple-600"
@@ -55,8 +65,54 @@ import formIcon from "../assets/icons/form.png";
             aria-label="Form icon"
           ></div>
         </div>
-        <h3 class="font-semibold text-gray-900">Explore your VA loan benefits.</h3>
+        <h3 id="nextmove-va" class="font-semibold text-gray-900" data-i18n="next_move.explore_va">{dict.explore_va}</h3>
       </a>
     </div>
   </div>
 </section>
+
+<script type="module">
+import enDict from '/src/translations/next-move/en.json';
+import esDict from '/src/translations/next-move/es.json';
+(() => {
+  const translations = { en: enDict, es: esDict };
+  const getInitialLang = () => {
+    const urlLang = new URLSearchParams(window.location.search).get('lang');
+    const stored = localStorage.getItem('lang');
+    const raw = (urlLang || stored || 'en').toLowerCase();
+    return raw === 'es' ? 'es' : 'en';
+  };
+  const setText = (id, value) => {
+    const el = document.getElementById(id);
+    if (el && typeof value === 'string') el.textContent = value;
+  };
+  const preserveLangOnLocalLinks = (lang) => {
+    const container = document.getElementById('nextmove-title')?.closest('section');
+    const localLinks = container ? container.querySelectorAll('a[href^="/"]') : [];
+    localLinks.forEach(a => {
+      try {
+        const href = new URL(a.href, window.location.origin);
+        if (href.origin === window.location.origin) {
+          href.searchParams.set('lang', lang);
+          a.href = href.pathname + href.search + href.hash;
+        }
+      } catch {}
+    });
+  };
+  const applyTranslations = (lang) => {
+    const dict = translations[lang] || translations.en;
+    setText('nextmove-title', dict.title);
+    setText('nextmove-buy', dict.buy_smart);
+    setText('nextmove-refi', dict.refinance_simple);
+    setText('nextmove-equity', dict.transform_equity);
+    setText('nextmove-va', dict.explore_va);
+    preserveLangOnLocalLinks(lang);
+  };
+  // Init
+  applyTranslations(getInitialLang());
+  // Also respond to storage events (Header sets lang)
+  window.addEventListener('storage', (ev) => {
+    if (ev.key === 'lang' && ev.newValue) applyTranslations(ev.newValue);
+  });
+})();
+</script>

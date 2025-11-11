@@ -1,0 +1,39 @@
+{
+  "title": "Préstamo FHA - Broker Lenders",
+  "breadcrumb": {
+    "home": "Inicio",
+    "loanOptions": "Opciones de préstamo",
+    "fhaLoan": "Préstamo FHA"
+  },
+  "hero": {
+    "title": "Préstamo FHA",
+    "subtitle": "Los préstamos FHA hacen posible la propiedad de vivienda con pagos iniciales más bajos y requisitos de crédito flexibles. Obtenga aprobación con tan solo 3.5% de pago inicial.",
+    "getStarted": "Comenzar"
+  },
+  "whyChoose": {
+    "title": "¿Por qué elegir Broker Lenders para su préstamo FHA?",
+    "expertGuidance": {
+      "title": "Orientación experta en préstamos FHA",
+      "description": "Nuestros especialistas conocen los requisitos FHA a la perfección para obtener su aprobación más rápidamente."
+    },
+    "streamlinedProcess": {
+      "title": "Proceso de solicitud simplificado",
+      "description": "Enfoque digital primero con soporte personal en cada paso del camino."
+    },
+    "competitiveRates": {
+      "title": "Tarifas y términos competitivos",
+      "description": "Acceso a múltiples prestamistas asegurando que obtenga los mejores términos de préstamo FHA disponibles."
+    }
+  },
+  "answersSection": {
+    "title": "Respuestas cuando las necesite.",
+    "subtitle": "Personas reales cuando importa.",
+    "description": "Hable con un asesor de vivienda sobre requisitos FHA, elegibilidad, crédito y más.",
+    "getStarted": "Comenzar"
+  },
+  "finalCTA": {
+    "title": "Logre sus metas de propiedad de vivienda con un préstamo FHA",
+    "getStarted": "Comenzar",
+    "callNow": "Llamar (801) 307-0273"
+  }
+}

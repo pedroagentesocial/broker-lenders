@@ -1,0 +1,40 @@
+{
+  "title": "Jumbo Loan - Broker Lenders",
+  "breadcrumb": {
+    "home": "Home",
+    "loanOptions": "Loan options",
+    "jumboLoan": "Jumbo loan"
+  },
+  "hero": {
+    "title": "Jumbo loan",
+    "subtitle": "Finance high-value properties with competitive rates and flexible terms.",
+    "getStarted": "Get started"
+  },
+  "whyChoose": {
+    "title": "Why choose Broker Lenders for jumbo loans?",
+    "highLoanAmounts": {
+      "title": "High loan amounts",
+      "description": "Finance properties above conforming loan limits with confidence."
+    },
+    "flexibleTerms": {
+      "title": "Flexible terms and options",
+      "description": "Choose from fixed or adjustable rates to fit your financial plans."
+    },
+    "personalizedSupport": {
+      "title": "Personalized support",
+      "description": "Work with specialists experienced in high-value transactions."
+    },
+    "getStarted": "Get started"
+  },
+  "answersSection": {
+    "title": "Answers when you need them.",
+    "subtitle": "Real people when it matters.",
+    "description": "Get assistance with complex eligibility, jumbo underwriting, and rate strategies.",
+    "getStarted": "Get started"
+  },
+  "finalCTA": {
+    "title": "Move forward with a Jumbo loan",
+    "getStarted": "Get started",
+    "callNow": "Call (801) 307-0273"
+  }
+}

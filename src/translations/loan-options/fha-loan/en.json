@@ -1,0 +1,39 @@
+{
+  "title": "FHA Loan - Broker Lenders",
+  "breadcrumb": {
+    "home": "Home",
+    "loanOptions": "Loan options",
+    "fhaLoan": "FHA loan"
+  },
+  "hero": {
+    "title": "FHA loan",
+    "subtitle": "FHA loans make homeownership possible with lower down payments and flexible credit requirements. Get approved with as little as 3.5% down.",
+    "getStarted": "Get started"
+  },
+  "whyChoose": {
+    "title": "Why choose Broker Lenders for your FHA loan?",
+    "expertGuidance": {
+      "title": "Expert FHA loan guidance",
+      "description": "Our specialists know FHA requirements inside and out to get you approved faster."
+    },
+    "streamlinedProcess": {
+      "title": "Streamlined application process",
+      "description": "Digital-first approach with personal support every step of the way."
+    },
+    "competitiveRates": {
+      "title": "Competitive rates & terms",
+      "description": "Access to multiple lenders ensuring you get the best FHA loan terms available."
+    }
+  },
+  "answersSection": {
+    "title": "Answers when you need them.",
+    "subtitle": "Real people when it matters.",
+    "description": "Talk to a home advisor about FHA requirements, eligibility, credit and more.",
+    "getStarted": "Get started"
+  },
+  "finalCTA": {
+    "title": "Achieve your homeownership goals with an FHA loan",
+    "getStarted": "Get started",
+    "callNow": "Call (801) 307-0273"
+  }
+}

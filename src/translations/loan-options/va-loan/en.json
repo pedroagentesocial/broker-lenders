@@ -1,0 +1,40 @@
+{
+  "title": "VA Loan - Broker Lenders",
+  "breadcrumb": {
+    "home": "Home",
+    "loanOptions": "Loan options",
+    "vaLoan": "VA loan"
+  },
+  "hero": {
+    "title": "VA loan",
+    "subtitle": "Exclusive benefits for military members, veterans, and eligible spouses with no down payment required and competitive rates.",
+    "getStarted": "Get started"
+  },
+  "whyChoose": {
+    "title": "Why choose Broker Lenders for your VA loan?",
+    "vaLoanSpecialists": {
+      "title": "VA loan specialists",
+      "description": "Our team understands military benefits and VA requirements to maximize your advantages."
+    },
+    "zeroDownPayment": {
+      "title": "Zero down payment expertise",
+      "description": "We help you take full advantage of your VA benefit with no down payment required."
+    },
+    "competitiveVARates": {
+      "title": "Competitive VA rates",
+      "description": "Access to multiple lenders ensuring you get the best VA loan rates available."
+    },
+    "getStarted": "Get started"
+  },
+  "answers": {
+    "title": "Answers when you need them.",
+    "subtitle": "Real people when it matters.",
+    "description": "Talk to a VA loan specialist about eligibility, benefits, and how to maximize your military advantages.",
+    "getStarted": "Get started"
+  },
+  "finalCTA": {
+    "title": "Honor your service with the benefits you deserve",
+    "getStarted": "Get started",
+    "callButton": "Call (801) 307-0273"
+  }
+}

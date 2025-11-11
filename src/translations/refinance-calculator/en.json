@@ -1,0 +1,145 @@
+{
+  "page_title": "Refinance Calculator - Broker Lenders®",
+  "breadcrumb": {
+    "home": "Home",
+    "calculators": "Calculators",
+    "current": "Refinance Calculator"
+  },
+  "hero": {
+    "title": "Refinance calculator",
+    "subtitle": "See if refinancing makes sense for you and calculate potential savings. Compare your current mortgage with new loan options to find the best deal."
+  },
+  "form": {
+    "labels": {
+      "current_mortgage_balance": "Current mortgage balance",
+      "current_monthly_payment": "Current monthly payment",
+      "current_home_value": "Current home value",
+      "credit_profile": "Credit profile",
+      "zip_code": "ZIP code"
+    },
+    "tooltips": {
+      "current_mortgage_balance": "Example: $250,000 - Enter the remaining balance on your current mortgage",
+      "current_monthly_payment": "Example: $1,850 - Enter your current monthly mortgage payment (principal + interest)",
+      "current_home_value": "Example: $400,000 - Enter the current estimated value of your home"
+    },
+    "options": {
+      "select_range": "Select Range",
+      "less_than_580": "Less than 580",
+      "580_619": "580-619",
+      "620_659": "620-659",
+      "660_719": "660-719",
+      "720_plus": "720+"
+    },
+    "placeholders": {
+      "zip_value": "Value"
+    },
+    "buttons": {
+      "calculate": "Calculate",
+      "legal_disclosures": "Legal disclosures"
+    }
+  },
+  "results": {
+    "heading": "You could save",
+    "each_month": "each month",
+    "no_savings": "No savings available"
+  },
+  "cta": {
+    "apply_now": "Apply now →"
+  },
+  "modal": {
+    "title": "Legal Disclosures",
+    "paragraph1": "The Broker Lenders refinance calculator is for estimation purposes only. Results do not reflect all loan programs and are subject to individual program loan limits. Qualification, rates and payments will vary based on timing and individual circumstances. This is not a commitment to lend.",
+    "payment_example_title": "Payment Example",
+    "payment_example_intro": "Here's a payment example based on an average home price and the most common loan type:",
+    "labels": {
+      "loan_amount": "Loan amount:",
+      "loan_type": "Loan type:",
+      "interest_apr": "Interest rate/APR:",
+      "monthly_payment": "Monthly payment:",
+      "points": "Points:",
+      "ltv": "Loan-to-value (LTV):"
+    },
+    "paragraph2": "One point is equal to one percent of your loan amount. Payment does not include taxes and insurance. The actual payment amount will be greater. Some state and county maximum loan amount restrictions may apply. Rates shown are valid on publication date of April 18, 2024.",
+    "footer": {
+      "note": "¹If you didn't enter taxes and insurance amounts, an estimate of your taxes is based on the state selected. This does not include all fees."
+    }
+  },
+  "howto": {
+    "title": "How to use a refinance calculator",
+    "subtitle": "Our refinance calculator helps you determine if refinancing your current mortgage makes financial sense.",
+    "cards": {
+      "enter_value": {
+        "title": "Enter Current Home Value",
+        "text": "Start by entering your home's current market value and remaining loan balance. This helps determine your equity and refinancing options."
+      },
+      "compare_terms": {
+        "title": "Compare New Loan Terms",
+        "text": "Enter the new interest rate and loan term you're considering. Lower rates or shorter terms can lead to significant savings."
+      },
+      "closing_costs": {
+        "title": "Factor in Closing Costs",
+        "text": "Consider refinancing costs like appraisal fees, title insurance, and origination fees. These affect your break-even timeline."
+      },
+      "calculate_savings": {
+        "title": "Calculate Your Savings",
+        "text": "See your potential monthly savings and total interest savings over the life of the loan. Determine if refinancing is worth it for your situation."
+      }
+    }
+  },
+  "tips": {
+    "title": "Refinance calculator tips",
+    "subtitle": "Make the most of your refinancing decision with these helpful insights.",
+    "items": {
+      "when_to_refi": {
+        "title": "When to Refinance",
+        "text": "Generally, refinancing makes sense when you can lower your interest rate by at least 0.5-1%. Also consider refinancing to switch from an adjustable to fixed rate, or to access home equity."
+      },
+      "break_even": {
+        "title": "Break-Even Analysis",
+        "text": "Calculate how long it will take to recoup your closing costs through monthly savings. If you plan to stay in your home longer than the break-even period, refinancing likely makes sense."
+      },
+      "cash_out": {
+        "title": "Cash-Out Refinancing",
+        "text": "If your home has appreciated significantly, you might consider cash-out refinancing to access equity for home improvements, debt consolidation, or other major expenses."
+      }
+    }
+  },
+  "faqs": {
+    "title": "Refinance Calculator FAQs",
+    "subtitle": "Don't see your question here? We love helping people understand how refinancing works and what yours could be. Just talk to us.",
+    "items": [
+      {
+        "q": "When should I consider refinancing my mortgage?",
+        "a": "Consider refinancing when interest rates drop significantly (typically 0.5-1% below your current rate), when your credit score has improved, when you want to change loan terms, or when you need to access home equity. Also consider refinancing to remove PMI or switch from an adjustable to fixed-rate mortgage."
+      },
+      {
+        "q": "How much can I save by refinancing?",
+        "a": "Savings depend on your current rate, new rate, loan balance, and how long you stay in the home. A 1% rate reduction on a $300,000 loan could save you about $300/month. However, you must factor in closing costs (typically 2-5% of loan amount) and break-even time to determine if refinancing makes financial sense."
+      },
+      {
+        "q": "What are the costs associated with refinancing?",
+        "a": "Refinancing costs typically include application fees, appraisal fees, title insurance, attorney fees, and origination fees. Total costs usually range from 2-5% of your loan amount. Some lenders offer 'no-cost' refinancing, but this usually means higher interest rates or rolling costs into the loan balance."
+      },
+      {
+        "q": "What is cash-out refinancing?",
+        "a": "Cash-out refinancing allows you to borrow more than you owe on your current mortgage and receive the difference in cash. This lets you access your home's equity for home improvements, debt consolidation, or other major expenses. However, it increases your loan balance and monthly payments."
+      },
+      {
+        "q": "How long does the refinancing process take?",
+        "a": "The refinancing process typically takes 30-45 days from application to closing. This includes time for application processing, home appraisal, underwriting, and final approval. The timeline can vary based on lender efficiency, loan complexity, and how quickly you provide required documentation."
+      },
+      {
+        "q": "Do I need to get my home appraised again?",
+        "a": "Yes, most refinances require a new appraisal to determine your home's current market value. This affects your loan-to-value ratio and available loan programs. Some lenders offer appraisal waivers for certain low-risk loans, but most borrowers should expect an appraisal as part of the process."
+      },
+      {
+        "q": "Can I refinance if I have bad credit?",
+        "a": "Refinancing with bad credit is possible but challenging. You may face higher interest rates, limited loan options, or need more equity in your home. Consider improving your credit score first, or explore government programs like FHA Streamline refinancing if you have an existing FHA loan."
+      },
+      {
+        "q": "Should I refinance from a 30-year to a 15-year mortgage?",
+        "a": "Refinancing to a 15-year mortgage can save you significant money in total interest and help you build equity faster. However, monthly payments will be higher. This makes sense if you can comfortably afford the higher payments and want to pay off your home sooner or save on total interest costs."
+      }
+    ]
+  }
+}

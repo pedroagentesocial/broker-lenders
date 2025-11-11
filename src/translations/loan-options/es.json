@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "title": "Opciones de Préstamo - Broker Lenders"
+  },
+  "breadcrumb": {
+    "home": "Inicio",
+    "loanOptions": "Opciones de Préstamo"
+  },
+  "hero": {
+    "title": "Financiamiento de vivienda que se adapta a tus metas",
+    "subtitle": "Opciones de préstamos personalizadas para compradores por primera vez y refinanciamientos."
+  },
+  "findBestFit": {
+    "title": "Encuentra tu préstamo ideal",
+    "description": "Obtén recomendaciones adaptadas a tu presupuesto, cronograma y objetivos para que puedas avanzar con confianza.",
+    "button": "Ver mis opciones"
+  },
+  "loanOptions": {
+    "title": "Opciones de préstamos de Broker Lenders®, diseñadas para ti",
+    "learnMore": "Aprende más →",
+    "loans": {
+      "fha": {
+        "title": "Préstamos FHA",
+        "description": "Préstamos respaldados por el gobierno con requisitos de pago inicial más bajos y pautas de crédito flexibles."
+      },
+      "va": {
+        "title": "Préstamos VA",
+        "description": "Beneficios exclusivos para miembros militares, veteranos y cónyuges elegibles sin pago inicial requerido."
+      },
+      "usda": {
+        "title": "Préstamos USDA",
+        "description": "Préstamos de desarrollo rural sin pago inicial para propiedades elegibles en áreas calificadas."
+      },
+      "conventional": {
+        "title": "Préstamos convencionales",
+        "description": "Hipotecas tradicionales con tasas competitivas y términos flexibles para prestatarios calificados."
+      },
+      "jumbo": {
+        "title": "Préstamos jumbo",
+        "description": "Financiamiento para casas de lujo y propiedades que exceden los límites de préstamos convencionales."
+      },
+      "firstTime": {
+        "title": "Préstamos para compradores por primera vez",
+        "description": "Programas especiales diseñados para ayudar a compradores por primera vez a lograr la propiedad de vivienda con barreras más bajas."
+      },
+      "investment": {
+        "title": "Préstamos para propiedades de inversión",
+        "description": "Opciones de financiamiento para propiedades de alquiler e inversiones inmobiliarias."
+      },
+      "construction": {
+        "title": "Préstamos de construcción",
+        "description": "Financiamiento a corto plazo para construir la casa de tus sueños desde cero."
+      },
+      "refinance": {
+        "title": "Préstamos de refinanciamiento",
+        "description": "Reduce tu tasa, disminuye tu pago o accede al capital de tu vivienda."
+      }
+    }
+  },
+  "readyToFind": {
+    "title": "¿Listo para encontrar tu préstamo perfecto?",
+    "description": "Nuestros expertos en hipotecas están aquí para ayudarte a entender tus opciones y encontrar el préstamo adecuado para tu situación. Obtén orientación personalizada en cada paso del camino.",
+    "button": "Hablar con un experto"
+  },
+  "expertGuidance": {
+    "title": "Orientación experta para tu viaje de préstamo hipotecario",
+    "steps": {
+      "step1": {
+        "title": "Aplicar en línea",
+        "description": "Comienza tu aplicación en línea y obtén pre-aprobación en minutos."
+      },
+      "step2": {
+        "title": "Conoce tus próximos pasos",
+        "description": "Obtén un mapa claro de qué esperar durante todo el proceso."
+      },
+      "step3": {
+        "title": "Finaliza tu préstamo",
+        "description": "Trabaja con nuestro equipo para finalizar tu préstamo y cerrar en tu hogar."
+      },
+      "step4": {
+        "title": "Verifica si el objetivo",
+        "description": "Celebra tu logro de ser propietario y disfruta de tu nuevo hogar."
+      }
+    }
+  }
+}

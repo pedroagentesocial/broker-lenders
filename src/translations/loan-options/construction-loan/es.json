@@ -1,0 +1,40 @@
+{
+  "title": "Préstamo de Construcción - Broker Lenders",
+  "breadcrumb": {
+    "home": "Inicio",
+    "loanOptions": "Opciones de préstamos",
+    "constructionLoan": "Préstamo de construcción"
+  },
+  "hero": {
+    "title": "Préstamo de construcción",
+    "subtitle": "Construya la casa de sus sueños con opciones de financiamiento de construcción-a-permanente flexibles.",
+    "getStarted": "Comenzar"
+  },
+  "whyChoose": {
+    "title": "¿Por qué elegir Broker Lenders para construcción?",
+    "constructionToPermanent": {
+      "title": "Financiamiento de construcción-a-permanente",
+      "description": "Simplifique su construcción con un préstamo que se convierte después de la finalización."
+    },
+    "flexibleDraw": {
+      "title": "Programas de desembolso flexibles",
+      "description": "Obtenga fondos según sea necesario durante la construcción con supervisión transparente."
+    },
+    "expertGuidance": {
+      "title": "Orientación experta durante toda la construcción",
+      "description": "Trabaje con profesionales que entienden cronogramas, permisos y cierres."
+    },
+    "getStarted": "Comenzar"
+  },
+  "answersSection": {
+    "title": "Respuestas cuando las necesita.",
+    "subtitle": "Personas reales cuando importa.",
+    "description": "Obtenga apoyo con aprobación de constructores, solicitudes de desembolso y financiamiento permanente.",
+    "getStarted": "Comenzar"
+  },
+  "finalCTA": {
+    "title": "Construya con confianza con un Préstamo de Construcción",
+    "getStarted": "Comenzar",
+    "callNow": "Llamar (801) 307-0273"
+  }
+}

@@ -1,0 +1,89 @@
+import { e as createComponent, k as renderComponent, r as renderTemplate, m as maybeRenderHead, l as renderScript } from '../../chunks/astro/server_DtYm6sr6.mjs';
+import { $ as $$Layout } from '../../chunks/Layout_CrnZoUeJ.mjs';
+export { renderers } from '../../renderers.mjs';
+
+const $$TermsOfUse = createComponent(($$result, $$props, $$slots) => {
+  return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "title": "Terms of Use - Broker Lenders" }, { "default": ($$result2) => renderTemplate` ${maybeRenderHead()}<div class="min-h-screen bg-white"> <!-- Breadcrumb Section --> <div class="bg-white border-b border-gray-200"> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6"> <nav class="flex" aria-label="Breadcrumb"> <ol class="flex items-center space-x-2"> <li> <a href="/" class="text-gray-500 hover:text-gray-700 transition-colors">Home</a> </li> <li class="flex items-center"> <span class="text-gray-400 mx-2">/</span> <a href="/legal/terms-of-use" class="text-gray-500 hover:text-gray-700 transition-colors">Legal</a> </li> <li class="flex items-center"> <span class="text-gray-400 mx-2">/</span> <span class="text-gray-900 font-medium">Terms of Use</span> </li> </ol> </nav> </div> </div> <!-- Main Content --> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8"> <div class="grid grid-cols-1 lg:grid-cols-4 gap-8"> <!-- Left Content Area --> <div class="lg:col-span-3 lg:order-1"> <div class="bg-white p-8 space-y-8"> <!-- Page Title and Last Update --> <div class="border-b border-gray-200 pb-6 mb-8"> <h1 class="text-3xl font-bold text-gray-900 mb-2">Broker Lenders Terms of Use</h1> <p class="text-sm text-gray-600">Last Update: 31/10/2025</p> </div> <section id="acceptance"> <h2 class="text-2xl font-bold text-gray-900 mb-4">1. Acceptance of Terms</h2> <div class="prose prose-gray max-w-none"> <p class="text-gray-700 leading-relaxed mb-4">
+Welcome to Broker Lenders. These Terms of Use ("Terms") govern your use of our website and services. By accessing or using our website, you agree to be bound by these Terms and our Privacy Policy.
+</p> <p class="text-gray-700 leading-relaxed mb-4">
+Broker Lenders is operated by Pedro Lira (NMLS #318973) and Xpert Home Lending (NMLS #2179191). We are licensed mortgage professionals committed to providing exceptional service while maintaining compliance with all applicable laws and regulations.
+</p> <p class="text-gray-700 leading-relaxed">
+If you do not agree to these Terms, please do not use our website or services.
+</p> </div> </section> <!-- Section Separator --> <hr class="border-t border-gray-200 my-8"> <section id="use-of-website"> <h2 class="text-2xl font-bold text-gray-900 mb-4">2. Use of Website</h2> <div class="prose prose-gray max-w-none"> <p class="text-gray-700 leading-relaxed mb-4">
+You may use our website for lawful purposes only. You agree to use the website in accordance with all applicable laws, regulations, and these Terms.
+</p> <p class="text-gray-700 leading-relaxed mb-4">
+Our website provides information about mortgage lending services, rates, and loan programs. The information provided is for general informational purposes and does not constitute a commitment to lend or guarantee of loan approval.
+</p> <p class="text-gray-700 leading-relaxed">
+You are responsible for ensuring that your use of the website complies with all applicable laws in your jurisdiction.
+</p> </div> </section> <!-- Section Separator --> <hr class="border-t border-gray-200 my-8"> <section id="user-accounts"> <h2 class="text-2xl font-bold text-gray-900 mb-4">3. User Accounts</h2> <div class="prose prose-gray max-w-none"> <p class="text-gray-700 leading-relaxed mb-4">
+When creating an account with us, you must provide accurate, complete, and current information. You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account.
+</p> <p class="text-gray-700 leading-relaxed mb-4">
+You agree to notify us immediately of any unauthorized use of your account or any other breach of security.
+</p> <p class="text-gray-700 leading-relaxed">
+We reserve the right to suspend or terminate accounts that violate these Terms or engage in fraudulent or illegal activities.
+</p> </div> </section> <!-- Section Separator --> <hr class="border-t border-gray-200 my-8"> <section id="prohibited-uses"> <h2 class="text-2xl font-bold text-gray-900 mb-4">4. Prohibited Uses</h2> <div class="prose prose-gray max-w-none"> <p class="text-gray-700 leading-relaxed mb-4">You may not use our website:</p> <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-4"> <li>For any unlawful purpose or to solicit others to perform unlawful acts</li> <li>To violate any international, federal, provincial, or state regulations, rules, laws, or local ordinances</li> <li>To infringe upon or violate our intellectual property rights or the intellectual property rights of others</li> <li>To harass, abuse, insult, harm, defame, slander, disparage, intimidate, or discriminate</li> <li>To submit false or misleading information</li> <li>To upload or transmit viruses or any other type of malicious code</li> <li>To spam, phish, pharm, pretext, spider, crawl, or scrape</li> <li>For any obscene or immoral purpose</li> </ul> <p class="text-gray-700 leading-relaxed">
+We reserve the right to terminate your use of the website for violating any of the prohibited uses.
+</p> </div> </section> <!-- Section Separator --> <hr class="border-t border-gray-200 my-8"> <section id="intellectual-property"> <h2 class="text-2xl font-bold text-gray-900 mb-4">5. Intellectual Property</h2> <div class="prose prose-gray max-w-none"> <p class="text-gray-700 leading-relaxed mb-4">
+The website and its original content, features, and functionality are and will remain the exclusive property of Broker Lenders and its licensors. The website is protected by copyright, trademark, and other laws.
+</p> <p class="text-gray-700 leading-relaxed mb-4">
+Our trademarks and trade dress may not be used in connection with any product or service without our prior written consent.
+</p> <p class="text-gray-700 leading-relaxed">
+You may not reproduce, distribute, modify, create derivative works of, publicly display, publicly perform, republish, download, store, or transmit any of the material on our website without our prior written consent.
+</p> </div> </section> <!-- Section Separator --> <hr class="border-t border-gray-200 my-8"> <section id="privacy"> <h2 class="text-2xl font-bold text-gray-900 mb-4">6. Privacy</h2> <div class="prose prose-gray max-w-none"> <p class="text-gray-700 leading-relaxed mb-4">
+Your privacy is important to us. Please review our Privacy Policy, which also governs your use of the website, to understand our practices.
+</p> <p class="text-gray-700 leading-relaxed mb-4">
+By using our website, you consent to the collection and use of information as outlined in our Privacy Policy.
+</p> <p class="text-gray-700 leading-relaxed">
+We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.
+</p> </div> </section> <!-- Section Separator --> <hr class="border-t border-gray-200 my-8"> <section id="disclaimers"> <h2 class="text-2xl font-bold text-gray-900 mb-4">7. Disclaimers</h2> <div class="prose prose-gray max-w-none"> <p class="text-gray-700 leading-relaxed mb-4">
+The information on this website is provided on an "as is" basis. To the fullest extent permitted by law, Broker Lenders excludes all representations, warranties, conditions, and terms.
+</p> <p class="text-gray-700 leading-relaxed mb-4">
+We do not warrant that the website will be constantly available, or available at all, or that the information on the website is complete, true, accurate, or non-misleading.
+</p> <p class="text-gray-700 leading-relaxed">
+Interest rates, loan terms, and program availability are subject to change without notice. All loan applications are subject to credit approval and property appraisal.
+</p> </div> </section> <!-- Section Separator --> <hr class="border-t border-gray-200 my-8"> <section id="limitation-liability"> <h2 class="text-2xl font-bold text-gray-900 mb-4">8. Limitation of Liability</h2> <div class="prose prose-gray max-w-none"> <p class="text-gray-700 leading-relaxed mb-4">
+In no event shall Broker Lenders, Pedro Lira, or Xpert Home Lending be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses.
+</p> <p class="text-gray-700 leading-relaxed mb-4">
+Our total liability to you for all damages, losses, and causes of action shall not exceed the amount paid by you, if any, for accessing this website.
+</p> <p class="text-gray-700 leading-relaxed">
+Some jurisdictions do not allow the exclusion of certain warranties or the limitation of liability for consequential or incidental damages, so the above limitations may not apply to you.
+</p> </div> </section> <!-- Section Separator --> <hr class="border-t border-gray-200 my-8"> <section id="indemnification"> <h2 class="text-2xl font-bold text-gray-900 mb-4">9. Indemnification</h2> <div class="prose prose-gray max-w-none"> <p class="text-gray-700 leading-relaxed mb-4">
+You agree to defend, indemnify, and hold harmless Broker Lenders, Pedro Lira, Xpert Home Lending, and their respective officers, directors, employees, and agents from and against any and all claims, damages, obligations, losses, liabilities, costs, or debt, and expenses (including but not limited to attorney's fees).
+</p> <p class="text-gray-700 leading-relaxed">
+This indemnification applies to claims arising from your use of and access to the website, your violation of these Terms, or your violation of any third-party right, including without limitation any copyright, property, or privacy right.
+</p> </div> </section> <!-- Section Separator --> <hr class="border-t border-gray-200 my-8"> <section id="termination"> <h2 class="text-2xl font-bold text-gray-900 mb-4">10. Termination</h2> <div class="prose prose-gray max-w-none"> <p class="text-gray-700 leading-relaxed mb-4">
+We may terminate or suspend your account and bar access to the website immediately, without prior notice or liability, under our sole discretion, for any reason whatsoever and without limitation, including but not limited to a breach of the Terms.
+</p> <p class="text-gray-700 leading-relaxed mb-4">
+If you wish to terminate your account, you may simply discontinue using the website.
+</p> <p class="text-gray-700 leading-relaxed">
+All provisions of the Terms which by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity, and limitations of liability.
+</p> </div> </section> <!-- Section Separator --> <hr class="border-t border-gray-200 my-8"> <section id="governing-law"> <h2 class="text-2xl font-bold text-gray-900 mb-4">11. Governing Law</h2> <div class="prose prose-gray max-w-none"> <p class="text-gray-700 leading-relaxed mb-4">
+These Terms shall be interpreted and governed by the laws of the State of California, without regard to its conflict of law provisions.
+</p> <p class="text-gray-700 leading-relaxed mb-4">
+Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights.
+</p> <p class="text-gray-700 leading-relaxed">
+If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect.
+</p> </div> </section> <!-- Section Separator --> <hr class="border-t border-gray-200 my-8"> <section id="changes"> <h2 class="text-2xl font-bold text-gray-900 mb-4">12. Changes to Terms</h2> <div class="prose prose-gray max-w-none"> <p class="text-gray-700 leading-relaxed mb-4">
+We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will provide at least 30 days notice prior to any new terms taking effect.
+</p> <p class="text-gray-700 leading-relaxed mb-4">
+What constitutes a material change will be determined at our sole discretion. By continuing to access or use our website after any revisions become effective, you agree to be bound by the revised terms.
+</p> <p class="text-gray-700 leading-relaxed">
+If you do not agree to the new terms, you are no longer authorized to use the website.
+</p> </div> </section> <!-- Section Separator --> <hr class="border-t border-gray-200 my-8"> <!-- Contact Information --> <div class="border-t border-gray-200 pt-8"> <h3 class="text-lg font-semibold text-gray-900 mb-4">Contact Information</h3> <div class="text-gray-700"> <p class="mb-2"><strong>Broker Lenders</strong></p> <p class="mb-2">Pedro Lira, NMLS #318973</p> <p class="mb-2">Xpert Home Lending, NMLS #2179191</p> <p class="mb-2">Phone: (801) 307-0273</p> <p class="mb-4">Email: info@brokerlenders.com</p> <p class="text-sm text-gray-600">
+© 2024 Broker Lenders. All rights reserved. Equal Housing Lender.
+</p> </div> </div> </div> </div> <!-- Right Sidebar - Legal Info --> <div class="lg:col-span-1 lg:order-2"> <div class="bg-white p-6 sticky top-8"> <h3 class="text-xl font-semibold text-gray-900 mb-4">Legal Info</h3> <nav class="space-y-3"> <div class="flex items-center"> <div class="w-2 h-2 bg-red-600 rounded-full mr-3"></div> <span class="text-base font-semibold text-red-600">Terms Of Use</span> </div> <div class="flex items-center"> <div class="w-2 h-2 bg-gray-300 rounded-full mr-3"></div> <a href="/legal/disclosures" class="text-base text-gray-600 hover:text-red-600 transition-colors">Disclosures And Licenses</a> </div> <div class="flex items-center"> <div class="w-2 h-2 bg-gray-300 rounded-full mr-3"></div> <a href="/legal/privacy" class="text-base text-gray-600 hover:text-red-600 transition-colors">Privacy Policy</a> </div> </nav> </div> </div> </div> </div> </div> ${renderScript($$result2, "/Users/pamplona/Documents/trae_projects/broker-lenders/src/pages/legal/terms-of-use.astro?astro&type=script&index=0&lang.ts")} ` })}`;
+}, "/Users/pamplona/Documents/trae_projects/broker-lenders/src/pages/legal/terms-of-use.astro", void 0);
+
+const $$file = "/Users/pamplona/Documents/trae_projects/broker-lenders/src/pages/legal/terms-of-use.astro";
+const $$url = "/legal/terms-of-use";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$TermsOfUse,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

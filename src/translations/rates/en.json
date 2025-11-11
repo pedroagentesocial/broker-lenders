@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "title": "Today's Mortgage Rates - Broker Lenders"
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "rates": "Rates"
+  },
+  "hero": {
+    "title": "Today's mortgage rates",
+    "subtitle": "Compare today's mortgage rates from top lenders. Find the best rate for your home purchase or refinance.",
+    "ctaPrimary": "Call now",
+    "ctaSecondary": "Apply now"
+  },
+  "grid": {
+    "states": {
+      "utah": "Utah",
+      "idaho": "Idaho",
+      "nevada": "Nevada",
+      "california": "California",
+      "texas": "Texas",
+      "florida": "Florida",
+      "colorado": "Colorado"
+    },
+    "disclaimer": "Monthly payment examples below are for a loan amount of $350k ($1,100k on Jumbo). Taxes and insurance not included within the estimate; actual payment amount will be greater.",
+    "cards": {
+      "fixed30": {
+        "title": "30-year Fixed"
+      },
+      "fixed20": {
+        "title": "20-year Fixed"
+      },
+      "fha30": {
+        "title": "30-year FHA"
+      },
+      "va30": {
+        "title": "30-year VA"
+      },
+      "jumboFixed30": {
+        "title": "30-year Jumbo Fixed"
+      }
+    },
+    "labels": {
+      "rate": "Rate",
+      "monthlyPayment": "Monthly payment",
+      "apr": "APR",
+      "points": "Points"
+    },
+    "cta": "Explore this rate",
+    "personalized": {
+      "title": "Need personalized rate recommendations?",
+      "subtitle": "Talk to our mortgage experts",
+      "description": "Call us for personalized advice and find the best option for you.",
+      "cta": "Call now"
+    },
+    "footer": {
+      "legal": "View legal disclosures",
+      "timestampPrefix": "Rates are current as of"
+    }
+  }
+  ,
+  "modal": {
+    "title": "Legal Disclosures",
+    "p1": "Every situation is different. These figures are for estimation purposes only and may not reflect the exact terms of your loan. This is not a commitment to lend.",
+    "p2Strong": "30-year Fixed-Rate Loan:",
+    "p2Rest": " Payment assumes a loan-to-value (LTV) of 80.00%.",
+    "p3Strong": "20-year Fixed-Rate Loan:",
+    "p3Rest": " Payment assumes a loan-to-value (LTV) of 80.00%.",
+    "p4Strong": "30-year FHA Fixed-Rate Loan:",
+    "p4Rest": " Payment assumes a loan-to-value (LTV) of 80.00%.",
+    "p5": "Payment includes a one-time upfront mortgage insurance premium at 1.75% of the base loan amount and a monthly mortgage insurance premium (MIP) calculated at 0.5% of the base loan amount. For mortgages with a loan-to-value (LTV) ratio of 80.00%, the 0.5% monthly MIP will be paid for the first 11 years of the mortgage term. Thereafter, the monthly loan payment will consist of equal monthly principal and interest payments until the end of the loan.",
+    "p6Strong": "30-year Fixed-Rate Jumbo Loan:",
+    "p6Rest": " Payment assumes a loan-to-value (LTV) of 70.00%.",
+    "p7Strong": "30-year Fixed-Rate VA Loan:",
+    "p7Rest": " Payment assumes a loan-to-value (LTV) of 80.00%.",
+    "p8": "VA loans do not require PMI. The VA loan is a benefit of military service and only offered to veterans, surviving spouses and active duty military.",
+    "assumptionsTitle": "Assumptions",
+    "assumptionsIntro": "For all rates shown, unless otherwise noted, we assumed:",
+    "assumptions": [
+      "You're buying a single-family home that's your primary residence.",
+      "Closing costs will be paid up front, not rolled into the loan.",
+      "Your debt-to-income ratio is less than 43%.",
+      "Your credit score is 740.",
+      "You'll have an escrow account for payment of taxes and insurance.",
+      "One point is equal to one percent of the loan amount."
+    ]
+  },
+  "faqs": {
+    "title": "Mortgage interest rate FAQs",
+    "intro": "Don't see your question here? We love helping people understand how rates work and what yours could be. Just talk to us.",
+    "items": {
+      "q1": {
+        "title": "What's a mortgage rate?",
+        "body": "A mortgage rate is the interest rate charged on a mortgage loan. It's the cost you pay each year to borrow money to buy your home, expressed as a percentage of the loan amount."
+      },
+      "q2": {
+        "title": "How do mortgage rates work?",
+        "body": "Mortgage rates determine how much interest you'll pay on your home loan. A lower rate means lower monthly payments and less interest paid over the life of the loan. Rates can be fixed (staying the same) or adjustable (changing over time)."
+      },
+      "q3": {
+        "title": "What factors determine mortgage rates?",
+        "body": "Several factors affect mortgage rates including your credit score, down payment amount, loan term, debt-to-income ratio, employment history, and current economic conditions like inflation and Federal Reserve policies."
+      },
+      "q4": {
+        "title": "How do I get the best mortgage rate?",
+        "body": "To get the best rate, improve your credit score, save for a larger down payment, shop around with multiple lenders, consider shorter loan terms, and get pre-approved to show you're a serious buyer."
+      },
+      "q5": {
+        "title": "What's a mortgage rate lock, and should I do it?",
+        "body": "A rate lock guarantees your interest rate for a specific period (usually 30-60 days) while you complete your home purchase. It protects you from rate increases but you won't benefit if rates drop. It's generally recommended in rising rate environments."
+      },
+      "q6": {
+        "title": "What's the difference between interest rate and APR?",
+        "body": "The interest rate is the cost of borrowing money, while APR (Annual Percentage Rate) includes the interest rate plus other loan costs like origination fees, discount points, and mortgage insurance, giving you the true cost of the loan."
+      },
+      "q7": {
+        "title": "What are mortgage points?",
+        "body": "Mortgage points are fees paid upfront to reduce your interest rate. One point typically costs 1% of your loan amount and reduces your rate by about 0.25%. Points make sense if you plan to stay in the home long enough to recoup the upfront cost."
+      },
+      "q8": {
+        "title": "How often do mortgage rates change?",
+        "body": "Mortgage rates can change daily or even multiple times per day based on economic factors, bond market movements, and lender policies. Rates are most volatile during economic uncertainty or major policy announcements."
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "meta": {
+    "title": "Refinance Your Home - Broker Lenders"
+  },
+  "hero": {
+    "title": "Refinance today and unlock new possibilities",
+    "subtitle": "Lower your rate, reduce your payment, or tap into your home's equity. We'll help you find the right refinance option for your goals.",
+    "ctaPrimary": "Apply for a refinance",
+    "ctaSecondary": "See my options"
+  },
+  "newStart": {
+    "title": "Your new start begins now.",
+    "card1": {
+      "title": "Start now",
+      "description": "Tap into your home's equity for home improvements, debt consolidation, or other financial goals."
+    },
+    "card2": {
+      "title": "Start saving",
+      "description": "Reduce your monthly mortgage payment by securing a lower interest rate or extending your loan term."
+    },
+    "card3": {
+      "title": "Find my home budget",
+      "description": "Use our calculator to see how much you could save with a refinance based on current rates."
+    }
+  },
+  "steps": {
+    "title": "Start smart, buy confidently",
+    "step1": {
+      "title": "Start your refi in 5 min",
+      "description": "Get pre-qualified with a soft credit check that won't affect your score."
+    },
+    "step2": {
+      "title": "Apply in less than 10 minutes",
+      "description": "Complete your full application online with our streamlined process."
+    },
+    "step3": {
+      "title": "Get approved and close fast",
+      "description": "Our team works quickly to get you approved and closed in as little as 14 days."
+    },
+    "cta": "I'm ready"
+  },
+  "options": {
+    "title": "More refinance options than ever",
+    "subtitle": "Whether you want to lower your rate, reduce your payment, or access your home's equity, we have refinance solutions tailored to your needs.",
+    "ctaPrimary": "Get started",
+    "ctaSecondary": "(801) 307-0273"
+  }
+}

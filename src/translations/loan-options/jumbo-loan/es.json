@@ -1,0 +1,40 @@
+{
+  "title": "Préstamo Jumbo - Broker Lenders",
+  "breadcrumb": {
+    "home": "Inicio",
+    "loanOptions": "Opciones de préstamos",
+    "jumboLoan": "Préstamo jumbo"
+  },
+  "hero": {
+    "title": "Préstamo jumbo",
+    "subtitle": "Financia propiedades de alto valor con tarifas competitivas y términos flexibles.",
+    "getStarted": "Comenzar"
+  },
+  "whyChoose": {
+    "title": "¿Por qué elegir Broker Lenders para préstamos jumbo?",
+    "highLoanAmounts": {
+      "title": "Montos de préstamo altos",
+      "description": "Financia propiedades por encima de los límites de préstamos conformes con confianza."
+    },
+    "flexibleTerms": {
+      "title": "Términos y opciones flexibles",
+      "description": "Elige entre tasas fijas o ajustables para adaptarse a tus planes financieros."
+    },
+    "personalizedSupport": {
+      "title": "Apoyo personalizado",
+      "description": "Trabaja con especialistas con experiencia en transacciones de alto valor."
+    },
+    "getStarted": "Comenzar"
+  },
+  "answersSection": {
+    "title": "Respuestas cuando las necesitas.",
+    "subtitle": "Personas reales cuando importa.",
+    "description": "Obtén asistencia con elegibilidad compleja, suscripción jumbo y estrategias de tasas.",
+    "getStarted": "Comenzar"
+  },
+  "finalCTA": {
+    "title": "Avanza con un préstamo Jumbo",
+    "getStarted": "Comenzar",
+    "callNow": "Llamar (801) 307-0273"
+  }
+}

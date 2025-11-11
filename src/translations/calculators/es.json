@@ -1,0 +1,36 @@
+{
+  "hero": {
+    "title": "Calculadoras de Broker Lenders®",
+    "subtitle": "Obtén estimaciones precisas y toma decisiones informadas con nuestras calculadoras hipotecarias fáciles de usar. Planifica tu financiamiento de vivienda con confianza."
+  },
+  "help": {
+    "title": "Encuentra tu calculadora hipotecaria ideal",
+    "description": "Nuestros expertos hipotecarios pueden ayudarte a elegir la herramienta adecuada para tu situación y guiarte durante el proceso.",
+    "button": "Hablar con un experto"
+  },
+  "mortgageCalculators": {
+    "title": "Calculadoras Hipotecarias",
+    "description": "Usa nuestras poderosas calculadoras hipotecarias para tomar decisiones informadas sobre tu financiamiento. Obtén estimaciones precisas y planifica tu estrategia hipotecaria con confianza.",
+    "cards": {
+      "mortgage": {
+        "title": "Calculadora de Hipoteca",
+        "description": "Calcula tu pago hipotecario mensual y descubre cuánto hogar puedes pagar"
+      },
+      "refinance": {
+        "title": "Calculadora de Refinanciamiento",
+        "description": "Decide si el refinanciamiento te conviene y calcula posibles ahorros"
+      },
+      "payoff": {
+        "title": "Calculadora de Pago de Hipoteca",
+        "description": "Calcula cuánto puedes ahorrar haciendo pagos adicionales en tu hipoteca"
+      },
+      "valuation": {
+        "title": "Herramienta de Valoración de Vivienda",
+        "description": "Obtén una estimación instantánea del valor de mercado actual de tu propiedad"
+      }
+    },
+    "modal": {
+      "title": "Herramienta de Valoración de Vivienda"
+    }
+  }
+}

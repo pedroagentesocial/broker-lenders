@@ -1,0 +1,40 @@
+{
+  "title": "USDA Loan - Broker Lenders",
+  "breadcrumb": {
+    "home": "Home",
+    "loanOptions": "Loan options",
+    "usdaLoan": "USDA loan"
+  },
+  "hero": {
+    "title": "USDA loan",
+    "subtitle": "Rural development loans with no down payment for eligible properties in qualifying areas. Make homeownership affordable in rural communities.",
+    "getStarted": "Get started"
+  },
+  "whyChoose": {
+    "title": "Why choose Broker Lenders for your USDA loan?",
+    "ruralPropertyExpertise": {
+      "title": "Rural property expertise",
+      "description": "We understand USDA eligibility requirements and can help identify qualifying rural properties."
+    },
+    "zeroDownPayment": {
+      "title": "Zero down payment specialists",
+      "description": "We help you take advantage of USDA's 100% financing option with no down payment required."
+    },
+    "competitiveRates": {
+      "title": "Competitive rural loan rates",
+      "description": "Access to multiple lenders ensuring you get the best USDA loan rates available for rural properties."
+    },
+    "getStarted": "Get started"
+  },
+  "answers": {
+    "title": "Answers when you need them.",
+    "subtitle": "Real people when it matters.",
+    "description": "Talk to a USDA loan specialist about rural eligibility, property requirements, and income limits.",
+    "getStarted": "Get started"
+  },
+  "finalCTA": {
+    "title": "Achieve your rural homeownership dreams with a USDA loan",
+    "getStarted": "Get started",
+    "callButton": "Call (801) 307-0273"
+  }
+}

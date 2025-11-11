@@ -1,0 +1,151 @@
+{
+  "page_title": "Calculadora de Hipoteca - Broker Lenders®",
+  "breadcrumb": {
+    "home": "Inicio",
+    "calculators": "Calculadoras",
+    "current": "Calculadora de Hipoteca"
+  },
+  "hero": {
+    "title": "Calculadora de hipoteca",
+    "subtitle": "Calcula tu pago mensual de hipoteca y descubre cuánto hogar puedes pagar. Nuestra calculadora incluye capital, interés, impuestos, seguro y más."
+  },
+  "form": {
+    "labels": {
+      "home_price": "Precio de la casa",
+      "down_payment": "Pago inicial",
+      "loan_term": "Plazo del préstamo",
+      "interest_rate": "Tasa de interés",
+      "zip_code": "Código ZIP",
+      "yearly_property_tax": "Impuestos anuales de la propiedad",
+      "yearly_home_insurance": "Seguro anual de vivienda"
+    },
+    "tooltips": {
+      "loan_term": "Plazo: 30 años pagos bajos, 15 años menos interés",
+      "interest_rate": "Tasa de interés: mayor tasa = pagos más altos",
+      "property_tax": "Impuestos anuales: varían por ciudad y valor de propiedad",
+      "home_insurance": "Seguro anual: protege contra daños y desastres"
+    },
+    "options": {
+      "years_15": "15 años",
+      "years_20": "20 años",
+      "years_30": "30 años"
+    },
+    "optional_toggle": "Opcional: Ingresa impuestos y seguro",
+    "placeholders": {
+      "value": "0",
+      "zip_value": "Valor",
+      "interest_example": "5.99"
+    },
+    "buttons": {
+      "calculate": "Calcular",
+      "legal_disclosures": "Divulgaciones legales"
+    }
+  },
+  "results": {
+    "heading": "Pago mensual estimado",
+    "principal_interest": "Capital e Interés",
+    "property_tax": "Impuesto a la propiedad",
+    "home_insurance": "Seguro de vivienda",
+    "real_number": "Quiero el número real →"
+  },
+  "cta": {
+    "message": "¿Listo para dar el siguiente paso? Nuestros especialistas en hipotecas están aquí para ayudarte a hacer realidad tu sueño de ser propietario.",
+    "call_now": "Llamar ahora"
+  },
+  "modal": {
+    "title": "Divulgaciones legales",
+    "intro": "La calculadora de hipoteca de Broker Lenders es solo para fines de estimación. Los resultados no reflejan todos los programas de préstamo y están sujetos a límites individuales del programa. La calificación, tasas y pagos variarán según el momento y las circunstancias individuales. Esto no es un compromiso de préstamo.",
+    "example_title": "Ejemplo de pago",
+    "example_intro": "Aquí hay un ejemplo de pago basado en un precio promedio de vivienda y el tipo de préstamo más común:",
+    "labels": {
+      "loan_amount": "Monto del préstamo:",
+      "loan_type": "Tipo de préstamo:",
+      "interest_apr": "Tasa de interés/APR:",
+      "monthly_payment": "Pago mensual:",
+      "points": "Puntos:",
+      "ltv": "Relación préstamo-valor (LTV):"
+    },
+    "footer": {
+      "disclaimer": "Un punto equivale al uno por ciento del monto de tu préstamo. El pago no incluye impuestos y seguro. El monto real del pago será mayor. Pueden aplicarse restricciones de monto máximo de préstamo por estado y condado. Las tasas mostradas son válidas en la fecha de publicación del 18 de abril de 2024.",
+      "note": "¹Si no ingresaste montos de impuestos y seguro, una estimación de tus impuestos se basa en el estado seleccionado. Esto no incluye todas las tarifas."
+    }
+  },
+  "howto": {
+    "title": "Cómo usar una calculadora de hipoteca",
+    "subtitle": "Nuestra calculadora de hipoteca te ayuda a estimar tus pagos mensuales y entender el costo real de ser propietario.",
+    "cards": {
+      "enter_details": {
+        "title": "Ingresa detalles de la casa",
+        "text": "Comienza ingresando el precio de la casa y el monto de tu pago inicial. La calculadora actualizará automáticamente el monto del préstamo y las estimaciones de pago mensual."
+      },
+      "adjust_terms": {
+        "title": "Ajusta los términos del préstamo",
+        "text": "Elige tu plazo de préstamo (15, 20 o 30 años) y la tasa de interés. Plazos más cortos significan pagos mensuales más altos pero menos interés pagado con el tiempo."
+      },
+      "include_costs": {
+        "title": "Incluye costos adicionales",
+        "text": "No olvides incluir impuestos a la propiedad, seguro de vivienda, PMI y tarifas de HOA. Estos pueden impactar significativamente tu pago mensual total de vivienda."
+      },
+      "review_results": {
+        "title": "Revisa tus resultados",
+        "text": "Ve el desglose completo de tu pago mensual y el costo total. Usa esta información para determinar lo que puedes pagar cómodamente."
+      }
+    }
+  },
+  "tips": {
+    "title": "Consejos de la calculadora de hipoteca",
+    "subtitle": "Obtén resultados más precisos con estos consejos y consideraciones.",
+    "items": {
+      "pmi": {
+        "title": "Entendiendo el PMI",
+        "text": "El Seguro Hipotecario Privado (PMI) generalmente se requiere cuando tu pago inicial es menor al 20% del valor de la casa. Por lo general, el PMI puede eliminarse cuando alcanzas el 20% de capital en tu vivienda."
+      },
+      "property_tax": {
+        "title": "Consideraciones del impuesto a la propiedad",
+        "text": "Los impuestos a la propiedad varían significativamente por ubicación y pueden cambiar con el tiempo. Consulta con los evaluadores fiscales locales para obtener tasas precisas en tu área, ya que pueden afectar sustancialmente tu pago mensual."
+      },
+      "interest_rate": {
+        "title": "Impacto de la tasa de interés",
+        "text": "Incluso pequeños cambios en las tasas de interés pueden afectar significativamente tu pago mensual y el costo total del préstamo. Una diferencia del 1% en una hipoteca de $300,000 puede significar más de $150 de diferencia por mes."
+      }
+    }
+  },
+  "faqs": {
+    "title": "Preguntas frecuentes de la calculadora de hipoteca",
+    "subtitle": "¿No ves tu pregunta aquí? Nos encanta ayudar a las personas a entender cómo funcionan los cálculos de hipoteca y cuál podría ser el tuyo. Solo háblanos.",
+    "items": [
+      {
+        "q": "¿Qué tan precisas son las estimaciones de la calculadora de hipoteca?",
+        "a": "Las calculadoras de hipoteca proporcionan estimaciones muy precisas para los pagos de capital e interés cuando ingresas términos de préstamo correctos. Sin embargo, tu pago mensual total también incluirá impuestos a la propiedad, seguro de vivienda y posiblemente PMI, que pueden variar significativamente según la ubicación y el valor de la propiedad."
+      },
+      {
+        "q": "¿Qué factores afectan mi pago mensual de hipoteca?",
+        "a": "Tu pago mensual se determina por cuatro factores principales: monto del préstamo (precio de la casa menos el pago inicial), tasa de interés, plazo del préstamo (15 o 30 años) y costos adicionales como impuestos a la propiedad, seguro y PMI. Incluso pequeños cambios en la tasa de interés o el pago inicial pueden impactar significativamente tu pago mensual."
+      },
+      {
+        "q": "¿Cuál es la diferencia entre capital e interés?",
+        "a": "El capital es el monto que pediste prestado para comprar tu casa, mientras que el interés es el costo de pedir ese dinero. Al principio del préstamo, la mayor parte de tu pago se destina al interés. A medida que pagas el préstamo, más de tu pago se destina al capital, construyendo patrimonio en tu casa."
+      },
+      {
+        "q": "¿Cuándo se requiere el PMI y cuánto cuesta?",
+        "a": "El Seguro Hipotecario Privado (PMI) generalmente se requiere cuando pones menos del 20% en un préstamo convencional. El PMI suele costar entre 0.3% y 1.5% del monto del préstamo anualmente, agregado a tu pago mensual. Puedes eliminar el PMI una vez que alcances el 20% de capital en tu vivienda."
+      },
+      {
+        "q": "¿Cómo afectan los impuestos a la propiedad y el seguro a mi pago?",
+        "a": "Los impuestos a la propiedad y el seguro de vivienda suelen incluirse en tu pago mensual de hipoteca a través de una cuenta de depósito en garantía. Estos costos varían significativamente según la ubicación y el valor de la propiedad. Los impuestos a la propiedad pueden variar de 0.3% a 2.5% del valor de la casa anualmente, mientras que los costos de seguro dependen de la ubicación, el valor de la casa y el nivel de cobertura."
+      },
+      {
+        "q": "¿Cuánto debo poner de pago inicial en una casa?",
+        "a": "Aunque un pago inicial del 20% elimina el PMI y reduce tu pago mensual, muchos compradores ponen menos. Los préstamos FHA permiten tan poco como 3.5% de pago inicial, y los préstamos convencionales pueden ser tan bajos como 3%. Considera tu presupuesto, efectivo disponible para costos de cierre y emergencias, y si pagar PMI vale la pena para preservar tus ahorros."
+      },
+      {
+        "q": "¿Cuál es la diferencia entre la tasa de interés y el APR?",
+        "a": "La tasa de interés es el costo de pedir dinero prestado, mientras que el APR (Tasa de Porcentaje Anual) incluye la tasa de interés más otros costos del préstamo como tarifas de originación, puntos de descuento y costos de cierre. El APR te da una imagen más completa del costo real del préstamo y es mejor para comparar diferentes ofertas."
+      },
+      {
+        "q": "¿Debo elegir una hipoteca de 15 años o 30 años?",
+        "a": "Una hipoteca de 15 años generalmente ofrece tasas de interés más bajas y te ahorra mucho dinero en interés total, pero tiene pagos mensuales más altos. Una hipoteca de 30 años tiene pagos mensuales más bajos pero cuesta más en interés total. Elige según tu presupuesto, objetivos financieros y cuánto tiempo planeas permanecer en la casa."
+      }
+    ]
+  }
+}

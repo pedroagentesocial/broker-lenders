@@ -1,0 +1,40 @@
+{
+  "title": "Construction Loan - Broker Lenders",
+  "breadcrumb": {
+    "home": "Home",
+    "loanOptions": "Loan options",
+    "constructionLoan": "Construction loan"
+  },
+  "hero": {
+    "title": "Construction loan",
+    "subtitle": "Build your dream home with flexible construction-to-permanent financing options.",
+    "getStarted": "Get started"
+  },
+  "whyChoose": {
+    "title": "Why choose Broker Lenders for construction?",
+    "constructionToPermanent": {
+      "title": "Construction-to-permanent financing",
+      "description": "Simplify your build with one loan that converts after completion."
+    },
+    "flexibleDraw": {
+      "title": "Flexible draw schedules",
+      "description": "Get funds as needed throughout construction with transparent oversight."
+    },
+    "expertGuidance": {
+      "title": "Expert guidance throughout the build",
+      "description": "Work with professionals who understand timelines, permits, and closing."
+    },
+    "getStarted": "Get started"
+  },
+  "answersSection": {
+    "title": "Answers when you need them.",
+    "subtitle": "Real people when it matters.",
+    "description": "Get support with builder approval, draw requests, and permanent financing.",
+    "getStarted": "Get started"
+  },
+  "finalCTA": {
+    "title": "Build confidently with a Construction loan",
+    "getStarted": "Get started",
+    "callNow": "Call (801) 307-0273"
+  }
+}

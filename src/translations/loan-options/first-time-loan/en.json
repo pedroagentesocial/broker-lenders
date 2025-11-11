@@ -1,0 +1,39 @@
+{
+  "title": "First-Time Homebuyer Loan - Broker Lenders",
+  "breadcrumb": {
+    "home": "Home",
+    "loanOptions": "Loan options",
+    "firstTimeLoan": "First-time homebuyer loan"
+  },
+  "hero": {
+    "title": "First-time homebuyer loan",
+    "subtitle": "Make your first home purchase easier with tailored guidance and flexible options.",
+    "getStarted": "Get started"
+  },
+  "whyChoose": {
+    "title": "Why choose Broker Lenders for first-time buyers?",
+    "lowDownPayment": {
+      "title": "Low down payment options",
+      "description": "Access programs designed for first-time buyers with minimal upfront costs."
+    },
+    "personalizedGuidance": {
+      "title": "Personalized guidance",
+      "description": "Get hands-on support through pre-approval, budgeting, and closing."
+    },
+    "competitiveRates": {
+      "title": "Competitive rates",
+      "description": "Secure affordable monthly payments with transparent options."
+    }
+  },
+  "answersSection": {
+    "title": "Answers when you need them.",
+    "subtitle": "Real people when it matters.",
+    "description": "We'll help you navigate pre-approval, down-payment options, and closing steps with confidence.",
+    "getStarted": "Get started"
+  },
+  "finalCTA": {
+    "title": "Start your journey as a first-time homebuyer",
+    "getStarted": "Get started",
+    "callNow": "Call (801) 307-0273"
+  }
+}

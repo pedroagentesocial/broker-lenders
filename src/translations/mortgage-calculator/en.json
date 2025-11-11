@@ -1,0 +1,151 @@
+{
+  "page_title": "Mortgage Calculator - Broker Lenders®",
+  "breadcrumb": {
+    "home": "Home",
+    "calculators": "Calculators",
+    "current": "Mortgage Calculator"
+  },
+  "hero": {
+    "title": "Mortgage calculator",
+    "subtitle": "Calculate your monthly mortgage payment and see how much home you can afford. Our calculator includes principal, interest, taxes, insurance, and more."
+  },
+  "form": {
+    "labels": {
+      "home_price": "Home price",
+      "down_payment": "Down payment",
+      "loan_term": "Loan term",
+      "interest_rate": "Interest rate",
+      "zip_code": "ZIP code",
+      "yearly_property_tax": "Yearly property taxes",
+      "yearly_home_insurance": "Yearly homeowners insurance"
+    },
+    "tooltips": {
+      "loan_term": "Term: 30 years lower payments, 15 years less interest",
+      "interest_rate": "Interest rate: higher rate = higher payments",
+      "property_tax": "Annual taxes: vary by city and property value",
+      "home_insurance": "Annual insurance: protects against damage and disasters"
+    },
+    "options": {
+      "years_15": "15 years",
+      "years_20": "20 years",
+      "years_30": "30 years"
+    },
+    "optional_toggle": "Optional: Enter taxes & insurance",
+    "placeholders": {
+      "value": "0",
+      "zip_value": "Value",
+      "interest_example": "5.99"
+    },
+    "buttons": {
+      "calculate": "Calculate",
+      "legal_disclosures": "Legal disclosures"
+    }
+  },
+  "results": {
+    "heading": "Estimate monthly payment",
+    "principal_interest": "Principal & Interest",
+    "property_tax": "Property tax",
+    "home_insurance": "Home insurance",
+    "real_number": "I want real number →"
+  },
+  "cta": {
+    "message": "Ready to take the next step? Our mortgage specialists are here to help you make your dream of homeownership a reality.",
+    "call_now": "Call Now"
+  },
+  "modal": {
+    "title": "Legal Disclosures",
+    "intro": "The Broker Lenders mortgage calculator is for estimation purposes only. Results do not reflect all loan programs and are subject to individual program loan limits. Qualification, rates and payments will vary based on timing and individual circumstances. This is not a commitment to lend.",
+    "example_title": "Payment Example",
+    "example_intro": "Here's a payment example based on an average home price and the most common loan type:",
+    "labels": {
+      "loan_amount": "Loan amount:",
+      "loan_type": "Loan type:",
+      "interest_apr": "Interest rate/APR:",
+      "monthly_payment": "Monthly payment:",
+      "points": "Points:",
+      "ltv": "Loan-to-value (LTV):"
+    },
+    "footer": {
+      "disclaimer": "One point is equal to one percent of your loan amount. Payment does not include taxes and insurance. The actual payment amount will be greater. Some state and county maximum loan amount restrictions may apply. Rates shown are valid on publication date of April 18, 2024.",
+      "note": "¹If you didn't enter taxes and insurance amounts, an estimate of your taxes is based on the state selected. This does not include all fees."
+    }
+  },
+  "howto": {
+    "title": "How to use a mortgage calculator",
+    "subtitle": "Our mortgage calculator helps you estimate your monthly payments and understand the true cost of homeownership.",
+    "cards": {
+      "enter_details": {
+        "title": "Enter Home Details",
+        "text": "Start by entering the home price and your down payment amount. The calculator will automatically update your loan amount and monthly payment estimates."
+      },
+      "adjust_terms": {
+        "title": "Adjust Loan Terms",
+        "text": "Choose your loan term (15, 20, or 30 years) and interest rate. Shorter terms mean higher monthly payments but less interest paid over time."
+      },
+      "include_costs": {
+        "title": "Include Additional Costs",
+        "text": "Don't forget to include property taxes, home insurance, PMI, and HOA fees. These can significantly impact your total monthly housing payment."
+      },
+      "review_results": {
+        "title": "Review Your Results",
+        "text": "See your complete monthly payment breakdown and total cost. Use this information to determine what you can comfortably afford."
+      }
+    }
+  },
+  "tips": {
+    "title": "Mortgage calculator tips",
+    "subtitle": "Get the most accurate results with these helpful tips and considerations.",
+    "items": {
+      "pmi": {
+        "title": "Understanding PMI",
+        "text": "Private Mortgage Insurance (PMI) is typically required when your down payment is less than 20% of the home's value. PMI can usually be removed once you reach 20% equity in your home."
+      },
+      "property_tax": {
+        "title": "Property Tax Considerations",
+        "text": "Property taxes vary significantly by location and can change over time. Check with local tax assessors for accurate rates in your area, as they can impact your monthly payment substantially."
+      },
+      "interest_rate": {
+        "title": "Interest Rate Impact",
+        "text": "Even small changes in interest rates can significantly affect your monthly payment and total loan cost. A 1% rate difference on a $300,000 loan can mean over $150 difference per month."
+      }
+    }
+  },
+  "faqs": {
+    "title": "Mortgage Calculator FAQs",
+    "subtitle": "Don't see your question here? We love helping people understand how mortgage calculations work and what yours could be. Just talk to us.",
+    "items": [
+      {
+        "q": "How accurate are mortgage calculator estimates?",
+        "a": "Mortgage calculators provide very accurate estimates for principal and interest payments when you input correct loan terms. However, your total monthly payment will also include property taxes, homeowners insurance, and possibly PMI, which can vary significantly by location and property value."
+      },
+      {
+        "q": "What factors affect my monthly mortgage payment?",
+        "a": "Your monthly payment is determined by four main factors: loan amount (home price minus down payment), interest rate, loan term (15 or 30 years), and additional costs like property taxes, insurance, and PMI. Even small changes in interest rate or down payment can significantly impact your monthly payment."
+      },
+      {
+        "q": "What's the difference between principal and interest?",
+        "a": "Principal is the amount you borrowed to buy your home, while interest is the cost of borrowing that money. Early in your loan, most of your payment goes toward interest. As you pay down the loan, more of your payment goes toward principal, building equity in your home."
+      },
+      {
+        "q": "When is PMI required and how much does it cost?",
+        "a": "Private Mortgage Insurance (PMI) is typically required when you put down less than 20% on a conventional loan. PMI usually costs between 0.3% to 1.5% of your loan amount annually, added to your monthly payment. You can remove PMI once you reach 20% equity in your home."
+      },
+      {
+        "q": "How do property taxes and insurance affect my payment?",
+        "a": "Property taxes and homeowners insurance are typically included in your monthly mortgage payment through an escrow account. These costs vary significantly by location and property value. Property taxes can range from 0.3% to 2.5% of home value annually, while insurance costs depend on location, home value, and coverage level."
+      },
+      {
+        "q": "How much should I put down on a home?",
+        "a": "While 20% down eliminates PMI and reduces your monthly payment, many buyers put down less. FHA loans allow as little as 3.5% down, and conventional loans can go as low as 3%. Consider your budget, available cash for closing costs and emergencies, and whether paying PMI is worth preserving your savings."
+      },
+      {
+        "q": "What's the difference between interest rate and APR?",
+        "a": "The interest rate is the cost of borrowing money, while APR (Annual Percentage Rate) includes the interest rate plus other loan costs like origination fees, discount points, and closing costs. APR gives you a more complete picture of the loan's true cost and is better for comparing different loan offers."
+      },
+      {
+        "q": "Should I choose a 15-year or 30-year mortgage?",
+        "a": "A 15-year mortgage typically offers lower interest rates and saves you significant money in total interest, but has higher monthly payments. A 30-year mortgage has lower monthly payments but costs more in total interest. Choose based on your budget, financial goals, and how long you plan to stay in the home."
+      }
+    ]
+  }
+}

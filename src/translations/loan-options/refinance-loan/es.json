@@ -1,0 +1,40 @@
+{
+  "title": "Préstamo de Refinanciamiento - Broker Lenders",
+  "breadcrumb": {
+    "home": "Inicio",
+    "loanOptions": "Opciones de préstamos",
+    "refinanceLoan": "Préstamo de refinanciamiento"
+  },
+  "hero": {
+    "title": "Préstamo de refinanciamiento",
+    "subtitle": "Reduce tu tasa, disminuye tu pago o accede al capital de tu hogar.",
+    "getStarted": "Comenzar"
+  },
+  "whyChoose": {
+    "title": "¿Por qué elegir Broker Lenders para tu refinanciamiento?",
+    "lowerPayments": {
+      "title": "Pagos mensuales más bajos",
+      "description": "Reduce tu pago mensual de hipoteca con mejores tasas."
+    },
+    "cashOutEquity": {
+      "title": "Capital en efectivo",
+      "description": "Accede al capital de tu hogar para renovaciones, consolidación de deudas o inversiones."
+    },
+    "shorterTerms": {
+      "title": "Plazos de préstamo más cortos",
+      "description": "Paga tu hipoteca más rápido con un plazo más corto y tasas más bajas."
+    },
+    "getStarted": "Comenzar"
+  },
+  "answersSection": {
+    "title": "Respuestas cuando las necesitas.",
+    "subtitle": "Personas reales cuando importa.",
+    "description": "Habla con un asesor de vivienda sobre opciones de refinanciamiento, costos de cierre, capital y tiempo.",
+    "getStarted": "Comenzar"
+  },
+  "finalCTA": {
+    "title": "Alcanza tus metas financieras con un préstamo de refinanciamiento",
+    "getStarted": "Comenzar",
+    "callNow": "Llamar (801) 307-0273"
+  }
+}

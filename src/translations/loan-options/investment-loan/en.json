@@ -1,0 +1,40 @@
+{
+  "title": "Investment Property Loan - Broker Lenders",
+  "breadcrumb": {
+    "home": "Home",
+    "loanOptions": "Loan options",
+    "investmentPropertyLoan": "Investment property loan"
+  },
+  "hero": {
+    "title": "Investment property loan",
+    "subtitle": "Finance or refinance rental and investment properties with flexible programs.",
+    "getStarted": "Get started"
+  },
+  "whyChoose": {
+    "title": "Why choose Broker Lenders for investment properties?",
+    "dscrPrograms": {
+      "title": "DSCR and investor-friendly programs",
+      "description": "Flexible qualification using property cash flow for investors."
+    },
+    "purchaseOptions": {
+      "title": "Purchase or refinance options",
+      "description": "Whether acquiring new property or leveraging equity, we can help."
+    },
+    "competitiveRates": {
+      "title": "Competitive rates and terms",
+      "description": "Find financing that aligns with your investment strategy."
+    },
+    "getStarted": "Get started"
+  },
+  "answersSection": {
+    "title": "Answers when you need them.",
+    "subtitle": "Real people when it matters.",
+    "description": "Get support with property analysis, financing structures, and long-term planning.",
+    "getStarted": "Get started"
+  },
+  "finalCTA": {
+    "title": "Grow your portfolio with an Investment property loan",
+    "getStarted": "Get started",
+    "callNow": "Call (801) 307-0273"
+  }
+}
