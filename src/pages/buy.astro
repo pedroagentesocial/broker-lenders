@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-export const prerender = false;
+export const prerender = true;
 import { ensureLangInUrl } from '../utils/langHandler.js';
 import TestimonialsSection from '../components/TestimonialsSection.astro';
 import ImportantLegal from '../components/ImportantLegal.astro';
@@ -13,16 +13,8 @@ import FloridaImg from '../assets/Florida.jpg';
 import TexasImg from '../assets/Texas.jpg';
 import NevadaImg from '../assets/Nevada.jpg';
 
-// Ensure UTF-8 response to render accents correctly
-Astro.response.headers.set('Content-Type', 'text/html; charset=UTF-8');
-
-// Resolve language on the server side from URL or cookie
-const cookie = Astro.request.headers.get('cookie') || '';
-const m = cookie.match(/(?:^|;\s*)lang=([^;]+)/);
-const cookieLang = (m && m[1]) ? m[1].toLowerCase() : null;
-const rawParam = Astro.url.searchParams.get('lang');
-const raw = (rawParam || cookieLang || 'en').toLowerCase();
-const lang = ['en', 'es'].includes(raw) ? raw : 'en';
+// Prerender estático: el cliente resuelve idioma
+const lang = 'en';
 
 // SSR debug: show how language is resolved
 console.log('[i18n][buy][SSR] resolve', {
@@ -36,7 +28,7 @@ const dicts = {
   en: (await import('../translations/buy/en.json')).default,
   es: (await import('../translations/buy/es.json')).default,
 };
-const translations = dicts[lang] || dicts.en;
+const translations = dicts.en;
 
 // SSR debug: show which dict loaded and sample keys
 try {

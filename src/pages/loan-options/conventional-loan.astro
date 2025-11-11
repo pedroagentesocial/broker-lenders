@@ -7,19 +7,10 @@ import ImportantLegal from '../../components/ImportantLegal.astro';
 import enDict from '../../translations/loan-options/conventional-loan/en.json';
 import esDict from '../../translations/loan-options/conventional-loan/es.json';
 
-export const prerender = false;
-// Ensure UTF-8 response to avoid corrupted accented characters on first load
-Astro.response.headers.set('Content-Type', 'text/html; charset=UTF-8');
-
-// Resolve language from query or cookie, consistent with calculators/FHA
-const reqUrl = new URL(Astro.request.url);
-const qsLang = (reqUrl.searchParams.get('lang') || '').toLowerCase();
-const cookieHeader = Astro.request.headers.get('cookie') || '';
-const cookieLangMatch = cookieHeader.match(/(?:^|;\s*)lang=([^;]+)/);
-const cookieLang = (cookieLangMatch?.[1] || '').toLowerCase();
-const langParam = (qsLang || cookieLang || 'en');
-const lang = ['en', 'es'].includes(langParam) ? langParam : 'en';
-const dict = lang === 'es' ? esDict : enDict;
+export const prerender = true;
+// Build estático: idioma inicial en cliente; render en inglés
+const lang = 'en';
+const dict = enDict;
 const enB64 = Buffer.from(JSON.stringify(enDict)).toString('base64');
 const esB64 = Buffer.from(JSON.stringify(esDict)).toString('base64');
 ---

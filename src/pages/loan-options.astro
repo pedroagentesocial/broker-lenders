@@ -5,19 +5,11 @@ import esLO from '../translations/loan-options/es.json';
 import ImportantLegal from '../components/ImportantLegal.astro';
 import Contact from '../components/Contact.astro';
 import TestimonialsSection from '../components/TestimonialsSection.astro';
-export const prerender = false;
-// SSR language resolution: URL → cookie → 'en'
-const cookie = Astro.request.headers.get('cookie') || '';
-const cm = cookie.match(/(?:^|;\s*)lang=([^;]+)/);
-const cookieLang = (cm && cm[1]) ? cm[1].toLowerCase() : null;
-const rawParam = (Astro.url.searchParams.get('lang') || '').toLowerCase();
-const raw = (rawParam || cookieLang || 'en').toLowerCase();
-const lang = ['en', 'es'].includes(raw) ? raw : 'en';
-const dict = lang === 'es' ? esLO : enLO;
-console.log('[i18n][loan-options][SSR] resolve', { href: Astro.url.href, param: rawParam, cookieLang, resolvedLang: lang });
+export const prerender = true;
+const lang = 'en';
+const dict = enLO;
 
-// Ensure UTF-8 response to render accents correctly
-Astro.response.headers.set('Content-Type', 'text/html; charset=UTF-8');
+// Prerender estático, el cliente maneja idioma
 ---
 
 <Layout title={dict?.meta?.title || "Loan Options - Broker Lenders"} lang={lang}>

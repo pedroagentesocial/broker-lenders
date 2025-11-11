@@ -4,11 +4,9 @@ import esDict from '../translations/contact/es.json';
 
 export interface Props { lang?: string }
 const { lang: propLang } = Astro.props as Props;
-// Resolve SSR language from prop first, then from request URL (default English)
-const raw = ((propLang || new URL(Astro.request.url).searchParams.get('lang') || 'en')).toLowerCase();
-const lang = raw === 'es' ? 'es' : 'en';
-const dict = lang === 'es' ? esDict : enDict;
-console.log('[i18n][contact][SSR] resolve', { href: Astro.request.url, lang });
+// Build estático: render inicial en inglés, i18n se aplica en cliente
+const lang = 'en';
+const dict = enDict;
 
 // Embed dictionaries for client i18n
 const enB64 = Buffer.from(JSON.stringify(enDict)).toString('base64');
@@ -104,6 +102,7 @@ const esB64 = Buffer.from(JSON.stringify(esDict)).toString('base64');
       localStorage.setItem('lang', lang);
       const url = new URL(window.location.href);
       url.searchParams.set('lang', lang);
+      document.cookie = `lang=${lang}; path=/; max-age=${60*60*24*365}`;
       window.history.replaceState({}, '', url.toString());
       apply(lang);
     };

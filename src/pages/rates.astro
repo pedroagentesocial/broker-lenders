@@ -6,15 +6,13 @@ import Contact from '../components/Contact.astro';
 import RewardsCard from '../components/RewardsCard.astro';
 import TestimonialsSection from '../components/TestimonialsSection.astro';
 import ImportantLegal from '../components/ImportantLegal.astro';
-export const prerender = false;
+export const prerender = true;
 
-// Importar datos de tasas dinámicos (fallback en SSR)
+// Prerender: proveer payload inicial desde archivo estático y el cliente refetch
 import ratesData from '../data/rates-data.json';
-// Provide a minimal SSR fallback payload encoded to be used client-side
 const ratesSSRPayloadB64 = Buffer.from(JSON.stringify(ratesData), 'utf-8').toString('base64');
 
-// Ensure UTF-8 response to render accents correctly
-Astro.response.headers.set('Content-Type', 'text/html; charset=UTF-8');
+// Prerender estático, el cliente maneja idioma y fecha
 
 function formatTimestamp(timestamp) {
   const date = new Date(timestamp);
@@ -31,15 +29,8 @@ function formatTimestamp(timestamp) {
 }
 
 const formattedTimestamp = formatTimestamp(ratesData.timestamp);
-// SSR language resolution: URL → cookie → 'en'
-const cookie = Astro.request.headers.get('cookie') || '';
-const cm = cookie.match(/(?:^|;\s*)lang=([^;]+)/);
-const cookieLang = (cm && cm[1]) ? cm[1].toLowerCase() : null;
-const rawParam = (Astro.url.searchParams.get('lang') || '').toLowerCase();
-const raw = (rawParam || cookieLang || 'en').toLowerCase();
-const lang = ['en', 'es'].includes(raw) ? raw : 'en';
-const dict = lang === 'es' ? esRates : enRates;
-console.log('[i18n][rates][SSR] resolve', { href: Astro.url.href, param: rawParam, cookieLang, resolvedLang: lang });
+const lang = 'en';
+const dict = enRates;
 ---
 
 <Layout title={dict.meta?.title || "Today's Mortgage Rates - Broker Lenders"} lang={lang}>

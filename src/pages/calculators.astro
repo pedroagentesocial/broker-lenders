@@ -6,20 +6,12 @@ import TestimonialsSection from '../components/TestimonialsSection.astro';
 import en from "../translations/calculators/en.json";
 import es from "../translations/calculators/es.json";
 
-export const prerender = false;
+export const prerender = true;
 
-// Ensure UTF-8 response to render accents correctly
-Astro.response.headers.set('Content-Type', 'text/html; charset=UTF-8');
-
-const url = new URL(Astro.request.url);
-const qsLang = (url.searchParams.get('lang') || '').toLowerCase();
-const cookie = Astro.request.headers.get('cookie') || '';
-const cookieMatch = cookie.match(/(?:^|;\s*)lang=([^;]+)/);
-const cookieLang = (cookieMatch?.[1] || '').toLowerCase();
-const langParam = (qsLang || cookieLang || 'en');
-const lang = langParam === 'es' ? 'es' : 'en';
-const dict = lang === "es" ? es : en;
-const withLang = (path) => (lang ? `${path}?lang=${lang}` : path);
+// Build estático: i18n en cliente; render en inglés
+const lang = 'en';
+const dict = en;
+const withLang = (path) => path;
 // Encode both translations for client-side switching without reload
 const toB64 = (obj) => Buffer.from(JSON.stringify(obj), 'utf-8').toString('base64');
 const enB64 = toB64(en);

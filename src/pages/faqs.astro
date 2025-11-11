@@ -8,8 +8,7 @@ export interface FAQItem {
   answer: string;
 }
 
-// Ensure UTF-8 response to render accents correctly
-Astro.response.headers.set('Content-Type', 'text/html; charset=UTF-8');
+// Build estático: no usar Astro.response en prerender
 
 const generalFAQs: FAQItem[] = [
   { question: "What is a mortgage?", answer: "A mortgage is a loan used to purchase or maintain a home, land, or other types of real estate. The borrower agrees to pay the lender over time, typically in a series of regular payments that are divided into principal and interest." },

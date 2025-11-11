@@ -11,26 +11,11 @@ import TestimonialsSection from '../components/TestimonialsSection.astro';
 import ImportantLegal from '../components/ImportantLegal.astro';
 import en from '../translations/index/en.json';
 import es from '../translations/index/es.json';
-export const prerender = false;
+export const prerender = true;
 
-// Ensure UTF-8 response to render accents correctly
-Astro.response.headers.set('Content-Type', 'text/html; charset=UTF-8');
-
-// Resolve language on the server side from URL or cookie
-const cookie = Astro.request.headers.get('cookie') || '';
-const m = cookie.match(/(?:^|;\s*)lang=([^;]+)/);
-const cookieLang = (m && m[1]) ? m[1].toLowerCase() : null;
-const rawParam = new URL(Astro.request.url).searchParams.get('lang');
-const raw = (rawParam || cookieLang || 'en').toLowerCase();
-const lang = ['en', 'es'].includes(raw) ? raw : 'en';
-const dict = lang === 'es' ? es : en;
-// SSR debug
-console.log('[i18n][index][SSR] resolve', {
-  href: Astro.request.url,
-  param: rawParam,
-  cookieLang,
-  resolvedLang: lang,
-});
+// Prerender estático: usar 'en' como contenido inicial; el cliente ajusta idioma
+const lang = 'en';
+const dict = en;
 const enB64 = Buffer.from(JSON.stringify(en)).toString('base64');
 const esB64 = Buffer.from(JSON.stringify(es)).toString('base64');
 ---

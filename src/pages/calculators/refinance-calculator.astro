@@ -8,18 +8,10 @@ import esDict from '../../translations/refinance-calculator/es.json';
 const enB64 = Buffer.from(JSON.stringify(enDict)).toString('base64');
 const esB64 = Buffer.from(JSON.stringify(esDict)).toString('base64');
 
-export const prerender = false;
-// Ensure UTF-8 response to avoid corrupted accented characters on first load
-Astro.response.headers.set('Content-Type', 'text/html; charset=UTF-8');
-// SSR language detection for i18n
-const reqUrl = new URL(Astro.request.url);
-const qsLang = (reqUrl.searchParams.get('lang') || '').toLowerCase();
-const cookieHeader = Astro.request.headers.get('cookie') || '';
-const cookieLangMatch = cookieHeader.match(/(?:^|;\s*)lang=([^;]+)/);
-const cookieLang = (cookieLangMatch?.[1] || '').toLowerCase();
-const langParam = (qsLang || cookieLang || 'en');
-const lang = ['en', 'es'].includes(langParam) ? langParam : 'en';
-const dict = lang === 'es' ? esDict : enDict;
+export const prerender = true;
+// Build estático: i18n en cliente; render en inglés
+const lang = 'en';
+const dict = enDict;
 ---
 <!-- i18n payload for Refinance Calculator -->
 <div id="i18n-rc" data-en={enB64} data-es={esB64} style="display:none"></div>

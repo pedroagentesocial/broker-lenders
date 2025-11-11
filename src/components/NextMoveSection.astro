@@ -7,12 +7,13 @@ import enDict from "../translations/next-move/en.json";
 import esDict from "../translations/next-move/es.json";
 
 export interface Props { lang?: string }
-// Prefer prop lang, fallback to request URL for SSR reliability
+// Build estático: render inicial en inglés y client i18n
 const { lang: propLang } = Astro.props as Props;
-const rawLang = ((propLang || new URL(Astro.request.url).searchParams.get('lang') || 'en')).toLowerCase();
-const lang = ['en', 'es'].includes(rawLang) ? rawLang : 'en';
-const dict = lang === 'es' ? esDict : enDict;
-console.log('[i18n][next-move][SSR] resolve', { href: Astro.request.url, lang });
+const lang = 'en';
+const dict = enDict;
+// Embed dictionaries for client i18n
+const enB64 = Buffer.from(JSON.stringify(enDict)).toString('base64');
+const esB64 = Buffer.from(JSON.stringify(esDict)).toString('base64');
 ---
 
 <section class="py-16 bg-white">
@@ -23,7 +24,7 @@ console.log('[i18n][next-move][SSR] resolve', { href: Astro.request.url, lang })
     
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       <!-- Buy smart. Save more. -->
-      <a href={`/buy?lang=${lang}`} class="bg-red-500/10 p-6 rounded-xl text-center hover:bg-red-500/40 transition-colors block">
+      <a href={`/buy`} class="bg-red-500/10 p-6 rounded-xl text-center hover:bg-red-500/40 transition-colors block">
         <div class="w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4">
           <div
             class="w-8 h-8 bg-red-600"
@@ -35,7 +36,7 @@ console.log('[i18n][next-move][SSR] resolve', { href: Astro.request.url, lang })
       </a>
       
       <!-- Refinance made simple. -->
-      <a href={`/refinance?lang=${lang}`} class="bg-blue-500/10 p-6 rounded-xl text-center hover:bg-blue-500/40 transition-colors block">
+      <a href={`/refinance`} class="bg-blue-500/10 p-6 rounded-xl text-center hover:bg-blue-500/40 transition-colors block">
         <div class="w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4">
           <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
@@ -45,7 +46,7 @@ console.log('[i18n][next-move][SSR] resolve', { href: Astro.request.url, lang })
       </a>
       
       <!-- Transform equity into opportunity. -->
-      <a href={`/calculators?lang=${lang}`} class="bg-green-500/10 p-6 rounded-xl text-center hover:bg-green-500/40 transition-colors block">
+      <a href={`/calculators`} class="bg-green-500/10 p-6 rounded-xl text-center hover:bg-green-500/40 transition-colors block">
         <div class="w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4">
           <div
             class="w-8 h-8 bg-green-600"
@@ -57,7 +58,7 @@ console.log('[i18n][next-move][SSR] resolve', { href: Astro.request.url, lang })
       </a>
       
       <!-- Explore your VA loan benefits. -->
-      <a href={`/loan-options?lang=${lang}`} class="bg-purple-500/10 p-6 rounded-xl text-center hover:bg-purple-500/40 transition-colors block">
+      <a href={`/loan-options`} class="bg-purple-500/10 p-6 rounded-xl text-center hover:bg-purple-500/40 transition-colors block">
         <div class="w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4">
           <div
             class="w-8 h-8 bg-purple-600"
@@ -71,11 +72,33 @@ console.log('[i18n][next-move][SSR] resolve', { href: Astro.request.url, lang })
   </div>
 </section>
 
-<script type="module">
-import enDict from '/src/translations/next-move/en.json';
-import esDict from '/src/translations/next-move/es.json';
+<!-- i18n payload for Next Move -->
+<div id="i18n-nextmove" data-en={enB64} data-es={esB64} style="display:none"></div>
+<script is:inline>
 (() => {
-  const translations = { en: enDict, es: esDict };
+  const root = document.getElementById('i18n-nextmove');
+  const decode = (val) => {
+    try {
+      const b64 = val || '';
+      const bin = atob(b64);
+      const bytes = new Uint8Array(bin.length);
+      for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+      let jsonText = '';
+      try {
+        jsonText = new TextDecoder('utf-8', { fatal: false }).decode(bytes);
+      } catch {
+        try {
+          const percent = Array.from(bin, c => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)).join('');
+          jsonText = decodeURIComponent(percent);
+        } catch { jsonText = bin; }
+      }
+      try { return JSON.parse(jsonText); } catch { return {}; }
+    } catch { return {}; }
+  };
+  const translations = {
+    en: decode(root?.getAttribute('data-en') || ''),
+    es: decode(root?.getAttribute('data-es') || '')
+  };
   const getInitialLang = () => {
     const urlLang = new URLSearchParams(window.location.search).get('lang');
     const stored = localStorage.getItem('lang');
@@ -110,7 +133,7 @@ import esDict from '/src/translations/next-move/es.json';
   };
   // Init
   applyTranslations(getInitialLang());
-  // Also respond to storage events (Header sets lang)
+  // Respond to Header language changes
   window.addEventListener('storage', (ev) => {
     if (ev.key === 'lang' && ev.newValue) applyTranslations(ev.newValue);
   });

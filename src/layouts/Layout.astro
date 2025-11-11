@@ -24,17 +24,20 @@ const { title, lang = 'en' } = Astro.props;
     <script is:inline>
       (() => {
         try {
-          const ssrLang = document.documentElement.getAttribute('lang') || 'en';
-          // Persist to localStorage early so components pick it up
-          try { localStorage.setItem('lang', ssrLang); } catch {}
-          // Persist to cookie for SSR fallbacks across navigations
-          try { document.cookie = `lang=${ssrLang};path=/;max-age=31536000;SameSite=Lax`; } catch {}
-          // Ensure URL reflects current lang without reload
+          const url = new URL(window.location.href);
+          const urlLang = (url.searchParams.get('lang') || '').toLowerCase();
+          const ssrLang = (document.documentElement.getAttribute('lang') || 'en').toLowerCase();
+          const initial = (urlLang === 'es' || urlLang === 'en') ? urlLang : ssrLang;
+          // Reflect chosen lang in <html>
+          try { document.documentElement.setAttribute('lang', initial); } catch {}
+          // Persist to localStorage & cookie
+          try { localStorage.setItem('lang', initial); } catch {}
+          try { document.cookie = `lang=${initial};path=/;max-age=31536000;SameSite=Lax`; } catch {}
+          // Ensure URL keeps the chosen language without reload
           try {
-            const url = new URL(window.location.href);
             const current = (url.searchParams.get('lang') || '').toLowerCase();
-            if (current !== ssrLang) {
-              url.searchParams.set('lang', ssrLang);
+            if (current !== initial) {
+              url.searchParams.set('lang', initial);
               window.history.replaceState({}, '', url.toString());
             }
           } catch {}

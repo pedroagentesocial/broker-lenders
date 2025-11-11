@@ -9,20 +9,11 @@ import enRefi from '../translations/refinance/en.json';
 import esRefi from '../translations/refinance/es.json';
 const enB64 = Buffer.from(JSON.stringify(enRefi)).toString('base64');
 const esB64 = Buffer.from(JSON.stringify(esRefi)).toString('base64');
-export const prerender = false;
+export const prerender = true;
 
-// Ensure UTF-8 response to render accents correctly
-Astro.response.headers.set('Content-Type', 'text/html; charset=UTF-8');
-
-// SSR language resolution: URL → cookie → 'en'
-const cookie = Astro.request.headers.get('cookie') || '';
-const cm = cookie.match(/(?:^|;\s*)lang=([^;]+)/);
-const cookieLang = (cm && cm[1]) ? cm[1].toLowerCase() : null;
-const rawParam = (Astro.url.searchParams.get('lang') || '').toLowerCase();
-const raw = (rawParam || cookieLang || 'en').toLowerCase();
-const lang = ['en', 'es'].includes(raw) ? raw : 'en';
-const dict = lang === 'es' ? esRefi : enRefi;
-console.log('[i18n][refinance][SSR] resolve', { href: Astro.url.href, param: rawParam, cookieLang, resolvedLang: lang });
+// Prerender estático: idioma lo ajusta el cliente
+const lang = 'en';
+const dict = enRefi;
 ---
 
 <Layout title={dict?.meta?.title || "Refinance Your Home - Broker Lenders"} lang={lang}>
