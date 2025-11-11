@@ -11,6 +11,9 @@ export const prerender = true;
 // Prerender: proveer payload inicial desde archivo estático y el cliente refetch
 import ratesData from '../data/rates-data.json';
 const ratesSSRPayloadB64 = Buffer.from(JSON.stringify(ratesData), 'utf-8').toString('base64');
+// Inline i18n payloads encoded to avoid client imports
+const enB64 = Buffer.from(JSON.stringify(enRates)).toString('base64');
+const esB64 = Buffer.from(JSON.stringify(esRates)).toString('base64');
 
 // Prerender estático, el cliente maneja idioma y fecha
 
@@ -36,6 +39,8 @@ const dict = enRates;
 <Layout title={dict.meta?.title || "Today's Mortgage Rates - Broker Lenders"} lang={lang}>
   <!-- Inline SSR fallback payload for client-side hydration -->
   <div id="rates-ssr-payload" data-b64={ratesSSRPayloadB64} style="display:none"></div>
+  <!-- Inline i18n payloads for client-side translations -->
+  <div id="i18n-rates" data-en={enB64} data-es={esB64} style="display:none"></div>
   <!-- Breadcrumb Section -->
   <div class="bg-white py-4">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -707,11 +712,24 @@ const dict = enRates;
   </script>
 </Layout>
 
-<script type="module">
-import enRates from '/src/translations/rates/en.json';
-import esRates from '/src/translations/rates/es.json';
+<script is:inline>
 (() => {
   try {
+    const i18nEl = document.getElementById('i18n-rates');
+    const decode = (val) => {
+      try {
+        const b64 = val || '';
+        const bin = atob(b64);
+        const bytes = new Uint8Array(bin.length);
+        for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+        const jsonText = new TextDecoder('utf-8').decode(bytes);
+        return JSON.parse(jsonText);
+      } catch { return {}; }
+    };
+    const translations = {
+      en: decode(i18nEl?.getAttribute('data-en') || ''),
+      es: decode(i18nEl?.getAttribute('data-es') || ''),
+    };
     const getInitialLang = () => {
       const urlLang = new URLSearchParams(window.location.search).get('lang');
       const htmlLang = document.documentElement.getAttribute('lang');
@@ -737,125 +755,107 @@ import esRates from '/src/translations/rates/es.json';
       }
       return next;
     };
-    const langForClient = setLanguage(getInitialLang());
-    const dict = langForClient === 'es' ? esRates : enRates;
-    // Exponer diccionario para otros scripts
-    window.__dictRates = dict;
-    const t = (id, value) => { const el = document.getElementById(id); if (el && value) el.textContent = value; };
-    t('rates-hero-title', dict.hero.title);
-    t('rates-hero-subtitle', dict.hero.subtitle);
-    t('rates-hero-cta-primary', dict.hero.ctaPrimary);
-    t('rates-hero-cta-secondary', dict.hero.ctaSecondary);
-    // Estados
-    t('rates-state-utah', dict.grid.states.utah);
-    t('rates-state-idaho', dict.grid.states.idaho);
-    t('rates-state-nevada', dict.grid.states.nevada);
-    t('rates-state-california', dict.grid.states.california);
-    t('rates-state-texas', dict.grid.states.texas);
-    t('rates-state-florida', dict.grid.states.florida);
-    t('rates-state-colorado', dict.grid.states.colorado);
-    // Disclaimer
-    t('rates-grid-disclaimer', dict.grid.disclaimer);
-    // Tarjetas
-    t('rates-card-fixed30-title', dict.grid.cards.fixed30.title);
-    t('rates-label-fixed30-rate', dict.grid.labels.rate);
-    t('rates-label-fixed30-monthly', dict.grid.labels.monthlyPayment);
-    t('rates-label-fixed30-apr', dict.grid.labels.apr);
-    t('rates-label-fixed30-points', dict.grid.labels.points);
-    t('rates-card-fixed30-cta', dict.grid.cta);
-    t('rates-card-fixed20-title', dict.grid.cards.fixed20.title);
-    t('rates-label-fixed20-rate', dict.grid.labels.rate);
-    t('rates-label-fixed20-monthly', dict.grid.labels.monthlyPayment);
-    t('rates-label-fixed20-apr', dict.grid.labels.apr);
-    t('rates-label-fixed20-points', dict.grid.labels.points);
-    t('rates-card-fixed20-cta', dict.grid.cta);
-    t('rates-card-fha30-title', dict.grid.cards.fha30.title);
-    t('rates-label-fha30-rate', dict.grid.labels.rate);
-    t('rates-label-fha30-monthly', dict.grid.labels.monthlyPayment);
-    t('rates-label-fha30-apr', dict.grid.labels.apr);
-    t('rates-label-fha30-points', dict.grid.labels.points);
-    t('rates-card-fha30-cta', dict.grid.cta);
-    t('rates-card-va30-title', dict.grid.cards.va30.title);
-    t('rates-label-va30-rate', dict.grid.labels.rate);
-    t('rates-label-va30-monthly', dict.grid.labels.monthlyPayment);
-    t('rates-label-va30-apr', dict.grid.labels.apr);
-    t('rates-label-va30-points', dict.grid.labels.points);
-    t('rates-card-va30-cta', dict.grid.cta);
-    t('rates-card-jumboFixed30-title', dict.grid.cards.jumboFixed30.title);
-    t('rates-label-jumboFixed30-rate', dict.grid.labels.rate);
-    t('rates-label-jumboFixed30-monthly', dict.grid.labels.monthlyPayment);
-    t('rates-label-jumboFixed30-apr', dict.grid.labels.apr);
-    t('rates-label-jumboFixed30-points', dict.grid.labels.points);
-    t('rates-card-jumboFixed30-cta', dict.grid.cta);
-    // Bloque personalizado
-    t('rates-personalized-title', dict.grid.personalized.title);
-    t('rates-personalized-subtitle', dict.grid.personalized.subtitle);
-    t('rates-personalized-description', dict.grid.personalized.description);
-    t('rates-personalized-cta', dict.grid.personalized.cta);
-    // Footer legal y prefijo
-    t('rates-footer-legal', dict.grid.footer.legal);
-    t('rates-footer-ts-prefix', `${dict.grid.footer.timestampPrefix} ${document.getElementById('rates-footer-ts-prefix')?.textContent?.split(' ').slice(-5).join(' ') || ''}`);
-    // FAQs
-    t('rates-faqs-title', dict.faqs.title);
-    t('rates-faqs-intro', dict.faqs.intro);
-    t('rates-faq-q1-title', dict.faqs.items.q1.title);
-    t('rates-faq-q1-body', dict.faqs.items.q1.body);
-    t('rates-faq-q2-title', dict.faqs.items.q2.title);
-    t('rates-faq-q2-body', dict.faqs.items.q2.body);
-    t('rates-faq-q3-title', dict.faqs.items.q3.title);
-    t('rates-faq-q3-body', dict.faqs.items.q3.body);
-    t('rates-faq-q4-title', dict.faqs.items.q4.title);
-    t('rates-faq-q4-body', dict.faqs.items.q4.body);
-    t('rates-faq-q5-title', dict.faqs.items.q5.title);
-    t('rates-faq-q5-body', dict.faqs.items.q5.body);
-    t('rates-faq-q6-title', dict.faqs.items.q6.title);
-    t('rates-faq-q6-body', dict.faqs.items.q6.body);
-    t('rates-faq-q7-title', dict.faqs.items.q7.title);
-    t('rates-faq-q7-body', dict.faqs.items.q7.body);
-    t('rates-faq-q8-title', dict.faqs.items.q8.title);
-    t('rates-faq-q8-body', dict.faqs.items.q8.body);
-    // Breadcrumb
-    t('rates-breadcrumb-home', (dict.breadcrumb && dict.breadcrumb.home) || 'Home');
-    t('rates-breadcrumb-rates', (dict.breadcrumb && dict.breadcrumb.rates) || 'Rates');
-    // Modal translations
-    if (dict.modal) {
-      t('rates-modal-title', dict.modal.title);
-      t('rates-modal-p1', dict.modal.p1);
-      t('rates-modal-p2-strong', dict.modal.p2Strong);
-      t('rates-modal-p2', dict.modal.p2Rest);
-      t('rates-modal-p3-strong', dict.modal.p3Strong);
-      t('rates-modal-p3', dict.modal.p3Rest);
-      t('rates-modal-p4-strong', dict.modal.p4Strong);
-      t('rates-modal-p4', dict.modal.p4Rest);
-      t('rates-modal-p5', dict.modal.p5);
-      t('rates-modal-p6-strong', dict.modal.p6Strong);
-      t('rates-modal-p6', dict.modal.p6Rest);
-      t('rates-modal-p7-strong', dict.modal.p7Strong);
-      t('rates-modal-p7', dict.modal.p7Rest);
-      t('rates-modal-p8', dict.modal.p8);
-      t('rates-modal-assumptions-title', dict.modal.assumptionsTitle);
-      t('rates-modal-assumptions-intro', dict.modal.assumptionsIntro);
-      if (Array.isArray(dict.modal.assumptions)) {
-        t('rates-modal-assumption-1', dict.modal.assumptions[0]);
-        t('rates-modal-assumption-2', dict.modal.assumptions[1]);
-        t('rates-modal-assumption-3', dict.modal.assumptions[2]);
-        t('rates-modal-assumption-4', dict.modal.assumptions[3]);
-        t('rates-modal-assumption-5', dict.modal.assumptions[4]);
-        t('rates-modal-assumption-6', dict.modal.assumptions[5]);
+    const t = (id, value) => { const el = document.getElementById(id); if (el && typeof value === 'string') el.textContent = value; };
+    const applyTranslations = (lang) => {
+      const dict = translations[lang] || translations.en;
+      window.__dictRates = dict;
+      t('rates-hero-title', dict.hero.title);
+      t('rates-hero-subtitle', dict.hero.subtitle);
+      t('rates-hero-cta-primary', dict.hero.ctaPrimary);
+      t('rates-hero-cta-secondary', dict.hero.ctaSecondary);
+      // Estados
+      t('rates-state-utah', dict.grid.states.utah);
+      t('rates-state-idaho', dict.grid.states.idaho);
+      t('rates-state-nevada', dict.grid.states.nevada);
+      t('rates-state-california', dict.grid.states.california);
+      t('rates-state-texas', dict.grid.states.texas);
+      t('rates-state-florida', dict.grid.states.florida);
+      t('rates-state-colorado', dict.grid.states.colorado);
+      // Disclaimer
+      t('rates-grid-disclaimer', dict.grid.disclaimer);
+      // Tarjetas
+      t('rates-card-fixed30-title', dict.grid.cards.fixed30.title);
+      t('rates-label-fixed30-rate', dict.grid.labels.rate);
+      t('rates-label-fixed30-monthly', dict.grid.labels.monthlyPayment);
+      t('rates-label-fixed30-apr', dict.grid.labels.apr);
+      t('rates-label-fixed30-points', dict.grid.labels.points);
+      t('rates-card-fixed30-cta', dict.grid.cta);
+      t('rates-card-fixed20-title', dict.grid.cards.fixed20.title);
+      t('rates-label-fixed20-rate', dict.grid.labels.rate);
+      t('rates-label-fixed20-monthly', dict.grid.labels.monthlyPayment);
+      t('rates-label-fixed20-apr', dict.grid.labels.apr);
+      t('rates-label-fixed20-points', dict.grid.labels.points);
+      t('rates-card-fixed20-cta', dict.grid.cta);
+      t('rates-card-fha30-title', dict.grid.cards.fha30.title);
+      t('rates-label-fha30-rate', dict.grid.labels.rate);
+      t('rates-label-fha30-monthly', dict.grid.labels.monthlyPayment);
+      t('rates-label-fha30-apr', dict.grid.labels.apr);
+      t('rates-label-fha30-points', dict.grid.labels.points);
+      t('rates-card-fha30-cta', dict.grid.cta);
+      t('rates-card-va30-title', dict.grid.cards.va30.title);
+      t('rates-label-va30-rate', dict.grid.labels.rate);
+      t('rates-label-va30-monthly', dict.grid.labels.monthlyPayment);
+      t('rates-label-va30-apr', dict.grid.labels.apr);
+      t('rates-label-va30-points', dict.grid.labels.points);
+      t('rates-card-va30-cta', dict.grid.cta);
+      t('rates-card-jumboFixed30-title', dict.grid.cards.jumboFixed30.title);
+      t('rates-label-jumboFixed30-rate', dict.grid.labels.rate);
+      t('rates-label-jumboFixed30-monthly', dict.grid.labels.monthlyPayment);
+      t('rates-label-jumboFixed30-apr', dict.grid.labels.apr);
+      t('rates-label-jumboFixed30-points', dict.grid.labels.points);
+      t('rates-card-jumboFixed30-cta', dict.grid.cta);
+      // Bloque personalizado
+      t('rates-personalized-title', dict.grid.personalized.title);
+      t('rates-personalized-subtitle', dict.grid.personalized.subtitle);
+      t('rates-personalized-description', dict.grid.personalized.description);
+      t('rates-personalized-cta', dict.grid.personalized.cta);
+      // Footer legal y prefijo (prefijo combinado con fecha SSR/hidratada)
+      t('rates-footer-legal', dict.grid.footer.legal);
+      const tsEl = document.getElementById('rates-footer-ts-prefix');
+      if (tsEl) {
+        const existingTail = tsEl.textContent?.split(' ').slice(-5).join(' ') || '';
+        tsEl.textContent = `${dict.grid.footer.timestampPrefix} ${existingTail}`.trim();
       }
-    }
-    // Update document title if provided
-    if (dict.meta && dict.meta.title) {
-      document.title = dict.meta.title;
-    }
-    console.log('[i18n][rates][client] hero + grid + faqs + modal updated', langForClient);
+      // FAQs
+      t('rates-faqs-title', dict.faqs.title);
+      t('rates-faqs-intro', dict.faqs.intro);
+      t('rates-faq-q1-title', dict.faqs.items.q1.title);
+      t('rates-faq-q1-body', dict.faqs.items.q1.body);
+      t('rates-faq-q2-title', dict.faqs.items.q2.title);
+      t('rates-faq-q2-body', dict.faqs.items.q2.body);
+      t('rates-faq-q3-title', dict.faqs.items.q3.title);
+      t('rates-faq-q3-body', dict.faqs.items.q3.body);
+      t('rates-faq-q4-title', dict.faqs.items.q4.title);
+      t('rates-faq-q4-body', dict.faqs.items.q4.body);
+      t('rates-faq-q5-title', dict.faqs.items.q5.title);
+      t('rates-faq-q5-body', dict.faqs.items.q5.body);
+      t('rates-faq-q6-title', dict.faqs.items.q6.title);
+      t('rates-faq-q6-body', dict.faqs.items.q6.body);
+      t('rates-faq-q7-title', dict.faqs.items.q7.title);
+      t('rates-faq-q7-body', dict.faqs.items.q7.body);
+      t('rates-faq-q8-title', dict.faqs.items.q8.title);
+      t('rates-faq-q8-body', dict.faqs.items.q8.body);
+      // Breadcrumb
+      t('rates-breadcrumb-home', (dict.breadcrumb && dict.breadcrumb.home) || 'Home');
+      t('rates-breadcrumb-rates', (dict.breadcrumb && dict.breadcrumb.rates) || 'Rates');
+      // Título del documento
+      if (dict.meta && dict.meta.title) document.title = dict.meta.title;
+      console.log('[i18n][rates][client] translations applied', lang);
+    };
+    const initial = setLanguage(getInitialLang());
+    applyTranslations(initial);
+    // Expose for other scripts (e.g., storage event)
+    window.__applyRatesTranslations = (lang) => {
+      const next = setLanguage(lang);
+      applyTranslations(next);
+    };
   } catch (e) {
     console.warn('[i18n][rates][client] update error', e);
   }
 })();
 </script>
 
-<script>
+<script is:inline>
   // Sync language changes from Header/localStorage to this page
   window.addEventListener('storage', (ev) => {
     try {
@@ -866,13 +866,10 @@ import esRates from '/src/translations/rates/es.json';
         if (newUrl !== window.location.href) {
           window.history.replaceState({}, '', newUrl);
         }
-        // Reaplicar traducciones si el módulo expuso dict
-        const dict = ev.newValue === 'es' ? window.__dictRates && esRates : window.__dictRates && enRates;
-        // Si el módulo no está accesible, fuerza recarga
-        if (!window.__dictRates) {
-          window.location.replace(newUrl);
+        if (typeof window.__applyRatesTranslations === 'function') {
+          window.__applyRatesTranslations(ev.newValue);
         } else {
-          // No rehacemos todo por ahora; la recarga suave arriba suele ser suficiente
+          window.location.replace(newUrl);
         }
       }
     } catch {}
