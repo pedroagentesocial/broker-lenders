@@ -1,0 +1,173 @@
+{
+  "title": "Privacy Policy - Broker Lenders",
+  "breadcrumb": {
+    "home": "Home",
+    "legal": "Legal",
+    "privacy": "Privacy Policy"
+  },
+  "sections": {
+    "overview": {
+      "title": "1. Overview",
+      "p1": "At Broker Lenders, we are committed to protecting your privacy and maintaining the confidentiality of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.",
+      "p2": "Broker Lenders is operated by Pedro Lira (NMLS #318973) and Xpert Home Lending (NMLS #2179191). We are licensed mortgage professionals who understand the importance of protecting sensitive financial information.",
+      "p3": "By using our website or services, you consent to the data practices described in this policy."
+    },
+    "collection": {
+      "title": "2. Information We Collect",
+      "personalTitle": "Personal Information",
+      "personalIntro": "We may collect personal information that you voluntarily provide to us, including:",
+      "personalItems": {
+        "i1": "Name, address, phone number, and email address",
+        "i2": "Social Security number and date of birth",
+        "i3": "Employment information and income details",
+        "i4": "Financial information including assets, debts, and credit history",
+        "i5": "Property information for loan applications",
+        "i6": "Bank account and other financial account information"
+      },
+      "autoTitle": "Automatically Collected Information",
+      "autoIntro": "When you visit our website, we may automatically collect:",
+      "autoItems": {
+        "i1": "IP address and device information",
+        "i2": "Browser type and version",
+        "i3": "Pages visited and time spent on our website",
+        "i4": "Referring website information",
+        "i5": "Location data (with your consent)"
+      },
+      "thirdTitle": "Third-Party Information",
+      "thirdP": "We may obtain information about you from third parties, including credit bureaus, employers, and other financial institutions, as necessary to process your loan application and comply with regulatory requirements."
+    },
+    "use": {
+      "title": "3. How We Use Your Information",
+      "p1": "We use your information for the following purposes:",
+      "items": {
+        "i1": "Processing and underwriting loan applications",
+        "i2": "Verifying your identity and preventing fraud",
+        "i3": "Communicating with you about your loan application and services",
+        "i4": "Providing customer support and responding to inquiries",
+        "i5": "Complying with legal and regulatory requirements",
+        "i6": "Improving our website and services",
+        "i7": "Sending you marketing communications (with your consent)",
+        "i8": "Conducting business analytics and research"
+      },
+      "pEnd": "We will only use your information for the purposes disclosed in this policy or as otherwise authorized by you."
+    },
+    "sharing": {
+      "title": "4. Information Sharing and Disclosure",
+      "p1": "We may share your information in the following circumstances:",
+      "serviceTitle": "Service Providers",
+      "serviceP": "We may share information with trusted third-party service providers who assist us in operating our business, including:",
+      "serviceItems": {
+        "i1": "Loan processors and underwriters",
+        "i2": "Credit reporting agencies",
+        "i3": "Appraisers and title companies",
+        "i4": "Technology service providers",
+        "i5": "Legal and professional advisors"
+      },
+      "legalTitle": "Legal Requirements",
+      "legalP": "We may disclose your information when required by law or to:",
+      "legalItems": {
+        "i1": "Comply with legal processes or government requests",
+        "i2": "Protect our rights, property, or safety",
+        "i3": "Prevent fraud or illegal activities",
+        "i4": "Comply with regulatory requirements"
+      },
+      "businessTitle": "Business Transfers",
+      "businessP": "In the event of a merger, acquisition, or sale of assets, your information may be transferred to the acquiring entity, subject to the same privacy protections."
+    },
+    "security": {
+      "title": "5. Data Security",
+      "p1": "We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.",
+      "p2": "Our security measures include:",
+      "items": {
+        "i1": "SSL encryption for data transmission",
+        "i2": "Secure servers and databases",
+        "i3": "Access controls and authentication procedures",
+        "i4": "Regular security assessments and updates",
+        "i5": "Employee training on data protection"
+      },
+      "pEnd": "While we strive to protect your information, no method of transmission over the internet or electronic storage is 100% secure. We cannot guarantee absolute security but will notify you of any data breaches as required by law."
+    },
+    "cookies": {
+      "title": "6. Cookies and Tracking Technologies",
+      "p1": "We use cookies and similar tracking technologies to enhance your experience on our website. Cookies are small data files stored on your device that help us:",
+      "items": {
+        "i1": "Remember your preferences and settings",
+        "i2": "Analyze website traffic and usage patterns",
+        "i3": "Provide personalized content and advertisements",
+        "i4": "Improve website functionality and performance"
+      },
+      "p2": "You can control cookie settings through your browser preferences. However, disabling cookies may affect the functionality of our website.",
+      "p3": "We may also use third-party analytics services, such as Google Analytics, to help us understand how visitors use our website."
+    },
+    "rights": {
+      "title": "7. Your Rights and Choices",
+      "p1": "You have certain rights regarding your personal information:",
+      "items": {
+        "i1": "Access: Request access to your personal information",
+        "i2": "Correction: Request correction of inaccurate information",
+        "i3": "Deletion: Request deletion of your information (subject to legal requirements)",
+        "i4": "Portability: Request a copy of your information in a portable format",
+        "i5": "Opt-out: Unsubscribe from marketing communications",
+        "i6": "Restriction: Request limitation of processing in certain circumstances"
+      },
+      "pEnd": "To exercise these rights, please contact us using the information provided in the Contact section. We will respond to your request within the timeframe required by applicable law."
+    },
+    "ccpa": {
+      "title": "8. California Privacy Rights (CCPA)",
+      "p1": "If you are a California resident, you have additional rights under the California Consumer Privacy Act (CCPA):",
+      "items": {
+        "i1": "Right to know what personal information is collected, used, shared, or sold",
+        "i2": "Right to delete personal information held by us",
+        "i3": "Right to opt-out of the sale of personal information",
+        "i4": "Right to non-discrimination for exercising CCPA rights"
+      },
+      "note": "Note: We do not sell personal information to third parties for monetary consideration.",
+      "pEnd": "To exercise your CCPA rights, please contact us at the information provided below. We may need to verify your identity before processing your request."
+    },
+    "children": {
+      "title": "9. Children's Privacy",
+      "p1": "Our website and services are not intended for children under the age of 18. We do not knowingly collect personal information from children under 18.",
+      "pEnd": "If we become aware that we have collected personal information from a child under 18, we will take steps to delete such information promptly."
+    },
+    "changes": {
+      "title": "10. Changes to This Privacy Policy",
+      "p1": "We may update this Privacy Policy from time to time to reflect changes in our practices or applicable laws. We will notify you of any material changes by:",
+      "items": {
+        "i1": "Posting the updated policy on our website",
+        "i2": "Sending you an email notification (if you have provided your email address)",
+        "i3": "Providing notice through our website or services"
+      },
+      "pEnd": "Your continued use of our website or services after any changes indicates your acceptance of the updated Privacy Policy."
+    },
+    "contact": {
+      "title": "11. Contact Information",
+      "p1": "If you have any questions about this Privacy Policy or our privacy practices, please contact us:",
+      "box": {
+        "name": "Broker Lenders",
+        "pedro": "Pedro Lira, NMLS #318973",
+        "xpert": "Xpert Home Lending, NMLS #2179191",
+        "labels": {
+          "phone": "Phone:",
+          "email": "Email:",
+          "website": "Website:"
+        },
+        "values": {
+          "phone": "(801) 307-0273",
+          "email": "privacy@brokerlenders.com",
+          "website": "www.brokerlenders.com"
+        }
+      },
+      "pEnd": "We will respond to your inquiry within a reasonable timeframe and in accordance with applicable law."
+    },
+    "footer": {
+      "effective": "This Privacy Policy is effective as of December 2024 and applies to all information collected by Broker Lenders.",
+      "copy": "© 2024 Broker Lenders. All rights reserved. Equal Housing Lender."
+    }
+  },
+  "sidebar": {
+    "legal_info": "Legal Info",
+    "terms_of_use": "Terms Of Use",
+    "disclosures": "Disclosures And Licenses",
+    "privacy_policy": "Privacy Policy"
+  }
+}

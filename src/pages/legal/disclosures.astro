@@ -1,24 +1,33 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import enDict from '../../translations/disclosures/en.json';
+import esDict from '../../translations/disclosures/es.json';
+export const prerender = true;
+const lang = 'en';
+const dict = enDict;
+const enB64 = Buffer.from(JSON.stringify(enDict)).toString('base64');
+const esB64 = Buffer.from(JSON.stringify(esDict)).toString('base64');
 ---
 
-<Layout title="Disclosures and Licenses - Broker Lenders">
+<Layout title={dict.title} lang={lang}>
   <div class="min-h-screen bg-white">
+    <!-- i18n payload for Disclosures page -->
+    <div id="i18n-disclosures" data-en={enB64} data-es={esB64} style="display:none"></div>
     <!-- Breadcrumb Section -->
     <div class="bg-white border-b border-gray-200">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <nav class="flex" aria-label="Breadcrumb">
           <ol class="flex items-center space-x-2">
             <li>
-              <a href="/" class="text-gray-500 hover:text-gray-700 transition-colors">Home</a>
+              <a href={`/?lang=${lang}`} class="text-gray-500 hover:text-gray-700 transition-colors" data-i18n="breadcrumb.home">Home</a>
             </li>
             <li class="flex items-center">
               <span class="text-gray-400 mx-2">/</span>
-              <a href="/legal/terms-of-use" class="text-gray-500 hover:text-gray-700 transition-colors">Legal</a>
+              <a href={`/legal/terms-of-use?lang=${lang}`} class="text-gray-500 hover:text-gray-700 transition-colors" data-i18n="breadcrumb.legal">Legal</a>
             </li>
             <li class="flex items-center">
               <span class="text-gray-400 mx-2">/</span>
-              <span class="text-gray-900 font-medium">Disclosures</span>
+              <span class="text-gray-900 font-medium" data-i18n="breadcrumb.disclosures">Disclosures</span>
             </li>
           </ol>
         </nav>
@@ -33,20 +42,20 @@ import Layout from '../../layouts/Layout.astro';
           <div class="bg-white p-8 space-y-8">
             
             <section id="company-info">
-              <h2 class="text-2xl font-bold text-gray-900 mb-4">1. Company Information</h2>
+              <h2 class="text-2xl font-bold text-gray-900 mb-4" data-i18n="sections.company.title">1. Company Information</h2>
               <div class="prose prose-gray max-w-none">
                 <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
-                  <h3 class="text-lg font-semibold text-blue-900 mb-3">Broker Lenders</h3>
+                  <h3 class="text-lg font-semibold text-blue-900 mb-3" data-i18n="sections.company.box_title">Broker Lenders</h3>
                   <div class="text-blue-800 space-y-2">
-                    <p><strong>Licensed Mortgage Loan Originator:</strong> Pedro Lira</p>
-                    <p><strong>NMLS ID:</strong> #318973</p>
-                    <p><strong>Company:</strong> Xpert Home Lending</p>
-                    <p><strong>Company NMLS ID:</strong> #2179191</p>
-                    <p><strong>Phone:</strong> (801) 307-0273</p>
-                    <p><strong>Email:</strong> info@brokerlenders.com</p>
+                    <p><strong data-i18n="sections.company.labels.lender">Licensed Mortgage Loan Originator:</strong> Pedro Lira</p>
+                    <p><strong data-i18n="sections.company.labels.nmls_id">NMLS ID:</strong> #318973</p>
+                    <p><strong data-i18n="sections.company.labels.company">Company:</strong> Xpert Home Lending</p>
+                    <p><strong data-i18n="sections.company.labels.company_nmls_id">Company NMLS ID:</strong> #2179191</p>
+                    <p><strong data-i18n="sections.company.labels.phone">Phone:</strong> (801) 307-0273</p>
+                    <p><strong data-i18n="sections.company.labels.email">Email:</strong> info@brokerlenders.com</p>
                   </div>
                 </div>
-                <p class="text-gray-700 leading-relaxed">
+                <p class="text-gray-700 leading-relaxed" data-i18n="sections.company.p1">
                   Broker Lenders operates under the supervision of licensed mortgage professionals who are committed to providing ethical and compliant mortgage lending services. All loan originators are licensed and registered through the Nationwide Multistate Licensing System (NMLS).
                 </p>
               </div>
@@ -56,22 +65,22 @@ import Layout from '../../layouts/Layout.astro';
             <hr class="border-t border-gray-200 my-8">
 
             <section id="nmls-info">
-              <h2 class="text-2xl font-bold text-gray-900 mb-4">2. NMLS Information</h2>
+              <h2 class="text-2xl font-bold text-gray-900 mb-4" data-i18n="sections.nmls.title">2. NMLS Information</h2>
               <div class="prose prose-gray max-w-none">
-                <p class="text-gray-700 leading-relaxed mb-4">
+                <p class="text-gray-700 leading-relaxed mb-4" data-i18n="sections.nmls.p1">
                   The Nationwide Multistate Licensing System (NMLS) is a system that allows uniform license applications, renewals, and amendments; uniform reporting; and improved tracking and monitoring of licensed companies and individuals.
                 </p>
                 <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 mb-4">
-                  <h3 class="text-lg font-semibold text-gray-900 mb-3">NMLS Consumer Access</h3>
-                  <p class="text-gray-700 mb-3">
+                  <h3 class="text-lg font-semibold text-gray-900 mb-3" data-i18n="sections.nmls.box_title">NMLS Consumer Access</h3>
+                  <p class="text-gray-700 mb-3" data-i18n="sections.nmls.verify">
                     You can verify our licensing information and view our licensing history at:
                   </p>
-                  <p class="text-blue-600 font-medium">www.nmlsconsumeraccess.org</p>
-                  <p class="text-sm text-gray-600 mt-2">
+                  <p class="text-blue-600 font-medium" data-i18n="sections.nmls.link_text">www.nmlsconsumeraccess.org</p>
+                  <p class="text-sm text-gray-600 mt-2" data-i18n="sections.nmls.search_hint">
                     Search using our NMLS IDs: Pedro Lira #318973 or Xpert Home Lending #2179191
                   </p>
                 </div>
-                <p class="text-gray-700 leading-relaxed">
+                <p class="text-gray-700 leading-relaxed" data-i18n="sections.nmls.pEnd">
                   NMLS provides a comprehensive database where consumers can research the background and licensing status of mortgage loan originators and companies.
                 </p>
               </div>
@@ -81,69 +90,69 @@ import Layout from '../../layouts/Layout.astro';
             <hr class="border-t border-gray-200 my-8">
 
             <section id="licensing">
-              <h2 class="text-2xl font-bold text-gray-900 mb-4">3. State Licensing Information</h2>
+              <h2 class="text-2xl font-bold text-gray-900 mb-4" data-i18n="sections.licensing.title">3. State Licensing Information</h2>
               <div class="prose prose-gray max-w-none">
-                <p class="text-gray-700 leading-relaxed mb-4">
+                <p class="text-gray-700 leading-relaxed mb-4" data-i18n="sections.licensing.intro">
                   Broker Lenders is licensed to conduct mortgage lending business in multiple states. Our licensing status varies by state and may include:
                 </p>
                 
-                <h3 class="text-lg font-semibold text-gray-900 mb-3">California</h3>
+                <h3 class="text-lg font-semibold text-gray-900 mb-3" data-i18n="sections.licensing.states.california.title">California</h3>
                 <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-4">
-                  <p class="text-yellow-800">
+                  <p class="text-yellow-800" data-i18n="sections.licensing.states.california.p">
                     Licensed by the Department of Financial Protection and Innovation under the California Residential Mortgage Lending Act. Licensed by the Department of Financial Protection and Innovation under the California Financing Law License.
                   </p>
                 </div>
 
-                <h3 class="text-lg font-semibold text-gray-900 mb-3">Utah</h3>
+                <h3 class="text-lg font-semibold text-gray-900 mb-3" data-i18n="sections.licensing.states.utah.title">Utah</h3>
                 <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4">
-                  <p class="text-blue-800">
+                  <p class="text-blue-800" data-i18n="sections.licensing.states.utah.p">
                     Licensed by the Utah Department of Financial Institutions. Utah Mortgage Lender License.
                   </p>
                 </div>
 
-                <h3 class="text-lg font-semibold text-gray-900 mb-3">Idaho</h3>
+                <h3 class="text-lg font-semibold text-gray-900 mb-3" data-i18n="sections.licensing.states.idaho.title">Idaho</h3>
                 <div class="bg-green-50 border border-green-200 rounded-lg p-4 mb-4">
-                  <p class="text-green-800">
+                  <p class="text-green-800" data-i18n="sections.licensing.states.idaho.p">
                     Licensed by the Idaho Department of Finance. Idaho Mortgage Broker/Lender License.
                   </p>
                 </div>
 
-                <h3 class="text-lg font-semibold text-gray-900 mb-3">Texas</h3>
+                <h3 class="text-lg font-semibold text-gray-900 mb-3" data-i18n="sections.licensing.states.texas.title">Texas</h3>
                 <div class="bg-purple-50 border border-purple-200 rounded-lg p-4 mb-4">
-                  <p class="text-purple-800">
+                  <p class="text-purple-800" data-i18n="sections.licensing.states.texas.p">
                     Licensed by the Texas Department of Savings and Mortgage Lending. Texas Residential Mortgage Loan Originator License.
                   </p>
                 </div>
 
-                <h3 class="text-lg font-semibold text-gray-900 mb-3">Nevada</h3>
+                <h3 class="text-lg font-semibold text-gray-900 mb-3" data-i18n="sections.licensing.states.nevada.title">Nevada</h3>
                 <div class="bg-orange-50 border border-orange-200 rounded-lg p-4 mb-4">
-                  <p class="text-orange-800">
+                  <p class="text-orange-800" data-i18n="sections.licensing.states.nevada.p">
                     Licensed by the Nevada Division of Mortgage Lending. Nevada Mortgage Broker License.
                   </p>
                 </div>
 
-                <h3 class="text-lg font-semibold text-gray-900 mb-3">Florida</h3>
+                <h3 class="text-lg font-semibold text-gray-900 mb-3" data-i18n="sections.licensing.states.florida.title">Florida</h3>
                 <div class="bg-teal-50 border border-teal-200 rounded-lg p-4 mb-4">
-                  <p class="text-teal-800">
+                  <p class="text-teal-800" data-i18n="sections.licensing.states.florida.p">
                     Licensed by the Florida Office of Financial Regulation. Florida Mortgage Lender License.
                   </p>
                 </div>
 
-                <h3 class="text-lg font-semibold text-gray-900 mb-3">Colorado</h3>
+                <h3 class="text-lg font-semibold text-gray-900 mb-3" data-i18n="sections.licensing.states.colorado.title">Colorado</h3>
                 <div class="bg-indigo-50 border border-indigo-200 rounded-lg p-4 mb-4">
-                  <p class="text-indigo-800">
+                  <p class="text-indigo-800" data-i18n="sections.licensing.states.colorado.p">
                     Licensed by the Colorado Division of Real Estate. Colorado Mortgage Loan Originator License.
                   </p>
                 </div>
 
-                <h3 class="text-lg font-semibold text-gray-900 mb-3">Additional States</h3>
-                <p class="text-gray-700 leading-relaxed mb-4">
+                <h3 class="text-lg font-semibold text-gray-900 mb-3" data-i18n="sections.licensing.additional_title">Additional States</h3>
+                <p class="text-gray-700 leading-relaxed mb-4" data-i18n="sections.licensing.additional_p">
                   We may maintain licenses in additional states as required by law. Specific licensing information for each state can be verified through the NMLS Consumer Access website.
                 </p>
                 
                 <div class="bg-red-50 border border-red-200 rounded-lg p-4">
-                  <p class="text-red-800 font-medium">Important Notice:</p>
-                  <p class="text-red-700 mt-2">
+                  <p class="text-red-800 font-medium" data-i18n="sections.licensing.notice_title">Important Notice:</p>
+                  <p class="text-red-700 mt-2" data-i18n="sections.licensing.notice_p">
                     We only conduct business in states where we are properly licensed. If you are located in a state where we are not licensed, we cannot provide mortgage lending services to you.
                   </p>
                 </div>
@@ -154,7 +163,7 @@ import Layout from '../../layouts/Layout.astro';
             <hr class="border-t border-gray-200 my-8">
 
             <section id="equal-housing">
-              <h2 class="text-2xl font-bold text-gray-900 mb-4">4. Equal Housing Lender</h2>
+              <h2 class="text-2xl font-bold text-gray-900 mb-4" data-i18n="sections.equalHousing.title">4. Equal Housing Lender</h2>
               <div class="prose prose-gray max-w-none">
                 <div class="flex items-start space-x-4 mb-6">
                   <div class="flex-shrink-0">
@@ -165,28 +174,28 @@ import Layout from '../../layouts/Layout.astro';
                     </div>
                   </div>
                   <div>
-                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Equal Housing Opportunity</h3>
-                    <p class="text-gray-700 leading-relaxed">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2" data-i18n="sections.equalHousing.box_title">Equal Housing Opportunity</h3>
+                    <p class="text-gray-700 leading-relaxed" data-i18n="sections.equalHousing.p1">
                       Broker Lenders is committed to ensuring that all qualified applicants receive equal treatment and access to credit, regardless of race, color, religion, sex, handicap, familial status, or national origin.
                     </p>
                   </div>
                 </div>
                 
-                <p class="text-gray-700 leading-relaxed mb-4">
+                <p class="text-gray-700 leading-relaxed mb-4" data-i18n="sections.equalHousing.p2">
                   We comply with the Fair Housing Act and all applicable fair lending laws. We do not discriminate in any aspect of a credit transaction on the basis of:
                 </p>
                 <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-4">
-                  <li>Race or color</li>
-                  <li>Religion</li>
-                  <li>National origin</li>
-                  <li>Sex or gender</li>
-                  <li>Marital status</li>
-                  <li>Age (provided the applicant has the capacity to contract)</li>
-                  <li>Handicap or disability</li>
-                  <li>Familial status</li>
-                  <li>Receipt of income from public assistance programs</li>
+                  <li data-i18n="sections.equalHousing.items.i1">Race or color</li>
+                  <li data-i18n="sections.equalHousing.items.i2">Religion</li>
+                  <li data-i18n="sections.equalHousing.items.i3">National origin</li>
+                  <li data-i18n="sections.equalHousing.items.i4">Sex or gender</li>
+                  <li data-i18n="sections.equalHousing.items.i5">Marital status</li>
+                  <li data-i18n="sections.equalHousing.items.i6">Age (provided the applicant has the capacity to contract)</li>
+                  <li data-i18n="sections.equalHousing.items.i7">Handicap or disability</li>
+                  <li data-i18n="sections.equalHousing.items.i8">Familial status</li>
+                  <li data-i18n="sections.equalHousing.items.i9">Receipt of income from public assistance programs</li>
                 </ul>
-                <p class="text-gray-700 leading-relaxed">
+                <p class="text-gray-700 leading-relaxed" data-i18n="sections.equalHousing.pEnd">
                   If you believe you have been discriminated against, you may file a complaint with the Consumer Financial Protection Bureau or the Department of Housing and Urban Development.
                 </p>
               </div>
@@ -196,36 +205,36 @@ import Layout from '../../layouts/Layout.astro';
             <hr class="border-t border-gray-200 my-8">
 
             <section id="regulatory-compliance">
-              <h2 class="text-2xl font-bold text-gray-900 mb-4">5. Regulatory Compliance</h2>
+              <h2 class="text-2xl font-bold text-gray-900 mb-4" data-i18n="sections.regulatory.title">5. Regulatory Compliance</h2>
               <div class="prose prose-gray max-w-none">
-                <p class="text-gray-700 leading-relaxed mb-4">
+                <p class="text-gray-700 leading-relaxed mb-4" data-i18n="sections.regulatory.p1">
                   Broker Lenders operates in compliance with all applicable federal and state laws and regulations, including:
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                   <div class="bg-gray-50 p-4 rounded-lg">
-                    <h4 class="font-semibold text-gray-900 mb-2">Federal Laws</h4>
+                    <h4 class="font-semibold text-gray-900 mb-2" data-i18n="sections.regulatory.federal_title">Federal Laws</h4>
                     <ul class="text-sm text-gray-700 space-y-1">
-                      <li>• Truth in Lending Act (TILA)</li>
-                      <li>• Real Estate Settlement Procedures Act (RESPA)</li>
-                      <li>• Fair Credit Reporting Act (FCRA)</li>
-                      <li>• Equal Credit Opportunity Act (ECOA)</li>
-                      <li>• Fair Housing Act</li>
-                      <li>• Dodd-Frank Act</li>
-                      <li>• SAFE Act</li>
+                      <li data-i18n="sections.regulatory.federal_items.i1">• Truth in Lending Act (TILA)</li>
+                      <li data-i18n="sections.regulatory.federal_items.i2">• Real Estate Settlement Procedures Act (RESPA)</li>
+                      <li data-i18n="sections.regulatory.federal_items.i3">• Fair Credit Reporting Act (FCRA)</li>
+                      <li data-i18n="sections.regulatory.federal_items.i4">• Equal Credit Opportunity Act (ECOA)</li>
+                      <li data-i18n="sections.regulatory.federal_items.i5">• Fair Housing Act</li>
+                      <li data-i18n="sections.regulatory.federal_items.i6">• Dodd-Frank Act</li>
+                      <li data-i18n="sections.regulatory.federal_items.i7">• SAFE Act</li>
                     </ul>
                   </div>
                   <div class="bg-gray-50 p-4 rounded-lg">
-                    <h4 class="font-semibold text-gray-900 mb-2">Regulatory Agencies</h4>
+                    <h4 class="font-semibold text-gray-900 mb-2" data-i18n="sections.regulatory.agencies_title">Regulatory Agencies</h4>
                     <ul class="text-sm text-gray-700 space-y-1">
-                      <li>• Consumer Financial Protection Bureau (CFPB)</li>
-                      <li>• Federal Trade Commission (FTC)</li>
-                      <li>• Department of Housing and Urban Development (HUD)</li>
-                      <li>• State Banking Departments</li>
-                      <li>• State Licensing Authorities</li>
+                      <li data-i18n="sections.regulatory.agencies_items.i1">• Consumer Financial Protection Bureau (CFPB)</li>
+                      <li data-i18n="sections.regulatory.agencies_items.i2">• Federal Trade Commission (FTC)</li>
+                      <li data-i18n="sections.regulatory.agencies_items.i3">• Department of Housing and Urban Development (HUD)</li>
+                      <li data-i18n="sections.regulatory.agencies_items.i4">• State Banking Departments</li>
+                      <li data-i18n="sections.regulatory.agencies_items.i5">• State Licensing Authorities</li>
                     </ul>
                   </div>
                 </div>
-                <p class="text-gray-700 leading-relaxed">
+                <p class="text-gray-700 leading-relaxed" data-i18n="sections.regulatory.pEnd">
                   We regularly review and update our policies and procedures to ensure ongoing compliance with all applicable laws and regulations.
                 </p>
               </div>
@@ -235,19 +244,19 @@ import Layout from '../../layouts/Layout.astro';
             <hr class="border-t border-gray-200 my-8">
 
             <section id="fair-lending">
-              <h2 class="text-2xl font-bold text-gray-900 mb-4">6. Fair Lending Practices</h2>
+              <h2 class="text-2xl font-bold text-gray-900 mb-4" data-i18n="sections.fairLending.title">6. Fair Lending Practices</h2>
               <div class="prose prose-gray max-w-none">
-                <p class="text-gray-700 leading-relaxed mb-4">
+                <p class="text-gray-700 leading-relaxed mb-4" data-i18n="sections.fairLending.p1">
                   Broker Lenders is committed to fair lending practices and ensuring that all applicants are treated fairly and consistently. Our fair lending program includes:
                 </p>
                 <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-4">
-                  <li>Standardized underwriting criteria applied consistently to all applicants</li>
-                  <li>Regular training for all employees on fair lending laws and practices</li>
-                  <li>Monitoring and testing of lending practices for potential disparities</li>
-                  <li>Clear policies prohibiting discriminatory practices</li>
-                  <li>Regular compliance audits and reviews</li>
+                  <li data-i18n="sections.fairLending.items.i1">Standardized underwriting criteria applied consistently to all applicants</li>
+                  <li data-i18n="sections.fairLending.items.i2">Regular training for all employees on fair lending laws and practices</li>
+                  <li data-i18n="sections.fairLending.items.i3">Monitoring and testing of lending practices for potential disparities</li>
+                  <li data-i18n="sections.fairLending.items.i4">Clear policies prohibiting discriminatory practices</li>
+                  <li data-i18n="sections.fairLending.items.i5">Regular compliance audits and reviews</li>
                 </ul>
-                <p class="text-gray-700 leading-relaxed">
+                <p class="text-gray-700 leading-relaxed" data-i18n="sections.fairLending.pEnd">
                   We evaluate loan applications based solely on creditworthiness and ability to repay, without regard to prohibited factors.
                 </p>
               </div>
@@ -257,23 +266,23 @@ import Layout from '../../layouts/Layout.astro';
             <hr class="border-t border-gray-200 my-8">
 
             <section id="truth-in-lending">
-              <h2 class="text-2xl font-bold text-gray-900 mb-4">7. Truth in Lending Act (TILA)</h2>
+              <h2 class="text-2xl font-bold text-gray-900 mb-4" data-i18n="sections.tila.title">7. Truth in Lending Act (TILA)</h2>
               <div class="prose prose-gray max-w-none">
-                <p class="text-gray-700 leading-relaxed mb-4">
+                <p class="text-gray-700 leading-relaxed mb-4" data-i18n="sections.tila.p1">
                   Under the Truth in Lending Act, we are required to provide you with certain disclosures about your loan, including:
                 </p>
                 <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-4">
-                  <h3 class="text-lg font-semibold text-blue-900 mb-3">Required Disclosures</h3>
+                  <h3 class="text-lg font-semibold text-blue-900 mb-3" data-i18n="sections.tila.box_title">Required Disclosures</h3>
                   <ul class="text-blue-800 space-y-2">
-                    <li>• Loan Estimate (LE) - provided within 3 business days of application</li>
-                    <li>• Closing Disclosure (CD) - provided at least 3 business days before closing</li>
-                    <li>• Annual Percentage Rate (APR)</li>
-                    <li>• Finance charges and total amount financed</li>
-                    <li>• Payment schedule and total of payments</li>
-                    <li>• Right of rescission (for refinances of primary residences)</li>
+                    <li data-i18n="sections.tila.items.i1">• Loan Estimate (LE) - provided within 3 business days of application</li>
+                    <li data-i18n="sections.tila.items.i2">• Closing Disclosure (CD) - provided at least 3 business days before closing</li>
+                    <li data-i18n="sections.tila.items.i3">• Annual Percentage Rate (APR)</li>
+                    <li data-i18n="sections.tila.items.i4">• Finance charges and total amount financed</li>
+                    <li data-i18n="sections.tila.items.i5">• Payment schedule and total of payments</li>
+                    <li data-i18n="sections.tila.items.i6">• Right of rescission (for refinances of primary residences)</li>
                   </ul>
                 </div>
-                <p class="text-gray-700 leading-relaxed">
+                <p class="text-gray-700 leading-relaxed" data-i18n="sections.tila.pEnd">
                   These disclosures help you understand the true cost of your loan and compare offers from different lenders.
                 </p>
               </div>
@@ -283,19 +292,19 @@ import Layout from '../../layouts/Layout.astro';
             <hr class="border-t border-gray-200 my-8">
 
             <section id="respa">
-              <h2 class="text-2xl font-bold text-gray-900 mb-4">8. Real Estate Settlement Procedures Act (RESPA)</h2>
+              <h2 class="text-2xl font-bold text-gray-900 mb-4" data-i18n="sections.respa.title">8. Real Estate Settlement Procedures Act (RESPA)</h2>
               <div class="prose prose-gray max-w-none">
-                <p class="text-gray-700 leading-relaxed mb-4">
+                <p class="text-gray-700 leading-relaxed mb-4" data-i18n="sections.respa.p1">
                   RESPA requires us to provide you with information about the real estate settlement process and protects you from certain abusive practices. Under RESPA:
                 </p>
                 <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-4">
-                  <li>We must provide you with a Loan Estimate within 3 business days of your application</li>
-                  <li>We must provide you with a Closing Disclosure at least 3 business days before closing</li>
-                  <li>We cannot require you to use specific service providers as a condition of your loan</li>
-                  <li>We cannot accept kickbacks or referral fees from service providers</li>
-                  <li>We must provide you with a servicing disclosure if we plan to sell or transfer your loan</li>
+                  <li data-i18n="sections.respa.items.i1">We must provide you with a Loan Estimate within 3 business days of your application</li>
+                  <li data-i18n="sections.respa.items.i2">We must provide you with a Closing Disclosure at least 3 business days before closing</li>
+                  <li data-i18n="sections.respa.items.i3">We cannot require you to use specific service providers as a condition of your loan</li>
+                  <li data-i18n="sections.respa.items.i4">We cannot accept kickbacks or referral fees from service providers</li>
+                  <li data-i18n="sections.respa.items.i5">We must provide you with a servicing disclosure if we plan to sell or transfer your loan</li>
                 </ul>
-                <p class="text-gray-700 leading-relaxed">
+                <p class="text-gray-700 leading-relaxed" data-i18n="sections.respa.pEnd">
                   RESPA also gives you the right to request information about your loan servicing and to file complaints about servicing problems.
                 </p>
               </div>
@@ -305,29 +314,29 @@ import Layout from '../../layouts/Layout.astro';
             <hr class="border-t border-gray-200 my-8">
 
             <section id="cfpb">
-              <h2 class="text-2xl font-bold text-gray-900 mb-4">9. Consumer Financial Protection Bureau (CFPB)</h2>
+              <h2 class="text-2xl font-bold text-gray-900 mb-4" data-i18n="sections.cfpb.title">9. Consumer Financial Protection Bureau (CFPB)</h2>
               <div class="prose prose-gray max-w-none">
-                <p class="text-gray-700 leading-relaxed mb-4">
+                <p class="text-gray-700 leading-relaxed mb-4" data-i18n="sections.cfpb.p1">
                   The Consumer Financial Protection Bureau (CFPB) is a federal agency that regulates the offering and provision of consumer financial products and services.
                 </p>
                 <div class="bg-green-50 border border-green-200 rounded-lg p-6 mb-4">
-                  <h3 class="text-lg font-semibold text-green-900 mb-3">CFPB Resources</h3>
+                  <h3 class="text-lg font-semibold text-green-900 mb-3" data-i18n="sections.cfpb.box_title">CFPB Resources</h3>
                   <div class="text-green-800 space-y-2">
-                    <p><strong>Website:</strong> www.consumerfinance.gov</p>
-                    <p><strong>Phone:</strong> (855) 411-CFPB (2372)</p>
-                    <p><strong>TTY/TDD:</strong> (855) 729-CFPB (2372)</p>
+                    <p><strong data-i18n="sections.cfpb.labels.website">Website:</strong> <span data-i18n="sections.cfpb.values.website">www.consumerfinance.gov</span></p>
+                    <p><strong data-i18n="sections.cfpb.labels.phone">Phone:</strong> <span data-i18n="sections.cfpb.values.phone">(855) 411-CFPB (2372)</span></p>
+                    <p><strong data-i18n="sections.cfpb.labels.tty">TTY/TDD:</strong> <span data-i18n="sections.cfpb.values.tty">(855) 729-CFPB (2372)</span></p>
                   </div>
                 </div>
-                <p class="text-gray-700 leading-relaxed mb-4">
+                <p class="text-gray-700 leading-relaxed mb-4" data-i18n="sections.cfpb.p2">
                   You can file complaints with the CFPB about:
                 </p>
                 <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-4">
-                  <li>Mortgage lending practices</li>
-                  <li>Loan servicing issues</li>
-                  <li>Discrimination in lending</li>
-                  <li>Unfair, deceptive, or abusive practices</li>
+                  <li data-i18n="sections.cfpb.items.i1">Mortgage lending practices</li>
+                  <li data-i18n="sections.cfpb.items.i2">Loan servicing issues</li>
+                  <li data-i18n="sections.cfpb.items.i3">Discrimination in lending</li>
+                  <li data-i18n="sections.cfpb.items.i4">Unfair, deceptive, or abusive practices</li>
                 </ul>
-                <p class="text-gray-700 leading-relaxed">
+                <p class="text-gray-700 leading-relaxed" data-i18n="sections.cfpb.pEnd">
                   The CFPB also provides educational resources to help consumers make informed financial decisions.
                 </p>
               </div>
@@ -337,46 +346,46 @@ import Layout from '../../layouts/Layout.astro';
             <hr class="border-t border-gray-200 my-8">
 
             <section id="important-notices">
-              <h2 class="text-2xl font-bold text-gray-900 mb-4">10. Important Notices</h2>
+              <h2 class="text-2xl font-bold text-gray-900 mb-4" data-i18n="sections.notices.title">10. Important Notices</h2>
               <div class="prose prose-gray max-w-none">
                 <div class="space-y-6">
                   <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
-                    <h3 class="text-lg font-semibold text-yellow-900 mb-3">Loan Commitment Disclaimer</h3>
-                    <p class="text-yellow-800">
+                    <h3 class="text-lg font-semibold text-yellow-900 mb-3" data-i18n="sections.notices.loanDisclaimer_title">Loan Commitment Disclaimer</h3>
+                    <p class="text-yellow-800" data-i18n="sections.notices.loanDisclaimer_p">
                       This is not a commitment to lend. All loan applications are subject to credit approval, property appraisal, and verification of information. Rates, program terms, and conditions are subject to change without notice.
                     </p>
                   </div>
 
                   <div class="bg-red-50 border border-red-200 rounded-lg p-6">
-                    <h3 class="text-lg font-semibold text-red-900 mb-3">Rate and Program Availability</h3>
-                    <p class="text-red-800">
+                    <h3 class="text-lg font-semibold text-red-900 mb-3" data-i18n="sections.notices.rateAvailability_title">Rate and Program Availability</h3>
+                    <p class="text-red-800" data-i18n="sections.notices.rateAvailability_p">
                       Interest rates and loan programs shown are subject to change without notice. Not all products are available in all states or for all loan amounts. Other restrictions and limitations may apply.
                     </p>
                   </div>
 
                   <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                    <h3 class="text-lg font-semibold text-blue-900 mb-3">Credit and Income Verification</h3>
-                    <p class="text-blue-800">
+                    <h3 class="text-lg font-semibold text-blue-900 mb-3" data-i18n="sections.notices.verification_title">Credit and Income Verification</h3>
+                    <p class="text-blue-800" data-i18n="sections.notices.verification_p">
                       All information provided in loan applications is subject to verification. We may request additional documentation to verify income, assets, employment, and other information.
                     </p>
                   </div>
 
                   <div class="bg-purple-50 border border-purple-200 rounded-lg p-6">
-                    <h3 class="text-lg font-semibold text-purple-900 mb-3">Property Requirements</h3>
-                    <p class="text-purple-800">
+                    <h3 class="text-lg font-semibold text-purple-900 mb-3" data-i18n="sections.notices.property_title">Property Requirements</h3>
+                    <p class="text-purple-800" data-i18n="sections.notices.property_p">
                       All loans are subject to property appraisal and may require additional property inspections. Property must meet lender and investor guidelines for the specific loan program.
                     </p>
                   </div>
                 </div>
 
                 <div class="mt-8 p-6 bg-gray-100 rounded-lg">
-                  <h3 class="text-lg font-semibold text-gray-900 mb-3">Questions or Concerns?</h3>
-                  <p class="text-gray-700 mb-4">
+                  <h3 class="text-lg font-semibold text-gray-900 mb-3" data-i18n="sections.notices.questions_title">Questions or Concerns?</h3>
+                  <p class="text-gray-700 mb-4" data-i18n="sections.notices.questions_p">
                     If you have any questions about these disclosures or our lending practices, please contact us:
                   </p>
                   <div class="text-gray-700">
-                    <p><strong>Phone:</strong> (801) 307-0273</p>
-                    <p><strong>Email:</strong> compliance@brokerlenders.com</p>
+                    <p><strong data-i18n="sections.notices.questions_labels.phone">Phone:</strong> (801) 307-0273</p>
+                    <p><strong data-i18n="sections.notices.questions_labels.email">Email:</strong> compliance@brokerlenders.com</p>
                   </div>
                 </div>
               </div>
@@ -385,10 +394,10 @@ import Layout from '../../layouts/Layout.astro';
             <!-- Footer -->
             <div class="border-t border-gray-200 pt-8">
               <div class="text-gray-700">
-                <p class="text-sm text-gray-600 mb-4">
+                <p class="text-sm text-gray-600 mb-4" data-i18n="sections.notices.footer_effective">
                   These disclosures are effective as of December 2024 and are subject to change as required by law.
                 </p>
-                <p class="text-sm text-gray-600">
+                <p class="text-sm text-gray-600" data-i18n="sections.notices.footer_copy">
                   © 2024 Broker Lenders. All rights reserved. Pedro Lira NMLS #318973, Xpert Home Lending NMLS #2179191. Equal Housing Lender.
                 </p>
               </div>
@@ -400,19 +409,19 @@ import Layout from '../../layouts/Layout.astro';
         <!-- Right Sidebar - Legal Info -->
         <div class="lg:col-span-1 lg:order-2">
           <div class="bg-white p-6 sticky top-8">
-            <h3 class="text-xl font-semibold text-gray-900 mb-4">Legal Info</h3>
+            <h3 class="text-xl font-semibold text-gray-900 mb-4" data-i18n="sidebar.legal_info">Legal Info</h3>
             <nav class="space-y-3">
               <div class="flex items-center">
                 <div class="w-2 h-2 bg-gray-300 rounded-full mr-3"></div>
-                <a href="/legal/terms-of-use" class="text-base text-gray-600 hover:text-red-600 transition-colors">Terms Of Use</a>
+                <a href={`/legal/terms-of-use?lang=${lang}`} class="text-base text-gray-600 hover:text-red-600 transition-colors" data-i18n="sidebar.terms_of_use">Terms Of Use</a>
               </div>
               <div class="flex items-center">
                 <div class="w-2 h-2 bg-red-600 rounded-full mr-3"></div>
-                <span class="text-base font-semibold text-red-600">Disclosures And Licenses</span>
+                <span class="text-base font-semibold text-red-600" data-i18n="sidebar.disclosures">Disclosures And Licenses</span>
               </div>
               <div class="flex items-center">
                 <div class="w-2 h-2 bg-gray-300 rounded-full mr-3"></div>
-                <a href="/legal/privacy" class="text-base text-gray-600 hover:text-red-600 transition-colors">Privacy Policy</a>
+                <a href={`/legal/privacy?lang=${lang}`} class="text-base text-gray-600 hover:text-red-600 transition-colors" data-i18n="sidebar.privacy_policy">Privacy Policy</a>
               </div>
             </nav>
           </div>
@@ -421,25 +430,88 @@ import Layout from '../../layouts/Layout.astro';
     </div>
   </div>
 
-  <script>
-    // Smooth scrolling for table of contents links
-    document.addEventListener('DOMContentLoaded', function() {
-      const tocLinks = document.querySelectorAll('nav a[href^="#"]');
-      
-      tocLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-          e.preventDefault();
-          const targetId = this.getAttribute('href').substring(1);
-          const targetElement = document.getElementById(targetId);
-          
-          if (targetElement) {
-            targetElement.scrollIntoView({
-              behavior: 'smooth',
-              block: 'start'
-            });
+  <script is:inline>
+    (() => {
+      const root = document.getElementById('i18n-disclosures');
+      const decode = (val) => {
+        try {
+          const b64 = val || '';
+          const bin = atob(b64);
+          const bytes = new Uint8Array(bin.length);
+          for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+          const jsonText = new TextDecoder('utf-8').decode(bytes);
+          return JSON.parse(jsonText);
+        } catch { return {}; }
+      };
+      const translations = {
+        en: decode(root?.getAttribute('data-en') || ''),
+        es: decode(root?.getAttribute('data-es') || ''),
+      };
+      const getInitialLang = () => {
+        const urlLang = new URLSearchParams(window.location.search).get('lang');
+        const htmlLang = document.documentElement.getAttribute('lang');
+        let cookieLang = null;
+        try {
+          const m = document.cookie.match(/(?:^|;\s*)lang=([^;]+)/);
+          cookieLang = m && m[1] ? m[1].toLowerCase() : null;
+        } catch {}
+        const stored = localStorage.getItem('lang');
+        const raw = (urlLang || htmlLang || cookieLang || stored || 'en').toLowerCase();
+        return raw === 'es' ? 'es' : 'en';
+      };
+      const resolve = (obj, path) => {
+        try {
+          return path.split('.').reduce((o, k) => (o && k in o ? o[k] : undefined), obj);
+        } catch { return undefined; }
+      };
+      const applyTranslations = (lang) => {
+        const dict = translations[lang] || translations.en || {};
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+          const key = el.getAttribute('data-i18n');
+          const val = resolve(dict, key);
+          if (typeof val === 'string') el.textContent = val;
+        });
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+          const key = el.getAttribute('data-i18n-placeholder');
+          const val = resolve(dict, key);
+          if (typeof val === 'string') el.setAttribute('placeholder', val);
+        });
+        // Update local links to preserve current language
+        document.querySelectorAll('a[href^="/"]').forEach(a => {
+          const href = new URL(a.href, window.location.origin);
+          if (href.origin === window.location.origin) {
+            href.searchParams.set('lang', lang);
+            a.href = href.pathname + href.search + href.hash;
           }
         });
-      });
-    });
+        // Reflect lang in <html>, cookie and storage
+        try { document.documentElement.setAttribute('lang', lang); } catch {}
+        try { document.cookie = `lang=${lang};path=/;max-age=${60*60*24*365}`; } catch {}
+        try { localStorage.setItem('lang', lang); } catch {}
+      };
+      const init = () => {
+        const lang = getInitialLang();
+        applyTranslations(lang);
+        // Smooth scrolling for in-page anchors (if present)
+        const tocLinks = document.querySelectorAll('nav a[href^="#"]');
+        tocLinks.forEach(link => {
+          link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute('href').substring(1);
+            const targetEl = document.getElementById(targetId);
+            if (targetEl) targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          });
+        });
+        // Expose setter
+        window.setLanguage = (next) => {
+          const n = (next || 'en').toLowerCase();
+          const applied = n === 'es' ? 'es' : 'en';
+          applyTranslations(applied);
+        };
+      };
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else { init(); }
+    })();
   </script>
 </Layout>

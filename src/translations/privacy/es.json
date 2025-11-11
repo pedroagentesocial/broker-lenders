@@ -1,0 +1,173 @@
+{
+  "title": "Política de Privacidad - Broker Lenders",
+  "breadcrumb": {
+    "home": "Inicio",
+    "legal": "Legal",
+    "privacy": "Política de Privacidad"
+  },
+  "sections": {
+    "overview": {
+      "title": "1. Resumen",
+      "p1": "En Broker Lenders, estamos comprometidos con proteger tu privacidad y mantener la confidencialidad de tu información personal. Esta Política de Privacidad explica cómo recopilamos, usamos, divulgamos y protegemos tu información cuando visitas nuestro sitio web o utilizas nuestros servicios.",
+      "p2": "Broker Lenders es operado por Pedro Lira (NMLS #318973) y Xpert Home Lending (NMLS #2179191). Somos profesionales hipotecarios con licencia que comprendemos la importancia de proteger la información financiera sensible.",
+      "p3": "Al usar nuestro sitio web o servicios, aceptas las prácticas de datos descritas en esta política."
+    },
+    "collection": {
+      "title": "2. Información que Recopilamos",
+      "personalTitle": "Información Personal",
+      "personalIntro": "Podemos recopilar información personal que nos proporcionas voluntariamente, incluyendo:",
+      "personalItems": {
+        "i1": "Nombre, dirección, número de teléfono y correo electrónico",
+        "i2": "Número de Seguro Social y fecha de nacimiento",
+        "i3": "Información laboral y detalles de ingresos",
+        "i4": "Información financiera incluyendo activos, deudas e historial crediticio",
+        "i5": "Información de la propiedad para solicitudes de préstamo",
+        "i6": "Información de cuentas bancarias y otras cuentas financieras"
+      },
+      "autoTitle": "Información Recopilada Automáticamente",
+      "autoIntro": "Cuando visitas nuestro sitio web, podemos recopilar automáticamente:",
+      "autoItems": {
+        "i1": "Dirección IP e información del dispositivo",
+        "i2": "Tipo y versión del navegador",
+        "i3": "Páginas visitadas y tiempo de permanencia en nuestro sitio",
+        "i4": "Información del sitio web de referencia",
+        "i5": "Datos de ubicación (con tu consentimiento)"
+      },
+      "thirdTitle": "Información de Terceros",
+      "thirdP": "Podemos obtener información sobre ti de terceros, incluyendo burós de crédito, empleadores y otras instituciones financieras, según sea necesario para procesar tu solicitud de préstamo y cumplir con requisitos regulatorios."
+    },
+    "use": {
+      "title": "3. Cómo Usamos tu Información",
+      "p1": "Usamos tu información para los siguientes propósitos:",
+      "items": {
+        "i1": "Procesar y analizar solicitudes de préstamo",
+        "i2": "Verificar tu identidad y prevenir fraudes",
+        "i3": "Comunicarnos contigo sobre tu solicitud y servicios",
+        "i4": "Brindar atención al cliente y responder consultas",
+        "i5": "Cumplir con requisitos legales y regulatorios",
+        "i6": "Mejorar nuestro sitio web y servicios",
+        "i7": "Enviar comunicaciones de marketing (con tu consentimiento)",
+        "i8": "Realizar análisis y estudios de negocio"
+      },
+      "pEnd": "Solo usaremos tu información para los fines divulgados en esta política o según lo autorices."
+    },
+    "sharing": {
+      "title": "4. Compartir y Divulgar Información",
+      "p1": "Podemos compartir tu información en las siguientes circunstancias:",
+      "serviceTitle": "Proveedores de Servicios",
+      "serviceP": "Podemos compartir información con proveedores externos de confianza que nos ayudan a operar nuestro negocio, incluyendo:",
+      "serviceItems": {
+        "i1": "Procesadores y analistas de préstamos",
+        "i2": "Agencias de informes crediticios",
+        "i3": "Tasadores y compañías de título",
+        "i4": "Proveedores de servicios tecnológicos",
+        "i5": "Asesores legales y profesionales"
+      },
+      "legalTitle": "Requisitos Legales",
+      "legalP": "Podemos divulgar tu información cuando la ley lo requiera o para:",
+      "legalItems": {
+        "i1": "Cumplir procesos legales o solicitudes gubernamentales",
+        "i2": "Proteger nuestros derechos, propiedad o seguridad",
+        "i3": "Prevenir fraudes o actividades ilegales",
+        "i4": "Cumplir con requisitos regulatorios"
+      },
+      "businessTitle": "Transferencias de Negocio",
+      "businessP": "En caso de fusión, adquisición o venta de activos, tu información puede ser transferida a la entidad adquirente, sujeta a las mismas protecciones de privacidad."
+    },
+    "security": {
+      "title": "5. Seguridad de Datos",
+      "p1": "Implementamos medidas de seguridad técnicas y organizacionales apropiadas para proteger tu información personal contra acceso, alteración, divulgación o destrucción no autorizados.",
+      "p2": "Nuestras medidas de seguridad incluyen:",
+      "items": {
+        "i1": "Cifrado SSL para la transmisión de datos",
+        "i2": "Servidores y bases de datos seguras",
+        "i3": "Controles de acceso y procedimientos de autenticación",
+        "i4": "Evaluaciones y actualizaciones de seguridad regulares",
+        "i5": "Capacitación de empleados en protección de datos"
+      },
+      "pEnd": "Aunque nos esforzamos por proteger tu información, ningún método de transmisión por internet o almacenamiento electrónico es 100% seguro. No podemos garantizar seguridad absoluta, pero te notificaremos sobre cualquier violación de datos según lo requiera la ley."
+    },
+    "cookies": {
+      "title": "6. Cookies y Tecnologías de Rastreo",
+      "p1": "Usamos cookies y tecnologías de rastreo similares para mejorar tu experiencia en nuestro sitio web. Las cookies son pequeños archivos de datos almacenados en tu dispositivo que nos ayudan a:",
+      "items": {
+        "i1": "Recordar tus preferencias y configuraciones",
+        "i2": "Analizar el tráfico del sitio y patrones de uso",
+        "i3": "Proporcionar contenido y anuncios personalizados",
+        "i4": "Mejorar la funcionalidad y el rendimiento del sitio"
+      },
+      "p2": "Puedes controlar las configuraciones de cookies desde tu navegador. Sin embargo, desactivar las cookies puede afectar la funcionalidad del sitio.",
+      "p3": "También podemos utilizar servicios de analítica de terceros, como Google Analytics, para entender cómo los visitantes usan nuestro sitio."
+    },
+    "rights": {
+      "title": "7. Tus Derechos y Opciones",
+      "p1": "Tienes ciertos derechos respecto a tu información personal:",
+      "items": {
+        "i1": "Acceso: Solicitar acceso a tu información personal",
+        "i2": "Corrección: Solicitar la corrección de información inexacta",
+        "i3": "Eliminación: Solicitar la eliminación de tu información (sujeto a requisitos legales)",
+        "i4": "Portabilidad: Solicitar una copia de tu información en un formato portátil",
+        "i5": "Opt-out: Cancelar suscripción de comunicaciones de marketing",
+        "i6": "Restricción: Solicitar la limitación del procesamiento en ciertas circunstancias"
+      },
+      "pEnd": "Para ejercer estos derechos, contáctanos usando la información de la sección de Contacto. Responderemos dentro del plazo requerido por la ley aplicable."
+    },
+    "ccpa": {
+      "title": "8. Derechos de Privacidad en California (CCPA)",
+      "p1": "Si eres residente de California, tienes derechos adicionales bajo la Ley de Privacidad del Consumidor de California (CCPA):",
+      "items": {
+        "i1": "Derecho a saber qué información personal se recopila, usa, comparte o vende",
+        "i2": "Derecho a eliminar la información personal en nuestro poder",
+        "i3": "Derecho a optar por no vender información personal",
+        "i4": "Derecho a no ser discriminado por ejercer derechos bajo la CCPA"
+      },
+      "note": "Nota: No vendemos información personal a terceros a cambio de compensación monetaria.",
+      "pEnd": "Para ejercer tus derechos bajo la CCPA, contáctanos con la información proporcionada a continuación. Podríamos necesitar verificar tu identidad antes de procesar tu solicitud."
+    },
+    "children": {
+      "title": "9. Privacidad de Menores",
+      "p1": "Nuestro sitio y servicios no están dirigidos a menores de 18 años. No recopilamos deliberadamente información personal de menores de 18 años.",
+      "pEnd": "Si nos damos cuenta de que hemos recopilado información personal de un menor de 18 años, tomaremos medidas para eliminar dicha información de manera rápida."
+    },
+    "changes": {
+      "title": "10. Cambios a esta Política de Privacidad",
+      "p1": "Podemos actualizar esta Política de Privacidad periódicamente para reflejar cambios en nuestras prácticas o leyes aplicables. Te notificaremos cualquier cambio material mediante:",
+      "items": {
+        "i1": "Publicar la política actualizada en nuestro sitio web",
+        "i2": "Enviar una notificación por correo electrónico (si nos has proporcionado tu dirección)",
+        "i3": "Proporcionar avisos a través de nuestro sitio o servicios"
+      },
+      "pEnd": "El uso continuo de nuestro sitio o servicios después de cualquier cambio indica que aceptas la Política de Privacidad actualizada."
+    },
+    "contact": {
+      "title": "11. Información de Contacto",
+      "p1": "Si tienes preguntas sobre esta Política de Privacidad o nuestras prácticas, contáctanos:",
+      "box": {
+        "name": "Broker Lenders",
+        "pedro": "Pedro Lira, NMLS #318973",
+        "xpert": "Xpert Home Lending, NMLS #2179191",
+        "labels": {
+          "phone": "Teléfono:",
+          "email": "Correo:",
+          "website": "Sitio web:"
+        },
+        "values": {
+          "phone": "(801) 307-0273",
+          "email": "privacy@brokerlenders.com",
+          "website": "www.brokerlenders.com"
+        }
+      },
+      "pEnd": "Responderemos a tu consulta en un plazo razonable y de acuerdo con la ley aplicable."
+    },
+    "footer": {
+      "effective": "Esta Política de Privacidad es efectiva desde diciembre de 2024 y aplica a toda información recopilada por Broker Lenders.",
+      "copy": "© 2024 Broker Lenders. Todos los derechos reservados. Prestamista de Vivienda Igualitaria."
+    }
+  },
+  "sidebar": {
+    "legal_info": "Información Legal",
+    "terms_of_use": "Términos de Uso",
+    "disclosures": "Divulgaciones y Licencias",
+    "privacy_policy": "Política de Privacidad"
+  }
+}

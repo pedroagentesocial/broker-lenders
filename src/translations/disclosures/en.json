@@ -1,0 +1,176 @@
+{
+  "title": "Disclosures and Licenses - Broker Lenders",
+  "breadcrumb": {
+    "home": "Home",
+    "legal": "Legal",
+    "disclosures": "Disclosures"
+  },
+  "sections": {
+    "company": {
+      "title": "1. Company Information",
+      "box_title": "Broker Lenders",
+      "labels": {
+        "lender": "Licensed Mortgage Loan Originator:",
+        "nmls_id": "NMLS ID:",
+        "company": "Company:",
+        "company_nmls_id": "Company NMLS ID:",
+        "phone": "Phone:",
+        "email": "Email:"
+      },
+      "p1": "Broker Lenders operates under the supervision of licensed mortgage professionals who are committed to providing ethical and compliant mortgage lending services. All loan originators are licensed and registered through the Nationwide Multistate Licensing System (NMLS)."
+    },
+    "nmls": {
+      "title": "2. NMLS Information",
+      "p1": "The Nationwide Multistate Licensing System (NMLS) is a system that allows uniform license applications, renewals, and amendments; uniform reporting; and improved tracking and monitoring of licensed companies and individuals.",
+      "box_title": "NMLS Consumer Access",
+      "verify": "You can verify our licensing information and view our licensing history at:",
+      "link_text": "www.nmlsconsumeraccess.org",
+      "search_hint": "Search using our NMLS IDs: Pedro Lira #318973 or Xpert Home Lending #2179191",
+      "pEnd": "NMLS provides a comprehensive database where consumers can research the background and licensing status of mortgage loan originators and companies."
+    },
+    "licensing": {
+      "title": "3. State Licensing Information",
+      "intro": "Broker Lenders is licensed to conduct mortgage lending business in multiple states. Our licensing status varies by state and may include:",
+      "states": {
+        "california": {
+          "title": "California",
+          "p": "Licensed by the Department of Financial Protection and Innovation under the California Residential Mortgage Lending Act. Licensed by the Department of Financial Protection and Innovation under the California Financing Law License."
+        },
+        "utah": { "title": "Utah", "p": "Licensed by the Utah Department of Financial Institutions. Utah Mortgage Lender License." },
+        "idaho": { "title": "Idaho", "p": "Licensed by the Idaho Department of Finance. Idaho Mortgage Broker/Lender License." },
+        "texas": { "title": "Texas", "p": "Licensed by the Texas Department of Savings and Mortgage Lending. Texas Residential Mortgage Loan Originator License." },
+        "nevada": { "title": "Nevada", "p": "Licensed by the Nevada Division of Mortgage Lending. Nevada Mortgage Broker License." },
+        "florida": { "title": "Florida", "p": "Licensed by the Florida Office of Financial Regulation. Florida Mortgage Lender License." },
+        "colorado": { "title": "Colorado", "p": "Licensed by the Colorado Division of Real Estate. Colorado Mortgage Loan Originator License." }
+      },
+      "additional_title": "Additional States",
+      "additional_p": "We may maintain licenses in additional states as required by law. Specific licensing information for each state can be verified through the NMLS Consumer Access website.",
+      "notice_title": "Important Notice:",
+      "notice_p": "We only conduct business in states where we are properly licensed. If you are located in a state where we are not licensed, we cannot provide mortgage lending services to you."
+    },
+    "equalHousing": {
+      "title": "4. Equal Housing Lender",
+      "box_title": "Equal Housing Opportunity",
+      "p1": "Broker Lenders is committed to ensuring that all qualified applicants receive equal treatment and access to credit, regardless of race, color, religion, sex, handicap, familial status, or national origin.",
+      "p2": "We comply with the Fair Housing Act and all applicable fair lending laws. We do not discriminate in any aspect of a credit transaction on the basis of:",
+      "items": {
+        "i1": "Race or color",
+        "i2": "Religion",
+        "i3": "National origin",
+        "i4": "Sex or gender",
+        "i5": "Marital status",
+        "i6": "Age (provided the applicant has the capacity to contract)",
+        "i7": "Handicap or disability",
+        "i8": "Familial status",
+        "i9": "Receipt of income from public assistance programs"
+      },
+      "pEnd": "If you believe you have been discriminated against, you may file a complaint with the Consumer Financial Protection Bureau or the Department of Housing and Urban Development."
+    },
+    "regulatory": {
+      "title": "5. Regulatory Compliance",
+      "p1": "Broker Lenders operates in compliance with all applicable federal and state laws and regulations, including:",
+      "federal_title": "Federal Laws",
+      "federal_items": {
+        "i1": "Truth in Lending Act (TILA)",
+        "i2": "Real Estate Settlement Procedures Act (RESPA)",
+        "i3": "Fair Credit Reporting Act (FCRA)",
+        "i4": "Equal Credit Opportunity Act (ECOA)",
+        "i5": "Fair Housing Act",
+        "i6": "Dodd-Frank Act",
+        "i7": "SAFE Act"
+      },
+      "agencies_title": "Regulatory Agencies",
+      "agencies_items": {
+        "i1": "Consumer Financial Protection Bureau (CFPB)",
+        "i2": "Federal Trade Commission (FTC)",
+        "i3": "Department of Housing and Urban Development (HUD)",
+        "i4": "State Banking Departments",
+        "i5": "State Licensing Authorities"
+      },
+      "pEnd": "We regularly review and update our policies and procedures to ensure ongoing compliance with all applicable laws and regulations."
+    },
+    "fairLending": {
+      "title": "6. Fair Lending Practices",
+      "p1": "Broker Lenders is committed to fair lending practices and ensuring that all applicants are treated fairly and consistently. Our fair lending program includes:",
+      "items": {
+        "i1": "Standardized underwriting criteria applied consistently to all applicants",
+        "i2": "Regular training for all employees on fair lending laws and practices",
+        "i3": "Monitoring and testing of lending practices for potential disparities",
+        "i4": "Clear policies prohibiting discriminatory practices",
+        "i5": "Regular compliance audits and reviews"
+      },
+      "pEnd": "We evaluate loan applications based solely on creditworthiness and ability to repay, without regard to prohibited factors."
+    },
+    "tila": {
+      "title": "7. Truth in Lending Act (TILA)",
+      "p1": "Under the Truth in Lending Act, we are required to provide you with certain disclosures about your loan, including:",
+      "box_title": "Required Disclosures",
+      "items": {
+        "i1": "Loan Estimate (LE) - provided within 3 business days of application",
+        "i2": "Closing Disclosure (CD) - provided at least 3 business days before closing",
+        "i3": "Annual Percentage Rate (APR)",
+        "i4": "Finance charges and total amount financed",
+        "i5": "Payment schedule and total of payments",
+        "i6": "Right of rescission (for refinances of primary residences)"
+      },
+      "pEnd": "These disclosures help you understand the true cost of your loan and compare offers from different lenders."
+    },
+    "respa": {
+      "title": "8. Real Estate Settlement Procedures Act (RESPA)",
+      "p1": "RESPA requires us to provide you with information about the real estate settlement process and protects you from certain abusive practices. Under RESPA:",
+      "items": {
+        "i1": "We must provide you with a Loan Estimate within 3 business days of your application",
+        "i2": "We must provide you with a Closing Disclosure at least 3 business days before closing",
+        "i3": "We cannot require you to use specific service providers as a condition of your loan",
+        "i4": "We cannot accept kickbacks or referral fees from service providers",
+        "i5": "We must provide you with a servicing disclosure if we plan to sell or transfer your loan"
+      },
+      "pEnd": "RESPA also gives you the right to request information about your loan servicing and to file complaints about servicing problems."
+    },
+    "cfpb": {
+      "title": "9. Consumer Financial Protection Bureau (CFPB)",
+      "p1": "The Consumer Financial Protection Bureau (CFPB) is a federal agency that regulates the offering and provision of consumer financial products and services.",
+      "box_title": "CFPB Resources",
+      "labels": {
+        "website": "Website:",
+        "phone": "Phone:",
+        "tty": "TTY/TDD:"
+      },
+      "values": {
+        "website": "www.consumerfinance.gov",
+        "phone": "(855) 411-CFPB (2372)",
+        "tty": "(855) 729-CFPB (2372)"
+      },
+      "p2": "You can file complaints with the CFPB about:",
+      "items": {
+        "i1": "Mortgage lending practices",
+        "i2": "Loan servicing issues",
+        "i3": "Discrimination in lending",
+        "i4": "Unfair, deceptive, or abusive practices"
+      },
+      "pEnd": "The CFPB also provides educational resources to help consumers make informed financial decisions."
+    },
+    "notices": {
+      "title": "10. Important Notices",
+      "loanDisclaimer_title": "Loan Commitment Disclaimer",
+      "loanDisclaimer_p": "This is not a commitment to lend. All loan applications are subject to credit approval, property appraisal, and verification of information. Rates, program terms, and conditions are subject to change without notice.",
+      "rateAvailability_title": "Rate and Program Availability",
+      "rateAvailability_p": "Interest rates and loan programs shown are subject to change without notice. Not all products are available in all states or for all loan amounts. Other restrictions and limitations may apply.",
+      "verification_title": "Credit and Income Verification",
+      "verification_p": "All information provided in loan applications is subject to verification. We may request additional documentation to verify income, assets, employment, and other information.",
+      "property_title": "Property Requirements",
+      "property_p": "All loans are subject to property appraisal and may require additional property inspections. Property must meet lender and investor guidelines for the specific loan program.",
+      "questions_title": "Questions or Concerns?",
+      "questions_p": "If you have any questions about these disclosures or our lending practices, please contact us:",
+      "questions_labels": { "phone": "Phone:", "email": "Email:" },
+      "footer_effective": "These disclosures are effective as of December 2024 and are subject to change as required by law.",
+      "footer_copy": "© 2024 Broker Lenders. All rights reserved. Pedro Lira NMLS #318973, Xpert Home Lending NMLS #2179191. Equal Housing Lender."
+    }
+  },
+  "sidebar": {
+    "legal_info": "Legal Info",
+    "terms_of_use": "Terms Of Use",
+    "disclosures": "Disclosures And Licenses",
+    "privacy_policy": "Privacy Policy"
+  }
+}

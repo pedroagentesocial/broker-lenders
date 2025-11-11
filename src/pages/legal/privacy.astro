@@ -1,24 +1,33 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import enDict from '../../translations/privacy/en.json';
+import esDict from '../../translations/privacy/es.json';
+export const prerender = true;
+const lang = 'en';
+const dict = enDict;
+const enB64 = Buffer.from(JSON.stringify(enDict)).toString('base64');
+const esB64 = Buffer.from(JSON.stringify(esDict)).toString('base64');
 ---
 
-<Layout title="Privacy Policy - Broker Lenders">
+<Layout title={dict.title} lang={lang}>
   <div class="min-h-screen bg-white">
+    <!-- i18n payload for Privacy page -->
+    <div id="i18n-privacy" data-en={enB64} data-es={esB64} style="display:none"></div>
     <!-- Breadcrumb Section -->
     <div class="bg-white border-b border-gray-200">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <nav class="flex" aria-label="Breadcrumb">
           <ol class="flex items-center space-x-2">
             <li>
-              <a href="/" class="text-gray-500 hover:text-gray-700 transition-colors">Home</a>
+              <a href={`/?lang=${lang}`} class="text-gray-500 hover:text-gray-700 transition-colors" data-i18n="breadcrumb.home">Home</a>
             </li>
             <li class="flex items-center">
               <span class="text-gray-400 mx-2">/</span>
-              <a href="/legal/terms-of-use" class="text-gray-500 hover:text-gray-700 transition-colors">Legal</a>
+              <a href={`/legal/terms-of-use?lang=${lang}`} class="text-gray-500 hover:text-gray-700 transition-colors" data-i18n="breadcrumb.legal">Legal</a>
             </li>
             <li class="flex items-center">
               <span class="text-gray-400 mx-2">/</span>
-              <span class="text-gray-900 font-medium">Privacy Policy</span>
+              <span class="text-gray-900 font-medium" data-i18n="breadcrumb.privacy">Privacy Policy</span>
             </li>
           </ol>
         </nav>
@@ -33,15 +42,15 @@ import Layout from '../../layouts/Layout.astro';
           <div class="bg-white p-8 space-y-8">
             
             <section id="overview">
-              <h2 class="text-2xl font-bold text-gray-900 mb-4">1. Overview</h2>
+              <h2 class="text-2xl font-bold text-gray-900 mb-4" data-i18n="sections.overview.title">1. Overview</h2>
               <div class="prose prose-gray max-w-none">
-                <p class="text-gray-700 leading-relaxed mb-4">
+                <p class="text-gray-700 leading-relaxed mb-4" data-i18n="sections.overview.p1">
                   At Broker Lenders, we are committed to protecting your privacy and maintaining the confidentiality of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
                 </p>
-                <p class="text-gray-700 leading-relaxed mb-4">
+                <p class="text-gray-700 leading-relaxed mb-4" data-i18n="sections.overview.p2">
                   Broker Lenders is operated by Pedro Lira (NMLS #318973) and Xpert Home Lending (NMLS #2179191). We are licensed mortgage professionals who understand the importance of protecting sensitive financial information.
                 </p>
-                <p class="text-gray-700 leading-relaxed">
+                <p class="text-gray-700 leading-relaxed" data-i18n="sections.overview.p3">
                   By using our website or services, you consent to the data practices described in this policy.
                 </p>
               </div>
@@ -51,35 +60,35 @@ import Layout from '../../layouts/Layout.astro';
             <hr class="border-t border-gray-200 my-8">
 
             <section id="information-collection">
-              <h2 class="text-2xl font-bold text-gray-900 mb-4">2. Information We Collect</h2>
+              <h2 class="text-2xl font-bold text-gray-900 mb-4" data-i18n="sections.collection.title">2. Information We Collect</h2>
               <div class="prose prose-gray max-w-none">
-                <h3 class="text-lg font-semibold text-gray-900 mb-3">Personal Information</h3>
-                <p class="text-gray-700 leading-relaxed mb-4">
+                <h3 class="text-lg font-semibold text-gray-900 mb-3" data-i18n="sections.collection.personalTitle">Personal Information</h3>
+                <p class="text-gray-700 leading-relaxed mb-4" data-i18n="sections.collection.personalIntro">
                   We may collect personal information that you voluntarily provide to us, including:
                 </p>
                 <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-4">
-                  <li>Name, address, phone number, and email address</li>
-                  <li>Social Security number and date of birth</li>
-                  <li>Employment information and income details</li>
-                  <li>Financial information including assets, debts, and credit history</li>
-                  <li>Property information for loan applications</li>
-                  <li>Bank account and other financial account information</li>
+                  <li data-i18n="sections.collection.personalItems.i1">Name, address, phone number, and email address</li>
+                  <li data-i18n="sections.collection.personalItems.i2">Social Security number and date of birth</li>
+                  <li data-i18n="sections.collection.personalItems.i3">Employment information and income details</li>
+                  <li data-i18n="sections.collection.personalItems.i4">Financial information including assets, debts, and credit history</li>
+                  <li data-i18n="sections.collection.personalItems.i5">Property information for loan applications</li>
+                  <li data-i18n="sections.collection.personalItems.i6">Bank account and other financial account information</li>
                 </ul>
 
-                <h3 class="text-lg font-semibold text-gray-900 mb-3">Automatically Collected Information</h3>
-                <p class="text-gray-700 leading-relaxed mb-4">
+                <h3 class="text-lg font-semibold text-gray-900 mb-3" data-i18n="sections.collection.autoTitle">Automatically Collected Information</h3>
+                <p class="text-gray-700 leading-relaxed mb-4" data-i18n="sections.collection.autoIntro">
                   When you visit our website, we may automatically collect:
                 </p>
                 <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-4">
-                  <li>IP address and device information</li>
-                  <li>Browser type and version</li>
-                  <li>Pages visited and time spent on our website</li>
-                  <li>Referring website information</li>
-                  <li>Location data (with your consent)</li>
+                  <li data-i18n="sections.collection.autoItems.i1">IP address and device information</li>
+                  <li data-i18n="sections.collection.autoItems.i2">Browser type and version</li>
+                  <li data-i18n="sections.collection.autoItems.i3">Pages visited and time spent on our website</li>
+                  <li data-i18n="sections.collection.autoItems.i4">Referring website information</li>
+                  <li data-i18n="sections.collection.autoItems.i5">Location data (with your consent)</li>
                 </ul>
 
-                <h3 class="text-lg font-semibold text-gray-900 mb-3">Third-Party Information</h3>
-                <p class="text-gray-700 leading-relaxed">
+                <h3 class="text-lg font-semibold text-gray-900 mb-3" data-i18n="sections.collection.thirdTitle">Third-Party Information</h3>
+                <p class="text-gray-700 leading-relaxed" data-i18n="sections.collection.thirdP">
                   We may obtain information about you from third parties, including credit bureaus, employers, and other financial institutions, as necessary to process your loan application and comply with regulatory requirements.
                 </p>
               </div>
@@ -89,22 +98,22 @@ import Layout from '../../layouts/Layout.astro';
             <hr class="border-t border-gray-200 my-8">
 
             <section id="use-of-information">
-              <h2 class="text-2xl font-bold text-gray-900 mb-4">3. How We Use Your Information</h2>
+              <h2 class="text-2xl font-bold text-gray-900 mb-4" data-i18n="sections.use.title">3. How We Use Your Information</h2>
               <div class="prose prose-gray max-w-none">
-                <p class="text-gray-700 leading-relaxed mb-4">
+                <p class="text-gray-700 leading-relaxed mb-4" data-i18n="sections.use.p1">
                   We use your information for the following purposes:
                 </p>
                 <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-4">
-                  <li>Processing and underwriting loan applications</li>
-                  <li>Verifying your identity and preventing fraud</li>
-                  <li>Communicating with you about your loan application and services</li>
-                  <li>Providing customer support and responding to inquiries</li>
-                  <li>Complying with legal and regulatory requirements</li>
-                  <li>Improving our website and services</li>
-                  <li>Sending you marketing communications (with your consent)</li>
-                  <li>Conducting business analytics and research</li>
+                  <li data-i18n="sections.use.items.i1">Processing and underwriting loan applications</li>
+                  <li data-i18n="sections.use.items.i2">Verifying your identity and preventing fraud</li>
+                  <li data-i18n="sections.use.items.i3">Communicating with you about your loan application and services</li>
+                  <li data-i18n="sections.use.items.i4">Providing customer support and responding to inquiries</li>
+                  <li data-i18n="sections.use.items.i5">Complying with legal and regulatory requirements</li>
+                  <li data-i18n="sections.use.items.i6">Improving our website and services</li>
+                  <li data-i18n="sections.use.items.i7">Sending you marketing communications (with your consent)</li>
+                  <li data-i18n="sections.use.items.i8">Conducting business analytics and research</li>
                 </ul>
-                <p class="text-gray-700 leading-relaxed">
+                <p class="text-gray-700 leading-relaxed" data-i18n="sections.use.pEnd">
                   We will only use your information for the purposes disclosed in this policy or as otherwise authorized by you.
                 </p>
               </div>
@@ -114,37 +123,37 @@ import Layout from '../../layouts/Layout.astro';
             <hr class="border-t border-gray-200 my-8">
 
             <section id="information-sharing">
-              <h2 class="text-2xl font-bold text-gray-900 mb-4">4. Information Sharing and Disclosure</h2>
+              <h2 class="text-2xl font-bold text-gray-900 mb-4" data-i18n="sections.sharing.title">4. Information Sharing and Disclosure</h2>
               <div class="prose prose-gray max-w-none">
-                <p class="text-gray-700 leading-relaxed mb-4">
+                <p class="text-gray-700 leading-relaxed mb-4" data-i18n="sections.sharing.p1">
                   We may share your information in the following circumstances:
                 </p>
 
-                <h3 class="text-lg font-semibold text-gray-900 mb-3">Service Providers</h3>
-                <p class="text-gray-700 leading-relaxed mb-4">
+                <h3 class="text-lg font-semibold text-gray-900 mb-3" data-i18n="sections.sharing.serviceTitle">Service Providers</h3>
+                <p class="text-gray-700 leading-relaxed mb-4" data-i18n="sections.sharing.serviceP">
                   We may share information with trusted third-party service providers who assist us in operating our business, including:
                 </p>
                 <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-4">
-                  <li>Loan processors and underwriters</li>
-                  <li>Credit reporting agencies</li>
-                  <li>Appraisers and title companies</li>
-                  <li>Technology service providers</li>
-                  <li>Legal and professional advisors</li>
+                  <li data-i18n="sections.sharing.serviceItems.i1">Loan processors and underwriters</li>
+                  <li data-i18n="sections.sharing.serviceItems.i2">Credit reporting agencies</li>
+                  <li data-i18n="sections.sharing.serviceItems.i3">Appraisers and title companies</li>
+                  <li data-i18n="sections.sharing.serviceItems.i4">Technology service providers</li>
+                  <li data-i18n="sections.sharing.serviceItems.i5">Legal and professional advisors</li>
                 </ul>
 
-                <h3 class="text-lg font-semibold text-gray-900 mb-3">Legal Requirements</h3>
-                <p class="text-gray-700 leading-relaxed mb-4">
+                <h3 class="text-lg font-semibold text-gray-900 mb-3" data-i18n="sections.sharing.legalTitle">Legal Requirements</h3>
+                <p class="text-gray-700 leading-relaxed mb-4" data-i18n="sections.sharing.legalP">
                   We may disclose your information when required by law or to:
                 </p>
                 <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-4">
-                  <li>Comply with legal processes or government requests</li>
-                  <li>Protect our rights, property, or safety</li>
-                  <li>Prevent fraud or illegal activities</li>
-                  <li>Comply with regulatory requirements</li>
+                  <li data-i18n="sections.sharing.legalItems.i1">Comply with legal processes or government requests</li>
+                  <li data-i18n="sections.sharing.legalItems.i2">Protect our rights, property, or safety</li>
+                  <li data-i18n="sections.sharing.legalItems.i3">Prevent fraud or illegal activities</li>
+                  <li data-i18n="sections.sharing.legalItems.i4">Comply with regulatory requirements</li>
                 </ul>
 
-                <h3 class="text-lg font-semibold text-gray-900 mb-3">Business Transfers</h3>
-                <p class="text-gray-700 leading-relaxed">
+                <h3 class="text-lg font-semibold text-gray-900 mb-3" data-i18n="sections.sharing.businessTitle">Business Transfers</h3>
+                <p class="text-gray-700 leading-relaxed" data-i18n="sections.sharing.businessP">
                   In the event of a merger, acquisition, or sale of assets, your information may be transferred to the acquiring entity, subject to the same privacy protections.
                 </p>
               </div>
@@ -154,22 +163,22 @@ import Layout from '../../layouts/Layout.astro';
             <hr class="border-t border-gray-200 my-8">
 
             <section id="data-security">
-              <h2 class="text-2xl font-bold text-gray-900 mb-4">5. Data Security</h2>
+              <h2 class="text-2xl font-bold text-gray-900 mb-4" data-i18n="sections.security.title">5. Data Security</h2>
               <div class="prose prose-gray max-w-none">
-                <p class="text-gray-700 leading-relaxed mb-4">
+                <p class="text-gray-700 leading-relaxed mb-4" data-i18n="sections.security.p1">
                   We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.
                 </p>
-                <p class="text-gray-700 leading-relaxed mb-4">
+                <p class="text-gray-700 leading-relaxed mb-4" data-i18n="sections.security.p2">
                   Our security measures include:
                 </p>
                 <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-4">
-                  <li>SSL encryption for data transmission</li>
-                  <li>Secure servers and databases</li>
-                  <li>Access controls and authentication procedures</li>
-                  <li>Regular security assessments and updates</li>
-                  <li>Employee training on data protection</li>
+                  <li data-i18n="sections.security.items.i1">SSL encryption for data transmission</li>
+                  <li data-i18n="sections.security.items.i2">Secure servers and databases</li>
+                  <li data-i18n="sections.security.items.i3">Access controls and authentication procedures</li>
+                  <li data-i18n="sections.security.items.i4">Regular security assessments and updates</li>
+                  <li data-i18n="sections.security.items.i5">Employee training on data protection</li>
                 </ul>
-                <p class="text-gray-700 leading-relaxed">
+                <p class="text-gray-700 leading-relaxed" data-i18n="sections.security.pEnd">
                   While we strive to protect your information, no method of transmission over the internet or electronic storage is 100% secure. We cannot guarantee absolute security but will notify you of any data breaches as required by law.
                 </p>
               </div>
@@ -179,21 +188,21 @@ import Layout from '../../layouts/Layout.astro';
             <hr class="border-t border-gray-200 my-8">
 
             <section id="cookies">
-              <h2 class="text-2xl font-bold text-gray-900 mb-4">6. Cookies and Tracking Technologies</h2>
+              <h2 class="text-2xl font-bold text-gray-900 mb-4" data-i18n="sections.cookies.title">6. Cookies and Tracking Technologies</h2>
               <div class="prose prose-gray max-w-none">
-                <p class="text-gray-700 leading-relaxed mb-4">
+                <p class="text-gray-700 leading-relaxed mb-4" data-i18n="sections.cookies.p1">
                   We use cookies and similar tracking technologies to enhance your experience on our website. Cookies are small data files stored on your device that help us:
                 </p>
                 <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-4">
-                  <li>Remember your preferences and settings</li>
-                  <li>Analyze website traffic and usage patterns</li>
-                  <li>Provide personalized content and advertisements</li>
-                  <li>Improve website functionality and performance</li>
+                  <li data-i18n="sections.cookies.items.i1">Remember your preferences and settings</li>
+                  <li data-i18n="sections.cookies.items.i2">Analyze website traffic and usage patterns</li>
+                  <li data-i18n="sections.cookies.items.i3">Provide personalized content and advertisements</li>
+                  <li data-i18n="sections.cookies.items.i4">Improve website functionality and performance</li>
                 </ul>
-                <p class="text-gray-700 leading-relaxed mb-4">
+                <p class="text-gray-700 leading-relaxed mb-4" data-i18n="sections.cookies.p2">
                   You can control cookie settings through your browser preferences. However, disabling cookies may affect the functionality of our website.
                 </p>
-                <p class="text-gray-700 leading-relaxed">
+                <p class="text-gray-700 leading-relaxed" data-i18n="sections.cookies.p3">
                   We may also use third-party analytics services, such as Google Analytics, to help us understand how visitors use our website.
                 </p>
               </div>
@@ -203,20 +212,20 @@ import Layout from '../../layouts/Layout.astro';
             <hr class="border-t border-gray-200 my-8">
 
             <section id="user-rights">
-              <h2 class="text-2xl font-bold text-gray-900 mb-4">7. Your Rights and Choices</h2>
+              <h2 class="text-2xl font-bold text-gray-900 mb-4" data-i18n="sections.rights.title">7. Your Rights and Choices</h2>
               <div class="prose prose-gray max-w-none">
-                <p class="text-gray-700 leading-relaxed mb-4">
+                <p class="text-gray-700 leading-relaxed mb-4" data-i18n="sections.rights.p1">
                   You have certain rights regarding your personal information:
                 </p>
                 <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-4">
-                  <li><strong>Access:</strong> Request access to your personal information</li>
-                  <li><strong>Correction:</strong> Request correction of inaccurate information</li>
-                  <li><strong>Deletion:</strong> Request deletion of your information (subject to legal requirements)</li>
-                  <li><strong>Portability:</strong> Request a copy of your information in a portable format</li>
-                  <li><strong>Opt-out:</strong> Unsubscribe from marketing communications</li>
-                  <li><strong>Restriction:</strong> Request limitation of processing in certain circumstances</li>
+                  <li data-i18n="sections.rights.items.i1"><strong>Access:</strong> Request access to your personal information</li>
+                  <li data-i18n="sections.rights.items.i2"><strong>Correction:</strong> Request correction of inaccurate information</li>
+                  <li data-i18n="sections.rights.items.i3"><strong>Deletion:</strong> Request deletion of your information (subject to legal requirements)</li>
+                  <li data-i18n="sections.rights.items.i4"><strong>Portability:</strong> Request a copy of your information in a portable format</li>
+                  <li data-i18n="sections.rights.items.i5"><strong>Opt-out:</strong> Unsubscribe from marketing communications</li>
+                  <li data-i18n="sections.rights.items.i6"><strong>Restriction:</strong> Request limitation of processing in certain circumstances</li>
                 </ul>
-                <p class="text-gray-700 leading-relaxed">
+                <p class="text-gray-700 leading-relaxed" data-i18n="sections.rights.pEnd">
                   To exercise these rights, please contact us using the information provided in the Contact section. We will respond to your request within the timeframe required by applicable law.
                 </p>
               </div>
@@ -226,21 +235,21 @@ import Layout from '../../layouts/Layout.astro';
             <hr class="border-t border-gray-200 my-8">
 
             <section id="california-privacy">
-              <h2 class="text-2xl font-bold text-gray-900 mb-4">8. California Privacy Rights (CCPA)</h2>
+              <h2 class="text-2xl font-bold text-gray-900 mb-4" data-i18n="sections.ccpa.title">8. California Privacy Rights (CCPA)</h2>
               <div class="prose prose-gray max-w-none">
-                <p class="text-gray-700 leading-relaxed mb-4">
+                <p class="text-gray-700 leading-relaxed mb-4" data-i18n="sections.ccpa.p1">
                   If you are a California resident, you have additional rights under the California Consumer Privacy Act (CCPA):
                 </p>
                 <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-4">
-                  <li>Right to know what personal information is collected, used, shared, or sold</li>
-                  <li>Right to delete personal information held by us</li>
-                  <li>Right to opt-out of the sale of personal information</li>
-                  <li>Right to non-discrimination for exercising CCPA rights</li>
+                  <li data-i18n="sections.ccpa.items.i1">Right to know what personal information is collected, used, shared, or sold</li>
+                  <li data-i18n="sections.ccpa.items.i2">Right to delete personal information held by us</li>
+                  <li data-i18n="sections.ccpa.items.i3">Right to opt-out of the sale of personal information</li>
+                  <li data-i18n="sections.ccpa.items.i4">Right to non-discrimination for exercising CCPA rights</li>
                 </ul>
-                <p class="text-gray-700 leading-relaxed mb-4">
+                <p class="text-gray-700 leading-relaxed mb-4" data-i18n="sections.ccpa.note">
                   <strong>Note:</strong> We do not sell personal information to third parties for monetary consideration.
                 </p>
-                <p class="text-gray-700 leading-relaxed">
+                <p class="text-gray-700 leading-relaxed" data-i18n="sections.ccpa.pEnd">
                   To exercise your CCPA rights, please contact us at the information provided below. We may need to verify your identity before processing your request.
                 </p>
               </div>
@@ -250,12 +259,12 @@ import Layout from '../../layouts/Layout.astro';
             <hr class="border-t border-gray-200 my-8">
 
             <section id="children-privacy">
-              <h2 class="text-2xl font-bold text-gray-900 mb-4">9. Children's Privacy</h2>
+              <h2 class="text-2xl font-bold text-gray-900 mb-4" data-i18n="sections.children.title">9. Children's Privacy</h2>
               <div class="prose prose-gray max-w-none">
-                <p class="text-gray-700 leading-relaxed mb-4">
+                <p class="text-gray-700 leading-relaxed mb-4" data-i18n="sections.children.p1">
                   Our website and services are not intended for children under the age of 18. We do not knowingly collect personal information from children under 18.
                 </p>
-                <p class="text-gray-700 leading-relaxed">
+                <p class="text-gray-700 leading-relaxed" data-i18n="sections.children.pEnd">
                   If we become aware that we have collected personal information from a child under 18, we will take steps to delete such information promptly.
                 </p>
               </div>
@@ -265,17 +274,17 @@ import Layout from '../../layouts/Layout.astro';
             <hr class="border-t border-gray-200 my-8">
 
             <section id="changes">
-              <h2 class="text-2xl font-bold text-gray-900 mb-4">10. Changes to This Privacy Policy</h2>
+              <h2 class="text-2xl font-bold text-gray-900 mb-4" data-i18n="sections.changes.title">10. Changes to This Privacy Policy</h2>
               <div class="prose prose-gray max-w-none">
-                <p class="text-gray-700 leading-relaxed mb-4">
+                <p class="text-gray-700 leading-relaxed mb-4" data-i18n="sections.changes.p1">
                   We may update this Privacy Policy from time to time to reflect changes in our practices or applicable laws. We will notify you of any material changes by:
                 </p>
                 <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-4">
-                  <li>Posting the updated policy on our website</li>
-                  <li>Sending you an email notification (if you have provided your email address)</li>
-                  <li>Providing notice through our website or services</li>
+                  <li data-i18n="sections.changes.items.i1">Posting the updated policy on our website</li>
+                  <li data-i18n="sections.changes.items.i2">Sending you an email notification (if you have provided your email address)</li>
+                  <li data-i18n="sections.changes.items.i3">Providing notice through our website or services</li>
                 </ul>
-                <p class="text-gray-700 leading-relaxed">
+                <p class="text-gray-700 leading-relaxed" data-i18n="sections.changes.pEnd">
                   Your continued use of our website or services after any changes indicates your acceptance of the updated Privacy Policy.
                 </p>
               </div>
@@ -285,20 +294,20 @@ import Layout from '../../layouts/Layout.astro';
             <hr class="border-t border-gray-200 my-8">
 
             <section id="contact">
-              <h2 class="text-2xl font-bold text-gray-900 mb-4">11. Contact Information</h2>
+              <h2 class="text-2xl font-bold text-gray-900 mb-4" data-i18n="sections.contact.title">11. Contact Information</h2>
               <div class="prose prose-gray max-w-none">
-                <p class="text-gray-700 leading-relaxed mb-4">
+                <p class="text-gray-700 leading-relaxed mb-4" data-i18n="sections.contact.p1">
                   If you have any questions about this Privacy Policy or our privacy practices, please contact us:
                 </p>
                 <div class="bg-gray-50 p-6 rounded-lg">
-                  <p class="text-gray-700 mb-2"><strong>Broker Lenders</strong></p>
-                  <p class="text-gray-700 mb-2">Pedro Lira, NMLS #318973</p>
-                  <p class="text-gray-700 mb-2">Xpert Home Lending, NMLS #2179191</p>
-                  <p class="text-gray-700 mb-2">Phone: (801) 307-0273</p>
-                  <p class="text-gray-700 mb-2">Email: privacy@brokerlenders.com</p>
-                  <p class="text-gray-700 mb-4">Website: www.brokerlenders.com</p>
+                  <p class="text-gray-700 mb-2" data-i18n="sections.contact.box.name"><strong>Broker Lenders</strong></p>
+                  <p class="text-gray-700 mb-2" data-i18n="sections.contact.box.pedro">Pedro Lira, NMLS #318973</p>
+                  <p class="text-gray-700 mb-2" data-i18n="sections.contact.box.xpert">Xpert Home Lending, NMLS #2179191</p>
+                  <p class="text-gray-700 mb-2"><strong data-i18n="sections.contact.box.labels.phone">Phone:</strong> <span data-i18n="sections.contact.box.values.phone">(801) 307-0273</span></p>
+                  <p class="text-gray-700 mb-2"><strong data-i18n="sections.contact.box.labels.email">Email:</strong> <span data-i18n="sections.contact.box.values.email">privacy@brokerlenders.com</span></p>
+                  <p class="text-gray-700 mb-4" ><strong data-i18n="sections.contact.box.labels.website">Website:</strong> <span data-i18n="sections.contact.box.values.website">www.brokerlenders.com</span></p>
                 </div>
-                <p class="text-gray-700 leading-relaxed mt-4">
+                <p class="text-gray-700 leading-relaxed mt-4" data-i18n="sections.contact.pEnd">
                   We will respond to your inquiry within a reasonable timeframe and in accordance with applicable law.
                 </p>
               </div>
@@ -307,10 +316,10 @@ import Layout from '../../layouts/Layout.astro';
             <!-- Footer -->
             <div class="border-t border-gray-200 pt-8">
               <div class="text-gray-700">
-                <p class="text-sm text-gray-600 mb-4">
+                <p class="text-sm text-gray-600 mb-4" data-i18n="sections.footer.effective">
                   This Privacy Policy is effective as of December 2024 and applies to all information collected by Broker Lenders.
                 </p>
-                <p class="text-sm text-gray-600">
+                <p class="text-sm text-gray-600" data-i18n="sections.footer.copy">
                   © 2024 Broker Lenders. All rights reserved. Equal Housing Lender.
                 </p>
               </div>
@@ -322,19 +331,19 @@ import Layout from '../../layouts/Layout.astro';
         <!-- Right Sidebar - Legal Info -->
         <div class="lg:col-span-1 lg:order-2">
           <div class="bg-white p-6 sticky top-8">
-            <h3 class="text-xl font-semibold text-gray-900 mb-4">Legal Info</h3>
+            <h3 class="text-xl font-semibold text-gray-900 mb-4" data-i18n="sidebar.legal_info">Legal Info</h3>
             <nav class="space-y-3">
               <div class="flex items-center">
                 <div class="w-2 h-2 bg-gray-300 rounded-full mr-3"></div>
-                <a href="/legal/terms-of-use" class="text-base text-gray-600 hover:text-red-600 transition-colors">Terms Of Use</a>
+                <a href={`/legal/terms-of-use?lang=${lang}`} class="text-base text-gray-600 hover:text-red-600 transition-colors" data-i18n="sidebar.terms_of_use">Terms Of Use</a>
               </div>
               <div class="flex items-center">
                 <div class="w-2 h-2 bg-gray-300 rounded-full mr-3"></div>
-                <a href="/legal/disclosures" class="text-base text-gray-600 hover:text-red-600 transition-colors">Disclosures And Licenses</a>
+                <a href={`/legal/disclosures?lang=${lang}`} class="text-base text-gray-600 hover:text-red-600 transition-colors" data-i18n="sidebar.disclosures">Disclosures And Licenses</a>
               </div>
               <div class="flex items-center">
                 <div class="w-2 h-2 bg-red-600 rounded-full mr-3"></div>
-                <span class="text-base font-semibold text-red-600">Privacy Policy</span>
+                <span class="text-base font-semibold text-red-600" data-i18n="sidebar.privacy_policy">Privacy Policy</span>
               </div>
             </nav>
           </div>
@@ -343,25 +352,88 @@ import Layout from '../../layouts/Layout.astro';
     </div>
   </div>
 
-  <script>
-    // Smooth scrolling for table of contents links
-    document.addEventListener('DOMContentLoaded', function() {
-      const tocLinks = document.querySelectorAll('nav a[href^="#"]');
-      
-      tocLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-          e.preventDefault();
-          const targetId = this.getAttribute('href').substring(1);
-          const targetElement = document.getElementById(targetId);
-          
-          if (targetElement) {
-            targetElement.scrollIntoView({
-              behavior: 'smooth',
-              block: 'start'
-            });
+  <script is:inline>
+    (() => {
+      const root = document.getElementById('i18n-privacy');
+      const decode = (val) => {
+        try {
+          const b64 = val || '';
+          const bin = atob(b64);
+          const bytes = new Uint8Array(bin.length);
+          for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+          const jsonText = new TextDecoder('utf-8').decode(bytes);
+          return JSON.parse(jsonText);
+        } catch { return {}; }
+      };
+      const translations = {
+        en: decode(root?.getAttribute('data-en') || ''),
+        es: decode(root?.getAttribute('data-es') || ''),
+      };
+      const getInitialLang = () => {
+        const urlLang = new URLSearchParams(window.location.search).get('lang');
+        const htmlLang = document.documentElement.getAttribute('lang');
+        let cookieLang = null;
+        try {
+          const m = document.cookie.match(/(?:^|;\s*)lang=([^;]+)/);
+          cookieLang = m && m[1] ? m[1].toLowerCase() : null;
+        } catch {}
+        const stored = localStorage.getItem('lang');
+        const raw = (urlLang || htmlLang || cookieLang || stored || 'en').toLowerCase();
+        return raw === 'es' ? 'es' : 'en';
+      };
+      const resolve = (obj, path) => {
+        try {
+          return path.split('.').reduce((o, k) => (o && k in o ? o[k] : undefined), obj);
+        } catch { return undefined; }
+      };
+      const applyTranslations = (lang) => {
+        const dict = translations[lang] || translations.en || {};
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+          const key = el.getAttribute('data-i18n');
+          const val = resolve(dict, key);
+          if (typeof val === 'string') el.textContent = val;
+        });
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+          const key = el.getAttribute('data-i18n-placeholder');
+          const val = resolve(dict, key);
+          if (typeof val === 'string') el.setAttribute('placeholder', val);
+        });
+        // Update local links to preserve current language
+        document.querySelectorAll('a[href^="/"]').forEach(a => {
+          const href = new URL(a.href, window.location.origin);
+          if (href.origin === window.location.origin) {
+            href.searchParams.set('lang', lang);
+            a.href = href.pathname + href.search + href.hash;
           }
         });
-      });
-    });
+        // Reflect lang in <html>, cookie and storage
+        try { document.documentElement.setAttribute('lang', lang); } catch {}
+        try { document.cookie = `lang=${lang};path=/;max-age=${60*60*24*365}`; } catch {}
+        try { localStorage.setItem('lang', lang); } catch {}
+      };
+      const init = () => {
+        const lang = getInitialLang();
+        applyTranslations(lang);
+        // Smooth scrolling for in-page anchors (if present)
+        const tocLinks = document.querySelectorAll('nav a[href^="#"]');
+        tocLinks.forEach(link => {
+          link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute('href').substring(1);
+            const targetEl = document.getElementById(targetId);
+            if (targetEl) targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          });
+        });
+        // Expose setter
+        window.setLanguage = (next) => {
+          const n = (next || 'en').toLowerCase();
+          const applied = n === 'es' ? 'es' : 'en';
+          applyTranslations(applied);
+        };
+      };
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else { init(); }
+    })();
   </script>
 </Layout>

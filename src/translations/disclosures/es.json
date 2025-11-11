@@ -1,0 +1,176 @@
+{
+  "title": "Divulgaciones y Licencias - Broker Lenders",
+  "breadcrumb": {
+    "home": "Inicio",
+    "legal": "Legal",
+    "disclosures": "Divulgaciones"
+  },
+  "sections": {
+    "company": {
+      "title": "1. Información de la Empresa",
+      "box_title": "Broker Lenders",
+      "labels": {
+        "lender": "Originador de Préstamos Hipotecarios con Licencia:",
+        "nmls_id": "ID NMLS:",
+        "company": "Empresa:",
+        "company_nmls_id": "ID NMLS de la Empresa:",
+        "phone": "Teléfono:",
+        "email": "Email:"
+      },
+      "p1": "Broker Lenders opera bajo la supervisión de profesionales hipotecarios licenciados comprometidos con brindar servicios de préstamos hipotecarios éticos y conformes. Todos los originadores de préstamos están licenciados y registrados a través del Sistema Nacional Multiestatal de Licencias (NMLS)."
+    },
+    "nmls": {
+      "title": "2. Información NMLS",
+      "p1": "El Sistema Nacional Multiestatal de Licencias (NMLS) permite solicitudes de licencia uniformes, renovaciones y enmiendas; reportes uniformes; y un mejor seguimiento y monitoreo de empresas e individuos licenciados.",
+      "box_title": "Acceso para Consumidores NMLS",
+      "verify": "Puedes verificar nuestra información de licencia y ver nuestro historial de licencias en:",
+      "link_text": "www.nmlsconsumeraccess.org",
+      "search_hint": "Busca usando nuestros IDs NMLS: Pedro Lira #318973 o Xpert Home Lending #2179191",
+      "pEnd": "NMLS proporciona una base de datos integral donde los consumidores pueden investigar el historial y el estado de licencia de originadores de préstamos hipotecarios y empresas."
+    },
+    "licensing": {
+      "title": "3. Información de Licencias Estatales",
+      "intro": "Broker Lenders está licenciado para realizar negocios de préstamos hipotecarios en múltiples estados. Nuestro estado de licencia varía por estado y puede incluir:",
+      "states": {
+        "california": {
+          "title": "California",
+          "p": "Licenciado por el Departamento de Protección e Innovación Financiera bajo la Ley de Préstamos Hipotecarios Residenciales de California. Licenciado por el Departamento de Protección e Innovación Financiera bajo la Licencia de Financiamiento de California."
+        },
+        "utah": { "title": "Utah", "p": "Licenciado por el Departamento de Instituciones Financieras de Utah. Licencia de Prestamista Hipotecario de Utah." },
+        "idaho": { "title": "Idaho", "p": "Licenciado por el Departamento de Finanzas de Idaho. Licencia de Corredor/Prestamista Hipotecario de Idaho." },
+        "texas": { "title": "Texas", "p": "Licenciado por el Departamento de Ahorros y Préstamos Hipotecarios de Texas. Licencia de Originador de Préstamos Hipotecarios Residenciales de Texas." },
+        "nevada": { "title": "Nevada", "p": "Licenciado por la División de Préstamos Hipotecarios de Nevada. Licencia de Corredor Hipotecario de Nevada." },
+        "florida": { "title": "Florida", "p": "Licenciado por la Oficina de Regulación Financiera de Florida. Licencia de Prestamista Hipotecario de Florida." },
+        "colorado": { "title": "Colorado", "p": "Licenciado por la División de Bienes Raíces de Colorado. Licencia de Originador de Préstamos Hipotecarios de Colorado." }
+      },
+      "additional_title": "Estados Adicionales",
+      "additional_p": "Podemos mantener licencias en estados adicionales según lo requiera la ley. La información específica de licencias para cada estado puede verificarse a través del sitio web NMLS Consumer Access.",
+      "notice_title": "Aviso Importante:",
+      "notice_p": "Solo realizamos negocios en estados donde estamos debidamente licenciados. Si te encuentras en un estado donde no estamos licenciados, no podemos brindarte servicios de préstamos hipotecarios."
+    },
+    "equalHousing": {
+      "title": "4. Prestamista de Vivienda Igualitaria",
+      "box_title": "Oportunidad de Vivienda Igualitaria",
+      "p1": "Broker Lenders está comprometido con asegurar que todos los solicitantes calificados reciban un trato igual y acceso al crédito, sin importar raza, color, religión, sexo, discapacidad, estado familiar u origen nacional.",
+      "p2": "Cumplimos con la Ley de Vivienda Justa y todas las leyes de préstamos justos aplicables. No discriminamos en ningún aspecto de una transacción de crédito por:",
+      "items": {
+        "i1": "Raza o color",
+        "i2": "Religión",
+        "i3": "Origen nacional",
+        "i4": "Sexo o género",
+        "i5": "Estado civil",
+        "i6": "Edad (siempre que el solicitante tenga capacidad para contratar)",
+        "i7": "Discapacidad",
+        "i8": "Estado familiar",
+        "i9": "Recepción de ingresos de programas de asistencia pública"
+      },
+      "pEnd": "Si crees que has sido discriminado, puedes presentar una queja ante la Oficina de Protección Financiera del Consumidor o el Departamento de Vivienda y Desarrollo Urbano."
+    },
+    "regulatory": {
+      "title": "5. Cumplimiento Regulatorio",
+      "p1": "Broker Lenders opera en cumplimiento con todas las leyes y regulaciones federales y estatales aplicables, incluyendo:",
+      "federal_title": "Leyes Federales",
+      "federal_items": {
+        "i1": "Ley de Veracidad en los Préstamos (TILA)",
+        "i2": "Ley de Procedimientos de Liquidación de Bienes Raíces (RESPA)",
+        "i3": "Ley de Informe de Crédito Justo (FCRA)",
+        "i4": "Ley de Igualdad de Oportunidad de Crédito (ECOA)",
+        "i5": "Ley de Vivienda Justa",
+        "i6": "Ley Dodd-Frank",
+        "i7": "Ley SAFE"
+      },
+      "agencies_title": "Agencias Reguladoras",
+      "agencies_items": {
+        "i1": "Oficina de Protección Financiera del Consumidor (CFPB)",
+        "i2": "Comisión Federal de Comercio (FTC)",
+        "i3": "Departamento de Vivienda y Desarrollo Urbano (HUD)",
+        "i4": "Departamentos Estatales de Banca",
+        "i5": "Autoridades Estatales de Licencias"
+      },
+      "pEnd": "Revisamos y actualizamos regularmente nuestras políticas y procedimientos para asegurar el cumplimiento continuo con todas las leyes y regulaciones aplicables."
+    },
+    "fairLending": {
+      "title": "6. Prácticas de Préstamos Justas",
+      "p1": "Broker Lenders está comprometido con prácticas de préstamos justas y asegurar que todos los solicitantes sean tratados de manera justa y consistente. Nuestro programa de préstamos justos incluye:",
+      "items": {
+        "i1": "Criterios de suscripción estandarizados aplicados consistentemente a todos los solicitantes",
+        "i2": "Capacitación regular para todos los empleados sobre leyes y prácticas de préstamos justos",
+        "i3": "Monitoreo y pruebas de prácticas de préstamos para detectar posibles disparidades",
+        "i4": "Políticas claras que prohíben prácticas discriminatorias",
+        "i5": "Auditorías y revisiones de cumplimiento regulares"
+      },
+      "pEnd": "Evaluamos las solicitudes de préstamos únicamente con base en la solvencia y la capacidad de pago, sin considerar factores prohibidos."
+    },
+    "tila": {
+      "title": "7. Ley de Veracidad en los Préstamos (TILA)",
+      "p1": "Bajo la Ley de Veracidad en los Préstamos, debemos proporcionarte ciertas divulgaciones sobre tu préstamo, incluyendo:",
+      "box_title": "Divulgaciones Requeridas",
+      "items": {
+        "i1": "Estimación de Préstamo (LE) - proporcionada dentro de 3 días hábiles de la solicitud",
+        "i2": "Divulgación de Cierre (CD) - proporcionada al menos 3 días hábiles antes del cierre",
+        "i3": "Tasa de Porcentaje Anual (APR)",
+        "i4": "Cargos financieros y monto total financiado",
+        "i5": "Calendario de pagos y total de pagos",
+        "i6": "Derecho de rescisión (para refinanciaciones de residencias principales)"
+      },
+      "pEnd": "Estas divulgaciones te ayudan a entender el costo real de tu préstamo y comparar ofertas de diferentes prestamistas."
+    },
+    "respa": {
+      "title": "8. Ley de Procedimientos de Liquidación de Bienes Raíces (RESPA)",
+      "p1": "RESPA nos exige proporcionarte información sobre el proceso de liquidación de bienes raíces y te protege de ciertas prácticas abusivas. Bajo RESPA:",
+      "items": {
+        "i1": "Debemos proporcionarte una Estimación de Préstamo dentro de 3 días hábiles de tu solicitud",
+        "i2": "Debemos proporcionarte una Divulgación de Cierre al menos 3 días hábiles antes del cierre",
+        "i3": "No podemos requerir que utilices proveedores de servicios específicos como condición de tu préstamo",
+        "i4": "No podemos aceptar sobornos o tarifas de referencia de proveedores de servicios",
+        "i5": "Debemos proporcionarte una divulgación de servicio si planeamos vender o transferir tu préstamo"
+      },
+      "pEnd": "RESPA también te otorga el derecho de solicitar información sobre la administración de tu préstamo y presentar quejas sobre problemas de servicio."
+    },
+    "cfpb": {
+      "title": "9. Oficina de Protección Financiera del Consumidor (CFPB)",
+      "p1": "La Oficina de Protección Financiera del Consumidor (CFPB) es una agencia federal que regula la oferta y la provisión de productos y servicios financieros al consumidor.",
+      "box_title": "Recursos de la CFPB",
+      "labels": {
+        "website": "Sitio web:",
+        "phone": "Teléfono:",
+        "tty": "TTY/TDD:"
+      },
+      "values": {
+        "website": "www.consumerfinance.gov",
+        "phone": "(855) 411-CFPB (2372)",
+        "tty": "(855) 729-CFPB (2372)"
+      },
+      "p2": "Puedes presentar quejas ante la CFPB sobre:",
+      "items": {
+        "i1": "Prácticas de préstamos hipotecarios",
+        "i2": "Problemas de administración de préstamos",
+        "i3": "Discriminación en préstamos",
+        "i4": "Prácticas injustas, engañosas o abusivas"
+      },
+      "pEnd": "La CFPB también proporciona recursos educativos para ayudar a los consumidores a tomar decisiones financieras informadas."
+    },
+    "notices": {
+      "title": "10. Avisos Importantes",
+      "loanDisclaimer_title": "Aviso de Compromiso de Préstamo",
+      "loanDisclaimer_p": "Esto no es un compromiso para prestar. Todas las solicitudes de préstamos están sujetas a aprobación crediticia, tasación de la propiedad y verificación de la información. Las tasas, términos del programa y condiciones están sujetas a cambios sin previo aviso.",
+      "rateAvailability_title": "Disponibilidad de Tasas y Programas",
+      "rateAvailability_p": "Las tasas de interés y los programas de préstamos mostrados están sujetos a cambios sin previo aviso. No todos los productos están disponibles en todos los estados o para todos los montos de préstamo. Pueden aplicar otras restricciones y limitaciones.",
+      "verification_title": "Verificación de Crédito e Ingresos",
+      "verification_p": "Toda la información proporcionada en las solicitudes de préstamo está sujeta a verificación. Podemos solicitar documentación adicional para verificar ingresos, activos, empleo y otra información.",
+      "property_title": "Requisitos de Propiedad",
+      "property_p": "Todos los préstamos están sujetos a tasación de la propiedad y pueden requerir inspecciones adicionales de la propiedad. La propiedad debe cumplir con las directrices del prestamista e inversionista para el programa de préstamo específico.",
+      "questions_title": "¿Preguntas o Comentarios?",
+      "questions_p": "Si tienes preguntas sobre estas divulgaciones o nuestras prácticas de préstamos, por favor contáctanos:",
+      "questions_labels": { "phone": "Teléfono:", "email": "Email:" },
+      "footer_effective": "Estas divulgaciones son efectivas desde diciembre de 2024 y están sujetas a cambios según lo requiera la ley.",
+      "footer_copy": "© 2024 Broker Lenders. Todos los derechos reservados. Pedro Lira NMLS #318973, Xpert Home Lending NMLS #2179191. Prestamista de Vivienda Igualitaria."
+    }
+  },
+  "sidebar": {
+    "legal_info": "Información Legal",
+    "terms_of_use": "Términos de Uso",
+    "disclosures": "Divulgaciones y Licencias",
+    "privacy_policy": "Política de Privacidad"
+  }
+}

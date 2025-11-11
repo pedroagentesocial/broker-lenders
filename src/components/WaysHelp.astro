@@ -9,6 +9,11 @@ const langParam = (Astro.url.searchParams.get('lang') || 'en').toLowerCase();
 const lang = ['en', 'es'].includes(langParam) ? langParam : 'en';
 const dict = lang === 'es' ? esDict : enDict;
 console.log('[i18n][ways-help][SSR] resolve', { href: Astro.url.href, lang });
+
+// Prepare base64 dictionaries for client i18n without runtime imports
+const toB64 = (obj) => Buffer.from(JSON.stringify(obj), 'utf-8').toString('base64');
+const enB64 = toB64(enDict);
+const esB64 = toB64(esDict);
 ---
 
 <!-- More ways we can help -->
@@ -56,16 +61,28 @@ console.log('[i18n][ways-help][SSR] resolve', { href: Astro.url.href, lang });
 		</div>
 	</div>
 </section>
-<script type="module">
-import enDict from '/src/translations/ways-help/en.json';
-import esDict from '/src/translations/ways-help/es.json';
-
+<div id="i18n-wayshelp" data-lang={lang} data-en={enB64} data-es={esB64} style="display:none"></div>
+<script is:inline>
 (() => {
-  const translations = { en: enDict, es: esDict };
+  const root = document.getElementById('i18n-wayshelp');
+  const decode = (val) => {
+    try {
+      const bin = atob(val || '');
+      const bytes = new Uint8Array(bin.length);
+      for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+      const jsonText = new TextDecoder('utf-8').decode(bytes);
+      return JSON.parse(jsonText);
+    } catch { return {}; }
+  };
+  const translations = {
+    en: decode(root?.getAttribute('data-en') || ''),
+    es: decode(root?.getAttribute('data-es') || ''),
+  };
   const getInitialLang = () => {
     const urlLang = new URLSearchParams(window.location.search).get('lang');
     const stored = localStorage.getItem('lang');
-    const raw = (urlLang || stored || 'en').toLowerCase();
+    const attr = root?.getAttribute('data-lang');
+    const raw = (urlLang || stored || attr || 'en').toLowerCase();
     return raw === 'es' ? 'es' : 'en';
   };
   const setText = (id, value) => {

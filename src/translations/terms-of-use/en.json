@@ -1,0 +1,111 @@
+{
+  "title": "Terms of Use - Broker Lenders",
+  "breadcrumb": {
+    "home": "Home",
+    "legal": "Legal",
+    "terms_of_use": "Terms of Use"
+  },
+  "page": {
+    "title": "Broker Lenders Terms of Use",
+    "lastUpdate": "Last Update: 31/10/2025"
+  },
+  "sections": {
+    "acceptance": {
+      "title": "1. Acceptance of Terms",
+      "p1": "Welcome to Broker Lenders. These Terms of Use (\"Terms\") govern your use of our website and services. By accessing or using our website, you agree to be bound by these Terms and our Privacy Policy.",
+      "p2": "Broker Lenders is operated by Pedro Lira (NMLS #318973) and Xpert Home Lending (NMLS #2179191). We are licensed mortgage professionals committed to providing exceptional service while maintaining compliance with all applicable laws and regulations.",
+      "p3": "If you do not agree to these Terms, please do not use our website or services."
+    },
+    "use": {
+      "title": "2. Use of Website",
+      "p1": "You may use our website for lawful purposes only. You agree to use the website in accordance with all applicable laws, regulations, and these Terms.",
+      "p2": "Our website provides information about mortgage lending services, rates, and loan programs. The information provided is for general informational purposes and does not constitute a commitment to lend or guarantee of loan approval.",
+      "p3": "You are responsible for ensuring that your use of the website complies with all applicable laws in your jurisdiction."
+    },
+    "accounts": {
+      "title": "3. User Accounts",
+      "p1": "When creating an account with us, you must provide accurate, complete, and current information. You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account.",
+      "p2": "You agree to notify us immediately of any unauthorized use of your account or any other breach of security.",
+      "p3": "We reserve the right to suspend or terminate accounts that violate these Terms or engage in fraudulent or illegal activities."
+    },
+    "prohibited": {
+      "title": "4. Prohibited Uses",
+      "intro": "You may not use our website:",
+      "items": {
+        "i1": "For any unlawful purpose or to solicit others to perform unlawful acts",
+        "i2": "To violate any international, federal, provincial, or state regulations, rules, laws, or local ordinances",
+        "i3": "To infringe upon or violate our intellectual property rights or the intellectual property rights of others",
+        "i4": "To harass, abuse, insult, harm, defame, slander, disparage, intimidate, or discriminate",
+        "i5": "To submit false or misleading information",
+        "i6": "To upload or transmit viruses or any other type of malicious code",
+        "i7": "To spam, phish, pharm, pretext, spider, crawl, or scrape",
+        "i8": "For any obscene or immoral purpose"
+      },
+      "pEnd": "We reserve the right to terminate your use of the website for violating any of the prohibited uses."
+    },
+    "ip": {
+      "title": "5. Intellectual Property",
+      "p1": "The website and its original content, features, and functionality are and will remain the exclusive property of Broker Lenders and its licensors. The website is protected by copyright, trademark, and other laws.",
+      "p2": "Our trademarks and trade dress may not be used in connection with any product or service without our prior written consent.",
+      "p3": "You may not reproduce, distribute, modify, create derivative works of, publicly display, publicly perform, republish, download, store, or transmit any of the material on our website without our prior written consent."
+    },
+    "privacy": {
+      "title": "6. Privacy",
+      "p1": "Your privacy is important to us. Please review our Privacy Policy, which also governs your use of the website, to understand our practices.",
+      "p2": "By using our website, you consent to the collection and use of information as outlined in our Privacy Policy.",
+      "p3": "We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction."
+    },
+    "disclaimers": {
+      "title": "7. Disclaimers",
+      "p1": "The information on this website is provided on an \"as is\" basis. To the fullest extent permitted by law, Broker Lenders excludes all representations, warranties, conditions, and terms.",
+      "p2": "We do not warrant that the website will be constantly available, or available at all, or that the information on the website is complete, true, accurate, or non-misleading.",
+      "p3": "Interest rates, loan terms, and program availability are subject to change without notice. All loan applications are subject to credit approval and property appraisal."
+    },
+    "liability": {
+      "title": "8. Limitation of Liability",
+      "p1": "In no event shall Broker Lenders, Pedro Lira, or Xpert Home Lending be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses.",
+      "p2": "Our total liability to you for all damages, losses, and causes of action shall not exceed the amount paid by you, if any, for accessing this website.",
+      "p3": "Some jurisdictions do not allow the exclusion of certain warranties or the limitation of liability for consequential or incidental damages, so the above limitations may not apply to you."
+    },
+    "indemnification": {
+      "title": "9. Indemnification",
+      "p1": "You agree to defend, indemnify, and hold harmless Broker Lenders, Pedro Lira, Xpert Home Lending, and their respective officers, directors, employees, and agents from and against any and all claims, damages, obligations, losses, liabilities, costs, or debt, and expenses (including but not limited to attorney's fees).",
+      "p2": "This indemnification applies to claims arising from your use of and access to the website, your violation of these Terms, or your violation of any third-party right, including without limitation any copyright, property, or privacy right."
+    },
+    "termination": {
+      "title": "10. Termination",
+      "p1": "We may terminate or suspend your account and bar access to the website immediately, without prior notice or liability, under our sole discretion, for any reason whatsoever and without limitation, including but not limited to a breach of the Terms.",
+      "p2": "If you wish to terminate your account, you may simply discontinue using the website.",
+      "p3": "All provisions of the Terms which by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity, and limitations of liability."
+    },
+    "law": {
+      "title": "11. Governing Law",
+      "p1": "These Terms shall be interpreted and governed by the laws of the State of California, without regard to its conflict of law provisions.",
+      "p2": "Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights.",
+      "p3": "If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect."
+    },
+    "changes": {
+      "title": "12. Changes to Terms",
+      "p1": "We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will provide at least 30 days notice prior to any new terms taking effect.",
+      "p2": "What constitutes a material change will be determined at our sole discretion. By continuing to access or use our website after any revisions become effective, you agree to be bound by the revised terms.",
+      "p3": "If you do not agree to the new terms, you are no longer authorized to use the website."
+    }
+  },
+  "contact": {
+    "heading": "Contact Information",
+    "company": "Broker Lenders",
+    "plira": "Pedro Lira, NMLS #318973",
+    "xpert": "Xpert Home Lending, NMLS #2179191",
+    "phone_label": "Phone:",
+    "phone": "(801) 307-0273",
+    "email_label": "Email:",
+    "email": "info@brokerlenders.com",
+    "copyright": "© 2024 Broker Lenders. All rights reserved. Equal Housing Lender."
+  },
+  "sidebar": {
+    "legal_info": "Legal Info",
+    "terms_of_use": "Terms Of Use",
+    "disclosures": "Disclosures And Licenses",
+    "privacy_policy": "Privacy Policy"
+  }
+}
