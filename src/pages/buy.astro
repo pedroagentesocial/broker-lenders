@@ -191,8 +191,15 @@ const esB64 = Buffer.from(JSON.stringify(dicts.es)).toString('base64');
           console.warn('[i18n][buy] setLanguage failed', e);
         }
       };
-      // Initialize: persist and apply so child components read consistent lang
-      setLanguage(getInitialLang());
+      // Initialize: defer until DOM is ready so elements exist
+      const initLang = getInitialLang();
+      if (document.readyState === 'loading') {
+        window.addEventListener('DOMContentLoaded', () => {
+          setLanguage(initLang);
+        });
+      } else {
+        setLanguage(initLang);
+      }
       // React to Header language clicks (persist and apply)
       document.addEventListener('click', (e) => {
         const a = (e.target instanceof Element) ? e.target.closest('a[href*="?lang="]') : null;

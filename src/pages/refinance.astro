@@ -100,18 +100,20 @@ const dict = enRefi;
     if (el && typeof text === 'string') el.textContent = text;
   };
   const preserveLangOnLinks = (lang) => {
-    const ids = ['#refi-hero-cta-secondary', '#refi-newstart-card2-link', '#refi-newstart-card3-link'];
-    ids.forEach(selector => {
-      const a = document.querySelector(selector);
-      if (!a) return;
-      try {
-        const href = new URL(a.href, window.location.origin);
-        if (href.origin === window.location.origin) {
+    try {
+      const anchors = document.querySelectorAll('a[href^="/"]');
+      anchors.forEach(a => {
+        const raw = a.getAttribute('href') || '';
+        if (!raw || raw.startsWith('#') || raw.startsWith('tel:') || raw.startsWith('mailto:') || /([?&])lang=/.test(raw)) return;
+        let href;
+        try { href = new URL(a.href, window.location.origin); } catch { return; }
+        if (href.origin !== window.location.origin) return;
+        if (lang) {
           href.searchParams.set('lang', lang);
-          a.href = href.pathname + href.search + href.hash;
+          a.setAttribute('href', href.pathname + href.search + href.hash);
         }
-      } catch {}
-    });
+      });
+    } catch {}
   };
   const applyRefiTranslations = (lang) => {
     const dict = translations[lang] || translations.en;
@@ -149,8 +151,15 @@ const dict = enRefi;
     // Preserve lang param on internal links
     preserveLangOnLinks(lang);
   };
-  // Init
-  applyRefiTranslations(setLanguage(getInitialLang()));
+  // Init: aplicar traducciones cuando el DOM esté listo
+  const initLang = setLanguage(getInitialLang());
+  if (document.readyState === 'loading') {
+    window.addEventListener('DOMContentLoaded', () => {
+      applyRefiTranslations(initLang);
+    });
+  } else {
+    applyRefiTranslations(initLang);
+  }
   // React to language menu clicks (Header intercepts click)
   document.addEventListener('click', (e) => {
     const a = e.target.closest('a[href*="?lang="]');
