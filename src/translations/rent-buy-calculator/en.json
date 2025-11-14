@@ -1,0 +1,137 @@
+{
+  "page_title": "Rent vs Buy Calculator - Broker Lenders®",
+  "breadcrumb": {
+    "home": "Home",
+    "calculators": "Calculators",
+    "current": "Rent vs Buy Calculator"
+  },
+  "hero": {
+    "title": "Rent vs Buy calculator",
+    "subtitle": "Calculate and compare the monthly costs of renting versus buying, and estimate your long-term savings and break-even point."
+  },
+  "form": {
+    "labels": {
+      "home_price": "Home price",
+      "down_payment": "Down payment",
+      "loan_term": "Loan term",
+      "interest_rate": "Interest rate",
+      "zip_code": "ZIP code",
+      "yearly_property_tax": "Yearly property taxes",
+      "yearly_home_insurance": "Yearly homeowners insurance"
+    },
+    "tooltips": {
+      "loan_term": "Term: 30 years lower payments, 15 years less interest",
+      "interest_rate": "Interest rate: higher rate = higher payments",
+      "property_tax": "Annual taxes: vary by city and property value",
+      "home_insurance": "Annual insurance: protects against damage and disasters"
+    },
+    "options": {
+      "years_15": "15 years",
+      "years_20": "20 years",
+      "years_30": "30 years"
+    },
+    "optional_toggle": "Optional: Enter taxes & insurance",
+    "placeholders": {
+      "value": "0",
+      "zip_value": "Value",
+      "interest_example": "5.99"
+    },
+    "buttons": {
+      "calculate": "Calculate",
+      "legal_disclosures": "Legal disclosures"
+    }
+  },
+  "results": {
+    "heading": "Your cost breakdown",
+    "principal_interest": "Principal & Interest",
+    "property_tax": "Property tax",
+    "home_insurance": "Home insurance",
+    "real_number": "I want real number →",
+    "buy": "Buy",
+    "rent": "Rent",
+    "difference": "Difference"
+  },
+  "cta": {
+    "message": "Ready to take the next step? Our mortgage specialists are here to help you make your dream of homeownership a reality.",
+    "call_now": "Call Now"
+  },
+  "modal": {
+    "title": "Legal Disclosures",
+    "intro": "The Broker Lenders calculator is for estimation purposes only. Results do not reflect all loan programs and are subject to individual program loan limits. Qualification, rates and payments will vary based on timing and individual circumstances. This is not a commitment to lend.",
+    "example_title": "Payment Example",
+    "example_intro": "Here's a payment example based on an average home price and the most common loan type:",
+    "labels": {
+      "loan_amount": "Loan amount:",
+      "loan_type": "Loan type:",
+      "interest_apr": "Interest rate/APR:",
+      "monthly_payment": "Monthly payment:",
+      "points": "Points:",
+      "ltv": "Loan-to-value (LTV):"
+    },
+    "footer": {
+      "disclaimer": "One point is equal to one percent of your loan amount. Payment does not include taxes and insurance. The actual payment amount will be greater. Some state and county maximum loan amount restrictions may apply. Rates shown are valid on publication date of April 18, 2024.",
+      "note": "¹If you didn't enter taxes and insurance amounts, an estimate of your taxes is based on the state selected. This does not include all fees."
+    }
+  },
+  "howto": {
+    "title": "How to use the calculator",
+    "subtitle": "Estimate your monthly housing costs and compare scenarios to decide if renting or buying is better for you.",
+    "cards": {
+      "enter_details": {
+        "title": "Enter Home Details",
+        "text": "Start by entering the home price and your down payment amount. The calculator will automatically update your loan amount and monthly payment estimates."
+      },
+      "adjust_terms": {
+        "title": "Adjust Loan Terms",
+        "text": "Choose your loan term (15, 20, or 30 years) and interest rate. Shorter terms mean higher monthly payments but less interest paid over time."
+      },
+      "include_costs": {
+        "title": "Include Additional Costs",
+        "text": "Don't forget to include property taxes, home insurance, PMI, and HOA fees. These can significantly impact your total monthly housing payment."
+      },
+      "review_results": {
+        "title": "Review Your Results",
+        "text": "See your complete monthly payment breakdown and total cost. Use this information to determine what you can comfortably afford."
+      }
+    }
+  },
+  "tips": {
+    "title": "Calculator tips",
+    "subtitle": "Get the most accurate results with these helpful tips and considerations.",
+    "items": {
+      "pmi": {
+        "title": "Understanding PMI",
+        "text": "Private Mortgage Insurance (PMI) is typically required when your down payment is less than 20% of the home's value. PMI can usually be removed once you reach 20% equity in your home."
+      },
+      "property_tax": {
+        "title": "Property Tax Considerations",
+        "text": "Property taxes vary significantly by location and can change over time. Check with local tax assessors for accurate rates in your area, as they can impact your monthly payment substantially."
+      },
+      "interest_rate": {
+        "title": "Interest Rate Impact",
+        "text": "Even small changes in interest rates can significantly affect your monthly payment and total loan cost. A 1% rate difference on a $300,000 loan can mean over $150 difference per month."
+      }
+    }
+  },
+  "right": {
+    "home_equity_title": "Your home equity after 7 years",
+    "cost_breakdown_title": "Your cost breakdown after 7 years",
+    "toggles": {
+      "monthly": "Monthly",
+      "annual": "Annual",
+      "total_cost": "Total cost"
+    }
+  },
+  "faqs": {
+    "title": "Rent vs Buy Calculator FAQs",
+    "subtitle": "Don't see your question here? We love helping people understand how housing costs compare for renting versus buying.",
+    "items": [
+      { "q": "What does this rent vs buy calculator evaluate?", "a": "It compares estimated renting and buying costs and shows accumulated home equity when buying versus $0 equity when renting. Results update based on selected years, interest rate, and the values you enter." },
+      { "q": "How do we calculate home equity when buying?", "a": "We project the home's value using an annual appreciation rate and subtract the remaining loan balance at the selected year. The difference is the equity shown in the chart." },
+      { "q": "What do Monthly, Annual and Total cost include?", "a": "Monthly uses costs for the selected year prorated per month (principal & interest plus property taxes, maintenance, HOA, homeowners insurance and PMI if applicable). Annual multiplies those monthly costs by 12. Total cost adds down payment and closing costs for buying, and adds a security deposit for renting." },
+      { "q": "How does the years slider affect the results?", "a": "It updates equity, rent growth, and estimated costs. It also recalculates the Monthly, Annual, and Total cost modes for the selected year." },
+      { "q": "When does PMI appear?", "a": "If the loan-to-value (LTV) ratio at the selected year is above 80%, we estimate annual PMI. If LTV falls to 80% or below, PMI is set to $0." },
+      { "q": "Are the results final?", "a": "No. These are directional estimates. Rates, costs, and payments vary with timing and individual circumstances. Use them as a reference and review options with Broker Lenders." }
+    ]
+  }
+}

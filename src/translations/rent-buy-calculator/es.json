@@ -1,0 +1,137 @@
+{
+  "page_title": "Calculadora Comprar vs Alquilar - Broker Lenders®",
+  "breadcrumb": {
+    "home": "Inicio",
+    "calculators": "Calculadoras",
+    "current": "Calculadora Comprar vs Alquilar"
+  },
+  "hero": {
+    "title": "Calculadora comprar vs alquilar",
+    "subtitle": "Calcula y compara los costos mensuales de alquilar versus comprar, y estima tus ahorros a largo plazo y punto de equilibrio."
+  },
+  "form": {
+    "labels": {
+      "home_price": "Precio de la casa",
+      "down_payment": "Pago inicial",
+      "loan_term": "Plazo del préstamo",
+      "interest_rate": "Tasa de interés",
+      "zip_code": "Código ZIP",
+      "yearly_property_tax": "Impuestos anuales de la propiedad",
+      "yearly_home_insurance": "Seguro anual de vivienda"
+    },
+    "tooltips": {
+      "loan_term": "Plazo: 30 años pagos bajos, 15 años menos interés",
+      "interest_rate": "Tasa de interés: mayor tasa = pagos más altos",
+      "property_tax": "Impuestos anuales: varían por ciudad y valor de propiedad",
+      "home_insurance": "Seguro anual: protege contra daños y desastres"
+    },
+    "options": {
+      "years_15": "15 años",
+      "years_20": "20 años",
+      "years_30": "30 años"
+    },
+    "optional_toggle": "Opcional: Ingresa impuestos y seguro",
+    "placeholders": {
+      "value": "0",
+      "zip_value": "Valor",
+      "interest_example": "5.99"
+    },
+    "buttons": {
+      "calculate": "Calcular",
+      "legal_disclosures": "Divulgaciones legales"
+    }
+  },
+  "results": {
+    "heading": "Desglose de costos",
+    "principal_interest": "Capital e Interés",
+    "property_tax": "Impuesto a la propiedad",
+    "home_insurance": "Seguro de vivienda",
+    "real_number": "Quiero el número real →",
+    "buy": "Comprar",
+    "rent": "Renta",
+    "difference": "Diferencia"
+  },
+  "cta": {
+    "message": "¿Listo para dar el siguiente paso? Nuestros especialistas en hipotecas están aquí para ayudarte a hacer realidad tu sueño de ser propietario.",
+    "call_now": "Llamar ahora"
+  },
+  "modal": {
+    "title": "Divulgaciones legales",
+    "intro": "La calculadora de Broker Lenders es solo para fines de estimación. Los resultados no reflejan todos los programas de préstamo y están sujetos a límites individuales del programa. La calificación, tasas y pagos variarán según el momento y las circunstancias individuales. Esto no es un compromiso de préstamo.",
+    "example_title": "Ejemplo de pago",
+    "example_intro": "Aquí hay un ejemplo de pago basado en un precio promedio de vivienda y el tipo de préstamo más común:",
+    "labels": {
+      "loan_amount": "Monto del préstamo:",
+      "loan_type": "Tipo de préstamo:",
+      "interest_apr": "Tasa de interés/APR:",
+      "monthly_payment": "Pago mensual:",
+      "points": "Puntos:",
+      "ltv": "Relación préstamo-valor (LTV):"
+    },
+    "footer": {
+      "disclaimer": "Un punto equivale al uno por ciento del monto de tu préstamo. El pago no incluye impuestos y seguro. El monto real del pago será mayor. Pueden aplicarse restricciones de monto máximo de préstamo por estado y condado. Las tasas mostradas son válidas en la fecha de publicación del 18 de abril de 2024.",
+      "note": "¹Si no ingresaste montos de impuestos y seguro, una estimación de tus impuestos se basa en el estado seleccionado. Esto no incluye todas las tarifas."
+    }
+  },
+  "howto": {
+    "title": "Cómo usar la calculadora",
+    "subtitle": "Estima tus costos mensuales de vivienda y compara escenarios para decidir si te conviene alquilar o comprar.",
+    "cards": {
+      "enter_details": {
+        "title": "Ingresa detalles de la casa",
+        "text": "Comienza ingresando el precio de la casa y el monto de tu pago inicial. La calculadora actualizará automáticamente el monto del préstamo y las estimaciones de pago mensual."
+      },
+      "adjust_terms": {
+        "title": "Ajusta los términos del préstamo",
+        "text": "Elige tu plazo de préstamo (15, 20 o 30 años) y la tasa de interés. Plazos más cortos significan pagos mensuales más altos pero menos interés pagado con el tiempo."
+      },
+      "include_costs": {
+        "title": "Incluye costos adicionales",
+        "text": "No olvides incluir impuestos a la propiedad, seguro de vivienda, PMI y tarifas de HOA. Estos pueden impactar significativamente tu pago mensual total de vivienda."
+      },
+      "review_results": {
+        "title": "Revisa tus resultados",
+        "text": "Ve el desglose completo de tu pago mensual y el costo total. Usa esta información para determinar lo que puedes pagar cómodamente."
+      }
+    }
+  },
+  "tips": {
+    "title": "Consejos de la calculadora",
+    "subtitle": "Obtén resultados más precisos con estos consejos y consideraciones.",
+    "items": {
+      "pmi": {
+        "title": "Entendiendo el PMI",
+        "text": "El Seguro Hipotecario Privado (PMI) generalmente se requiere cuando tu pago inicial es menor al 20% del valor de la casa. Por lo general, el PMI puede eliminarse cuando alcanzas el 20% de capital en tu vivienda."
+      },
+      "property_tax": {
+        "title": "Consideraciones del impuesto a la propiedad",
+        "text": "Los impuestos a la propiedad varían significativamente por ubicación y pueden cambiar con el tiempo. Consulta con los evaluadores fiscales locales para obtener tasas precisas en tu área, ya que pueden afectar sustancialmente tu pago mensual."
+      },
+      "interest_rate": {
+        "title": "Impacto de la tasa de interés",
+        "text": "Incluso pequeños cambios en las tasas de interés pueden afectar significativamente tu pago mensual y el costo total del préstamo. Una diferencia del 1% en una hipoteca de $300,000 puede significar más de $150 de diferencia por mes."
+      }
+    }
+  },
+  "right": {
+    "home_equity_title": "Tu capital de vivienda después de 7 años",
+    "cost_breakdown_title": "Desglose de costos después de 7 años",
+    "toggles": {
+      "monthly": "Mensual",
+      "annual": "Anual",
+      "total_cost": "Costo total"
+    }
+  },
+  "faqs": {
+    "title": "Preguntas frecuentes de la calculadora Comprar vs Alquilar",
+    "subtitle": "¿No ves tu pregunta aquí? Nos encanta ayudar a las personas a comparar los costos de alquilar vs comprar.",
+    "items": [
+      { "q": "¿Qué evalúa esta calculadora de ‘rentar vs comprar’?", "a": "Compara costos estimados de renta y compra, y muestra la equity acumulada al comprar frente a $0 de equity en renta. Los resultados se recalculan según años, tasa y valores ingresados." },
+      { "q": "¿Cómo calculamos la equity al comprar?", "a": "Proyectamos el valor de la vivienda con una tasa de apreciación anual y restamos el saldo del préstamo en el año elegido. Esa diferencia es la equity mostrada en la gráfica." },
+      { "q": "¿Qué incluyen Monthly, Annual y Total cost?", "a": "Monthly usa costos del año seleccionado prorrateados al mes (capital e interés, impuestos, mantenimiento, HOA, seguro de vivienda y PMI si aplica). Annual multiplica por 12. Total cost agrega pago inicial y closing costs en compra, y depósito de seguridad en renta." },
+      { "q": "¿Cómo afecta el slider de años?", "a": "Actualiza la equity, el crecimiento de la renta y los costos estimados. También recalcula los modos Monthly, Annual y Total cost para el año seleccionado." },
+      { "q": "¿Cuándo aparece el PMI?", "a": "Cuando la relación préstamo-valor (LTV) del año es mayor a 80% estimamos PMI anual; si el LTV baja a 80% o menos, el PMI se considera $0." },
+      { "q": "¿Los resultados son definitivos?", "a": "No. Son estimaciones orientativas. Tasas, costos y pagos cambian según momento y perfil. Úsalas como referencia y revisa opciones con Broker Lenders." }
+    ]
+  }
+}

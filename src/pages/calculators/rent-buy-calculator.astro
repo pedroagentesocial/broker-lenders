@@ -1,0 +1,737 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Contact from '../../components/Contact.astro';
+import ImportantLegal from '../../components/ImportantLegal.astro';
+import NextMoveSection from '../../components/NextMoveSection.astro';
+import enDict from '../../translations/rent-buy-calculator/en.json';
+import esDict from '../../translations/rent-buy-calculator/es.json';
+const enB64 = Buffer.from(JSON.stringify(enDict)).toString('base64');
+const esB64 = Buffer.from(JSON.stringify(esDict)).toString('base64');
+
+export const prerender = true;
+const lang = 'en';
+const dict = enDict;
+---
+
+<div id="i18n-rb" data-en={enB64} data-es={esB64} style="display:none"></div>
+<script is:inline>
+  (() => {
+    const payloadEl = document.getElementById('i18n-rb');
+    const decode = (val) => {
+      try {
+        const b64 = val || '';
+        const bin = atob(b64);
+        const bytes = Uint8Array.from({ length: bin.length }, (_, i) => bin.charCodeAt(i) & 0xff);
+        let jsonText = '';
+        try { jsonText = new TextDecoder('utf-8', { fatal: false }).decode(bytes); }
+        catch {
+          try {
+            const percent = Array.from(bin, c => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)).join('');
+            jsonText = decodeURIComponent(percent);
+          } catch { jsonText = bin; }
+        }
+        try { return JSON.parse(jsonText); } catch { return {}; }
+      } catch { return {}; }
+    };
+    const translations = { en: decode(payloadEl?.getAttribute('data-en') || ''), es: decode(payloadEl?.getAttribute('data-es') || '') };
+    const getInitialLang = () => {
+      const urlLang = new URLSearchParams(window.location.search).get('lang');
+      const stored = localStorage.getItem('lang');
+      return (urlLang || stored || 'en');
+    };
+    const resolvePath = (obj, path) => {
+      try {
+        const parts = (path || '').split('.');
+        let cur = obj;
+        for (const p of parts) { if (cur && typeof cur === 'object' && p in cur) cur = cur[p]; else return null; }
+        return typeof cur === 'string' ? cur : null;
+      } catch { return null; }
+    };
+    const preserveLangOnLocalLinks = (lang) => {
+      try {
+        const localLinks = document.querySelectorAll('a[href^="/"]');
+        localLinks.forEach(a => {
+          const raw = a.getAttribute('href') || '';
+          if (!raw || raw.startsWith('#') || raw.startsWith('tel:') || raw.startsWith('mailto:') || /([?&])lang=/.test(raw)) return;
+          let href; try { href = new URL(a.href, window.location.origin); } catch { return; }
+          if (href.origin !== window.location.origin) return;
+          if (lang) { href.searchParams.set('lang', lang); a.setAttribute('href', href.pathname + href.search + href.hash); }
+        });
+      } catch {}
+    };
+    const applyTranslations = (lang) => {
+      const dict = translations[lang] || translations.en;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        const val = resolvePath(dict, key);
+        if (typeof val === 'string') { if (val.includes('<')) el.innerHTML = val; else el.textContent = val; }
+      });
+      if (typeof dict.page_title === 'string') document.title = dict.page_title;
+      preserveLangOnLocalLinks(lang);
+    };
+    const __initLang = getInitialLang();
+    applyTranslations(__initLang);
+    document.addEventListener('click', (e) => {
+      const a = e.target.closest('a[href*="?lang="]'); if (!a) return;
+      let href; try { href = new URL(a.href, window.location.origin); } catch { return; }
+      const newLang = href.searchParams.get('lang');
+      if (newLang) { applyTranslations(newLang); preserveLangOnLocalLinks(newLang); }
+    });
+    window.addEventListener('popstate', () => {
+      const urlLang = new URLSearchParams(window.location.search).get('lang');
+      const lang = (urlLang || localStorage.getItem('lang') || 'en');
+      applyTranslations(lang); preserveLangOnLocalLinks(lang);
+    });
+    window.addEventListener('storage', (ev) => {
+      if (ev.key === 'lang' && ev.newValue) { applyTranslations(ev.newValue); preserveLangOnLocalLinks(ev.newValue); }
+    });
+  })();
+</script>
+
+<Layout title={dict.page_title} lang={lang}>
+	<section class="bg-white py-4">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<nav class="flex" aria-label="Breadcrumb">
+				<ol class="flex items-center space-x-4">
+					<li>
+						<div>
+							<a href={`/?lang=${lang}`} class="text-gray-400 hover:text-gray-500 text-sm font-medium" data-i18n="breadcrumb.home">{dict.breadcrumb.home}</a>
+						</div>
+					</li>
+					<li>
+						<div class="flex items-center">
+							<svg class="flex-shrink-0 h-5 w-5 text-gray-300" viewBox="0 0 20 20" fill="currentColor">
+								<path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+							</svg>
+							<a href={`/calculators?lang=${lang}`} class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700" data-i18n="breadcrumb.calculators">{dict.breadcrumb.calculators}</a>
+						</div>
+					</li>
+					<li>
+						<div class="flex items-center">
+							<svg class="flex-shrink-0 h-5 w-5 text-gray-300" viewBox="0 0 20 20" fill="currentColor">
+								<path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+							</svg>
+							<span class="ml-4 text-sm font-medium text-gray-500" data-i18n="breadcrumb.current">{dict.breadcrumb.current}</span>
+						</div>
+					</li>
+				</ol>
+			</nav>
+		</div>
+    </section>
+
+		<!-- Main Calculator Section -->
+	<section class="py-8 bg-white">
+		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-8">
+				<h1 id="mc-hero-title" class="text-2xl font-bold text-gray-900 mb-3" data-i18n="hero.title">{dict.hero.title}</h1>
+				<p id="mc-hero-subtitle" class="text-base text-gray-600 max-w-2xl mx-auto" data-i18n="hero.subtitle">
+					{dict.hero.subtitle}
+				</p>
+			</div>
+
+			<!-- 2-Column Layout Container -->
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
+				<!-- Left Column: Calculator Form -->
+				<div class="bg-gray-100 p-4 rounded-xl shadow-lg border border-gray-200">
+					<form id="mortgage-form" class="space-y-4">
+						<!-- Home Price -->
+						<div class="bg-white p-1.5 rounded-lg">
+							<!-- Label positioned above input, aligned with placeholder text -->
+						<div class="flex justify-start px-1.5 mb-0.5">
+						<span id="mc-label-purchase-price" class="text-xs font-medium text-gray-700" data-i18n="form.labels.purchase_price">{dict.form.labels.purchase_price || 'Purchase price'}</span>
+						</div>
+							<!-- Input Field -->
+							<div class="relative">
+								<span class="absolute left-1.5 top-1/2 transform -translate-y-1/2 text-gray-500 text-sm">$</span>
+                            <input 
+                                type="text" 
+                                id="purchasePrice" 
+                                name="purchasePrice"
+                                class="w-full pl-5 pr-1.5 py-1.5 bg-transparent border-0 focus:outline-none text-sm"
+                                value="500000" placeholder={dict.form.placeholders.value}
+                            >
+						</div>
+					</div>
+
+						<!-- Down Payment -->
+						<div class="bg-white p-1.5 rounded-lg">
+							<!-- Label positioned above input, aligned with placeholder text -->
+						<div class="flex justify-start px-1.5 mb-0.5">
+							<span id="mc-label-down-payment" class="text-xs font-medium text-gray-700" data-i18n="form.labels.down_payment">{dict.form.labels.down_payment}</span>
+						</div>
+							<!-- Input Field with Toggle Buttons -->
+							<div class="flex space-x-2">
+								<div class="relative flex-1">
+                                    <span id="downPaymentSymbol" class="absolute left-1.5 top-1/2 transform -translate-y-1/2 text-gray-500 text-sm">$</span>
+									<input 
+										type="text" 
+										id="downPayment" 
+										name="downPayment"
+                                        class="w-full pl-5 pr-1.5 py-1.5 bg-transparent border-0 focus:outline-none text-sm"
+                                        value="100000" placeholder="0"
+                                    >
+								</div>
+								<!-- Toggle Button -->
+								<div class="flex space-x-1">
+                                    <button 
+                                        type="button" 
+                                        id="toggleDollar" 
+                                        class="px-2 py-1.5 text-xs font-medium rounded-md transition-all duration-200 bg-gray-900 border border-gray-900 text-white hover:bg-gray-800"
+                                    >
+                                        $
+                                    </button>
+                                    <button 
+                                        type="button" 
+                                        id="togglePercent" 
+                                        class="px-2 py-1.5 text-xs font-medium rounded-md transition-all duration-200 bg-white border border-gray-300 text-gray-600 hover:bg-gray-50"
+                                    >
+                                        %
+                                    </button>
+								</div>
+							</div>
+						</div>
+
+						<!-- Credit Score -->
+						<div class="bg-white p-1.5 rounded-lg">
+							<div class="flex justify-start items-center px-1.5 mb-0.5">
+								<span id="rb-label-credit-score" class="text-xs font-medium text-gray-700" data-i18n="form.labels.credit_score">{dict.form.labels.credit_score || 'Credit score'}</span>
+							</div>
+                            <select id="creditScore" name="creditScore" class="w-full px-1.5 py-1.5 bg-transparent border-0 focus:outline-none text-sm">
+                                <option value="580-619">580-619</option>
+                                <option value="620-659">620-659</option>
+                                <option value="660-719" selected>660-719</option>
+                                <option value="720_or_above">720 or above</option>
+                            </select>
+						</div>
+
+						<!-- Interest Rate -->
+						<div class="bg-white p-1.5 rounded-lg">
+							<div class="flex justify-start items-center px-1.5 mb-0.5">
+								<span id="rb-label-interest-rate" class="text-xs font-medium text-gray-700" data-i18n="form.labels.interest_rate">{dict.form.labels.interest_rate}</span>
+							</div>
+							<div class="relative">
+                                <input type="text" id="interestRate" name="interestRate" value="6.5" maxlength="4" class="w-full pl-1.5 pr-5 py-1.5 bg-transparent border-0 focus:outline-none text-sm" placeholder={dict.form.placeholders.interest_example}>
+								<span class="absolute right-1.5 top-1/2 transform -translate-y-1/2 text-gray-500 text-sm">%</span>
+							</div>
+						</div>
+
+						<!-- Monthly Rent -->
+						<div class="bg-white p-1.5 rounded-lg">
+							<div class="flex justify-start px-1.5 mb-0.5">
+								<span id="rb-label-monthly-rent" class="text-xs font-medium text-gray-700" data-i18n="form.labels.monthly_rent">{dict.form.labels.monthly_rent || 'Monthly rent'}</span>
+							</div>
+							<div class="relative">
+								<span class="absolute left-1.5 top-1/2 transform -translate-y-1/2 text-gray-500 text-sm">$</span>
+                                <input type="text" id="monthlyRent" name="monthlyRent" class="w-full pl-5 pr-1.5 py-1.5 bg-transparent border-0 focus:outline-none text-sm" value="2400" placeholder="0">
+							</div>
+						</div>
+
+
+					</form>
+					
+					<!-- Calculate Button -->
+					<div class="mt-4">
+						<button 
+							id="calculateButton"
+							type="button"
+							class="w-full bg-black text-white py-3 px-4 rounded-[48px] text-base font-semibold hover:bg-gray-800 transition-colors duration-200"
+						>
+							{dict.form.buttons.calculate}
+						</button>
+					</div>
+					
+					<!-- Logo and Legal Disclosures -->
+					<div class="mt-4 flex items-center justify-center space-x-2 text-xs text-gray-500">
+                        <img 
+                            src="/logo.png" 
+                            alt="Broker Lenders Logo" 
+                            class="h-6 w-auto"
+                        >
+						<span>|</span>
+						<button 
+							id="legalDisclosuresBtn"
+							class="underline hover:text-gray-700 transition-colors cursor-pointer"
+						>
+							{dict.form.buttons.legal_disclosures}
+						</button>
+					</div>
+				</div>
+
+				<!-- Right Column: Results and Message Cards -->
+				<div class="space-y-4">
+					<!-- Results Card -->
+					<div id="resultsCard" class="bg-orange-600/10 px-3 py-3 rounded-xl shadow-lg text-gray-900 flex flex-col">
+						<div class="mb-4">
+							<div class="text-sm font-bold text-gray-700 mb-2">Your home equity after <span id="equityYearsLabel">7</span> years</div>
+                            <div class="rounded-xl p-4">
+								<div class="flex items-center justify-between mb-4">
+									<div class="text-xs font-semibold" id="equityRentLabel">Rent $0</div>
+									<div class="text-xs font-semibold" id="equityBuyLabel">Buy $0</div>
+								</div>
+                                <div>
+                                    <div class="flex items-end justify-between h-36">
+                                        <div class="w-32 h-full rounded-xl overflow-hidden flex items-end">
+                                            <div id="rentBar" class="w-full bg-red-600 rounded-xl" style="height: 0%"></div>
+                                        </div>
+                                        <div class="w-32 h-full rounded-xl overflow-hidden flex items-end">
+                                            <div id="equityBar" class="w-full bg-gray-900 rounded-xl" style="height: 0%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-4">
+                                    <input id="equityYears" type="range" min="0" max="30" step="1" value="7" class="w-full">
+                                    <div class="relative mt-1 h-4 text-[10px] text-gray-600">
+                                        <span class="absolute left-0">0</span>
+                                        <span class="absolute left-[16.66%] -translate-x-1/2">5</span>
+                                        <span class="absolute left-[33.33%] -translate-x-1/2">10</span>
+                                        <span class="absolute left-[50%] -translate-x-1/2">15</span>
+                                        <span class="absolute left-[66.66%] -translate-x-1/2">20</span>
+                                        <span class="absolute left-[83.33%] -translate-x-1/2">25</span>
+                                        <span class="absolute left-full -translate-x-full">30</span>
+                                    </div>
+                                </div>
+							</div>
+						</div>
+
+						<div class="mt-2">
+							<div class="text-sm font-bold text-gray-700 mb-2">Your cost breakdown after <span id="costYearsLabel">7</span> years</div>
+                            <div class="flex items-center space-x-2 mb-3">
+                                <button id="costModeMonthly" class="px-3 py-1.5 text-xs font-semibold rounded-full border border-gray-300 bg-white text-black">Monthly</button>
+                                <button id="costModeAnnual" class="px-3 py-1.5 text-xs font-semibold rounded-full border border-gray-300 bg-white text-black">Annual</button>
+                                <button id="costModeTotal" class="px-3 py-1.5 text-xs font-semibold rounded-full border border-gray-300 bg-white text-black">Total cost</button>
+                            </div>
+                                    <div class="space-y-2">
+                                        <div class="flex items-center justify-between px-3 py-2 rounded-xl"><div class="text-sm">Rent</div><div id="costRentAmount" class="text-sm font-semibold">$0</div></div>
+                                        <div class="flex items-center justify-between px-3 py-2 bg-orange-600/30 rounded-xl"><div class="text-sm">Buy<sup>2</sup></div><div id="costBuyAmount" class="text-sm font-semibold">$0</div></div>
+                                        <div class="flex items-center justify-between px-3 py-2"><div class="text-sm">Difference</div><div id="costDiffAmount" class="text-sm font-semibold">$0</div></div>
+                                    </div>
+                            
+						</div>
+					</div>
+
+					<!-- Message Card -->
+					<div id="messageCard" class="bg-gray-100 p-4 rounded-xl shadow-lg">
+						<div class="text-center">
+						<p id="mc-cta-message" class="text-gray-700 text-base mb-4" data-i18n="cta.message">{dict.cta.message}</p>
+							<button id="callNowBtn" class="bg-black hover:bg-gray-800 text-white font-bold py-2.5 px-6 rounded-full transition-colors duration-200 flex items-center justify-center mx-auto text-sm">
+								<svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+								</svg>
+								{dict.cta.call_now}
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Legal Disclosures Modal -->
+	<div id="legalModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
+		<div class="bg-white rounded-[48px] max-w-3xl w-full max-h-[80vh] overflow-y-auto p-8 relative">
+			<!-- Close Button -->
+			<button 
+				id="closeModal" 
+				class="absolute top-6 right-6 text-gray-400 hover:text-gray-600 transition-colors"
+			>
+				<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+				</svg>
+			</button>
+			
+            <!-- Modal Content -->
+            <div class="pr-8">
+                <h2 id="mc-modal-title" class="text-2xl font-bold text-gray-900 mb-6">Legal Disclosures</h2>
+				<div class="space-y-6 text-gray-700 leading-relaxed">
+					<div class="space-y-4">
+                        <p>
+                            <strong>1. Payment example:</strong> An interest rate of 6.5% (6.791% APR) is for the cost of 2.00 point(s) ($7,000.00) paid at closing. On a $350,000 mortgage, you would make monthly payments of $2,212.24. Monthly payment does not include taxes and insurance premiums. The actual payment amount will be greater. Payment assumes a loan-to-value (LTV) of 80.00%.
+                        </p>
+                        <p>
+                            <strong>2. Equity example:</strong> The equity you have in your home is equal to its projected value at any given year minus the loan balance. For example, if you put 20% down on a $250,000 purchase with a 30-year fixed-rate loan at 6.5%, and assuming a 3.18% annual appreciation rate on the home's value, your equity after 5 years would be approximately $107,878.
+                        </p>
+                        <p>
+                            <strong>3. Cost breakdown:</strong> The total cost and Year 1 cost include one-time expenses associated with getting a mortgage. These include, but aren't limited to, your down payment and closing costs. For renting, the one-time expense includes a security deposit. These one-time expenses are not reflected in the monthly cost or any yearly cost after the first year. The cost breakdown is for estimation purposes only. Qualification, rates and payments will vary based on timing and individual circumstances. Estimates provided by Broker Lenders.
+                        </p>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </div>
+
+    <!-- Estimated costs section below the calculator -->
+    <section class="py-10">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-gray-100 p-6 rounded-xl">
+          <h3 class="text-lg font-semibold text-gray-900 mb-4 text-center">Estimated costs</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="bg-white rounded-xl p-4">
+              <div class="text-sm font-semibold text-black">Property taxes</div>
+              <div id="newCostPropertyTax" class="text-xl font-bold">$6,200</div>
+            </div>
+            <div class="bg-white rounded-xl p-4">
+              <div class="text-sm font-semibold text-black">Closing costs</div>
+              <div id="newCostClosingCosts" class="text-xl font-bold">$17,200</div>
+            </div>
+            <div class="bg-white rounded-xl p-4">
+              <div class="text-sm font-semibold text-black">Private mortgage insurance</div>
+              <div id="newCostPMI" class="text-xl font-bold">$0</div>
+            </div>
+            <div class="bg-white rounded-xl p-4">
+              <div class="text-sm font-semibold text-black">Homeowners insurance</div>
+              <div id="newCostHomeIns" class="text-xl font-bold">$1,200</div>
+            </div>
+            <div class="bg-white rounded-xl p-4">
+              <div class="text-sm font-semibold text-black">Homeowners association dues</div>
+              <div id="newCostHOA" class="text-xl font-bold">$1,200</div>
+            </div>
+            <div class="bg-white rounded-xl p-4">
+              <div class="text-sm font-semibold text-black">Home maintenance</div>
+              <div id="newCostMaintenance" class="text-xl font-bold">$5,400</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-white" id="rb-faqs">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          <div>
+            <h2 class="text-3xl font-bold text-gray-900 mb-4" data-i18n="faqs.title">{dict.faqs.title}</h2>
+            <p class="text-lg text-gray-600 leading-relaxed" data-i18n="faqs.subtitle">{dict.faqs.subtitle}</p>
+          </div>
+          <div class="space-y-4">
+            <div class="border border-gray-200 rounded-lg">
+              <button class="faq-button w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset">
+                <span class="font-medium text-gray-900" data-i18n="faqs.items.0.q">{dict.faqs.items[0].q}</span>
+                <svg class="faq-icon w-5 h-5 text-gray-500 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div class="faq-content hidden px-6 pb-4">
+                <p class="text-gray-600" data-i18n="faqs.items.0.a">{dict.faqs.items[0].a}</p>
+              </div>
+            </div>
+
+            <div class="border border-gray-200 rounded-lg">
+              <button class="faq-button w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset">
+                <span class="font-medium text-gray-900" data-i18n="faqs.items.1.q">{dict.faqs.items[1].q}</span>
+                <svg class="faq-icon w-5 h-5 text-gray-500 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div class="faq-content hidden px-6 pb-4">
+                <p class="text-gray-600" data-i18n="faqs.items.1.a">{dict.faqs.items[1].a}</p>
+              </div>
+            </div>
+
+            <div class="border border-gray-200 rounded-lg">
+              <button class="faq-button w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset">
+                <span class="font-medium text-gray-900" data-i18n="faqs.items.2.q">{dict.faqs.items[2].q}</span>
+                <svg class="faq-icon w-5 h-5 text-gray-500 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div class="faq-content hidden px-6 pb-4">
+                <p class="text-gray-600" data-i18n="faqs.items.2.a">{dict.faqs.items[2].a}</p>
+              </div>
+            </div>
+
+            <div class="border border-gray-200 rounded-lg">
+              <button class="faq-button w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset">
+                <span class="font-medium text-gray-900" data-i18n="faqs.items.3.q">{dict.faqs.items[3].q}</span>
+                <svg class="faq-icon w-5 h-5 text-gray-500 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div class="faq-content hidden px-6 pb-4">
+                <p class="text-gray-600" data-i18n="faqs.items.3.a">{dict.faqs.items[3].a}</p>
+              </div>
+            </div>
+
+            <div class="border border-gray-200 rounded-lg">
+              <button class="faq-button w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset">
+                <span class="font-medium text-gray-900" data-i18n="faqs.items.4.q">{dict.faqs.items[4].q}</span>
+                <svg class="faq-icon w-5 h-5 text-gray-500 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div class="faq-content hidden px-6 pb-4">
+                <p class="text-gray-600" data-i18n="faqs.items.4.a">{dict.faqs.items[4].a}</p>
+              </div>
+            </div>
+
+            <div class="border border-gray-200 rounded-lg">
+              <button class="faq-button w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset">
+                <span class="font-medium text-gray-900" data-i18n="faqs.items.5.q">{dict.faqs.items[5].q}</span>
+                <svg class="faq-icon w-5 h-5 text-gray-500 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div class="faq-content hidden px-6 pb-4">
+                <p class="text-gray-600" data-i18n="faqs.items.5.a">{dict.faqs.items[5].a}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <NextMoveSection lang={lang} />
+	<Contact lang={lang} />
+	<ImportantLegal />
+</Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('legalModal');
+    const openBtn = document.getElementById('legalDisclosuresBtn');
+    const closeBtn = document.getElementById('closeModal');
+    openBtn?.addEventListener('click', () => {
+      modal?.classList.remove('hidden');
+    });
+    closeBtn?.addEventListener('click', () => {
+      modal?.classList.add('hidden');
+    });
+    modal?.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.add('hidden');
+      }
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        modal?.classList.add('hidden');
+      }
+    });
+
+    const fmt = (n) => {
+      const v = Math.max(0, Math.round(n || 0));
+      return '$' + v.toLocaleString('en-US');
+    };
+    const getNumber = (el) => {
+      const v = el && el.value ? el.value.replace(/[^0-9.]/g, '') : '0';
+      return parseFloat(v || '0') || 0;
+    };
+    const dpSymbol = document.getElementById('downPaymentSymbol');
+    const toggleDollar = document.getElementById('toggleDollar');
+    const togglePercent = document.getElementById('togglePercent');
+    const purchaseEl = document.getElementById('purchasePrice') || document.getElementById('homePrice');
+    const dpEl = document.getElementById('downPayment');
+    const irEl = document.getElementById('interestRate');
+    const rentEl = document.getElementById('monthlyRent');
+    const yearsRange = document.getElementById('equityYears');
+    const equityYearsLabel = document.getElementById('equityYearsLabel');
+    const costYearsLabel = document.getElementById('costYearsLabel');
+    const equityBar = document.getElementById('equityBar');
+    const equityBuyLabel = document.getElementById('equityBuyLabel');
+    const equityRentLabel = document.getElementById('equityRentLabel');
+    const rentBar = document.getElementById('rentBar');
+    const btnMonthly = document.getElementById('costModeMonthly');
+    const btnAnnual = document.getElementById('costModeAnnual');
+    const btnTotal = document.getElementById('costModeTotal');
+    const costRentAmount = document.getElementById('costRentAmount');
+    const costBuyAmount = document.getElementById('costBuyAmount');
+    const costDiffAmount = document.getElementById('costDiffAmount');
+    const calcBtn = document.getElementById('calculateButton');
+
+    let mode = 'monthly';
+    let dpMode = (dpSymbol && dpSymbol.textContent && dpSymbol.textContent.trim() === '%') ? 'percent' : 'dollar';
+    const appreciationRate = 0.0318;
+    const propertyTaxRate = 0.0124;
+    const maintenanceRate = 0.0108;
+    const hoaAnnualDefault = 1200;
+    const homeInsAnnualDefault = 1200;
+    const pmiAnnualRate = 0.005;
+    const closingCostRate = 0.043;
+    const rentGrowthRate = 0.03;
+
+    const compute = () => {
+      const price = getNumber(purchaseEl);
+      const dpInput = getNumber(dpEl);
+      const isPercent = dpSymbol && dpSymbol.textContent && dpSymbol.textContent.trim() === '%';
+      const downPayment = isPercent ? price * (dpInput / 100) : dpInput;
+      const loanAmount = Math.max(0, price - downPayment);
+      let annualRate = getNumber(irEl);
+      if (annualRate <= 0) { annualRate = 1; irEl && (irEl.value = String(annualRate)); }
+      if (annualRate > 10) { annualRate = 10; irEl && (irEl.value = String(annualRate)); }
+      const r = (annualRate / 100) / 12;
+      const n = 30 * 12;
+      let monthlyPI = 0;
+      if (loanAmount > 0) {
+        if (r > 0) {
+          const num = loanAmount * (r * Math.pow(1 + r, n));
+          const den = Math.pow(1 + r, n) - 1;
+          monthlyPI = num / den;
+        } else {
+          monthlyPI = loanAmount / n;
+        }
+      }
+      const years = parseInt(yearsRange ? yearsRange.value : '0') || 0;
+      const k = years * 12;
+      let remaining = loanAmount;
+      if (r > 0) {
+        const numR = loanAmount * (Math.pow(1 + r, n) - Math.pow(1 + r, k));
+        const denR = Math.pow(1 + r, n) - 1;
+        remaining = numR / denR;
+      } else {
+        remaining = Math.max(0, loanAmount - monthlyPI * k);
+      }
+      const futureValue = price * Math.pow(1 + appreciationRate, years);
+      const equity = Math.max(0, futureValue - remaining);
+      equityYearsLabel && (equityYearsLabel.textContent = String(years));
+      costYearsLabel && (costYearsLabel.textContent = String(years));
+      if (equityBuyLabel) {
+        equityBuyLabel.innerHTML = 'Buy<sup>2</sup> ' + fmt(equity);
+      }
+      const rentMonthly = getNumber(rentEl);
+      const cumRent = 0;
+      equityRentLabel && (equityRentLabel.textContent = 'Rent $0');
+      const scaleCap = 1000000;
+      const scaleMax = Math.max(scaleCap, equity);
+      const pctBuy = Math.min(100, Math.max(0, (equity / scaleMax) * 100));
+      const pctRent = 0;
+      equityBar && (equityBar.style.height = pctBuy + '%');
+      rentBar && (rentBar.style.height = pctRent + '%');
+      const priceAtYear = futureValue;
+      const yearlyPropertyTax = priceAtYear * propertyTaxRate;
+      const yearlyMaintenance = priceAtYear * maintenanceRate;
+      const yearlyHOA = hoaAnnualDefault;
+      const yearlyHomeIns = homeInsAnnualDefault;
+      const ltv = remaining / Math.max(priceAtYear, 1);
+      const yearlyPMI = ltv > 0.8 ? remaining * pmiAnnualRate : 0;
+      const closingCosts = loanAmount * closingCostRate;
+      const securityDeposit = getNumber(rentEl);
+      const rentMonthlyAtYear = getNumber(rentEl) * Math.pow(1 + rentGrowthRate, years);
+      const buyMonthlyAtYear = monthlyPI + (yearlyPropertyTax + yearlyMaintenance + yearlyHOA + yearlyHomeIns + yearlyPMI) / 12;
+      let rentVal = rentMonthlyAtYear;
+      let buyVal = buyMonthlyAtYear;
+      if (mode === 'annual') {
+        rentVal = rentMonthlyAtYear * 12;
+        buyVal = buyMonthlyAtYear * 12;
+      } else if (mode === 'total') {
+        rentVal = rentMonthlyAtYear * 12 * years + securityDeposit;
+        buyVal = buyMonthlyAtYear * 12 * years + closingCosts + downPayment;
+      }
+      costRentAmount && (costRentAmount.textContent = fmt(rentVal));
+      costBuyAmount && (costBuyAmount.textContent = fmt(buyVal));
+      costDiffAmount && (costDiffAmount.textContent = fmt(Math.abs(buyVal - rentVal)));
+
+      const costPropertyTax = document.getElementById('costPropertyTax');
+      const costClosingCosts = document.getElementById('costClosingCosts');
+      const costPMI = document.getElementById('costPMI');
+      const costHomeIns = document.getElementById('costHomeIns');
+      const costHOA = document.getElementById('costHOA');
+      const costMaintenance = document.getElementById('costMaintenance');
+      const newCostPropertyTax = document.getElementById('newCostPropertyTax');
+      const newCostClosingCosts = document.getElementById('newCostClosingCosts');
+      const newCostPMI = document.getElementById('newCostPMI');
+      const newCostHomeIns = document.getElementById('newCostHomeIns');
+      const newCostHOA = document.getElementById('newCostHOA');
+      const newCostMaintenance = document.getElementById('newCostMaintenance');
+      costPropertyTax && (costPropertyTax.textContent = fmt(yearlyPropertyTax));
+      costClosingCosts && (costClosingCosts.textContent = fmt(closingCosts));
+      costPMI && (costPMI.textContent = fmt(yearlyPMI));
+      costHomeIns && (costHomeIns.textContent = fmt(yearlyHomeIns));
+      costHOA && (costHOA.textContent = fmt(yearlyHOA));
+      costMaintenance && (costMaintenance.textContent = fmt(yearlyMaintenance));
+      newCostPropertyTax && (newCostPropertyTax.textContent = fmt(yearlyPropertyTax));
+      newCostClosingCosts && (newCostClosingCosts.textContent = fmt(closingCosts));
+      newCostPMI && (newCostPMI.textContent = fmt(yearlyPMI));
+      newCostHomeIns && (newCostHomeIns.textContent = fmt(yearlyHomeIns));
+      newCostHOA && (newCostHOA.textContent = fmt(yearlyHOA));
+      newCostMaintenance && (newCostMaintenance.textContent = fmt(yearlyMaintenance));
+    };
+
+    const activatePercent = () => {
+      togglePercent && togglePercent.classList.add('bg-gray-900','border','border-gray-900','text-white');
+      togglePercent && togglePercent.classList.remove('bg-white','text-gray-600');
+      toggleDollar && toggleDollar.classList.add('bg-white','text-gray-600');
+      toggleDollar && toggleDollar.classList.remove('bg-gray-900','text-white');
+    };
+    const activateDollar = () => {
+      toggleDollar && toggleDollar.classList.add('bg-gray-900','border','border-gray-900','text-white');
+      toggleDollar && toggleDollar.classList.remove('bg-white','text-gray-600');
+      togglePercent && togglePercent.classList.add('bg-white','text-gray-600');
+      togglePercent && togglePercent.classList.remove('bg-gray-900','text-white');
+    };
+
+    togglePercent && togglePercent.addEventListener('click', () => {
+      const price = getNumber(purchaseEl);
+      const current = getNumber(dpEl);
+      if (dpMode === 'dollar' && price > 0) {
+        const pct = (current / price) * 100;
+        dpEl && (dpEl.value = String(Math.round(pct * 100) / 100));
+      }
+      dpSymbol && (dpSymbol.textContent = '%');
+      dpMode = 'percent';
+      activatePercent();
+      compute();
+    });
+
+    toggleDollar && toggleDollar.addEventListener('click', () => {
+      const price = getNumber(purchaseEl);
+      const current = getNumber(dpEl);
+      if (dpMode === 'percent') {
+        const amt = price * (current / 100);
+        dpEl && (dpEl.value = String(Math.round(amt)));
+      }
+      dpSymbol && (dpSymbol.textContent = '$');
+      dpMode = 'dollar';
+      activateDollar();
+      compute();
+    });
+
+    if (dpMode === 'percent') activatePercent(); else activateDollar();
+
+    const updateModeButtons = () => {
+      const setSelected = (btn) => {
+        btn && btn.classList.add('bg-black','text-white');
+        btn && btn.classList.remove('bg-white','text-black');
+      };
+      const setUnselected = (btn) => {
+        btn && btn.classList.add('bg-white','text-black');
+        btn && btn.classList.remove('bg-black','text-white');
+      };
+      if (mode === 'monthly') {
+        setSelected(btnMonthly); setUnselected(btnAnnual); setUnselected(btnTotal);
+      } else if (mode === 'annual') {
+        setSelected(btnAnnual); setUnselected(btnMonthly); setUnselected(btnTotal);
+      } else {
+        setSelected(btnTotal); setUnselected(btnMonthly); setUnselected(btnAnnual);
+      }
+    };
+
+    btnMonthly && btnMonthly.addEventListener('click', () => { mode = 'monthly'; updateModeButtons(); compute(); });
+    btnAnnual && btnAnnual.addEventListener('click', () => { mode = 'annual'; updateModeButtons(); compute(); });
+    btnTotal && btnTotal.addEventListener('click', () => { mode = 'total'; updateModeButtons(); compute(); });
+
+    yearsRange && yearsRange.addEventListener('input', compute);
+    calcBtn && calcBtn.addEventListener('click', compute);
+    [purchaseEl, dpEl, irEl, rentEl].forEach((el) => {
+      el && el.addEventListener('input', compute);
+      el && el.addEventListener('change', compute);
+    });
+    updateModeButtons();
+    compute();
+
+    const faqButtons = document.querySelectorAll('.faq-button');
+    faqButtons.forEach((button) => {
+      const btn = button;
+      btn.addEventListener('click', function() {
+        const content = this.nextElementSibling;
+        const icon = this.querySelector('.faq-icon');
+        
+        if (content && icon) {
+          if (content.classList.contains('hidden')) {
+            content.classList.remove('hidden');
+            icon.style.transform = 'rotate(180deg)';
+          } else {
+            content.classList.add('hidden');
+            icon.style.transform = 'rotate(0deg)';
+          }
+        }
+      });
+    });
+  });
+</script>
