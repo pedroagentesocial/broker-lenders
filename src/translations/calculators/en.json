@@ -28,6 +28,11 @@
         "title": "Home Valuation Tool",
         "description": "Get an instant estimate of your property's current market value"
       }
+      ,
+      "rentbuy": {
+        "title": "Rent vs Buy Calculator",
+        "description": "Compare monthly costs and long-term savings of renting versus buying"
+      }
     },
     "modal": {
       "title": "Home Valuation Tool"

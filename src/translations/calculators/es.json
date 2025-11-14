@@ -28,6 +28,11 @@
         "title": "Herramienta de Valoración de Vivienda",
         "description": "Obtén una estimación instantánea del valor de mercado actual de tu propiedad"
       }
+      ,
+      "rentbuy": {
+        "title": "Calculadora Comprar vs Alquilar",
+        "description": "Compara costos mensuales y ahorros a largo plazo entre alquilar y comprar"
+      }
     },
     "modal": {
       "title": "Herramienta de Valoración de Vivienda"

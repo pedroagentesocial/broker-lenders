@@ -74,7 +74,7 @@ const esB64 = toB64(es);
 				<p id="calculators-section-description" data-i18n="mortgageCalculators.description" class="text-lg text-gray-600 mb-8">
 					{dict.mortgageCalculators?.description || 'Use our powerful mortgage calculators to make informed decisions about your home financing. Get accurate estimates and plan your mortgage strategy with confidence.'}
 				</p>
-				<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 					<!-- Calculator 1 - Mortgage Calculator -->
                     <a data-calc-link href={withLang('/calculators/mortgage-calculator')} class="bg-white p-6 rounded-xl shadow-sm cursor-pointer transition-all duration-300 hover:shadow-md hover:bg-gray-50 border-2 border-transparent hover:border-blue-600 block">
 						<div class="flex items-center">
@@ -102,7 +102,7 @@ const esB64 = toB64(es);
 						</div>
 					</a>
 
-					<!-- Calculator 2 - Refinance Calculator -->
+                    <!-- Calculator 2 - Refinance Calculator -->
                     <a data-calc-link href={withLang('/calculators/refinance-calculator')} class="bg-white p-6 rounded-xl shadow-sm cursor-pointer transition-all duration-300 hover:shadow-md hover:bg-gray-50 border-2 border-transparent hover:border-green-600 block">
 						<div class="flex items-center">
 							<!-- Icon on the left -->
@@ -154,9 +154,31 @@ const esB64 = toB64(es);
 								</div>
 							</div>
 						</div>
-					</a>
+                </a>
 
-					<!-- Calculator 4 - Home Valuation Tool -->
+                    <!-- Calculator 4 - Rent vs Buy Calculator -->
+                    <a data-calc-link href={withLang('/calculators/rent-buy-calculator')} class="bg-white p-6 rounded-xl shadow-sm cursor-pointer transition-all duration-300 hover:shadow-md hover:bg-gray-50 border-2 border-transparent hover:border-orange-600 block">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1 ml-4 text-left">
+                                <h3 id="calculators-rb-title" data-i18n="mortgageCalculators.cards.rentbuy.title" class="text-lg font-semibold text-gray-900 mb-1">{dict.mortgageCalculators?.cards?.rentbuy?.title || 'Rent vs Buy Calculator'}</h3>
+                                <p id="calculators-rb-desc" data-i18n="mortgageCalculators.cards.rentbuy.description" class="text-sm text-gray-600">{dict.mortgageCalculators?.cards?.rentbuy?.description || 'Compare monthly costs and long-term savings of renting versus buying'}</p>
+                            </div>
+                            <div class="flex items-center justify-center ml-4">
+                                <div class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
+                                    <svg class="w-4 h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Calculator 5 - Home Valuation Tool -->
 					<button id="openValuationModal" class="bg-white p-6 rounded-xl shadow-sm cursor-pointer transition-all duration-300 hover:shadow-md hover:bg-gray-50 border-2 border-transparent hover:border-orange-600 block w-full">
 						<div class="flex items-center">
 							<!-- Icon on the left -->
@@ -280,6 +302,8 @@ const esB64 = toB64(es);
         ['calculators-po-desc', get(dict, 'mortgageCalculators.cards.payoff.description')],
         ['calculators-hv-title', get(dict, 'mortgageCalculators.cards.valuation.title')],
         ['calculators-hv-desc', get(dict, 'mortgageCalculators.cards.valuation.description')],
+        ['calculators-rb-title', get(dict, 'mortgageCalculators.cards.rentbuy.title')],
+        ['calculators-rb-desc', get(dict, 'mortgageCalculators.cards.rentbuy.description')],
         ['valuation-modal-title', get(dict, 'mortgageCalculators.modal.title')],
       ];
       pairs.forEach(([id, text]) => {
