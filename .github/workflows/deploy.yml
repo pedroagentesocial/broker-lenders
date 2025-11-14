@@ -43,21 +43,24 @@ jobs:
           path: dist
           retention-days: 3
 
-      - name: List remote before deploy (FTPS)
+      - name: List remote before deploy (FTP)
         run: |
-          curl --ftp-ssl --insecure --user "${{ secrets.SFTP_USERNAME }}:${{ secrets.SFTP_PASSWORD }}" "ftp://${{ secrets.SFTP_HOST }}/domains/brokerlenders.com/public_html/" -l || true
+          echo "Listing public_html (FTP)"
+          curl --insecure --user "${{ secrets.HOSTINGER_FTP_USERNAME }}:${{ secrets.HOSTINGER_FTP_PASSWORD }}" "ftp://${{ secrets.HOSTINGER_FTP_SERVER }}/public_html/" -l || true
+          echo "Listing domains/brokerlenders.com/public_html (FTP)"
+          curl --insecure --user "${{ secrets.HOSTINGER_FTP_USERNAME }}:${{ secrets.HOSTINGER_FTP_PASSWORD }}" "ftp://${{ secrets.HOSTINGER_FTP_SERVER }}/domains/brokerlenders.com/public_html/" -l || true
 
-      - name: Deploy via FTPS to Hostinger
+      - name: Deploy to public_html (FTP)
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.HOSTINGER_FTP_SERVER }}
           username: ${{ secrets.HOSTINGER_FTP_USERNAME }}
           password: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
           port: 21
-          protocol: ftps
+          protocol: ftp
           local-dir: dist/
-          server-dir: domains/brokerlenders.com/public_html/
-          dangerous-clean-slate: true
+          server-dir: public_html/
+          dangerous-clean-slate: false
           exclude: |
             **/.git*
             **/.github/**
@@ -68,23 +71,35 @@ jobs:
             .htaccess
           timeout: 120000
 
-      - name: List remote after deploy (FTPS)
+      - name: List remote after deploy (FTP)
         run: |
-          curl --ftp-ssl --insecure --user "${{ secrets.HOSTINGER_FTP_USERNAME }}:${{ secrets.HOSTINGER_FTP_PASSWORD }}" "ftp://${{ secrets.HOSTINGER_FTP_SERVER }}/domains/brokerlenders.com/public_html/" -l || true
+          echo "Listing public_html after deploy"
+          curl --insecure --user "${{ secrets.HOSTINGER_FTP_USERNAME }}:${{ secrets.HOSTINGER_FTP_PASSWORD }}" "ftp://${{ secrets.HOSTINGER_FTP_SERVER }}/public_html/" -l || true
+          echo "Listing domains/brokerlenders.com/public_html after deploy"
+          curl --insecure --user "${{ secrets.HOSTINGER_FTP_USERNAME }}:${{ secrets.HOSTINGER_FTP_PASSWORD }}" "ftp://${{ secrets.HOSTINGER_FTP_SERVER }}/domains/brokerlenders.com/public_html/" -l || true
 
       - name: Check live site content
         run: |
           curl -fsSL https://brokerlenders.com -o live.html || true
           echo "Live homepage (first 40 lines):"
           sed -n '1,40p' live.html || true
-      - name: Fallback deploy via SFTP (domains path)
-        if: ${{ failure() }}
+      - name: Deploy to domains path (FTP)
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.HOSTINGER_FTP_SERVER }}
           username: ${{ secrets.HOSTINGER_FTP_USERNAME }}
           password: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
-          protocol: sftp
-          port: 22
-          local-dir: dist
+          protocol: ftp
+          port: 21
+          local-dir: dist/
           server-dir: domains/brokerlenders.com/public_html/
+          dangerous-clean-slate: false
+          exclude: |
+            **/.git*
+            **/.github/**
+            **/node_modules/**
+            **/.DS_Store
+            .well-known/**
+            cgi-bin/**
+            .htaccess
+          timeout: 120000
