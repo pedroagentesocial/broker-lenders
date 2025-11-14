@@ -61,23 +61,3 @@ jobs:
             cgi-bin/**
             .htaccess
           timeout: 120000
-      - name: Deploy to domains path (FTP)
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.HOSTINGER_FTP_SERVER }}
-          username: ${{ secrets.HOSTINGER_FTP_USERNAME }}
-          password: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
-          protocol: ftp
-          port: 21
-          local-dir: dist/
-          server-dir: domains/brokerlenders.com/public_html/
-          dangerous-clean-slate: false
-          exclude: |
-            **/.git*
-            **/.github/**
-            **/node_modules/**
-            **/.DS_Store
-            .well-known/**
-            cgi-bin/**
-            .htaccess
-          timeout: 120000
