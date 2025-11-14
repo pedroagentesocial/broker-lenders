@@ -50,9 +50,9 @@ jobs:
       - name: Deploy via FTPS to Hostinger
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ${{ secrets.SFTP_HOST }}
-          username: ${{ secrets.SFTP_USERNAME }}
-          password: ${{ secrets.SFTP_PASSWORD }}
+          server: ${{ secrets.HOSTINGER_FTP_SERVER }}
+          username: ${{ secrets.HOSTINGER_FTP_USERNAME }}
+          password: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
           port: 21
           protocol: ftps
           local-dir: dist/
@@ -70,7 +70,7 @@ jobs:
 
       - name: List remote after deploy (FTPS)
         run: |
-          curl --ftp-ssl --insecure --user "${{ secrets.SFTP_USERNAME }}:${{ secrets.SFTP_PASSWORD }}" "ftp://${{ secrets.SFTP_HOST }}/domains/brokerlenders.com/public_html/" -l || true
+          curl --ftp-ssl --insecure --user "${{ secrets.HOSTINGER_FTP_USERNAME }}:${{ secrets.HOSTINGER_FTP_PASSWORD }}" "ftp://${{ secrets.HOSTINGER_FTP_SERVER }}/domains/brokerlenders.com/public_html/" -l || true
 
       - name: Check live site content
         run: |
@@ -81,9 +81,9 @@ jobs:
         if: ${{ failure() }}
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ${{ secrets.SFTP_HOST }}
-          username: ${{ secrets.SFTP_USERNAME }}
-          password: ${{ secrets.SFTP_PASSWORD }}
+          server: ${{ secrets.HOSTINGER_FTP_SERVER }}
+          username: ${{ secrets.HOSTINGER_FTP_USERNAME }}
+          password: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
           protocol: sftp
           port: 22
           local-dir: dist
