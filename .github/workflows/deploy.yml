@@ -45,7 +45,7 @@ jobs:
 
       - name: List remote before deploy (FTPS)
         run: |
-          curl --ftp-ssl --insecure --user "${{ secrets.SFTP_USERNAME }}:${{ secrets.SFTP_PASSWORD }}" "ftp://${{ secrets.SFTP_HOST }}/${{ secrets.REMOTE_DIR }}/" -l || true
+          curl --ftp-ssl --insecure --user "${{ secrets.SFTP_USERNAME }}:${{ secrets.SFTP_PASSWORD }}" "ftp://${{ secrets.SFTP_HOST }}/domains/brokerlenders.com/public_html/" -l || true
 
       - name: Deploy via FTPS to Hostinger
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
@@ -53,15 +53,15 @@ jobs:
           server: ${{ secrets.SFTP_HOST }}
           username: ${{ secrets.SFTP_USERNAME }}
           password: ${{ secrets.SFTP_PASSWORD }}
-          port: ${{ secrets.SFTP_PORT }}
+          port: 21
           protocol: ftps
           local-dir: dist/
-          server-dir: ${{ secrets.REMOTE_DIR }}/
+          server-dir: domains/brokerlenders.com/public_html/
           timeout: 120000
 
       - name: List remote after deploy (FTPS)
         run: |
-          curl --ftp-ssl --insecure --user "${{ secrets.SFTP_USERNAME }}:${{ secrets.SFTP_PASSWORD }}" "ftp://${{ secrets.SFTP_HOST }}/${{ secrets.REMOTE_DIR }}/" -l || true
+          curl --ftp-ssl --insecure --user "${{ secrets.SFTP_USERNAME }}:${{ secrets.SFTP_PASSWORD }}" "ftp://${{ secrets.SFTP_HOST }}/domains/brokerlenders.com/public_html/" -l || true
 
       - name: Check live site content
         run: |

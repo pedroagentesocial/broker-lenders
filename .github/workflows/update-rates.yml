@@ -47,8 +47,8 @@ jobs:
           server: ${{ secrets.SFTP_HOST }}
           username: ${{ secrets.SFTP_USERNAME }}
           password: ${{ secrets.SFTP_PASSWORD }}
-          port: ${{ secrets.SFTP_PORT }}
+          port: 21
           protocol: ftps
           local-dir: dist/
-          server-dir: ${{ secrets.REMOTE_DIR }}/
+          server-dir: domains/brokerlenders.com/public_html/
           timeout: 120000
