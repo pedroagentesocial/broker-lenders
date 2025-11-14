@@ -45,8 +45,8 @@ jobs:
 
       - name: List remote before deploy (FTP)
         run: |
-          echo "Listing public_html (FTP)"
-          curl --insecure --user "${{ secrets.SFTP_USERNAME }}:${{ secrets.SFTP_PASSWORD }}" "ftp://${{ secrets.SFTP_HOST }}/public_html/" -l || true
+          echo "Listing login root (FTP)"
+          curl --insecure --user "${{ secrets.SFTP_USERNAME }}:${{ secrets.SFTP_PASSWORD }}" "ftp://${{ secrets.SFTP_HOST }}/" -l || true
 
       - name: Deploy to public_html (FTP)
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
@@ -57,7 +57,7 @@ jobs:
           port: 21
           protocol: ftp
           local-dir: dist/
-          server-dir: public_html/
+          server-dir: ./
           dangerous-clean-slate: false
           exclude: |
             **/.git*
@@ -71,8 +71,8 @@ jobs:
 
       - name: List remote after deploy (FTP)
         run: |
-          echo "Listing public_html after deploy"
-          curl --insecure --user "${{ secrets.SFTP_USERNAME }}:${{ secrets.SFTP_PASSWORD }}" "ftp://${{ secrets.SFTP_HOST }}/public_html/" -l || true
+          echo "Listing login root after deploy"
+          curl --insecure --user "${{ secrets.SFTP_USERNAME }}:${{ secrets.SFTP_PASSWORD }}" "ftp://${{ secrets.SFTP_HOST }}/" -l || true
 
       - name: Check live site content
         run: |
