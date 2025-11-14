@@ -28,10 +28,10 @@ jobs:
           server: ${{ secrets.HOSTINGER_FTP_SERVER }}
           username: ${{ secrets.HOSTINGER_FTP_USERNAME }}
           password: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
-          protocol: ${{ secrets.HOSTINGER_PROTOCOL }}
-          port: ${{ secrets.HOSTINGER_PORT }}
+          protocol: ftps
+          port: 21
           local-dir: dist
-          server-dir: ${{ secrets.HOSTINGER_SERVER_DIR }}
+          server-dir: public_html/
           exclude: |
             **/.git*
             **/.github/**
