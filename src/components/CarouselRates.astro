@@ -35,22 +35,24 @@ function getVaRates() {
 ---
 
 <section class="py-8 bg-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <!-- Header with title and button -->
-    <div class="flex justify-between items-center mb-6">
-      <h2 class="text-2xl font-bold text-gray-900" data-i18n="stay_updated_title">Stay updated on today’s rates</h2>
-      <a 
-        href="/rates" 
-        class="bg-gray-100 border border-gray-300 text-gray-700 px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-200 transition-colors"
-        data-i18n="see_all_rates"
-      >
-        See all rates
-      </a>
+  <div class="w-full max-w-none">
+    <!-- Header with title and button (padded and centered) -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center mb-6">
+        <h2 class="text-2xl font-bold text-gray-900" data-i18n="stay_updated_title">Stay updated on today’s rates</h2>
+        <a 
+          href="/rates" 
+          class="bg-gray-100 border border-gray-300 text-gray-700 px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-200 transition-colors"
+          data-i18n="see_all_rates"
+        >
+          See all rates
+        </a>
+      </div>
     </div>
 
     <!-- Carousel container -->
     <div class="carousel-container overflow-hidden">
-      <div class="carousel-track">
+      <div class="carousel-track" data-basecount="6">
         <!-- 30-year Fixed -->
         <div class="rate-item bg-gray-200 rounded-lg p-4 shadow-sm border border-gray-300">
           <div class="grid grid-cols-[2fr_1fr_1fr] gap-3 items-start">
@@ -202,11 +204,13 @@ function getVaRates() {
       </div>
     </div>
 
-    <div class="mt-6 flex justify-between items-center text-xs">
-      <p class="text-gray-500">
-        *<span data-i18n="compared_week_over_week">Compared week over week.</span> <span data-i18n="rates_current_as_of">Rates are current as of</span> <span id="rates-date" data-ts={ratesData.timestamp}></span>.
-      </p>
-      <button id="openModal" class="text-gray-600 hover:text-gray-800 underline cursor-pointer" data-i18n="view_legal_disclosures">View legal disclosures</button>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6">
+      <div class="flex justify-between items-center text-xs">
+        <p class="text-gray-500">
+          *<span data-i18n="compared_week_over_week">Compared week over week.</span> <span data-i18n="rates_current_as_of">Rates are current as of</span> <span id="rates-date" data-ts={ratesData.timestamp}></span>.
+        </p>
+        <button id="openModal" class="text-gray-600 hover:text-gray-800 underline cursor-pointer" data-i18n="view_legal_disclosures">View legal disclosures</button>
+      </div>
     </div>
   </div>
 
@@ -255,7 +259,7 @@ function getVaRates() {
   .carousel-track {
     display: flex;
     gap: 0;
-    animation: scroll 90s linear infinite;
+    animation: scroll 45s linear infinite;
   }
 
   .carousel-track:hover {
@@ -392,5 +396,18 @@ function getVaRates() {
       if (lang) setLanguage(lang);
     }
   });
+  const container = document.querySelector('.carousel-container');
+  const track = container ? container.querySelector('.carousel-track') : null;
+  if (container && track) {
+    const baseCountAttr = track.getAttribute('data-basecount');
+    const baseCount = baseCountAttr ? Number(baseCountAttr) : track.querySelectorAll('.rate-item').length;
+    const baseChildren = Array.from(track.children).slice(0, baseCount);
+    const target = container.offsetWidth * 2;
+    let guard = 0;
+    while (track.scrollWidth < target && guard < 10) {
+      for (const node of baseChildren) track.appendChild(node.cloneNode(true));
+      guard++;
+    }
+  }
   })();
 </script>
