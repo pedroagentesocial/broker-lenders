@@ -51,4 +51,13 @@ jobs:
           protocol: ftps
           local-dir: dist/
           server-dir: domains/brokerlenders.com/public_html/
+          dangerous-clean-slate: true
+          exclude: |
+            **/.git*
+            **/.github/**
+            **/node_modules/**
+            **/.DS_Store
+            .well-known/**
+            cgi-bin/**
+            .htaccess
           timeout: 120000

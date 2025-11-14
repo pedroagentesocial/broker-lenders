@@ -57,6 +57,15 @@ jobs:
           protocol: ftps
           local-dir: dist/
           server-dir: domains/brokerlenders.com/public_html/
+          dangerous-clean-slate: true
+          exclude: |
+            **/.git*
+            **/.github/**
+            **/node_modules/**
+            **/.DS_Store
+            .well-known/**
+            cgi-bin/**
+            .htaccess
           timeout: 120000
 
       - name: List remote after deploy (FTPS)
@@ -68,3 +77,14 @@ jobs:
           curl -fsSL https://brokerlenders.com -o live.html || true
           echo "Live homepage (first 40 lines):"
           sed -n '1,40p' live.html || true
+      - name: Fallback deploy via SFTP (domains path)
+        if: ${{ failure() }}
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.SFTP_HOST }}
+          username: ${{ secrets.SFTP_USERNAME }}
+          password: ${{ secrets.SFTP_PASSWORD }}
+          protocol: sftp
+          port: 22
+          local-dir: dist
+          server-dir: domains/brokerlenders.com/public_html/
