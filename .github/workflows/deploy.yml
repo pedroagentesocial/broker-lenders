@@ -8,6 +8,9 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    concurrency:
+      group: deploy-hostinger
+      cancel-in-progress: true
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -26,6 +29,24 @@ jobs:
       - name: Build Astro
         run: pnpm build
 
+      - name: Show build output (dist)
+        run: |
+          echo "Build output (dist):"
+          ls -la dist || true
+          echo "Files (level 1-2):"
+          find dist -maxdepth 2 -type f | sed 's|^| - |'
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: astro-dist
+          path: dist
+          retention-days: 3
+
+      - name: List remote before deploy (FTPS)
+        run: |
+          curl --ftp-ssl --insecure --user "${{ secrets.SFTP_USERNAME }}:${{ secrets.SFTP_PASSWORD }}" "ftp://${{ secrets.SFTP_HOST }}/${{ secrets.REMOTE_DIR }}/" -l || true
+
       - name: Deploy via FTPS to Hostinger
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
@@ -37,3 +58,13 @@ jobs:
           local-dir: dist/
           server-dir: ${{ secrets.REMOTE_DIR }}/
           timeout: 120000
+
+      - name: List remote after deploy (FTPS)
+        run: |
+          curl --ftp-ssl --insecure --user "${{ secrets.SFTP_USERNAME }}:${{ secrets.SFTP_PASSWORD }}" "ftp://${{ secrets.SFTP_HOST }}/${{ secrets.REMOTE_DIR }}/" -l || true
+
+      - name: Check live site content
+        run: |
+          curl -fsSL https://brokerlenders.com -o live.html || true
+          echo "Live homepage (first 40 lines):"
+          sed -n '1,40p' live.html || true
