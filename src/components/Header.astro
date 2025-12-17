@@ -497,13 +497,11 @@ const { lang = 'en' } = Astro.props;
   if (toggle && menu) {
     const openMenu = () => {
       menu.classList.remove('hidden');
-      menu.style.transform = 'scaleY(1)';
       toggle.setAttribute('aria-expanded', 'true');
     };
     const closeMenu = () => {
-      menu.style.transform = 'scaleY(0)';
-      toggle.setAttribute('aria-expanded', 'false');
       menu.classList.add('hidden');
+      toggle.setAttribute('aria-expanded', 'false');
     };
     // Expose close for other handlers (e.g., language change)
     window.__headerCloseMenu = closeMenu;
