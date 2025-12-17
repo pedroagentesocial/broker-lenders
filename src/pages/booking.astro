@@ -31,16 +31,19 @@ const previewId = 'ghl_preview_' + Date.now();
 <script is:inline>
   const loader = document.getElementById('booking-loader');
   const fb = document.getElementById('booking-fallback');
-  const frame = document.getElementById({previewId});
+  const frame = document.getElementById(previewId);
   let ok = false;
   frame?.addEventListener('load', () => {
     ok = true;
-    loader?.classList.add('hidden');
+    if (loader) { loader.classList.add('hidden'); loader.style.display = 'none'; }
   });
   setTimeout(() => {
+    if (loader) { loader.classList.add('hidden'); loader.style.display = 'none'; }
+  }, 3000);
+  setTimeout(() => {
     if (!ok) {
-      loader?.classList.add('hidden');
+      if (loader) { loader.classList.add('hidden'); loader.style.display = 'none'; }
       fb?.classList.remove('hidden');
     }
-  }, 8000);
+  }, 10000);
 </script>
