@@ -303,6 +303,7 @@ const { lang = 'en' } = Astro.props;
               <iframe src="https://api.agentesocial.com/widget/booking/D9UtsRtn1b45RbmOyilz" style="width: 100%;border:none;overflow: hidden;" scrolling="no" id="D9UtsRtn1b45RbmOyilz_embed"></iframe><br>
               <script src="https://api.agentesocial.com/js/form_embed.js" type="text/javascript"></script>
             </div>
+            <iframe id="booking-legacy" src="https://api.agentesocial.com/widget/bookings/citas-FVaRm" title="Booking" class="w-full h-full hidden" loading="lazy" referrerpolicy="no-referrer"></iframe>
             <div id="booking-fallback" class="hidden w-full h-full flex items-center justify-center">
               <a href="https://api.agentesocial.com/widget/booking/D9UtsRtn1b45RbmOyilz" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-[48px] bg-black text-white hover:bg-red-600 transition-colors" data-i18n="book">Book</a>
             </div>
@@ -560,14 +561,26 @@ const { lang = 'en' } = Astro.props;
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeBooking(); });
   const bookingFallback = document.getElementById('booking-fallback');
   const embedFrame = document.getElementById('D9UtsRtn1b45RbmOyilz_embed');
+  const legacyFrame = document.getElementById('booking-legacy');
+  const bookingScriptWrap = document.getElementById('booking-script-embed');
   let embedLoaded = false;
   embedFrame?.addEventListener('load', () => { embedLoaded = true; });
   setTimeout(() => {
     const rect = embedFrame?.getBoundingClientRect();
     const ok = embedLoaded || (rect && rect.height > 100);
-    if (!ok && embedFrame && bookingFallback) {
-      embedFrame.classList.add('hidden');
-      bookingFallback.classList.remove('hidden');
+    if (!ok && bookingScriptWrap && legacyFrame) {
+      bookingScriptWrap.classList.add('hidden');
+      legacyFrame.classList.remove('hidden');
+      let legacyLoaded = false;
+      legacyFrame.addEventListener('load', () => { legacyLoaded = true; });
+      setTimeout(() => {
+        const r2 = legacyFrame.getBoundingClientRect();
+        const ok2 = legacyLoaded || (r2 && r2.height > 100);
+        if (!ok2 && bookingFallback) {
+          legacyFrame.classList.add('hidden');
+          bookingFallback.classList.remove('hidden');
+        }
+      }, 5000);
     }
   }, 5000);
   // React to language changes set elsewhere (e.g., Index page or calculators)
