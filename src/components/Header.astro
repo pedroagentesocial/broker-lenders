@@ -326,6 +326,7 @@ const { lang = 'en' } = Astro.props;
               (801) 307-0273
             </a>
             <a href="https://pedrolira.my1003app.com/318973/register" target="_blank" rel="noopener noreferrer" class="mt-2 w-full inline-flex items-center justify-center px-4 py-2 rounded-full bg-black text-white hover:bg-red-600 transition-colors" data-i18n="apply">Apply</a>
+            <button id="openBookingPanel" type="button" class="mt-2 w-full inline-flex items-center justify-center px-4 py-2 rounded-[48px] bg-black text-white hover:bg-red-600 transition-colors" data-i18n="book">Book</button>
           </div>
         </div>
       </div>
@@ -528,6 +529,7 @@ const { lang = 'en' } = Astro.props;
   const bookingModal = document.getElementById('booking-modal');
   const openBookingBtn = document.getElementById('openBooking');
   const openBookingMobileBtn = document.getElementById('openBookingMobile');
+  const openBookingPanelBtn = document.getElementById('openBookingPanel');
   const closeBookingBtn = document.getElementById('closeBooking');
   const openBooking = () => {
     bookingModal?.classList.add('flex');
@@ -541,6 +543,7 @@ const { lang = 'en' } = Astro.props;
   };
   openBookingBtn?.addEventListener('click', openBooking);
   openBookingMobileBtn?.addEventListener('click', openBooking);
+  openBookingPanelBtn?.addEventListener('click', openBooking);
   closeBookingBtn?.addEventListener('click', closeBooking);
   bookingModal?.addEventListener('click', (e) => { if (e.target === bookingModal) closeBooking(); });
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeBooking(); });
