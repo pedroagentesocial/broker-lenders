@@ -291,25 +291,6 @@ const { lang = 'en' } = Astro.props;
         <a href="https://api.msgsndr.com/widget/booking/D9UtsRtn1b45RbmOyilz" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-full bg-black text-white hover:bg-red-600 text-[11px] sm:text-xs px-2.5 sm:px-3 py-1 whitespace-nowrap" data-i18n="book">Book</a>
         </div>
       </div>
-      <!-- Booking Modal -->
-      <div id="booking-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-[60]">
-        <div class="bg-white rounded-[24px] w-full max-w-3xl mx-4 overflow-hidden shadow-xl">
-          <div class="flex items-center justify-between px-4 py-3 border-b border-gray-200">
-            <h3 class="text-lg font-semibold text-gray-900" data-i18n="book">Book</h3>
-            <button id="closeBooking" class="text-gray-500 hover:text-gray-700 text-2xl font-bold" aria-label="Close">&times;</button>
-          </div>
-          <div class="w-full h-[70vh]">
-            <div id="booking-script-embed" class="w-full h-full">
-              <iframe src="https://api.agentesocial.com/widget/booking/D9UtsRtn1b45RbmOyilz" style="width: 100%;border:none;overflow: hidden;" scrolling="no" id="D9UtsRtn1b45RbmOyilz_embed"></iframe><br>
-              <script src="https://api.agentesocial.com/js/form_embed.js" type="text/javascript"></script>
-            </div>
-            <iframe id="booking-legacy" src="https://api.agentesocial.com/widget/bookings/citas-FVaRm" title="Booking" class="w-full h-full hidden" loading="lazy" referrerpolicy="no-referrer"></iframe>
-            <div id="booking-fallback" class="hidden w-full h-full flex items-center justify-center">
-              <a href="https://api.agentesocial.com/widget/booking/D9UtsRtn1b45RbmOyilz" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-[48px] bg-black text-white hover:bg-red-600 transition-colors" data-i18n="book">Book</a>
-            </div>
-          </div>
-        </div>
-      </div>
       <!-- Mobile menu panel -->
       <div id="mobile-menu" class="mobile-menu md:hidden fixed top-20 md:top-24 left-0 right-0 bg-white border-t border-gray-100 shadow-lg z-40 max-h-[70vh] overflow-y-auto" data-open="false">
         <div class="px-4 py-4 space-y-2">
@@ -536,53 +517,6 @@ const { lang = 'en' } = Astro.props;
       }
     });
   }
-  // Booking modal handlers
-  const bookingModal = document.getElementById('booking-modal');
-  const openBookingBtn = document.getElementById('openBooking');
-  const openBookingMobileBtn = document.getElementById('openBookingMobile');
-  const openBookingPanelBtn = document.getElementById('openBookingPanel');
-  const closeBookingBtn = document.getElementById('closeBooking');
-  const openBooking = () => {
-    bookingModal?.classList.add('flex');
-    bookingModal?.classList.remove('hidden');
-    document.body.style.overflow = 'hidden';
-    try { if (typeof window.__headerCloseMenu === 'function') window.__headerCloseMenu(); } catch {}
-  };
-  const closeBooking = () => {
-    bookingModal?.classList.remove('flex');
-    bookingModal?.classList.add('hidden');
-    document.body.style.overflow = '';
-  };
-  openBookingBtn?.addEventListener('click', openBooking);
-  openBookingMobileBtn?.addEventListener('click', openBooking);
-  openBookingPanelBtn?.addEventListener('click', openBooking);
-  closeBookingBtn?.addEventListener('click', closeBooking);
-  bookingModal?.addEventListener('click', (e) => { if (e.target === bookingModal) closeBooking(); });
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeBooking(); });
-  const bookingFallback = document.getElementById('booking-fallback');
-  const embedFrame = document.getElementById('D9UtsRtn1b45RbmOyilz_embed');
-  const legacyFrame = document.getElementById('booking-legacy');
-  const bookingScriptWrap = document.getElementById('booking-script-embed');
-  let embedLoaded = false;
-  embedFrame?.addEventListener('load', () => { embedLoaded = true; });
-  setTimeout(() => {
-    const rect = embedFrame?.getBoundingClientRect();
-    const ok = embedLoaded || (rect && rect.height > 100);
-    if (!ok && bookingScriptWrap && legacyFrame) {
-      bookingScriptWrap.classList.add('hidden');
-      legacyFrame.classList.remove('hidden');
-      let legacyLoaded = false;
-      legacyFrame.addEventListener('load', () => { legacyLoaded = true; });
-      setTimeout(() => {
-        const r2 = legacyFrame.getBoundingClientRect();
-        const ok2 = legacyLoaded || (r2 && r2.height > 100);
-        if (!ok2 && bookingFallback) {
-          legacyFrame.classList.add('hidden');
-          bookingFallback.classList.remove('hidden');
-        }
-      }, 5000);
-    }
-  }, 5000);
   // React to language changes set elsewhere (e.g., Index page or calculators)
   window.addEventListener('storage', (ev) => {
     if (ev.key === 'lang' && ev.newValue) {
