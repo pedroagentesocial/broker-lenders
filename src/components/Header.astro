@@ -290,7 +290,7 @@ const { lang = 'en' } = Astro.props;
         </div>
       </div>
       <!-- Mobile menu panel -->
-      <div id="mobile-menu" class="md:hidden fixed top-20 md:top-24 left-0 right-0 bg-white border-t border-gray-100 shadow-lg z-40 max-h-[70vh] overflow-y-auto transform scale-y-0 origin-top transition-transform duration-200">
+      <div id="mobile-menu" class="md:hidden fixed top-20 md:top-24 left-0 right-0 bg-white border-t border-gray-100 shadow-lg z-40 max-h-[70vh] overflow-y-auto transform scale-y-0 origin-top transition-transform duration-200 hidden">
         <div class="px-4 py-4 space-y-2">
           <a href="/buy" class="block px-3 py-2 rounded-lg text-gray-900 hover:bg-gray-50 hover:text-red-600" data-i18n="buy">Buy</a>
           <a href="/refinance" class="block px-3 py-2 rounded-lg text-gray-900 hover:bg-gray-50 hover:text-red-600" data-i18n="refinance">Refinance</a>
@@ -481,12 +481,14 @@ const { lang = 'en' } = Astro.props;
   const menu = document.getElementById('mobile-menu');
   if (toggle && menu) {
     const openMenu = () => {
+      menu.classList.remove('hidden');
       menu.style.transform = 'scaleY(1)';
       toggle.setAttribute('aria-expanded', 'true');
     };
     const closeMenu = () => {
       menu.style.transform = 'scaleY(0)';
       toggle.setAttribute('aria-expanded', 'false');
+      menu.classList.add('hidden');
     };
     // Expose close for other handlers (e.g., language change)
     window.__headerCloseMenu = closeMenu;
