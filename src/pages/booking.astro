@@ -11,22 +11,12 @@ const vendorId = 'D9UtsRtn1b45RbmOyilz_vendor_' + Date.now();
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <h1 class="text-2xl font-bold text-gray-900 mb-6">Book / Agendar</h1>
       <div class="relative w-full" style="min-height:70vh">
-        <div id="booking-loader" class="absolute inset-0 flex items-center justify-center">
+        <div class="absolute inset-0 flex items-center justify-center">
           <div class="flex flex-col items-center gap-3">
             <div class="animate-spin h-6 w-6 rounded-full border-2 border-gray-300 border-t-black"></div>
-            <div class="text-sm text-gray-600">Cargando calendario…</div>
+            <div class="text-sm text-gray-600">Redirigiendo al calendario…</div>
+            <a href="https://api.agentesocial.com/get/bookings/citas-pruebas" target="_blank" rel="noopener noreferrer" class="mt-2 px-4 py-2 rounded-[48px] bg-black text-white hover:bg-red-600 transition-colors">Abrir ahora</a>
           </div>
-        </div>
-        <div id="booking-embed-agente" class="w-full h-full">
-          <iframe src="https://api.agentesocial.com/widget/booking/D9UtsRtn1b45RbmOyilz" style="width: 100%; border: none; overflow: hidden;" scrolling="no" id={embedId}></iframe><br>
-          <script src="https://api.agentesocial.com/js/form_embed.js" type="text/javascript"></script>
-        </div>
-        <div id="booking-embed-vendor" class="w-full h-full hidden">
-          <iframe src="https://api.msgsndr.com/widget/booking/D9UtsRtn1b45RbmOyilz" style="width: 100%; border: none; overflow: hidden;" scrolling="no" id={vendorId}></iframe><br>
-          <script src="https://api.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
-        </div>
-        <div id="booking-fallback" class="hidden absolute inset-0 flex items-center justify-center">
-          <a href="https://api.msgsndr.com/widget/booking/D9UtsRtn1b45RbmOyilz" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-[48px] bg-black text-white hover:bg-red-600 transition-colors">Abrir calendario</a>
         </div>
       </div>
     </div>
@@ -34,33 +24,5 @@ const vendorId = 'D9UtsRtn1b45RbmOyilz_vendor_' + Date.now();
 </Layout>
 
 <script is:inline>
-  const bookingLoader = document.getElementById('booking-loader');
-  const bookingFallback = document.getElementById('booking-fallback');
-  const agenteWrap = document.getElementById('booking-embed-agente');
-  const vendorWrap = document.getElementById('booking-embed-vendor');
-  const agenteFrame = document.getElementById({embedId});
-  const vendorFrame = document.getElementById({vendorId});
-  let agenteLoaded = false;
-  let vendorLoaded = false;
-  agenteFrame?.addEventListener('load', () => {
-    agenteLoaded = true;
-    bookingLoader?.classList.add('hidden');
-  });
-  vendorFrame?.addEventListener('load', () => {
-    vendorLoaded = true;
-    bookingLoader?.classList.add('hidden');
-  });
-  setTimeout(() => {
-    if (!agenteLoaded && agenteWrap && vendorWrap) {
-      agenteWrap.classList.add('hidden');
-      vendorWrap.classList.remove('hidden');
-      setTimeout(() => {
-        if (!vendorLoaded) {
-          bookingLoader?.classList.add('hidden');
-          vendorWrap.classList.add('opacity-0');
-          bookingFallback?.classList.remove('hidden');
-        }
-      }, 8000);
-    }
-  }, 6000);
+  try { window.location.replace('https://api.agentesocial.com/get/bookings/citas-pruebas'); } catch {}
 </script>
