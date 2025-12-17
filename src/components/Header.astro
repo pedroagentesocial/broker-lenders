@@ -276,6 +276,7 @@ const { lang = 'en' } = Astro.props;
            (801) 307-0273
          </a>
         <a href="https://pedrolira.my1003app.com/318973/register" target="_blank" rel="noopener noreferrer" class="hidden md:inline-flex items-center px-4 py-2 rounded-full bg-black text-white hover:bg-red-600 transition-colors" data-i18n="apply">Apply</a>
+        <button id="openBooking" type="button" class="hidden md:inline-flex items-center px-4 py-2 rounded-[48px] bg-black text-white hover:bg-red-600 transition-colors" data-i18n="book">Book</button>
         <!-- Mobile mini actions (right) -->
         <div class="flex items-center gap-1 sm:gap-2 md:hidden">
           <a href="tel:+18013070273" class="inline-flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-gray-200 text-black hover:text-red-600 hover:border-red-300" aria-label="Call" data-i18n-aria="call">
@@ -287,6 +288,19 @@ const { lang = 'en' } = Astro.props;
           <span data-i18n="apply">Apply</span>
           <span class="sr-only">now</span>
         </a>
+        <button id="openBookingMobile" type="button" class="inline-flex items-center justify-center rounded-full bg-black text-white hover:bg-red-600 text-[11px] sm:text-xs px-2.5 sm:px-3 py-1 whitespace-nowrap" data-i18n="book">Book</button>
+        </div>
+      </div>
+      <!-- Booking Modal -->
+      <div id="booking-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-[60]">
+        <div class="bg-white rounded-[24px] w-full max-w-3xl mx-4 overflow-hidden shadow-xl">
+          <div class="flex items-center justify-between px-4 py-3 border-b border-gray-200">
+            <h3 class="text-lg font-semibold text-gray-900" data-i18n="book">Book</h3>
+            <button id="closeBooking" class="text-gray-500 hover:text-gray-700 text-2xl font-bold" aria-label="Close">&times;</button>
+          </div>
+          <div class="w-full h-[70vh]">
+            <iframe src="https://api.agentesocial.com/widget/bookings/citas-FVaRm" title="Booking" class="w-full h-full" loading="lazy"></iframe>
+          </div>
         </div>
       </div>
       <!-- Mobile menu panel -->
@@ -510,6 +524,26 @@ const { lang = 'en' } = Astro.props;
       }
     });
   }
+  // Booking modal handlers
+  const bookingModal = document.getElementById('booking-modal');
+  const openBookingBtn = document.getElementById('openBooking');
+  const openBookingMobileBtn = document.getElementById('openBookingMobile');
+  const closeBookingBtn = document.getElementById('closeBooking');
+  const openBooking = () => {
+    bookingModal?.classList.add('flex');
+    bookingModal?.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  };
+  const closeBooking = () => {
+    bookingModal?.classList.remove('flex');
+    bookingModal?.classList.add('hidden');
+    document.body.style.overflow = '';
+  };
+  openBookingBtn?.addEventListener('click', openBooking);
+  openBookingMobileBtn?.addEventListener('click', openBooking);
+  closeBookingBtn?.addEventListener('click', closeBooking);
+  bookingModal?.addEventListener('click', (e) => { if (e.target === bookingModal) closeBooking(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeBooking(); });
   // React to language changes set elsewhere (e.g., Index page or calculators)
   window.addEventListener('storage', (ev) => {
     if (ev.key === 'lang' && ev.newValue) {
