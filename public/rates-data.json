@@ -1,193 +1,193 @@
 {
-  "timestamp": "2026-01-20T12:35:02.074Z",
+  "timestamp": "2026-01-21T12:35:10.870Z",
   "states": {
     "utah": {
       "30-year-fixed": {
-        "rate": "6.635%",
-        "apr": "6.775%",
-        "points": "1.86"
+        "rate": "6.637%",
+        "apr": "6.777%",
+        "points": "1.84"
       },
       "20-year-fixed": {
-        "rate": "6.014%",
-        "apr": "6.174%",
-        "points": "1.62"
+        "rate": "6.229%",
+        "apr": "6.389%",
+        "points": "1.47"
       },
       "15-year-fixed": {
-        "rate": "5.915%",
-        "apr": "6.065%",
+        "rate": "5.966%",
+        "apr": "6.116%",
         "points": "1.17"
       },
       "30-year-fha": {
-        "rate": "6.378%",
-        "apr": "6.598%",
-        "points": "1.60"
+        "rate": "6.485%",
+        "apr": "6.705%",
+        "points": "1.42"
       },
       "30-year-jumbo": {
-        "rate": "6.972%",
-        "apr": "7.107%",
-        "points": "0.87"
+        "rate": "6.851%",
+        "apr": "6.986%",
+        "points": "1.04"
       }
     },
     "idaho": {
       "30-year-fixed": {
-        "rate": "6.762%",
-        "apr": "6.902%",
-        "points": "1.71"
+        "rate": "6.722%",
+        "apr": "6.862%",
+        "points": "1.76"
       },
       "20-year-fixed": {
-        "rate": "6.087%",
-        "apr": "6.247%",
-        "points": "1.56"
+        "rate": "6.260%",
+        "apr": "6.420%",
+        "points": "1.52"
       },
       "15-year-fixed": {
-        "rate": "5.935%",
-        "apr": "6.085%",
+        "rate": "6.034%",
+        "apr": "6.184%",
         "points": "1.19"
       },
       "30-year-fha": {
-        "rate": "6.694%",
-        "apr": "6.914%",
-        "points": "1.38"
+        "rate": "6.654%",
+        "apr": "6.874%",
+        "points": "1.43"
       },
       "30-year-jumbo": {
-        "rate": "6.843%",
-        "apr": "6.978%",
-        "points": "1.12"
+        "rate": "6.937%",
+        "apr": "7.072%",
+        "points": "1.08"
       }
     },
     "nevada": {
       "30-year-fixed": {
-        "rate": "6.865%",
-        "apr": "7.005%",
-        "points": "1.72"
+        "rate": "7.010%",
+        "apr": "7.150%",
+        "points": "1.67"
       },
       "20-year-fixed": {
-        "rate": "6.245%",
-        "apr": "6.405%",
-        "points": "1.57"
+        "rate": "6.313%",
+        "apr": "6.473%",
+        "points": "1.45"
       },
       "15-year-fixed": {
-        "rate": "6.053%",
-        "apr": "6.203%",
-        "points": "1.23"
+        "rate": "5.960%",
+        "apr": "6.110%",
+        "points": "1.25"
       },
       "30-year-fha": {
-        "rate": "6.611%",
-        "apr": "6.831%",
-        "points": "1.60"
+        "rate": "6.697%",
+        "apr": "6.917%",
+        "points": "1.43"
       },
       "30-year-jumbo": {
-        "rate": "7.131%",
-        "apr": "7.266%",
-        "points": "1.01"
+        "rate": "6.956%",
+        "apr": "7.091%",
+        "points": "1.05"
       }
     },
     "california": {
       "30-year-fixed": {
-        "rate": "6.771%",
-        "apr": "6.911%",
-        "points": "1.68"
+        "rate": "6.755%",
+        "apr": "6.895%",
+        "points": "1.66"
       },
       "20-year-fixed": {
-        "rate": "5.925%",
-        "apr": "6.085%",
-        "points": "1.63"
+        "rate": "5.906%",
+        "apr": "6.066%",
+        "points": "1.59"
       },
       "15-year-fixed": {
-        "rate": "5.800%",
-        "apr": "5.950%",
-        "points": "1.16"
+        "rate": "5.811%",
+        "apr": "5.961%",
+        "points": "1.25"
       },
       "30-year-fha": {
-        "rate": "6.524%",
-        "apr": "6.744%",
-        "points": "1.40"
+        "rate": "6.301%",
+        "apr": "6.521%",
+        "points": "1.55"
       },
       "30-year-jumbo": {
-        "rate": "6.756%",
-        "apr": "6.891%",
-        "points": "1.00"
+        "rate": "6.718%",
+        "apr": "6.853%",
+        "points": "1.10"
       }
     },
     "texas": {
       "30-year-fixed": {
-        "rate": "6.699%",
-        "apr": "6.839%",
-        "points": "1.74"
+        "rate": "6.753%",
+        "apr": "6.893%",
+        "points": "1.71"
       },
       "20-year-fixed": {
-        "rate": "6.148%",
-        "apr": "6.308%",
-        "points": "1.57"
+        "rate": "6.044%",
+        "apr": "6.204%",
+        "points": "1.48"
       },
       "15-year-fixed": {
-        "rate": "5.797%",
-        "apr": "5.947%",
-        "points": "1.40"
+        "rate": "5.992%",
+        "apr": "6.142%",
+        "points": "1.27"
       },
       "30-year-fha": {
-        "rate": "6.630%",
-        "apr": "6.850%",
-        "points": "1.52"
+        "rate": "6.646%",
+        "apr": "6.866%",
+        "points": "1.46"
       },
       "30-year-jumbo": {
-        "rate": "6.920%",
-        "apr": "7.055%",
-        "points": "1.01"
+        "rate": "6.796%",
+        "apr": "6.931%",
+        "points": "1.13"
       }
     },
     "florida": {
       "30-year-fixed": {
-        "rate": "6.933%",
-        "apr": "7.073%",
-        "points": "1.75"
+        "rate": "6.887%",
+        "apr": "7.027%",
+        "points": "1.67"
       },
       "20-year-fixed": {
-        "rate": "6.197%",
-        "apr": "6.357%",
+        "rate": "6.222%",
+        "apr": "6.382%",
         "points": "1.50"
       },
       "15-year-fixed": {
-        "rate": "6.054%",
-        "apr": "6.204%",
-        "points": "1.25"
+        "rate": "5.841%",
+        "apr": "5.991%",
+        "points": "1.40"
       },
       "30-year-fha": {
-        "rate": "6.541%",
-        "apr": "6.761%",
-        "points": "1.48"
+        "rate": "6.669%",
+        "apr": "6.889%",
+        "points": "1.40"
       },
       "30-year-jumbo": {
-        "rate": "6.940%",
-        "apr": "7.075%",
-        "points": "1.05"
+        "rate": "6.953%",
+        "apr": "7.088%",
+        "points": "1.09"
       }
     },
     "colorado": {
       "30-year-fixed": {
-        "rate": "6.737%",
-        "apr": "6.877%",
-        "points": "1.71"
+        "rate": "6.831%",
+        "apr": "6.971%",
+        "points": "1.75"
       },
       "20-year-fixed": {
-        "rate": "6.109%",
-        "apr": "6.269%",
-        "points": "1.44"
+        "rate": "6.002%",
+        "apr": "6.162%",
+        "points": "1.61"
       },
       "15-year-fixed": {
-        "rate": "5.903%",
-        "apr": "6.053%",
-        "points": "1.19"
+        "rate": "5.872%",
+        "apr": "6.022%",
+        "points": "1.21"
       },
       "30-year-fha": {
-        "rate": "6.577%",
-        "apr": "6.797%",
-        "points": "1.48"
+        "rate": "6.444%",
+        "apr": "6.664%",
+        "points": "1.43"
       },
       "30-year-jumbo": {
-        "rate": "6.876%",
-        "apr": "7.011%",
-        "points": "1.01"
+        "rate": "6.846%",
+        "apr": "6.981%",
+        "points": "0.93"
       }
     }
   }
