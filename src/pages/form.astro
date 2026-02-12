@@ -619,7 +619,7 @@
                 <h2 class="step-title" data-es="Información de Contacto" data-en="Contact Information">Información de Contacto</h2>
                 <p class="step-description" data-es="Por favor proporciona tus datos de contacto para que podamos comunicarnos contigo." data-en="Please provide your contact details so we can get in touch with you.">Por favor proporciona tus datos de contacto para que podamos comunicarnos contigo.</p>
                 
-                <form id="contactForm" action="/send-email.php" method="POST" data-formsubmit-email="info@brokerlenders.com">
+                <form id="contactForm" action="/send-email.php" method="POST">
                     <div class="form-group">
                         <label class="form-label" for="fullName" data-es="Nombre Completo *" data-en="Full Name *">Nombre Completo *</label>
                         <input type="text" id="fullName" name="name" class="form-input" required>
@@ -786,15 +786,12 @@
             submitBtn.disabled = true;
             let successCompleted = false;
             
-            const form = document.getElementById('contactForm');
-            const formSubmitEmail = form?.dataset.formsubmitEmail || '';
-            const payload = { name, phone, updatesConsent: updates, language: currentLanguage };
             try {
                 const response = await fetch(`${sendEmailUrl}?t=${Date.now()}`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     cache: 'no-store',
-                    body: JSON.stringify(payload)
+                    body: JSON.stringify({ name, phone, updatesConsent: updates, language: currentLanguage })
                 });
 
                 const responseText = await response.text();
@@ -814,19 +811,6 @@
                     setTimeout(() => {
                         showStep(2);
                     }, 1200);
-                } else if (formSubmitEmail) {
-                    await fetch(`https://formsubmit.co/ajax/${encodeURIComponent(formSubmitEmail)}`, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-                        body: JSON.stringify(payload)
-                    });
-                    personalInfo.name = name;
-                    personalInfo.phone = phone;
-                    showSuccessUI();
-                    successCompleted = true;
-                    setTimeout(() => {
-                        showStep(2);
-                    }, 1200);
                 } else {
                     const apiMessages = {
                         es: 'No se pudo enviar en este momento. Revisa el servicio de correo.',
@@ -839,34 +823,11 @@
                 }
             } catch (error) {
                 console.error('Error submitting form:', error);
-                if (formSubmitEmail) {
-                    try {
-                        await fetch(`https://formsubmit.co/ajax/${encodeURIComponent(formSubmitEmail)}`, {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-                            body: JSON.stringify(payload)
-                        });
-                        personalInfo.name = name;
-                        personalInfo.phone = phone;
-                        showSuccessUI();
-                        successCompleted = true;
-                        setTimeout(() => {
-                            showStep(2);
-                        }, 1200);
-                    } catch (fallbackError) {
-                        const errorMessages = {
-                            es: 'No se pudo conectar con el servicio de envío. Revisa tu conexión.',
-                            en: 'Could not reach the delivery service. Check your connection.'
-                        };
-                        showSubmitError(errorMessages[currentLanguage]);
-                    }
-                } else {
-                    const errorMessages = {
-                        es: 'No se pudo conectar con el servicio de envío. Revisa tu conexión.',
-                        en: 'Could not reach the delivery service. Check your connection.'
-                    };
-                    showSubmitError(errorMessages[currentLanguage]);
-                }
+                const errorMessages = {
+                    es: 'No se pudo conectar con el servicio de envío. Revisa tu conexión.',
+                    en: 'Could not reach the delivery service. Check your connection.'
+                };
+                showSubmitError(errorMessages[currentLanguage]);
             } finally {
                 // Remove loading state only if not successful
                 if (!successCompleted) {

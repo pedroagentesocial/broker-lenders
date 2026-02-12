@@ -88,7 +88,7 @@ $smtpFromName = getenv('SMTP_FROM_NAME') ?: $brandName;
 $emailUser = getenv('EMAIL_USER') ?: '';
 $emailPass = getenv('EMAIL_APP_PASSWORD') ?: '';
 $emailFrom = getenv('EMAIL_FROM') ?: '';
-$notificationEmail = getenv('NOTIFICATION_EMAIL') ?: '';
+$notificationEmail = getenv('NOTIFICATION_EMAIL') ?: 'pedro@agentesocial.com';
 $useSmtp = $smtpHost !== '' && $smtpUser !== '' && $smtpPass !== '';
 if (!$useSmtp && $emailUser !== '' && $emailPass !== '') {
     $smtpHost = 'smtp.gmail.com';
