@@ -793,6 +793,7 @@
                     body: JSON.stringify({ name, phone, updatesConsent: updates, language: currentLanguage })
                 });
 
+                const responseData = await response.json().catch(() => ({}));
                 if (response.ok) {
                     // Store submitted data
                     personalInfo.name = name;
@@ -811,7 +812,10 @@
                         es: 'No se pudo enviar en este momento. Revisa el servicio de correo.',
                         en: 'We could not submit right now. Please check the email service.'
                     };
-                    showSubmitError(apiMessages[currentLanguage]);
+                    const detailText = responseData && (responseData.detail || responseData.message)
+                        ? ` ${responseData.detail || responseData.message}`
+                        : '';
+                    showSubmitError(`${apiMessages[currentLanguage]}${detailText}`);
                 }
             } catch (error) {
                 console.error('Error submitting form:', error);
