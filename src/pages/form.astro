@@ -619,7 +619,7 @@
                 <h2 class="step-title" data-es="Información de Contacto" data-en="Contact Information">Información de Contacto</h2>
                 <p class="step-description" data-es="Por favor proporciona tus datos de contacto para que podamos comunicarnos contigo." data-en="Please provide your contact details so we can get in touch with you.">Por favor proporciona tus datos de contacto para que podamos comunicarnos contigo.</p>
                 
-                <form id="contactForm" action="/send-email.php" method="POST">
+                <form id="contactForm" action="/send-email.php" method="POST" data-send-email-url="https://brokerlenders.com/send-email.php">
                     <div class="form-group">
                         <label class="form-label" for="fullName" data-es="Nombre Completo *" data-en="Full Name *">Nombre Completo *</label>
                         <input type="text" id="fullName" name="name" class="form-input" required>
@@ -748,7 +748,7 @@
             phone: ''
         };
         let currentLanguage = 'es'; // Default to Spanish
-        const sendEmailUrl = '/send-email.php';
+        let sendEmailUrl = '/send-email.php';
 
         // Initialize when DOM is loaded
         document.addEventListener('DOMContentLoaded', function() {
@@ -759,7 +759,11 @@
             initializeModals();
             
             // Setup event listeners
-            document.getElementById('contactForm').addEventListener('submit', handleFormSubmit);
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm?.dataset?.sendEmailUrl) {
+                sendEmailUrl = contactForm.dataset.sendEmailUrl;
+            }
+            contactForm.addEventListener('submit', handleFormSubmit);
             document.getElementById('phone').addEventListener('input', formatPhoneNumber);
             document.querySelector('.dark-mode-toggle').addEventListener('click', toggleDarkMode);
             document.querySelector('.language-toggle').addEventListener('click', toggleLanguage);
@@ -812,9 +816,14 @@
                         showStep(2);
                     }, 1200);
                 } else {
+                    const isHtmlResponse = typeof responseText === 'string' && /<!doctype html|<html/i.test(responseText);
                     const apiMessages = {
-                        es: 'No se pudo enviar en este momento. Revisa el servicio de correo.',
-                        en: 'We could not submit right now. Please check the email service.'
+                        es: isHtmlResponse
+                            ? 'El servidor devolvió HTML. Esto indica que send-email.php no se está ejecutando como PHP.'
+                            : 'No se pudo enviar en este momento. Revisa el servicio de correo.',
+                        en: isHtmlResponse
+                            ? 'The server returned HTML. This means send-email.php is not running as PHP.'
+                            : 'We could not submit right now. Please check the email service.'
                     };
                     const detailText = responseData && (responseData.detail || responseData.message)
                         ? ` ${responseData.detail || responseData.message}`
