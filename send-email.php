@@ -85,7 +85,23 @@ $smtpPass = getenv('SMTP_PASS') ?: '';
 $smtpSecure = getenv('SMTP_SECURE') ?: 'tls';
 $smtpFrom = getenv('SMTP_FROM') ?: 'noreply@brokerlenders.com';
 $smtpFromName = getenv('SMTP_FROM_NAME') ?: $brandName;
+$emailUser = getenv('EMAIL_USER') ?: '';
+$emailPass = getenv('EMAIL_APP_PASSWORD') ?: '';
+$emailFrom = getenv('EMAIL_FROM') ?: '';
+$notificationEmail = getenv('NOTIFICATION_EMAIL') ?: '';
 $useSmtp = $smtpHost !== '' && $smtpUser !== '' && $smtpPass !== '';
+if (!$useSmtp && $emailUser !== '' && $emailPass !== '') {
+    $smtpHost = 'smtp.gmail.com';
+    $smtpPort = '587';
+    $smtpUser = $emailUser;
+    $smtpPass = $emailPass;
+    $smtpSecure = 'tls';
+    $smtpFrom = $emailFrom !== '' ? $emailFrom : $emailUser;
+    $useSmtp = true;
+}
+if ($smtpFrom === '') {
+    $smtpFrom = $brandEmail;
+}
 
 function smtpRead($connection) {
     $data = '';
@@ -379,7 +395,7 @@ $emailContent = <<<HTML
 HTML;
 
 // Destinatario y asunto del email
-$toCompany = 'pedro@agentesocial.com';
+$toCompany = $notificationEmail !== '' ? $notificationEmail : ($emailUser !== '' ? $emailUser : $brandEmail);
 $subjectCompany = $language === 'es' ? "Nuevo mensaje de contacto - {$brandName}" : "New contact message - {$brandName}";
 
 // Configurar headers para enviar email en HTML
@@ -614,8 +630,27 @@ $clientHeaders .= "From: {$smtpFrom}\r\n";
 // Enviar email de confirmación al cliente
 $clientSubject = $language === 'es' ? "Confirmación de envío - {$brandName}" : "Form Submission Confirmed - {$brandName}";
 $mailToClient = null;
+$clientError = '';
 if ($email !== '') {
-    $mailToClient = mail($email, $clientSubject, $clientEmailContent, $clientHeaders);
+    if ($useSmtp) {
+        $clientResult = smtpSend([
+            'host' => $smtpHost,
+            'port' => $smtpPort,
+            'user' => $smtpUser,
+            'pass' => $smtpPass,
+            'secure' => $smtpSecure,
+            'fromEmail' => $smtpFrom,
+            'fromName' => $smtpFromName
+        ], $email, $clientSubject, $clientEmailContent, $brandEmail);
+        $mailToClient = $clientResult['ok'];
+        $clientError = $clientResult['error'];
+    } else {
+        if (function_exists('mail')) {
+            $mailToClient = mail($email, $clientSubject, $clientEmailContent, $clientHeaders);
+        } else {
+            $clientError = 'mail() not available on server';
+        }
+    }
 }
 
 // Responder al cliente si se envió correctamente
