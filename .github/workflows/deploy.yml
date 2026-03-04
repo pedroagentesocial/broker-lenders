@@ -55,7 +55,7 @@ jobs:
           username: ${{ secrets.SFTP_USERNAME }}
           password: ${{ secrets.SFTP_PASSWORD }}
           port: 21
-          protocol: ftp
+          protocol: ftps
           local-dir: dist/
           server-dir: ./
           dangerous-clean-slate: false
@@ -73,19 +73,6 @@ jobs:
         run: |
           echo "Listing login root after deploy"
           curl --insecure --user "${{ secrets.SFTP_USERNAME }}:${{ secrets.SFTP_PASSWORD }}" "ftp://${{ secrets.SFTP_HOST }}/" -l || true
-
-      - name: Fallback deploy to login root (SFTP)
-        if: ${{ failure() }}
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.SFTP_HOST }}
-          username: ${{ secrets.SFTP_USERNAME }}
-          password: ${{ secrets.SFTP_PASSWORD }}
-          port: 22
-          protocol: sftp
-          local-dir: dist/
-          server-dir: ./
-          timeout: 300000
 
       - name: Check live site content
         run: |
