@@ -187,7 +187,18 @@ import ImportantLegal from '../components/ImportantLegal.astro';
             <textarea id="message" name="message" rows="6" required placeholder="Please tell us how we can help you..." data-i18n-placeholder="form.placeholders.message" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent transition-colors resize-vertical"></textarea>
           </div>
 
+          <div class="mb-6">
+            <label class="flex items-start gap-3 text-sm text-gray-700">
+              <input type="checkbox" name="policyConsent" required class="mt-1 h-4 w-4 text-black border-gray-300 rounded focus:ring-black">
+              <span data-i18n="form.consentText"></span>
+            </label>
+          </div>
+
           <div class="text-center flex flex-col items-center relative" id="submitContainer">
+            <div id="submitHint" class="hidden absolute -top-12 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-xs px-3 py-2 rounded-lg shadow-lg">
+              <span data-i18n="form.validationConsent"></span>
+              <span class="absolute left-1/2 -bottom-1 h-2 w-2 -translate-x-1/2 rotate-45 bg-gray-900"></span>
+            </div>
             <button id="submitBtn" type="submit" class="bg-black text-white px-8 py-3 rounded-[48px] font-semibold hover:bg-red-600 hover:text-white transition-colors inline-flex items-center">
               <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
@@ -262,7 +273,9 @@ import ImportantLegal from '../components/ImportantLegal.astro';
             support: 'Technical Support'
           },
           placeholders: { message: 'Please tell us how we can help you...' },
-          submit: 'Send Message'
+          submit: 'Send Message',
+          validationConsent: 'Please complete required fields and accept the consent checkbox.',
+          consentText: 'I confirm that I have read the <a href="/legal/privacy" class="text-black underline hover:text-red-600">Privacy Policy</a> and agree to the <a href="/legal/terms-of-use" class="text-black underline hover:text-red-600">Terms &amp; Conditions</a> provided by the company. By providing my phone number, I agree to receive SMS notifications and promotional messages from Broker Lenders LLC. Message &amp; data rates may apply.'
         },
         submit: { success: 'Data submitted successfully', error: 'Submission failed. Please try again.' }
       },
@@ -302,7 +315,9 @@ import ImportantLegal from '../components/ImportantLegal.astro';
             support: 'Soporte técnico'
           },
           placeholders: { message: 'Cuéntanos cómo podemos ayudarte...' },
-          submit: 'Enviar mensaje'
+          submit: 'Enviar mensaje',
+          validationConsent: 'Completa los campos requeridos y marca la casilla de consentimiento.',
+          consentText: 'Confirmo que he leído la <a href="/legal/privacy" class="text-black underline hover:text-red-600">Política de Privacidad</a> y acepto los <a href="/legal/terms-of-use" class="text-black underline hover:text-red-600">Términos y Condiciones</a> proporcionados por la empresa. Al proporcionar mi número de teléfono, acepto recibir notificaciones SMS y mensajes promocionales de Broker Lenders LLC. Pueden aplicarse tarifas de mensajes y datos.'
         },
         submit: { success: 'Datos enviados correctamente', error: 'Error al enviar. Intenta nuevamente.' }
       }
@@ -384,7 +399,18 @@ import ImportantLegal from '../components/ImportantLegal.astro';
     const successEl = document.getElementById('submitSuccess');
     const errorEl = document.getElementById('submitError');
     const submitContainer = document.getElementById('submitContainer');
+    const submitHint = document.getElementById('submitHint');
     const heroBtn = document.getElementById('heroSendBtn');
+    const consentInput = form?.querySelector('input[name="policyConsent"]');
+
+    function updateSubmitState() {
+      if (!(form instanceof HTMLFormElement)) return;
+      if (!(submitBtn instanceof HTMLButtonElement)) return;
+      const consentChecked = consentInput instanceof HTMLInputElement && consentInput.checked;
+      const isValid = form.checkValidity() && consentChecked;
+      submitBtn.disabled = !isValid;
+      submitBtn.setAttribute('aria-disabled', String(!isValid));
+    }
 
     // Animations helpers
     function showAnimated(el) {
@@ -509,6 +535,22 @@ import ImportantLegal from '../components/ImportantLegal.astro';
 
     form?.addEventListener('submit', async (e) => {
       e.preventDefault();
+      if (!(form instanceof HTMLFormElement)) return;
+      const consentChecked = consentInput instanceof HTMLInputElement && consentInput.checked;
+      const lang = (localStorage.getItem('lang') || document.documentElement.getAttribute('lang') || 'en');
+      const dict = translations[lang] || translations.en;
+      if (!form.checkValidity() || !consentChecked) {
+        form.reportValidity();
+        if (submitHint) {
+          const hintSpan = submitHint.querySelector('span');
+          if (hintSpan) hintSpan.innerHTML = dict.form.validationConsent;
+          submitHint.classList.remove('hidden');
+        }
+        return;
+      }
+      if (submitHint) {
+        submitHint.classList.add('hidden');
+      }
 
       // Ocultar botón con animación
       hideButtonAnimated(submitBtn);
@@ -575,6 +617,16 @@ import ImportantLegal from '../components/ImportantLegal.astro';
         }, 4500);
       }
     });
+
+    form?.addEventListener('input', () => {
+      submitHint?.classList.add('hidden');
+      updateSubmitState();
+    });
+    form?.addEventListener('change', () => {
+      submitHint?.classList.add('hidden');
+      updateSubmitState();
+    });
+    updateSubmitState();
   });
 </script>
 
@@ -595,4 +647,8 @@ import ImportantLegal from '../components/ImportantLegal.astro';
   .fade-in { animation: fadeIn 220ms ease-out forwards; }
   .fade-out { animation: fadeOut 180ms ease-in forwards; }
   .slide-in-up { animation: slideInUp 220ms ease-out forwards; }
+  #submitBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
 </style>
