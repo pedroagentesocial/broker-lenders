@@ -156,15 +156,12 @@
 [2025-11-13T13:45:06.507Z] Rates actualizados exitosamente
 [2025-11-12T13:45:19.658Z] Rates actualizados exitosamente
 [2025-11-11T18:20:21.518Z] Rates actualizados exitosamente
-<<<<<<< HEAD
+[2025-11-11T18:10:05.417Z] Rates actualizados exitosamente
+[2025-11-11T18:10:00.061Z] Rates actualizados exitosamente
 [2025-11-11T13:39:59.900Z] Rates actualizados exitosamente
 [2025-11-10T13:41:10.944Z] Rates actualizados exitosamente
 [2025-11-09T13:06:35.844Z] Rates actualizados exitosamente
 [2025-11-08T13:05:35.282Z] Rates actualizados exitosamente
-=======
-[2025-11-11T18:10:05.417Z] Rates actualizados exitosamente
-[2025-11-11T18:10:00.061Z] Rates actualizados exitosamente
->>>>>>> 251b6cf (feat: UTF-8 headers, dynamic date in CarouselRates, daily rates automation, Astro Vercel adapter for deploy)
 [2025-11-07T13:35:54.588Z] Rates actualizados exitosamente
 [2025-11-06T17:43:02.721Z] Rates actualizados exitosamente
 [2025-11-05T22:32:38.915Z] Rates actualizados exitosamente

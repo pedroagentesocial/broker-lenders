@@ -29,8 +29,8 @@ jobs:
 
       - name: Commit updated rates
         run: |
-          git config user.name 'github-actions'
-          git config user.email 'github-actions@github.com'
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add src/data/rates-data.json public/rates-data.json src/data/update-log.txt
           git commit -m "chore: daily rates update" || echo 'No changes to commit'
 

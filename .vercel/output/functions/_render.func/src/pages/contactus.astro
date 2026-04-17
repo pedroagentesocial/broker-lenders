@@ -5,17 +5,15 @@ import WaysHelp from '../components/WaysHelp.astro';
 import ImportantLegal from '../components/ImportantLegal.astro';
 ---
 
-// Ensure UTF-8 response to render accents correctly
-Astro.response.headers.set('Content-Type', 'text/html; charset=UTF-8');
 
 <Layout title="Contact Us - Broker Lenders">
   <!-- Breadcrumb Section -->
   <div class="bg-white py-4">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <nav class="text-sm">
-        <a href="/" class="text-gray-700 hover:text-gray-900">Home</a>
+        <a href="/" class="text-gray-700 hover:text-gray-900" data-i18n="breadcrumb.home">Home</a>
         <span class="mx-2 text-gray-500">/</span>
-        <span class="text-gray-700">Contact Us</span>
+        <span class="text-gray-700" data-i18n="breadcrumb.contact">Contact Us</span>
       </nav>
     </div>
   </div>
@@ -23,10 +21,10 @@ Astro.response.headers.set('Content-Type', 'text/html; charset=UTF-8');
   <!-- Hero Section -->
   <section class="py-16 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6" data-i18n="hero.title">
         Contact Us
       </h1>
-      <p class="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
+      <p class="text-lg text-gray-600 mb-8 max-w-3xl mx-auto" data-i18n="hero.description">
         We're here to help you with all your mortgage needs. Get in touch with our experienced team today.
       </p>
       <div class="flex items-center justify-center gap-4">
@@ -34,13 +32,13 @@ Astro.response.headers.set('Content-Type', 'text/html; charset=UTF-8');
           <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
           </svg>
-          Call (801) 307-0273
+          <span data-i18n="hero.cta.callFull">Call (801) 307-0273</span>
         </a>
         <a id="heroSendBtn" href="#contact-form" class="bg-white text-black border border-black px-8 py-3 rounded-[48px] font-semibold hover:bg-black hover:text-white transition-colors inline-flex items-center justify-center">
           <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
           </svg>
-          Send Message
+          <span data-i18n="hero.cta.send">Send Message</span>
         </a>
       </div>
     </div>
@@ -50,8 +48,8 @@ Astro.response.headers.set('Content-Type', 'text/html; charset=UTF-8');
   <section class="py-16 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-gray-900 mb-4">Get in Touch</h2>
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4" data-i18n="contact.title">Get in Touch</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto" data-i18n="contact.description">
           We offer multiple ways to reach us. Choose the method that's most convenient for you.
         </p>
       </div>
@@ -64,12 +62,12 @@ Astro.response.headers.set('Content-Type', 'text/html; charset=UTF-8');
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
             </svg>
           </div>
-          <h3 class="text-xl font-semibold text-gray-900 mb-2">Call Us</h3>
-          <p class="text-gray-600 mb-4">Speak with our mortgage experts directly</p>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2" data-i18n="cards.phone.title">Call Us</h3>
+          <p class="text-gray-600 mb-4" data-i18n="cards.phone.desc">Speak with our mortgage experts directly</p>
           <a href="tel:8013070273" class="text-black hover:text-red-600 font-semibold text-lg">
             (801) 307-0273
           </a>
-          <p class="text-sm text-gray-500 mt-2">Mon-Fri: 8AM-6PM MST</p>
+          <p class="text-sm text-gray-500 mt-2" data-i18n="cards.phone.hours">Mon-Fri: 8AM-6PM MST</p>
         </div>
 
         <!-- Email Contact -->
@@ -79,12 +77,12 @@ Astro.response.headers.set('Content-Type', 'text/html; charset=UTF-8');
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
           </div>
-          <h3 class="text-xl font-semibold text-gray-900 mb-2">Email Us</h3>
-          <p class="text-gray-600 mb-4">Send us your questions anytime</p>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2" data-i18n="cards.email.title">Email Us</h3>
+          <p class="text-gray-600 mb-4" data-i18n="cards.email.desc">Send us your questions anytime</p>
           <a href="mailto:info@brokerlenders.com" class="text-black hover:text-red-600 font-semibold">
             info@brokerlenders.com
           </a>
-          <p class="text-sm text-gray-500 mt-2">Response within 24 hours</p>
+          <p class="text-sm text-gray-500 mt-2" data-i18n="cards.email.response">Response within 24 hours</p>
         </div>
 
         <!-- Office Location -->
@@ -95,13 +93,13 @@ Astro.response.headers.set('Content-Type', 'text/html; charset=UTF-8');
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
             </svg>
           </div>
-          <h3 class="text-xl font-semibold text-gray-900 mb-2">Visit Us</h3>
-          <p class="text-gray-600 mb-4">Our office in Cottonwood Heights</p>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2" data-i18n="cards.visit.title">Visit Us</h3>
+          <p class="text-gray-600 mb-4" data-i18n="cards.visit.desc">Our office in Cottonwood Heights</p>
           <p class="text-gray-700 font-semibold">
             1515 East Fort Union Blvd<br>
             Cottonwood Heights, UT 84121
           </p>
-          <p class="text-sm text-gray-500 mt-2">By appointment only</p>
+          <p class="text-sm text-gray-500 mt-2" data-i18n="cards.visit.hours">By appointment only</p>
         </div>
       </div>
     </div>
@@ -111,8 +109,8 @@ Astro.response.headers.set('Content-Type', 'text/html; charset=UTF-8');
   <section id="contact-form" class="py-16 bg-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-gray-900 mb-4">Send Us a Message</h2>
-        <p class="text-lg text-gray-600">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4" data-i18n="form.title">Send Us a Message</h2>
+        <p class="text-lg text-gray-600" data-i18n="form.description">
           Fill out the form below and we'll get back to you as soon as possible.
         </p>
       </div>
@@ -140,13 +138,13 @@ Astro.response.headers.set('Content-Type', 'text/html; charset=UTF-8');
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
             <div>
-              <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">
+              <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2" data-i18n="form.labels.firstName">
                 First Name *
               </label>
               <input type="text" id="firstName" name="firstName" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent transition-colors">
             </div>
             <div>
-              <label for="lastName" class="block text-sm font-medium text-gray-700 mb-2">
+              <label for="lastName" class="block text-sm font-medium text-gray-700 mb-2" data-i18n="form.labels.lastName">
                 Last Name *
               </label>
               <input type="text" id="lastName" name="lastName" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent transition-colors">
@@ -154,59 +152,70 @@ Astro.response.headers.set('Content-Type', 'text/html; charset=UTF-8');
           </div>
 
           <div class="mb-6">
-            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
+            <label for="email" class="block text-sm font-medium text-gray-700 mb-2" data-i18n="form.labels.email">
               Email Address *
             </label>
             <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent transition-colors">
           </div>
 
           <div class="mb-6">
-            <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">
+            <label for="phone" class="block text-sm font-medium text-gray-700 mb-2" data-i18n="form.labels.phone">
               Phone Number
             </label>
             <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent transition-colors">
           </div>
 
           <div class="mb-6">
-            <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">
+            <label for="subject" class="block text-sm font-medium text-gray-700 mb-2" data-i18n="form.labels.subject">
               Subject *
             </label>
             <select id="subject" name="subject" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent transition-colors">
-              <option value="">Select a subject</option>
-              <option value="general">General Inquiry</option>
-              <option value="mortgage">Mortgage Questions</option>
-              <option value="refinance">Refinancing</option>
-              <option value="rates">Rate Information</option>
-              <option value="application">Application Status</option>
-              <option value="support">Technical Support</option>
+              <option value="" data-i18n="form.subjectOptions.select">Select a subject</option>
+              <option value="general" data-i18n="form.subjectOptions.general">General Inquiry</option>
+              <option value="mortgage" data-i18n="form.subjectOptions.mortgage">Mortgage Questions</option>
+              <option value="refinance" data-i18n="form.subjectOptions.refinance">Refinancing</option>
+              <option value="rates" data-i18n="form.subjectOptions.rates">Rate Information</option>
+              <option value="application" data-i18n="form.subjectOptions.application">Application Status</option>
+              <option value="support" data-i18n="form.subjectOptions.support">Technical Support</option>
             </select>
           </div>
 
           <div class="mb-6">
-            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">
+            <label for="message" class="block text-sm font-medium text-gray-700 mb-2" data-i18n="form.labels.message">
               Message *
             </label>
-            <textarea id="message" name="message" rows="6" required placeholder="Please tell us how we can help you..." class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent transition-colors resize-vertical"></textarea>
+            <textarea id="message" name="message" rows="6" required placeholder="Please tell us how we can help you..." data-i18n-placeholder="form.placeholders.message" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent transition-colors resize-vertical"></textarea>
+          </div>
+
+          <div class="mb-6">
+            <label class="flex items-start gap-3 text-sm text-gray-700">
+              <input type="checkbox" name="policyConsent" required class="mt-1 h-4 w-4 text-black border-gray-300 rounded focus:ring-black">
+              <span data-i18n="form.consentText"></span>
+            </label>
           </div>
 
           <div class="text-center flex flex-col items-center relative" id="submitContainer">
+            <div id="submitHint" class="hidden absolute -top-12 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-xs px-3 py-2 rounded-lg shadow-lg">
+              <span data-i18n="form.validationConsent"></span>
+              <span class="absolute left-1/2 -bottom-1 h-2 w-2 -translate-x-1/2 rotate-45 bg-gray-900"></span>
+            </div>
             <button id="submitBtn" type="submit" class="bg-black text-white px-8 py-3 rounded-[48px] font-semibold hover:bg-red-600 hover:text-white transition-colors inline-flex items-center">
               <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
               </svg>
-              Send Message
+              <span data-i18n="form.submit">Send Message</span>
             </button>
             <div id="submitSuccess" class="hidden inline-flex items-center justify-center bg-green-100 text-green-800 px-4 py-3 rounded-[48px] font-semibold" style="display:none" aria-hidden="true">
               <svg class="w-5 h-5 mr-2 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
               </svg>
-              Datos enviados correctamente
+              <span data-i18n="submit.success">Data submitted successfully</span>
             </div>
             <div id="submitError" class="hidden inline-flex items-center justify-center bg-red-100 text-red-800 px-4 py-3 rounded-[48px] font-semibold" style="display:none" aria-hidden="true">
               <svg class="w-5 h-5 mr-2 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
               </svg>
-              Error al enviar. Intenta nuevamente.
+              <span data-i18n="submit.error">Submission failed. Please try again.</span>
             </div>
           </div>
         </form>
@@ -226,12 +235,182 @@ Astro.response.headers.set('Content-Type', 'text/html; charset=UTF-8');
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
+    // --- i18n dictionaries (inline, no fetch) ---
+    const translations = {
+      en: {
+        title: 'Contact Us - Broker Lenders',
+        breadcrumb: { home: 'Home', contact: 'Contact Us' },
+        hero: {
+          title: 'Contact Us',
+          description: "We're here to help you with all your mortgage needs. Get in touch with our experienced team today.",
+          cta: { callFull: 'Call (801) 307-0273', send: 'Send Message' },
+          mailtoSubject: 'Contact Request from website',
+          mailtoIntro: 'Hello Broker Lenders,\n\nI would like to get in touch.',
+          mailtoUtm: 'UTM Attribution',
+          mailtoSession: 'Session Context',
+          mailtoLabels: { source: 'Source', campaign: 'Campaign', medium: 'Medium', content: 'Content', term: 'Term', landing: 'Landing Page', referrer: 'Referrer' },
+        },
+        contact: {
+          title: 'Get in Touch',
+          description: "We offer multiple ways to reach us. Choose the method that's most convenient for you.",
+        },
+        cards: {
+          phone: { title: 'Call Us', desc: 'Speak with our mortgage experts directly', hours: 'Mon-Fri: 8AM-6PM MST' },
+          email: { title: 'Email Us', desc: 'Send us your questions anytime', response: 'Response within 24 hours' },
+          visit: { title: 'Visit Us', desc: 'Our office in Cottonwood Heights', hours: 'By appointment only' }
+        },
+        form: {
+          title: 'Send Us a Message',
+          description: "Fill out the form below and we'll get back to you as soon as possible.",
+          labels: { firstName: 'First Name *', lastName: 'Last Name *', email: 'Email Address *', phone: 'Phone Number', subject: 'Subject *', message: 'Message *' },
+          subjectOptions: {
+            select: 'Select a subject',
+            general: 'General Inquiry',
+            mortgage: 'Mortgage Questions',
+            refinance: 'Refinancing',
+            rates: 'Rate Information',
+            application: 'Application Status',
+            support: 'Technical Support'
+          },
+          placeholders: { message: 'Please tell us how we can help you...' },
+          submit: 'Send Message',
+          validationConsent: 'Please complete required fields and accept the consent checkbox.',
+          consentText: 'I confirm that I have read the <a href="/legal/privacy" class="text-black underline hover:text-red-600">Privacy Policy</a> and agree to the <a href="/legal/terms-of-use" class="text-black underline hover:text-red-600">Terms &amp; Conditions</a> provided by the company. By providing my phone number, I agree to receive SMS notifications and promotional messages from Broker Lenders LLC. Message &amp; data rates may apply.'
+        },
+        submit: { success: 'Data submitted successfully', error: 'Submission failed. Please try again.' }
+      },
+      es: {
+        title: 'Contáctanos - Broker Lenders',
+        breadcrumb: { home: 'Inicio', contact: 'Contáctanos' },
+        hero: {
+          title: 'Contáctanos',
+          description: 'Estamos aquí para ayudarte con todas tus necesidades hipotecarias. Ponte en contacto con nuestro equipo experimentado hoy mismo.',
+          cta: { callFull: 'Llamar (801) 307-0273', send: 'Enviar mensaje' },
+          mailtoSubject: 'Solicitud de contacto desde el sitio web',
+          mailtoIntro: 'Hola Broker Lenders,\n\nMe gustaría ponerme en contacto.',
+          mailtoUtm: 'Atribución UTM',
+          mailtoSession: 'Contexto de sesión',
+          mailtoLabels: { source: 'Fuente', campaign: 'Campaña', medium: 'Medio', content: 'Contenido', term: 'Término', landing: 'Página de aterrizaje', referrer: 'Referente' },
+        },
+        contact: {
+          title: 'Ponte en contacto',
+          description: 'Ofrecemos múltiples formas de comunicarse con nosotros. Elige el método más conveniente para ti.'
+        },
+        cards: {
+          phone: { title: 'Llámanos', desc: 'Habla directamente con nuestros expertos hipotecarios', hours: 'Lun-Vie: 8AM-6PM MST' },
+          email: { title: 'Envíanos un correo', desc: 'Envíanos tus preguntas en cualquier momento', response: 'Respuesta dentro de 24 horas' },
+          visit: { title: 'Visítanos', desc: 'Nuestra oficina en Cottonwood Heights', hours: 'Solo con cita previa' }
+        },
+        form: {
+          title: 'Envíanos un mensaje',
+          description: 'Completa el siguiente formulario y te responderemos lo antes posible.',
+          labels: { firstName: 'Nombre *', lastName: 'Apellido *', email: 'Correo electrónico *', phone: 'Teléfono', subject: 'Asunto *', message: 'Mensaje *' },
+          subjectOptions: {
+            select: 'Selecciona un asunto',
+            general: 'Consulta general',
+            mortgage: 'Preguntas sobre hipotecas',
+            refinance: 'Refinanciamiento',
+            rates: 'Información de tasas',
+            application: 'Estado de solicitud',
+            support: 'Soporte técnico'
+          },
+          placeholders: { message: 'Cuéntanos cómo podemos ayudarte...' },
+          submit: 'Enviar mensaje',
+          validationConsent: 'Completa los campos requeridos y marca la casilla de consentimiento.',
+          consentText: 'Confirmo que he leído la <a href="/legal/privacy" class="text-black underline hover:text-red-600">Política de Privacidad</a> y acepto los <a href="/legal/terms-of-use" class="text-black underline hover:text-red-600">Términos y Condiciones</a> proporcionados por la empresa. Al proporcionar mi número de teléfono, acepto recibir notificaciones SMS y mensajes promocionales de Broker Lenders LLC. Pueden aplicarse tarifas de mensajes y datos.'
+        },
+        submit: { success: 'Datos enviados correctamente', error: 'Error al enviar. Intenta nuevamente.' }
+      }
+    };
+
+    const resolvePath = (obj, path) => {
+      if (!obj || !path) return null;
+      const parts = path.split('.');
+      let cur = obj;
+      for (const p of parts) { if (cur && (p in cur)) cur = cur[p]; else return null; }
+      return cur;
+    };
+    const getInitialLang = () => {
+      const urlLang = new URLSearchParams(window.location.search).get('lang');
+      let cookieLang = null;
+      try {
+        const m = document.cookie.match(/(?:^|;\s*)lang=([^;]+)/);
+        cookieLang = m && m[1] ? m[1].toLowerCase() : null;
+      } catch {}
+      const stored = localStorage.getItem('lang');
+      const htmlLang = document.documentElement.getAttribute('lang');
+      const raw = (urlLang || cookieLang || stored || htmlLang || 'en').toLowerCase();
+      return raw === 'es' ? 'es' : 'en';
+    };
+    const applyTranslations = (lang) => {
+      const dict = translations[lang] || translations.en;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        const val = resolvePath(dict, key);
+        if (typeof val === 'string') {
+          if (val.includes('<')) el.innerHTML = val; else el.textContent = val;
+        }
+      });
+      document.querySelectorAll('[data-i18n-aria]').forEach(el => {
+        const key = el.getAttribute('data-i18n-aria');
+        const val = resolvePath(dict, key);
+        if (typeof val === 'string') el.setAttribute('aria-label', val);
+      });
+      document.querySelectorAll('[data-i18n-alt]').forEach(el => {
+        const key = el.getAttribute('data-i18n-alt');
+        const val = resolvePath(dict, key);
+        if (typeof val === 'string') el.setAttribute('alt', val);
+      });
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        const key = el.getAttribute('data-i18n-placeholder');
+        const val = resolvePath(dict, key);
+        if (typeof val === 'string') el.setAttribute('placeholder', val);
+      });
+      if (typeof dict.title === 'string') document.title = dict.title;
+    };
+    const setLanguage = (lang) => {
+      const next = (lang === 'es') ? 'es' : 'en';
+      try { localStorage.setItem('lang', next); } catch {}
+      try { document.cookie = `lang=${next};path=/;max-age=31536000;SameSite=Lax`; } catch {}
+      try { document.documentElement.setAttribute('lang', next); } catch {}
+      const url = new URL(window.location.href);
+      url.searchParams.set('lang', next);
+      const newUrl = url.toString();
+      if (newUrl !== window.location.href) window.history.replaceState({}, '', newUrl);
+      applyTranslations(next);
+    };
+    // Initialize
+    setLanguage(getInitialLang());
+    // React to language menu clicks
+    document.addEventListener('click', (e) => {
+      const a = e.target.closest('a[href*="?lang="]');
+      if (!a) return;
+      let href; try { href = new URL(a.href, window.location.origin); } catch { return; }
+      const newLang = href.searchParams.get('lang');
+      if (newLang) setLanguage(newLang);
+    });
+    // Respond to storage events
+    window.addEventListener('storage', (ev) => {
+      if (ev.key === 'lang' && ev.newValue) applyTranslations(ev.newValue);
+    });
+
     const form = document.getElementById('contactForm');
     const submitBtn = document.getElementById('submitBtn');
     const successEl = document.getElementById('submitSuccess');
     const errorEl = document.getElementById('submitError');
     const submitContainer = document.getElementById('submitContainer');
+    const submitHint = document.getElementById('submitHint');
     const heroBtn = document.getElementById('heroSendBtn');
+    const consentInput = form?.querySelector('input[name="policyConsent"]');
+
+    function updateSubmitState() {
+      if (!(form instanceof HTMLFormElement)) return;
+      if (!(submitBtn instanceof HTMLButtonElement)) return;
+      const consentChecked = consentInput instanceof HTMLInputElement && consentInput.checked;
+      const isValid = form.checkValidity() && consentChecked;
+      submitBtn.disabled = !isValid;
+      submitBtn.setAttribute('aria-disabled', String(!isValid));
+    }
 
     // Animations helpers
     function showAnimated(el) {
@@ -329,7 +508,9 @@ Astro.response.headers.set('Content-Type', 'text/html; charset=UTF-8');
       formSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
       const email = 'info@brokerlenders.com';
-      const subject = encodeURIComponent('Contact Request from website');
+      const lang = (localStorage.getItem('lang') || document.documentElement.getAttribute('lang') || 'en');
+      const dict = translations[lang] || translations.en;
+      const subject = encodeURIComponent(dict.hero.mailtoSubject);
 
       // Read current UTM params from URL
       const params = new URLSearchParams(window.location.search || '');
@@ -344,7 +525,8 @@ Astro.response.headers.set('Content-Type', 'text/html; charset=UTF-8');
       const referrer = document.referrer || '';
 
       // Compose a readable body including UTM attribution and session context
-      const bodyText = `Hello Broker Lenders,\n\nI would like to get in touch.\n\nUTM Attribution:\n- Source: ${utm_source || '(none)'}\n- Campaign: ${utm_campaign || '(none)'}\n- Medium: ${utm_medium || '(none)'}\n- Content: ${utm_content || '(none)'}\n- Term: ${utm_term || '(none)'}\n\nSession Context:\n- Landing Page: ${landing}\n- Referrer: ${referrer || '(none)'}\n\nThanks.`;
+      const L = dict.hero.mailtoLabels;
+      const bodyText = `${dict.hero.mailtoIntro}\n\n${dict.hero.mailtoUtm}:\n- ${L.source}: ${utm_source || '(none)'}\n- ${L.campaign}: ${utm_campaign || '(none)'}\n- ${L.medium}: ${utm_medium || '(none)'}\n- ${L.content}: ${utm_content || '(none)'}\n- ${L.term}: ${utm_term || '(none)'}\n\n${dict.hero.mailtoSession}:\n- ${L.landing}: ${landing}\n- ${L.referrer}: ${referrer || '(none)'}\n\n`;
       const body = encodeURIComponent(bodyText);
 
       // Open default mail client
@@ -353,6 +535,22 @@ Astro.response.headers.set('Content-Type', 'text/html; charset=UTF-8');
 
     form?.addEventListener('submit', async (e) => {
       e.preventDefault();
+      if (!(form instanceof HTMLFormElement)) return;
+      const consentChecked = consentInput instanceof HTMLInputElement && consentInput.checked;
+      const lang = (localStorage.getItem('lang') || document.documentElement.getAttribute('lang') || 'en');
+      const dict = translations[lang] || translations.en;
+      if (!form.checkValidity() || !consentChecked) {
+        form.reportValidity();
+        if (submitHint) {
+          const hintSpan = submitHint.querySelector('span');
+          if (hintSpan) hintSpan.innerHTML = dict.form.validationConsent;
+          submitHint.classList.remove('hidden');
+        }
+        return;
+      }
+      if (submitHint) {
+        submitHint.classList.add('hidden');
+      }
 
       // Ocultar botón con animación
       hideButtonAnimated(submitBtn);
@@ -380,7 +578,7 @@ Astro.response.headers.set('Content-Type', 'text/html; charset=UTF-8');
           sendWebhook(webhookUrl, payload),
           sendFormSubmit(formSubmitEmail, payload)
         ]);
-        // Mostrar mensaje éxito con animación
+        // Mostrar mensaje éxito con animación (texto ya controlado por i18n)
         // Ocultar mensaje de error si estuviera visible
         errorEl?.classList.add('hidden');
         if (errorEl) errorEl.style.display = 'none';
@@ -419,6 +617,16 @@ Astro.response.headers.set('Content-Type', 'text/html; charset=UTF-8');
         }, 4500);
       }
     });
+
+    form?.addEventListener('input', () => {
+      submitHint?.classList.add('hidden');
+      updateSubmitState();
+    });
+    form?.addEventListener('change', () => {
+      submitHint?.classList.add('hidden');
+      updateSubmitState();
+    });
+    updateSubmitState();
   });
 </script>
 
@@ -439,4 +647,8 @@ Astro.response.headers.set('Content-Type', 'text/html; charset=UTF-8');
   .fade-in { animation: fadeIn 220ms ease-out forwards; }
   .fade-out { animation: fadeOut 180ms ease-in forwards; }
   .slide-in-up { animation: slideInUp 220ms ease-out forwards; }
+  #submitBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
 </style>

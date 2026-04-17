@@ -28,26 +28,6 @@
 			"dest": "_render"
 		},
 		{
-			"src": "^/buy/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^/calculators/mortgage-calculator/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^/calculators/mortgage-payoff-calculator/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^/calculators/refinance-calculator/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^/calculators/?$",
-			"dest": "_render"
-		},
-		{
 			"src": "^/contactus/?$",
 			"dest": "_render"
 		},
@@ -60,67 +40,7 @@
 			"dest": "_render"
 		},
 		{
-			"src": "^/legal/disclosures/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^/legal/privacy/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^/legal/terms-of-use/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^/loan-options/construction-loan/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^/loan-options/conventional-loan/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^/loan-options/fha-loan/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^/loan-options/first-time-loan/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^/loan-options/investment-loan/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^/loan-options/jumbo-loan/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^/loan-options/refinance-loan/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^/loan-options/usda-loan/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^/loan-options/va-loan/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^/loan-options/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^/rates/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^/refinance/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^/$",
+			"src": "^/form/?$",
 			"dest": "_render"
 		},
 		{

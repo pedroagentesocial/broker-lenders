@@ -1,0 +1,111 @@
+{
+  "title": "Para Realtors - Broker Lenders",
+  "hero": {
+    "eyebrow": "Para Realtors",
+    "headline": "Cierra Mas Deals En Menos Tiempo",
+    "subheadline": "Sin Perseguir Leads Manualmente",
+    "description": "Combinamos lending rapido con un sistema automatizado de seguimiento para convertir mas leads en citas y mas citas en cierres.",
+    "primaryCta": "Agenda Una Demo De 15 Minutos",
+    "secondaryCta": "Llamar Ahora"
+  },
+  "problem": {
+    "title": "Por Que Se Pierden Deals",
+    "intro": "Muchos agentes hacen un gran trabajo, pero el proceso se rompe en momentos clave.",
+    "items": [
+      "Los leads se enfrien por falta de seguimiento constante",
+      "Las respuestas manuales retrasan el primer contacto",
+      "Los procesos desorganizados esconden oportunidades",
+      "Lenders lentos frenan las transacciones"
+    ],
+    "result": "Resultado: se pierden deals sin darse cuenta."
+  },
+  "solution": {
+    "title": "Nuestro Sistema De Dos Partes",
+    "lending": {
+      "title": "Lending Rapido Y Confiable",
+      "items": [
+        "Pre-aprobaciones agiles",
+        "Cierres en aproximadamente 14 dias",
+        "Programas flexibles, incluyendo perfiles de credito bajo",
+        "Gestion completa del proceso de prestamo"
+      ]
+    },
+    "crm": {
+      "title": "CRM Agente Social Automatizado",
+      "items": [
+        "Seguimiento automatico por SMS, email y redes sociales",
+        "Respuesta inmediata a nuevos leads",
+        "Calendario integrado para agendar citas",
+        "Pipeline para organizar cada oportunidad",
+        "Campanas listas para real estate"
+      ]
+    }
+  },
+  "differentiator": {
+    "title": "No Somos Solo Un Lender",
+    "description": "La mayoria de lenders solo ayuda con el prestamo. Nosotros ayudamos con el prestamo y con el sistema para generar y cerrar mas deals."
+  },
+  "offers": {
+    "title": "Elige El Plan Que Mejor Se Ajusta",
+    "partner": {
+      "name": "Plan Partner",
+      "price": "Sin mensualidad",
+      "items": [
+        "CRM sin costo mensual",
+        "Pagas solo consumo de SMS/email",
+        "Trabajas con nosotros como lender preferido"
+      ]
+    },
+    "pro": {
+      "name": "Plan Profesional",
+      "price": "$97 / mes",
+      "items": [
+        "CRM completo listo para usar",
+        "Automatizaciones incluidas",
+        "Acceso a sesiones grupales de soporte"
+      ]
+    },
+    "advanced": {
+      "name": "Plan Avanzado",
+      "price": "$300 / mes",
+      "items": [
+        "Todo lo del Plan Profesional",
+        "Soporte personalizado 1:1 semanal",
+        "Configuracion hecha por nosotros y automatizaciones avanzadas con IA"
+      ]
+    }
+  },
+  "results": {
+    "title": "Resultados Esperados",
+    "items": [
+      "Responder leads en segundos",
+      "Reducir perdidas por falta de seguimiento",
+      "Aumentar citas agendadas",
+      "Cerrar mas deals en menos tiempo"
+    ]
+  },
+  "callGuide": {
+    "title": "Guia Simple Para Llamadas",
+    "hook": "1. Hook: Ayudamos a agentes a cerrar mas deals combinando lending rapido con un sistema automatizado.",
+    "problem": "2. Problema: Muchos agentes pierden leads por seguimiento tardio o procesos lentos.",
+    "solution": "3. Solucion: Lo resolvemos con pre-aprobaciones rapidas y automatizacion en CRM.",
+    "offer": "4. Oferta: Varios agentes lo usan sin pagar mensualidad al hacer partner con nosotros.",
+    "close": "5. Cierre: Lo mejor es verlo en 15 minutos. Te queda mejor hoy o manana?"
+  },
+  "phrases": {
+    "title": "Frases Naturales Para Tu Equipo",
+    "items": [
+      "Esto no es solo un CRM.",
+      "Esto te ayuda a no perder oportunidades.",
+      "Es basicamente un sistema que trabaja por ti.",
+      "Muchos agentes no se dan cuenta de cuanto estan dejando en la mesa."
+    ]
+  },
+  "finalCta": {
+    "title": "Mira El Sistema En Accion",
+    "description": "En 15 minutos te mostramos como funciona, como aplicarlo a tu negocio y como empezar sin complicaciones.",
+    "primaryCta": "Agendar Mi Demo",
+    "secondaryCta": "Agendar Llamada",
+    "positioning": "No somos solo lenders. Somos el sistema que te ayuda a cerrar mas deals."
+  }
+}

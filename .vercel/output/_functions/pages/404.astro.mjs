@@ -1,5 +1,6 @@
-import { e as createComponent, k as renderComponent, r as renderTemplate, m as maybeRenderHead } from '../chunks/astro/server_DtYm6sr6.mjs';
-import { $ as $$Layout } from '../chunks/Layout_CrnZoUeJ.mjs';
+import { e as createComponent, k as renderComponent, r as renderTemplate, m as maybeRenderHead } from '../chunks/astro/server_DeoLMx00.mjs';
+import 'piccolore';
+import { $ as $$Layout } from '../chunks/Layout_Dcc3YIuw.mjs';
 export { renderers } from '../renderers.mjs';
 
 const $$404 = createComponent(($$result, $$props, $$slots) => {
@@ -10,9 +11,9 @@ Go to Home
 </a> <a href="/loan-options" class="bg-gray-200 text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-colors">
 View Loan Options
 </a> </div> <!-- Helpful Links --> <div class="mt-12 pt-8 border-t border-gray-300"> <p class="text-gray-600 mb-4">Looking for something specific? Try these popular pages:</p> <div class="flex flex-wrap justify-center gap-4"> <a href="/buy" class="text-gray-700 hover:text-gray-900 underline">Buy a Home</a> <a href="/refinance" class="text-gray-700 hover:text-gray-900 underline">Refinance</a> <a href="/rates" class="text-gray-700 hover:text-gray-900 underline">Current Rates</a> <a href="/calculators" class="text-gray-700 hover:text-gray-900 underline">Calculators</a> </div> </div> </div> </div> </section> ` })}`;
-}, "/Users/pamplona/Documents/trae_projects/broker-lenders/src/pages/404.astro", void 0);
+}, "C:/Users/Admin/Documents/trae/broker-lenders/broker-lenders/src/pages/404.astro", void 0);
 
-const $$file = "/Users/pamplona/Documents/trae_projects/broker-lenders/src/pages/404.astro";
+const $$file = "C:/Users/Admin/Documents/trae/broker-lenders/broker-lenders/src/pages/404.astro";
 const $$url = "/404";
 
 const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({

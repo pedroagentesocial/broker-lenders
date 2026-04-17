@@ -1,0 +1,111 @@
+{
+  "title": "For Realtors - Broker Lenders",
+  "hero": {
+    "eyebrow": "For Realtors",
+    "headline": "Close More Deals In Less Time",
+    "subheadline": "Without Chasing Leads Manually",
+    "description": "We combine fast lending with an automated follow-up system so you can convert more leads into appointments and more appointments into closings.",
+    "primaryCta": "Book a 15-Minute Demo",
+    "secondaryCta": "Call Us Now"
+  },
+  "problem": {
+    "title": "Why Agents Lose Deals",
+    "intro": "Most agents are doing great work, but the process breaks in key moments.",
+    "items": [
+      "Leads go cold without consistent follow-up",
+      "Manual responses delay first contact",
+      "Disorganized workflows hide opportunities",
+      "Slow lending partners stall transactions"
+    ],
+    "result": "Result: deals are lost without noticing."
+  },
+  "solution": {
+    "title": "Our Two-Part System",
+    "lending": {
+      "title": "Fast, Reliable Lending",
+      "items": [
+        "Quick pre-approvals",
+        "Closings in about 14 days",
+        "Flexible programs, including lower credit profiles",
+        "End-to-end loan process management"
+      ]
+    },
+    "crm": {
+      "title": "Automated Agent Social CRM",
+      "items": [
+        "Automated follow-up by SMS, email, and social",
+        "Immediate response to new leads",
+        "Integrated calendar for easy booking",
+        "Pipeline to organize every opportunity",
+        "Done-for-you real estate campaigns"
+      ]
+    }
+  },
+  "differentiator": {
+    "title": "We Are Not Just A Lender",
+    "description": "Most lenders help with the mortgage. We help with the mortgage and the system that creates and closes more deals."
+  },
+  "offers": {
+    "title": "Choose The Plan That Fits Your Business",
+    "partner": {
+      "name": "Partner Plan",
+      "price": "No monthly fee",
+      "items": [
+        "CRM with no monthly subscription",
+        "Pay only usage for SMS/email",
+        "Work with us as your preferred lender"
+      ]
+    },
+    "pro": {
+      "name": "Professional Plan",
+      "price": "$97 / month",
+      "items": [
+        "Complete CRM ready to use",
+        "Built-in automations",
+        "Access to group support sessions"
+      ]
+    },
+    "advanced": {
+      "name": "Advanced Plan",
+      "price": "$300 / month",
+      "items": [
+        "Everything in Professional",
+        "Weekly 1:1 personalized support",
+        "Done-for-you setup and advanced automation with AI"
+      ]
+    }
+  },
+  "results": {
+    "title": "What You Can Expect",
+    "items": [
+      "Reply to leads in seconds",
+      "Reduce losses from poor follow-up",
+      "Increase booked appointments",
+      "Close more deals in less time"
+    ]
+  },
+  "callGuide": {
+    "title": "Simple Call Flow For Your Team",
+    "hook": "1. Hook: We help agents close more deals by combining fast lending with an automated system.",
+    "problem": "2. Problem: Many agents lose leads because follow-up is late or the process is slow.",
+    "solution": "3. Solution: We solve that with quick pre-approvals plus CRM automation.",
+    "offer": "4. Offer: Several agents use this with no monthly fee by partnering with us.",
+    "close": "5. Close: The best next step is a 15-minute demo. Is today or tomorrow better?"
+  },
+  "phrases": {
+    "title": "Natural Phrases Your Agents Can Use",
+    "items": [
+      "This is not just a CRM.",
+      "This helps you stop losing opportunities.",
+      "It is basically a system that works for you.",
+      "Most agents do not realize how much they leave on the table."
+    ]
+  },
+  "finalCta": {
+    "title": "See It In Action",
+    "description": "In 15 minutes, we show how it works, how to apply it to your business, and how to start without complexity.",
+    "primaryCta": "Schedule My Demo",
+    "secondaryCta": "Book A Call",
+    "positioning": "We are not only lenders. We are the system that helps you close more deals."
+  }
+}
