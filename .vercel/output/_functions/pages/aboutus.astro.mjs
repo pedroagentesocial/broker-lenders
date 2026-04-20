@@ -1,9 +1,9 @@
-import { e as createComponent, k as renderComponent, r as renderTemplate, m as maybeRenderHead } from '../chunks/astro/server_DeoLMx00.mjs';
+import { e as createComponent, k as renderComponent, r as renderTemplate, m as maybeRenderHead } from '../chunks/astro/server_BIz3OSIC.mjs';
 import 'piccolore';
-import { $ as $$Layout } from '../chunks/Layout_Dcc3YIuw.mjs';
-import { $ as $$Contact } from '../chunks/Contact_BPaMNxuA.mjs';
-import { $ as $$TestimonialsSection } from '../chunks/TestimonialsSection_CTLyn-QP.mjs';
-import { $ as $$ImportantLegal } from '../chunks/ImportantLegal_rqgcDh7X.mjs';
+import { $ as $$Layout } from '../chunks/Layout_DUGkeqT2.mjs';
+import { $ as $$Contact } from '../chunks/Contact_hrPps3m4.mjs';
+import { $ as $$TestimonialsSection } from '../chunks/TestimonialsSection_Bo8nABTU.mjs';
+import { $ as $$ImportantLegal } from '../chunks/ImportantLegal_jx-X73rv.mjs';
 export { renderers } from '../renderers.mjs';
 
 const $$Aboutus = createComponent(($$result, $$props, $$slots) => {

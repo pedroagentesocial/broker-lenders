@@ -3,6 +3,9 @@ import Layout from '../layouts/Layout.astro';
 import Contact from '../components/Contact.astro';
 import WaysHelp from '../components/WaysHelp.astro';
 import ImportantLegal from '../components/ImportantLegal.astro';
+const recaptchaSiteKey =
+  import.meta.env.PUBLIC_GOOGLE_RECAPTCHA_SITE_KEY ??
+  '6Ldmv7wsAAAAAIIhaZeMzTcSWxtjP8EblO7izC9Z';
 ---
 
 
@@ -116,7 +119,7 @@ import ImportantLegal from '../components/ImportantLegal.astro';
       </div>
 
       <div class="bg-gray-50 rounded-2xl p-8">
-        <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-webhook="https://hook.us1.make.com/yd95nje3piy9cyvq216re54x34uuh2ok" data-formsubmit-email="support@agentesocial.com">
+        <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-recaptcha-sitekey={recaptchaSiteKey}>
           <input type="hidden" name="form-name" value="contact" />
           <p class="hidden">
             <label>Don't fill this out if you're human: <input name="bot-field" /></label>
@@ -194,6 +197,8 @@ import ImportantLegal from '../components/ImportantLegal.astro';
             </label>
           </div>
 
+          <div id="recaptchaContainer" class="mb-6 hidden justify-center" aria-hidden="true"></div>
+
           <div class="text-center flex flex-col items-center relative" id="submitContainer">
             <div id="submitHint" class="hidden absolute -top-12 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-xs px-3 py-2 rounded-lg shadow-lg">
               <span data-i18n="form.validationConsent"></span>
@@ -205,13 +210,13 @@ import ImportantLegal from '../components/ImportantLegal.astro';
               </svg>
               <span data-i18n="form.submit">Send Message</span>
             </button>
-            <div id="submitSuccess" class="hidden inline-flex items-center justify-center bg-green-100 text-green-800 px-4 py-3 rounded-[48px] font-semibold" style="display:none" aria-hidden="true">
+            <div id="submitSuccess" class="hidden fixed right-6 top-6 z-[100] inline-flex max-w-sm items-center justify-center rounded-2xl border border-green-200 bg-green-100 px-4 py-3 font-semibold text-green-800 shadow-lg" style="display:none" aria-hidden="true">
               <svg class="w-5 h-5 mr-2 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
               </svg>
               <span data-i18n="submit.success">Data submitted successfully</span>
             </div>
-            <div id="submitError" class="hidden inline-flex items-center justify-center bg-red-100 text-red-800 px-4 py-3 rounded-[48px] font-semibold" style="display:none" aria-hidden="true">
+            <div id="submitError" class="hidden fixed right-6 top-6 z-[100] inline-flex max-w-sm items-center justify-center rounded-2xl border border-red-200 bg-red-100 px-4 py-3 font-semibold text-red-800 shadow-lg" style="display:none" aria-hidden="true">
               <svg class="w-5 h-5 mr-2 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
               </svg>
@@ -233,7 +238,22 @@ import ImportantLegal from '../components/ImportantLegal.astro';
   <ImportantLegal />
 </Layout>
 
+<script src="https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad&render=explicit" async defer></script>
 <script>
+  window.__recaptchaWidgetId = null;
+  window.onRecaptchaLoad = () => {
+    window.dispatchEvent(new Event('recaptcha-ready'));
+  };
+  window.onRecaptchaSuccess = () => {
+    window.dispatchEvent(new Event('recaptcha-updated'));
+  };
+  window.onRecaptchaExpired = () => {
+    window.dispatchEvent(new Event('recaptcha-updated'));
+  };
+  window.onRecaptchaError = () => {
+    window.dispatchEvent(new Event('recaptcha-updated'));
+  };
+
   document.addEventListener('DOMContentLoaded', () => {
     // --- i18n dictionaries (inline, no fetch) ---
     const translations = {
@@ -275,6 +295,7 @@ import ImportantLegal from '../components/ImportantLegal.astro';
           placeholders: { message: 'Please tell us how we can help you...' },
           submit: 'Send Message',
           validationConsent: 'Please complete required fields and accept the consent checkbox.',
+          validationCaptcha: 'Complete the CAPTCHA to continue.',
           consentText: 'I confirm that I have read the <a href="/legal/privacy" class="text-black underline hover:text-red-600">Privacy Policy</a> and agree to the <a href="/legal/terms-of-use" class="text-black underline hover:text-red-600">Terms &amp; Conditions</a> provided by the company. By providing my phone number, I agree to receive SMS notifications and promotional messages from Broker Lenders LLC. Message &amp; data rates may apply.'
         },
         submit: { success: 'Data submitted successfully', error: 'Submission failed. Please try again.' }
@@ -317,6 +338,7 @@ import ImportantLegal from '../components/ImportantLegal.astro';
           placeholders: { message: 'Cuéntanos cómo podemos ayudarte...' },
           submit: 'Enviar mensaje',
           validationConsent: 'Completa los campos requeridos y marca la casilla de consentimiento.',
+          validationCaptcha: 'Completa el CAPTCHA para continuar.',
           consentText: 'Confirmo que he leído la <a href="/legal/privacy" class="text-black underline hover:text-red-600">Política de Privacidad</a> y acepto los <a href="/legal/terms-of-use" class="text-black underline hover:text-red-600">Términos y Condiciones</a> proporcionados por la empresa. Al proporcionar mi número de teléfono, acepto recibir notificaciones SMS y mensajes promocionales de Broker Lenders LLC. Pueden aplicarse tarifas de mensajes y datos.'
         },
         submit: { success: 'Datos enviados correctamente', error: 'Error al enviar. Intenta nuevamente.' }
@@ -393,7 +415,6 @@ import ImportantLegal from '../components/ImportantLegal.astro';
     window.addEventListener('storage', (ev) => {
       if (ev.key === 'lang' && ev.newValue) applyTranslations(ev.newValue);
     });
-
     const form = document.getElementById('contactForm');
     const submitBtn = document.getElementById('submitBtn');
     const successEl = document.getElementById('submitSuccess');
@@ -402,15 +423,66 @@ import ImportantLegal from '../components/ImportantLegal.astro';
     const submitHint = document.getElementById('submitHint');
     const heroBtn = document.getElementById('heroSendBtn');
     const consentInput = form?.querySelector('input[name="policyConsent"]');
+    const recaptchaContainer = document.getElementById('recaptchaContainer');
+    const recaptchaSiteKey = form?.dataset.recaptchaSitekey || '';
+
+    function initRecaptchaWidget() {
+      if (!(form instanceof HTMLFormElement)) return;
+      if (!recaptchaSiteKey) return;
+      if (!window.grecaptcha) return;
+      if (window.__recaptchaWidgetId !== null) return;
+      window.__recaptchaWidgetId = window.grecaptcha.render('recaptchaContainer', {
+        sitekey: recaptchaSiteKey,
+        size: 'normal',
+        callback: 'onRecaptchaSuccess',
+        'expired-callback': 'onRecaptchaExpired',
+        'error-callback': 'onRecaptchaError'
+      });
+    }
+
+    function hasRecaptchaToken() {
+      if (!(form instanceof HTMLFormElement)) return false;
+      const tokenInput = form.querySelector('textarea[name="g-recaptcha-response"]');
+      return tokenInput instanceof HTMLTextAreaElement && tokenInput.value.trim().length > 0;
+    }
+
+    function toggleRecaptchaVisibility(eligible) {
+      if (!(recaptchaContainer instanceof HTMLElement)) return;
+      if (eligible) {
+        recaptchaContainer.classList.remove('hidden');
+        recaptchaContainer.classList.add('flex');
+        recaptchaContainer.setAttribute('aria-hidden', 'false');
+      } else {
+        recaptchaContainer.classList.add('hidden');
+        recaptchaContainer.classList.remove('flex');
+        recaptchaContainer.setAttribute('aria-hidden', 'true');
+        try {
+          if (window.grecaptcha && window.__recaptchaWidgetId !== null) {
+            window.grecaptcha.reset(window.__recaptchaWidgetId);
+          }
+        } catch {}
+      }
+    }
 
     function updateSubmitState() {
       if (!(form instanceof HTMLFormElement)) return;
       if (!(submitBtn instanceof HTMLButtonElement)) return;
       const consentChecked = consentInput instanceof HTMLInputElement && consentInput.checked;
-      const isValid = form.checkValidity() && consentChecked;
+      const eligible = form.checkValidity() && consentChecked;
+      toggleRecaptchaVisibility(eligible);
+      const isValid = eligible && hasRecaptchaToken();
       submitBtn.disabled = !isValid;
       submitBtn.setAttribute('aria-disabled', String(!isValid));
     }
+
+    window.addEventListener('recaptcha-ready', () => {
+      initRecaptchaWidget();
+      updateSubmitState();
+    });
+    window.addEventListener('recaptcha-updated', () => {
+      submitHint?.classList.add('hidden');
+      updateSubmitState();
+    });
 
     // Animations helpers
     function showAnimated(el) {
@@ -480,25 +552,19 @@ import ImportantLegal from '../components/ImportantLegal.astro';
       }
     })();
 
-    async function sendWebhook(url, payload) {
-      if (!url) return;
-      await fetch(url, {
+    async function submitToBackend(formData) {
+      const response = await fetch('/api/contact-submit', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
+        body: formData
       });
-    }
-
-    async function sendFormSubmit(email, payload) {
-      if (!email) return;
-      await fetch(`https://formsubmit.co/ajax/${encodeURIComponent(email)}`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify(payload)
-      });
+      if (!response.ok) {
+        let message = 'Submission failed';
+        try {
+          const data = await response.json();
+          if (data?.error) message = data.error;
+        } catch {}
+        throw new Error(message);
+      }
     }
 
     // Hero button: open mailto including UTM params and scroll to form
@@ -537,6 +603,7 @@ import ImportantLegal from '../components/ImportantLegal.astro';
       e.preventDefault();
       if (!(form instanceof HTMLFormElement)) return;
       const consentChecked = consentInput instanceof HTMLInputElement && consentInput.checked;
+      const captchaOk = hasRecaptchaToken();
       const lang = (localStorage.getItem('lang') || document.documentElement.getAttribute('lang') || 'en');
       const dict = translations[lang] || translations.en;
       if (!form.checkValidity() || !consentChecked) {
@@ -544,6 +611,14 @@ import ImportantLegal from '../components/ImportantLegal.astro';
         if (submitHint) {
           const hintSpan = submitHint.querySelector('span');
           if (hintSpan) hintSpan.innerHTML = dict.form.validationConsent;
+          submitHint.classList.remove('hidden');
+        }
+        return;
+      }
+      if (!captchaOk) {
+        if (submitHint) {
+          const hintSpan = submitHint.querySelector('span');
+          if (hintSpan) hintSpan.innerHTML = dict.form.validationCaptcha;
           submitHint.classList.remove('hidden');
         }
         return;
@@ -560,24 +635,14 @@ import ImportantLegal from '../components/ImportantLegal.astro';
       if (errorEl) errorEl.style.display = 'none';
       if (successEl) successEl.style.display = 'none';
 
-      // Recolectar datos del formulario
-      const fd = new FormData(form);
       // Timestamp del envío (ISO)
       const tsInput = form.querySelector('input[name="submit_timestamp"]');
       if (tsInput) tsInput.value = new Date().toISOString();
-      // Reconstruir con timestamp
-      const fdWithTs = new FormData(form);
-      const payload = {};
-      fdWithTs.forEach((value, key) => { payload[key] = value; });
 
-      const webhookUrl = form.dataset.webhook || '';
-      const formSubmitEmail = form.dataset.formsubmitEmail || '';
+      const fdWithTs = new FormData(form);
 
       try {
-        await Promise.all([
-          sendWebhook(webhookUrl, payload),
-          sendFormSubmit(formSubmitEmail, payload)
-        ]);
+        await submitToBackend(fdWithTs);
         // Mostrar mensaje éxito con animación (texto ya controlado por i18n)
         // Ocultar mensaje de error si estuviera visible
         errorEl?.classList.add('hidden');
@@ -588,6 +653,17 @@ import ImportantLegal from '../components/ImportantLegal.astro';
           // Ocultar éxito
           successEl?.classList.add('hidden');
           if (successEl) successEl.style.display = 'none';
+          try {
+            if (window.grecaptcha && window.__recaptchaWidgetId !== null) {
+              window.grecaptcha.reset(window.__recaptchaWidgetId);
+            }
+          } catch {}
+          if (recaptchaContainer instanceof HTMLElement) {
+            recaptchaContainer.classList.add('hidden');
+            recaptchaContainer.classList.remove('flex');
+            recaptchaContainer.setAttribute('aria-hidden', 'true');
+          }
+          window.dispatchEvent(new Event('recaptcha-updated'));
           // Reaparecer botón con animación
           submitBtn?.classList.remove('hidden');
           submitBtn?.classList.add('fade-in');
@@ -599,12 +675,26 @@ import ImportantLegal from '../components/ImportantLegal.astro';
         }, 3500);
       } catch (err) {
         console.warn('Error enviando el formulario:', err);
+        const errorMessage = err instanceof Error && err.message ? err.message : dict.submit.error;
+        const errorTextEl = errorEl?.querySelector('span[data-i18n="submit.error"]');
+        if (errorTextEl) errorTextEl.textContent = errorMessage;
         // Ocultar mensaje de éxito si estuviera visible
         successEl?.classList.add('hidden');
         if (successEl) successEl.style.display = 'none';
         showAnimated(errorEl);
         // Reaparecer botón y auto-ocultar error después de unos segundos
         setTimeout(() => {
+          try {
+            if (window.grecaptcha && window.__recaptchaWidgetId !== null) {
+              window.grecaptcha.reset(window.__recaptchaWidgetId);
+            }
+          } catch {}
+          if (recaptchaContainer instanceof HTMLElement) {
+            recaptchaContainer.classList.add('hidden');
+            recaptchaContainer.classList.remove('flex');
+            recaptchaContainer.setAttribute('aria-hidden', 'true');
+          }
+          window.dispatchEvent(new Event('recaptcha-updated'));
           submitBtn?.classList.remove('hidden');
           submitBtn?.classList.add('fade-in');
           submitBtn?.classList.add('slide-in-up');
@@ -626,6 +716,7 @@ import ImportantLegal from '../components/ImportantLegal.astro';
       submitHint?.classList.add('hidden');
       updateSubmitState();
     });
+    initRecaptchaWidget();
     updateSubmitState();
   });
 </script>
