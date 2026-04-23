@@ -3,6 +3,9 @@ import Layout from '../layouts/Layout.astro';
 import Contact from '../components/Contact.astro';
 import WaysHelp from '../components/WaysHelp.astro';
 import ImportantLegal from '../components/ImportantLegal.astro';
+
+export const prerender = true;
+
 const recaptchaSiteKey =
   import.meta.env.PUBLIC_GOOGLE_RECAPTCHA_SITE_KEY ??
   '6Ldmv7wsAAAAAIIhaZeMzTcSWxtjP8EblO7izC9Z';
