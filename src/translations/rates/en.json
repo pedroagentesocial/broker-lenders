@@ -28,9 +28,6 @@
       "fixed30": {
         "title": "30-year Fixed"
       },
-      "fixed20": {
-        "title": "20-year Fixed"
-      },
       "fha30": {
         "title": "30-year FHA"
       },
@@ -39,13 +36,14 @@
       },
       "jumboFixed30": {
         "title": "30-year Jumbo Fixed"
+      },
+      "usda30": {
+        "title": "30-year USDA"
       }
     },
     "labels": {
       "rate": "Rate",
-      "monthlyPayment": "Monthly payment",
-      "apr": "APR",
-      "points": "Points"
+      "monthlyPayment": "Monthly payment"
     },
     "cta": "Explore this rate",
     "personalized": {
@@ -57,7 +55,9 @@
     "footer": {
       "legal": "View legal disclosures",
       "timestampPrefix": "Rates are current as of"
-    }
+    },
+    "sourceNote": "National average of the ICE Mortgage Technology (Optimal Blue) OBMMI index, published by FRED (Federal Reserve Bank of St. Louis). The same figure is shown for every state: the index has no state-level breakdown. Not a quote — your rate depends on loan amount, LTV, term and credit profile.",
+    "sourceLabel": "Source:"
   },
   "modal": {
     "title": "Legal Disclosures",

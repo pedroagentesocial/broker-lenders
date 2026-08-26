@@ -25,5 +25,9 @@
   "last_30_days": "Últimos 30 días",
   "building_history": "Generando historial",
   "chart_source_note": "Las gráficas muestran las tasas diarias publicadas en este sitio.",
-  "chart_disclosure": "Las gráficas de tendencia muestran las tasas diarias publicadas en este sitio durante los últimos 30 días. Son estimaciones históricas con fines ilustrativos y no constituyen una cotización, un índice ni un pronóstico."
+  "chart_disclosure": "Las gráficas de tendencia muestran las tasas diarias publicadas en este sitio durante los últimos 30 días. Son estimaciones históricas con fines ilustrativos y no constituyen una cotización, un índice ni un pronóstico.",
+  "30_year_usda": "30 años USDA",
+  "index_average": "Promedio del índice",
+  "source_label": "Fuente:",
+  "national_average_note": "Promedio nacional. No es una cotización: tu tasa depende del importe, el LTV, el plazo y tu perfil crediticio."
 }

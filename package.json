@@ -12,7 +12,7 @@
     "test-automation": "node scripts/test-automation.js",
     "setup-notifications": "node scripts/setup-notifications.js",
     "test-notifications": "node scripts/test-notifications.js",
-    "rates-history": "node scripts/build-rates-history.js --from-git"
+    "fetch-rates": "node scripts/fetch-rates.js"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.2",

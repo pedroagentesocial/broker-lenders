@@ -18,7 +18,7 @@ const SPARK_W = 128;
 const SPARK_H = 40;
 const SPARK_DAYS = 30;
 
-type RateValues = { rate?: string; apr?: string; points?: string };
+type RateValues = { rate?: string };
 
 const ratesData = await getRatesData();
 const history = await getRatesHistory();
@@ -27,15 +27,12 @@ const utahRates: Record<string, RateValues | undefined> = ratesData[STATE] || {}
 // Productos que se muestran en el carrusel
 const PRODUCTS = [
   { key: '30-year-fixed', i18n: '30_year_fixed', label: '30-year fixed' },
-  { key: '20-year-fixed', i18n: '20_year_fixed', label: '20-year fixed' },
+  { key: '30-year-usda', i18n: '30_year_usda', label: '30-year USDA' },
   { key: '15-year-fixed', i18n: '15_year_fixed', label: '15-year fixed' },
   { key: '30-year-fha', i18n: '30_year_fha', label: '30-year FHA' },
   { key: '30-year-va', i18n: '30_year_va', label: '30-year VA' },
   { key: '30-year-jumbo', i18n: '30_year_jumbo', label: '30-year Jumbo' }
 ];
-
-// VA todavía puede no venir en snapshots antiguos del JSON
-const VA_FALLBACK = { rate: '6.375%', apr: '6.590%', points: '1.25' };
 
 const asPercent = (value: string | number | null | undefined) => {
   if (value === undefined || value === null) return '—';
@@ -51,7 +48,7 @@ const TREND = {
 };
 
 const cards = PRODUCTS.map((product) => {
-  const values = utahRates[product.key] || (product.key === '30-year-va' ? VA_FALLBACK : null);
+  const values = utahRates[product.key];
   if (!values) return null;
 
   const series = getSeries(history, STATE, product.key, SPARK_DAYS);
@@ -64,8 +61,6 @@ const cards = PRODUCTS.map((product) => {
   return {
     ...product,
     rate: asPercent(values.rate),
-    apr: asPercent(values.apr),
-    points: values.points ?? '—',
     change,
     stats,
     direction,
@@ -167,16 +162,10 @@ const hasHistory = history.length > 0;
               </div>
             )}
 
-            <!-- APR / Points -->
+            <!-- Periodo de la tendencia -->
             <div class="rate-footer">
-              <div>
-                <div class="rate-meta-label" data-i18n="apr">APR</div>
-                <div class="rate-meta-value">{card.apr}</div>
-              </div>
-              <div class="text-right">
-                <div class="rate-meta-label" data-i18n="points">Points</div>
-                <div class="rate-meta-value">{card.points}</div>
-              </div>
+              <span class="rate-meta-label" data-i18n="index_average">Index average</span>
+              <span class="rate-meta-label">{card.daysTracked} d</span>
             </div>
           </article>
         ))}
@@ -186,8 +175,12 @@ const hasHistory = history.length > 0;
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6">
       <div class="flex justify-between items-center text-xs gap-4">
         <p class="text-gray-500">
-          *<span data-i18n="compared_week_over_week">Compared week over week.</span> <span data-i18n="rates_current_as_of">Rates are current as of</span> <span id="rates-date" data-ts={ratesData.timestamp}></span>.
-          {hasHistory && <span class="hidden sm:inline"> <span data-i18n="chart_source_note">Charts show this site’s published daily rates.</span></span>}
+          <span data-i18n="rates_current_as_of">Rates are current as of</span> <strong>{ratesData.asOf}</strong>.
+          <span data-i18n="source_label">Source:</span>
+          <a href={ratesData.source.url} target="_blank" rel="noopener noreferrer" class="underline hover:text-gray-700">{ratesData.source.name}</a>
+          <span class="hidden sm:inline"> · {ratesData.source.via}</span>
+          <br />
+          <span data-i18n="national_average_note">National average. Not a quote: your rate depends on loan amount, LTV, term and credit profile.</span>
         </p>
         <button id="openModal" class="text-gray-600 hover:text-gray-800 underline cursor-pointer whitespace-nowrap" data-i18n="view_legal_disclosures">View legal disclosures</button>
       </div>

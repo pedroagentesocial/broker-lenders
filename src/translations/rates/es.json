@@ -28,9 +28,6 @@
       "fixed30": {
         "title": "30 años fija"
       },
-      "fixed20": {
-        "title": "20 años fija"
-      },
       "fha30": {
         "title": "30 años FHA"
       },
@@ -39,13 +36,14 @@
       },
       "jumboFixed30": {
         "title": "30 años Jumbo fija"
+      },
+      "usda30": {
+        "title": "30 años USDA"
       }
     },
     "labels": {
       "rate": "Tasa",
-      "monthlyPayment": "Pago mensual",
-      "apr": "APR",
-      "points": "Puntos"
+      "monthlyPayment": "Pago mensual"
     },
     "cta": "Explorar esta tasa",
     "personalized": {
@@ -57,7 +55,9 @@
     "footer": {
       "legal": "Ver divulgaciones legales",
       "timestampPrefix": "Las tasas están actualizadas al"
-    }
+    },
+    "sourceNote": "Promedio nacional del índice OBMMI de ICE Mortgage Technology (Optimal Blue), publicado por FRED (Reserva Federal de St. Louis). Se muestra la misma cifra para todos los estados: el índice no tiene desglose estatal. No es una cotización — tu tasa depende del importe, el LTV, el plazo y tu perfil crediticio.",
+    "sourceLabel": "Fuente:"
   },
   "modal": {
     "title": "Divulgaciones legales",

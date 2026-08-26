@@ -102,6 +102,19 @@ const dict = enRates;
         </div>
         
         <!-- Texto explicativo -->
+        <p id="rates-grid-source" class="text-xs text-gray-600 text-center mb-3 max-w-3xl mx-auto">
+          <span id="rates-grid-source-label">{dict.grid.sourceLabel}</span>
+          <a
+            href={ratesData.source.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="underline hover:text-gray-800"
+          >{ratesData.source.name}</a>
+          · {ratesData.source.via} · <strong>{ratesData.asOf}</strong>
+          <br />
+          <span id="rates-grid-source-note">{dict.grid.sourceNote}</span>
+        </p>
+
         <p id="rates-grid-disclaimer" class="text-xs text-gray-600 text-center mb-8">
           {dict.grid.disclaimer}
         </p>
@@ -117,82 +130,44 @@ const dict = enRates;
           
           <!-- Grid 2x2 -->
           <div class="grid grid-cols-2 gap-4 mb-6">
-            <!-- Columna Izquierda -->
-            <div class="space-y-2">
-              <!-- Rate -->
-              <div>
-                <div id="rates-label-fixed30-rate" class="text-sm text-gray-600 mb-0.5">{dict.grid.labels.rate}</div>
-                <div id="rate-30-fixed" class="text-lg font-bold text-gray-900">6.750%</div>
-              </div>
-              <!-- Monthly payment -->
-              <div>
-                <div id="rates-label-fixed30-monthly" class="text-sm text-gray-600 mb-0.5">{dict.grid.labels.monthlyPayment}</div>
-                <div id="payment-30-fixed" class="text-lg font-bold text-gray-900">$2,847</div>
-              </div>
+            <div>
+              <div id="rates-label-fixed30-rate" class="text-sm text-gray-600 mb-0.5">{dict.grid.labels.rate}</div>
+              <div id="rate-30-fixed" class="text-lg font-bold text-gray-900">—</div>
             </div>
-            
-            <!-- Columna Derecha -->
-            <div class="space-y-2">
-              <!-- APR -->
-              <div>
-                <div id="rates-label-fixed30-apr" class="text-sm text-gray-600 mb-0.5">{dict.grid.labels.apr}</div>
-                <div id="apr-30-fixed" class="text-lg font-bold text-gray-900">6.890%</div>
-              </div>
-              <!-- Points -->
-              <div>
-                <div id="rates-label-fixed30-points" class="text-sm text-gray-600 mb-0.5">{dict.grid.labels.points}</div>
-                <div id="points-30-fixed" class="text-lg font-bold text-gray-900">1.75 ($6,125)</div>
-              </div>
+            <div>
+              <div id="rates-label-fixed30-monthly" class="text-sm text-gray-600 mb-0.5">{dict.grid.labels.monthlyPayment}</div>
+              <div id="payment-30-fixed" class="text-lg font-bold text-gray-900">—</div>
             </div>
           </div>
-          
+
           <!-- Botón -->
           <button id="rates-card-fixed30-cta" class="w-full bg-white border border-black text-black py-3 px-6 rounded-[48px] font-semibold hover:bg-gray-50 hover:border-gray-400 transition-colors">
             {dict.grid.cta}
           </button>
         </div>
 
-        <!-- 20-year Fixed -->
+        <!-- 30-year USDA -->
         <div class="bg-white rounded-[48px] p-8 border border-gray-200">
           <!-- Título -->
-          <h3 id="rates-card-fixed20-title" class="text-xl font-bold text-gray-900 mb-4">{dict.grid.cards.fixed20.title}</h3>
+          <h3 id="rates-card-usda30-title" class="text-xl font-bold text-gray-900 mb-4">{dict.grid.cards.usda30.title}</h3>
           
           <!-- Línea separadora -->
           <hr class="border-gray-200 mb-6">
           
           <!-- Grid 2x2 -->
           <div class="grid grid-cols-2 gap-4 mb-6">
-            <!-- Columna Izquierda -->
-            <div class="space-y-2">
-              <!-- Rate -->
-              <div>
-                <div id="rates-label-fixed20-rate" class="text-sm text-gray-600 mb-0.5">{dict.grid.labels.rate}</div>
-                <div id="rate-20-fixed" class="text-lg font-bold text-gray-900">6.125%</div>
-              </div>
-              <!-- Monthly payment -->
-              <div>
-                <div id="rates-label-fixed20-monthly" class="text-sm text-gray-600 mb-0.5">{dict.grid.labels.monthlyPayment}</div>
-                <div id="payment-20-fixed" class="text-lg font-bold text-gray-900">$3,421</div>
-              </div>
+            <div>
+              <div id="rates-label-usda30-rate" class="text-sm text-gray-600 mb-0.5">{dict.grid.labels.rate}</div>
+              <div id="rate-usda" class="text-lg font-bold text-gray-900">—</div>
             </div>
-            
-            <!-- Columna Derecha -->
-            <div class="space-y-2">
-              <!-- APR -->
-              <div>
-                <div id="rates-label-fixed20-apr" class="text-sm text-gray-600 mb-0.5">{dict.grid.labels.apr}</div>
-                <div id="apr-20-fixed" class="text-lg font-bold text-gray-900">6.285%</div>
-              </div>
-              <!-- Points -->
-              <div>
-                <div id="rates-label-fixed20-points" class="text-sm text-gray-600 mb-0.5">{dict.grid.labels.points}</div>
-                <div id="points-20-fixed" class="text-lg font-bold text-gray-900">1.5 ($5,250)</div>
-              </div>
+            <div>
+              <div id="rates-label-usda30-monthly" class="text-sm text-gray-600 mb-0.5">{dict.grid.labels.monthlyPayment}</div>
+              <div id="payment-usda" class="text-lg font-bold text-gray-900">—</div>
             </div>
           </div>
-          
+
           <!-- Botón -->
-          <button id="rates-card-fixed20-cta" class="w-full bg-white border border-black text-black py-3 px-6 rounded-[48px] font-semibold hover:bg-gray-50 hover:border-gray-400 transition-colors">
+          <button id="rates-card-usda30-cta" class="w-full bg-white border border-black text-black py-3 px-6 rounded-[48px] font-semibold hover:bg-gray-50 hover:border-gray-400 transition-colors">
             {dict.grid.cta}
           </button>
         </div>
@@ -207,35 +182,16 @@ const dict = enRates;
           
           <!-- Grid 2x2 -->
           <div class="grid grid-cols-2 gap-4 mb-6">
-            <!-- Columna Izquierda -->
-            <div class="space-y-2">
-              <!-- Rate -->
-              <div>
-                <div id="rates-label-fha30-rate" class="text-sm text-gray-600 mb-0.5">{dict.grid.labels.rate}</div>
-                <div id="rate-fha" class="text-lg font-bold text-gray-900">6.500%</div>
-              </div>
-              <!-- Monthly payment -->
-              <div>
-                <div id="rates-label-fha30-monthly" class="text-sm text-gray-600 mb-0.5">{dict.grid.labels.monthlyPayment}</div>
-                <div id="payment-fha" class="text-lg font-bold text-gray-900">$2,528</div>
-              </div>
+            <div>
+              <div id="rates-label-fha30-rate" class="text-sm text-gray-600 mb-0.5">{dict.grid.labels.rate}</div>
+              <div id="rate-fha" class="text-lg font-bold text-gray-900">—</div>
             </div>
-            
-            <!-- Columna Derecha -->
-            <div class="space-y-2">
-              <!-- APR -->
-              <div>
-                <div id="rates-label-fha30-apr" class="text-sm text-gray-600 mb-0.5">{dict.grid.labels.apr}</div>
-                <div id="apr-fha" class="text-lg font-bold text-gray-900">6.720%</div>
-              </div>
-              <!-- Points -->
-              <div>
-                <div id="rates-label-fha30-points" class="text-sm text-gray-600 mb-0.5">{dict.grid.labels.points}</div>
-                <div id="points-fha" class="text-lg font-bold text-gray-900">1.25 ($4,375)</div>
-              </div>
+            <div>
+              <div id="rates-label-fha30-monthly" class="text-sm text-gray-600 mb-0.5">{dict.grid.labels.monthlyPayment}</div>
+              <div id="payment-fha" class="text-lg font-bold text-gray-900">—</div>
             </div>
           </div>
-          
+
           <!-- Botón -->
           <button id="rates-card-fha30-cta" class="w-full bg-white border border-black text-black py-3 px-6 rounded-[48px] font-semibold hover:bg-gray-50 hover:border-gray-400 transition-colors">
             {dict.grid.cta}
@@ -252,35 +208,16 @@ const dict = enRates;
           
           <!-- Grid 2x2 -->
           <div class="grid grid-cols-2 gap-4 mb-6">
-            <!-- Columna Izquierda -->
-            <div class="space-y-2">
-              <!-- Rate -->
-              <div>
-                <div id="rates-label-va30-rate" class="text-sm text-gray-600 mb-0.5">{dict.grid.labels.rate}</div>
-                <div id="rate-va" class="text-lg font-bold text-gray-900">6.375%</div>
-              </div>
-              <!-- Monthly payment -->
-              <div>
-                <div id="rates-label-va30-monthly" class="text-sm text-gray-600 mb-0.5">{dict.grid.labels.monthlyPayment}</div>
-                <div id="payment-va" class="text-lg font-bold text-gray-900">$2,490</div>
-              </div>
+            <div>
+              <div id="rates-label-va30-rate" class="text-sm text-gray-600 mb-0.5">{dict.grid.labels.rate}</div>
+              <div id="rate-va" class="text-lg font-bold text-gray-900">—</div>
             </div>
-            
-            <!-- Columna Derecha -->
-            <div class="space-y-2">
-              <!-- APR -->
-              <div>
-                <div id="rates-label-va30-apr" class="text-sm text-gray-600 mb-0.5">{dict.grid.labels.apr}</div>
-                <div id="apr-va" class="text-lg font-bold text-gray-900">6.590%</div>
-              </div>
-              <!-- Points -->
-              <div>
-                <div id="rates-label-va30-points" class="text-sm text-gray-600 mb-0.5">{dict.grid.labels.points}</div>
-                <div id="points-va" class="text-lg font-bold text-gray-900">1.0 ($3,500)</div>
-              </div>
+            <div>
+              <div id="rates-label-va30-monthly" class="text-sm text-gray-600 mb-0.5">{dict.grid.labels.monthlyPayment}</div>
+              <div id="payment-va" class="text-lg font-bold text-gray-900">—</div>
             </div>
           </div>
-          
+
           <!-- Botón -->
           <button id="rates-card-va30-cta" class="w-full bg-white border border-black text-black py-3 px-6 rounded-[48px] font-semibold hover:bg-gray-50 transition-colors">
             {dict.grid.cta}
@@ -297,35 +234,16 @@ const dict = enRates;
           
           <!-- Grid 2x2 -->
           <div class="grid grid-cols-2 gap-4 mb-6">
-            <!-- Columna Izquierda -->
-            <div class="space-y-2">
-              <!-- Rate -->
-              <div>
-                <div id="rates-label-jumboFixed30-rate" class="text-sm text-gray-600 mb-0.5">{dict.grid.labels.rate}</div>
-                <div id="rate-jumbo" class="text-lg font-bold text-gray-900">5.875%</div>
-              </div>
-              <!-- Monthly payment -->
-              <div>
-                <div id="rates-label-jumboFixed30-monthly" class="text-sm text-gray-600 mb-0.5">{dict.grid.labels.monthlyPayment}</div>
-                <div id="payment-jumbo" class="text-lg font-bold text-gray-900">$2,372</div>
-              </div>
+            <div>
+              <div id="rates-label-jumboFixed30-rate" class="text-sm text-gray-600 mb-0.5">{dict.grid.labels.rate}</div>
+              <div id="rate-jumbo" class="text-lg font-bold text-gray-900">—</div>
             </div>
-            
-            <!-- Columna Derecha -->
-            <div class="space-y-2">
-              <!-- APR -->
-              <div>
-                <div id="rates-label-jumboFixed30-apr" class="text-sm text-gray-600 mb-0.5">{dict.grid.labels.apr}</div>
-                <div id="apr-jumbo" class="text-lg font-bold text-gray-900">6.125%</div>
-              </div>
-              <!-- Points -->
-              <div>
-                <div id="rates-label-jumboFixed30-points" class="text-sm text-gray-600 mb-0.5">{dict.grid.labels.points}</div>
-                <div id="points-jumbo" class="text-lg font-bold text-gray-900">0.75 ($2,625)</div>
-              </div>
+            <div>
+              <div id="rates-label-jumboFixed30-monthly" class="text-sm text-gray-600 mb-0.5">{dict.grid.labels.monthlyPayment}</div>
+              <div id="payment-jumbo" class="text-lg font-bold text-gray-900">—</div>
             </div>
           </div>
-          
+
           <!-- Botón -->
           <button id="rates-card-jumboFixed30-cta" class="w-full bg-white border border-black text-black py-3 px-6 rounded-[48px] font-semibold hover:bg-gray-50 transition-colors">
             {dict.grid.cta}
@@ -535,9 +453,10 @@ const dict = enRates;
     
     const loanTypeMapping = {
       '30-year-fixed': '30-fixed',
-      '20-year-fixed': '20-fixed',
+      '30-year-usda': 'usda',
       '15-year-fixed': '15-fixed',
       '30-year-fha': 'fha',
+      '30-year-va': 'va',
       '30-year-jumbo': 'jumbo'
     };
     
@@ -560,20 +479,10 @@ const dict = enRates;
         
         stateRates[stateName][loanType] = {
           rate: rateData.rate,
-          apr: rateData.apr,
-          points: computePointsDisplay(rateData.points, loanAmount),
           payment: `$${monthlyPayment.toLocaleString()}`
         };
       });
       
-      // Agregar datos de VA (usando 30-year-fixed como base con ajuste)
-      const vaBaseRate = ratesData.states[stateKey]['30-year-fixed'];
-      stateRates[stateName]['va'] = {
-        rate: (parseFloat(vaBaseRate.rate) - 0.25).toFixed(3) + '%', // VA típicamente 0.25% menos
-        apr: (parseFloat(vaBaseRate.apr) - 0.25).toFixed(3) + '%',
-        points: computePointsDisplay(1.0, 350000),
-        payment: `$${calculateMonthlyPayment(350000, parseFloat(vaBaseRate.rate) - 0.25, '30-year-fixed').toLocaleString()}`
-      };
     });
     
     // Función para calcular pago mensual
@@ -606,28 +515,18 @@ const dict = enRates;
       }
       const rates = stateRates[state];
       document.getElementById('rate-30-fixed').textContent = rates['30-fixed'].rate;
-      document.getElementById('apr-30-fixed').textContent = rates['30-fixed'].apr;
-      document.getElementById('points-30-fixed').textContent = rates['30-fixed'].points;
       document.getElementById('payment-30-fixed').textContent = rates['30-fixed'].payment;
       
-      document.getElementById('rate-20-fixed').textContent = rates['20-fixed'].rate;
-      document.getElementById('apr-20-fixed').textContent = rates['20-fixed'].apr;
-      document.getElementById('points-20-fixed').textContent = rates['20-fixed'].points;
-      document.getElementById('payment-20-fixed').textContent = rates['20-fixed'].payment;
+      document.getElementById('rate-usda').textContent = rates.usda.rate;
+      document.getElementById('payment-usda').textContent = rates.usda.payment;
       
       document.getElementById('rate-fha').textContent = rates.fha.rate;
-      document.getElementById('apr-fha').textContent = rates.fha.apr;
-      document.getElementById('points-fha').textContent = rates.fha.points;
       document.getElementById('payment-fha').textContent = rates.fha.payment;
       
       document.getElementById('rate-va').textContent = rates.va.rate;
-      document.getElementById('apr-va').textContent = rates.va.apr;
-      document.getElementById('points-va').textContent = rates.va.points;
       document.getElementById('payment-va').textContent = rates.va.payment;
       
       document.getElementById('rate-jumbo').textContent = rates.jumbo.rate;
-      document.getElementById('apr-jumbo').textContent = rates.jumbo.apr;
-      document.getElementById('points-jumbo').textContent = rates.jumbo.points;
       document.getElementById('payment-jumbo').textContent = rates.jumbo.payment;
       
       if (container) {
@@ -779,36 +678,28 @@ const dict = enRates;
       t('rates-state-colorado', dict.grid.states.colorado);
       // Disclaimer
       t('rates-grid-disclaimer', dict.grid.disclaimer);
+      t('rates-grid-source-label', dict.grid.sourceLabel);
+      t('rates-grid-source-note', dict.grid.sourceNote);
       // Tarjetas
       t('rates-card-fixed30-title', dict.grid.cards.fixed30.title);
       t('rates-label-fixed30-rate', dict.grid.labels.rate);
       t('rates-label-fixed30-monthly', dict.grid.labels.monthlyPayment);
-      t('rates-label-fixed30-apr', dict.grid.labels.apr);
-      t('rates-label-fixed30-points', dict.grid.labels.points);
       t('rates-card-fixed30-cta', dict.grid.cta);
-      t('rates-card-fixed20-title', dict.grid.cards.fixed20.title);
-      t('rates-label-fixed20-rate', dict.grid.labels.rate);
-      t('rates-label-fixed20-monthly', dict.grid.labels.monthlyPayment);
-      t('rates-label-fixed20-apr', dict.grid.labels.apr);
-      t('rates-label-fixed20-points', dict.grid.labels.points);
-      t('rates-card-fixed20-cta', dict.grid.cta);
+      t('rates-card-usda30-title', dict.grid.cards.usda30.title);
+      t('rates-label-usda30-rate', dict.grid.labels.rate);
+      t('rates-label-usda30-monthly', dict.grid.labels.monthlyPayment);
+      t('rates-card-usda30-cta', dict.grid.cta);
       t('rates-card-fha30-title', dict.grid.cards.fha30.title);
       t('rates-label-fha30-rate', dict.grid.labels.rate);
       t('rates-label-fha30-monthly', dict.grid.labels.monthlyPayment);
-      t('rates-label-fha30-apr', dict.grid.labels.apr);
-      t('rates-label-fha30-points', dict.grid.labels.points);
       t('rates-card-fha30-cta', dict.grid.cta);
       t('rates-card-va30-title', dict.grid.cards.va30.title);
       t('rates-label-va30-rate', dict.grid.labels.rate);
       t('rates-label-va30-monthly', dict.grid.labels.monthlyPayment);
-      t('rates-label-va30-apr', dict.grid.labels.apr);
-      t('rates-label-va30-points', dict.grid.labels.points);
       t('rates-card-va30-cta', dict.grid.cta);
       t('rates-card-jumboFixed30-title', dict.grid.cards.jumboFixed30.title);
       t('rates-label-jumboFixed30-rate', dict.grid.labels.rate);
       t('rates-label-jumboFixed30-monthly', dict.grid.labels.monthlyPayment);
-      t('rates-label-jumboFixed30-apr', dict.grid.labels.apr);
-      t('rates-label-jumboFixed30-points', dict.grid.labels.points);
       t('rates-card-jumboFixed30-cta', dict.grid.cta);
       // Bloque personalizado
       t('rates-personalized-title', dict.grid.personalized.title);

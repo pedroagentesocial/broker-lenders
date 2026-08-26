@@ -25,5 +25,9 @@
   "last_30_days": "Last 30 days",
   "building_history": "Building history",
   "chart_source_note": "Charts show this site’s published daily rates.",
-  "chart_disclosure": "The trend charts show the daily rates published on this site over the last 30 days. They are historical estimates for illustration only and are not a quote, an index, or a forecast."
+  "chart_disclosure": "The trend charts show the daily rates published on this site over the last 30 days. They are historical estimates for illustration only and are not a quote, an index, or a forecast.",
+  "30_year_usda": "30-year USDA",
+  "index_average": "Index average",
+  "source_label": "Source:",
+  "national_average_note": "National average. Not a quote: your rate depends on loan amount, LTV, term and credit profile."
 }
