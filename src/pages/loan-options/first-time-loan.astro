@@ -6,6 +6,9 @@ import Contact from '../../components/Contact.astro';
 import ImportantLegal from '../../components/ImportantLegal.astro';
 import enDict from '../../translations/loan-options/first-time-loan/en.json';
 import esDict from '../../translations/loan-options/first-time-loan/es.json';
+import ImgAdvisor1 from '../../assets/stock/advisor-1.jpg';
+import ImgFamilyKeys from '../../assets/stock/family-keys.jpg';
+import ImgFamilyLiving from '../../assets/stock/family-living.jpg';
 export const prerender = true;
 // Prerender estático: idioma se resuelve en cliente
 const lang = 'en';
@@ -156,7 +159,7 @@ const esB64 = Buffer.from(JSON.stringify(esDict)).toString('base64');
         <!-- Right side - Image -->
         <div>
           <img 
-            src="https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=first-time%20homebuyer%20young%20couple%20receiving%20keys%20in%20new%20home%2C%20bright%20natural%20light%2C%20professional%20photography&image_size=landscape_4_3" 
+            src={ImgFamilyKeys.src} 
             alt="First-time homebuyers receiving keys" 
             class="w-full h-96 object-cover rounded-2xl"
           />
@@ -172,7 +175,7 @@ const esB64 = Buffer.from(JSON.stringify(esDict)).toString('base64');
         <!-- Left: Image -->
         <div class="h-full">
           <img 
-            src="https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=young%20homebuyer%20couple%20with%20mortgage%20advisor%2C%20modern%20office%2C%20smiling%2C%20documents%20on%20table%2C%20bright%20natural%20light%2C%20professional%20photography&image_size=landscape_4_3" 
+            src={ImgAdvisor1.src} 
             alt="Homebuyers working with mortgage advisor" 
             class="w-full h-full object-cover rounded-2xl"
           />
@@ -253,7 +256,7 @@ const esB64 = Buffer.from(JSON.stringify(esDict)).toString('base64');
         <!-- Right side - Image -->
         <div>
           <img 
-            src="https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=happy%20family%20first%20home%20celebration%2C%20living%20room%20decorating%2C%20bright%20natural%20light%2C%20professional%20photography&image_size=landscape_4_3" 
+            src={ImgFamilyLiving.src} 
             alt="Happy first-time homebuyer family" 
             class="w-full h-96 object-cover rounded-2xl"
           />

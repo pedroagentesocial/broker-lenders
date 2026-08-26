@@ -5,6 +5,8 @@ import esLO from '../translations/loan-options/es.json';
 import ImportantLegal from '../components/ImportantLegal.astro';
 import Contact from '../components/Contact.astro';
 import TestimonialsSection from '../components/TestimonialsSection.astro';
+import ImgAdvisor1 from '../assets/stock/advisor-1.jpg';
+import ImgFamilyHome from '../assets/stock/family-home.jpg';
 export const prerender = true;
 const lang = 'en';
 const dict = enLO;
@@ -45,7 +47,7 @@ const dict = enLO;
 				<!-- Right side - Image -->
 				<div>
 					<img 
-						src="https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=happy%20family%20couple%20at%20home%2C%20smiling%20together%2C%20warm%20lighting%2C%20professional%20photography&image_size=landscape_4_3" 
+						src={ImgFamilyHome.src} 
 						alt="Happy family at home" 
 						class="w-full h-96 object-cover rounded-[48px]"
 					/>
@@ -188,7 +190,7 @@ const dict = enLO;
 				<!-- Right side - Image -->
 				<div>
 					<img 
-						src="https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=smiling%20mortgage%20advisor%20helping%20couple%20choose%20home%20loan%20options%2C%20bright%20natural%20light%2C%20professional%20photography%2C%20warm%20and%20friendly&image_size=portrait_4_3" 
+						src={ImgAdvisor1.src} 
 						alt="Mortgage advisor" 
 						class="w-full h-96 object-cover rounded-2xl"
 					/>

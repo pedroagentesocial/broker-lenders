@@ -6,6 +6,8 @@ import Contact from '../../components/Contact.astro';
 import ImportantLegal from '../../components/ImportantLegal.astro';
 import enDict from '../../translations/loan-options/jumbo-loan/en.json';
 import esDict from '../../translations/loan-options/jumbo-loan/es.json';
+import ImgAdvisor1 from '../../assets/stock/advisor-1.jpg';
+import ImgLuxuryHome from '../../assets/stock/luxury-home.jpg';
 export const prerender = true;
 // Prerender estático: idioma se resuelve en cliente
 const lang = 'en';
@@ -156,7 +158,7 @@ const esB64 = Buffer.from(JSON.stringify(esDict)).toString('base64');
         <!-- Right side - Image -->
         <div>
           <img 
-            src="https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=jumbo%20loan%20luxury%20home%20exterior%2C%20bright%20natural%20light%2C%20professional%20photography&image_size=landscape_4_3" 
+            src={ImgLuxuryHome.src} 
             alt="Luxury home exterior" 
             class="w-full h-96 object-cover rounded-2xl"
           />
@@ -172,7 +174,7 @@ const esB64 = Buffer.from(JSON.stringify(esDict)).toString('base64');
         <!-- Left: Image -->
         <div class="h-full">
           <img 
-            src="https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=wealthy%20homebuyer%20meeting%20with%20mortgage%20advisor%2C%20modern%20office%2C%20smiling%2C%20documents%20on%20table%2C%20bright%20natural%20light%2C%20professional%20photography&image_size=landscape_4_3" 
+            src={ImgAdvisor1.src} 
             alt="Homebuyer working with mortgage advisor" 
             class="w-full h-full object-cover rounded-2xl"
           />
@@ -251,7 +253,7 @@ const esB64 = Buffer.from(JSON.stringify(esDict)).toString('base64');
         <!-- Right side - Image -->
         <div>
           <img 
-            src="https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=jumbo%20loan%20couple%20with%20advisor%20reviewing%20luxury%20home%20options%2C%20bright%20natural%20light%2C%20professional%20photography&image_size=landscape_4_3" 
+            src={ImgLuxuryHome.src} 
             alt="Jumbo loan consultation" 
             class="w-full h-96 object-cover rounded-2xl"
           />

@@ -3,6 +3,9 @@ import Layout from '../layouts/Layout.astro';
 import Contact from '../components/Contact.astro';
 import TestimonialsSection from '../components/TestimonialsSection.astro';
 import ImportantLegal from '../components/ImportantLegal.astro';
+import ImgAdvisor1 from '../assets/stock/advisor-1.jpg';
+import ImgFamilyKeys from '../assets/stock/family-keys.jpg';
+import ImgTeamOffice from '../assets/stock/team-office.jpg';
 
 export const prerender = true;
 ---
@@ -55,7 +58,7 @@ export const prerender = true;
         <!-- Right side - Image -->
         <div>
           <img 
-            src="https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20mortgage%20team%20in%20modern%20office%2C%20diverse%20group%20of%20people%2C%20smiling%2C%20bright%20natural%20light%2C%20professional%20photography&image_size=landscape_4_3" 
+            src={ImgTeamOffice.src} 
             alt="Broker Lenders Team" 
             class="w-full h-96 object-cover rounded-2xl"
           />
@@ -71,7 +74,7 @@ export const prerender = true;
         <!-- Left: Image -->
         <div class="h-full">
           <img 
-            src="https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=happy%20family%20in%20new%20home%2C%20keys%20in%20hand%2C%20celebrating%2C%20bright%20natural%20light%2C%20professional%20photography&image_size=landscape_4_3" 
+            src={ImgFamilyKeys.src} 
             alt="Happy family with new home" 
             class="w-full h-full object-cover rounded-2xl"
           />
@@ -221,7 +224,7 @@ export const prerender = true;
         <!-- Right: Image -->
         <div class="h-full">
           <img 
-            src="https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=mortgage%20professional%20helping%20happy%20couple%2C%20modern%20office%2C%20smiling%2C%20documents%20on%20table%2C%20bright%20natural%20light%2C%20professional%20photography&image_size=landscape_4_3" 
+            src={ImgAdvisor1.src} 
             alt="Mortgage professional helping couple" 
             class="w-full h-full object-cover rounded-2xl"
           />

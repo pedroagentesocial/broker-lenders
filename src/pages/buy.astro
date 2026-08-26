@@ -13,6 +13,7 @@ import ColoradoImg from '../assets/Colorado.jpg';
 import FloridaImg from '../assets/Florida.jpg';
 import TexasImg from '../assets/Texas.jpg';
 import NevadaImg from '../assets/Nevada.jpg';
+import ImgHouseExterior from '../assets/stock/house-exterior.jpg';
 
 // Prerender estático: el cliente resuelve idioma
 const lang = 'en';
@@ -381,7 +382,7 @@ const esB64 = Buffer.from(JSON.stringify(dicts.es)).toString('base64');
 					<div>
 						<div class="relative">
 							<img 
-								src="https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=modern%20house%20exterior%2C%20beautiful%20home%20with%20landscaping%2C%20professional%20real%20estate%20photography&image_size=landscape_4_3" 
+								src={ImgHouseExterior.src} 
 								alt="Beautiful home exterior" 
 								class="w-full h-80 object-cover rounded-2xl shadow-lg"
 							/>

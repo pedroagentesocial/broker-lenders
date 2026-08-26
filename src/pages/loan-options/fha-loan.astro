@@ -6,6 +6,9 @@ import Contact from '../../components/Contact.astro';
 import ImportantLegal from '../../components/ImportantLegal.astro';
 import enDict from '../../translations/loan-options/fha-loan/en.json';
 import esDict from '../../translations/loan-options/fha-loan/es.json';
+import ImgAdvisor2 from '../../assets/stock/advisor-2.jpg';
+import ImgFamilyHome from '../../assets/stock/family-home.jpg';
+import ImgFamilyLiving from '../../assets/stock/family-living.jpg';
 
 export const prerender = true;
 // Build estático: i18n en cliente; render inicial en inglés
@@ -158,7 +161,7 @@ const esB64 = Buffer.from(JSON.stringify(esDict)).toString('base64');
         <!-- Right side - Image -->
         <div>
           <img 
-            src="https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=military%20veteran%20couple%20with%20family%2C%20happy%20at%20home%2C%20american%20flag%20in%20background%2C%20professional%20photography%2C%20warm%20lighting&image_size=landscape_4_3" 
+            src={ImgFamilyLiving.src} 
             alt="Veteran family at home" 
             class="w-full h-96 object-cover rounded-2xl"
           />
@@ -174,7 +177,7 @@ const esB64 = Buffer.from(JSON.stringify(esDict)).toString('base64');
         <!-- Left: Image -->
         <div class="h-full">
           <img 
-            src="https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20mortgage%20advisor%20meeting%20with%20homebuyers%2C%20modern%20office%2C%20smiling%2C%20documents%20on%20table%2C%20bright%20natural%20light%2C%20professional%20photography&image_size=landscape_4_3" 
+            src={ImgAdvisor2.src} 
             alt="Homebuyers working with mortgage advisor" 
             class="w-full h-full object-cover rounded-2xl"
           />
@@ -255,7 +258,7 @@ const esB64 = Buffer.from(JSON.stringify(esDict)).toString('base64');
         <!-- Right side - Image -->
         <div>
           <img 
-            src="https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=first-time%20homebuyer%20couple%20with%20family%2C%20happy%20at%20home%2C%20bright%20natural%20light%2C%20professional%20photography&image_size=landscape_4_3" 
+            src={ImgFamilyHome.src} 
             alt="Homebuyer family at home" 
             class="w-full h-96 object-cover rounded-2xl"
           />

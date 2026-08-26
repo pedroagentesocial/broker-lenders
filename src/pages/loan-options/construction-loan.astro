@@ -6,6 +6,9 @@ import Contact from '../../components/Contact.astro';
 import ImportantLegal from '../../components/ImportantLegal.astro';
 import enDict from '../../translations/loan-options/construction-loan/en.json';
 import esDict from '../../translations/loan-options/construction-loan/es.json';
+import ImgAdvisor2 from '../../assets/stock/advisor-2.jpg';
+import ImgConstructionPlans from '../../assets/stock/construction-plans.jpg';
+import ImgConstructionSite from '../../assets/stock/construction-site.jpg';
 export const prerender = true;
 // Prerender estático: idioma se resuelve en cliente
 const lang = 'en';
@@ -159,7 +162,7 @@ const esB64 = Buffer.from(JSON.stringify(esDict)).toString('base64');
         <!-- Right side - Image -->
         <div>
           <img 
-            src="https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=construction%20loan%20new%20home%20blueprints%20with%20couple%2C%20bright%20natural%20light%2C%20professional%20photography&image_size=landscape_4_3" 
+            src={ImgConstructionPlans.src} 
             alt="Construction planning with blueprints" 
             class="w-full h-96 object-cover rounded-2xl"
           />
@@ -175,7 +178,7 @@ const esB64 = Buffer.from(JSON.stringify(esDict)).toString('base64');
         <!-- Left: Image -->
         <div class="h-full">
           <img 
-            src="https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=couple%20reviewing%20construction%20plans%20with%20mortgage%20advisor%2C%20modern%20office%2C%20smiling%2C%20documents%20on%20table%2C%20bright%20natural%20light%2C%20professional%20photography&image_size=landscape_4_3" 
+            src={ImgAdvisor2.src} 
             alt="Couple reviewing construction plans" 
             class="w-full h-full object-cover rounded-2xl"
           />
@@ -254,7 +257,7 @@ const esB64 = Buffer.from(JSON.stringify(esDict)).toString('base64');
         <!-- Right side - Image -->
         <div>
           <img 
-            src="https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=construction%20site%20couple%20with%20contractor%20reviewing%20plans%2C%20bright%20natural%20light%2C%20professional%20photography&image_size=landscape_4_3" 
+            src={ImgConstructionSite.src} 
             alt="Construction site planning with contractor" 
             class="w-full h-96 object-cover rounded-2xl"
           />
