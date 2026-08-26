@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig, passthroughImageService } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import vercel from '@astrojs/vercel';
 import sitemap from '@astrojs/sitemap';
@@ -22,6 +22,9 @@ export default defineConfig({
   base: isGhPages ? '/broker-lenders' : undefined,
   output: isGhPages ? 'static' : 'server',
   adapter: isGhPages ? undefined : vercel(),
+  // La imagen del hero de realtors ya viene dimensionada (2400x1600, 441 KB).
+  // Sin procesado en build no hace falta sharp, que es donde fallaba el deploy.
+  image: { service: passthroughImageService() },
   integrations: [
     sitemap({
       i18n: {
