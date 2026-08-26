@@ -7,13 +7,14 @@ import ImportantLegal from '../components/ImportantLegal.astro';
 import RewardsCard from '../components/RewardsCard.astro';
 import WaysHelp from '../components/WaysHelp.astro';
 import Contact from '../components/Contact.astro';
-import UtahImg from '../assets/Utah.jpg';
-import IdahoImg from '../assets/Idaho.jpg';
-import ColoradoImg from '../assets/Colorado.jpg';
-import FloridaImg from '../assets/Florida.jpg';
-import TexasImg from '../assets/Texas.jpg';
-import NevadaImg from '../assets/Nevada.jpg';
-import ImgHouseExterior from '../assets/stock/house-exterior.jpg';
+import UtahImg from '../assets/Utah.webp';
+import CaliforniaImg from '../assets/California.webp';
+import IdahoImg from '../assets/Idaho.webp';
+import ColoradoImg from '../assets/Colorado.webp';
+import FloridaImg from '../assets/Florida.webp';
+import TexasImg from '../assets/Texas.webp';
+import NevadaImg from '../assets/Nevada.webp';
+import ImgHouseExterior from '../assets/stock/house-exterior.webp';
 
 // Prerender estático: el cliente resuelve idioma
 const lang = 'en';
@@ -46,13 +47,13 @@ try {
 }
 
 const images = [
-  { src: UtahImg.src, label: "Utah", alt: "Downtown Salt Lake City skyline, Utah" },
-  { src: IdahoImg.src, label: "Idaho", alt: "Sawtooth Mountains en Idaho" },
-  { src: NevadaImg.src, label: "Nevada", alt: "Nevada landscape" },
-  { src: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=1200&h=800&fit=crop", label: "California", alt: "Golden Gate Bridge en California" },
-  { src: TexasImg.src, label: "Texas", alt: "El Álamo en Texas" },
-  { src: FloridaImg.src, label: "Florida", alt: "Miami Beach en Florida" },
-  { src: ColoradoImg.src, label: "Colorado", alt: "Downtown Denver skyline, Colorado" }
+  { img: UtahImg, label: "Utah", alt: "Downtown Salt Lake City skyline, Utah" },
+  { img: IdahoImg, label: "Idaho", alt: "Sawtooth Mountains, Idaho" },
+  { img: NevadaImg, label: "Nevada", alt: "Las Vegas Strip at dusk, Nevada" },
+  { img: CaliforniaImg, label: "California", alt: "Golden Gate Bridge, California" },
+  { img: TexasImg, label: "Texas", alt: "The Alamo, Texas" },
+  { img: FloridaImg, label: "Florida", alt: "Miami Beach, Florida" },
+  { img: ColoradoImg, label: "Colorado", alt: "Downtown Denver skyline, Colorado" }
 ];
 
 // Inline payload for client-side i18n
@@ -242,7 +243,17 @@ const esB64 = Buffer.from(JSON.stringify(dicts.es)).toString('base64');
 			<div id="buyHeroCarousel" class="relative w-full h-full">
 				{images.map((img, i) => (
 					<figure class={`absolute inset-0 transition-opacity duration-700 ${i === 0 ? 'opacity-100' : 'opacity-0'}`} data-index={i}>
-						<img src={img.src} alt={img.alt} class="w-full h-full object-cover" onerror="this.src='/HeroBuy.jpg'; this.onerror=null;" />
+						<img
+							src={i === 0 ? img.img.src : undefined}
+							data-src={img.img.src}
+							width={img.img.width}
+							height={img.img.height}
+							alt={img.alt}
+							loading={i === 0 ? 'eager' : 'lazy'}
+							fetchpriority={i === 0 ? 'high' : 'low'}
+							decoding="async"
+							class="w-full h-full object-cover bg-gray-100"
+						/>
 						<figcaption class="absolute bottom-4 left-4 px-3 py-1 rounded-full bg-black/40 text-white text-xs font-medium backdrop-blur-sm">{img.label}</figcaption>
 					</figure>
 				))}
@@ -284,7 +295,16 @@ const esB64 = Buffer.from(JSON.stringify(dicts.es)).toString('base64');
   const dots = Array.from(document.querySelectorAll('#buyHeroCarouselDots button'));
   let current = 0;
   let timer;
+  // Cada foto se descarga cuando le toca salir, no todas al abrir.
+  function load(index) {
+    const slide = slides[index];
+    if (!slide) return;
+    const el = slide.querySelector('img');
+    if (el && !el.getAttribute('src') && el.dataset.src) el.setAttribute('src', el.dataset.src);
+  }
   function show(index) {
+    load(index);
+    load((index + 1) % slides.length);
     slides.forEach((s, i) => {
       s.style.opacity = i === index ? '1' : '0';
       s.style.pointerEvents = i === index ? 'auto' : 'none';

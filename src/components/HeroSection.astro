@@ -1,18 +1,19 @@
 ---
-import UtahImg from '../assets/Utah.jpg';
-import IdahoImg from '../assets/Idaho.jpg';
-import ColoradoImg from '../assets/Colorado.jpg';
-import FloridaImg from '../assets/Florida.jpg';
-import TexasImg from '../assets/Texas.jpg';
-import NevadaImg from '../assets/Nevada.jpg';
+import UtahImg from '../assets/Utah.webp';
+import IdahoImg from '../assets/Idaho.webp';
+import ColoradoImg from '../assets/Colorado.webp';
+import FloridaImg from '../assets/Florida.webp';
+import TexasImg from '../assets/Texas.webp';
+import NevadaImg from '../assets/Nevada.webp';
+import CaliforniaImg from '../assets/California.webp';
 const images = [
-  { src: UtahImg.src, label: "Utah", alt: "Downtown Salt Lake City skyline, Utah" },
-  { src: IdahoImg.src, label: "Idaho", alt: "Sawtooth Mountains en Idaho" },
-  { src: NevadaImg.src, label: "Nevada", alt: "Nevada landscape" },
-  { src: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=1200&h=800&fit=crop", label: "California", alt: "Golden Gate Bridge en California" },
-  { src: TexasImg.src, label: "Texas", alt: "El Álamo en Texas" },
-  { src: FloridaImg.src, label: "Florida", alt: "Miami Beach en Florida" },
-  { src: ColoradoImg.src, label: "Colorado", alt: "Downtown Denver skyline, Colorado" }
+  { img: UtahImg, label: "Utah", alt: "Downtown Salt Lake City skyline, Utah" },
+  { img: IdahoImg, label: "Idaho", alt: "Sawtooth Mountains, Idaho" },
+  { img: NevadaImg, label: "Nevada", alt: "Las Vegas Strip at dusk, Nevada" },
+  { img: CaliforniaImg, label: "California", alt: "Golden Gate Bridge, California" },
+  { img: TexasImg, label: "Texas", alt: "The Alamo, Texas" },
+  { img: FloridaImg, label: "Florida", alt: "Miami Beach, Florida" },
+  { img: ColoradoImg, label: "Colorado", alt: "Downtown Denver skyline, Colorado" }
 ];
 // Hero Section component
 ---
@@ -28,7 +29,17 @@ const images = [
             
             {images.map((img, i) => (
               <figure class={`absolute inset-0 transition-opacity duration-700 ${i === 0 ? 'opacity-100' : 'opacity-0'}`} data-index={i}>
-                <img src={img.src} alt={img.alt} class="w-full h-full object-cover" onerror="this.src='/HeroBuy.jpg'; this.onerror=null;" />
+                <img
+                  src={i === 0 ? img.img.src : undefined}
+                  data-src={img.img.src}
+                  width={img.img.width}
+                  height={img.img.height}
+                  alt={img.alt}
+                  loading={i === 0 ? 'eager' : 'lazy'}
+                  fetchpriority={i === 0 ? 'high' : 'low'}
+                  decoding="async"
+                  class="w-full h-full object-cover bg-gray-100"
+                />
                 <figcaption class="absolute bottom-4 left-4 bg-black/60 text-white text-sm font-medium px-3 py-1 rounded-full">
                   {img.label}
                 </figcaption>
@@ -47,9 +58,9 @@ const images = [
       <!-- Right side - Form -->
       <div class="order-1 lg:order-2">
         <div class="bg-gray-50 p-8 rounded-2xl h-full min-h-[500px] flex flex-col justify-center">
-          <h2 class="text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-6" data-i18n="hero.title">
+          <h1 class="text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-6" data-i18n="hero.title">
             Home loans made for your lifestyle
-          </h2>
+          </h1>
           
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:h-[200px]">
             <!-- Left Column: Refinancing and Buying stacked -->
@@ -105,7 +116,16 @@ const images = [
   const dots = Array.from(document.querySelectorAll('#heroCarouselDots button'));
   let current = 0;
   let timer;
+  // Cada foto se descarga cuando le toca salir, no todas de golpe al abrir.
+  function load(index) {
+    const slide = slides[index];
+    if (!slide) return;
+    const el = slide.querySelector('img');
+    if (el && !el.getAttribute('src') && el.dataset.src) el.setAttribute('src', el.dataset.src);
+  }
   function show(index) {
+    load(index);
+    load((index + 1) % slides.length); // precarga la siguiente
     slides.forEach((s, i) => {
       s.style.opacity = i === index ? '1' : '0';
       s.style.pointerEvents = i === index ? 'auto' : 'none';
