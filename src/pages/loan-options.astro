@@ -12,7 +12,13 @@ const dict = enLO;
 // Prerender estático, el cliente maneja idioma
 ---
 
-<Layout title={dict?.meta?.title || "Loan Options - Broker Lenders"} lang={lang}>
+<Layout
+	title={dict?.meta?.title || "Loan Options - Broker Lenders"}
+	lang={lang}
+	description={dict?.meta?.description || "Explore every home loan option: FHA, VA, USDA, Conventional, Jumbo, Construction, Investment and First-Time Buyer. Find the right mortgage for you."}
+	keywords="FHA loan, VA loan, USDA loan, conventional loan, jumbo loan, construction loan, investment loan, first time buyer loan"
+	hreflangPath="/loan-options"
+>
 	<!-- Use translated meta title when available -->
 	<!-- Replaced above title via dict meta for SSR -->
 	<!-- Breadcrumb Section -->
@@ -310,6 +316,9 @@ const dict = enLO;
       setText('[data-i18n="breadcrumb.home"]', dict?.breadcrumb?.home || 'Home');
       setText('[data-i18n="breadcrumb.loanOptions"]', dict?.breadcrumb?.loanOptions || 'Loan Options');
       if (dict?.meta?.title) document.title = dict.meta.title;
+      // Mantener la meta description en el idioma activo
+      const metaDescEl = document.querySelector('meta[name="description"]');
+      if (metaDescEl && dict?.meta?.description) metaDescEl.setAttribute('content', dict.meta.description);
       // Hero
       setTextById('loan-options-hero-title', dict.hero.title);
       setTextById('loan-options-hero-subtitle', dict.hero.subtitle);

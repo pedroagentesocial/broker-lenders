@@ -1,0 +1,316 @@
+---
+import enPage from '../../translations/realtors/en.json';
+const dict = enPage as any;
+
+interface PlanConfig {
+  id: string;
+  highlighted: boolean;
+  ctaStyle: 'solid' | 'outline';
+  ctaId: string;
+  ctaHref: string;
+  priceColor: string;
+}
+
+const planConfig: PlanConfig[] = [
+  {
+    id: 'partner',
+    highlighted: true,
+    ctaStyle: 'solid',
+    ctaId: 'realtor-pricing-partner',
+    ctaHref: '/booking?lang=en',
+    priceColor: 'text-red-600',
+  },
+  {
+    id: 'professional',
+    highlighted: false,
+    ctaStyle: 'outline',
+    ctaId: 'realtor-pricing-professional',
+    ctaHref: '/booking?lang=en',
+    priceColor: 'text-gray-900',
+  },
+  {
+    id: 'advanced',
+    highlighted: false,
+    ctaStyle: 'outline',
+    ctaId: 'realtor-pricing-advanced',
+    ctaHref: '/booking?lang=en',
+    priceColor: 'text-gray-900',
+  },
+];
+
+const trustKeys = ['cancelAnytime', 'noSetupFees', 'freeOnboarding'] as const;
+---
+
+<section
+  id="pricing"
+  class="pricing-section bg-white py-16 lg:py-24"
+  aria-labelledby="pricing-heading"
+>
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-3xl text-center">
+      <p
+        class="pr-reveal mb-4 text-xs sm:text-sm font-semibold uppercase tracking-[0.18em] text-red-600"
+        style="--reveal-delay: 0ms"
+        data-i18n="pricing.eyebrow"
+      >{dict.pricing.eyebrow}</p>
+      <h2
+        id="pricing-heading"
+        class="pr-reveal mb-5 text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900"
+        style="--reveal-delay: 80ms"
+        data-i18n="pricing.headline"
+      >{dict.pricing.headline}</h2>
+      <p
+        class="pr-reveal mx-auto max-w-2xl text-base sm:text-lg leading-relaxed text-gray-600"
+        style="--reveal-delay: 160ms"
+        data-i18n="pricing.subheadline"
+      >{dict.pricing.subheadline}</p>
+    </div>
+
+    <div class="mt-14 lg:mt-20 grid auto-rows-fr grid-cols-1 gap-6 lg:grid-cols-3">
+      {planConfig.map((plan, i) => {
+        const p = dict.pricing.plans[i];
+        const isHighlight = plan.highlighted;
+        return (
+          <article
+            class={`pr-card relative flex h-full flex-col rounded-2xl bg-white p-8 lg:p-10 ${
+              isHighlight
+                ? 'border-2 border-red-600 shadow-xl'
+                : 'border border-gray-200 shadow-md hover:-translate-y-1 hover:shadow-xl'
+            }`}
+            style={`--reveal-delay: ${320 + i * 120}ms`}
+            aria-labelledby={`plan-${plan.id}-title`}
+          >
+            {isHighlight && (
+              <div class="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 z-10" aria-hidden="true">
+                <span class="badge-pop inline-block rounded-full bg-red-600 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-white shadow-md">
+                  <span data-i18n="pricing.mostPopular">{dict.pricing.mostPopular}</span>
+                </span>
+              </div>
+            )}
+
+            {isHighlight && (
+              <span class="sr-only" data-i18n="pricing.mostPopularSr">{dict.pricing.mostPopularSr}</span>
+            )}
+
+            <h3
+              id={`plan-${plan.id}-title`}
+              class="mb-2 text-xl lg:text-2xl font-bold text-gray-900"
+              data-i18n={`pricing.plans.${i}.name`}
+            >{p.name}</h3>
+
+            <p
+              class="mb-6 italic text-sm text-gray-500"
+              data-i18n={`pricing.plans.${i}.tagline`}
+            >{p.tagline}</p>
+
+            <div class="mb-6">
+              <span class="sr-only" data-i18n={`pricing.plans.${i}.priceAria`}>{p.priceAria}</span>
+              <div aria-hidden="true" class="flex items-baseline">
+                <span
+                  class={`${isHighlight ? 'text-6xl lg:text-7xl' : 'text-5xl lg:text-6xl'} font-bold leading-none ${plan.priceColor}`}
+                  data-i18n={`pricing.plans.${i}.price`}
+                >{p.price}</span>
+                <span
+                  class="ml-1 text-base font-medium text-gray-500"
+                  data-i18n="pricing.perMonth"
+                >{dict.pricing.perMonth}</span>
+              </div>
+              <p
+                class="mt-2 text-sm text-gray-500"
+                data-i18n={`pricing.plans.${i}.priceNote`}
+              >{p.priceNote}</p>
+            </div>
+
+            <ul class="mb-8 flex-1 space-y-3">
+              {p.features.map((feature: string, f: number) => (
+                <li class="flex items-start gap-2.5 text-sm text-gray-700">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class={`mt-0.5 h-5 w-5 flex-shrink-0 ${isHighlight ? 'text-red-600' : 'text-gray-900'}`}
+                    aria-hidden="true"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="m9 12 2 2 4-4" />
+                  </svg>
+                  <span data-i18n={`pricing.plans.${i}.features.${f}`}>{feature}</span>
+                </li>
+              ))}
+            </ul>
+
+            <a
+              id={plan.ctaId}
+              href={plan.ctaHref}
+              aria-label={p.ctaAria}
+              data-i18n-aria={`pricing.plans.${i}.ctaAria`}
+              class={`mt-auto inline-flex w-full items-center justify-center rounded-[48px] px-6 py-3 font-semibold transition-colors duration-250 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${
+                plan.ctaStyle === 'solid'
+                  ? 'bg-red-600 text-white hover:bg-red-700 focus-visible:ring-red-600'
+                  : 'border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white focus-visible:ring-gray-900'
+              }`}
+            >
+              <span data-i18n={`pricing.plans.${i}.ctaText`}>{p.ctaText}</span>
+            </a>
+
+            {p.noteUnder && (
+              <p
+                class="mt-3 text-center text-xs text-gray-500"
+                data-i18n={`pricing.plans.${i}.noteUnder`}
+              >{p.noteUnder}</p>
+            )}
+          </article>
+        );
+      })}
+    </div>
+
+    <div
+      class="pr-reveal-late mt-12 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-gray-500"
+      style="--reveal-delay: 1300ms"
+    >
+      {trustKeys.map((k) => (
+        <span class="inline-flex items-center gap-2">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-4 w-4 flex-shrink-0 text-red-600"
+            aria-hidden="true"
+          >
+            <polyline points="20 6 9 17 4 12" />
+          </svg>
+          <span data-i18n={`pricing.trust.${k}`}>{(dict.pricing.trust as any)[k]}</span>
+        </span>
+      ))}
+    </div>
+
+    <p
+      class="pr-reveal-late mt-6 text-center text-sm"
+      style="--reveal-delay: 1380ms"
+    >
+      <a
+        href="/contactus"
+        class="font-semibold text-red-600 hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-red-600 focus-visible:ring-offset-2 rounded-sm"
+        data-i18n="pricing.customLink"
+      >{dict.pricing.customLink}</a>
+    </p>
+  </div>
+</section>
+
+<style>
+  /* Header + late items: simple opacity + 12px slide-up reveal. */
+  .pricing-section.reveal-ready .pr-reveal,
+  .pricing-section.reveal-ready .pr-reveal-late {
+    opacity: 0;
+    translate: 0 12px;
+    transition:
+      opacity 600ms ease-out var(--reveal-delay, 0ms),
+      translate 600ms ease-out var(--reveal-delay, 0ms);
+    will-change: opacity, translate;
+  }
+
+  /* Cards: 24px slide-up + opacity reveal, plus always-on hover transitions
+     (border-color, box-shadow, transform). Reveal uses translate; hover uses
+     transform → no conflict. */
+  .pr-card {
+    transition:
+      border-color 250ms ease-out,
+      box-shadow 250ms ease-out,
+      transform 250ms ease-out;
+  }
+  .pricing-section.reveal-ready .pr-card {
+    opacity: 0;
+    translate: 0 24px;
+    transition:
+      opacity 600ms ease-out var(--reveal-delay, 0ms),
+      translate 600ms ease-out var(--reveal-delay, 0ms),
+      border-color 250ms ease-out,
+      box-shadow 250ms ease-out,
+      transform 250ms ease-out;
+    will-change: opacity, translate;
+  }
+
+  .pricing-section.reveal-ready.is-visible .pr-reveal,
+  .pricing-section.reveal-ready.is-visible .pr-reveal-late,
+  .pricing-section.reveal-ready.is-visible .pr-card {
+    opacity: 1;
+    translate: 0 0;
+  }
+
+  /* Badge: scale-bounce reveal. Wrapper handles translate(-50%,-50%) for
+     positioning, inner badge animates `transform: scale(...)`. */
+  .pricing-section.reveal-ready .badge-pop {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  .pricing-section.reveal-ready.is-visible .badge-pop {
+    animation: badgePop 600ms ease-out 1100ms forwards;
+  }
+  @keyframes badgePop {
+    0%   { opacity: 0; transform: scale(0.6); }
+    60%  { opacity: 1; transform: scale(1.05); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .pricing-section.reveal-ready .pr-reveal,
+    .pricing-section.reveal-ready .pr-reveal-late,
+    .pricing-section.reveal-ready .pr-card {
+      opacity: 1 !important;
+      translate: 0 0 !important;
+    }
+    .pricing-section.reveal-ready .pr-reveal,
+    .pricing-section.reveal-ready .pr-reveal-late {
+      transition: none !important;
+    }
+    .pricing-section.reveal-ready .pr-card {
+      transition:
+        border-color 250ms ease-out,
+        box-shadow 250ms ease-out,
+        transform 250ms ease-out !important;
+    }
+    .pricing-section.reveal-ready .badge-pop {
+      opacity: 1 !important;
+      transform: scale(1) !important;
+      animation: none !important;
+    }
+  }
+</style>
+
+<script is:inline>
+  (() => {
+    const init = () => {
+      const section = document.querySelector('.pricing-section');
+      if (!section) return;
+
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const ioSupported = 'IntersectionObserver' in window;
+      if (reduce || !ioSupported) return;
+
+      section.classList.add('reveal-ready');
+
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { rootMargin: '0px 0px -20% 0px', threshold: 0.01 });
+
+      io.observe(section);
+    };
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  })();
+</script>

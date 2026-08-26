@@ -20,5 +20,10 @@
   "30_year_va_example_text": "Una tasa de interés del 5.99% (6.372% APR) es por un costo de 1.75 Punto(s) ($6,125.00) pagados al cierre. En una hipoteca de $350,000, haría pagos mensuales de $2,096.18. El pago mensual no incluye impuestos y primas de seguro. El monto del pago real será mayor. El pago asume una relación préstamo-valor (LTV) del 80.00%.",
   "va_loans_note": "Los préstamos VA no requieren PMI. El préstamo VA es un beneficio del servicio militar y solo se ofrece a veteranos, cónyuges sobrevivientes y militares en servicio activo.",
   "30_year_jumbo_example": "Préstamo a Tasa Fija de 30 años (Jumbo):",
-  "30_year_jumbo_example_text": "Una tasa de interés del 5.625% (5.829% APR) es por el costo de 1.75 punto(s) ($19,250.00) pagados al cierre. En una hipoteca de $1,100,000, haría pagos mensuales de $6,332.23. El pago mensual no incluye impuestos y primas de seguro. El monto del pago real será mayor. El pago asume una relación préstamo-valor (LTV) del 70.00%."
+  "30_year_jumbo_example_text": "Una tasa de interés del 5.625% (5.829% APR) es por el costo de 1.75 punto(s) ($19,250.00) pagados al cierre. En una hipoteca de $1,100,000, haría pagos mensuales de $6,332.23. El pago mensual no incluye impuestos y primas de seguro. El monto del pago real será mayor. El pago asume una relación préstamo-valor (LTV) del 70.00%.",
+  "vs_last_week": "vs. semana pasada",
+  "last_30_days": "Últimos 30 días",
+  "building_history": "Generando historial",
+  "chart_source_note": "Las gráficas muestran las tasas diarias publicadas en este sitio.",
+  "chart_disclosure": "Las gráficas de tendencia muestran las tasas diarias publicadas en este sitio durante los últimos 30 días. Son estimaciones históricas con fines ilustrativos y no constituyen una cotización, un índice ni un pronóstico."
 }

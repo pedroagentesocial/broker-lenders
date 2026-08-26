@@ -1,0 +1,31 @@
+# robots.txt for brokerlenders.com
+# Allow all crawlers full access to public content
+
+User-agent: *
+Allow: /
+
+# Block server endpoints, internal forms and 404
+Disallow: /api/
+Disallow: /form
+Disallow: /feedback
+Disallow: /404
+Disallow: /booking
+
+# Block known AI scrapers from training on the site (optional, comment out to allow)
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+# Sitemap
+Sitemap: https://brokerlenders.com/sitemap-index.xml

@@ -17,9 +17,9 @@ const esB64 = Buffer.from(JSON.stringify(esRates)).toString('base64');
 
 // Prerender estático, el cliente maneja idioma y fecha
 
-function formatTimestamp(timestamp) {
+function formatTimestamp(timestamp: string | number | Date) {
   const date = new Date(timestamp);
-  const options = {
+  const options: Intl.DateTimeFormatOptions = {
     timeZone: 'UTC',
     hour: '2-digit',
     minute: '2-digit',
@@ -36,7 +36,13 @@ const lang = 'en';
 const dict = enRates;
 ---
 
-<Layout title={dict.meta?.title || "Today's Mortgage Rates - Broker Lenders"} lang={lang}>
+<Layout
+  title={dict.meta?.title || "Today's Mortgage Rates - Broker Lenders"}
+  lang={lang}
+  description={dict.meta?.description || "Check today's live mortgage rates for 30-year fixed, 15-year fixed, FHA, VA and Jumbo loans. Rates updated daily by Broker Lenders. NMLS #318973."}
+  keywords="today's mortgage rates, 30 year fixed rate, 15 year fixed rate, FHA rates, VA rates, jumbo rates, current mortgage rates"
+  hreflangPath="/rates"
+>
   <!-- Inline SSR fallback payload for client-side hydration -->
   <div id="rates-ssr-payload" data-b64={ratesSSRPayloadB64} style="display:none"></div>
   <!-- Inline i18n payloads for client-side translations -->
@@ -840,6 +846,9 @@ const dict = enRates;
       t('rates-breadcrumb-rates', (dict.breadcrumb && dict.breadcrumb.rates) || 'Rates');
       // Título del documento
       if (dict.meta && dict.meta.title) document.title = dict.meta.title;
+      // Mantener la meta description en el idioma activo
+      const metaDescEl = document.querySelector('meta[name="description"]');
+      if (metaDescEl && dict?.meta?.description) metaDescEl.setAttribute('content', dict.meta.description);
       console.log('[i18n][rates][client] translations applied', lang);
     };
     const initial = setLanguage(getInitialLang());

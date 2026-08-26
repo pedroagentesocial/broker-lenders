@@ -7,6 +7,7 @@ import ImportantLegal from '../components/ImportantLegal.astro';
 import RewardsCard from '../components/RewardsCard.astro';
 import WaysHelp from '../components/WaysHelp.astro';
 import Contact from '../components/Contact.astro';
+import UtahImg from '../assets/Utah.jpg';
 import IdahoImg from '../assets/Idaho.jpg';
 import ColoradoImg from '../assets/Colorado.jpg';
 import FloridaImg from '../assets/Florida.jpg';
@@ -44,13 +45,13 @@ try {
 }
 
 const images = [
-  { src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=800&fit=crop", label: "Utah", alt: "Delicate Arch en Utah" },
+  { src: UtahImg.src, label: "Utah", alt: "Downtown Salt Lake City skyline, Utah" },
   { src: IdahoImg.src, label: "Idaho", alt: "Sawtooth Mountains en Idaho" },
   { src: NevadaImg.src, label: "Nevada", alt: "Nevada landscape" },
   { src: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=1200&h=800&fit=crop", label: "California", alt: "Golden Gate Bridge en California" },
   { src: TexasImg.src, label: "Texas", alt: "El Álamo en Texas" },
   { src: FloridaImg.src, label: "Florida", alt: "Miami Beach en Florida" },
-  { src: ColoradoImg.src, label: "Colorado", alt: "Rocky Mountains en Colorado" }
+  { src: ColoradoImg.src, label: "Colorado", alt: "Downtown Denver skyline, Colorado" }
 ];
 
 // Inline payload for client-side i18n
@@ -58,7 +59,13 @@ const enB64 = Buffer.from(JSON.stringify(dicts.en)).toString('base64');
 const esB64 = Buffer.from(JSON.stringify(dicts.es)).toString('base64');
 ---
 
-<Layout title={translations.title} lang={lang}>
+<Layout
+	title={translations.title}
+	lang={lang}
+	description="Buy your next home with confidence. Get pre-approved fast and shop smart across Idaho, Utah, Colorado, Florida, Texas and Nevada with a licensed mortgage broker. NMLS #318973."
+	keywords="buy a home, mortgage pre-approval, first time home buyer, home loan broker, conventional loan, FHA loan"
+	hreflangPath="/buy"
+>
   <!-- Inline i18n payload for Buy page -->
   <div id="i18n-buy" data-en={enB64} data-es={esB64} style="display:none"></div>
   <script is:inline>

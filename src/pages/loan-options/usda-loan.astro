@@ -112,7 +112,13 @@ const esB64 = Buffer.from(JSON.stringify(esDict)).toString('base64');
   })();
 </script>
 
-<Layout title={dict.title} lang={lang}>
+<Layout
+  title={dict.title}
+  lang={lang}
+  description="USDA rural development loans with 0% down for eligible rural and suburban homebuyers. Low rates, no PMI. See USDA loan eligibility with Broker Lenders."
+  keywords="USDA loan, USDA rural loan, 0 down USDA, rural development mortgage"
+  hreflangPath="/loan-options/usda-loan"
+>
   <!-- Breadcrumb Section -->
   <div class="bg-white py-4">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -1,37 +1,84 @@
 ---
 // Carousel Rates component
-import { getRatesData } from '../utils/ratesData';
+import {
+  getRatesData,
+  getRatesHistory,
+  getSeries,
+  getRateChange,
+  getSeriesStats,
+  buildSparklinePath
+} from '../utils/ratesData';
 import en from "../translations/carousel-rates/en.json";
 import es from "../translations/carousel-rates/es.json";
 const enB64 = Buffer.from(JSON.stringify(en)).toString('base64');
 const esB64 = Buffer.from(JSON.stringify(es)).toString('base64');
 
+const STATE = 'utah';
+const SPARK_W = 128;
+const SPARK_H = 40;
+const SPARK_DAYS = 30;
+
+type RateValues = { rate?: string; apr?: string; points?: string };
+
 const ratesData = await getRatesData();
-const utahRates = ratesData.utah;
+const history = await getRatesHistory();
+const utahRates: Record<string, RateValues | undefined> = ratesData[STATE] || {};
 
-// Función para generar cambios aleatorios de tasas
-function generateRateChange() {
-  const change = (Math.random() - 0.5) * 0.5; // Entre -0.25% y +0.25%
-  const isPositive = change > 0;
-  return {
-    value: Math.abs(change).toFixed(3),
-    sign: isPositive ? '+' : '-',
-    color: isPositive ? 'red' : 'green'
-  };
-}
+// Productos que se muestran en el carrusel
+const PRODUCTS = [
+  { key: '30-year-fixed', i18n: '30_year_fixed', label: '30-year fixed' },
+  { key: '20-year-fixed', i18n: '20_year_fixed', label: '20-year fixed' },
+  { key: '15-year-fixed', i18n: '15_year_fixed', label: '15-year fixed' },
+  { key: '30-year-fha', i18n: '30_year_fha', label: '30-year FHA' },
+  { key: '30-year-va', i18n: '30_year_va', label: '30-year VA' },
+  { key: '30-year-jumbo', i18n: '30_year_jumbo', label: '30-year Jumbo' }
+];
 
-// Función para obtener datos VA (por defecto si no existe)
-function getVaRates() {
-  if (utahRates['30-year-va']) {
-    return utahRates['30-year-va'];
-  }
-  // Datos por defecto para VA si no existen en el JSON
+// VA todavía puede no venir en snapshots antiguos del JSON
+const VA_FALLBACK = { rate: '6.375%', apr: '6.590%', points: '1.25' };
+
+const asPercent = (value: string | number | null | undefined) => {
+  if (value === undefined || value === null) return '—';
+  const text = String(value).trim();
+  return text.endsWith('%') ? text : `${text}%`;
+};
+
+// Paleta por dirección: la tasa sube = rojo (peor para el cliente), baja = verde
+const TREND = {
+  up: { stroke: '#dc2626', fill: 'rgba(220, 38, 38, 0.14)', chip: 'chip-up', arrow: 'M6 2.5 L10 8 L2 8 Z' },
+  down: { stroke: '#15803d', fill: 'rgba(21, 128, 61, 0.14)', chip: 'chip-down', arrow: 'M6 9.5 L2 4 L10 4 Z' },
+  flat: { stroke: '#475569', fill: 'rgba(71, 85, 105, 0.12)', chip: 'chip-flat', arrow: 'M2 6 L10 6' }
+};
+
+const cards = PRODUCTS.map((product) => {
+  const values = utahRates[product.key] || (product.key === '30-year-va' ? VA_FALLBACK : null);
+  if (!values) return null;
+
+  const series = getSeries(history, STATE, product.key, SPARK_DAYS);
+  const change = getRateChange(series, 7);
+  const stats = getSeriesStats(series);
+  const spark = buildSparklinePath(series, SPARK_W, SPARK_H, 4);
+  // getRateChange vive en un .js sin tipos, así que su `direction` llega como string
+  const direction = (change?.direction || 'flat') as keyof typeof TREND;
+
   return {
-    rate: '6.375%',
-    apr: '6.590%',
-    points: '1.0'
+    ...product,
+    rate: asPercent(values.rate),
+    apr: asPercent(values.apr),
+    points: values.points ?? '—',
+    change,
+    stats,
+    direction,
+    trend: TREND[direction],
+    // Path del área bajo la curva, cerrado contra la base del viewBox
+    areaPath: spark ? `${spark.d} L ${SPARK_W} ${SPARK_H} L 0 ${SPARK_H} Z` : null,
+    linePath: spark ? spark.d : null,
+    lastPoint: spark ? spark.points[spark.points.length - 1] : null,
+    daysTracked: series.length
   };
-}
+}).filter((card) => card !== null);
+
+const hasHistory = history.length > 0;
 ---
 
 <section class="py-8 bg-white">
@@ -40,8 +87,8 @@ function getVaRates() {
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center mb-6">
         <h2 class="text-2xl font-bold text-gray-900" data-i18n="stay_updated_title">Stay updated on today’s rates</h2>
-        <a 
-          href="/rates" 
+        <a
+          href="/rates"
           class="bg-gray-100 border border-gray-300 text-gray-700 px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-200 transition-colors"
           data-i18n="see_all_rates"
         >
@@ -52,164 +99,97 @@ function getVaRates() {
 
     <!-- Carousel container -->
     <div class="carousel-container overflow-hidden">
-      <div class="carousel-track" data-basecount="6">
-        <!-- 30-year Fixed -->
-        <div class="rate-item bg-gray-200 rounded-lg p-4 shadow-sm border border-gray-300">
-          <div class="grid grid-cols-[2fr_1fr_1fr] gap-3 items-start">
-            <div class="flex flex-col">
-              <div class="text-xs text-gray-700 font-medium mb-1" data-i18n="30_year_fixed">30-year fixed</div>
-              <div class="flex items-center gap-2">
-                <div class="text-lg font-bold text-gray-900">{utahRates['30-year-fixed'].rate}</div>
-                {(() => {
-                  const change = generateRateChange();
-                  return <span class={`text-xs px-2 py-1 rounded-full bg-${change.color}-500 text-white font-medium`}>{change.sign}{change.value}%</span>;
-                })()}
-              </div>
+      <div class="carousel-track" data-basecount={cards.length}>
+        {cards.map((card) => (
+          <article class="rate-item">
+            <!-- Producto + variación semanal -->
+            <div class="flex items-start justify-between gap-2 mb-3">
+              <h3 class="rate-label" data-i18n={card.i18n}>{card.label}</h3>
+              {card.change ? (
+                <span class={`rate-chip ${card.trend.chip}`}>
+                  <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                    {card.direction === 'flat'
+                      ? <path d={card.trend.arrow} stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none" />
+                      : <path d={card.trend.arrow} fill="currentColor" />}
+                  </svg>
+                  <span>{card.change.sign}{card.change.value}%</span>
+                </span>
+              ) : (
+                <span class="rate-chip chip-flat" data-i18n="building_history">Building history</span>
+              )}
             </div>
-            <div class="text-center">
-              <div class="text-xs text-gray-500 mb-1" data-i18n="apr">APR</div>
-              <div class="text-sm font-bold text-gray-900">{utahRates['30-year-fixed'].apr}</div>
-            </div>
-            <div class="text-right">
-              <div class="text-xs text-gray-500 mb-1" data-i18n="points">Points</div>
-              <div class="text-sm font-semibold text-gray-900">{utahRates['30-year-fixed'].points}</div>
-            </div>
-          </div>
-        </div>
 
-        <!-- 20-year Fixed -->
-        <div class="rate-item bg-gray-200 rounded-lg p-4 shadow-sm border border-gray-300">
-          <div class="grid grid-cols-[2fr_1fr_1fr] gap-3 items-start">
-            <div class="flex flex-col">
-              <div class="text-xs text-gray-700 font-medium mb-1" data-i18n="20_year_fixed">20-year fixed</div>
-              <div class="flex items-center gap-2">
-                <div class="text-lg font-bold text-gray-900">{utahRates['20-year-fixed'].rate}</div>
-                {(() => {
-                  const change = generateRateChange();
-                  return <span class={`text-xs px-2 py-1 rounded-full bg-${change.color}-500 text-white font-medium`}>{change.sign}{change.value}%</span>;
-                })()}
+            <!-- Tasa + sparkline -->
+            <div class="flex items-end justify-between gap-3 mb-3">
+              <div class="min-w-0">
+                <div class="rate-value">{card.rate}</div>
+                <div class="rate-caption" data-i18n="vs_last_week">vs. last week</div>
               </div>
-            </div>
-            <div class="text-center">
-              <div class="text-xs text-gray-500 mb-1" data-i18n="apr">APR</div>
-              <div class="text-sm font-bold text-gray-900">{utahRates['20-year-fixed'].apr}</div>
-            </div>
-            <div class="text-right">
-              <div class="text-xs text-gray-500 mb-1" data-i18n="points">Points</div>
-              <div class="text-sm font-semibold text-gray-900">{utahRates['20-year-fixed'].points}</div>
-            </div>
-          </div>
-        </div>
 
-        <!-- 15-year Fixed -->
-        <div class="rate-item bg-gray-200 rounded-lg p-4 shadow-sm border border-gray-300">
-          <div class="grid grid-cols-[2fr_1fr_1fr] gap-3 items-start">
-            <div class="flex flex-col">
-              <div class="text-xs text-gray-700 font-medium mb-1" data-i18n="15_year_fixed">15-year fixed</div>
-              <div class="flex items-center gap-2">
-                <div class="text-lg font-bold text-gray-900">{utahRates['15-year-fixed'].rate}</div>
-                {(() => {
-                  const change = generateRateChange();
-                  return <span class={`text-xs px-2 py-1 rounded-full bg-${change.color}-500 text-white font-medium`}>{change.sign}{change.value}%</span>;
-                })()}
-              </div>
+              {card.linePath && card.lastPoint ? (
+                <svg
+                  class="rate-spark"
+                  viewBox={`0 0 ${SPARK_W} ${SPARK_H}`}
+                  width={SPARK_W}
+                  height={SPARK_H}
+                  preserveAspectRatio="none"
+                  role="img"
+                  aria-label={`${card.label} trend, last ${card.daysTracked} days`}
+                >
+                  <path d={card.areaPath} fill={card.trend.fill} />
+                  <path
+                    d={card.linePath}
+                    fill="none"
+                    stroke={card.trend.stroke}
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    vector-effect="non-scaling-stroke"
+                  />
+                  <circle cx={card.lastPoint[0]} cy={card.lastPoint[1]} r="2.6" fill={card.trend.stroke} />
+                </svg>
+              ) : (
+                <div class="rate-spark rate-spark-empty" aria-hidden="true"></div>
+              )}
             </div>
-            <div class="text-center">
-              <div class="text-xs text-gray-500 mb-1" data-i18n="apr">APR</div>
-              <div class="text-sm font-bold text-gray-900">{utahRates['15-year-fixed'].apr}</div>
-            </div>
-            <div class="text-right">
-              <div class="text-xs text-gray-500 mb-1" data-i18n="points">Points</div>
-              <div class="text-sm font-semibold text-gray-900">{utahRates['15-year-fixed'].points}</div>
-            </div>
-          </div>
-        </div>
 
-        <!-- 30-year FHA -->
-        <div class="rate-item bg-gray-200 rounded-lg p-4 shadow-sm border border-gray-300">
-          <div class="grid grid-cols-[2fr_1fr_1fr] gap-3 items-start">
-            <div class="flex flex-col">
-              <div class="text-xs text-gray-700 font-medium mb-1" data-i18n="30_year_fha">30-year FHA</div>
-              <div class="flex items-center gap-2">
-                <div class="text-lg font-bold text-gray-900">{utahRates['30-year-fha'].rate}</div>
-                {(() => {
-                  const change = generateRateChange();
-                  return <span class={`text-xs px-2 py-1 rounded-full bg-${change.color}-500 text-white font-medium`}>{change.sign}{change.value}%</span>;
-                })()}
-              </div>
-            </div>
-            <div class="text-center">
-              <div class="text-xs text-gray-500 mb-1" data-i18n="apr">APR</div>
-              <div class="text-sm font-bold text-gray-900">{utahRates['30-year-fha'].apr}</div>
-            </div>
-            <div class="text-right">
-              <div class="text-xs text-gray-500 mb-1" data-i18n="points">Points</div>
-              <div class="text-sm font-semibold text-gray-900">{utahRates['30-year-fha'].points}</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 30-year VA -->
-        {(() => {
-          const vaRates = getVaRates();
-          return (
-            <div class="rate-item bg-gray-200 rounded-lg p-4 shadow-sm border border-gray-300">
-              <div class="grid grid-cols-[2fr_1fr_1fr] gap-3 items-start">
-                <div class="flex flex-col">
-                  <div class="text-xs text-gray-700 font-medium mb-1" data-i18n="30_year_va">30-year VA</div>
-                  <div class="flex items-center gap-2">
-                    <div class="text-lg font-bold text-gray-900">{vaRates.rate}</div>
-                    {(() => {
-                      const change = generateRateChange();
-                      return <span class={`text-xs px-2 py-1 rounded-full bg-${change.color}-500 text-white font-medium`}>{change.sign}{change.value}%</span>;
-                    })()}
-                  </div>
+            <!-- Rango del periodo con marcador de la tasa actual -->
+            {card.stats && card.stats.max > card.stats.min && (
+              <div class="mb-3">
+                <div class="rate-range">
+                  <span class="rate-range-marker" style={`left: ${(card.stats.position * 100).toFixed(1)}%; background:${card.trend.stroke}`}></span>
                 </div>
-                <div class="text-center">
-                  <div class="text-xs text-gray-500 mb-1" data-i18n="apr">APR</div>
-                  <div class="text-sm font-bold text-gray-900">{vaRates.apr}</div>
-                </div>
-                <div class="text-right">
-                  <div class="text-xs text-gray-500 mb-1" data-i18n="points">Points</div>
-                  <div class="text-sm font-semibold text-gray-900">{vaRates.points}</div>
+                <div class="flex justify-between mt-1">
+                  <span class="rate-range-label">{card.stats.min.toFixed(3)}%</span>
+                  <span class="rate-range-label" data-i18n="last_30_days">Last 30 days</span>
+                  <span class="rate-range-label">{card.stats.max.toFixed(3)}%</span>
                 </div>
               </div>
-            </div>
-          );
-        })()}
+            )}
 
-        <!-- 30-year Jumbo -->
-        <div class="rate-item bg-gray-200 rounded-lg p-4 shadow-sm border border-gray-300">
-          <div class="grid grid-cols-[2fr_1fr_1fr] gap-3 items-start">
-            <div class="flex flex-col">
-              <div class="text-xs text-gray-700 font-medium mb-1" data-i18n="30_year_jumbo">30-year Jumbo</div>
-              <div class="flex items-center gap-2">
-                <div class="text-lg font-bold text-gray-900">{utahRates['30-year-jumbo'].rate}</div>
-                {(() => {
-                  const change = generateRateChange();
-                  return <span class={`text-xs px-2 py-1 rounded-full bg-${change.color}-500 text-white font-medium`}>{change.sign}{change.value}%</span>;
-                })()}
+            <!-- APR / Points -->
+            <div class="rate-footer">
+              <div>
+                <div class="rate-meta-label" data-i18n="apr">APR</div>
+                <div class="rate-meta-value">{card.apr}</div>
+              </div>
+              <div class="text-right">
+                <div class="rate-meta-label" data-i18n="points">Points</div>
+                <div class="rate-meta-value">{card.points}</div>
               </div>
             </div>
-            <div class="text-center">
-              <div class="text-xs text-gray-500 mb-1" data-i18n="apr">APR</div>
-              <div class="text-sm font-bold text-gray-900">{utahRates['30-year-jumbo'].apr}</div>
-            </div>
-            <div class="text-right">
-              <div class="text-xs text-gray-500 mb-1" data-i18n="points">Points</div>
-              <div class="text-sm font-semibold text-gray-900">{utahRates['30-year-jumbo'].points}</div>
-            </div>
-          </div>
-        </div>
+          </article>
+        ))}
       </div>
     </div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6">
-      <div class="flex justify-between items-center text-xs">
+      <div class="flex justify-between items-center text-xs gap-4">
         <p class="text-gray-500">
           *<span data-i18n="compared_week_over_week">Compared week over week.</span> <span data-i18n="rates_current_as_of">Rates are current as of</span> <span id="rates-date" data-ts={ratesData.timestamp}></span>.
+          {hasHistory && <span class="hidden sm:inline"> <span data-i18n="chart_source_note">Charts show this site’s published daily rates.</span></span>}
         </p>
-        <button id="openModal" class="text-gray-600 hover:text-gray-800 underline cursor-pointer" data-i18n="view_legal_disclosures">View legal disclosures</button>
+        <button id="openModal" class="text-gray-600 hover:text-gray-800 underline cursor-pointer whitespace-nowrap" data-i18n="view_legal_disclosures">View legal disclosures</button>
       </div>
     </div>
   </div>
@@ -225,24 +205,27 @@ function getVaRates() {
         <p data-i18n="legal_disclosures_text">
           The Broker Lenders purchase rates are for estimation purposes only. Every situation is different. Results do not reflect all loan programs and are subject to individual program loan limits. Qualification, rates and payments will vary based on timing and individual circumstances. Mortgage rates and pricing could change daily. Actual payments will vary based on your individual situation and current rates. Some products may not be available in all states. Some jumbo products may not be available to first time home buyers. Lending services may not be available in all areas. Some restrictions may apply. This is not a commitment to lend.
         </p>
-        
+
         <div class="space-y-3">
           <p>
             <strong data-i18n="30_year_fixed_example">30-year Fixed-Rate Loan:</strong> <span data-i18n="30_year_fixed_example_text">An interest rate of 6.375% (6.663% APR) is for the cost of 2.00 point(s) ($7,000.00) paid at closing. On a $350,000 mortgage, you would make monthly payments of $2,183.55. Monthly payment does not include taxes and insurance premiums. The actual payment amount will be greater. Payment assumes a loan-to-value (LTV) of 80.00%.</span>
           </p>
-          
+
           <p>
             <strong data-i18n="30_year_va_example">30-year Fixed-Rate VA Loan:</strong> <span data-i18n="30_year_va_example_text">An interest rate of 5.99% (6.372% APR) is for a cost of 1.75 Point(s) ($6,125.00) paid at closing. On a $350,000 mortgage, you would make monthly payments of $2,096.18. Monthly payment does not include taxes and insurance premiums. The actual payment amount will be greater. Payment assumes a loan-to-value (LTV) of 80.00%.</span>
           </p>
-          
+
           <p data-i18n="va_loans_note">
             VA loans do not require PMI. The VA loan is a benefit of military service and only offered to veterans, surviving spouses and active duty military.
           </p>
-          
+
           <p>
             <strong data-i18n="30_year_jumbo_example">30-year Fixed-Rate Loan (Jumbo):</strong> <span data-i18n="30_year_jumbo_example_text">An interest rate of 5.625% (5.829% APR) is for the cost of 1.75 point(s) ($19,250.00) paid at closing. On a $1,100,000 mortgage, you would make monthly payments of $6,332.23. Monthly payment does not include taxes and insurance premiums. The actual payment amount will be greater. Payment assumes a loan-to-value (LTV) of 70.00%.</span>
           </p>
-          
+
+          <p class="text-xs text-gray-500" data-i18n="chart_disclosure">
+            The trend charts show the daily rates published on this site over the last 30 days. They are historical estimates for illustration only and are not a quote, an index, or a forecast.
+          </p>
         </div>
       </div>
     </div>
@@ -256,52 +239,202 @@ function getVaRates() {
     overflow: hidden;
   }
 
+  /* Degradados laterales para que las tarjetas entren y salgan suavemente */
+  .carousel-container::before,
+  .carousel-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 3rem;
+    z-index: 2;
+    pointer-events: none;
+  }
+  .carousel-container::before {
+    left: 0;
+    background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
+  }
+  .carousel-container::after {
+    right: 0;
+    background: linear-gradient(to left, #fff, rgba(255, 255, 255, 0));
+  }
+
   .carousel-track {
     display: flex;
-    gap: 0;
-    animation: scroll 45s linear infinite;
+    gap: 1rem;
+    padding: 0.25rem 1rem;
+    width: max-content;
+    animation: scroll 60s linear infinite;
   }
 
   .carousel-track:hover {
     animation-play-state: paused;
   }
 
+  /* Tarjeta */
   .rate-item {
-    flex: 0 0 300px;
-    min-width: 300px;
+    flex: 0 0 320px;
+    min-width: 320px;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.875rem;
+    padding: 1rem 1.125rem 1.125rem;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04), 0 8px 20px -12px rgba(15, 23, 42, 0.18);
+    transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  }
+
+  .rate-item:hover {
+    border-color: #cbd5e1;
+    transform: translateY(-2px);
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06), 0 16px 28px -16px rgba(15, 23, 42, 0.28);
+  }
+
+  .rate-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #475569;
+    margin: 0;
+  }
+
+  .rate-value {
+    font-size: 1.75rem;
+    line-height: 1.1;
+    font-weight: 700;
+    color: #0f172a;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .rate-caption {
+    font-size: 0.6875rem;
+    color: #94a3b8;
+    margin-top: 0.125rem;
+  }
+
+  /* Chip de variación */
+  .rate-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    flex-shrink: 0;
+    padding: 0.1875rem 0.5rem;
+    border-radius: 9999px;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    border: 1px solid transparent;
+  }
+  .chip-up {
+    color: #b91c1c;
+    background: #fef2f2;
+    border-color: #fecaca;
+  }
+  .chip-down {
+    color: #15803d;
+    background: #f0fdf4;
+    border-color: #bbf7d0;
+  }
+  .chip-flat {
+    color: #475569;
+    background: #f1f5f9;
+    border-color: #e2e8f0;
+  }
+
+  /* Sparkline */
+  .rate-spark {
+    flex-shrink: 0;
+    width: 128px;
+    height: 40px;
+    overflow: visible;
+  }
+  .rate-spark-empty {
+    border-bottom: 2px dashed #e2e8f0;
+    height: 40px;
+  }
+
+  /* Barra de rango del periodo */
+  .rate-range {
+    position: relative;
+    height: 6px;
+    border-radius: 9999px;
+    background: linear-gradient(to right, #dcfce7, #e2e8f0, #fee2e2);
+  }
+
+  .rate-range-marker {
+    position: absolute;
+    top: 50%;
+    width: 3px;
+    height: 12px;
+    border-radius: 9999px;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 0 2px #fff;
+  }
+
+  .rate-range-label {
+    font-size: 0.625rem;
+    color: #94a3b8;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Pie con APR y puntos */
+  .rate-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 0.75rem;
+    border-top: 1px solid #f1f5f9;
+  }
+
+  .rate-meta-label {
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #94a3b8;
+    margin-bottom: 0.125rem;
+  }
+
+  .rate-meta-value {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #0f172a;
+    font-variant-numeric: tabular-nums;
   }
 
   @media (max-width: 640px) {
     .rate-item {
-      flex: 0 0 260px;
-      min-width: 260px;
+      flex: 0 0 280px;
+      min-width: 280px;
     }
     .carousel-track {
-      animation-duration: 35s;
+      animation-duration: 40s;
+    }
+    .carousel-container::before,
+    .carousel-container::after {
+      width: 1.5rem;
     }
   }
 
-  @media (min-width: 1024px) {
-    .carousel-track {
-      animation-duration: 60s;
-    }
-  }
-
+  /* Desplaza exactamente el ancho de un set base (lo calcula el script) */
   @keyframes scroll {
-    0% {
+    from {
       transform: translateX(0);
     }
-    100% {
-      transform: translateX(-50%);
+    to {
+      transform: translateX(calc(-1 * var(--scroll-distance, 50%)));
     }
   }
 
-  /* Fix for Tailwind CSS dynamic color classes */
-  .bg-red-500 {
-    background-color: rgb(239 68 68);
-  }
-  .bg-green-500 {
-    background-color: rgb(34 197 94);
+  @media (prefers-reduced-motion: reduce) {
+    .carousel-track {
+      animation: none;
+    }
+    .carousel-container {
+      overflow-x: auto;
+    }
+    .rate-item:hover {
+      transform: none;
+    }
   }
 </style>
 
@@ -405,18 +538,57 @@ function getVaRates() {
       if (lang) setLanguage(lang);
     }
   });
+
+  // Loop infinito: clonamos el set base y desplazamos exactamente su ancho
   const container = document.querySelector('.carousel-container');
   const track = container ? container.querySelector('.carousel-track') : null;
   if (container && track) {
-    const baseCountAttr = track.getAttribute('data-basecount');
-    const baseCount = baseCountAttr ? Number(baseCountAttr) : track.querySelectorAll('.rate-item').length;
-    const baseChildren = Array.from(track.children).slice(0, baseCount);
-    const target = container.offsetWidth * 2;
-    let guard = 0;
-    while (track.scrollWidth < target && guard < 10) {
-      for (const node of baseChildren) track.appendChild(node.cloneNode(true));
-      guard++;
-    }
+    const setupCarousel = () => {
+      const baseCountAttr = track.getAttribute('data-basecount');
+      const baseCount = baseCountAttr
+        ? Number(baseCountAttr)
+        : track.querySelectorAll('.rate-item').length;
+      if (!baseCount) return;
+
+      const baseChildren = Array.from(track.children).slice(0, baseCount);
+
+      // Al menos una copia para poder medir el salto del loop, y las que hagan
+      // falta para cubrir el doble del ancho visible.
+      const target = container.offsetWidth * 2;
+      let guard = 0;
+      do {
+        for (const node of baseChildren) track.appendChild(node.cloneNode(true));
+        guard++;
+      } while (track.scrollWidth < target && guard < 10);
+
+      // Distancia = posición del primer item del segundo set (incluye el gap)
+      const items = track.children;
+      const first = items[0];
+      const firstOfSecondSet = items[baseCount];
+      if (!first || !firstOfSecondSet) return;
+
+      const distance = firstOfSecondSet.getBoundingClientRect().left
+        - first.getBoundingClientRect().left;
+      if (distance > 0) {
+        track.style.setProperty('--scroll-distance', `${distance}px`);
+      }
+    };
+
+    setupCarousel();
+
+    // Recalcular si cambia el ancho (rotación de pantalla, resize)
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        const baseCount = Number(track.getAttribute('data-basecount')) || 0;
+        const items = track.children;
+        if (!baseCount || !items[baseCount]) return;
+        const distance = items[baseCount].getBoundingClientRect().left
+          - items[0].getBoundingClientRect().left;
+        if (distance > 0) track.style.setProperty('--scroll-distance', `${distance}px`);
+      }, 200);
+    });
   }
   })();
 </script>

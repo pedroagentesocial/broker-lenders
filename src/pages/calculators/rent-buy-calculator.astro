@@ -88,7 +88,13 @@ const dict = enDict;
   })();
 </script>
 
-<Layout title={dict.page_title} lang={lang}>
+<Layout
+	title={dict.page_title}
+	lang={lang}
+	description="Rent vs Buy calculator: find the break-even point and decide whether buying a home or continuing to rent makes more financial sense for you."
+	keywords="rent vs buy calculator, rent or buy a home, breakeven home purchase, renting vs owning"
+	hreflangPath="/calculators/rent-buy-calculator"
+>
 	<section class="bg-white py-4">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 			<nav class="flex" aria-label="Breadcrumb">
@@ -505,22 +511,22 @@ const dict = enDict;
       }
     });
 
-    const fmt = (n) => {
+    const fmt = (n: number) => {
       const v = Math.max(0, Math.round(n || 0));
       return '$' + v.toLocaleString('en-US');
     };
-    const getNumber = (el) => {
+    const getNumber = (el: HTMLInputElement | null) => {
       const v = el && el.value ? el.value.replace(/[^0-9.]/g, '') : '0';
       return parseFloat(v || '0') || 0;
     };
     const dpSymbol = document.getElementById('downPaymentSymbol');
     const toggleDollar = document.getElementById('toggleDollar');
     const togglePercent = document.getElementById('togglePercent');
-    const purchaseEl = document.getElementById('purchasePrice') || document.getElementById('homePrice');
-    const dpEl = document.getElementById('downPayment');
-    const irEl = document.getElementById('interestRate');
-    const rentEl = document.getElementById('monthlyRent');
-    const yearsRange = document.getElementById('equityYears');
+    const purchaseEl = (document.getElementById('purchasePrice') || document.getElementById('homePrice')) as HTMLInputElement | null;
+    const dpEl = document.getElementById('downPayment') as HTMLInputElement | null;
+    const irEl = document.getElementById('interestRate') as HTMLInputElement | null;
+    const rentEl = document.getElementById('monthlyRent') as HTMLInputElement | null;
+    const yearsRange = document.getElementById('equityYears') as HTMLInputElement | null;
     const equityYearsLabel = document.getElementById('equityYearsLabel');
     const costYearsLabel = document.getElementById('costYearsLabel');
     const equityBar = document.getElementById('equityBar');
@@ -685,11 +691,11 @@ const dict = enDict;
     if (dpMode === 'percent') activatePercent(); else activateDollar();
 
     const updateModeButtons = () => {
-      const setSelected = (btn) => {
+      const setSelected = (btn: HTMLElement | null) => {
         btn && btn.classList.add('bg-black','text-white');
         btn && btn.classList.remove('bg-white','text-black');
       };
-      const setUnselected = (btn) => {
+      const setUnselected = (btn: HTMLElement | null) => {
         btn && btn.classList.add('bg-white','text-black');
         btn && btn.classList.remove('bg-black','text-white');
       };
@@ -718,9 +724,9 @@ const dict = enDict;
     const faqButtons = document.querySelectorAll('.faq-button');
     faqButtons.forEach((button) => {
       const btn = button;
-      btn.addEventListener('click', function() {
+      btn.addEventListener('click', function (this: HTMLElement) {
         const content = this.nextElementSibling;
-        const icon = this.querySelector('.faq-icon');
+        const icon = this.querySelector<HTMLElement>('.faq-icon');
         
         if (content && icon) {
           if (content.classList.contains('hidden')) {

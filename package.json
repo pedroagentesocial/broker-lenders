@@ -11,13 +11,16 @@
     "setup-cron": "node scripts/setup-cron.js",
     "test-automation": "node scripts/test-automation.js",
     "setup-notifications": "node scripts/setup-notifications.js",
-    "test-notifications": "node scripts/test-notifications.js"
+    "test-notifications": "node scripts/test-notifications.js",
+    "rates-history": "node scripts/build-rates-history.js --from-git"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.7.2",
     "@tailwindcss/vite": "^4.1.16",
     "astro": "^5.15.2",
     "dotenv": "^16.3.1",
     "nodemailer": "^6.9.7",
+    "swiper": "^12.1.4",
     "tailwindcss": "^4.1.16"
   },
   "devDependencies": {

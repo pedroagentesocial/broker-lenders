@@ -9,7 +9,12 @@ const enB64 = Buffer.from(JSON.stringify(enDict)).toString('base64');
 const esB64 = Buffer.from(JSON.stringify(esDict)).toString('base64');
 ---
 
-<Layout title={dict.title} lang={lang}>
+<Layout
+  title={dict.title}
+  lang={lang}
+  description="Broker Lenders legal disclosures: NMLS licensing, lender partner information, equal housing opportunity statement and regulatory disclosures."
+  hreflangPath="/legal/disclosures"
+>
   <div class="min-h-screen bg-white">
     <!-- i18n payload for Disclosures page -->
     <div id="i18n-disclosures" data-en={enB64} data-es={esB64} style="display:none"></div>

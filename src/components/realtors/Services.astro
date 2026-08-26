@@ -1,0 +1,379 @@
+---
+import enPage from '../../translations/realtors/en.json';
+const dict = enPage as any;
+
+interface LoanConfig {
+  id: string;
+  icon: 'map-pin' | 'trending-down' | 'circle-check' | 'wallet' | 'shield-check' | 'messages-square' | 'graduation-cap' | 'key';
+}
+
+interface ToolConfig {
+  id: string;
+  icon: 'zap' | 'bot' | 'languages' | 'calendar-check' | 'megaphone' | 'phone-call';
+}
+
+const loans: LoanConfig[] = [
+  { id: 'neighborhood', icon: 'map-pin' },
+  { id: 'rates',        icon: 'trending-down' },
+  { id: 'preapprovals', icon: 'circle-check' },
+  { id: 'downPayment',  icon: 'wallet' },
+  { id: 'programs',     icon: 'shield-check' },
+  { id: 'bilingual',    icon: 'messages-square' },
+  { id: 'guidance',     icon: 'graduation-cap' },
+  { id: 'closings',     icon: 'key' },
+];
+
+const tools: ToolConfig[] = [
+  { id: 'preapprovals',    icon: 'zap' },
+  { id: 'crm',             icon: 'bot' },
+  { id: 'bilingual',       icon: 'languages' },
+  { id: 'closings',        icon: 'calendar-check' },
+  { id: 'marketing',       icon: 'megaphone' },
+  { id: 'directLine',      icon: 'phone-call' },
+];
+---
+
+<section
+  class="services-section bg-white py-16 lg:py-24"
+  aria-labelledby="services-heading"
+>
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-3xl text-center">
+      <p
+        class="svc-reveal mb-4 text-xs sm:text-sm font-semibold uppercase tracking-[0.18em] text-red-600"
+        style="--reveal-delay: 0ms"
+        data-i18n="services.eyebrow"
+      >{dict.services.eyebrow}</p>
+      <h2
+        id="services-heading"
+        class="svc-reveal mb-5 text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900"
+        style="--reveal-delay: 80ms"
+        data-i18n="services.headline"
+      >{dict.services.headline}</h2>
+      <p
+        class="svc-reveal mx-auto max-w-2xl text-base sm:text-lg leading-relaxed text-gray-600"
+        style="--reveal-delay: 160ms"
+        data-i18n="services.subheadline"
+      >{dict.services.subheadline}</p>
+    </div>
+
+    <!-- GROUP 1 — LOAN PROGRAMS FOR YOUR CLIENTS -->
+    <div class="mt-14 lg:mt-20">
+      <div class="svc-reveal mb-8" style="--reveal-delay: 320ms">
+        <p
+          class="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-red-600"
+          data-i18n="services.loanGroup.eyebrow"
+        >{dict.services.loanGroup.eyebrow}</p>
+        <h3
+          class="text-2xl font-bold text-gray-900"
+          data-i18n="services.loanGroup.title"
+        >{dict.services.loanGroup.title}</h3>
+        <p
+          class="mt-1 text-sm text-gray-500"
+          data-i18n="services.loanGroup.context"
+        >{dict.services.loanGroup.context}</p>
+      </div>
+
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {loans.map((loan, i) => {
+          const data = dict.services.loans[i];
+          return (
+            <article
+              class="loan-card group flex h-full flex-col rounded-xl border border-gray-200 bg-white p-5 hover:-translate-y-0.5 hover:border-red-600 hover:shadow-md"
+              style={`--reveal-delay: ${400 + i * 50}ms`}
+            >
+              <div
+                class="mb-3 inline-flex h-8 w-8 items-center justify-center rounded-lg bg-red-600/10 text-red-600 transition-colors duration-250 ease-out group-hover:bg-red-600 group-hover:text-white"
+                aria-hidden="true"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="h-4 w-4"
+                >
+                  {loan.icon === 'map-pin' && (
+                    <Fragment>
+                      <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+                      <circle cx="12" cy="10" r="3" />
+                    </Fragment>
+                  )}
+                  {loan.icon === 'trending-down' && (
+                    <Fragment>
+                      <polyline points="22 17 13.5 8.5 8.5 13.5 2 7" />
+                      <polyline points="16 17 22 17 22 11" />
+                    </Fragment>
+                  )}
+                  {loan.icon === 'circle-check' && (
+                    <Fragment>
+                      <circle cx="12" cy="12" r="10" />
+                      <path d="m9 12 2 2 4-4" />
+                    </Fragment>
+                  )}
+                  {loan.icon === 'wallet' && (
+                    <Fragment>
+                      <path d="M21 12V7H5a2 2 0 0 1 0-4h14v4" />
+                      <path d="M3 5v14a2 2 0 0 0 2 2h16v-5" />
+                      <path d="M18 12a2 2 0 0 0 0 4h4v-4Z" />
+                    </Fragment>
+                  )}
+                  {loan.icon === 'shield-check' && (
+                    <Fragment>
+                      <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+                      <path d="m9 12 2 2 4-4" />
+                    </Fragment>
+                  )}
+                  {loan.icon === 'messages-square' && (
+                    <Fragment>
+                      <path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2z" />
+                      <path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1" />
+                    </Fragment>
+                  )}
+                  {loan.icon === 'graduation-cap' && (
+                    <Fragment>
+                      <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z" />
+                      <path d="M22 10v6" />
+                      <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" />
+                    </Fragment>
+                  )}
+                  {loan.icon === 'key' && (
+                    <Fragment>
+                      <path d="m15.5 7.5 2.3 2.3a1 1 0 0 0 1.4 0l2.1-2.1a1 1 0 0 0 0-1.4L19 4" />
+                      <path d="m21 2-9.6 9.6" />
+                      <circle cx="7.5" cy="15.5" r="5.5" />
+                    </Fragment>
+                  )}
+                </svg>
+              </div>
+              <h4
+                class="mb-1 text-base font-bold text-gray-900"
+                data-i18n={`services.loans.${i}.name`}
+              >{data.name}</h4>
+              <p
+                class="text-xs text-gray-500"
+                data-i18n={`services.loans.${i}.bestFor`}
+              >{data.bestFor}</p>
+            </article>
+          );
+        })}
+      </div>
+
+      <p
+        class="svc-reveal mt-6 text-center text-sm text-gray-500"
+        style="--reveal-delay: 850ms"
+      >
+        <span data-i18n="services.loansFooter">{dict.services.loansFooter}</span>
+        {' '}
+        <a
+          href="/loan-options"
+          class="font-semibold text-red-600 hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-red-600 focus-visible:ring-offset-2 rounded-sm"
+          data-i18n="services.loansFooterLink"
+        >→ {dict.services.loansFooterLink}</a>
+      </p>
+    </div>
+
+    <!-- GROUP 2 — REALTOR PARTNER TOOLS -->
+    <div class="mt-20">
+      <div class="svc-reveal mb-8" style="--reveal-delay: 950ms">
+        <p
+          class="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-red-600"
+          data-i18n="services.partnerGroup.eyebrow"
+        >{dict.services.partnerGroup.eyebrow}</p>
+        <h3
+          class="text-2xl font-bold text-gray-900"
+          data-i18n="services.partnerGroup.title"
+        >{dict.services.partnerGroup.title}</h3>
+        <p
+          class="mt-1 text-sm text-gray-500"
+          data-i18n="services.partnerGroup.context"
+        >{dict.services.partnerGroup.context}</p>
+      </div>
+
+      <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {tools.map((tool, i) => {
+          const data = dict.services.tools[i];
+          return (
+            <article
+              class="tool-card group flex flex-col rounded-xl border border-gray-200 bg-white p-6 lg:p-7 shadow-sm hover:-translate-y-1 hover:border-red-600 hover:shadow-lg"
+              style={`--reveal-delay: ${1050 + i * 60}ms`}
+            >
+              <div
+                class="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-red-600/10 text-red-600 transition-colors duration-300 ease-out group-hover:bg-red-600 group-hover:text-white"
+                aria-hidden="true"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="h-5 w-5"
+                >
+                  {tool.icon === 'zap' && (
+                    <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z" />
+                  )}
+                  {tool.icon === 'bot' && (
+                    <Fragment>
+                      <path d="M12 8V4H8" />
+                      <rect width="16" height="12" x="4" y="8" rx="2" />
+                      <path d="M2 14h2" />
+                      <path d="M20 14h2" />
+                      <path d="M15 13v2" />
+                      <path d="M9 13v2" />
+                    </Fragment>
+                  )}
+                  {tool.icon === 'languages' && (
+                    <Fragment>
+                      <path d="m5 8 6 6" />
+                      <path d="m4 14 6-6 2-3" />
+                      <path d="M2 5h12" />
+                      <path d="M7 2h1" />
+                      <path d="m22 22-5-10-5 10" />
+                      <path d="M14 18h6" />
+                    </Fragment>
+                  )}
+                  {tool.icon === 'calendar-check' && (
+                    <Fragment>
+                      <path d="M8 2v4" />
+                      <path d="M16 2v4" />
+                      <rect width="18" height="18" x="3" y="4" rx="2" />
+                      <path d="M3 10h18" />
+                      <path d="m9 16 2 2 4-4" />
+                    </Fragment>
+                  )}
+                  {tool.icon === 'megaphone' && (
+                    <Fragment>
+                      <path d="m3 11 18-5v12L3 14v-3z" />
+                      <path d="M11.6 16.8a3 3 0 1 1-5.8-1.6" />
+                    </Fragment>
+                  )}
+                  {tool.icon === 'phone-call' && (
+                    <Fragment>
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                      <path d="M14.05 2a9 9 0 0 1 8 7.94" />
+                      <path d="M14.05 6A5 5 0 0 1 18 10" />
+                    </Fragment>
+                  )}
+                </svg>
+              </div>
+              <h4
+                class="mb-1 text-lg font-bold text-gray-900"
+                data-i18n={`services.tools.${i}.name`}
+              >{data.name}</h4>
+              <p
+                class="max-w-xs text-sm leading-relaxed text-gray-500"
+                data-i18n={`services.tools.${i}.description`}
+              >{data.description}</p>
+            </article>
+          );
+        })}
+      </div>
+
+      <p
+        class="svc-reveal mt-8 text-center"
+        style="--reveal-delay: 1450ms"
+      >
+        <a
+          href="#pricing"
+          class="text-sm font-semibold text-red-600 hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-red-600 focus-visible:ring-offset-2 rounded-sm"
+          data-i18n="services.compareLink"
+        >{dict.services.compareLink}</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  /*
+   * Hover transitions are always-on (so cards feel responsive even when
+   * reveal is disabled). Reveal CSS only attaches under .reveal-ready,
+   * applied by JS only when motion is enabled and IO works.
+   *
+   * Reveal uses `translate` property; hover lift uses `transform` (Tailwind
+   * `hover:-translate-y-0.5` / `-translate-y-1`) — different properties → no
+   * conflict between the two transitions.
+   */
+  .loan-card,
+  .tool-card {
+    transition:
+      border-color 250ms ease-out,
+      box-shadow 250ms ease-out,
+      transform 250ms ease-out;
+  }
+
+  .services-section.reveal-ready .svc-reveal,
+  .services-section.reveal-ready .loan-card,
+  .services-section.reveal-ready .tool-card {
+    opacity: 0;
+    translate: 0 16px;
+    transition:
+      opacity 600ms ease-out var(--reveal-delay, 0ms),
+      translate 600ms ease-out var(--reveal-delay, 0ms),
+      border-color 250ms ease-out,
+      box-shadow 250ms ease-out,
+      transform 250ms ease-out;
+    will-change: opacity, translate;
+  }
+
+  .services-section.reveal-ready.is-visible .svc-reveal,
+  .services-section.reveal-ready.is-visible .loan-card,
+  .services-section.reveal-ready.is-visible .tool-card {
+    opacity: 1;
+    translate: 0 0;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .services-section.reveal-ready .svc-reveal,
+    .services-section.reveal-ready .loan-card,
+    .services-section.reveal-ready .tool-card {
+      opacity: 1 !important;
+      translate: 0 0 !important;
+    }
+    .services-section.reveal-ready .svc-reveal {
+      transition: none !important;
+    }
+    .services-section.reveal-ready .loan-card,
+    .services-section.reveal-ready .tool-card {
+      transition:
+        border-color 250ms ease-out,
+        box-shadow 250ms ease-out,
+        transform 250ms ease-out !important;
+    }
+  }
+</style>
+
+<script is:inline>
+  (() => {
+    const init = () => {
+      const section = document.querySelector('.services-section');
+      if (!section) return;
+
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const ioSupported = 'IntersectionObserver' in window;
+      if (reduce || !ioSupported) return;
+
+      section.classList.add('reveal-ready');
+
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { rootMargin: '0px 0px -20% 0px', threshold: 0.01 });
+
+      io.observe(section);
+    };
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  })();
+</script>

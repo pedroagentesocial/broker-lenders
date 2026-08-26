@@ -20,5 +20,10 @@
   "30_year_va_example_text": "An interest rate of 5.99% (6.372% APR) is for a cost of 1.75 Point(s) ($6,125.00) paid at closing. On a $350,000 mortgage, you would make monthly payments of $2,096.18. Monthly payment does not include taxes and insurance premiums. The actual payment amount will be greater. Payment assumes a loan-to-value (LTV) of 80.00%.",
   "va_loans_note": "VA loans do not require PMI. The VA loan is a benefit of military service and only offered to veterans, surviving spouses and active duty military.",
   "30_year_jumbo_example": "30-year Fixed-Rate Loan (Jumbo):",
-  "30_year_jumbo_example_text": "An interest rate of 5.625% (5.829% APR) is for the cost of 1.75 point(s) ($19,250.00) paid at closing. On a $1,100,000 mortgage, you would make monthly payments of $6,332.23. Monthly payment does not include taxes and insurance premiums. The actual payment amount will be greater. Payment assumes a loan-to-value (LTV) of 70.00%."
+  "30_year_jumbo_example_text": "An interest rate of 5.625% (5.829% APR) is for the cost of 1.75 point(s) ($19,250.00) paid at closing. On a $1,100,000 mortgage, you would make monthly payments of $6,332.23. Monthly payment does not include taxes and insurance premiums. The actual payment amount will be greater. Payment assumes a loan-to-value (LTV) of 70.00%.",
+  "vs_last_week": "vs. last week",
+  "last_30_days": "Last 30 days",
+  "building_history": "Building history",
+  "chart_source_note": "Charts show this site’s published daily rates.",
+  "chart_disclosure": "The trend charts show the daily rates published on this site over the last 30 days. They are historical estimates for illustration only and are not a quote, an index, or a forecast."
 }

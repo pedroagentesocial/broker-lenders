@@ -1,4 +1,10 @@
 @import "tailwindcss";
+
+/* Smooth scroll for in-page anchors. Disabled when the user prefers reduced motion. */
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
 /* Language icon hover color sync */
 .group:hover .icon-language {
   filter: invert(27%) sepia(88%) saturate(5632%) hue-rotate(349deg) brightness(93%) contrast(94%);

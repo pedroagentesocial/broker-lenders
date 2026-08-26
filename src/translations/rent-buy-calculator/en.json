@@ -17,7 +17,10 @@
       "interest_rate": "Interest rate",
       "zip_code": "ZIP code",
       "yearly_property_tax": "Yearly property taxes",
-      "yearly_home_insurance": "Yearly homeowners insurance"
+      "yearly_home_insurance": "Yearly homeowners insurance",
+      "purchase_price": "Purchase price",
+      "credit_score": "Credit score",
+      "monthly_rent": "Monthly rent"
     },
     "tooltips": {
       "loan_term": "Term: 30 years lower payments, 15 years less interest",
@@ -126,12 +129,30 @@
     "title": "Rent vs Buy Calculator FAQs",
     "subtitle": "Don't see your question here? We love helping people understand how housing costs compare for renting versus buying.",
     "items": [
-      { "q": "What does this rent vs buy calculator evaluate?", "a": "It compares estimated renting and buying costs and shows accumulated home equity when buying versus $0 equity when renting. Results update based on selected years, interest rate, and the values you enter." },
-      { "q": "How do we calculate home equity when buying?", "a": "We project the home's value using an annual appreciation rate and subtract the remaining loan balance at the selected year. The difference is the equity shown in the chart." },
-      { "q": "What do Monthly, Annual and Total cost include?", "a": "Monthly uses costs for the selected year prorated per month (principal & interest plus property taxes, maintenance, HOA, homeowners insurance and PMI if applicable). Annual multiplies those monthly costs by 12. Total cost adds down payment and closing costs for buying, and adds a security deposit for renting." },
-      { "q": "How does the years slider affect the results?", "a": "It updates equity, rent growth, and estimated costs. It also recalculates the Monthly, Annual, and Total cost modes for the selected year." },
-      { "q": "When does PMI appear?", "a": "If the loan-to-value (LTV) ratio at the selected year is above 80%, we estimate annual PMI. If LTV falls to 80% or below, PMI is set to $0." },
-      { "q": "Are the results final?", "a": "No. These are directional estimates. Rates, costs, and payments vary with timing and individual circumstances. Use them as a reference and review options with Broker Lenders." }
+      {
+        "q": "What does this rent vs buy calculator evaluate?",
+        "a": "It compares estimated renting and buying costs and shows accumulated home equity when buying versus $0 equity when renting. Results update based on selected years, interest rate, and the values you enter."
+      },
+      {
+        "q": "How do we calculate home equity when buying?",
+        "a": "We project the home's value using an annual appreciation rate and subtract the remaining loan balance at the selected year. The difference is the equity shown in the chart."
+      },
+      {
+        "q": "What do Monthly, Annual and Total cost include?",
+        "a": "Monthly uses costs for the selected year prorated per month (principal & interest plus property taxes, maintenance, HOA, homeowners insurance and PMI if applicable). Annual multiplies those monthly costs by 12. Total cost adds down payment and closing costs for buying, and adds a security deposit for renting."
+      },
+      {
+        "q": "How does the years slider affect the results?",
+        "a": "It updates equity, rent growth, and estimated costs. It also recalculates the Monthly, Annual, and Total cost modes for the selected year."
+      },
+      {
+        "q": "When does PMI appear?",
+        "a": "If the loan-to-value (LTV) ratio at the selected year is above 80%, we estimate annual PMI. If LTV falls to 80% or below, PMI is set to $0."
+      },
+      {
+        "q": "Are the results final?",
+        "a": "No. These are directional estimates. Rates, costs, and payments vary with timing and individual circumstances. Use them as a reference and review options with Broker Lenders."
+      }
     ]
   }
 }

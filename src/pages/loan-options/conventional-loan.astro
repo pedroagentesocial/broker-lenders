@@ -121,7 +121,13 @@ const esB64 = Buffer.from(JSON.stringify(esDict)).toString('base64');
   })();
 </script>
 
-<Layout title={dict.title}>
+<Layout
+  title={dict.title}
+  lang={lang}
+  description="Conventional loans starting at 3% down with flexible terms for primary, second and investment homes. Compare conventional mortgage options with Broker Lenders."
+  keywords="conventional loan, conventional mortgage, 3 percent down, conforming loan, conventional rates"
+  hreflangPath="/loan-options/conventional-loan"
+>
   <!-- Breadcrumb Section -->
   <div class="bg-white py-4">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

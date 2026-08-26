@@ -1,6 +1,7 @@
 {
   "meta": {
-    "title": "Tasas hipotecarias de hoy - Broker Lenders"
+    "title": "Tasas hipotecarias de hoy - Broker Lenders",
+    "description": "Consulta las tasas hipotecarias de hoy para préstamos fijos a 30 años, fijos a 15 años, FHA, VA y Jumbo. Tasas actualizadas a diario por Broker Lenders. NMLS #318973."
   },
   "breadcrumb": {
     "home": "Inicio",
@@ -57,8 +58,7 @@
       "legal": "Ver divulgaciones legales",
       "timestampPrefix": "Las tasas están actualizadas al"
     }
-  }
-  ,
+  },
   "modal": {
     "title": "Divulgaciones legales",
     "p1": "Cada situación es diferente. Estas cifras son solo para fines de estimación y pueden no reflejar los términos exactos de su préstamo. Esto no constituye un compromiso de préstamo.",

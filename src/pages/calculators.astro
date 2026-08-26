@@ -11,14 +11,20 @@ export const prerender = true;
 // Build estático: i18n en cliente; render en inglés
 const lang = 'en';
 const dict = en;
-const withLang = (path) => path;
+const withLang = (path: string) => path;
 // Encode both translations for client-side switching without reload
-const toB64 = (obj) => Buffer.from(JSON.stringify(obj), 'utf-8').toString('base64');
+const toB64 = (obj: unknown) => Buffer.from(JSON.stringify(obj), 'utf-8').toString('base64');
 const enB64 = toB64(en);
 const esB64 = toB64(es);
 ---
 
-<Layout title="Mortgage Calculators - Broker Lenders" lang={lang}>
+<Layout
+	title="Mortgage Calculators - Broker Lenders"
+	lang={lang}
+	description="Free mortgage calculators: estimate your monthly payment, refinance savings, payoff schedule, and whether to rent or buy. Plan your home loan with Broker Lenders."
+	keywords="mortgage calculator, refinance calculator, mortgage payoff calculator, rent vs buy calculator, home loan calculator"
+	hreflangPath="/calculators"
+>
 	<!-- Breadcrumb Section -->
 	<div class="bg-white py-4">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

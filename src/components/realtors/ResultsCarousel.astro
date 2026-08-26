@@ -1,0 +1,389 @@
+---
+import enPage from '../../translations/realtors/en.json';
+const dict = enPage as any;
+
+interface MetricConfig {
+  value: number;
+  decimals: number;
+  chars: number;
+}
+
+interface SlideConfig {
+  id: string;
+  locationEmoji: string;
+  avatarInitials: string;
+  metrics: MetricConfig[];
+}
+
+const slides: SlideConfig[] = [
+  {
+    id: 'fast-close',
+    locationEmoji: '🏔️',
+    avatarInitials: 'MR',
+    metrics: [
+      { value: 14,    decimals: 0, chars: 2 },
+      { value: 24,    decimals: 0, chars: 2 },
+      { value: 3,     decimals: 0, chars: 1 },
+    ],
+  },
+  {
+    id: 'difficult',
+    locationEmoji: '🌲',
+    avatarInitials: 'JT',
+    metrics: [
+      { value: 2,     decimals: 0, chars: 1 },
+      { value: 7,     decimals: 0, chars: 1 },
+      { value: 480,   decimals: 0, chars: 3 },
+    ],
+  },
+  {
+    id: 'savings',
+    locationEmoji: '🎰',
+    avatarInitials: 'CM',
+    metrics: [
+      { value: 12000, decimals: 0, chars: 6 },
+      { value: 3.5,   decimals: 1, chars: 3 },
+      { value: 1,     decimals: 0, chars: 1 },
+    ],
+  },
+  {
+    id: 'volume',
+    locationEmoji: '🤠',
+    avatarInitials: 'SC',
+    metrics: [
+      { value: 8,     decimals: 0, chars: 1 },
+      { value: 18,    decimals: 0, chars: 2 },
+      { value: 100,   decimals: 0, chars: 3 },
+    ],
+  },
+];
+
+const formatNumber = (value: number, decimals: number) =>
+  value.toLocaleString('en-US', {
+    minimumFractionDigits: decimals,
+    maximumFractionDigits: decimals,
+  });
+---
+
+<section
+  class="results-carousel-section relative bg-gray-50 py-16 lg:py-24"
+  aria-labelledby="results-carousel-heading"
+>
+  <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-3xl text-center">
+      <p
+        class="rc-reveal mb-4 text-xs sm:text-sm font-semibold uppercase tracking-[0.18em] text-red-600"
+        style="--reveal-delay: 0ms"
+        data-i18n="caseStudies.eyebrow"
+      >{dict.caseStudies.eyebrow}</p>
+      <h2
+        id="results-carousel-heading"
+        class="rc-reveal mb-5 text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900"
+        style="--reveal-delay: 80ms"
+        data-i18n="caseStudies.headline"
+      >{dict.caseStudies.headline}</h2>
+      <p
+        class="rc-reveal mx-auto max-w-2xl text-base sm:text-lg leading-relaxed text-gray-600"
+        style="--reveal-delay: 160ms"
+        data-i18n="caseStudies.subheadline"
+      >{dict.caseStudies.subheadline}</p>
+    </div>
+
+    <div class="rc-reveal mt-12 lg:mt-16" style="--reveal-delay: 320ms">
+      <div class="swiper results-swiper">
+        <div class="swiper-wrapper">
+          {slides.map((slide, i) => {
+            const s = dict.caseStudies.slides[i];
+            return (
+              <div class="swiper-slide">
+                <article
+                  class="rc-card flex h-full min-h-[540px] flex-col rounded-2xl border border-gray-100 bg-white p-8 shadow-2xl lg:min-h-[480px] lg:p-12"
+                  aria-labelledby={`rc-${slide.id}-headline`}
+                >
+                  <div class="mb-6 flex flex-wrap items-center gap-3">
+                    <span
+                      class="inline-block rounded-full bg-red-600 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-white"
+                      data-i18n={`caseStudies.slides.${i}.category`}
+                    >{s.category}</span>
+                    <span class="inline-flex items-center gap-1.5 text-sm text-gray-500">
+                      <span aria-hidden="true">{slide.locationEmoji}</span>
+                      <span data-i18n={`caseStudies.slides.${i}.locationText`}>{s.locationText}</span>
+                    </span>
+                  </div>
+
+                  <h3
+                    id={`rc-${slide.id}-headline`}
+                    class="mb-8 max-w-2xl text-2xl lg:text-3xl font-bold text-gray-900"
+                    data-i18n={`caseStudies.slides.${i}.headline`}
+                  >{s.headline}</h3>
+
+                  <div class="mb-8 grid grid-cols-1 gap-6 sm:grid-cols-3">
+                    {slide.metrics.map((metric, j) => {
+                      const m = s.metrics[j];
+                      return (
+                        <div class="metric-block flex flex-col items-center text-center">
+                          <span class="sr-only" data-i18n={`caseStudies.slides.${i}.metrics.${j}.ariaText`}>{m.ariaText}</span>
+                          <div class="flex items-baseline" aria-hidden="true">
+                            {m.prefix && (
+                              <span
+                                class="text-3xl lg:text-4xl font-extrabold leading-none text-red-600"
+                                data-i18n={`caseStudies.slides.${i}.metrics.${j}.prefix`}
+                              >{m.prefix}</span>
+                            )}
+                            <span
+                              class="metric-number inline-block text-right tabular-nums text-5xl lg:text-6xl font-extrabold leading-none text-red-600"
+                              data-target={metric.value}
+                              data-decimals={metric.decimals}
+                              style={`min-width: ${metric.chars}ch`}
+                            >{formatNumber(metric.value, metric.decimals)}</span>
+                            {m.suffix && (
+                              <span
+                                class="text-2xl lg:text-3xl font-extrabold leading-none text-red-600"
+                                data-i18n={`caseStudies.slides.${i}.metrics.${j}.suffix`}
+                              >{m.suffix}</span>
+                            )}
+                          </div>
+                          <p
+                            class="mt-2 text-xs font-semibold uppercase tracking-[0.18em] text-gray-500"
+                            data-i18n={`caseStudies.slides.${i}.metrics.${j}.label`}
+                          >{m.label}</p>
+                        </div>
+                      );
+                    })}
+                  </div>
+
+                  <p
+                    class="mb-8 max-w-2xl text-base leading-relaxed text-gray-600"
+                    data-i18n={`caseStudies.slides.${i}.context`}
+                  >{s.context}</p>
+
+                  <div class="mt-auto flex items-center gap-3">
+                    <div
+                      class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-red-600/10 text-sm font-bold text-red-600"
+                      aria-hidden="true"
+                    >{slide.avatarInitials}</div>
+                    <p
+                      class="text-sm text-gray-500"
+                      data-i18n={`caseStudies.slides.${i}.attribution`}
+                    >{s.attribution}</p>
+                  </div>
+                </article>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+
+    <div class="rc-pagination mt-10 flex items-center justify-center gap-3"></div>
+
+    <p
+      class="mt-10 text-center text-xs text-gray-500"
+      data-i18n="caseStudies.disclaimer"
+    >{dict.caseStudies.disclaimer}</p>
+  </div>
+</section>
+
+<style>
+  /* Reveal cascade. */
+  .results-carousel-section.reveal-ready .rc-reveal {
+    opacity: 0;
+    translate: 0 24px;
+    transition:
+      opacity 600ms ease-out var(--reveal-delay, 0ms),
+      translate 600ms ease-out var(--reveal-delay, 0ms);
+    will-change: opacity, translate;
+  }
+  .results-carousel-section.reveal-ready.is-visible .rc-reveal {
+    opacity: 1;
+    translate: 0 0;
+  }
+
+  /* Custom pagination — pill with progress fill. */
+  .rc-pagination .swiper-pagination-bullet {
+    position: relative;
+    width: 12px;
+    height: 12px;
+    margin: 0 !important;
+    border-radius: 9999px;
+    background-color: #d1d5db;
+    opacity: 1;
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+    transition: width 300ms ease, background-color 300ms ease, transform 200ms ease;
+  }
+  .rc-pagination .swiper-pagination-bullet:hover:not(.swiper-pagination-bullet-active) {
+    transform: scale(1.15);
+    background-color: #9ca3af;
+  }
+  .rc-pagination .swiper-pagination-bullet:focus-visible {
+    outline: 2px solid #dc2626;
+    outline-offset: 3px;
+  }
+  .rc-bullet-fill {
+    position: absolute;
+    inset: 0;
+    width: 0;
+    background-color: #dc2626;
+    border-radius: inherit;
+  }
+  .rc-pagination .swiper-pagination-bullet-active {
+    width: 36px;
+    background-color: #d1d5db;
+  }
+  .rc-pagination .swiper-pagination-bullet-active .rc-bullet-fill {
+    animation: rcFillBar 6.5s linear forwards;
+  }
+  @keyframes rcFillBar {
+    to { width: 100%; }
+  }
+  .results-swiper.is-paused .swiper-pagination-bullet-active .rc-bullet-fill {
+    animation-play-state: paused;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .results-carousel-section.reveal-ready .rc-reveal {
+      opacity: 1 !important;
+      translate: 0 0 !important;
+      transition: none !important;
+    }
+    .rc-pagination .swiper-pagination-bullet {
+      transition: none !important;
+    }
+    .rc-pagination .swiper-pagination-bullet-active .rc-bullet-fill {
+      animation: none !important;
+      width: 100% !important;
+    }
+  }
+</style>
+
+<script>
+  import Swiper from 'swiper';
+  import { Pagination, Autoplay, Keyboard, A11y } from 'swiper/modules';
+  import 'swiper/css';
+
+  const init = () => {
+    const section = document.querySelector('.results-carousel-section');
+    if (!section) return;
+    const swiperEl = section.querySelector<HTMLElement>('.results-swiper');
+    if (!swiperEl) return;
+
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const ioSupported = 'IntersectionObserver' in window;
+
+    if (ioSupported && !reduce) {
+      section.classList.add('reveal-ready');
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { rootMargin: '0px 0px -20% 0px', threshold: 0.01 });
+      io.observe(section);
+    }
+
+    const easeOutCubic = (t: number) => 1 - Math.pow(1 - t, 3);
+    const formatNum = (value: number, decimals: number) =>
+      value.toLocaleString('en-US', {
+        minimumFractionDigits: decimals,
+        maximumFractionDigits: decimals,
+      });
+
+    const animateMetric = (el: HTMLElement) => {
+      const target = parseFloat(el.getAttribute('data-target') || '0');
+      const decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+      if (Number.isNaN(target)) return;
+      el.textContent = formatNum(0, decimals);
+      const duration = 1400;
+      const start = performance.now();
+      const step = (now: number) => {
+        const elapsed = now - start;
+        const t = Math.min(elapsed / duration, 1);
+        const value = easeOutCubic(t) * target;
+        el.textContent = formatNum(value, decimals);
+        if (t < 1) {
+          requestAnimationFrame(step);
+        } else {
+          el.textContent = formatNum(target, decimals);
+        }
+      };
+      requestAnimationFrame(step);
+    };
+
+    const setFinalValues = (root: ParentNode) => {
+      root.querySelectorAll<HTMLElement>('.metric-number').forEach((el) => {
+        const target = parseFloat(el.getAttribute('data-target') || '0');
+        const decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+        if (Number.isNaN(target)) return;
+        el.textContent = formatNum(target, decimals);
+      });
+    };
+
+    const animateActiveSlideMetrics = (sw: any) => {
+      const activeSlide = sw.el.querySelector('.swiper-slide-active');
+      if (!activeSlide) return;
+      activeSlide.querySelectorAll('.metric-number').forEach(animateMetric);
+    };
+
+    const swiper = new Swiper(swiperEl, {
+      modules: [Pagination, Autoplay, Keyboard, A11y],
+      effect: 'slide',
+      loop: true,
+      slidesPerView: 1,
+      centeredSlides: true,
+      spaceBetween: 0,
+      speed: 700,
+      autoplay: reduce ? false : {
+        delay: 6500,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+      keyboard: { enabled: true, onlyInViewport: true },
+      a11y: {
+        paginationBulletMessage: 'Show case study {{index}} of 4',
+      },
+      pagination: {
+        el: section.querySelector('.rc-pagination'),
+        clickable: true,
+        renderBullet: (_index, className) => {
+          return `<span class="${className} rc-bullet"><span class="rc-bullet-fill" aria-hidden="true"></span></span>`;
+        },
+      },
+      on: {
+        init: (sw) => {
+          if (reduce) {
+            setFinalValues(sw.el);
+          } else {
+            requestAnimationFrame(() => animateActiveSlideMetrics(sw));
+          }
+        },
+        slideChangeTransitionStart: (sw) => {
+          if (reduce) return;
+          animateActiveSlideMetrics(sw);
+        },
+        autoplayPause: (sw) => sw.el.classList.add('is-paused'),
+        autoplayResume: (sw) => sw.el.classList.remove('is-paused'),
+      },
+    });
+
+    if (!reduce && swiper.autoplay) {
+      swiperEl.addEventListener('focusin',  () => {
+        swiper.autoplay.stop();
+        swiperEl.classList.add('is-paused');
+      });
+      swiperEl.addEventListener('focusout', () => {
+        swiper.autoplay.start();
+        swiperEl.classList.remove('is-paused');
+      });
+    }
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+</script>

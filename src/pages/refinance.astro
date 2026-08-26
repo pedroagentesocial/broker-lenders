@@ -16,7 +16,13 @@ const lang = 'en';
 const dict = enRefi;
 ---
 
-<Layout title={dict?.meta?.title || "Refinance Your Home - Broker Lenders"} lang={lang}>
+<Layout
+	title={dict?.meta?.title || "Refinance Your Home - Broker Lenders"}
+	lang={lang}
+	description={dict?.meta?.description || "Refinance your mortgage to lower your rate, reduce your payment, shorten your term, or tap into your home equity. Compare today's refinance rates with Broker Lenders. NMLS #318973."}
+	keywords="refinance mortgage, cash-out refinance, lower mortgage rate, refinance calculator, home equity"
+	hreflangPath="/refinance"
+>
 	<!-- Hero Section -->
 	<section class="bg-white py-12 lg:py-20">
 		<div class="w-full mx-auto px-4 sm:px-6 lg:px-8">
@@ -147,6 +153,9 @@ const dict = enRefi;
     // Document title
     if (dict?.meta?.title) {
       document.title = dict.meta.title;
+      // Mantener la meta description en el idioma activo
+      const metaDescEl = document.querySelector('meta[name="description"]');
+      if (metaDescEl && dict?.meta?.description) metaDescEl.setAttribute('content', dict.meta.description);
     }
     // Preserve lang param on internal links
     preserveLangOnLinks(lang);

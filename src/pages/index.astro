@@ -20,7 +20,13 @@ const enB64 = Buffer.from(JSON.stringify(en)).toString('base64');
 const esB64 = Buffer.from(JSON.stringify(es)).toString('base64');
 ---
 
-<Layout title={dict.title} lang={lang}>
+<Layout
+	title={dict.title}
+	lang={lang}
+	description="Home loans made for your lifestyle. Compare today's mortgage rates and get FHA, VA, conventional, jumbo and refinance loans across UT, ID, NV, CA, TX, FL and CO. NMLS #318973."
+	keywords="mortgage broker, home loans, FHA loan, VA loan, conventional loan, refinance, mortgage rates Utah, mortgage rates Idaho, broker lenders"
+	hreflangPath="/"
+>
 	<HeroSection />
 	<CarouselRates />
   <NextMoveSection lang={lang} />

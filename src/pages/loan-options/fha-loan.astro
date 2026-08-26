@@ -114,7 +114,13 @@ const esB64 = Buffer.from(JSON.stringify(esDict)).toString('base64');
   })();
 </script>
 
-<Layout title={dict.title} lang={lang}>
+<Layout
+  title={dict.title}
+  lang={lang}
+  description="FHA loans with as little as 3.5% down and flexible credit requirements. See FHA loan limits, rates and qualifications with Broker Lenders. NMLS #318973."
+  keywords="FHA loan, FHA mortgage, 3.5% down payment, FHA requirements, FHA rates"
+  hreflangPath="/loan-options/fha-loan"
+>
   <!-- Breadcrumb Section -->
   <div class="bg-white py-4">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

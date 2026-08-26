@@ -119,12 +119,12 @@ const esB64 = Buffer.from(JSON.stringify(es)).toString('base64');
 
 <script>
   // Easing cubic (ease-out) para efecto de velocímetro
-  const easeOutCubic = (t) => 1 - Math.pow(1 - t, 3);
+  const easeOutCubic = (t: number) => 1 - Math.pow(1 - t, 3);
 
-  function animateValue(el, start, end, duration, formatter) {
+  function animateValue(el: Element, start: number, end: number, duration: number, formatter: (v: number) => string) {
     const startTime = performance.now();
 
-    function frame(now) {
+    function frame(now: number) {
       const elapsed = now - startTime;
       const progress = Math.min(elapsed / duration, 1);
       const eased = easeOutCubic(progress);
@@ -138,7 +138,7 @@ const esB64 = Buffer.from(JSON.stringify(es)).toString('base64');
     requestAnimationFrame(frame);
   }
 
-  function format(type, value) {
+  function format(type: string, value: number) {
     switch (type) {
       case 'percent':
         return Math.round(value) + '%';
@@ -157,7 +157,7 @@ const esB64 = Buffer.from(JSON.stringify(es)).toString('base64');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          const el = entry.target;
+          const el = entry.target as HTMLElement;
           if (el.dataset && el.dataset.animated === 'true') return; // evitar repetir
           if (el.dataset) el.dataset.animated = 'true';
 
@@ -170,7 +170,7 @@ const esB64 = Buffer.from(JSON.stringify(es)).toString('base64');
           if (type === 'thousands') duration = 1400;
           if (type === 'trillions') duration = 1600;
 
-          animateValue(el, 0, target, duration, (v) => format(type, v));
+          animateValue(el, 0, target, duration, (v: number) => format(type, v));
           observer.unobserve(el);
         }
       });

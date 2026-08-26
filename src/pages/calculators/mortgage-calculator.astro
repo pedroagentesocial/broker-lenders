@@ -130,7 +130,13 @@ const dict = enDict;
   })();
 </script>
 
-<Layout title={dict.page_title} lang={lang}>
+<Layout
+	title={dict.page_title}
+	lang={lang}
+	description="Free mortgage payment calculator. Estimate your monthly principal, interest, taxes and insurance based on home price, down payment, term and rate. Powered by Broker Lenders."
+	keywords="mortgage calculator, monthly mortgage payment, PITI calculator, home loan calculator"
+	hreflangPath="/calculators/mortgage-calculator"
+>
 	<!-- Breadcrumb -->
 	<section class="bg-white py-4">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -772,11 +778,11 @@ const dict = enDict;
     // Minimal client script: preserve ?lang on local links, avoid heavy imports
     (function(){
         const langParam = new URLSearchParams(window.location.search).get('lang') || 'en';
-        const preserveLangOnLocalLinks = (lang) => {
+        const preserveLangOnLocalLinks = (lang: string) => {
             const sections = ['calculator-main','mc-howto','mc-tips','mc-faqs'];
             sections.forEach(secId => {
                 const container = document.getElementById(secId) || document.body;
-                const localLinks = container ? container.querySelectorAll('a[href^="/"]') : [];
+                const localLinks = container ? container.querySelectorAll<HTMLAnchorElement>('a[href^="/"]') : [];
                 localLinks.forEach(a => {
                     try {
                         const href = new URL(a.href, window.location.origin);
@@ -800,7 +806,7 @@ const dict = enDict;
 	// Mortgage Calculator Logic
 	class MortgageCalculator {
 		isPercentMode;
-		lastCalculation;
+		lastCalculation: any;
 		
 		constructor() {
 			this.isPercentMode = false;
@@ -841,7 +847,7 @@ const dict = enDict;
 			}
 
 			// Down payment input listener with validation
-			const downPaymentInput = document.getElementById('downPayment');
+			const downPaymentInput = document.getElementById('downPayment') as HTMLInputElement | null;
 			if (downPaymentInput) {
 				downPaymentInput.addEventListener('input', () => this.handleDownPaymentChange());
 				downPaymentInput.addEventListener('blur', () => this.validateDownPayment());
@@ -901,13 +907,13 @@ const dict = enDict;
 			}
 		}
 
-		setToggleMode(isPercent) {
+		setToggleMode(isPercent: boolean) {
 			this.isPercentMode = isPercent;
 			
 			const toggleDollar = document.getElementById('toggleDollar');
 			const togglePercent = document.getElementById('togglePercent');
 			const downPaymentSymbol = document.getElementById('downPaymentSymbol');
-			const downPaymentInput = document.getElementById('downPayment');
+			const downPaymentInput = document.getElementById('downPayment') as HTMLInputElement | null;
 			
 			if (toggleDollar && togglePercent && downPaymentSymbol && downPaymentInput) {
 				if (isPercent) {
@@ -952,7 +958,7 @@ const dict = enDict;
 
 		validateDownPayment() {
 			if (this.isPercentMode) {
-			const downPaymentInput = document.getElementById('downPayment');
+			const downPaymentInput = document.getElementById('downPayment') as HTMLInputElement | null;
 			if (downPaymentInput) {
 				const value = parseFloat((downPaymentInput as any).value) || 0;
 				if (value < 1) {
@@ -963,8 +969,8 @@ const dict = enDict;
 		}
 		}
 
-		validateInterestRate(e) {
-			const input = e.target;
+		validateInterestRate(e: Event) {
+			const input = e.target as HTMLInputElement;
 			let value = input.value;
 			
 			// Remove any non-numeric characters except decimal point
@@ -985,8 +991,8 @@ const dict = enDict;
 			input.value = value;
 		}
 
-		validateZipCode(e) {
-			const input = e.target;
+		validateZipCode(e: Event) {
+			const input = e.target as HTMLInputElement;
 			let value = input.value;
 			
 			// Remove any non-numeric characters
@@ -1001,8 +1007,8 @@ const dict = enDict;
 			input.value = value;
 		}
 
-		async validateZipCodeExists(e) {
-			const input = e.target;
+		async validateZipCodeExists(e: Event) {
+			const input = e.target as HTMLInputElement;
 			const zipCode = input.value;
 			
 			// Reset border color
@@ -1052,16 +1058,16 @@ const dict = enDict;
 			}
 		}
 
-		formatNumber(num) {
+		formatNumber(num: number) {
 			return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 		}
 
-		parseNumber(str) {
+		parseNumber(str: string) {
 			return parseFloat(str.replace(/,/g, '')) || 0;
 		}
 
 		getDownPaymentAmount() {
-			const downPaymentInput = document.getElementById('downPayment');
+			const downPaymentInput = document.getElementById('downPayment') as HTMLInputElement | null;
 			const homePriceEl = document.getElementById('homePrice');
 			const homePrice = this.parseNumber((homePriceEl && (homePriceEl as any).value) || '0');
 			
@@ -1094,7 +1100,7 @@ const dict = enDict;
 		}
 
 		// Clear field validation styling and messages
-		clearFieldValidation(fieldId) {
+		clearFieldValidation(fieldId: string) {
 			const field = document.getElementById(fieldId);
 			if (field) {
 				// Remove red border from container
@@ -1192,7 +1198,7 @@ const dict = enDict;
 		}
 
 		// Show error for specific field
-		showFieldError(fieldId, message) {
+		showFieldError(fieldId: string, message: string) {
 			const field = document.getElementById(fieldId);
 			if (field) {
 				// Add red border to the container instead of just the input
@@ -1369,7 +1375,7 @@ const dict = enDict;
 
 			// Handle down payment formatting separately
 			if (!this.isPercentMode) {
-			const downPaymentInput = document.getElementById('downPayment');
+			const downPaymentInput = document.getElementById('downPayment') as HTMLInputElement | null;
 			if (downPaymentInput instanceof HTMLInputElement) {
 				const value = this.parseNumber(downPaymentInput.value);
 				if (value > 0) {
@@ -1380,12 +1386,12 @@ const dict = enDict;
 		}
 
 		// Animate value from start to end with speedometer effect
-		animateValue(element, start, end, duration) {
+		animateValue(element: HTMLElement, start: number, end: number, duration: number) {
 			const startTime = performance.now();
 			const startValue = start;
 			const endValue = end;
 			
-			const animate = (currentTime) => {
+			const animate = (currentTime: number) => {
 				const elapsed = currentTime - startTime;
 				const progress = Math.min(elapsed / duration, 1);
 				
@@ -1413,9 +1419,9 @@ const dict = enDict;
 		const faqButtons = document.querySelectorAll('.faq-button');
 		faqButtons.forEach((button) => {
 			const btn = button;
-			btn.addEventListener('click', function() {
+			btn.addEventListener('click', function (this: HTMLElement) {
 				const content = this.nextElementSibling;
-				const icon = this.querySelector('.faq-icon');
+				const icon = this.querySelector<HTMLElement>('.faq-icon');
 				
 				if (content && icon) {
 					if (content.classList.contains('hidden')) {

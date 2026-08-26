@@ -10,7 +10,12 @@ const enB64 = Buffer.from(JSON.stringify(enDict)).toString('base64');
 const esB64 = Buffer.from(JSON.stringify(esDict)).toString('base64');
 ---
 
-<Layout title={dict.title} lang={lang}>
+<Layout
+  title={dict.title}
+  lang={lang}
+  description="Broker Lenders Terms of Use: legal terms and conditions governing the use of brokerlenders.com."
+  hreflangPath="/legal/terms-of-use"
+>
   <div class="min-h-screen bg-white">
     <!-- i18n payload for Terms of Use -->
     <div id="i18n-terms" data-en={enB64} data-es={esB64} style="display:none"></div>

@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(findstr /i \"robots sitemap\")",
+      "Bash(npm run *)"
+    ]
+  }
+}

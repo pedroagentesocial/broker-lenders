@@ -17,7 +17,10 @@
       "interest_rate": "Tasa de interés",
       "zip_code": "Código ZIP",
       "yearly_property_tax": "Impuestos anuales de la propiedad",
-      "yearly_home_insurance": "Seguro anual de vivienda"
+      "yearly_home_insurance": "Seguro anual de vivienda",
+      "purchase_price": "Precio de compra",
+      "credit_score": "Puntaje de crédito",
+      "monthly_rent": "Renta mensual"
     },
     "tooltips": {
       "loan_term": "Plazo: 30 años pagos bajos, 15 años menos interés",
@@ -126,12 +129,30 @@
     "title": "Preguntas frecuentes de la calculadora Comprar vs Alquilar",
     "subtitle": "¿No ves tu pregunta aquí? Nos encanta ayudar a las personas a comparar los costos de alquilar vs comprar.",
     "items": [
-      { "q": "¿Qué evalúa esta calculadora de ‘rentar vs comprar’?", "a": "Compara costos estimados de renta y compra, y muestra la equity acumulada al comprar frente a $0 de equity en renta. Los resultados se recalculan según años, tasa y valores ingresados." },
-      { "q": "¿Cómo calculamos la equity al comprar?", "a": "Proyectamos el valor de la vivienda con una tasa de apreciación anual y restamos el saldo del préstamo en el año elegido. Esa diferencia es la equity mostrada en la gráfica." },
-      { "q": "¿Qué incluyen Monthly, Annual y Total cost?", "a": "Monthly usa costos del año seleccionado prorrateados al mes (capital e interés, impuestos, mantenimiento, HOA, seguro de vivienda y PMI si aplica). Annual multiplica por 12. Total cost agrega pago inicial y closing costs en compra, y depósito de seguridad en renta." },
-      { "q": "¿Cómo afecta el slider de años?", "a": "Actualiza la equity, el crecimiento de la renta y los costos estimados. También recalcula los modos Monthly, Annual y Total cost para el año seleccionado." },
-      { "q": "¿Cuándo aparece el PMI?", "a": "Cuando la relación préstamo-valor (LTV) del año es mayor a 80% estimamos PMI anual; si el LTV baja a 80% o menos, el PMI se considera $0." },
-      { "q": "¿Los resultados son definitivos?", "a": "No. Son estimaciones orientativas. Tasas, costos y pagos cambian según momento y perfil. Úsalas como referencia y revisa opciones con Broker Lenders." }
+      {
+        "q": "¿Qué evalúa esta calculadora de ‘rentar vs comprar’?",
+        "a": "Compara costos estimados de renta y compra, y muestra la equity acumulada al comprar frente a $0 de equity en renta. Los resultados se recalculan según años, tasa y valores ingresados."
+      },
+      {
+        "q": "¿Cómo calculamos la equity al comprar?",
+        "a": "Proyectamos el valor de la vivienda con una tasa de apreciación anual y restamos el saldo del préstamo en el año elegido. Esa diferencia es la equity mostrada en la gráfica."
+      },
+      {
+        "q": "¿Qué incluyen Monthly, Annual y Total cost?",
+        "a": "Monthly usa costos del año seleccionado prorrateados al mes (capital e interés, impuestos, mantenimiento, HOA, seguro de vivienda y PMI si aplica). Annual multiplica por 12. Total cost agrega pago inicial y closing costs en compra, y depósito de seguridad en renta."
+      },
+      {
+        "q": "¿Cómo afecta el slider de años?",
+        "a": "Actualiza la equity, el crecimiento de la renta y los costos estimados. También recalcula los modos Monthly, Annual y Total cost para el año seleccionado."
+      },
+      {
+        "q": "¿Cuándo aparece el PMI?",
+        "a": "Cuando la relación préstamo-valor (LTV) del año es mayor a 80% estimamos PMI anual; si el LTV baja a 80% o menos, el PMI se considera $0."
+      },
+      {
+        "q": "¿Los resultados son definitivos?",
+        "a": "No. Son estimaciones orientativas. Tasas, costos y pagos cambian según momento y perfil. Úsalas como referencia y revisa opciones con Broker Lenders."
+      }
     ]
   }
 }

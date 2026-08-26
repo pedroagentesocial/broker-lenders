@@ -22,3 +22,10 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# Vercel build output (se genera en cada build, no debe versionarse)
+.vercel/
+
+# Variables de entorno locales (contienen secretos)
+.env.local
+.env*.local

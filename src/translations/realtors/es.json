@@ -1,111 +1,430 @@
 {
-  "title": "Para Realtors - Broker Lenders",
+  "title": "Para Agentes Inmobiliarios — Alíate con un Lender que Cierra Rápido | Broker Lenders",
+  "metaDescription": "Alíate con Broker Lenders: cierres en 14 días, preaprobaciones en 24h, soporte bilingüe y un CRM gratis. Confianza de agentes en 7 estados.",
   "hero": {
-    "eyebrow": "Para Realtors",
-    "headline": "Cierra Mas Deals En Menos Tiempo",
-    "subheadline": "Sin Perseguir Leads Manualmente",
-    "description": "Combinamos lending rapido con un sistema automatizado de seguimiento para convertir mas leads en citas y mas citas en cierres.",
-    "primaryCta": "Agenda Una Demo De 15 Minutos",
-    "secondaryCta": "Llamar Ahora"
-  },
-  "problem": {
-    "title": "Por Que Se Pierden Deals",
-    "intro": "Muchos agentes hacen un gran trabajo, pero el proceso se rompe en momentos clave.",
-    "items": [
-      "Los leads se enfrien por falta de seguimiento constante",
-      "Las respuestas manuales retrasan el primer contacto",
-      "Los procesos desorganizados esconden oportunidades",
-      "Lenders lentos frenan las transacciones"
+    "eyebrow": "Para Agentes Inmobiliarios",
+    "rotating": [
+      "Cierra más negocios en menos tiempo",
+      "Sé el héroe que tus clientes necesitan",
+      "Deja de perder leads por seguimiento lento"
     ],
-    "result": "Resultado: se pierden deals sin darse cuenta."
+    "subheadline": "Combinamos préstamos rápidos con un sistema automatizado de seguimiento para que conviertas más leads en citas — y más citas en cierres.",
+    "trustBadgeStates": "Confianza de agentes en 7 estados",
+    "trustBadgeNmls": "NMLS #318973",
+    "primaryCta": "Agenda una demo de 15 minutos",
+    "secondaryCta": "Llama al (801) 307-0273",
+    "secondaryCtaAria": "Llamar a Broker Lenders al 801 307 0273",
+    "microcopy": "Sin tarjeta de crédito · Llamada de 15 minutos · Estrategia gratis",
+    "floatingCard": "Preaprobación lista en 24 horas",
+    "imageAlt": "Agente inmobiliario reunido con clientes"
   },
-  "solution": {
-    "title": "Nuestro Sistema De Dos Partes",
-    "lending": {
-      "title": "Lending Rapido Y Confiable",
-      "items": [
-        "Pre-aprobaciones agiles",
-        "Cierres en aproximadamente 14 dias",
-        "Programas flexibles, incluyendo perfiles de credito bajo",
-        "Gestion completa del proceso de prestamo"
-      ]
-    },
-    "crm": {
-      "title": "CRM Agente Social Automatizado",
-      "items": [
-        "Seguimiento automatico por SMS, email y redes sociales",
-        "Respuesta inmediata a nuevos leads",
-        "Calendario integrado para agendar citas",
-        "Pipeline para organizar cada oportunidad",
-        "Campanas listas para real estate"
-      ]
-    }
+  "marquee": {
+    "heading": "Agentes inmobiliarios de las mejores firmas confían en nosotros",
+    "ariaLabel": "Firmas asociadas"
   },
-  "differentiator": {
-    "title": "No Somos Solo Un Lender",
-    "description": "La mayoria de lenders solo ayuda con el prestamo. Nosotros ayudamos con el prestamo y con el sistema para generar y cerrar mas deals."
-  },
-  "offers": {
-    "title": "Elige El Plan Que Mejor Se Ajusta",
-    "partner": {
-      "name": "Plan Partner",
-      "price": "Sin mensualidad",
-      "items": [
-        "CRM sin costo mensual",
-        "Pagas solo consumo de SMS/email",
-        "Trabajas con nosotros como lender preferido"
-      ]
-    },
-    "pro": {
-      "name": "Plan Profesional",
-      "price": "$97 / mes",
-      "items": [
-        "CRM completo listo para usar",
-        "Automatizaciones incluidas",
-        "Acceso a sesiones grupales de soporte"
-      ]
-    },
-    "advanced": {
-      "name": "Plan Avanzado",
-      "price": "$300 / mes",
-      "items": [
-        "Todo lo del Plan Profesional",
-        "Soporte personalizado 1:1 semanal",
-        "Configuracion hecha por nosotros y automatizaciones avanzadas con IA"
-      ]
-    }
-  },
-  "results": {
-    "title": "Resultados Esperados",
-    "items": [
-      "Responder leads en segundos",
-      "Reducir perdidas por falta de seguimiento",
-      "Aumentar citas agendadas",
-      "Cerrar mas deals en menos tiempo"
+  "painPoints": {
+    "eyebrow": "El Problema Real",
+    "headline": "Por qué los agentes pierden negocios",
+    "subheadline": "La mayoría de los agentes hacen un gran trabajo. El proceso se rompe en cuatro momentos clave — y cada ruptura cuesta un cierre.",
+    "transition": "¿Te suena? No estás solo — y tiene solución.",
+    "cards": [
+      {
+        "title": "Leads que se enfrían",
+        "body": "Los leads se enfrían sin seguimiento constante — cuando llamas, ya firmaron con alguien más."
+      },
+      {
+        "title": "Respuesta inicial lenta",
+        "body": "Las respuestas manuales atrasan el primer contacto. Los estudios muestran que el primer agente en responder gana el negocio el 78% de las veces."
+      },
+      {
+        "title": "Pipeline desorganizado",
+        "body": "Los flujos desorganizados esconden oportunidades. Los negocios se pierden entre hojas de cálculo y correos."
+      },
+      {
+        "title": "Lenders lentos",
+        "body": "Los préstamos lentos detienen las transacciones. Las preaprobaciones que tardan semanas matan el momento y la confianza del comprador."
+      }
     ]
   },
-  "callGuide": {
-    "title": "Guia Simple Para Llamadas",
-    "hook": "1. Hook: Ayudamos a agentes a cerrar mas deals combinando lending rapido con un sistema automatizado.",
-    "problem": "2. Problema: Muchos agentes pierden leads por seguimiento tardio o procesos lentos.",
-    "solution": "3. Solucion: Lo resolvemos con pre-aprobaciones rapidas y automatizacion en CRM.",
-    "offer": "4. Oferta: Varios agentes lo usan sin pagar mensualidad al hacer partner con nosotros.",
-    "close": "5. Cierre: Lo mejor es verlo en 15 minutos. Te queda mejor hoy o manana?"
+  "services": {
+    "eyebrow": "Lo Que Obtienes",
+    "headline": "Todo lo que necesitas para cerrar más negocios.",
+    "subheadline": "Un toolkit completo de préstamos para tus clientes, más las herramientas de aliado que te ayudan a crecer tu negocio.",
+    "loanGroup": {
+      "eyebrow": "Para Tus Clientes",
+      "title": "Lo que reciben tus clientes",
+      "context": "Desde la zona correcta hasta el financiamiento adecuado — todo lo que ayuda a tus clientes a cerrar con confianza."
+    },
+    "loans": [
+      { "name": "La zona correcta, la casa correcta", "bestFor": "Experiencia local en 7 estados" },
+      { "name": "Tasas competitivas del mercado", "bestFor": "Pagos más bajos que se sienten" },
+      { "name": "Preaprobaciones que ganan", "bestFor": "Vencer ofertas en efectivo" },
+      { "name": "Ayuda para el enganche", "bestFor": "Programas de bajo enganche y DPA" },
+      { "name": "El préstamo correcto para cada caso", "bestFor": "Convencional, FHA, VA, jumbo, USDA" },
+      { "name": "Soporte bilingüe de principio a fin", "bestFor": "Español desde la primera llamada al cierre" },
+      { "name": "Guía para comprador primerizo", "bestFor": "Paso a paso, nunca solo" },
+      { "name": "Cierres rápidos y a tiempo", "bestFor": "Promedio de 14 días" }
+    ],
+    "loansFooter": "Más opciones de refinanciamiento, programas de estados de cuenta y asistencia para enganche.",
+    "loansFooterLink": "Ver todos los programas",
+    "partnerGroup": {
+      "eyebrow": "Para Ti Como Nuestro Aliado",
+      "title": "Herramientas para crecer tu negocio",
+      "context": "Más allá de préstamos — los sistemas que te ayudan a cerrar más con menos esfuerzo."
+    },
+    "tools": [
+      { "name": "Preaprobaciones en 24 horas", "description": "Aprueba a tus compradores rápido para ganar guerras de ofertas." },
+      { "name": "CRM y seguimiento automatizados", "description": "Captura de leads, automatizaciones por SMS/correo y tracking de pipeline — incluido gratis." },
+      { "name": "Soporte bilingüe de principio a fin", "description": "Oficiales, procesadores y cerradores fluidos en inglés y español." },
+      { "name": "Cierres promedio en 14 días", "description": "Gestión completa del préstamo enfocada en velocidad y cierres a tiempo." },
+      { "name": "Marketing hecho por nosotros", "description": "Campañas inmobiliarias listas y materiales con tu marca disponibles en planes pagos." },
+      { "name": "Línea directa con tu oficial de préstamo", "description": "Sin call centers. Gente real que conoce tus negocios y contesta cuando llamas." }
+    ],
+    "compareLink": "Compara los planes de alianza abajo ↓"
   },
-  "phrases": {
-    "title": "Frases Naturales Para Tu Equipo",
-    "items": [
-      "Esto no es solo un CRM.",
-      "Esto te ayuda a no perder oportunidades.",
-      "Es basicamente un sistema que trabaja por ti.",
-      "Muchos agentes no se dan cuenta de cuanto estan dejando en la mesa."
+  "caseStudies": {
+    "eyebrow": "Resultados Reales",
+    "headline": "Menos bla, bla, bla. Más cierres.",
+    "subheadline": "Números reales de alianzas reales. Así se ve trabajar con nosotros.",
+    "disclaimer": "Los ejemplos son resultados representativos. Los resultados individuales varían.",
+    "slides": [
+      {
+        "category": "Cierre Rápido",
+        "locationText": "Salt Lake City, UT",
+        "headline": "Le ganamos a 3 ofertas en efectivo con cierre en 14 días.",
+        "context": "Mercado competido, múltiples ofertas — el comprador necesitaba velocidad. Preaprobamos esa misma noche y cerramos en 14 días.",
+        "attribution": "Maria R., Realtor · Coldwell Banker · Salt Lake City, UT",
+        "metrics": [
+          {
+            "prefix": "",
+            "suffix": " DÍAS",
+            "label": "Al Cierre",
+            "ariaText": "14 días al cierre"
+          },
+          {
+            "prefix": "",
+            "suffix": "h",
+            "label": "Preaprobación",
+            "ariaText": "24 horas de preaprobación"
+          },
+          {
+            "prefix": "vs ",
+            "suffix": "",
+            "label": "Ofertas en Efectivo Superadas",
+            "ariaText": "Le ganamos a 3 ofertas en efectivo"
+          }
+        ]
+      },
+      {
+        "category": "Aprobado Cuando Otros Dijeron No",
+        "locationText": "Boise, ID",
+        "headline": "De negado dos veces a aprobado en 7 días.",
+        "context": "Comprador independiente, ingresos sólidos, papeleo desordenado. Reestructuramos el archivo con un programa de estados de cuenta y lo aprobamos.",
+        "attribution": "James T., Realtor · eXp Realty · Boise, ID",
+        "metrics": [
+          {
+            "prefix": "",
+            "suffix": "",
+            "label": "Rechazos Previos",
+            "ariaText": "2 rechazos previos de lenders"
+          },
+          {
+            "prefix": "",
+            "suffix": " DÍAS",
+            "label": "A la Aprobación",
+            "ariaText": "7 días a la aprobación"
+          },
+          {
+            "prefix": "$",
+            "suffix": "K",
+            "label": "Negocio Rescatado",
+            "ariaText": "480 mil dólares de negocio rescatado"
+          }
+        ]
+      },
+      {
+        "category": "Estructura Inteligente",
+        "locationText": "Las Vegas, NV",
+        "headline": "$12K ahorrados con la combinación correcta.",
+        "context": "Compradora primeriza pensaba que no podía pagar. Combinando asistencia para enganche + tasa FHA competitiva, entró a su casa con $12,000 menos de su bolsillo.",
+        "attribution": "Carlos M., Realtor · Keller Williams · Las Vegas, NV",
+        "metrics": [
+          {
+            "prefix": "$",
+            "suffix": "",
+            "label": "Total Ahorrado",
+            "ariaText": "12,000 dólares totales ahorrados"
+          },
+          {
+            "prefix": "",
+            "suffix": "%",
+            "label": "Enganche",
+            "ariaText": "3.5 por ciento de enganche"
+          },
+          {
+            "prefix": "",
+            "suffix": "ER",
+            "label": "Vez Comprador",
+            "ariaText": "Primera vez comprando"
+          }
+        ]
+      },
+      {
+        "category": "Volumen de Alianza",
+        "locationText": "Houston, TX",
+        "headline": "8 cierres en un trimestre con un solo aliado.",
+        "context": "Una agente bilingüe se alió con nosotros como su lender preferido. Un trimestre después: 8 transacciones cerradas, todas a tiempo, todas en el idioma preferido del comprador.",
+        "attribution": "Sofia C., Realtor · Compass · Houston, TX",
+        "metrics": [
+          {
+            "prefix": "",
+            "suffix": "",
+            "label": "Negocios Cerrados",
+            "ariaText": "8 negocios cerrados en un trimestre"
+          },
+          {
+            "prefix": "",
+            "suffix": " DÍAS",
+            "label": "Tiempo Promedio de Cierre",
+            "ariaText": "18 días tiempo promedio de cierre"
+          },
+          {
+            "prefix": "",
+            "suffix": "%",
+            "label": "Tasa A Tiempo",
+            "ariaText": "100 por ciento de cierres a tiempo"
+          }
+        ]
+      }
     ]
   },
-  "finalCta": {
-    "title": "Mira El Sistema En Accion",
-    "description": "En 15 minutos te mostramos como funciona, como aplicarlo a tu negocio y como empezar sin complicaciones.",
-    "primaryCta": "Agendar Mi Demo",
-    "secondaryCta": "Agendar Llamada",
-    "positioning": "No somos solo lenders. Somos el sistema que te ayuda a cerrar mas deals."
+  "stats": {
+    "eyebrow": "En Números",
+    "headline": "Hechos para entregar, probados para rendir.",
+    "subheadline": "Números reales de alianzas reales. Así se ve trabajar con Broker Lenders.",
+    "updatedNote": "Actualizado 2026",
+    "cards": [
+      {
+        "label": "Cierre Promedio",
+        "descriptor": "De aplicación a llaves",
+        "suffix": "días",
+        "suffixType": "word",
+        "ariaText": "14 días de cierre promedio, de aplicación a llaves"
+      },
+      {
+        "label": "Preaprobación",
+        "descriptor": "Tiempo de respuesta",
+        "suffix": "h",
+        "suffixType": "symbol",
+        "ariaText": "24 horas de tiempo de respuesta para preaprobación"
+      },
+      {
+        "label": "Estados con Licencia",
+        "descriptor": "UT · ID · NV · CA · TX · FL · CO",
+        "suffix": "",
+        "suffixType": "none",
+        "ariaText": "Licencia en 7 estados"
+      },
+      {
+        "label": "Soporte Bilingüe",
+        "descriptor": "Inglés + español, en cada paso",
+        "suffix": "%",
+        "suffixType": "symbol",
+        "ariaText": "100 por ciento de soporte bilingüe, inglés más español, en cada paso"
+      }
+    ]
+  },
+  "finalCTA": {
+    "eyebrow": "Listos Cuando Tú Lo Estés",
+    "headline": "Deja de perder negocios con lenders lentos.",
+    "subheadline": "Alíate con un lender que cierra rápido, comunica constantemente y ayuda a tus clientes a ganar.",
+    "primaryCta": "Agenda mi llamada de 15 minutos",
+    "primaryCtaAria": "Agenda una llamada de 15 minutos para aliarte con Broker Lenders",
+    "secondaryCta": "Llama al (801) 307-0273",
+    "secondaryCtaAria": "Llamar a Broker Lenders al 801 307 0273",
+    "microcopy": "Sin tarjeta de crédito · Sin compromiso · Llamada de 15 minutos",
+    "responseIndicator": "Normalmente responde en 1 hora",
+    "trustNmls": "NMLS #318973",
+    "trustEHL": "Equal Housing Lender",
+    "trustStates": "Licencia en: UT · ID · NV · CA · TX · FL · CO"
+  },
+  "faq": {
+    "eyebrow": "Preguntas Que Los Agentes Hacen",
+    "headline": "Todo lo que querías saber.",
+    "subheadline": "Respuestas directas a las preguntas que los agentes hacen antes de aliarse con nosotros. ¿No ves la tuya? Pregunta.",
+    "inlineCta": "Agenda mi llamada de 15 minutos →",
+    "stillHaveQuestions": {
+      "heading": "¿Aún tienes preguntas?",
+      "body": "Escríbenos directo — normalmente respondemos en una hora en horas de oficina.",
+      "emailCta": "Escríbenos",
+      "emailAria": "Escríbele a Broker Lenders a pedro@brokerlenders.com",
+      "phoneCta": "Llama al (801) 307-0273",
+      "phoneAria": "Llamar a Broker Lenders al 801 307 0273"
+    },
+    "items": [
+      {
+        "question": "¿De verdad el Plan Socio es gratis? ¿Cuál es la trampa?",
+        "answer": "No hay trampa. El Plan Socio no tiene pago mensual porque nosotros ganamos cuando cerramos préstamos hipotecarios. Cuando tus compradores y vendedores cierran con nosotros como su lender, así es como ganamos — así que darte un CRM gratis y una alianza gratis tiene sentido para los dos. Solo pagas el uso de SMS y correo a costo (típicamente $5–15/mes para un agente activo)."
+      },
+      {
+        "question": "¿Tengo que usarlos exclusivamente como mi lender?",
+        "answer": "No. No pedimos exclusividad. Solo pedimos que nos des una oportunidad justa — mándanos a tus compradores y déjanos probar que cerramos más rápido, comunicamos mejor y los atendemos bien. Si nos lo ganamos, nos convertimos en tu lender preferido naturalmente. Si no, mantienes tus otras relaciones. Sin contratos ni penalizaciones."
+      },
+      {
+        "question": "¿En qué estados pueden prestar?",
+        "answer": "Tenemos licencia en 7 estados: Utah, Idaho, Nevada, California, Texas, Florida y Colorado. Si tu cliente está comprando en cualquiera de estos estados, podemos ayudar. Estamos expandiéndonos activamente — si tu mercado no está aún en la lista, avísanos y te mantenemos informado."
+      },
+      {
+        "question": "¿Qué tan rápido pueden de verdad preaprobar a un comprador?",
+        "answer": "El tiempo estándar de preaprobación es 24 horas desde que recibimos una aplicación completa. Para archivos sencillos, hemos emitido preaprobaciones el mismo día. Siempre te diremos por adelantado si un archivo necesita más tiempo — por ejemplo, compradores independientes o situaciones de crédito únicas pueden necesitar 48–72 horas para estructurarse bien."
+      },
+      {
+        "question": "Ya uso un CRM. ¿El suyo se integra o lo reemplaza?",
+        "answer": "La mayoría de los agentes que prueban el nuestro terminan reemplazando su CRM viejo — no porque tengan que hacerlo, sino porque lo prefieren. Nuestro sistema incluye captura de leads, seguimiento automático por SMS/correo/redes sociales, agenda de citas, tracking de pipeline y campañas inmobiliarias listas para enviar. Si prefieres integrar, conectamos con la mayoría de las plataformas principales (Follow Up Boss, KvCORE, BoomTown, etc.) en los planes Profesional y Avanzado."
+      },
+      {
+        "question": "¿De verdad tienen soporte bilingüe? Mis clientes necesitan español.",
+        "answer": "Sí — completamente bilingüe, de principio a fin. Los oficiales de préstamo, procesadores y coordinadores de cierre hablan inglés y español con fluidez. Tus clientes hispanohablantes serán atendidos en su idioma en cada etapa, desde la primera llamada hasta la mesa de cierre. Esto es una de las cosas que los agentes más nos dicen que nos diferencia."
+      },
+      {
+        "question": "¿De verdad están licenciados? ¿Con quién estoy trabajando?",
+        "answer": "Sí. Pedro Lira es un originador de préstamos hipotecarios licenciado (NMLS #318973) con Xpert Home Lending (NMLS #2179191), un Equal Housing Lender. Puedes verificar nuestra licencia en cualquier momento en el portal NMLS Consumer Access en nmlsconsumeraccess.org. Seguimos todas las regulaciones federales y estatales — tú y tus clientes están trabajando con un equipo totalmente compliant y responsable."
+      },
+      {
+        "question": "¿Cómo empiezo?",
+        "answer": "Agenda una llamada de 15 minutos. Te mostramos cómo funciona el Plan Socio, te enseñamos el CRM y respondemos cualquier pregunta que te quede. Sin compromiso, sin tarjeta de crédito, sin presión — solo una conversación para ver si somos buen fit. Si lo somos, puedes empezar a mandarnos negocios la misma semana."
+      }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "De Agentes Como Tú",
+    "headline": "Lo que los agentes asociados dicen de nosotros.",
+    "subheadline": "Comentarios reales de profesionales inmobiliarios que trabajan con nosotros en 7 estados.",
+    "trustBadge": "Calificación promedio 4.9 · Reseñas verificadas",
+    "starsAria": "Calificación 5 de 5 estrellas",
+    "prevSlide": "Testimonio anterior",
+    "nextSlide": "Testimonio siguiente",
+    "googleReviewsLink": "Lee todas las reseñas en Google",
+    "disclaimer": "Testimonios de muestra. Reseñas reales de Google disponibles a solicitud.",
+    "verifiedRealtor": "Agente Verificado",
+    "items": [
+      {
+        "body": "He trabajado con muchos lenders. Broker Lenders es el único al que llamo el mismo día para empezar otro negocio. Su CRM cambió por completo mi seguimiento — estoy cerrando más sin trabajar más.",
+        "name": "Andrea Morales",
+        "role": "Realtor",
+        "brokerage": "Coldwell Banker",
+        "location": "Salt Lake City, UT",
+        "date": "Febrero 2026"
+      },
+      {
+        "body": "Pedro y su equipo nos preaprobaron de la noche a la mañana a un comprador que ya había sido rechazado dos veces por otros lenders. Cerramos en 17 días. Mi cliente lloró al firmar. Ese es el lender que todo agente quiere de su lado.",
+        "name": "Daniel Rivera",
+        "role": "Realtor",
+        "brokerage": "eXp Realty",
+        "location": "Las Vegas, NV",
+        "date": "Enero 2026"
+      },
+      {
+        "body": "El soporte bilingüe de principio a fin es un cambio total para mis clientes latinos. Pueden llamar a Broker Lenders directo en español y sentirse completamente entendidos. Esa confianza se traduce en cierres — y en referidos para mí.",
+        "name": "Sofia Castillo",
+        "role": "Realtor",
+        "brokerage": "Keller Williams",
+        "location": "Houston, TX",
+        "date": "Marzo 2026"
+      },
+      {
+        "body": "El Plan Socio es genial — CRM gratis, sin pago mensual, y un lender que de verdad cierra a tiempo. Ahora les paso cada comprador. No hay razón para usar a nadie más una vez que trabajas con ellos.",
+        "name": "James Thompson",
+        "role": "Broker / Owner",
+        "brokerage": "Thompson Real Estate Group",
+        "location": "Boise, ID",
+        "date": "Diciembre 2025"
+      }
+    ]
+  },
+  "marqueeStrip": {
+    "ariaLabel": "Banner de beneficios clave",
+    "phrases": [
+      "Cierra más negocios",
+      "Preaprobación en 24 horas",
+      "Soporte bilingüe",
+      "Cierre en 14 días",
+      "Licencia en 7 estados",
+      "Tu lender preferido"
+    ]
+  },
+  "mobileCTA": {
+    "primary": "Agenda Demo",
+    "primaryAria": "Agenda una demo de 15 minutos con Broker Lenders",
+    "secondaryAria": "Llamar a Broker Lenders al 801 307 0273",
+    "regionLabel": "Acciones rápidas"
+  },
+  "pricing": {
+    "eyebrow": "Planes de Alianza",
+    "headline": "Elige el plan que encaja con tu negocio.",
+    "subheadline": "Empieza sin pago mensual, o desbloquea la suite de automatización completa. Puedes cambiar de plan cuando quieras.",
+    "mostPopular": "Más Popular",
+    "mostPopularSr": "Plan más popular:",
+    "perMonth": "/mes",
+    "trust": {
+      "cancelAnytime": "Cancela cuando quieras",
+      "noSetupFees": "Sin costos de setup",
+      "freeOnboarding": "Llamada de onboarding gratis"
+    },
+    "customLink": "¿Necesitas algo personalizado para tu brokerage? Hablemos →",
+    "plans": [
+      {
+        "name": "Plan Socio",
+        "price": "$0",
+        "priceAria": "Cero dólares al mes, sin pago mensual",
+        "priceNote": "Sin pago mensual",
+        "tagline": "La forma más inteligente de empezar.",
+        "features": [
+          "Acceso completo al CRM — sin pago mensual",
+          "Solo pagas el uso de SMS y correo",
+          "Trabajamos como tu lender preferido",
+          "Soporte estándar por correo",
+          "Sesión de onboarding incluida"
+        ],
+        "ctaText": "Empieza como Socio",
+        "ctaAria": "Empieza como Socio — gratis, sin pago mensual",
+        "noteUnder": "Sin tarjeta de crédito"
+      },
+      {
+        "name": "Profesional",
+        "price": "$97",
+        "priceAria": "Noventa y siete dólares al mes, facturado mensualmente",
+        "priceNote": "Facturado mensualmente",
+        "tagline": "Para agentes que se toman en serio la automatización.",
+        "features": [
+          "Todo lo del Plan Socio",
+          "CRM completo listo para usar",
+          "Automatizaciones integradas",
+          "Acceso a sesiones grupales de soporte",
+          "Soporte prioritario por correo"
+        ],
+        "ctaText": "Elegir Profesional",
+        "ctaAria": "Elegir Profesional — 97 dólares al mes",
+        "noteUnder": null
+      },
+      {
+        "name": "Avanzado",
+        "price": "$300",
+        "priceAria": "Trescientos dólares al mes, facturado mensualmente",
+        "priceNote": "Facturado mensualmente",
+        "tagline": "Hecho por nosotros, con AI a tu favor.",
+        "features": [
+          "Todo lo del Profesional",
+          "Soporte personalizado 1:1 semanal",
+          "Configuración hecha por nosotros",
+          "Automatización avanzada con AI",
+          "Desarrollo de campañas personalizadas",
+          "Soporte prioritario por teléfono"
+        ],
+        "ctaText": "Elegir Avanzado",
+        "ctaAria": "Elegir Avanzado — 300 dólares al mes",
+        "noteUnder": null
+      }
+    ]
   }
 }

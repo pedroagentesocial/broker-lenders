@@ -33,9 +33,27 @@ const ratesFAQs: FAQItem[] = [
   { question: "What is APR?", answer: "APR (Annual Percentage Rate) represents the total cost of borrowing, including the interest rate plus fees and other costs associated with the loan. It provides a more complete picture of the loan's cost and allows you to compare different loan offers more accurately." },
   { question: "Can I negotiate my mortgage rate?", answer: "Yes, you can often negotiate your rate by comparing offers from multiple lenders, improving your credit score, increasing your down payment, or buying discount points. Working with a mortgage broker can also help you access better rates from multiple lenders." }
 ];
+
+// FAQ JSON-LD for rich snippets in Google SERPs
+const allFaqs = [...generalFAQs, ...processFAQs, ...ratesFAQs];
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: allFaqs.map((f) => ({
+    '@type': 'Question',
+    name: f.question,
+    acceptedAnswer: { '@type': 'Answer', text: f.answer },
+  })),
+};
 ---
 
-<Layout title="Frequently Asked Questions - Broker Lenders">
+<Layout
+  title="Mortgage FAQs - Common Home Loan Questions Answered | Broker Lenders"
+  description="Answers to the most common mortgage questions: qualifying, down payment, closing costs, APR, rate locks, the loan process, and more. Get clarity before you apply."
+  keywords="mortgage FAQ, home loan questions, mortgage process, down payment FAQ, APR explained"
+  hreflangPath="/faqs"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)} slot="head" />
   <!-- Breadcrumb Section -->
   <div class="bg-white py-4">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

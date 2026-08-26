@@ -9,7 +9,12 @@ const enB64 = Buffer.from(JSON.stringify(enDict)).toString('base64');
 const esB64 = Buffer.from(JSON.stringify(esDict)).toString('base64');
 ---
 
-<Layout title={dict.title} lang={lang}>
+<Layout
+  title={dict.title}
+  lang={lang}
+  description="Broker Lenders Privacy Policy: how we collect, use, store and protect your personal and financial information."
+  hreflangPath="/legal/privacy"
+>
   <div class="min-h-screen bg-white">
     <!-- i18n payload for Privacy page -->
     <div id="i18n-privacy" data-en={enB64} data-es={esB64} style="display:none"></div>

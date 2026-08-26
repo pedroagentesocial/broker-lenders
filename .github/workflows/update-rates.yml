@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  update-and-deploy:
+  update-rates:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -31,33 +31,14 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add src/data/rates-data.json public/rates-data.json src/data/update-log.txt
+          git add src/data/rates-data.json public/rates-data.json src/data/rates-history.json public/rates-history.json src/data/update-log.txt
           git commit -m "chore: daily rates update" || echo 'No changes to commit'
 
       - name: Push updated rates to main
         run: |
           git push origin HEAD:main
 
-      - name: Build Astro
+      # Verificación: si el build rompe, el job falla y nos enteramos.
+      # El despliegue lo hace Vercel automáticamente con el push a main.
+      - name: Build Astro (verificación)
         run: npm run build
-
-      - name: Deploy via FTPS to Hostinger
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.SFTP_HOST }}
-          username: ${{ secrets.SFTP_USERNAME }}
-          password: ${{ secrets.SFTP_PASSWORD }}
-          port: 21
-          protocol: ftp
-          local-dir: dist/
-          server-dir: ./
-          dangerous-clean-slate: false
-          exclude: |
-            **/.git*
-            **/.github/**
-            **/node_modules/**
-            **/.DS_Store
-            .well-known/**
-            cgi-bin/**
-            .htaccess
-          timeout: 120000

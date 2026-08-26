@@ -271,7 +271,7 @@ const esB64 = Buffer.from(JSON.stringify(es)).toString('base64');
 		const nextBtn = document.getElementById('next-btn');
 		let currentIndex = 0;
 
-    function showTestimonial(index) {
+    function showTestimonial(index: number) {
       testimonials.forEach((testimonial, i) => {
         if (i === index) {
           testimonial.classList.remove('hidden');
@@ -281,7 +281,7 @@ const esB64 = Buffer.from(JSON.stringify(es)).toString('base64');
           testimonial.classList.remove('active');
         }
       });
-      counter.textContent = `${index + 1}-${testimonials.length}`;
+      if (counter) counter.textContent = `${index + 1}-${testimonials.length}`;
     }
 
 		function nextTestimonial() {
@@ -294,8 +294,8 @@ const esB64 = Buffer.from(JSON.stringify(es)).toString('base64');
 			showTestimonial(currentIndex);
 		}
 
-		nextBtn.addEventListener('click', nextTestimonial);
-		prevBtn.addEventListener('click', prevTestimonial);
+		nextBtn?.addEventListener('click', nextTestimonial);
+		prevBtn?.addEventListener('click', prevTestimonial);
 
 		// Auto-advance every 5 seconds
 		setInterval(nextTestimonial, 5000);

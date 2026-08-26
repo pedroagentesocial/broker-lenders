@@ -11,7 +11,7 @@ const dict = lang === 'es' ? esDict : enDict;
 console.log('[i18n][ways-help][SSR] resolve', { href: Astro.url.href, lang });
 
 // Prepare base64 dictionaries for client i18n without runtime imports
-const toB64 = (obj) => Buffer.from(JSON.stringify(obj), 'utf-8').toString('base64');
+const toB64 = (obj: unknown) => Buffer.from(JSON.stringify(obj), 'utf-8').toString('base64');
 const enB64 = toB64(enDict);
 const esB64 = toB64(esDict);
 ---

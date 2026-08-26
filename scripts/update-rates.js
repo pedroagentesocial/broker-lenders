@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { sendNotificationEmail, notifyUpdateFailure, notifyScrapingFailure, notifySuccess } from './email-notifications.js';
+import { appendSnapshot } from './build-rates-history.js';
 
 // Obtener __dirname en módulos ES
 const __filename = fileURLToPath(import.meta.url);
@@ -13,6 +14,7 @@ const LOAN_TYPES = {
   '20-year-fixed': '20-year Fixed', 
   '15-year-fixed': '15-year Fixed',
   '30-year-fha': '30-year FHA',
+  '30-year-va': '30-year VA',
   '30-year-jumbo': '30-year Jumbo'
 };
 
@@ -35,6 +37,7 @@ const BACKUP_DATA = {
       "20-year-fixed": { "rate": "6.125%", "apr": "6.285%", "points": "1.5" },
       "15-year-fixed": { "rate": "5.875%", "apr": "6.025%", "points": "1.25" },
       "30-year-fha": { "rate": "6.500%", "apr": "6.720%", "points": "1.5" },
+      "30-year-va": { "rate": "6.375%", "apr": "6.590%", "points": "1.25" },
       "30-year-jumbo": { "rate": "6.875%", "apr": "7.010%", "points": "1.75" }
     },
     "idaho": {
@@ -42,6 +45,7 @@ const BACKUP_DATA = {
       "20-year-fixed": { "rate": "6.200%", "apr": "6.360%", "points": "1.5" },
       "15-year-fixed": { "rate": "5.950%", "apr": "6.100%", "points": "1.25" },
       "30-year-fha": { "rate": "6.575%", "apr": "6.795%", "points": "1.5" },
+      "30-year-va": { "rate": "6.450%", "apr": "6.665%", "points": "1.25" },
       "30-year-jumbo": { "rate": "6.950%", "apr": "7.085%", "points": "1.75" }
     },
     "nevada": {
@@ -49,6 +53,7 @@ const BACKUP_DATA = {
       "20-year-fixed": { "rate": "6.275%", "apr": "6.435%", "points": "1.5" },
       "15-year-fixed": { "rate": "6.025%", "apr": "6.175%", "points": "1.25" },
       "30-year-fha": { "rate": "6.650%", "apr": "6.870%", "points": "1.5" },
+      "30-year-va": { "rate": "6.525%", "apr": "6.740%", "points": "1.25" },
       "30-year-jumbo": { "rate": "7.025%", "apr": "7.160%", "points": "1.75" }
     },
     "california": {
@@ -56,6 +61,7 @@ const BACKUP_DATA = {
       "20-year-fixed": { "rate": "6.025%", "apr": "6.185%", "points": "1.5" },
       "15-year-fixed": { "rate": "5.775%", "apr": "5.925%", "points": "1.25" },
       "30-year-fha": { "rate": "6.400%", "apr": "6.620%", "points": "1.5" },
+      "30-year-va": { "rate": "6.275%", "apr": "6.490%", "points": "1.25" },
       "30-year-jumbo": { "rate": "6.775%", "apr": "6.910%", "points": "1.75" }
     },
     "texas": {
@@ -63,6 +69,7 @@ const BACKUP_DATA = {
       "20-year-fixed": { "rate": "6.150%", "apr": "6.310%", "points": "1.5" },
       "15-year-fixed": { "rate": "5.900%", "apr": "6.050%", "points": "1.25" },
       "30-year-fha": { "rate": "6.525%", "apr": "6.745%", "points": "1.5" },
+      "30-year-va": { "rate": "6.400%", "apr": "6.615%", "points": "1.25" },
       "30-year-jumbo": { "rate": "6.900%", "apr": "7.035%", "points": "1.75" }
     },
     "florida": {
@@ -70,6 +77,7 @@ const BACKUP_DATA = {
       "20-year-fixed": { "rate": "6.200%", "apr": "6.360%", "points": "1.5" },
       "15-year-fixed": { "rate": "5.950%", "apr": "6.100%", "points": "1.25" },
       "30-year-fha": { "rate": "6.575%", "apr": "6.795%", "points": "1.5" },
+      "30-year-va": { "rate": "6.450%", "apr": "6.665%", "points": "1.25" },
       "30-year-jumbo": { "rate": "6.950%", "apr": "7.085%", "points": "1.75" }
     },
     "colorado": {
@@ -77,6 +85,7 @@ const BACKUP_DATA = {
       "20-year-fixed": { "rate": "6.100%", "apr": "6.260%", "points": "1.5" },
       "15-year-fixed": { "rate": "5.850%", "apr": "6.000%", "points": "1.25" },
       "30-year-fha": { "rate": "6.475%", "apr": "6.695%", "points": "1.5" },
+      "30-year-va": { "rate": "6.350%", "apr": "6.565%", "points": "1.25" },
       "30-year-jumbo": { "rate": "6.850%", "apr": "6.985%", "points": "1.75" }
     }
   }
@@ -206,6 +215,9 @@ async function updateRates() {
     
     // Guardar datos
     saveData(data);
+
+    // Alimentar el historial usado por las sparklines del carrusel
+    appendSnapshot(data);
     
     console.log('🎉 Actualización completada exitosamente!');
     console.log(`📊 Timestamp: ${data.timestamp}`);
@@ -229,6 +241,7 @@ async function updateRates() {
     
     try {
       saveData(BACKUP_DATA);
+      appendSnapshot(BACKUP_DATA);
       console.log('✅ Datos de respaldo guardados');
       
       // Enviar notificación de error con datos de respaldo
@@ -267,8 +280,13 @@ async function updateRates() {
   }
 }
 
-// Ejecutar si se llama directamente
-if (import.meta.url === `file://${process.argv[1]}`) {
+// Ejecutar si se llama directamente.
+// Comparamos rutas resueltas en vez de cadenas file:// para que funcione
+// igual en Windows (rutas con backslash) que en Linux (CI).
+const __entry = process.argv[1];
+const __isEntry = Boolean(__entry) && path.resolve(__entry) === path.resolve(__filename);
+
+if (__isEntry) {
   updateRates()
     .then(() => {
       console.log('✅ Proceso finalizado');

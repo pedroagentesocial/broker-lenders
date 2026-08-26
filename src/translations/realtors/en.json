@@ -1,111 +1,430 @@
 {
-  "title": "For Realtors - Broker Lenders",
+  "title": "For Realtors — Partner with a Lender That Closes Fast | Broker Lenders",
+  "metaDescription": "Partner with Broker Lenders: 14-day closings, 24h pre-approvals, bilingual support, and a free CRM. Trusted by realtors in 7 states.",
   "hero": {
     "eyebrow": "For Realtors",
-    "headline": "Close More Deals In Less Time",
-    "subheadline": "Without Chasing Leads Manually",
-    "description": "We combine fast lending with an automated follow-up system so you can convert more leads into appointments and more appointments into closings.",
-    "primaryCta": "Book a 15-Minute Demo",
-    "secondaryCta": "Call Us Now"
-  },
-  "problem": {
-    "title": "Why Agents Lose Deals",
-    "intro": "Most agents are doing great work, but the process breaks in key moments.",
-    "items": [
-      "Leads go cold without consistent follow-up",
-      "Manual responses delay first contact",
-      "Disorganized workflows hide opportunities",
-      "Slow lending partners stall transactions"
+    "rotating": [
+      "Close more deals in less time",
+      "Be the hero your clients deserve",
+      "Stop losing leads to slow follow-up"
     ],
-    "result": "Result: deals are lost without noticing."
+    "subheadline": "We combine fast lending with an automated follow-up system so you convert more leads into appointments — and more appointments into closings.",
+    "trustBadgeStates": "Trusted by Realtors in 7 states",
+    "trustBadgeNmls": "NMLS #318973",
+    "primaryCta": "Book a 15-Minute Demo",
+    "secondaryCta": "Call (801) 307-0273",
+    "secondaryCtaAria": "Call Broker Lenders at 801 307 0273",
+    "microcopy": "No credit card required · 15-minute call · Free strategy",
+    "floatingCard": "Pre-approval ready in 24 hours",
+    "imageAlt": "Real estate agent meeting with clients"
   },
-  "solution": {
-    "title": "Our Two-Part System",
-    "lending": {
-      "title": "Fast, Reliable Lending",
-      "items": [
-        "Quick pre-approvals",
-        "Closings in about 14 days",
-        "Flexible programs, including lower credit profiles",
-        "End-to-end loan process management"
-      ]
-    },
-    "crm": {
-      "title": "Automated Agent Social CRM",
-      "items": [
-        "Automated follow-up by SMS, email, and social",
-        "Immediate response to new leads",
-        "Integrated calendar for easy booking",
-        "Pipeline to organize every opportunity",
-        "Done-for-you real estate campaigns"
-      ]
-    }
+  "marquee": {
+    "heading": "Trusted by Realtors at top brokerages",
+    "ariaLabel": "Partner brokerages"
   },
-  "differentiator": {
-    "title": "We Are Not Just A Lender",
-    "description": "Most lenders help with the mortgage. We help with the mortgage and the system that creates and closes more deals."
-  },
-  "offers": {
-    "title": "Choose The Plan That Fits Your Business",
-    "partner": {
-      "name": "Partner Plan",
-      "price": "No monthly fee",
-      "items": [
-        "CRM with no monthly subscription",
-        "Pay only usage for SMS/email",
-        "Work with us as your preferred lender"
-      ]
-    },
-    "pro": {
-      "name": "Professional Plan",
-      "price": "$97 / month",
-      "items": [
-        "Complete CRM ready to use",
-        "Built-in automations",
-        "Access to group support sessions"
-      ]
-    },
-    "advanced": {
-      "name": "Advanced Plan",
-      "price": "$300 / month",
-      "items": [
-        "Everything in Professional",
-        "Weekly 1:1 personalized support",
-        "Done-for-you setup and advanced automation with AI"
-      ]
-    }
-  },
-  "results": {
-    "title": "What You Can Expect",
-    "items": [
-      "Reply to leads in seconds",
-      "Reduce losses from poor follow-up",
-      "Increase booked appointments",
-      "Close more deals in less time"
+  "painPoints": {
+    "eyebrow": "The Real Problem",
+    "headline": "Why agents lose deals",
+    "subheadline": "Most agents are doing great work. The process breaks in four key moments — and every break costs a closing.",
+    "transition": "Sound familiar? You're not alone — and there's a fix.",
+    "cards": [
+      {
+        "title": "Cold leads",
+        "body": "Leads go cold without consistent follow-up — by the time you call, they've signed with someone else."
+      },
+      {
+        "title": "Slow first response",
+        "body": "Manual replies delay first contact. Studies show the first agent to reply wins the deal 78% of the time."
+      },
+      {
+        "title": "Disorganized pipeline",
+        "body": "Disorganized workflows hide opportunities. Deals fall through the cracks of spreadsheets and inboxes."
+      },
+      {
+        "title": "Slow lending partners",
+        "body": "Slow lending stalls transactions. Pre-approvals that take weeks kill momentum and shake buyer confidence."
+      }
     ]
   },
-  "callGuide": {
-    "title": "Simple Call Flow For Your Team",
-    "hook": "1. Hook: We help agents close more deals by combining fast lending with an automated system.",
-    "problem": "2. Problem: Many agents lose leads because follow-up is late or the process is slow.",
-    "solution": "3. Solution: We solve that with quick pre-approvals plus CRM automation.",
-    "offer": "4. Offer: Several agents use this with no monthly fee by partnering with us.",
-    "close": "5. Close: The best next step is a 15-minute demo. Is today or tomorrow better?"
+  "services": {
+    "eyebrow": "What You Get",
+    "headline": "Everything you need to close more deals.",
+    "subheadline": "A complete loan toolkit for your clients, plus the partner tools that help you grow your business.",
+    "loanGroup": {
+      "eyebrow": "For Your Clients",
+      "title": "What your clients get",
+      "context": "From the right neighborhood to the right financing — everything that helps your clients close confidently."
+    },
+    "loans": [
+      { "name": "Right neighborhood, right home", "bestFor": "Local market expertise across 7 states" },
+      { "name": "Competitive market rates", "bestFor": "Lower payments your clients feel" },
+      { "name": "Pre-approvals that win", "bestFor": "Compete with cash offers" },
+      { "name": "Down payment help", "bestFor": "Low-down programs and DPA" },
+      { "name": "Right loan for any situation", "bestFor": "Conventional, FHA, VA, jumbo, USDA" },
+      { "name": "Bilingual end-to-end support", "bestFor": "Spanish from first call to closing" },
+      { "name": "First-time buyer guidance", "bestFor": "Step-by-step, never alone" },
+      { "name": "Fast, on-time closings", "bestFor": "14-day average close" }
+    ],
+    "loansFooter": "Plus refinance options, bank-statement programs, and down payment assistance.",
+    "loansFooterLink": "See all programs",
+    "partnerGroup": {
+      "eyebrow": "For You As Our Partner",
+      "title": "Partner tools to grow your business",
+      "context": "Beyond loans — the systems that help you close more deals with less effort."
+    },
+    "tools": [
+      { "name": "24-Hour Pre-Approvals", "description": "Get your buyers approved fast so you can win bidding wars." },
+      { "name": "Automated CRM & Follow-Up", "description": "Lead capture, SMS/email automations, and pipeline tracking — included free." },
+      { "name": "Bilingual Support End-to-End", "description": "Loan officers, processors, and closers all fluent in English and Spanish." },
+      { "name": "14-Day Average Closings", "description": "End-to-end loan management built for speed and on-time closings." },
+      { "name": "Done-For-You Marketing", "description": "Ready-to-send real estate campaigns and co-branded materials available on paid plans." },
+      { "name": "Direct Line to Your Loan Officer", "description": "No call centers. Real people who know your deals and answer when you call." }
+    ],
+    "compareLink": "Compare partnership plans below ↓"
   },
-  "phrases": {
-    "title": "Natural Phrases Your Agents Can Use",
-    "items": [
-      "This is not just a CRM.",
-      "This helps you stop losing opportunities.",
-      "It is basically a system that works for you.",
-      "Most agents do not realize how much they leave on the table."
+  "caseStudies": {
+    "eyebrow": "Real Results",
+    "headline": "Less talk. More closings.",
+    "subheadline": "Real numbers from real partnerships. This is what working with us looks like.",
+    "disclaimer": "Examples shown are representative client outcomes. Individual results vary.",
+    "slides": [
+      {
+        "category": "Fast Close",
+        "locationText": "Salt Lake City, UT",
+        "headline": "Beat 3 cash offers with a 14-day close.",
+        "context": "Hot market, multiple offers — buyer needed speed. We pre-approved overnight and closed in 14 days.",
+        "attribution": "Maria R., Realtor · Coldwell Banker · Salt Lake City, UT",
+        "metrics": [
+          {
+            "prefix": "",
+            "suffix": " DAYS",
+            "label": "To Close",
+            "ariaText": "14 days to close"
+          },
+          {
+            "prefix": "",
+            "suffix": "h",
+            "label": "Pre-Approval",
+            "ariaText": "24 hour pre-approval turnaround"
+          },
+          {
+            "prefix": "vs ",
+            "suffix": "",
+            "label": "Cash Offers Beaten",
+            "ariaText": "Beat 3 cash offers head-to-head"
+          }
+        ]
+      },
+      {
+        "category": "Approved When Others Said No",
+        "locationText": "Boise, ID",
+        "headline": "From denied twice to approved in 7 days.",
+        "context": "Self-employed buyer, strong income, messy paperwork. We restructured the file with a bank-statement program and got it approved.",
+        "attribution": "James T., Realtor · eXp Realty · Boise, ID",
+        "metrics": [
+          {
+            "prefix": "",
+            "suffix": "",
+            "label": "Prior Denials",
+            "ariaText": "2 prior lender denials"
+          },
+          {
+            "prefix": "",
+            "suffix": " DAYS",
+            "label": "To Approval",
+            "ariaText": "7 days to approval"
+          },
+          {
+            "prefix": "$",
+            "suffix": "K",
+            "label": "Deal Saved",
+            "ariaText": "480 thousand dollar deal saved"
+          }
+        ]
+      },
+      {
+        "category": "Smart Structure",
+        "locationText": "Las Vegas, NV",
+        "headline": "$12K saved with the right program mix.",
+        "context": "First-time buyer thought she couldn't afford it. Combining DPA + competitive FHA rate, she walked into her home with $12,000 less out of pocket.",
+        "attribution": "Carlos M., Realtor · Keller Williams · Las Vegas, NV",
+        "metrics": [
+          {
+            "prefix": "$",
+            "suffix": "",
+            "label": "Total Saved",
+            "ariaText": "12,000 dollars total saved"
+          },
+          {
+            "prefix": "",
+            "suffix": "%",
+            "label": "Down Payment",
+            "ariaText": "3.5 percent down payment"
+          },
+          {
+            "prefix": "",
+            "suffix": "ST",
+            "label": "Time Buyer",
+            "ariaText": "1st time home buyer"
+          }
+        ]
+      },
+      {
+        "category": "Partner Volume",
+        "locationText": "Houston, TX",
+        "headline": "8 closings in one quarter through one partner.",
+        "context": "A bilingual realtor partnered with us as her preferred lender. One quarter later: 8 closed transactions, all on time, all in the buyer's preferred language.",
+        "attribution": "Sofia C., Realtor · Compass · Houston, TX",
+        "metrics": [
+          {
+            "prefix": "",
+            "suffix": "",
+            "label": "Deals Closed",
+            "ariaText": "8 deals closed in one quarter"
+          },
+          {
+            "prefix": "",
+            "suffix": " DAYS",
+            "label": "Avg Close Time",
+            "ariaText": "18 days average close time"
+          },
+          {
+            "prefix": "",
+            "suffix": "%",
+            "label": "On-Time Rate",
+            "ariaText": "100 percent on-time closing rate"
+          }
+        ]
+      }
     ]
   },
-  "finalCta": {
-    "title": "See It In Action",
-    "description": "In 15 minutes, we show how it works, how to apply it to your business, and how to start without complexity.",
-    "primaryCta": "Schedule My Demo",
-    "secondaryCta": "Book A Call",
-    "positioning": "We are not only lenders. We are the system that helps you close more deals."
+  "stats": {
+    "eyebrow": "By The Numbers",
+    "headline": "Built to deliver, proven to perform.",
+    "subheadline": "Real numbers from real partnerships. This is what working with Broker Lenders looks like.",
+    "updatedNote": "Updated 2026",
+    "cards": [
+      {
+        "label": "Average Close",
+        "descriptor": "From application to keys",
+        "suffix": "days",
+        "suffixType": "word",
+        "ariaText": "14 days average close, from application to keys"
+      },
+      {
+        "label": "Pre-Approval",
+        "descriptor": "Turnaround time",
+        "suffix": "h",
+        "suffixType": "symbol",
+        "ariaText": "24 hour pre-approval turnaround"
+      },
+      {
+        "label": "States Licensed",
+        "descriptor": "UT · ID · NV · CA · TX · FL · CO",
+        "suffix": "",
+        "suffixType": "none",
+        "ariaText": "Licensed in 7 states"
+      },
+      {
+        "label": "Bilingual Support",
+        "descriptor": "English + Spanish, every step",
+        "suffix": "%",
+        "suffixType": "symbol",
+        "ariaText": "100 percent bilingual support, English plus Spanish, every step"
+      }
+    ]
+  },
+  "finalCTA": {
+    "eyebrow": "Ready When You Are",
+    "headline": "Stop losing deals to slow lenders.",
+    "subheadline": "Partner with a lender that closes fast, communicates constantly, and helps your clients win.",
+    "primaryCta": "Book my 15-minute call",
+    "primaryCtaAria": "Book a 15-minute call to partner with Broker Lenders",
+    "secondaryCta": "Call (801) 307-0273",
+    "secondaryCtaAria": "Call Broker Lenders at 801 307 0273",
+    "microcopy": "No credit card required · No commitment · 15-minute call",
+    "responseIndicator": "Typically replies within 1 hour",
+    "trustNmls": "NMLS #318973",
+    "trustEHL": "Equal Housing Lender",
+    "trustStates": "Licensed in: UT · ID · NV · CA · TX · FL · CO"
+  },
+  "faq": {
+    "eyebrow": "Questions Realtors Ask",
+    "headline": "Everything you wanted to know.",
+    "subheadline": "Straight answers to the questions agents ask before they partner with us. Don't see yours? Just ask.",
+    "inlineCta": "Book my 15-minute call →",
+    "stillHaveQuestions": {
+      "heading": "Still have questions?",
+      "body": "Reach out directly — we usually reply within an hour during business hours.",
+      "emailCta": "Email us",
+      "emailAria": "Email Broker Lenders at pedro@brokerlenders.com",
+      "phoneCta": "Call (801) 307-0273",
+      "phoneAria": "Call Broker Lenders at 801 307 0273"
+    },
+    "items": [
+      {
+        "question": "Is the Partner Plan really free? What's the catch?",
+        "answer": "There's no catch. The Partner Plan has zero monthly fee because we earn our income when we close mortgage loans. When your buyers and sellers close with us as their lender, that's how we make our money — so giving you a free CRM and free partnership makes sense for both of us. You only pay for SMS and email usage at cost (typically $5–15/month for an active agent)."
+      },
+      {
+        "question": "Do I have to use you exclusively as my lender?",
+        "answer": "No. We're not asking for exclusivity. We just ask that you give us a fair shot — send us your buyers and let us prove we can close faster, communicate better, and serve them well. If we earn it, we become your preferred lender naturally. If we don't, you keep your other relationships. No contracts, no penalties."
+      },
+      {
+        "question": "What states can you lend in?",
+        "answer": "We're licensed in 7 states: Utah, Idaho, Nevada, California, Texas, Florida, and Colorado. If your client is buying in any of these states, we can help. We're actively expanding to additional states — if your market isn't on the list yet, let us know and we'll keep you posted."
+      },
+      {
+        "question": "How fast can you really pre-approve a buyer?",
+        "answer": "Standard pre-approval turnaround is 24 hours from when we receive a complete application. For straightforward files, we've issued pre-approvals same-day. We'll always tell you upfront if a file needs more time — for example, self-employed buyers or unique credit situations may need 48–72 hours to structure properly."
+      },
+      {
+        "question": "I already use a CRM. Can yours integrate or replace it?",
+        "answer": "Most agents who try ours end up replacing their old CRM — not because they have to, but because they prefer it. Our system includes lead capture, automated follow-up across SMS/email/social, calendar booking, pipeline tracking, and ready-to-send real estate campaigns. If you'd rather integrate, we can connect to most major platforms (Follow Up Boss, KvCORE, BoomTown, etc.) on the Professional and Advanced plans."
+      },
+      {
+        "question": "Do you really have bilingual support? My clients need Spanish.",
+        "answer": "Yes — fully bilingual, end to end. Loan officers, processors, and closing coordinators all speak both English and Spanish fluently. Your Spanish-speaking clients will be served in their language at every stage, from first call to closing table. This is one of the things realtors most often tell us sets us apart."
+      },
+      {
+        "question": "Are you actually licensed? Who am I working with?",
+        "answer": "Yes. Pedro Lira is a licensed mortgage loan originator (NMLS #318973) with Xpert Home Lending (NMLS #2179191), an Equal Housing Lender. You can verify our license at any time on the NMLS Consumer Access portal at nmlsconsumeraccess.org. We follow all federal and state lending regulations — you and your clients are working with a fully compliant, accountable team."
+      },
+      {
+        "question": "How do I get started?",
+        "answer": "Book a 15-minute intro call. We'll walk you through how the Partner Plan works, show you the CRM, and answer any remaining questions. No commitment, no credit card, no pressure — just a conversation to see if we're a good fit. If we are, you can start sending us deals the same week."
+      }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "From Realtors Like You",
+    "headline": "What partner agents say about us.",
+    "subheadline": "Real feedback from real estate professionals working with us across 7 states.",
+    "trustBadge": "4.9 average rating · Verified Google Reviews",
+    "starsAria": "Rated 5 out of 5 stars",
+    "prevSlide": "Previous testimonial",
+    "nextSlide": "Next testimonial",
+    "googleReviewsLink": "Read all reviews on Google",
+    "disclaimer": "Sample testimonials. Real Google reviews available on request.",
+    "verifiedRealtor": "Verified Realtor",
+    "items": [
+      {
+        "body": "I've worked with a lot of lenders. Broker Lenders is the only one I've called the same day to start another deal. Their CRM has changed my follow-up game completely — I'm closing more without working more.",
+        "name": "Andrea Morales",
+        "role": "Realtor",
+        "brokerage": "Coldwell Banker",
+        "location": "Salt Lake City, UT",
+        "date": "February 2026"
+      },
+      {
+        "body": "Pedro and his team got us pre-approved overnight for a buyer who'd been turned down twice by other lenders. We closed in 17 days. My client cried at signing. That's the lender every realtor wants on their side.",
+        "name": "Daniel Rivera",
+        "role": "Realtor",
+        "brokerage": "eXp Realty",
+        "location": "Las Vegas, NV",
+        "date": "January 2026"
+      },
+      {
+        "body": "Bilingual support from end to end is a game changer for my Latino clients. They can call Broker Lenders directly in Spanish and feel completely understood. That trust translates into closings — and into referrals to me.",
+        "name": "Sofia Castillo",
+        "role": "Realtor",
+        "brokerage": "Keller Williams",
+        "location": "Houston, TX",
+        "date": "March 2026"
+      },
+      {
+        "body": "The Partner Plan is genius — free CRM, no monthly fee, and a lender that actually closes on time. I refer every buyer to them now. There's no reason to use anyone else once you've worked with them.",
+        "name": "James Thompson",
+        "role": "Broker / Owner",
+        "brokerage": "Thompson Real Estate Group",
+        "location": "Boise, ID",
+        "date": "December 2025"
+      }
+    ]
+  },
+  "marqueeStrip": {
+    "ariaLabel": "Key benefits banner",
+    "phrases": [
+      "Close more deals",
+      "Pre-approval in 24 hours",
+      "Bilingual support",
+      "Closings in 14 days",
+      "Licensed in 7 states",
+      "Your preferred lender"
+    ]
+  },
+  "mobileCTA": {
+    "primary": "Book a Demo",
+    "primaryAria": "Book a 15-minute demo with Broker Lenders",
+    "secondaryAria": "Call Broker Lenders at 801 307 0273",
+    "regionLabel": "Quick actions"
+  },
+  "pricing": {
+    "eyebrow": "Partnership Plans",
+    "headline": "Choose the plan that fits your business.",
+    "subheadline": "Start with no monthly fee, or unlock the full automation suite. You can change plans anytime.",
+    "mostPopular": "Most Popular",
+    "mostPopularSr": "Most popular plan:",
+    "perMonth": "/month",
+    "trust": {
+      "cancelAnytime": "Cancel anytime",
+      "noSetupFees": "No setup fees",
+      "freeOnboarding": "Free onboarding call"
+    },
+    "customLink": "Need something custom for your brokerage? Let's talk →",
+    "plans": [
+      {
+        "name": "Partner Plan",
+        "price": "$0",
+        "priceAria": "Zero dollars per month, no monthly fee",
+        "priceNote": "No monthly fee",
+        "tagline": "The smartest way to start.",
+        "features": [
+          "Full CRM access — no monthly subscription",
+          "Pay only usage for SMS and email",
+          "Work with us as your preferred lender",
+          "Standard email support",
+          "Onboarding session included"
+        ],
+        "ctaText": "Start as a Partner",
+        "ctaAria": "Start as a Partner — free, no monthly fee",
+        "noteUnder": "No credit card required"
+      },
+      {
+        "name": "Professional",
+        "price": "$97",
+        "priceAria": "Ninety-seven dollars per month, billed monthly",
+        "priceNote": "Billed monthly",
+        "tagline": "For agents serious about automation.",
+        "features": [
+          "Everything in Partner Plan",
+          "Complete CRM ready to use",
+          "Built-in automations",
+          "Access to group support sessions",
+          "Priority email support"
+        ],
+        "ctaText": "Choose Professional",
+        "ctaAria": "Choose Professional — 97 dollars per month",
+        "noteUnder": null
+      },
+      {
+        "name": "Advanced",
+        "price": "$300",
+        "priceAria": "Three hundred dollars per month, billed monthly",
+        "priceNote": "Billed monthly",
+        "tagline": "Done-for-you, with AI on your side.",
+        "features": [
+          "Everything in Professional",
+          "Weekly 1:1 personalized support",
+          "Done-for-you setup",
+          "Advanced AI automation",
+          "Custom campaign development",
+          "Priority phone support"
+        ],
+        "ctaText": "Choose Advanced",
+        "ctaAria": "Choose Advanced — 300 dollars per month",
+        "noteUnder": null
+      }
+    ]
   }
 }

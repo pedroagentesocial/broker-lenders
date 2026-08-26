@@ -1,0 +1,209 @@
+---
+import enPage from '../../translations/realtors/en.json';
+const dict = enPage as any;
+
+const cardConfig = [
+  { number: '01', icon: 'snowflake' },
+  { number: '02', icon: 'clock' },
+  { number: '03', icon: 'shuffle' },
+  { number: '04', icon: 'trending-down' },
+];
+---
+
+<section
+  class="pain-section bg-black text-white py-14 lg:py-20"
+  aria-labelledby="pain-points-heading"
+>
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-3xl text-center">
+      <p
+        class="mb-4 text-xs sm:text-sm font-semibold uppercase tracking-[0.18em] text-red-600"
+        data-i18n="painPoints.eyebrow"
+      >{dict.painPoints.eyebrow}</p>
+      <h2
+        id="pain-points-heading"
+        class="mb-5 text-3xl sm:text-4xl lg:text-5xl font-bold text-white"
+        data-i18n="painPoints.headline"
+      >{dict.painPoints.headline}</h2>
+      <p
+        class="mx-auto max-w-2xl text-base sm:text-lg leading-relaxed text-gray-300"
+        data-i18n="painPoints.subheadline"
+      >{dict.painPoints.subheadline}</p>
+    </div>
+
+    <div class="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      {cardConfig.map((card, i) => (
+        <article
+          class="pain-card group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 lg:p-8 backdrop-blur-sm shadow-[0_8px_24px_-12px_rgba(0,0,0,0.5)] hover:-translate-y-1 hover:bg-white/10 hover:border-red-600/50 hover:shadow-[0_20px_50px_-12px_rgba(220,38,38,0.25)]"
+          style={`--reveal-delay: ${i * 100}ms`}
+        >
+          <span
+            class="pain-number absolute right-5 top-3 text-6xl lg:text-7xl font-bold leading-none text-white select-none pointer-events-none"
+            aria-hidden="true"
+          >{card.number}</span>
+
+          <div class="relative z-10">
+            <div
+              class="pain-icon mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 text-white transition-colors duration-[250ms] ease-out group-hover:bg-red-600/20 group-hover:text-red-400"
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6">
+                {card.icon === 'snowflake' && (
+                  <Fragment>
+                    <path d="M2 12h20" />
+                    <path d="M12 2v20" />
+                    <path d="m20 16-4-4 4-4" />
+                    <path d="m4 8 4 4-4 4" />
+                    <path d="m16 4-4 4-4-4" />
+                    <path d="m8 20 4-4 4 4" />
+                  </Fragment>
+                )}
+                {card.icon === 'clock' && (
+                  <Fragment>
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12 6 12 12 16 14" />
+                  </Fragment>
+                )}
+                {card.icon === 'shuffle' && (
+                  <Fragment>
+                    <path d="M2 18h1.4c1.3 0 2.5-.6 3.3-1.7l6.1-8.6c.7-1.1 2-1.7 3.3-1.7H22" />
+                    <path d="m18 2 4 4-4 4" />
+                    <path d="M2 6h1.9c1.5 0 2.9.9 3.6 2.2" />
+                    <path d="M22 18h-5.9c-1.3 0-2.6-.7-3.3-1.8l-.5-.8" />
+                    <path d="m18 14 4 4-4 4" />
+                  </Fragment>
+                )}
+                {card.icon === 'trending-down' && (
+                  <Fragment>
+                    <polyline points="22 17 13.5 8.5 8.5 13.5 2 7" />
+                    <polyline points="16 17 22 17 22 11" />
+                  </Fragment>
+                )}
+              </svg>
+            </div>
+
+            <h3
+              class="mb-2 text-lg sm:text-xl font-bold text-white"
+              data-i18n={`painPoints.cards.${i}.title`}
+            >{dict.painPoints.cards[i].title}</h3>
+            <p
+              class="text-sm sm:text-base leading-relaxed text-gray-300"
+              data-i18n={`painPoints.cards.${i}.body`}
+            >{dict.painPoints.cards[i].body}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <p
+      class="mx-auto mt-12 max-w-xl text-center italic text-gray-400"
+      data-i18n="painPoints.transition"
+    >{dict.painPoints.transition}</p>
+  </div>
+</section>
+
+<style>
+  /*
+   * Hover transitions are always-on. Reveal transitions only attach when
+   * the parent .pain-section has .reveal-ready (set by JS only when motion
+   * is enabled). That way no-JS / reduced-motion users see cards visible
+   * by default — no risk of stuck-invisible cards.
+   *
+   * Also: reveal uses the `translate` property and hover uses `transform`,
+   * so they don't fight over the same animated value.
+   */
+  .pain-card {
+    transition:
+      background-color 250ms ease-out,
+      border-color 250ms ease-out,
+      box-shadow 250ms ease-out,
+      transform 250ms ease-out;
+  }
+  .pain-number { opacity: 0.18; }
+
+  .pain-section.reveal-ready .pain-card {
+    opacity: 0;
+    translate: 0 24px;
+    transition:
+      opacity 600ms ease-out var(--reveal-delay, 0ms),
+      translate 600ms ease-out var(--reveal-delay, 0ms),
+      background-color 250ms ease-out,
+      border-color 250ms ease-out,
+      box-shadow 250ms ease-out,
+      transform 250ms ease-out;
+    will-change: opacity, translate;
+  }
+  .pain-section.reveal-ready .pain-card.is-visible {
+    opacity: 1;
+    translate: 0 0;
+  }
+
+  /* Number "stamp": scale 0.85 → 1.0 with extra 200ms delay after the card. */
+  .pain-section.reveal-ready .pain-number {
+    opacity: 0;
+    transform: scale(0.85);
+    transition:
+      opacity 500ms ease-out calc(var(--reveal-delay, 0ms) + 200ms),
+      transform 500ms ease-out calc(var(--reveal-delay, 0ms) + 200ms);
+  }
+  .pain-section.reveal-ready .pain-card.is-visible .pain-number {
+    opacity: 0.18;
+    transform: scale(1);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .pain-section.reveal-ready .pain-card,
+    .pain-section.reveal-ready .pain-number {
+      opacity: 1 !important;
+      translate: 0 0 !important;
+      transform: none !important;
+      transition:
+        background-color 250ms ease-out,
+        border-color 250ms ease-out,
+        box-shadow 250ms ease-out,
+        transform 250ms ease-out !important;
+    }
+    .pain-section.reveal-ready .pain-number {
+      opacity: 0.18 !important;
+    }
+  }
+</style>
+
+<script is:inline>
+  (() => {
+    const init = () => {
+      const section = document.querySelector('.pain-section');
+      if (!section) return;
+      const cards = section.querySelectorAll('.pain-card');
+      if (!cards.length) return;
+
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const ioSupported = 'IntersectionObserver' in window;
+
+      if (reduce || !ioSupported) {
+        // No reveal — leave cards in their default visible state.
+        return;
+      }
+
+      // Arm the reveal CSS only now that we know motion is OK and IO works.
+      section.classList.add('reveal-ready');
+
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { rootMargin: '0px 0px -20% 0px', threshold: 0.01 });
+
+      cards.forEach((c) => io.observe(c));
+    };
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  })();
+</script>

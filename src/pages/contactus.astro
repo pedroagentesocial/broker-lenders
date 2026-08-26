@@ -9,7 +9,12 @@ const recaptchaSiteKey =
 ---
 
 
-<Layout title="Contact Us - Broker Lenders">
+<Layout
+  title="Contact Us - Broker Lenders | Talk to a Licensed Mortgage Broker"
+  description="Get in touch with Broker Lenders. Call (801) 307-0273 or send a message to speak with a licensed mortgage broker about your home loan options. NMLS #318973."
+  keywords="contact mortgage broker, home loan consultation, broker lenders contact, mortgage broker Utah"
+  hreflangPath="/contactus"
+>
   <!-- Breadcrumb Section -->
   <div class="bg-white py-4">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -345,7 +350,7 @@ const recaptchaSiteKey =
       }
     };
 
-    const resolvePath = (obj, path) => {
+    const resolvePath = (obj: any, path: string | null) => {
       if (!obj || !path) return null;
       const parts = path.split('.');
       let cur = obj;
@@ -364,7 +369,7 @@ const recaptchaSiteKey =
       const raw = (urlLang || cookieLang || stored || htmlLang || 'en').toLowerCase();
       return raw === 'es' ? 'es' : 'en';
     };
-    const applyTranslations = (lang) => {
+    const applyTranslations = (lang: "en" | "es") => {
       const dict = translations[lang] || translations.en;
       document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
@@ -390,7 +395,7 @@ const recaptchaSiteKey =
       });
       if (typeof dict.title === 'string') document.title = dict.title;
     };
-    const setLanguage = (lang) => {
+    const setLanguage = (lang: string) => {
       const next = (lang === 'es') ? 'es' : 'en';
       try { localStorage.setItem('lang', next); } catch {}
       try { document.cookie = `lang=${next};path=/;max-age=31536000;SameSite=Lax`; } catch {}
@@ -405,15 +410,15 @@ const recaptchaSiteKey =
     setLanguage(getInitialLang());
     // React to language menu clicks
     document.addEventListener('click', (e) => {
-      const a = e.target.closest('a[href*="?lang="]');
+      const a = e.target instanceof Element ? e.target.closest('a[href*="?lang="]') : null;
       if (!a) return;
-      let href; try { href = new URL(a.href, window.location.origin); } catch { return; }
+      let href; try { href = new URL((a as HTMLAnchorElement).href, window.location.origin); } catch { return; }
       const newLang = href.searchParams.get('lang');
       if (newLang) setLanguage(newLang);
     });
     // Respond to storage events
     window.addEventListener('storage', (ev) => {
-      if (ev.key === 'lang' && ev.newValue) applyTranslations(ev.newValue);
+      if (ev.key === 'lang' && ev.newValue) applyTranslations(ev.newValue === 'es' ? 'es' : 'en');
     });
     const form = document.getElementById('contactForm');
     const submitBtn = document.getElementById('submitBtn');
@@ -446,7 +451,7 @@ const recaptchaSiteKey =
       return tokenInput instanceof HTMLTextAreaElement && tokenInput.value.trim().length > 0;
     }
 
-    function toggleRecaptchaVisibility(eligible) {
+    function toggleRecaptchaVisibility(eligible: boolean) {
       if (!(recaptchaContainer instanceof HTMLElement)) return;
       if (eligible) {
         recaptchaContainer.classList.remove('hidden');
@@ -485,7 +490,7 @@ const recaptchaSiteKey =
     });
 
     // Animations helpers
-    function showAnimated(el) {
+    function showAnimated(el: HTMLElement | null) {
       if (!el) return;
       // Ensure element is displayed and visible
       el.style.display = 'inline-flex';
@@ -498,7 +503,7 @@ const recaptchaSiteKey =
       }, { once: true });
     }
 
-    function hideButtonAnimated(btn) {
+    function hideButtonAnimated(btn: HTMLElement | null) {
       if (!btn) return;
       btn.classList.add('fade-out');
       btn.addEventListener('animationend', () => {
@@ -513,7 +518,7 @@ const recaptchaSiteKey =
       const params = new URLSearchParams(window.location.search || '');
       const utmFields = ['utm_source', 'utm_campaign', 'utm_medium', 'utm_content', 'utm_term'];
       utmFields.forEach((name) => {
-        const input = form.querySelector(`input[name="${name}"]`);
+        const input = form.querySelector<HTMLInputElement>(`input[name="${name}"]`);
         if (input) {
           input.value = params.get(name) || '';
         }
@@ -523,10 +528,10 @@ const recaptchaSiteKey =
     // Populate extra analytics fields
     (async function populateExtra() {
       if (!form) return;
-      const refInput = form.querySelector('input[name="referrer"]');
-      const landInput = form.querySelector('input[name="landing_page"]');
-      const uaInput = form.querySelector('input[name="user_agent"]');
-      const ipInput = form.querySelector('input[name="ip_address"]');
+      const refInput = form.querySelector<HTMLInputElement>('input[name="referrer"]');
+      const landInput = form.querySelector<HTMLInputElement>('input[name="landing_page"]');
+      const uaInput = form.querySelector<HTMLInputElement>('input[name="user_agent"]');
+      const ipInput = form.querySelector<HTMLInputElement>('input[name="ip_address"]');
 
       try {
         // Referrer
@@ -552,7 +557,7 @@ const recaptchaSiteKey =
       }
     })();
 
-    async function submitToBackend(formData) {
+    async function submitToBackend(formData: FormData) {
       const response = await fetch('/api/contact-submit', {
         method: 'POST',
         body: formData
@@ -574,7 +579,7 @@ const recaptchaSiteKey =
       formSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
       const email = 'info@brokerlenders.com';
-      const lang = (localStorage.getItem('lang') || document.documentElement.getAttribute('lang') || 'en');
+      const lang: 'en' | 'es' = (localStorage.getItem('lang') || document.documentElement.getAttribute('lang')) === 'es' ? 'es' : 'en';
       const dict = translations[lang] || translations.en;
       const subject = encodeURIComponent(dict.hero.mailtoSubject);
 
@@ -604,7 +609,7 @@ const recaptchaSiteKey =
       if (!(form instanceof HTMLFormElement)) return;
       const consentChecked = consentInput instanceof HTMLInputElement && consentInput.checked;
       const captchaOk = hasRecaptchaToken();
-      const lang = (localStorage.getItem('lang') || document.documentElement.getAttribute('lang') || 'en');
+      const lang: 'en' | 'es' = (localStorage.getItem('lang') || document.documentElement.getAttribute('lang')) === 'es' ? 'es' : 'en';
       const dict = translations[lang] || translations.en;
       if (!form.checkValidity() || !consentChecked) {
         form.reportValidity();
@@ -636,7 +641,7 @@ const recaptchaSiteKey =
       if (successEl) successEl.style.display = 'none';
 
       // Timestamp del envío (ISO)
-      const tsInput = form.querySelector('input[name="submit_timestamp"]');
+      const tsInput = form.querySelector<HTMLInputElement>('input[name="submit_timestamp"]');
       if (tsInput) tsInput.value = new Date().toISOString();
 
       const fdWithTs = new FormData(form);

@@ -1,0 +1,73 @@
+---
+import enPage from '../../translations/realtors/en.json';
+const dict = enPage as any;
+const phrases: string[] = dict.marqueeStrip.phrases;
+const staticPhrases = phrases.slice(0, 5);
+---
+
+<section
+  class="marquee-strip-section relative overflow-hidden bg-red-600 py-6 lg:py-8"
+  aria-label={dict.marqueeStrip.ariaLabel}
+  data-i18n-aria="marqueeStrip.ariaLabel"
+>
+  <!-- Animated track (default) -->
+  <div class="marquee-strip-track flex w-max items-center" role="presentation">
+    {phrases.map((phrase, i) => (
+      <span class="phrase-item flex items-center whitespace-nowrap text-3xl sm:text-5xl xl:text-6xl font-bold tracking-tight text-white">
+        <span data-i18n={`marqueeStrip.phrases.${i}`}>{phrase}</span>
+        <span class="mx-4 lg:mx-6 text-white/60" aria-hidden="true">•</span>
+      </span>
+    ))}
+    {phrases.map((phrase, i) => (
+      <span
+        class="phrase-item flex items-center whitespace-nowrap text-3xl sm:text-5xl xl:text-6xl font-bold tracking-tight text-white"
+        aria-hidden="true"
+      >
+        <span data-i18n={`marqueeStrip.phrases.${i}`}>{phrase}</span>
+        <span class="mx-4 lg:mx-6 text-white/60">•</span>
+      </span>
+    ))}
+  </div>
+
+  <!-- Static fallback for prefers-reduced-motion -->
+  <div class="marquee-strip-static flex-wrap items-center justify-center gap-x-4 sm:gap-x-6 gap-y-2 px-4 text-2xl sm:text-3xl font-bold tracking-tight text-white">
+    {staticPhrases.map((phrase, i) => (
+      <Fragment>
+        <span data-i18n={`marqueeStrip.phrases.${i}`}>{phrase}</span>
+        {i < staticPhrases.length - 1 && (
+          <span class="text-white/60" aria-hidden="true">•</span>
+        )}
+      </Fragment>
+    ))}
+  </div>
+</section>
+
+<style>
+  /*
+   * Seamless loop math:
+   * Track contains 2 identical phrase sets. Each phrase-item ends with a
+   * separator (same style + same margins) — so spacing is uniform between
+   * adjacent items inside a set AND across the set boundary. Total track
+   * width = 2 × set width, so translateX(-50%) lands pixel-perfect on the
+   * start of the duplicate. No jump.
+   */
+  .marquee-strip-track {
+    animation: marqueeTextScroll 30s linear infinite;
+    will-change: transform;
+  }
+  .marquee-strip-section:hover .marquee-strip-track {
+    animation-play-state: paused;
+  }
+  @keyframes marqueeTextScroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+
+  /* Static fallback hidden by default — only shown for reduced-motion. */
+  .marquee-strip-static { display: none; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-strip-track { display: none; }
+    .marquee-strip-static { display: flex; }
+  }
+</style>

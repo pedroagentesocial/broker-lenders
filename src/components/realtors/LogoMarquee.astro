@@ -1,0 +1,175 @@
+---
+import enPage from '../../translations/realtors/en.json';
+
+export interface LogoItem {
+  src: string;
+  alt: string;
+  name: string;
+}
+
+export interface Props {
+  logos?: LogoItem[];
+  secondRowLogos?: LogoItem[];
+}
+
+const defaultLogos: LogoItem[] = Array.from({ length: 10 }, (_, i) => ({
+  src: `/brokerages/placeholder-${i + 1}.svg`,
+  alt: `Brokerage ${i + 1} logo`,
+  name: `Brokerage ${i + 1}`,
+}));
+
+const { logos = defaultLogos, secondRowLogos } = Astro.props;
+const dict = enPage as any;
+const heading: string = dict?.marquee?.heading ?? 'Trusted by Realtors at top brokerages';
+const ariaLabel: string = dict?.marquee?.ariaLabel ?? 'Partner brokerages';
+
+const staticLogos = logos.slice(0, 5);
+---
+
+<section
+  class="bg-gray-50 py-8 md:py-12"
+  aria-label={ariaLabel}
+  data-i18n-aria="marquee.ariaLabel"
+>
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <p
+      class="mb-6 md:mb-8 text-center text-xs sm:text-sm font-semibold uppercase tracking-[0.18em] text-gray-500"
+      data-i18n="marquee.heading"
+    >{heading}</p>
+
+    <!-- Animated track (default) -->
+    <div class="marquee marquee-mask relative overflow-hidden">
+      <div class="marquee-track flex w-max">
+        {logos.map((logo) => (
+          <div class="marquee-slot flex-shrink-0 w-32 sm:w-40 px-4 sm:px-6 flex items-center justify-center h-12 sm:h-16">
+            <img
+              src={logo.src}
+              alt={logo.alt}
+              loading="lazy"
+              decoding="async"
+              width="200"
+              height="80"
+              class="logo-item h-full w-full object-contain grayscale opacity-60 transition duration-200 hover:grayscale-0 hover:opacity-100"
+            />
+          </div>
+        ))}
+        {logos.map((logo) => (
+          <div class="marquee-slot flex-shrink-0 w-32 sm:w-40 px-4 sm:px-6 flex items-center justify-center h-12 sm:h-16" aria-hidden="true">
+            <img
+              src={logo.src}
+              alt=""
+              loading="lazy"
+              decoding="async"
+              width="200"
+              height="80"
+              class="logo-item h-full w-full object-contain grayscale opacity-60 transition duration-200 hover:grayscale-0 hover:opacity-100"
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+
+    {secondRowLogos && secondRowLogos.length > 0 && (
+      <div class="marquee marquee-mask relative overflow-hidden mt-4 md:mt-6">
+        <div class="marquee-track marquee-track-reverse flex w-max">
+          {secondRowLogos.map((logo) => (
+            <div class="marquee-slot flex-shrink-0 w-32 sm:w-40 px-4 sm:px-6 flex items-center justify-center h-12 sm:h-16">
+              <img
+                src={logo.src}
+                alt={logo.alt}
+                loading="lazy"
+                decoding="async"
+                width="200"
+                height="80"
+                class="logo-item h-full w-full object-contain grayscale opacity-60 transition duration-200 hover:grayscale-0 hover:opacity-100"
+              />
+            </div>
+          ))}
+          {secondRowLogos.map((logo) => (
+            <div class="marquee-slot flex-shrink-0 w-32 sm:w-40 px-4 sm:px-6 flex items-center justify-center h-12 sm:h-16" aria-hidden="true">
+              <img
+                src={logo.src}
+                alt=""
+                loading="lazy"
+                decoding="async"
+                width="200"
+                height="80"
+                class="logo-item h-full w-full object-contain grayscale opacity-60 transition duration-200 hover:grayscale-0 hover:opacity-100"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    )}
+
+    <!-- Static fallback for prefers-reduced-motion -->
+    <div class="marquee-static flex-wrap items-center justify-center gap-6 sm:gap-10">
+      {staticLogos.map((logo) => (
+        <div class="flex-shrink-0 w-32 sm:w-40 flex items-center justify-center h-12 sm:h-16">
+          <img
+            src={logo.src}
+            alt={logo.alt}
+            loading="lazy"
+            decoding="async"
+            width="200"
+            height="80"
+            class="h-full w-full object-contain grayscale opacity-70"
+          />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Edge fade — soft 80px gradient on each side so logos enter/exit gracefully. */
+  .marquee-mask {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0,
+      #000 80px,
+      #000 calc(100% - 80px),
+      transparent 100%
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent 0,
+      #000 80px,
+      #000 calc(100% - 80px),
+      transparent 100%
+    );
+  }
+
+  /*
+   * Seamless loop math:
+   * Each slot is exactly w-32 (128px) on mobile, w-40 (160px) on desktop, with
+   * internal padding — NO flex gap. Track contains 2 identical sets, so the
+   * total track width is exactly 2× one set, and translateX(-50%) lands on
+   * the start of the duplicate — pixel-perfect with no jump.
+   */
+  .marquee-track {
+    animation: marqueeScroll 40s linear infinite;
+    will-change: transform;
+  }
+  .marquee-track-reverse {
+    animation-direction: reverse;
+  }
+
+  /* Pause anywhere on the marquee container. */
+  .marquee:hover .marquee-track {
+    animation-play-state: paused;
+  }
+
+  @keyframes marqueeScroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+
+  /* Static fallback hidden by default, shown only when reduced-motion is set. */
+  .marquee-static { display: none; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .marquee { display: none; }
+    .marquee-static { display: flex; }
+  }
+</style>

@@ -114,7 +114,13 @@ const dict = enDict;
   })();
 </script>
 
-<Layout title={dict.page_title} lang={lang}>
+<Layout
+	title={dict.page_title}
+	lang={lang}
+	description="Refinance calculator: compare your current loan against a new rate, see monthly savings and breakeven point. Free tool by Broker Lenders."
+	keywords="refinance calculator, refinance savings calculator, break even refinance, refinance vs keep loan"
+	hreflangPath="/calculators/refinance-calculator"
+>
 	<!-- Breadcrumb -->
 	<section class="bg-white py-4">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -621,7 +627,7 @@ const dict = enDict;
 	// Mortgage Calculator Logic
 	class MortgageCalculator {
 		isPercentMode;
-		lastCalculation;
+		lastCalculation: any;
 		
 		constructor() {
 			this.isPercentMode = false;
@@ -714,8 +720,8 @@ const dict = enDict;
 
 		// Methods removed - not needed for refinance calculator
 
-		validateInterestRate(e) {
-			const input = e.target;
+		validateInterestRate(e: Event) {
+			const input = e.target as HTMLInputElement;
 			let value = input.value;
 			
 			// Remove any non-numeric characters except decimal point
@@ -736,8 +742,8 @@ const dict = enDict;
 			input.value = value;
 		}
 
-		validateZipCode(e) {
-			const input = e.target;
+		validateZipCode(e: Event) {
+			const input = e.target as HTMLInputElement;
 			let value = input.value;
 			
 			// Remove any non-numeric characters
@@ -752,8 +758,8 @@ const dict = enDict;
 			input.value = value;
 		}
 
-		async validateZipCodeExists(e) {
-			const input = e.target;
+		async validateZipCodeExists(e: Event) {
+			const input = e.target as HTMLInputElement;
 			const zipCode = input.value;
 			
 			// Reset border color
@@ -803,11 +809,11 @@ const dict = enDict;
 			}
 		}
 
-		formatNumber(num) {
+		formatNumber(num: number) {
 			return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 		}
 
-		parseNumber(str) {
+		parseNumber(str: string) {
 			return parseFloat(str.replace(/,/g, '')) || 0;
 		}
 
@@ -1105,17 +1111,16 @@ const dict = enDict;
                 if (monthlySavingsEl) {
                     try {
                         const el = document.getElementById('i18n-rc');
-                        const decode = (val) => { try { const bin = atob(val||''); const bytes = new Uint8Array(bin.length); for (let i=0;i<bin.length;i++) bytes[i]=bin.charCodeAt(i); return JSON.parse(new TextDecoder('utf-8').decode(bytes)); } catch { return {}; } };
+                        const decode = (val: string | null) => { try { const bin = atob(val||''); const bytes = new Uint8Array(bin.length); for (let i=0;i<bin.length;i++) bytes[i]=bin.charCodeAt(i); return JSON.parse(new TextDecoder('utf-8').decode(bytes)); } catch { return {}; } };
                         const urlLang = new URLSearchParams(window.location.search).get('lang');
                         const stored = localStorage.getItem('lang');
-                        const lang = (urlLang || stored || 'en');
+                        const lang: 'en' | 'es' = (urlLang || stored) === 'es' ? 'es' : 'en';
                         const translations = { en: decode(el?.getAttribute('data-en')||''), es: decode(el?.getAttribute('data-es')||'') };
                         const dict = translations[lang] || translations.en;
         const msg = (dict && dict.results && dict.results.no_savings) ? dict.results.no_savings : 'No savings available';
                         monthlySavingsEl.textContent = msg;
                     } catch {
-        // Default will be overridden by msg above; use dict when available
-        monthlySavingsEl.textContent = msg;
+                        monthlySavingsEl.textContent = 'No savings available';
                     }
                     monthlySavingsEl.classList.add('text-red-500');
                 }
