@@ -1,2925 +1,225 @@
 {
-  "updatedAt": "2026-04-23",
+  "updatedAt": "2026-08-25",
   "maxPoints": 60,
   "points": [
     {
-      "date": "2026-02-23",
+      "date": "2026-06-27",
       "states": {
         "utah": {
-          "30-year-fixed": 6.75,
-          "20-year-fixed": 6.125,
-          "15-year-fixed": 5.875,
-          "30-year-fha": 6.5,
-          "30-year-jumbo": 6.875
-        },
-        "idaho": {
-          "30-year-fixed": 6.825,
-          "20-year-fixed": 6.2,
-          "15-year-fixed": 5.95,
-          "30-year-fha": 6.575,
-          "30-year-jumbo": 6.95
-        },
-        "nevada": {
-          "30-year-fixed": 6.9,
-          "20-year-fixed": 6.275,
-          "15-year-fixed": 6.025,
-          "30-year-fha": 6.65,
-          "30-year-jumbo": 7.025
-        },
-        "california": {
-          "30-year-fixed": 6.65,
-          "20-year-fixed": 6.025,
-          "15-year-fixed": 5.775,
-          "30-year-fha": 6.4,
-          "30-year-jumbo": 6.775
-        },
-        "texas": {
-          "30-year-fixed": 6.775,
-          "20-year-fixed": 6.15,
-          "15-year-fixed": 5.9,
-          "30-year-fha": 6.525,
-          "30-year-jumbo": 6.9
-        },
-        "florida": {
-          "30-year-fixed": 6.825,
-          "20-year-fixed": 6.2,
-          "15-year-fixed": 5.95,
-          "30-year-fha": 6.575,
-          "30-year-jumbo": 6.95
-        },
-        "colorado": {
-          "30-year-fixed": 6.725,
-          "20-year-fixed": 6.1,
-          "15-year-fixed": 5.85,
-          "30-year-fha": 6.475,
-          "30-year-jumbo": 6.85
-        }
-      }
-    },
-    {
-      "date": "2026-02-24",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.767,
-          "20-year-fixed": 6.166,
-          "15-year-fixed": 5.861,
-          "30-year-fha": 6.605,
-          "30-year-jumbo": 6.914
+          "30-year-fixed": 6.634,
+          "20-year-fixed": 6.06,
+          "15-year-fixed": 5.908,
+          "30-year-fha": 6.471,
+          "30-year-jumbo": 6.86
         },
         "idaho": {
           "30-year-fixed": 6.759,
-          "20-year-fixed": 6.148,
-          "15-year-fixed": 6.014,
-          "30-year-fha": 6.594,
-          "30-year-jumbo": 6.913
-        },
-        "nevada": {
-          "30-year-fixed": 6.925,
-          "20-year-fixed": 6.223,
-          "15-year-fixed": 6.137,
-          "30-year-fha": 6.671,
-          "30-year-jumbo": 7.023
-        },
-        "california": {
-          "30-year-fixed": 6.639,
-          "20-year-fixed": 6.095,
-          "15-year-fixed": 5.779,
-          "30-year-fha": 6.495,
-          "30-year-jumbo": 6.762
-        },
-        "texas": {
-          "30-year-fixed": 6.868,
-          "20-year-fixed": 6.093,
-          "15-year-fixed": 5.908,
-          "30-year-fha": 6.41,
-          "30-year-jumbo": 6.81
-        },
-        "florida": {
-          "30-year-fixed": 6.706,
-          "20-year-fixed": 6.307,
-          "15-year-fixed": 5.889,
-          "30-year-fha": 6.696,
-          "30-year-jumbo": 7.001
-        },
-        "colorado": {
-          "30-year-fixed": 6.612,
-          "20-year-fixed": 6.023,
-          "15-year-fixed": 5.836,
-          "30-year-fha": 6.39,
-          "30-year-jumbo": 6.791
-        }
-      }
-    },
-    {
-      "date": "2026-02-25",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.734,
-          "20-year-fixed": 6.13,
-          "15-year-fixed": 5.811,
-          "30-year-fha": 6.544,
-          "30-year-jumbo": 6.882
-        },
-        "idaho": {
-          "30-year-fixed": 6.863,
-          "20-year-fixed": 6.278,
-          "15-year-fixed": 6.032,
-          "30-year-fha": 6.594,
-          "30-year-jumbo": 7.069
-        },
-        "nevada": {
-          "30-year-fixed": 6.93,
-          "20-year-fixed": 6.211,
-          "15-year-fixed": 5.917,
-          "30-year-fha": 6.675,
-          "30-year-jumbo": 7.073
-        },
-        "california": {
-          "30-year-fixed": 6.574,
-          "20-year-fixed": 6.143,
-          "15-year-fixed": 5.835,
-          "30-year-fha": 6.34,
-          "30-year-jumbo": 6.86
-        },
-        "texas": {
-          "30-year-fixed": 6.663,
-          "20-year-fixed": 6.145,
-          "15-year-fixed": 5.915,
-          "30-year-fha": 6.509,
-          "30-year-jumbo": 6.926
-        },
-        "florida": {
-          "30-year-fixed": 6.788,
-          "20-year-fixed": 6.123,
-          "15-year-fixed": 6.03,
-          "30-year-fha": 6.518,
-          "30-year-jumbo": 6.838
-        },
-        "colorado": {
-          "30-year-fixed": 6.614,
-          "20-year-fixed": 6.145,
-          "15-year-fixed": 5.914,
-          "30-year-fha": 6.565,
-          "30-year-jumbo": 6.918
-        }
-      }
-    },
-    {
-      "date": "2026-02-26",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.644,
-          "20-year-fixed": 6.153,
-          "15-year-fixed": 5.938,
-          "30-year-fha": 6.616,
-          "30-year-jumbo": 6.928
-        },
-        "idaho": {
-          "30-year-fixed": 6.795,
-          "20-year-fixed": 6.246,
-          "15-year-fixed": 5.944,
-          "30-year-fha": 6.641,
-          "30-year-jumbo": 6.964
-        },
-        "nevada": {
-          "30-year-fixed": 6.836,
-          "20-year-fixed": 6.396,
-          "15-year-fixed": 6.039,
-          "30-year-fha": 6.74,
-          "30-year-jumbo": 6.921
-        },
-        "california": {
-          "30-year-fixed": 6.742,
-          "20-year-fixed": 6.023,
-          "15-year-fixed": 5.88,
-          "30-year-fha": 6.404,
-          "30-year-jumbo": 6.893
-        },
-        "texas": {
-          "30-year-fixed": 6.813,
-          "20-year-fixed": 6.201,
-          "15-year-fixed": 5.929,
-          "30-year-fha": 6.412,
-          "30-year-jumbo": 6.792
-        },
-        "florida": {
-          "30-year-fixed": 6.929,
-          "20-year-fixed": 6.168,
-          "15-year-fixed": 6.025,
-          "30-year-fha": 6.65,
-          "30-year-jumbo": 6.895
-        },
-        "colorado": {
-          "30-year-fixed": 6.734,
-          "20-year-fixed": 5.994,
-          "15-year-fixed": 5.856,
-          "30-year-fha": 6.502,
-          "30-year-jumbo": 6.795
-        }
-      }
-    },
-    {
-      "date": "2026-02-27",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.73,
-          "20-year-fixed": 6.109,
-          "15-year-fixed": 5.906,
-          "30-year-fha": 6.416,
-          "30-year-jumbo": 6.957
-        },
-        "idaho": {
-          "30-year-fixed": 6.875,
-          "20-year-fixed": 6.204,
-          "15-year-fixed": 5.894,
-          "30-year-fha": 6.543,
-          "30-year-jumbo": 7.058
-        },
-        "nevada": {
-          "30-year-fixed": 6.837,
-          "20-year-fixed": 6.39,
-          "15-year-fixed": 5.941,
-          "30-year-fha": 6.696,
-          "30-year-jumbo": 6.977
-        },
-        "california": {
-          "30-year-fixed": 6.716,
-          "20-year-fixed": 6.026,
-          "15-year-fixed": 5.728,
-          "30-year-fha": 6.389,
-          "30-year-jumbo": 6.686
-        },
-        "texas": {
-          "30-year-fixed": 6.891,
-          "20-year-fixed": 6.139,
-          "15-year-fixed": 5.966,
-          "30-year-fha": 6.549,
-          "30-year-jumbo": 6.933
-        },
-        "florida": {
-          "30-year-fixed": 6.876,
-          "20-year-fixed": 6.096,
-          "15-year-fixed": 5.908,
-          "30-year-fha": 6.533,
-          "30-year-jumbo": 7.024
-        },
-        "colorado": {
-          "30-year-fixed": 6.78,
-          "20-year-fixed": 6.018,
-          "15-year-fixed": 5.796,
-          "30-year-fha": 6.479,
-          "30-year-jumbo": 6.822
-        }
-      }
-    },
-    {
-      "date": "2026-02-28",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.854,
-          "20-year-fixed": 6.114,
-          "15-year-fixed": 5.865,
-          "30-year-fha": 6.55,
-          "30-year-jumbo": 6.99
-        },
-        "idaho": {
-          "30-year-fixed": 6.84,
-          "20-year-fixed": 6.125,
-          "15-year-fixed": 6.03,
-          "30-year-fha": 6.563,
-          "30-year-jumbo": 6.999
-        },
-        "nevada": {
-          "30-year-fixed": 6.983,
-          "20-year-fixed": 6.26,
-          "15-year-fixed": 5.99,
-          "30-year-fha": 6.706,
-          "30-year-jumbo": 6.95
-        },
-        "california": {
-          "30-year-fixed": 6.529,
-          "20-year-fixed": 5.947,
-          "15-year-fixed": 5.716,
-          "30-year-fha": 6.475,
-          "30-year-jumbo": 6.838
-        },
-        "texas": {
-          "30-year-fixed": 6.658,
-          "20-year-fixed": 6.085,
-          "15-year-fixed": 5.79,
-          "30-year-fha": 6.402,
-          "30-year-jumbo": 6.925
-        },
-        "florida": {
-          "30-year-fixed": 6.764,
-          "20-year-fixed": 6.159,
-          "15-year-fixed": 5.888,
-          "30-year-fha": 6.676,
-          "30-year-jumbo": 7.067
-        },
-        "colorado": {
-          "30-year-fixed": 6.623,
-          "20-year-fixed": 6.13,
-          "15-year-fixed": 5.809,
-          "30-year-fha": 6.582,
-          "30-year-jumbo": 6.832
-        }
-      }
-    },
-    {
-      "date": "2026-03-01",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.671,
-          "20-year-fixed": 6.188,
-          "15-year-fixed": 5.912,
-          "30-year-fha": 6.386,
-          "30-year-jumbo": 6.935
-        },
-        "idaho": {
-          "30-year-fixed": 6.855,
-          "20-year-fixed": 6.219,
-          "15-year-fixed": 5.948,
-          "30-year-fha": 6.548,
-          "30-year-jumbo": 6.861
-        },
-        "nevada": {
-          "30-year-fixed": 6.851,
-          "20-year-fixed": 6.279,
-          "15-year-fixed": 6.019,
-          "30-year-fha": 6.686,
-          "30-year-jumbo": 6.977
-        },
-        "california": {
-          "30-year-fixed": 6.65,
-          "20-year-fixed": 5.91,
-          "15-year-fixed": 5.898,
-          "30-year-fha": 6.377,
-          "30-year-jumbo": 6.894
-        },
-        "texas": {
-          "30-year-fixed": 6.706,
-          "20-year-fixed": 6.263,
-          "15-year-fixed": 6.002,
-          "30-year-fha": 6.58,
-          "30-year-jumbo": 7.018
-        },
-        "florida": {
-          "30-year-fixed": 6.934,
-          "20-year-fixed": 6.189,
-          "15-year-fixed": 5.945,
-          "30-year-fha": 6.456,
-          "30-year-jumbo": 7.002
-        },
-        "colorado": {
-          "30-year-fixed": 6.774,
-          "20-year-fixed": 6.224,
-          "15-year-fixed": 5.973,
-          "30-year-fha": 6.388,
-          "30-year-jumbo": 6.77
-        }
-      }
-    },
-    {
-      "date": "2026-03-02",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.742,
-          "20-year-fixed": 6.18,
-          "15-year-fixed": 5.869,
-          "30-year-fha": 6.443,
-          "30-year-jumbo": 6.763
-        },
-        "idaho": {
-          "30-year-fixed": 6.848,
-          "20-year-fixed": 6.268,
-          "15-year-fixed": 5.889,
-          "30-year-fha": 6.511,
-          "30-year-jumbo": 7.023
-        },
-        "nevada": {
-          "30-year-fixed": 6.846,
-          "20-year-fixed": 6.343,
-          "15-year-fixed": 6.146,
-          "30-year-fha": 6.582,
-          "30-year-jumbo": 7.105
-        },
-        "california": {
-          "30-year-fixed": 6.594,
-          "20-year-fixed": 6.044,
-          "15-year-fixed": 5.672,
-          "30-year-fha": 6.317,
-          "30-year-jumbo": 6.821
-        },
-        "texas": {
-          "30-year-fixed": 6.793,
-          "20-year-fixed": 6.099,
-          "15-year-fixed": 5.821,
-          "30-year-fha": 6.457,
-          "30-year-jumbo": 6.988
-        },
-        "florida": {
-          "30-year-fixed": 6.933,
-          "20-year-fixed": 6.223,
-          "15-year-fixed": 5.925,
-          "30-year-fha": 6.517,
-          "30-year-jumbo": 6.983
-        },
-        "colorado": {
-          "30-year-fixed": 6.738,
-          "20-year-fixed": 6.195,
-          "15-year-fixed": 5.931,
-          "30-year-fha": 6.415,
-          "30-year-jumbo": 6.883
-        }
-      }
-    },
-    {
-      "date": "2026-03-03",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.862,
-          "20-year-fixed": 6.065,
-          "15-year-fixed": 5.949,
-          "30-year-fha": 6.416,
-          "30-year-jumbo": 6.866
-        },
-        "idaho": {
-          "30-year-fixed": 6.868,
-          "20-year-fixed": 6.301,
-          "15-year-fixed": 5.839,
-          "30-year-fha": 6.523,
-          "30-year-jumbo": 6.934
-        },
-        "nevada": {
-          "30-year-fixed": 6.901,
-          "20-year-fixed": 6.162,
-          "15-year-fixed": 5.942,
-          "30-year-fha": 6.574,
-          "30-year-jumbo": 7.039
-        },
-        "california": {
-          "30-year-fixed": 6.54,
-          "20-year-fixed": 5.939,
-          "15-year-fixed": 5.693,
-          "30-year-fha": 6.373,
-          "30-year-jumbo": 6.87
-        },
-        "texas": {
-          "30-year-fixed": 6.667,
-          "20-year-fixed": 6.118,
-          "15-year-fixed": 5.793,
-          "30-year-fha": 6.508,
-          "30-year-jumbo": 6.93
-        },
-        "florida": {
-          "30-year-fixed": 6.909,
-          "20-year-fixed": 6.113,
-          "15-year-fixed": 6.047,
-          "30-year-fha": 6.649,
-          "30-year-jumbo": 6.937
-        },
-        "colorado": {
-          "30-year-fixed": 6.635,
-          "20-year-fixed": 6.014,
-          "15-year-fixed": 5.826,
-          "30-year-fha": 6.51,
-          "30-year-jumbo": 6.728
-        }
-      }
-    },
-    {
-      "date": "2026-03-04",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.71,
-          "20-year-fixed": 6.078,
-          "15-year-fixed": 5.936,
-          "30-year-fha": 6.425,
-          "30-year-jumbo": 6.84
-        },
-        "idaho": {
-          "30-year-fixed": 6.775,
-          "20-year-fixed": 6.098,
-          "15-year-fixed": 5.846,
-          "30-year-fha": 6.689,
-          "30-year-jumbo": 6.979
-        },
-        "nevada": {
-          "30-year-fixed": 6.96,
-          "20-year-fixed": 6.177,
-          "15-year-fixed": 6.021,
-          "30-year-fha": 6.636,
-          "30-year-jumbo": 6.925
-        },
-        "california": {
-          "30-year-fixed": 6.546,
-          "20-year-fixed": 6.099,
-          "15-year-fixed": 5.776,
-          "30-year-fha": 6.427,
-          "30-year-jumbo": 6.782
-        },
-        "texas": {
-          "30-year-fixed": 6.858,
-          "20-year-fixed": 6.146,
-          "15-year-fixed": 5.95,
-          "30-year-fha": 6.581,
-          "30-year-jumbo": 6.842
-        },
-        "florida": {
-          "30-year-fixed": 6.908,
-          "20-year-fixed": 6.11,
-          "15-year-fixed": 5.9,
-          "30-year-fha": 6.456,
-          "30-year-jumbo": 6.873
-        },
-        "colorado": {
-          "30-year-fixed": 6.823,
-          "20-year-fixed": 6.223,
-          "15-year-fixed": 5.761,
-          "30-year-fha": 6.392,
-          "30-year-jumbo": 6.825
-        }
-      }
-    },
-    {
-      "date": "2026-03-05",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.706,
-          "20-year-fixed": 6.218,
-          "15-year-fixed": 5.855,
-          "30-year-fha": 6.554,
-          "30-year-jumbo": 6.975
-        },
-        "idaho": {
-          "30-year-fixed": 6.738,
-          "20-year-fixed": 6.125,
-          "15-year-fixed": 5.829,
-          "30-year-fha": 6.6,
-          "30-year-jumbo": 6.877
-        },
-        "nevada": {
-          "30-year-fixed": 6.852,
-          "20-year-fixed": 6.171,
-          "15-year-fixed": 5.931,
-          "30-year-fha": 6.595,
-          "30-year-jumbo": 7.003
-        },
-        "california": {
-          "30-year-fixed": 6.686,
-          "20-year-fixed": 6.059,
-          "15-year-fixed": 5.852,
-          "30-year-fha": 6.398,
-          "30-year-jumbo": 6.746
-        },
-        "texas": {
-          "30-year-fixed": 6.874,
-          "20-year-fixed": 6.039,
-          "15-year-fixed": 5.944,
-          "30-year-fha": 6.636,
-          "30-year-jumbo": 6.905
-        },
-        "florida": {
-          "30-year-fixed": 6.865,
-          "20-year-fixed": 6.16,
-          "15-year-fixed": 5.871,
-          "30-year-fha": 6.535,
-          "30-year-jumbo": 7.015
-        },
-        "colorado": {
-          "30-year-fixed": 6.659,
-          "20-year-fixed": 6.003,
-          "15-year-fixed": 5.828,
-          "30-year-fha": 6.437,
-          "30-year-jumbo": 6.944
-        }
-      }
-    },
-    {
-      "date": "2026-03-06",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.664,
-          "20-year-fixed": 6.211,
-          "15-year-fixed": 5.858,
-          "30-year-fha": 6.52,
-          "30-year-jumbo": 6.985
-        },
-        "idaho": {
-          "30-year-fixed": 6.796,
-          "20-year-fixed": 6.098,
-          "15-year-fixed": 6.056,
-          "30-year-fha": 6.458,
-          "30-year-jumbo": 6.98
-        },
-        "nevada": {
-          "30-year-fixed": 6.803,
-          "20-year-fixed": 6.335,
-          "15-year-fixed": 5.945,
-          "30-year-fha": 6.723,
-          "30-year-jumbo": 7.096
-        },
-        "california": {
-          "30-year-fixed": 6.525,
-          "20-year-fixed": 6.013,
-          "15-year-fixed": 5.796,
-          "30-year-fha": 6.336,
-          "30-year-jumbo": 6.666
-        },
-        "texas": {
-          "30-year-fixed": 6.809,
-          "20-year-fixed": 6.264,
-          "15-year-fixed": 5.783,
-          "30-year-fha": 6.473,
-          "30-year-jumbo": 6.816
-        },
-        "florida": {
-          "30-year-fixed": 6.785,
-          "20-year-fixed": 6.079,
-          "15-year-fixed": 6.074,
-          "30-year-fha": 6.481,
-          "30-year-jumbo": 6.921
-        },
-        "colorado": {
-          "30-year-fixed": 6.77,
-          "20-year-fixed": 6.196,
-          "15-year-fixed": 5.874,
-          "30-year-fha": 6.476,
-          "30-year-jumbo": 6.935
-        }
-      }
-    },
-    {
-      "date": "2026-03-07",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.654,
-          "20-year-fixed": 6.198,
-          "15-year-fixed": 5.969,
-          "30-year-fha": 6.481,
-          "30-year-jumbo": 6.926
-        },
-        "idaho": {
-          "30-year-fixed": 6.903,
-          "20-year-fixed": 6.083,
-          "15-year-fixed": 5.881,
-          "30-year-fha": 6.586,
-          "30-year-jumbo": 6.984
-        },
-        "nevada": {
-          "30-year-fixed": 6.924,
-          "20-year-fixed": 6.366,
-          "15-year-fixed": 6.121,
-          "30-year-fha": 6.6,
-          "30-year-jumbo": 7.135
-        },
-        "california": {
-          "30-year-fixed": 6.75,
-          "20-year-fixed": 6.019,
-          "15-year-fixed": 5.786,
-          "30-year-fha": 6.338,
-          "30-year-jumbo": 6.793
-        },
-        "texas": {
-          "30-year-fixed": 6.874,
-          "20-year-fixed": 6.127,
-          "15-year-fixed": 5.813,
-          "30-year-fha": 6.561,
-          "30-year-jumbo": 7.006
-        },
-        "florida": {
-          "30-year-fixed": 6.703,
-          "20-year-fixed": 6.314,
-          "15-year-fixed": 5.879,
-          "30-year-fha": 6.599,
-          "30-year-jumbo": 6.838
-        },
-        "colorado": {
-          "30-year-fixed": 6.666,
-          "20-year-fixed": 6.206,
-          "15-year-fixed": 5.922,
-          "30-year-fha": 6.501,
-          "30-year-jumbo": 6.894
-        }
-      }
-    },
-    {
-      "date": "2026-03-08",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.75,
-          "20-year-fixed": 6.125,
-          "15-year-fixed": 5.875,
-          "30-year-fha": 6.5,
-          "30-year-jumbo": 6.875
-        },
-        "idaho": {
-          "30-year-fixed": 6.825,
-          "20-year-fixed": 6.2,
-          "15-year-fixed": 5.95,
-          "30-year-fha": 6.575,
-          "30-year-jumbo": 6.95
-        },
-        "nevada": {
-          "30-year-fixed": 6.9,
-          "20-year-fixed": 6.275,
-          "15-year-fixed": 6.025,
-          "30-year-fha": 6.65,
-          "30-year-jumbo": 7.025
-        },
-        "california": {
-          "30-year-fixed": 6.65,
-          "20-year-fixed": 6.025,
-          "15-year-fixed": 5.775,
-          "30-year-fha": 6.4,
-          "30-year-jumbo": 6.775
-        },
-        "texas": {
-          "30-year-fixed": 6.775,
-          "20-year-fixed": 6.15,
-          "15-year-fixed": 5.9,
-          "30-year-fha": 6.525,
-          "30-year-jumbo": 6.9
-        },
-        "florida": {
-          "30-year-fixed": 6.825,
-          "20-year-fixed": 6.2,
-          "15-year-fixed": 5.95,
-          "30-year-fha": 6.575,
-          "30-year-jumbo": 6.95
-        },
-        "colorado": {
-          "30-year-fixed": 6.725,
-          "20-year-fixed": 6.1,
-          "15-year-fixed": 5.85,
-          "30-year-fha": 6.475,
-          "30-year-jumbo": 6.85
-        }
-      }
-    },
-    {
-      "date": "2026-03-09",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.698,
-          "20-year-fixed": 6.218,
-          "15-year-fixed": 5.972,
-          "30-year-fha": 6.492,
-          "30-year-jumbo": 6.922
-        },
-        "idaho": {
-          "30-year-fixed": 6.874,
-          "20-year-fixed": 6.3,
-          "15-year-fixed": 6.035,
-          "30-year-fha": 6.534,
-          "30-year-jumbo": 7.002
-        },
-        "nevada": {
-          "30-year-fixed": 6.814,
-          "20-year-fixed": 6.199,
-          "15-year-fixed": 6.096,
-          "30-year-fha": 6.609,
-          "30-year-jumbo": 7.081
-        },
-        "california": {
-          "30-year-fixed": 6.533,
-          "20-year-fixed": 6.149,
-          "15-year-fixed": 5.768,
-          "30-year-fha": 6.338,
-          "30-year-jumbo": 6.869
-        },
-        "texas": {
-          "30-year-fixed": 6.718,
-          "20-year-fixed": 6.05,
-          "15-year-fixed": 5.82,
-          "30-year-fha": 6.461,
-          "30-year-jumbo": 6.934
-        },
-        "florida": {
-          "30-year-fixed": 6.822,
-          "20-year-fixed": 6.298,
-          "15-year-fixed": 5.931,
-          "30-year-fha": 6.464,
-          "30-year-jumbo": 7.003
-        },
-        "colorado": {
-          "30-year-fixed": 6.811,
-          "20-year-fixed": 6.013,
-          "15-year-fixed": 5.878,
-          "30-year-fha": 6.42,
-          "30-year-jumbo": 6.905
-        }
-      }
-    },
-    {
-      "date": "2026-03-10",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.653,
-          "20-year-fixed": 6.235,
-          "15-year-fixed": 5.904,
+          "20-year-fixed": 6.179,
+          "15-year-fixed": 5.913,
           "30-year-fha": 6.506,
-          "30-year-jumbo": 6.913
-        },
-        "idaho": {
-          "30-year-fixed": 6.847,
-          "20-year-fixed": 6.085,
-          "15-year-fixed": 5.963,
-          "30-year-fha": 6.548,
-          "30-year-jumbo": 6.895
-        },
-        "nevada": {
-          "30-year-fixed": 6.962,
-          "20-year-fixed": 6.378,
-          "15-year-fixed": 5.926,
-          "30-year-fha": 6.767,
-          "30-year-jumbo": 7.106
-        },
-        "california": {
-          "30-year-fixed": 6.551,
-          "20-year-fixed": 5.902,
-          "15-year-fixed": 5.865,
-          "30-year-fha": 6.33,
-          "30-year-jumbo": 6.673
-        },
-        "texas": {
-          "30-year-fixed": 6.703,
-          "20-year-fixed": 6.149,
-          "15-year-fixed": 5.793,
-          "30-year-fha": 6.633,
-          "30-year-jumbo": 6.98
-        },
-        "florida": {
-          "30-year-fixed": 6.872,
-          "20-year-fixed": 6.121,
-          "15-year-fixed": 5.828,
-          "30-year-fha": 6.459,
-          "30-year-jumbo": 7.043
-        },
-        "colorado": {
-          "30-year-fixed": 6.619,
-          "20-year-fixed": 6.103,
-          "15-year-fixed": 5.745,
-          "30-year-fha": 6.541,
-          "30-year-jumbo": 6.779
-        }
-      }
-    },
-    {
-      "date": "2026-03-11",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.793,
-          "20-year-fixed": 6.068,
-          "15-year-fixed": 5.806,
-          "30-year-fha": 6.404,
-          "30-year-jumbo": 6.898
-        },
-        "idaho": {
-          "30-year-fixed": 6.738,
-          "20-year-fixed": 6.227,
-          "15-year-fixed": 6.021,
-          "30-year-fha": 6.588,
-          "30-year-jumbo": 7.074
-        },
-        "nevada": {
-          "30-year-fixed": 6.902,
-          "20-year-fixed": 6.201,
-          "15-year-fixed": 5.963,
-          "30-year-fha": 6.565,
-          "30-year-jumbo": 7.087
-        },
-        "california": {
-          "30-year-fixed": 6.753,
-          "20-year-fixed": 5.961,
-          "15-year-fixed": 5.693,
-          "30-year-fha": 6.37,
-          "30-year-jumbo": 6.674
-        },
-        "texas": {
-          "30-year-fixed": 6.784,
-          "20-year-fixed": 6.196,
-          "15-year-fixed": 5.858,
-          "30-year-fha": 6.493,
-          "30-year-jumbo": 7.007
-        },
-        "florida": {
-          "30-year-fixed": 6.824,
-          "20-year-fixed": 6.288,
-          "15-year-fixed": 5.924,
-          "30-year-fha": 6.69,
-          "30-year-jumbo": 6.927
-        },
-        "colorado": {
-          "30-year-fixed": 6.639,
-          "20-year-fixed": 5.986,
-          "15-year-fixed": 5.831,
-          "30-year-fha": 6.473,
-          "30-year-jumbo": 6.971
-        }
-      }
-    },
-    {
-      "date": "2026-03-12",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.846,
-          "20-year-fixed": 6.04,
-          "15-year-fixed": 5.763,
-          "30-year-fha": 6.568,
-          "30-year-jumbo": 6.786
-        },
-        "idaho": {
-          "30-year-fixed": 6.756,
-          "20-year-fixed": 6.302,
-          "15-year-fixed": 6.036,
-          "30-year-fha": 6.451,
-          "30-year-jumbo": 7.052
-        },
-        "nevada": {
-          "30-year-fixed": 6.959,
-          "20-year-fixed": 6.334,
-          "15-year-fixed": 6.146,
-          "30-year-fha": 6.668,
-          "30-year-jumbo": 7.115
-        },
-        "california": {
-          "30-year-fixed": 6.769,
-          "20-year-fixed": 5.905,
-          "15-year-fixed": 5.71,
-          "30-year-fha": 6.314,
-          "30-year-jumbo": 6.692
-        },
-        "texas": {
-          "30-year-fixed": 6.729,
-          "20-year-fixed": 6.244,
-          "15-year-fixed": 5.809,
-          "30-year-fha": 6.612,
-          "30-year-jumbo": 6.92
-        },
-        "florida": {
-          "30-year-fixed": 6.753,
-          "20-year-fixed": 6.245,
-          "15-year-fixed": 5.887,
-          "30-year-fha": 6.608,
-          "30-year-jumbo": 6.899
-        },
-        "colorado": {
-          "30-year-fixed": 6.602,
-          "20-year-fixed": 6.131,
-          "15-year-fixed": 5.945,
-          "30-year-fha": 6.418,
-          "30-year-jumbo": 6.971
-        }
-      }
-    },
-    {
-      "date": "2026-03-13",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.729,
-          "20-year-fixed": 6.021,
-          "15-year-fixed": 5.826,
-          "30-year-fha": 6.572,
-          "30-year-jumbo": 6.811
-        },
-        "idaho": {
-          "30-year-fixed": 6.831,
-          "20-year-fixed": 6.169,
-          "15-year-fixed": 5.989,
-          "30-year-fha": 6.481,
-          "30-year-jumbo": 7.068
-        },
-        "nevada": {
-          "30-year-fixed": 6.911,
-          "20-year-fixed": 6.296,
-          "15-year-fixed": 6.093,
-          "30-year-fha": 6.534,
-          "30-year-jumbo": 6.984
-        },
-        "california": {
-          "30-year-fixed": 6.623,
-          "20-year-fixed": 5.993,
-          "15-year-fixed": 5.842,
-          "30-year-fha": 6.486,
-          "30-year-jumbo": 6.834
-        },
-        "texas": {
-          "30-year-fixed": 6.684,
-          "20-year-fixed": 6.203,
-          "15-year-fixed": 5.804,
-          "30-year-fha": 6.639,
-          "30-year-jumbo": 6.867
-        },
-        "florida": {
-          "30-year-fixed": 6.907,
-          "20-year-fixed": 6.205,
-          "15-year-fixed": 5.982,
-          "30-year-fha": 6.696,
-          "30-year-jumbo": 6.996
-        },
-        "colorado": {
-          "30-year-fixed": 6.698,
-          "20-year-fixed": 6.171,
-          "15-year-fixed": 5.921,
-          "30-year-fha": 6.395,
-          "30-year-jumbo": 6.8
-        }
-      }
-    },
-    {
-      "date": "2026-03-14",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.816,
-          "20-year-fixed": 6.107,
-          "15-year-fixed": 5.984,
-          "30-year-fha": 6.541,
-          "30-year-jumbo": 6.947
-        },
-        "idaho": {
-          "30-year-fixed": 6.777,
-          "20-year-fixed": 6.172,
-          "15-year-fixed": 5.843,
-          "30-year-fha": 6.458,
-          "30-year-jumbo": 7.053
-        },
-        "nevada": {
-          "30-year-fixed": 6.967,
-          "20-year-fixed": 6.205,
-          "15-year-fixed": 6.143,
-          "30-year-fha": 6.746,
-          "30-year-jumbo": 7.102
-        },
-        "california": {
-          "30-year-fixed": 6.702,
-          "20-year-fixed": 6.119,
-          "15-year-fixed": 5.889,
-          "30-year-fha": 6.345,
-          "30-year-jumbo": 6.739
-        },
-        "texas": {
-          "30-year-fixed": 6.664,
-          "20-year-fixed": 6.095,
-          "15-year-fixed": 5.786,
-          "30-year-fha": 6.635,
-          "30-year-jumbo": 6.808
-        },
-        "florida": {
-          "30-year-fixed": 6.723,
-          "20-year-fixed": 6.283,
-          "15-year-fixed": 5.94,
-          "30-year-fha": 6.519,
-          "30-year-jumbo": 6.871
-        },
-        "colorado": {
-          "30-year-fixed": 6.777,
-          "20-year-fixed": 6.058,
-          "15-year-fixed": 5.772,
-          "30-year-fha": 6.433,
-          "30-year-jumbo": 6.884
-        }
-      }
-    },
-    {
-      "date": "2026-03-15",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.673,
-          "20-year-fixed": 6.066,
-          "15-year-fixed": 5.87,
-          "30-year-fha": 6.427,
-          "30-year-jumbo": 6.831
-        },
-        "idaho": {
-          "30-year-fixed": 6.787,
-          "20-year-fixed": 6.272,
-          "15-year-fixed": 6.022,
-          "30-year-fha": 6.62,
-          "30-year-jumbo": 7.012
-        },
-        "nevada": {
-          "30-year-fixed": 6.977,
-          "20-year-fixed": 6.318,
-          "15-year-fixed": 5.97,
-          "30-year-fha": 6.675,
-          "30-year-jumbo": 7.059
-        },
-        "california": {
-          "30-year-fixed": 6.552,
-          "20-year-fixed": 6.123,
-          "15-year-fixed": 5.849,
-          "30-year-fha": 6.43,
-          "30-year-jumbo": 6.765
-        },
-        "texas": {
-          "30-year-fixed": 6.812,
-          "20-year-fixed": 6.125,
-          "15-year-fixed": 5.947,
-          "30-year-fha": 6.406,
-          "30-year-jumbo": 6.968
-        },
-        "florida": {
-          "30-year-fixed": 6.777,
-          "20-year-fixed": 6.321,
-          "15-year-fixed": 6.075,
-          "30-year-fha": 6.465,
-          "30-year-jumbo": 7.036
-        },
-        "colorado": {
-          "30-year-fixed": 6.823,
-          "20-year-fixed": 6.182,
-          "15-year-fixed": 5.755,
-          "30-year-fha": 6.471,
-          "30-year-jumbo": 6.808
-        }
-      }
-    },
-    {
-      "date": "2026-03-16",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.729,
-          "20-year-fixed": 6.037,
-          "15-year-fixed": 5.964,
-          "30-year-fha": 6.619,
-          "30-year-jumbo": 6.782
-        },
-        "idaho": {
-          "30-year-fixed": 6.712,
-          "20-year-fixed": 6.271,
-          "15-year-fixed": 6.022,
-          "30-year-fha": 6.502,
-          "30-year-jumbo": 7.065
-        },
-        "nevada": {
-          "30-year-fixed": 6.925,
-          "20-year-fixed": 6.235,
-          "15-year-fixed": 5.954,
-          "30-year-fha": 6.635,
-          "30-year-jumbo": 7.035
-        },
-        "california": {
-          "30-year-fixed": 6.766,
-          "20-year-fixed": 6.017,
-          "15-year-fixed": 5.678,
-          "30-year-fha": 6.312,
-          "30-year-jumbo": 6.86
-        },
-        "texas": {
-          "30-year-fixed": 6.829,
-          "20-year-fixed": 6.091,
-          "15-year-fixed": 5.916,
-          "30-year-fha": 6.418,
-          "30-year-jumbo": 6.84
-        },
-        "florida": {
-          "30-year-fixed": 6.811,
-          "20-year-fixed": 6.273,
-          "15-year-fixed": 5.836,
-          "30-year-fha": 6.551,
-          "30-year-jumbo": 6.996
-        },
-        "colorado": {
-          "30-year-fixed": 6.687,
-          "20-year-fixed": 6.002,
-          "15-year-fixed": 5.774,
-          "30-year-fha": 6.421,
-          "30-year-jumbo": 6.884
-        }
-      }
-    },
-    {
-      "date": "2026-03-17",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.721,
-          "20-year-fixed": 6.236,
-          "15-year-fixed": 5.847,
-          "30-year-fha": 6.593,
-          "30-year-jumbo": 6.89
-        },
-        "idaho": {
-          "30-year-fixed": 6.917,
-          "20-year-fixed": 6.205,
-          "15-year-fixed": 5.926,
-          "30-year-fha": 6.543,
-          "30-year-jumbo": 6.942
-        },
-        "nevada": {
-          "30-year-fixed": 6.831,
-          "20-year-fixed": 6.291,
-          "15-year-fixed": 6.124,
-          "30-year-fha": 6.656,
-          "30-year-jumbo": 7.085
-        },
-        "california": {
-          "30-year-fixed": 6.761,
-          "20-year-fixed": 5.913,
-          "15-year-fixed": 5.807,
-          "30-year-fha": 6.397,
-          "30-year-jumbo": 6.889
-        },
-        "texas": {
-          "30-year-fixed": 6.692,
-          "20-year-fixed": 6.028,
-          "15-year-fixed": 5.937,
-          "30-year-fha": 6.574,
-          "30-year-jumbo": 6.877
-        },
-        "florida": {
-          "30-year-fixed": 6.918,
-          "20-year-fixed": 6.158,
-          "15-year-fixed": 5.944,
-          "30-year-fha": 6.563,
-          "30-year-jumbo": 6.972
-        },
-        "colorado": {
-          "30-year-fixed": 6.77,
-          "20-year-fixed": 5.983,
-          "15-year-fixed": 5.731,
-          "30-year-fha": 6.574,
-          "30-year-jumbo": 6.941
-        }
-      }
-    },
-    {
-      "date": "2026-03-18",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.845,
-          "20-year-fixed": 6.148,
-          "15-year-fixed": 5.908,
-          "30-year-fha": 6.437,
-          "30-year-jumbo": 6.956
-        },
-        "idaho": {
-          "30-year-fixed": 6.763,
-          "20-year-fixed": 6.116,
-          "15-year-fixed": 5.905,
-          "30-year-fha": 6.512,
-          "30-year-jumbo": 7.003
-        },
-        "nevada": {
-          "30-year-fixed": 6.843,
-          "20-year-fixed": 6.378,
-          "15-year-fixed": 6.107,
-          "30-year-fha": 6.677,
-          "30-year-jumbo": 7.149
-        },
-        "california": {
-          "30-year-fixed": 6.656,
-          "20-year-fixed": 6.143,
-          "15-year-fixed": 5.759,
-          "30-year-fha": 6.499,
-          "30-year-jumbo": 6.782
-        },
-        "texas": {
-          "30-year-fixed": 6.767,
-          "20-year-fixed": 6.231,
-          "15-year-fixed": 5.973,
-          "30-year-fha": 6.478,
-          "30-year-jumbo": 6.936
-        },
-        "florida": {
-          "30-year-fixed": 6.861,
-          "20-year-fixed": 6.228,
-          "15-year-fixed": 5.9,
-          "30-year-fha": 6.699,
-          "30-year-jumbo": 6.943
-        },
-        "colorado": {
-          "30-year-fixed": 6.669,
-          "20-year-fixed": 6.024,
-          "15-year-fixed": 5.83,
-          "30-year-fha": 6.451,
-          "30-year-jumbo": 6.774
-        }
-      }
-    },
-    {
-      "date": "2026-03-19",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.858,
-          "20-year-fixed": 6.144,
-          "15-year-fixed": 5.758,
-          "30-year-fha": 6.41,
-          "30-year-jumbo": 6.892
-        },
-        "idaho": {
-          "30-year-fixed": 6.888,
-          "20-year-fixed": 6.243,
-          "15-year-fixed": 5.918,
-          "30-year-fha": 6.593,
-          "30-year-jumbo": 6.942
-        },
-        "nevada": {
-          "30-year-fixed": 6.936,
-          "20-year-fixed": 6.344,
-          "15-year-fixed": 5.964,
-          "30-year-fha": 6.584,
-          "30-year-jumbo": 7.022
-        },
-        "california": {
-          "30-year-fixed": 6.585,
-          "20-year-fixed": 6.132,
-          "15-year-fixed": 5.67,
-          "30-year-fha": 6.401,
-          "30-year-jumbo": 6.834
-        },
-        "texas": {
-          "30-year-fixed": 6.898,
-          "20-year-fixed": 6.042,
-          "15-year-fixed": 5.989,
-          "30-year-fha": 6.586,
-          "30-year-jumbo": 6.956
-        },
-        "florida": {
-          "30-year-fixed": 6.751,
-          "20-year-fixed": 6.245,
-          "15-year-fixed": 5.852,
-          "30-year-fha": 6.648,
-          "30-year-jumbo": 6.974
-        },
-        "colorado": {
-          "30-year-fixed": 6.85,
-          "20-year-fixed": 6.091,
-          "15-year-fixed": 5.964,
-          "30-year-fha": 6.539,
-          "30-year-jumbo": 6.732
-        }
-      }
-    },
-    {
-      "date": "2026-03-20",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.66,
-          "20-year-fixed": 6.15,
-          "15-year-fixed": 5.837,
-          "30-year-fha": 6.38,
-          "30-year-jumbo": 6.93
-        },
-        "idaho": {
-          "30-year-fixed": 6.855,
-          "20-year-fixed": 6.301,
-          "15-year-fixed": 5.891,
-          "30-year-fha": 6.58,
-          "30-year-jumbo": 6.916
-        },
-        "nevada": {
-          "30-year-fixed": 6.838,
-          "20-year-fixed": 6.183,
-          "15-year-fixed": 6.078,
-          "30-year-fha": 6.627,
-          "30-year-jumbo": 7.139
-        },
-        "california": {
-          "30-year-fixed": 6.646,
-          "20-year-fixed": 6.072,
-          "15-year-fixed": 5.882,
-          "30-year-fha": 6.376,
-          "30-year-jumbo": 6.894
-        },
-        "texas": {
-          "30-year-fixed": 6.879,
-          "20-year-fixed": 6.214,
-          "15-year-fixed": 5.918,
-          "30-year-fha": 6.417,
-          "30-year-jumbo": 6.795
-        },
-        "florida": {
-          "30-year-fixed": 6.861,
-          "20-year-fixed": 6.176,
-          "15-year-fixed": 6.046,
-          "30-year-fha": 6.485,
-          "30-year-jumbo": 6.934
-        },
-        "colorado": {
-          "30-year-fixed": 6.849,
-          "20-year-fixed": 6.073,
-          "15-year-fixed": 5.769,
-          "30-year-fha": 6.524,
-          "30-year-jumbo": 6.873
-        }
-      }
-    },
-    {
-      "date": "2026-03-21",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.75,
-          "20-year-fixed": 6.125,
-          "15-year-fixed": 5.875,
-          "30-year-fha": 6.5,
-          "30-year-jumbo": 6.875
-        },
-        "idaho": {
-          "30-year-fixed": 6.825,
-          "20-year-fixed": 6.2,
-          "15-year-fixed": 5.95,
-          "30-year-fha": 6.575,
-          "30-year-jumbo": 6.95
-        },
-        "nevada": {
-          "30-year-fixed": 6.9,
-          "20-year-fixed": 6.275,
-          "15-year-fixed": 6.025,
-          "30-year-fha": 6.65,
-          "30-year-jumbo": 7.025
-        },
-        "california": {
-          "30-year-fixed": 6.65,
-          "20-year-fixed": 6.025,
-          "15-year-fixed": 5.775,
-          "30-year-fha": 6.4,
-          "30-year-jumbo": 6.775
-        },
-        "texas": {
-          "30-year-fixed": 6.775,
-          "20-year-fixed": 6.15,
-          "15-year-fixed": 5.9,
-          "30-year-fha": 6.525,
-          "30-year-jumbo": 6.9
-        },
-        "florida": {
-          "30-year-fixed": 6.825,
-          "20-year-fixed": 6.2,
-          "15-year-fixed": 5.95,
-          "30-year-fha": 6.575,
-          "30-year-jumbo": 6.95
-        },
-        "colorado": {
-          "30-year-fixed": 6.725,
-          "20-year-fixed": 6.1,
-          "15-year-fixed": 5.85,
-          "30-year-fha": 6.475,
-          "30-year-jumbo": 6.85
-        }
-      }
-    },
-    {
-      "date": "2026-03-22",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.638,
-          "20-year-fixed": 6.056,
-          "15-year-fixed": 5.946,
-          "30-year-fha": 6.548,
-          "30-year-jumbo": 6.953
-        },
-        "idaho": {
-          "30-year-fixed": 6.876,
-          "20-year-fixed": 6.286,
-          "15-year-fixed": 5.884,
-          "30-year-fha": 6.534,
-          "30-year-jumbo": 6.864
-        },
-        "nevada": {
-          "30-year-fixed": 6.949,
-          "20-year-fixed": 6.225,
-          "15-year-fixed": 6.106,
-          "30-year-fha": 6.543,
-          "30-year-jumbo": 6.966
-        },
-        "california": {
-          "30-year-fixed": 6.619,
-          "20-year-fixed": 5.99,
-          "15-year-fixed": 5.853,
-          "30-year-fha": 6.378,
-          "30-year-jumbo": 6.853
-        },
-        "texas": {
-          "30-year-fixed": 6.894,
-          "20-year-fixed": 6.23,
-          "15-year-fixed": 5.909,
-          "30-year-fha": 6.458,
-          "30-year-jumbo": 6.932
-        },
-        "florida": {
-          "30-year-fixed": 6.82,
-          "20-year-fixed": 6.157,
-          "15-year-fixed": 5.906,
-          "30-year-fha": 6.62,
-          "30-year-jumbo": 7.048
-        },
-        "colorado": {
-          "30-year-fixed": 6.656,
-          "20-year-fixed": 6.107,
-          "15-year-fixed": 5.905,
-          "30-year-fha": 6.521,
-          "30-year-jumbo": 6.752
-        }
-      }
-    },
-    {
-      "date": "2026-03-23",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.75,
-          "20-year-fixed": 6.125,
-          "15-year-fixed": 5.875,
-          "30-year-fha": 6.5,
-          "30-year-jumbo": 6.875
-        },
-        "idaho": {
-          "30-year-fixed": 6.825,
-          "20-year-fixed": 6.2,
-          "15-year-fixed": 5.95,
-          "30-year-fha": 6.575,
-          "30-year-jumbo": 6.95
-        },
-        "nevada": {
-          "30-year-fixed": 6.9,
-          "20-year-fixed": 6.275,
-          "15-year-fixed": 6.025,
-          "30-year-fha": 6.65,
-          "30-year-jumbo": 7.025
-        },
-        "california": {
-          "30-year-fixed": 6.65,
-          "20-year-fixed": 6.025,
-          "15-year-fixed": 5.775,
-          "30-year-fha": 6.4,
-          "30-year-jumbo": 6.775
-        },
-        "texas": {
-          "30-year-fixed": 6.775,
-          "20-year-fixed": 6.15,
-          "15-year-fixed": 5.9,
-          "30-year-fha": 6.525,
-          "30-year-jumbo": 6.9
-        },
-        "florida": {
-          "30-year-fixed": 6.825,
-          "20-year-fixed": 6.2,
-          "15-year-fixed": 5.95,
-          "30-year-fha": 6.575,
-          "30-year-jumbo": 6.95
-        },
-        "colorado": {
-          "30-year-fixed": 6.725,
-          "20-year-fixed": 6.1,
-          "15-year-fixed": 5.85,
-          "30-year-fha": 6.475,
-          "30-year-jumbo": 6.85
-        }
-      }
-    },
-    {
-      "date": "2026-03-24",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.645,
-          "20-year-fixed": 6.077,
-          "15-year-fixed": 5.855,
-          "30-year-fha": 6.529,
-          "30-year-jumbo": 6.932
-        },
-        "idaho": {
-          "30-year-fixed": 6.895,
-          "20-year-fixed": 6.125,
-          "15-year-fixed": 6.052,
-          "30-year-fha": 6.67,
-          "30-year-jumbo": 6.838
-        },
-        "nevada": {
-          "30-year-fixed": 6.988,
-          "20-year-fixed": 6.242,
-          "15-year-fixed": 6.09,
-          "30-year-fha": 6.719,
-          "30-year-jumbo": 6.951
-        },
-        "california": {
-          "30-year-fixed": 6.746,
-          "20-year-fixed": 5.968,
-          "15-year-fixed": 5.887,
-          "30-year-fha": 6.49,
-          "30-year-jumbo": 6.853
-        },
-        "texas": {
-          "30-year-fixed": 6.682,
-          "20-year-fixed": 6.121,
-          "15-year-fixed": 6.003,
-          "30-year-fha": 6.628,
-          "30-year-jumbo": 6.784
-        },
-        "florida": {
-          "30-year-fixed": 6.93,
-          "20-year-fixed": 6.21,
-          "15-year-fixed": 5.912,
-          "30-year-fha": 6.583,
-          "30-year-jumbo": 6.912
-        },
-        "colorado": {
-          "30-year-fixed": 6.609,
-          "20-year-fixed": 6.1,
-          "15-year-fixed": 5.906,
-          "30-year-fha": 6.52,
-          "30-year-jumbo": 6.833
-        }
-      }
-    },
-    {
-      "date": "2026-03-25",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.726,
-          "20-year-fixed": 6.013,
-          "15-year-fixed": 5.811,
-          "30-year-fha": 6.38,
-          "30-year-jumbo": 6.978
-        },
-        "idaho": {
-          "30-year-fixed": 6.723,
-          "20-year-fixed": 6.078,
-          "15-year-fixed": 5.843,
-          "30-year-fha": 6.452,
-          "30-year-jumbo": 7.058
-        },
-        "nevada": {
-          "30-year-fixed": 7.002,
-          "20-year-fixed": 6.173,
-          "15-year-fixed": 5.906,
-          "30-year-fha": 6.697,
-          "30-year-jumbo": 7.122
-        },
-        "california": {
-          "30-year-fixed": 6.593,
-          "20-year-fixed": 5.988,
-          "15-year-fixed": 5.778,
-          "30-year-fha": 6.469,
-          "30-year-jumbo": 6.658
-        },
-        "texas": {
-          "30-year-fixed": 6.898,
-          "20-year-fixed": 6.042,
-          "15-year-fixed": 5.956,
-          "30-year-fha": 6.573,
-          "30-year-jumbo": 6.802
-        },
-        "florida": {
-          "30-year-fixed": 6.735,
-          "20-year-fixed": 6.216,
-          "15-year-fixed": 5.845,
-          "30-year-fha": 6.666,
-          "30-year-jumbo": 6.972
-        },
-        "colorado": {
-          "30-year-fixed": 6.614,
-          "20-year-fixed": 6.114,
-          "15-year-fixed": 5.787,
-          "30-year-fha": 6.41,
-          "30-year-jumbo": 6.771
-        }
-      }
-    },
-    {
-      "date": "2026-03-26",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.847,
-          "20-year-fixed": 6.094,
-          "15-year-fixed": 6,
-          "30-year-fha": 6.393,
-          "30-year-jumbo": 6.844
-        },
-        "idaho": {
-          "30-year-fixed": 6.865,
-          "20-year-fixed": 6.082,
-          "15-year-fixed": 5.835,
-          "30-year-fha": 6.664,
-          "30-year-jumbo": 6.958
-        },
-        "nevada": {
-          "30-year-fixed": 6.933,
-          "20-year-fixed": 6.174,
-          "15-year-fixed": 6.141,
-          "30-year-fha": 6.754,
-          "30-year-jumbo": 6.921
-        },
-        "california": {
-          "30-year-fixed": 6.606,
-          "20-year-fixed": 5.935,
-          "15-year-fixed": 5.702,
-          "30-year-fha": 6.345,
-          "30-year-jumbo": 6.832
-        },
-        "texas": {
-          "30-year-fixed": 6.853,
-          "20-year-fixed": 6.063,
-          "15-year-fixed": 5.914,
-          "30-year-fha": 6.454,
-          "30-year-jumbo": 6.934
-        },
-        "florida": {
-          "30-year-fixed": 6.797,
-          "20-year-fixed": 6.154,
-          "15-year-fixed": 5.954,
-          "30-year-fha": 6.472,
-          "30-year-jumbo": 7.027
-        },
-        "colorado": {
-          "30-year-fixed": 6.681,
-          "20-year-fixed": 6.074,
-          "15-year-fixed": 5.893,
-          "30-year-fha": 6.496,
-          "30-year-jumbo": 6.866
-        }
-      }
-    },
-    {
-      "date": "2026-03-27",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.749,
-          "20-year-fixed": 6.173,
-          "15-year-fixed": 5.935,
-          "30-year-fha": 6.406,
-          "30-year-jumbo": 6.872
-        },
-        "idaho": {
-          "30-year-fixed": 6.77,
-          "20-year-fixed": 6.227,
-          "15-year-fixed": 5.841,
-          "30-year-fha": 6.588,
-          "30-year-jumbo": 6.875
-        },
-        "nevada": {
-          "30-year-fixed": 6.814,
-          "20-year-fixed": 6.211,
-          "15-year-fixed": 5.994,
-          "30-year-fha": 6.531,
-          "30-year-jumbo": 6.934
-        },
-        "california": {
-          "30-year-fixed": 6.721,
-          "20-year-fixed": 5.951,
-          "15-year-fixed": 5.754,
-          "30-year-fha": 6.429,
-          "30-year-jumbo": 6.722
-        },
-        "texas": {
-          "30-year-fixed": 6.695,
-          "20-year-fixed": 6.145,
-          "15-year-fixed": 5.889,
-          "30-year-fha": 6.578,
-          "30-year-jumbo": 6.944
-        },
-        "florida": {
-          "30-year-fixed": 6.893,
-          "20-year-fixed": 6.131,
-          "15-year-fixed": 5.872,
-          "30-year-fha": 6.518,
-          "30-year-jumbo": 6.829
-        },
-        "colorado": {
-          "30-year-fixed": 6.622,
-          "20-year-fixed": 6.064,
-          "15-year-fixed": 5.854,
-          "30-year-fha": 6.428,
-          "30-year-jumbo": 6.956
-        }
-      }
-    },
-    {
-      "date": "2026-03-28",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.868,
-          "20-year-fixed": 6.028,
-          "15-year-fixed": 5.915,
-          "30-year-fha": 6.462,
-          "30-year-jumbo": 6.782
-        },
-        "idaho": {
-          "30-year-fixed": 6.704,
-          "20-year-fixed": 6.141,
-          "15-year-fixed": 5.96,
-          "30-year-fha": 6.466,
-          "30-year-jumbo": 6.919
-        },
-        "nevada": {
-          "30-year-fixed": 6.897,
-          "20-year-fixed": 6.313,
-          "15-year-fixed": 6.137,
-          "30-year-fha": 6.744,
-          "30-year-jumbo": 7.07
-        },
-        "california": {
-          "30-year-fixed": 6.726,
-          "20-year-fixed": 5.987,
-          "15-year-fixed": 5.857,
-          "30-year-fha": 6.343,
-          "30-year-jumbo": 6.868
-        },
-        "texas": {
-          "30-year-fixed": 6.878,
-          "20-year-fixed": 6.154,
-          "15-year-fixed": 5.838,
-          "30-year-fha": 6.508,
-          "30-year-jumbo": 6.901
-        },
-        "florida": {
-          "30-year-fixed": 6.873,
-          "20-year-fixed": 6.102,
-          "15-year-fixed": 5.864,
-          "30-year-fha": 6.565,
-          "30-year-jumbo": 6.943
-        },
-        "colorado": {
-          "30-year-fixed": 6.715,
-          "20-year-fixed": 6.176,
-          "15-year-fixed": 5.898,
-          "30-year-fha": 6.535,
-          "30-year-jumbo": 6.934
-        }
-      }
-    },
-    {
-      "date": "2026-03-29",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.771,
-          "20-year-fixed": 6.095,
-          "15-year-fixed": 5.936,
-          "30-year-fha": 6.42,
-          "30-year-jumbo": 6.799
-        },
-        "idaho": {
-          "30-year-fixed": 6.94,
-          "20-year-fixed": 6.168,
-          "15-year-fixed": 6.021,
-          "30-year-fha": 6.501,
-          "30-year-jumbo": 7.073
-        },
-        "nevada": {
-          "30-year-fixed": 6.782,
-          "20-year-fixed": 6.349,
-          "15-year-fixed": 5.907,
-          "30-year-fha": 6.644,
-          "30-year-jumbo": 6.913
-        },
-        "california": {
-          "30-year-fixed": 6.668,
-          "20-year-fixed": 6.085,
-          "15-year-fixed": 5.711,
-          "30-year-fha": 6.406,
-          "30-year-jumbo": 6.805
-        },
-        "texas": {
-          "30-year-fixed": 6.715,
-          "20-year-fixed": 6.235,
-          "15-year-fixed": 5.96,
-          "30-year-fha": 6.6,
           "30-year-jumbo": 6.923
         },
-        "florida": {
-          "30-year-fixed": 6.945,
-          "20-year-fixed": 6.106,
-          "15-year-fixed": 6.01,
-          "30-year-fha": 6.466,
-          "30-year-jumbo": 7.059
-        },
-        "colorado": {
-          "30-year-fixed": 6.717,
-          "20-year-fixed": 6.077,
-          "15-year-fixed": 5.925,
-          "30-year-fha": 6.457,
-          "30-year-jumbo": 6.87
-        }
-      }
-    },
-    {
-      "date": "2026-03-30",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.846,
-          "20-year-fixed": 6.242,
-          "15-year-fixed": 5.847,
-          "30-year-fha": 6.553,
-          "30-year-jumbo": 6.838
-        },
-        "idaho": {
-          "30-year-fixed": 6.711,
-          "20-year-fixed": 6.205,
-          "15-year-fixed": 5.985,
-          "30-year-fha": 6.617,
-          "30-year-jumbo": 6.977
-        },
         "nevada": {
-          "30-year-fixed": 6.895,
-          "20-year-fixed": 6.16,
-          "15-year-fixed": 5.93,
-          "30-year-fha": 6.616,
-          "30-year-jumbo": 6.916
-        },
-        "california": {
-          "30-year-fixed": 6.578,
-          "20-year-fixed": 5.93,
-          "15-year-fixed": 5.689,
-          "30-year-fha": 6.276,
-          "30-year-jumbo": 6.775
-        },
-        "texas": {
-          "30-year-fixed": 6.771,
-          "20-year-fixed": 6.068,
-          "15-year-fixed": 5.973,
-          "30-year-fha": 6.571,
-          "30-year-jumbo": 6.848
-        },
-        "florida": {
-          "30-year-fixed": 6.769,
-          "20-year-fixed": 6.084,
-          "15-year-fixed": 6.033,
-          "30-year-fha": 6.501,
-          "30-year-jumbo": 6.894
-        },
-        "colorado": {
-          "30-year-fixed": 6.744,
-          "20-year-fixed": 6.082,
-          "15-year-fixed": 5.826,
-          "30-year-fha": 6.6,
-          "30-year-jumbo": 6.967
-        }
-      }
-    },
-    {
-      "date": "2026-03-31",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.801,
-          "20-year-fixed": 6.157,
-          "15-year-fixed": 5.903,
-          "30-year-fha": 6.586,
-          "30-year-jumbo": 6.937
-        },
-        "idaho": {
-          "30-year-fixed": 6.852,
-          "20-year-fixed": 6.177,
-          "15-year-fixed": 5.905,
-          "30-year-fha": 6.576,
-          "30-year-jumbo": 6.897
-        },
-        "nevada": {
-          "30-year-fixed": 7.016,
-          "20-year-fixed": 6.218,
-          "15-year-fixed": 6.036,
-          "30-year-fha": 6.683,
-          "30-year-jumbo": 7.021
-        },
-        "california": {
-          "30-year-fixed": 6.642,
-          "20-year-fixed": 5.913,
-          "15-year-fixed": 5.837,
-          "30-year-fha": 6.452,
-          "30-year-jumbo": 6.878
-        },
-        "texas": {
-          "30-year-fixed": 6.883,
-          "20-year-fixed": 6.211,
-          "15-year-fixed": 5.935,
-          "30-year-fha": 6.426,
-          "30-year-jumbo": 6.836
-        },
-        "florida": {
-          "30-year-fixed": 6.712,
-          "20-year-fixed": 6.115,
-          "15-year-fixed": 5.856,
-          "30-year-fha": 6.538,
-          "30-year-jumbo": 6.904
-        },
-        "colorado": {
-          "30-year-fixed": 6.829,
-          "20-year-fixed": 6.069,
-          "15-year-fixed": 5.796,
-          "30-year-fha": 6.469,
-          "30-year-jumbo": 6.931
-        }
-      }
-    },
-    {
-      "date": "2026-04-01",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.818,
-          "20-year-fixed": 6.143,
-          "15-year-fixed": 5.99,
-          "30-year-fha": 6.561,
-          "30-year-jumbo": 6.862
-        },
-        "idaho": {
-          "30-year-fixed": 6.72,
-          "20-year-fixed": 6.103,
-          "15-year-fixed": 6.058,
-          "30-year-fha": 6.679,
-          "30-year-jumbo": 6.86
-        },
-        "nevada": {
-          "30-year-fixed": 6.874,
-          "20-year-fixed": 6.184,
-          "15-year-fixed": 5.936,
-          "30-year-fha": 6.657,
-          "30-year-jumbo": 7.011
-        },
-        "california": {
-          "30-year-fixed": 6.549,
-          "20-year-fixed": 5.995,
-          "15-year-fixed": 5.664,
-          "30-year-fha": 6.348,
-          "30-year-jumbo": 6.765
-        },
-        "texas": {
-          "30-year-fixed": 6.686,
-          "20-year-fixed": 6.078,
-          "15-year-fixed": 5.796,
-          "30-year-fha": 6.414,
-          "30-year-jumbo": 6.877
-        },
-        "florida": {
-          "30-year-fixed": 6.906,
-          "20-year-fixed": 6.189,
-          "15-year-fixed": 5.949,
-          "30-year-fha": 6.494,
-          "30-year-jumbo": 7.002
-        },
-        "colorado": {
-          "30-year-fixed": 6.769,
-          "20-year-fixed": 6.003,
-          "15-year-fixed": 5.83,
-          "30-year-fha": 6.39,
-          "30-year-jumbo": 6.849
-        }
-      }
-    },
-    {
-      "date": "2026-04-02",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.732,
-          "20-year-fixed": 6.123,
-          "15-year-fixed": 5.835,
-          "30-year-fha": 6.496,
-          "30-year-jumbo": 6.757
-        },
-        "idaho": {
-          "30-year-fixed": 6.878,
-          "20-year-fixed": 6.222,
-          "15-year-fixed": 5.88,
-          "30-year-fha": 6.603,
-          "30-year-jumbo": 6.995
-        },
-        "nevada": {
-          "30-year-fixed": 6.835,
-          "20-year-fixed": 6.308,
-          "15-year-fixed": 6.015,
-          "30-year-fha": 6.649,
-          "30-year-jumbo": 7.091
-        },
-        "california": {
-          "30-year-fixed": 6.553,
-          "20-year-fixed": 6.132,
-          "15-year-fixed": 5.766,
-          "30-year-fha": 6.455,
-          "30-year-jumbo": 6.853
-        },
-        "texas": {
-          "30-year-fixed": 6.708,
-          "20-year-fixed": 6.071,
-          "15-year-fixed": 5.804,
-          "30-year-fha": 6.484,
-          "30-year-jumbo": 6.79
-        },
-        "florida": {
-          "30-year-fixed": 6.831,
-          "20-year-fixed": 6.169,
-          "15-year-fixed": 6.038,
-          "30-year-fha": 6.472,
-          "30-year-jumbo": 6.894
-        },
-        "colorado": {
-          "30-year-fixed": 6.793,
-          "20-year-fixed": 6.122,
-          "15-year-fixed": 5.933,
-          "30-year-fha": 6.412,
-          "30-year-jumbo": 6.863
-        }
-      }
-    },
-    {
-      "date": "2026-04-03",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.759,
-          "20-year-fixed": 6.056,
-          "15-year-fixed": 5.85,
-          "30-year-fha": 6.425,
-          "30-year-jumbo": 6.842
-        },
-        "idaho": {
-          "30-year-fixed": 6.822,
-          "20-year-fixed": 6.297,
-          "15-year-fixed": 5.867,
-          "30-year-fha": 6.485,
-          "30-year-jumbo": 7.042
-        },
-        "nevada": {
-          "30-year-fixed": 6.848,
-          "20-year-fixed": 6.316,
-          "15-year-fixed": 5.942,
-          "30-year-fha": 6.557,
-          "30-year-jumbo": 7.046
-        },
-        "california": {
-          "30-year-fixed": 6.572,
-          "20-year-fixed": 6.095,
-          "15-year-fixed": 5.845,
-          "30-year-fha": 6.409,
-          "30-year-jumbo": 6.651
-        },
-        "texas": {
-          "30-year-fixed": 6.723,
-          "20-year-fixed": 6.088,
-          "15-year-fixed": 5.822,
-          "30-year-fha": 6.516,
-          "30-year-jumbo": 6.932
-        },
-        "florida": {
-          "30-year-fixed": 6.8,
-          "20-year-fixed": 6.155,
-          "15-year-fixed": 6.047,
-          "30-year-fha": 6.607,
-          "30-year-jumbo": 7.068
-        },
-        "colorado": {
-          "30-year-fixed": 6.655,
-          "20-year-fixed": 6.087,
-          "15-year-fixed": 5.761,
-          "30-year-fha": 6.573,
-          "30-year-jumbo": 6.913
-        }
-      }
-    },
-    {
-      "date": "2026-04-04",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.863,
-          "20-year-fixed": 6.223,
-          "15-year-fixed": 5.95,
-          "30-year-fha": 6.593,
-          "30-year-jumbo": 6.955
-        },
-        "idaho": {
-          "30-year-fixed": 6.849,
-          "20-year-fixed": 6.134,
-          "15-year-fixed": 6.062,
-          "30-year-fha": 6.658,
-          "30-year-jumbo": 6.849
-        },
-        "nevada": {
-          "30-year-fixed": 6.892,
-          "20-year-fixed": 6.241,
-          "15-year-fixed": 6.141,
-          "30-year-fha": 6.538,
+          "30-year-fixed": 6.896,
+          "20-year-fixed": 6.353,
+          "15-year-fixed": 6.031,
+          "30-year-fha": 6.675,
           "30-year-jumbo": 7.072
         },
         "california": {
-          "30-year-fixed": 6.555,
-          "20-year-fixed": 6.026,
-          "15-year-fixed": 5.877,
-          "30-year-fha": 6.453,
-          "30-year-jumbo": 6.746
+          "30-year-fixed": 6.765,
+          "20-year-fixed": 6.029,
+          "15-year-fixed": 5.725,
+          "30-year-fha": 6.418,
+          "30-year-jumbo": 6.864
         },
         "texas": {
-          "30-year-fixed": 6.657,
-          "20-year-fixed": 6.159,
-          "15-year-fixed": 5.955,
-          "30-year-fha": 6.637,
-          "30-year-jumbo": 6.995
+          "30-year-fixed": 6.74,
+          "20-year-fixed": 6.267,
+          "15-year-fixed": 5.839,
+          "30-year-fha": 6.447,
+          "30-year-jumbo": 6.953
         },
         "florida": {
-          "30-year-fixed": 6.748,
-          "20-year-fixed": 6.305,
-          "15-year-fixed": 5.861,
-          "30-year-fha": 6.645,
+          "30-year-fixed": 6.774,
+          "20-year-fixed": 6.132,
+          "15-year-fixed": 6.001,
+          "30-year-fha": 6.681,
+          "30-year-jumbo": 6.828
+        },
+        "colorado": {
+          "30-year-fixed": 6.814,
+          "20-year-fixed": 6.207,
+          "15-year-fixed": 5.87,
+          "30-year-fha": 6.435,
+          "30-year-jumbo": 6.923
+        }
+      }
+    },
+    {
+      "date": "2026-06-28",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.811,
+          "20-year-fixed": 6.177,
+          "15-year-fixed": 5.958,
+          "30-year-fha": 6.379,
           "30-year-jumbo": 6.908
         },
-        "colorado": {
-          "30-year-fixed": 6.626,
-          "20-year-fixed": 6.074,
-          "15-year-fixed": 5.88,
-          "30-year-fha": 6.532,
-          "30-year-jumbo": 6.748
-        }
-      }
-    },
-    {
-      "date": "2026-04-05",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.75,
-          "20-year-fixed": 6.125,
-          "15-year-fixed": 5.875,
-          "30-year-fha": 6.5,
-          "30-year-jumbo": 6.875
-        },
         "idaho": {
-          "30-year-fixed": 6.825,
-          "20-year-fixed": 6.2,
-          "15-year-fixed": 5.95,
-          "30-year-fha": 6.575,
-          "30-year-jumbo": 6.95
-        },
-        "nevada": {
-          "30-year-fixed": 6.9,
-          "20-year-fixed": 6.275,
-          "15-year-fixed": 6.025,
-          "30-year-fha": 6.65,
-          "30-year-jumbo": 7.025
-        },
-        "california": {
-          "30-year-fixed": 6.65,
-          "20-year-fixed": 6.025,
-          "15-year-fixed": 5.775,
-          "30-year-fha": 6.4,
-          "30-year-jumbo": 6.775
-        },
-        "texas": {
-          "30-year-fixed": 6.775,
-          "20-year-fixed": 6.15,
-          "15-year-fixed": 5.9,
-          "30-year-fha": 6.525,
-          "30-year-jumbo": 6.9
-        },
-        "florida": {
-          "30-year-fixed": 6.825,
-          "20-year-fixed": 6.2,
-          "15-year-fixed": 5.95,
-          "30-year-fha": 6.575,
-          "30-year-jumbo": 6.95
-        },
-        "colorado": {
-          "30-year-fixed": 6.725,
-          "20-year-fixed": 6.1,
-          "15-year-fixed": 5.85,
-          "30-year-fha": 6.475,
-          "30-year-jumbo": 6.85
-        }
-      }
-    },
-    {
-      "date": "2026-04-06",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.75,
-          "20-year-fixed": 6.125,
-          "15-year-fixed": 5.875,
-          "30-year-fha": 6.5,
-          "30-year-jumbo": 6.875
-        },
-        "idaho": {
-          "30-year-fixed": 6.825,
-          "20-year-fixed": 6.2,
-          "15-year-fixed": 5.95,
-          "30-year-fha": 6.575,
-          "30-year-jumbo": 6.95
-        },
-        "nevada": {
-          "30-year-fixed": 6.9,
-          "20-year-fixed": 6.275,
-          "15-year-fixed": 6.025,
-          "30-year-fha": 6.65,
-          "30-year-jumbo": 7.025
-        },
-        "california": {
-          "30-year-fixed": 6.65,
-          "20-year-fixed": 6.025,
-          "15-year-fixed": 5.775,
-          "30-year-fha": 6.4,
-          "30-year-jumbo": 6.775
-        },
-        "texas": {
-          "30-year-fixed": 6.775,
-          "20-year-fixed": 6.15,
-          "15-year-fixed": 5.9,
-          "30-year-fha": 6.525,
-          "30-year-jumbo": 6.9
-        },
-        "florida": {
-          "30-year-fixed": 6.825,
-          "20-year-fixed": 6.2,
-          "15-year-fixed": 5.95,
-          "30-year-fha": 6.575,
-          "30-year-jumbo": 6.95
-        },
-        "colorado": {
-          "30-year-fixed": 6.725,
-          "20-year-fixed": 6.1,
-          "15-year-fixed": 5.85,
-          "30-year-fha": 6.475,
-          "30-year-jumbo": 6.85
-        }
-      }
-    },
-    {
-      "date": "2026-04-07",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.728,
-          "20-year-fixed": 6.242,
-          "15-year-fixed": 5.922,
-          "30-year-fha": 6.476,
-          "30-year-jumbo": 6.96
-        },
-        "idaho": {
-          "30-year-fixed": 6.857,
-          "20-year-fixed": 6.191,
-          "15-year-fixed": 6.001,
-          "30-year-fha": 6.638,
-          "30-year-jumbo": 6.867
-        },
-        "nevada": {
-          "30-year-fixed": 6.899,
-          "20-year-fixed": 6.283,
-          "15-year-fixed": 5.924,
-          "30-year-fha": 6.632,
-          "30-year-jumbo": 7.094
-        },
-        "california": {
-          "30-year-fixed": 6.598,
-          "20-year-fixed": 5.953,
-          "15-year-fixed": 5.878,
-          "30-year-fha": 6.292,
-          "30-year-jumbo": 6.898
-        },
-        "texas": {
-          "30-year-fixed": 6.671,
-          "20-year-fixed": 6.184,
-          "15-year-fixed": 5.901,
-          "30-year-fha": 6.483,
-          "30-year-jumbo": 6.883
-        },
-        "florida": {
-          "30-year-fixed": 6.858,
-          "20-year-fixed": 6.108,
-          "15-year-fixed": 5.98,
-          "30-year-fha": 6.497,
-          "30-year-jumbo": 6.881
-        },
-        "colorado": {
-          "30-year-fixed": 6.702,
-          "20-year-fixed": 6.088,
-          "15-year-fixed": 5.735,
-          "30-year-fha": 6.514,
-          "30-year-jumbo": 6.965
-        }
-      }
-    },
-    {
-      "date": "2026-04-08",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.748,
-          "20-year-fixed": 6.073,
-          "15-year-fixed": 5.968,
-          "30-year-fha": 6.569,
-          "30-year-jumbo": 6.79
-        },
-        "idaho": {
-          "30-year-fixed": 6.93,
-          "20-year-fixed": 6.133,
-          "15-year-fixed": 5.943,
-          "30-year-fha": 6.672,
-          "30-year-jumbo": 6.832
-        },
-        "nevada": {
-          "30-year-fixed": 6.799,
-          "20-year-fixed": 6.372,
-          "15-year-fixed": 5.993,
-          "30-year-fha": 6.611,
-          "30-year-jumbo": 6.91
-        },
-        "california": {
-          "30-year-fixed": 6.761,
-          "20-year-fixed": 6.074,
-          "15-year-fixed": 5.845,
-          "30-year-fha": 6.483,
-          "30-year-jumbo": 6.892
-        },
-        "texas": {
           "30-year-fixed": 6.751,
-          "20-year-fixed": 6.243,
-          "15-year-fixed": 5.805,
-          "30-year-fha": 6.475,
-          "30-year-jumbo": 6.936
+          "20-year-fixed": 6.188,
+          "15-year-fixed": 6.003,
+          "30-year-fha": 6.493,
+          "30-year-jumbo": 6.901
         },
-        "florida": {
-          "30-year-fixed": 6.812,
-          "20-year-fixed": 6.294,
+        "nevada": {
+          "30-year-fixed": 6.989,
+          "20-year-fixed": 6.183,
           "15-year-fixed": 5.919,
-          "30-year-fha": 6.67,
-          "30-year-jumbo": 6.937
-        },
-        "colorado": {
-          "30-year-fixed": 6.758,
-          "20-year-fixed": 6.099,
-          "15-year-fixed": 5.841,
-          "30-year-fha": 6.362,
-          "30-year-jumbo": 6.844
-        }
-      }
-    },
-    {
-      "date": "2026-04-09",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.87,
-          "20-year-fixed": 6.118,
-          "15-year-fixed": 5.965,
-          "30-year-fha": 6.56,
-          "30-year-jumbo": 6.773
-        },
-        "idaho": {
-          "30-year-fixed": 6.774,
-          "20-year-fixed": 6.29,
-          "15-year-fixed": 5.843,
-          "30-year-fha": 6.499,
-          "30-year-jumbo": 6.883
-        },
-        "nevada": {
-          "30-year-fixed": 6.848,
-          "20-year-fixed": 6.342,
-          "15-year-fixed": 5.925,
-          "30-year-fha": 6.686,
-          "30-year-jumbo": 7.118
-        },
-        "california": {
-          "30-year-fixed": 6.594,
-          "20-year-fixed": 6.073,
-          "15-year-fixed": 5.759,
-          "30-year-fha": 6.436,
-          "30-year-jumbo": 6.723
-        },
-        "texas": {
-          "30-year-fixed": 6.696,
-          "20-year-fixed": 6.143,
-          "15-year-fixed": 5.963,
-          "30-year-fha": 6.44,
-          "30-year-jumbo": 6.836
-        },
-        "florida": {
-          "30-year-fixed": 6.904,
-          "20-year-fixed": 6.086,
-          "15-year-fixed": 5.897,
-          "30-year-fha": 6.613,
-          "30-year-jumbo": 6.917
-        },
-        "colorado": {
-          "30-year-fixed": 6.82,
-          "20-year-fixed": 6.061,
-          "15-year-fixed": 5.739,
-          "30-year-fha": 6.388,
-          "30-year-jumbo": 6.827
-        }
-      }
-    },
-    {
-      "date": "2026-04-10",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.726,
-          "20-year-fixed": 6.05,
-          "15-year-fixed": 5.926,
-          "30-year-fha": 6.435,
-          "30-year-jumbo": 6.913
-        },
-        "idaho": {
-          "30-year-fixed": 6.812,
-          "20-year-fixed": 6.155,
-          "15-year-fixed": 5.876,
-          "30-year-fha": 6.503,
-          "30-year-jumbo": 6.858
-        },
-        "nevada": {
-          "30-year-fixed": 6.91,
-          "20-year-fixed": 6.18,
-          "15-year-fixed": 6.134,
-          "30-year-fha": 6.603,
-          "30-year-jumbo": 7.04
-        },
-        "california": {
-          "30-year-fixed": 6.541,
-          "20-year-fixed": 6.036,
-          "15-year-fixed": 5.891,
-          "30-year-fha": 6.44,
-          "30-year-jumbo": 6.783
-        },
-        "texas": {
-          "30-year-fixed": 6.681,
-          "20-year-fixed": 6.242,
-          "15-year-fixed": 5.882,
-          "30-year-fha": 6.407,
-          "30-year-jumbo": 6.811
-        },
-        "florida": {
-          "30-year-fixed": 6.808,
-          "20-year-fixed": 6.184,
-          "15-year-fixed": 5.961,
-          "30-year-fha": 6.583,
-          "30-year-jumbo": 6.945
-        },
-        "colorado": {
-          "30-year-fixed": 6.751,
-          "20-year-fixed": 6.169,
-          "15-year-fixed": 5.937,
-          "30-year-fha": 6.559,
-          "30-year-jumbo": 6.891
-        }
-      }
-    },
-    {
-      "date": "2026-04-11",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.836,
-          "20-year-fixed": 6.175,
-          "15-year-fixed": 5.821,
-          "30-year-fha": 6.554,
-          "30-year-jumbo": 6.803
-        },
-        "idaho": {
-          "30-year-fixed": 6.844,
-          "20-year-fixed": 6.207,
-          "15-year-fixed": 5.994,
-          "30-year-fha": 6.627,
-          "30-year-jumbo": 7.005
-        },
-        "nevada": {
-          "30-year-fixed": 6.961,
-          "20-year-fixed": 6.379,
-          "15-year-fixed": 5.968,
-          "30-year-fha": 6.695,
-          "30-year-jumbo": 6.973
+          "30-year-fha": 6.77,
+          "30-year-jumbo": 6.986
         },
         "california": {
           "30-year-fixed": 6.694,
-          "20-year-fixed": 6.025,
-          "15-year-fixed": 5.65,
-          "30-year-fha": 6.289,
-          "30-year-jumbo": 6.804
-        },
-        "texas": {
-          "30-year-fixed": 6.654,
-          "20-year-fixed": 6.261,
-          "15-year-fixed": 5.78,
-          "30-year-fha": 6.484,
-          "30-year-jumbo": 6.977
-        },
-        "florida": {
-          "30-year-fixed": 6.869,
-          "20-year-fixed": 6.153,
-          "15-year-fixed": 6.023,
-          "30-year-fha": 6.683,
-          "30-year-jumbo": 6.913
-        },
-        "colorado": {
-          "30-year-fixed": 6.643,
-          "20-year-fixed": 6.09,
-          "15-year-fixed": 5.828,
-          "30-year-fha": 6.367,
+          "20-year-fixed": 6.135,
+          "15-year-fixed": 5.748,
+          "30-year-fha": 6.51,
           "30-year-jumbo": 6.83
-        }
-      }
-    },
-    {
-      "date": "2026-04-12",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.836,
-          "20-year-fixed": 6.164,
-          "15-year-fixed": 5.779,
-          "30-year-fha": 6.604,
-          "30-year-jumbo": 6.928
-        },
-        "idaho": {
-          "30-year-fixed": 6.818,
-          "20-year-fixed": 6.11,
-          "15-year-fixed": 5.928,
-          "30-year-fha": 6.533,
-          "30-year-jumbo": 6.835
-        },
-        "nevada": {
-          "30-year-fixed": 6.909,
-          "20-year-fixed": 6.229,
-          "15-year-fixed": 6.132,
-          "30-year-fha": 6.578,
-          "30-year-jumbo": 6.943
-        },
-        "california": {
-          "30-year-fixed": 6.546,
-          "20-year-fixed": 6.06,
-          "15-year-fixed": 5.714,
-          "30-year-fha": 6.319,
-          "30-year-jumbo": 6.8
         },
         "texas": {
-          "30-year-fixed": 6.875,
-          "20-year-fixed": 6.174,
-          "15-year-fixed": 6.018,
-          "30-year-fha": 6.441,
-          "30-year-jumbo": 6.892
+          "30-year-fixed": 6.774,
+          "20-year-fixed": 6.167,
+          "15-year-fixed": 5.973,
+          "30-year-fha": 6.627,
+          "30-year-jumbo": 7.015
         },
         "florida": {
-          "30-year-fixed": 6.71,
-          "20-year-fixed": 6.129,
-          "15-year-fixed": 6.005,
-          "30-year-fha": 6.452,
-          "30-year-jumbo": 6.858
-        },
-        "colorado": {
-          "30-year-fixed": 6.609,
-          "20-year-fixed": 6.082,
-          "15-year-fixed": 5.784,
-          "30-year-fha": 6.578,
-          "30-year-jumbo": 6.806
-        }
-      }
-    },
-    {
-      "date": "2026-04-13",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.765,
-          "20-year-fixed": 6.106,
-          "15-year-fixed": 5.868,
-          "30-year-fha": 6.528,
-          "30-year-jumbo": 6.847
-        },
-        "idaho": {
-          "30-year-fixed": 6.808,
-          "20-year-fixed": 6.289,
-          "15-year-fixed": 5.881,
-          "30-year-fha": 6.458,
-          "30-year-jumbo": 6.875
-        },
-        "nevada": {
-          "30-year-fixed": 6.801,
-          "20-year-fixed": 6.363,
-          "15-year-fixed": 5.922,
-          "30-year-fha": 6.725,
-          "30-year-jumbo": 7.069
-        },
-        "california": {
-          "30-year-fixed": 6.753,
-          "20-year-fixed": 6.144,
-          "15-year-fixed": 5.889,
-          "30-year-fha": 6.284,
-          "30-year-jumbo": 6.661
-        },
-        "texas": {
-          "30-year-fixed": 6.698,
-          "20-year-fixed": 6.081,
-          "15-year-fixed": 5.841,
-          "30-year-fha": 6.637,
-          "30-year-jumbo": 6.803
-        },
-        "florida": {
-          "30-year-fixed": 6.745,
-          "20-year-fixed": 6.082,
-          "15-year-fixed": 6.035,
-          "30-year-fha": 6.553,
-          "30-year-jumbo": 6.857
-        },
-        "colorado": {
-          "30-year-fixed": 6.703,
-          "20-year-fixed": 6.197,
-          "15-year-fixed": 5.73,
-          "30-year-fha": 6.55,
-          "30-year-jumbo": 6.751
-        }
-      }
-    },
-    {
-      "date": "2026-04-14",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.636,
-          "20-year-fixed": 6.248,
-          "15-year-fixed": 5.794,
-          "30-year-fha": 6.404,
-          "30-year-jumbo": 6.924
-        },
-        "idaho": {
-          "30-year-fixed": 6.873,
-          "20-year-fixed": 6.243,
-          "15-year-fixed": 5.999,
-          "30-year-fha": 6.513,
-          "30-year-jumbo": 6.944
-        },
-        "nevada": {
-          "30-year-fixed": 6.914,
-          "20-year-fixed": 6.371,
-          "15-year-fixed": 5.928,
-          "30-year-fha": 6.593,
-          "30-year-jumbo": 7.129
-        },
-        "california": {
-          "30-year-fixed": 6.618,
-          "20-year-fixed": 5.915,
-          "15-year-fixed": 5.712,
-          "30-year-fha": 6.502,
-          "30-year-jumbo": 6.818
-        },
-        "texas": {
-          "30-year-fixed": 6.784,
-          "20-year-fixed": 6.072,
-          "15-year-fixed": 5.809,
-          "30-year-fha": 6.42,
-          "30-year-jumbo": 6.875
-        },
-        "florida": {
-          "30-year-fixed": 6.789,
-          "20-year-fixed": 6.176,
-          "15-year-fixed": 5.932,
-          "30-year-fha": 6.559,
-          "30-year-jumbo": 6.995
-        },
-        "colorado": {
-          "30-year-fixed": 6.653,
-          "20-year-fixed": 6.146,
-          "15-year-fixed": 5.746,
-          "30-year-fha": 6.535,
-          "30-year-jumbo": 6.944
-        }
-      }
-    },
-    {
-      "date": "2026-04-15",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.75,
-          "20-year-fixed": 6.125,
-          "15-year-fixed": 5.875,
-          "30-year-fha": 6.5,
-          "30-year-jumbo": 6.875
-        },
-        "idaho": {
-          "30-year-fixed": 6.825,
-          "20-year-fixed": 6.2,
-          "15-year-fixed": 5.95,
-          "30-year-fha": 6.575,
-          "30-year-jumbo": 6.95
-        },
-        "nevada": {
-          "30-year-fixed": 6.9,
-          "20-year-fixed": 6.275,
-          "15-year-fixed": 6.025,
-          "30-year-fha": 6.65,
-          "30-year-jumbo": 7.025
-        },
-        "california": {
-          "30-year-fixed": 6.65,
-          "20-year-fixed": 6.025,
-          "15-year-fixed": 5.775,
-          "30-year-fha": 6.4,
-          "30-year-jumbo": 6.775
-        },
-        "texas": {
-          "30-year-fixed": 6.775,
-          "20-year-fixed": 6.15,
-          "15-year-fixed": 5.9,
-          "30-year-fha": 6.525,
-          "30-year-jumbo": 6.9
-        },
-        "florida": {
-          "30-year-fixed": 6.825,
-          "20-year-fixed": 6.2,
-          "15-year-fixed": 5.95,
-          "30-year-fha": 6.575,
-          "30-year-jumbo": 6.95
-        },
-        "colorado": {
-          "30-year-fixed": 6.725,
-          "20-year-fixed": 6.1,
-          "15-year-fixed": 5.85,
-          "30-year-fha": 6.475,
-          "30-year-jumbo": 6.85
-        }
-      }
-    },
-    {
-      "date": "2026-04-16",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.75,
-          "20-year-fixed": 6.125,
-          "15-year-fixed": 5.875,
-          "30-year-fha": 6.5,
-          "30-year-jumbo": 6.875
-        },
-        "idaho": {
-          "30-year-fixed": 6.825,
-          "20-year-fixed": 6.2,
-          "15-year-fixed": 5.95,
-          "30-year-fha": 6.575,
-          "30-year-jumbo": 6.95
-        },
-        "nevada": {
-          "30-year-fixed": 6.9,
-          "20-year-fixed": 6.275,
-          "15-year-fixed": 6.025,
-          "30-year-fha": 6.65,
-          "30-year-jumbo": 7.025
-        },
-        "california": {
-          "30-year-fixed": 6.65,
-          "20-year-fixed": 6.025,
-          "15-year-fixed": 5.775,
-          "30-year-fha": 6.4,
-          "30-year-jumbo": 6.775
-        },
-        "texas": {
-          "30-year-fixed": 6.775,
-          "20-year-fixed": 6.15,
-          "15-year-fixed": 5.9,
-          "30-year-fha": 6.525,
-          "30-year-jumbo": 6.9
-        },
-        "florida": {
-          "30-year-fixed": 6.825,
-          "20-year-fixed": 6.2,
-          "15-year-fixed": 5.95,
-          "30-year-fha": 6.575,
-          "30-year-jumbo": 6.95
-        },
-        "colorado": {
-          "30-year-fixed": 6.725,
-          "20-year-fixed": 6.1,
-          "15-year-fixed": 5.85,
-          "30-year-fha": 6.475,
-          "30-year-jumbo": 6.85
-        }
-      }
-    },
-    {
-      "date": "2026-04-17",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.683,
-          "20-year-fixed": 6.146,
-          "15-year-fixed": 5.812,
-          "30-year-fha": 6.455,
-          "30-year-jumbo": 6.93
-        },
-        "idaho": {
           "30-year-fixed": 6.905,
-          "20-year-fixed": 6.144,
-          "15-year-fixed": 5.975,
-          "30-year-fha": 6.481,
-          "30-year-jumbo": 6.982
-        },
-        "nevada": {
-          "30-year-fixed": 6.841,
-          "20-year-fixed": 6.258,
-          "15-year-fixed": 6.108,
-          "30-year-fha": 6.684,
-          "30-year-jumbo": 7.131
-        },
-        "california": {
-          "30-year-fixed": 6.693,
-          "20-year-fixed": 6.114,
-          "15-year-fixed": 5.777,
-          "30-year-fha": 6.46,
-          "30-year-jumbo": 6.862
-        },
-        "texas": {
-          "30-year-fixed": 6.781,
-          "20-year-fixed": 6.237,
-          "15-year-fixed": 5.8,
-          "30-year-fha": 6.591,
-          "30-year-jumbo": 7.006
-        },
-        "florida": {
-          "30-year-fixed": 6.841,
-          "20-year-fixed": 6.084,
-          "15-year-fixed": 5.899,
-          "30-year-fha": 6.567,
-          "30-year-jumbo": 6.858
+          "20-year-fixed": 6.11,
+          "15-year-fixed": 6.003,
+          "30-year-fha": 6.628,
+          "30-year-jumbo": 7.011
         },
         "colorado": {
-          "30-year-fixed": 6.645,
-          "20-year-fixed": 6.026,
-          "15-year-fixed": 5.844,
-          "30-year-fha": 6.36,
+          "30-year-fixed": 6.667,
+          "20-year-fixed": 6.129,
+          "15-year-fixed": 5.967,
+          "30-year-fha": 6.545,
           "30-year-jumbo": 6.814
         }
       }
     },
     {
-      "date": "2026-04-18",
+      "date": "2026-06-29",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.818,
+          "20-year-fixed": 6.174,
+          "15-year-fixed": 5.99,
+          "30-year-fha": 6.554,
+          "30-year-jumbo": 6.985
+        },
+        "idaho": {
+          "30-year-fixed": 6.92,
+          "20-year-fixed": 6.148,
+          "15-year-fixed": 6.004,
+          "30-year-fha": 6.658,
+          "30-year-jumbo": 7.019
+        },
+        "nevada": {
+          "30-year-fixed": 6.777,
+          "20-year-fixed": 6.154,
+          "15-year-fixed": 5.925,
+          "30-year-fha": 6.669,
+          "30-year-jumbo": 6.953
+        },
+        "california": {
+          "30-year-fixed": 6.695,
+          "20-year-fixed": 5.928,
+          "15-year-fixed": 5.878,
+          "30-year-fha": 6.403,
+          "30-year-jumbo": 6.837
+        },
+        "texas": {
+          "30-year-fixed": 6.804,
+          "20-year-fixed": 6.145,
+          "15-year-fixed": 6.013,
+          "30-year-fha": 6.489,
+          "30-year-jumbo": 6.996
+        },
+        "florida": {
+          "30-year-fixed": 6.743,
+          "20-year-fixed": 6.133,
+          "15-year-fixed": 5.958,
+          "30-year-fha": 6.554,
+          "30-year-jumbo": 6.943
+        },
+        "colorado": {
+          "30-year-fixed": 6.676,
+          "20-year-fixed": 6.116,
+          "15-year-fixed": 5.845,
+          "30-year-fha": 6.545,
+          "30-year-jumbo": 6.967
+        }
+      }
+    },
+    {
+      "date": "2026-06-30",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.834,
+          "20-year-fixed": 6.205,
+          "15-year-fixed": 5.997,
+          "30-year-fha": 6.543,
+          "30-year-jumbo": 6.995
+        },
+        "idaho": {
+          "30-year-fixed": 6.879,
+          "20-year-fixed": 6.222,
+          "15-year-fixed": 5.929,
+          "30-year-fha": 6.655,
+          "30-year-jumbo": 6.985
+        },
+        "nevada": {
+          "30-year-fixed": 6.829,
+          "20-year-fixed": 6.354,
+          "15-year-fixed": 6.101,
+          "30-year-fha": 6.739,
+          "30-year-jumbo": 6.957
+        },
+        "california": {
+          "30-year-fixed": 6.672,
+          "20-year-fixed": 6.045,
+          "15-year-fixed": 5.825,
+          "30-year-fha": 6.425,
+          "30-year-jumbo": 6.703
+        },
+        "texas": {
+          "30-year-fixed": 6.747,
+          "20-year-fixed": 6.14,
+          "15-year-fixed": 5.791,
+          "30-year-fha": 6.505,
+          "30-year-jumbo": 6.908
+        },
+        "florida": {
+          "30-year-fixed": 6.76,
+          "20-year-fixed": 6.146,
+          "15-year-fixed": 5.915,
+          "30-year-fha": 6.514,
+          "30-year-jumbo": 6.948
+        },
+        "colorado": {
+          "30-year-fixed": 6.688,
+          "20-year-fixed": 6.136,
+          "15-year-fixed": 5.776,
+          "30-year-fha": 6.437,
+          "30-year-jumbo": 6.933
+        }
+      }
+    },
+    {
+      "date": "2026-07-01",
       "states": {
         "utah": {
           "30-year-fixed": 6.75,
@@ -2973,272 +273,2972 @@
       }
     },
     {
-      "date": "2026-04-19",
+      "date": "2026-07-02",
       "states": {
         "utah": {
-          "30-year-fixed": 6.633,
-          "20-year-fixed": 6.075,
-          "15-year-fixed": 5.942,
+          "30-year-fixed": 6.75,
+          "20-year-fixed": 6.125,
+          "15-year-fixed": 5.875,
           "30-year-fha": 6.5,
-          "30-year-jumbo": 6.774
+          "30-year-jumbo": 6.875
         },
         "idaho": {
-          "30-year-fixed": 6.87,
-          "20-year-fixed": 6.127,
-          "15-year-fixed": 6.009,
+          "30-year-fixed": 6.825,
+          "20-year-fixed": 6.2,
+          "15-year-fixed": 5.95,
+          "30-year-fha": 6.575,
+          "30-year-jumbo": 6.95
+        },
+        "nevada": {
+          "30-year-fixed": 6.9,
+          "20-year-fixed": 6.275,
+          "15-year-fixed": 6.025,
+          "30-year-fha": 6.65,
+          "30-year-jumbo": 7.025
+        },
+        "california": {
+          "30-year-fixed": 6.65,
+          "20-year-fixed": 6.025,
+          "15-year-fixed": 5.775,
+          "30-year-fha": 6.4,
+          "30-year-jumbo": 6.775
+        },
+        "texas": {
+          "30-year-fixed": 6.775,
+          "20-year-fixed": 6.15,
+          "15-year-fixed": 5.9,
+          "30-year-fha": 6.525,
+          "30-year-jumbo": 6.9
+        },
+        "florida": {
+          "30-year-fixed": 6.825,
+          "20-year-fixed": 6.2,
+          "15-year-fixed": 5.95,
+          "30-year-fha": 6.575,
+          "30-year-jumbo": 6.95
+        },
+        "colorado": {
+          "30-year-fixed": 6.725,
+          "20-year-fixed": 6.1,
+          "15-year-fixed": 5.85,
+          "30-year-fha": 6.475,
+          "30-year-jumbo": 6.85
+        }
+      }
+    },
+    {
+      "date": "2026-07-03",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.717,
+          "20-year-fixed": 6.053,
+          "15-year-fixed": 5.875,
+          "30-year-fha": 6.606,
+          "30-year-jumbo": 6.862
+        },
+        "idaho": {
+          "30-year-fixed": 6.788,
+          "20-year-fixed": 6.29,
+          "15-year-fixed": 5.929,
+          "30-year-fha": 6.689,
+          "30-year-jumbo": 6.927
+        },
+        "nevada": {
+          "30-year-fixed": 6.802,
+          "20-year-fixed": 6.342,
+          "15-year-fixed": 6.109,
+          "30-year-fha": 6.549,
+          "30-year-jumbo": 7.052
+        },
+        "california": {
+          "30-year-fixed": 6.691,
+          "20-year-fixed": 5.979,
+          "15-year-fixed": 5.854,
+          "30-year-fha": 6.419,
+          "30-year-jumbo": 6.844
+        },
+        "texas": {
+          "30-year-fixed": 6.728,
+          "20-year-fixed": 6.26,
+          "15-year-fixed": 5.914,
+          "30-year-fha": 6.518,
+          "30-year-jumbo": 6.809
+        },
+        "florida": {
+          "30-year-fixed": 6.735,
+          "20-year-fixed": 6.317,
+          "15-year-fixed": 6.055,
+          "30-year-fha": 6.543,
+          "30-year-jumbo": 6.895
+        },
+        "colorado": {
+          "30-year-fixed": 6.689,
+          "20-year-fixed": 6.218,
+          "15-year-fixed": 5.772,
+          "30-year-fha": 6.513,
+          "30-year-jumbo": 6.925
+        }
+      }
+    },
+    {
+      "date": "2026-07-04",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.75,
+          "20-year-fixed": 6.125,
+          "15-year-fixed": 5.875,
+          "30-year-fha": 6.5,
+          "30-year-jumbo": 6.875
+        },
+        "idaho": {
+          "30-year-fixed": 6.825,
+          "20-year-fixed": 6.2,
+          "15-year-fixed": 5.95,
+          "30-year-fha": 6.575,
+          "30-year-jumbo": 6.95
+        },
+        "nevada": {
+          "30-year-fixed": 6.9,
+          "20-year-fixed": 6.275,
+          "15-year-fixed": 6.025,
+          "30-year-fha": 6.65,
+          "30-year-jumbo": 7.025
+        },
+        "california": {
+          "30-year-fixed": 6.65,
+          "20-year-fixed": 6.025,
+          "15-year-fixed": 5.775,
+          "30-year-fha": 6.4,
+          "30-year-jumbo": 6.775
+        },
+        "texas": {
+          "30-year-fixed": 6.775,
+          "20-year-fixed": 6.15,
+          "15-year-fixed": 5.9,
+          "30-year-fha": 6.525,
+          "30-year-jumbo": 6.9
+        },
+        "florida": {
+          "30-year-fixed": 6.825,
+          "20-year-fixed": 6.2,
+          "15-year-fixed": 5.95,
+          "30-year-fha": 6.575,
+          "30-year-jumbo": 6.95
+        },
+        "colorado": {
+          "30-year-fixed": 6.725,
+          "20-year-fixed": 6.1,
+          "15-year-fixed": 5.85,
+          "30-year-fha": 6.475,
+          "30-year-jumbo": 6.85
+        }
+      }
+    },
+    {
+      "date": "2026-07-05",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.835,
+          "20-year-fixed": 6.244,
+          "15-year-fixed": 5.801,
+          "30-year-fha": 6.562,
+          "30-year-jumbo": 6.753
+        },
+        "idaho": {
+          "30-year-fixed": 6.896,
+          "20-year-fixed": 6.282,
+          "15-year-fixed": 6.048,
+          "30-year-fha": 6.625,
+          "30-year-jumbo": 6.863
+        },
+        "nevada": {
+          "30-year-fixed": 6.894,
+          "20-year-fixed": 6.165,
+          "15-year-fixed": 6.058,
+          "30-year-fha": 6.633,
+          "30-year-jumbo": 7.141
+        },
+        "california": {
+          "30-year-fixed": 6.536,
+          "20-year-fixed": 5.932,
+          "15-year-fixed": 5.722,
+          "30-year-fha": 6.382,
+          "30-year-jumbo": 6.861
+        },
+        "texas": {
+          "30-year-fixed": 6.842,
+          "20-year-fixed": 6.183,
+          "15-year-fixed": 5.964,
           "30-year-fha": 6.57,
-          "30-year-jumbo": 6.998
+          "30-year-jumbo": 6.898
+        },
+        "florida": {
+          "30-year-fixed": 6.877,
+          "20-year-fixed": 6.137,
+          "15-year-fixed": 5.998,
+          "30-year-fha": 6.551,
+          "30-year-jumbo": 7.049
+        },
+        "colorado": {
+          "30-year-fixed": 6.771,
+          "20-year-fixed": 6.072,
+          "15-year-fixed": 5.733,
+          "30-year-fha": 6.36,
+          "30-year-jumbo": 6.781
+        }
+      }
+    },
+    {
+      "date": "2026-07-06",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.751,
+          "20-year-fixed": 6.149,
+          "15-year-fixed": 5.888,
+          "30-year-fha": 6.549,
+          "30-year-jumbo": 6.828
+        },
+        "idaho": {
+          "30-year-fixed": 6.789,
+          "20-year-fixed": 6.222,
+          "15-year-fixed": 6.017,
+          "30-year-fha": 6.491,
+          "30-year-jumbo": 6.982
         },
         "nevada": {
           "30-year-fixed": 6.895,
-          "20-year-fixed": 6.236,
-          "15-year-fixed": 5.948,
-          "30-year-fha": 6.568,
-          "30-year-jumbo": 7.111
+          "20-year-fixed": 6.172,
+          "15-year-fixed": 5.997,
+          "30-year-fha": 6.609,
+          "30-year-jumbo": 6.956
         },
         "california": {
-          "30-year-fixed": 6.665,
-          "20-year-fixed": 6.064,
-          "15-year-fixed": 5.778,
-          "30-year-fha": 6.446,
-          "30-year-jumbo": 6.691
+          "30-year-fixed": 6.774,
+          "20-year-fixed": 6.045,
+          "15-year-fixed": 5.758,
+          "30-year-fha": 6.324,
+          "30-year-jumbo": 6.733
         },
         "texas": {
-          "30-year-fixed": 6.886,
-          "20-year-fixed": 6.11,
-          "15-year-fixed": 5.976,
-          "30-year-fha": 6.475,
-          "30-year-jumbo": 6.853
+          "30-year-fixed": 6.72,
+          "20-year-fixed": 6.063,
+          "15-year-fixed": 5.922,
+          "30-year-fha": 6.533,
+          "30-year-jumbo": 6.811
         },
         "florida": {
-          "30-year-fixed": 6.838,
-          "20-year-fixed": 6.141,
-          "15-year-fixed": 5.949,
-          "30-year-fha": 6.453,
+          "30-year-fixed": 6.89,
+          "20-year-fixed": 6.225,
+          "15-year-fixed": 5.974,
+          "30-year-fha": 6.48,
+          "30-year-jumbo": 6.91
+        },
+        "colorado": {
+          "30-year-fixed": 6.687,
+          "20-year-fixed": 6.045,
+          "15-year-fixed": 5.873,
+          "30-year-fha": 6.419,
+          "30-year-jumbo": 6.893
+        }
+      }
+    },
+    {
+      "date": "2026-07-07",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.731,
+          "20-year-fixed": 6.062,
+          "15-year-fixed": 5.807,
+          "30-year-fha": 6.394,
+          "30-year-jumbo": 6.903
+        },
+        "idaho": {
+          "30-year-fixed": 6.736,
+          "20-year-fixed": 6.314,
+          "15-year-fixed": 5.832,
+          "30-year-fha": 6.519,
+          "30-year-jumbo": 7.005
+        },
+        "nevada": {
+          "30-year-fixed": 6.997,
+          "20-year-fixed": 6.366,
+          "15-year-fixed": 6.149,
+          "30-year-fha": 6.716,
+          "30-year-jumbo": 6.95
+        },
+        "california": {
+          "30-year-fixed": 6.541,
+          "20-year-fixed": 5.917,
+          "15-year-fixed": 5.867,
+          "30-year-fha": 6.486,
+          "30-year-jumbo": 6.7
+        },
+        "texas": {
+          "30-year-fixed": 6.714,
+          "20-year-fixed": 6.262,
+          "15-year-fixed": 5.795,
+          "30-year-fha": 6.525,
+          "30-year-jumbo": 6.866
+        },
+        "florida": {
+          "30-year-fixed": 6.8,
+          "20-year-fixed": 6.266,
+          "15-year-fixed": 5.852,
+          "30-year-fha": 6.584,
+          "30-year-jumbo": 6.868
+        },
+        "colorado": {
+          "30-year-fixed": 6.64,
+          "20-year-fixed": 6.069,
+          "15-year-fixed": 5.782,
+          "30-year-fha": 6.385,
+          "30-year-jumbo": 6.812
+        }
+      }
+    },
+    {
+      "date": "2026-07-08",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.686,
+          "20-year-fixed": 6.09,
+          "15-year-fixed": 5.958,
+          "30-year-fha": 6.451,
+          "30-year-jumbo": 6.866
+        },
+        "idaho": {
+          "30-year-fixed": 6.839,
+          "20-year-fixed": 6.266,
+          "15-year-fixed": 5.847,
+          "30-year-fha": 6.493,
+          "30-year-jumbo": 6.884
+        },
+        "nevada": {
+          "30-year-fixed": 6.919,
+          "20-year-fixed": 6.263,
+          "15-year-fixed": 5.988,
+          "30-year-fha": 6.616,
           "30-year-jumbo": 7.051
         },
-        "colorado": {
-          "30-year-fixed": 6.779,
-          "20-year-fixed": 6.048,
-          "15-year-fixed": 5.859,
-          "30-year-fha": 6.511,
-          "30-year-jumbo": 6.872
-        }
-      }
-    },
-    {
-      "date": "2026-04-20",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.851,
-          "20-year-fixed": 6.187,
-          "15-year-fixed": 5.822,
-          "30-year-fha": 6.618,
-          "30-year-jumbo": 6.837
-        },
-        "idaho": {
-          "30-year-fixed": 6.948,
-          "20-year-fixed": 6.119,
-          "15-year-fixed": 5.973,
-          "30-year-fha": 6.614,
-          "30-year-jumbo": 7.023
-        },
-        "nevada": {
-          "30-year-fixed": 6.949,
-          "20-year-fixed": 6.373,
-          "15-year-fixed": 5.915,
-          "30-year-fha": 6.556,
-          "30-year-jumbo": 7.049
-        },
         "california": {
-          "30-year-fixed": 6.697,
-          "20-year-fixed": 6.068,
-          "15-year-fixed": 5.784,
-          "30-year-fha": 6.424,
-          "30-year-jumbo": 6.671
+          "30-year-fixed": 6.612,
+          "20-year-fixed": 5.972,
+          "15-year-fixed": 5.866,
+          "30-year-fha": 6.443,
+          "30-year-jumbo": 6.84
         },
         "texas": {
-          "30-year-fixed": 6.849,
-          "20-year-fixed": 6.186,
-          "15-year-fixed": 5.998,
-          "30-year-fha": 6.416,
-          "30-year-jumbo": 6.786
+          "30-year-fixed": 6.704,
+          "20-year-fixed": 6.235,
+          "15-year-fixed": 5.977,
+          "30-year-fha": 6.564,
+          "30-year-jumbo": 7.019
         },
         "florida": {
-          "30-year-fixed": 6.784,
-          "20-year-fixed": 6.117,
-          "15-year-fixed": 6.012,
-          "30-year-fha": 6.57,
-          "30-year-jumbo": 6.966
+          "30-year-fixed": 6.777,
+          "20-year-fixed": 6.218,
+          "15-year-fixed": 6.051,
+          "30-year-fha": 6.468,
+          "30-year-jumbo": 6.997
         },
         "colorado": {
-          "30-year-fixed": 6.738,
-          "20-year-fixed": 6.104,
-          "15-year-fixed": 5.817,
-          "30-year-fha": 6.531,
-          "30-year-jumbo": 6.854
+          "30-year-fixed": 6.638,
+          "20-year-fixed": 6.024,
+          "15-year-fixed": 5.858,
+          "30-year-fha": 6.397,
+          "30-year-jumbo": 6.946
         }
       }
     },
     {
-      "date": "2026-04-21",
+      "date": "2026-07-09",
       "states": {
         "utah": {
-          "30-year-fixed": 6.842,
-          "20-year-fixed": 6.172,
-          "15-year-fixed": 5.999,
-          "30-year-fha": 6.546,
-          "30-year-jumbo": 6.922
+          "30-year-fixed": 6.681,
+          "20-year-fixed": 6.095,
+          "15-year-fixed": 5.895,
+          "30-year-fha": 6.485,
+          "30-year-jumbo": 6.885
         },
         "idaho": {
-          "30-year-fixed": 6.927,
-          "20-year-fixed": 6.212,
-          "15-year-fixed": 5.863,
-          "30-year-fha": 6.456,
-          "30-year-jumbo": 6.869
+          "30-year-fixed": 6.837,
+          "20-year-fixed": 6.151,
+          "15-year-fixed": 5.908,
+          "30-year-fha": 6.661,
+          "30-year-jumbo": 6.976
         },
         "nevada": {
-          "30-year-fixed": 6.888,
-          "20-year-fixed": 6.254,
-          "15-year-fixed": 6.002,
-          "30-year-fha": 6.715,
+          "30-year-fixed": 7.012,
+          "20-year-fixed": 6.222,
+          "15-year-fixed": 5.963,
+          "30-year-fha": 6.724,
+          "30-year-jumbo": 7.052
+        },
+        "california": {
+          "30-year-fixed": 6.755,
+          "20-year-fixed": 5.97,
+          "15-year-fixed": 5.754,
+          "30-year-fha": 6.442,
+          "30-year-jumbo": 6.815
+        },
+        "texas": {
+          "30-year-fixed": 6.767,
+          "20-year-fixed": 6.128,
+          "15-year-fixed": 5.823,
+          "30-year-fha": 6.629,
+          "30-year-jumbo": 6.919
+        },
+        "florida": {
+          "30-year-fixed": 6.746,
+          "20-year-fixed": 6.268,
+          "15-year-fixed": 5.976,
+          "30-year-fha": 6.621,
+          "30-year-jumbo": 7.041
+        },
+        "colorado": {
+          "30-year-fixed": 6.687,
+          "20-year-fixed": 6.107,
+          "15-year-fixed": 5.739,
+          "30-year-fha": 6.373,
+          "30-year-jumbo": 6.921
+        }
+      }
+    },
+    {
+      "date": "2026-07-10",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.698,
+          "20-year-fixed": 6.109,
+          "15-year-fixed": 5.909,
+          "30-year-fha": 6.609,
+          "30-year-jumbo": 6.865
+        },
+        "idaho": {
+          "30-year-fixed": 6.854,
+          "20-year-fixed": 6.235,
+          "15-year-fixed": 5.898,
+          "30-year-fha": 6.494,
+          "30-year-jumbo": 6.884
+        },
+        "nevada": {
+          "30-year-fixed": 6.825,
+          "20-year-fixed": 6.232,
+          "15-year-fixed": 5.913,
+          "30-year-fha": 6.542,
           "30-year-jumbo": 7.036
         },
         "california": {
-          "30-year-fixed": 6.546,
-          "20-year-fixed": 6.019,
-          "15-year-fixed": 5.683,
-          "30-year-fha": 6.333,
-          "30-year-jumbo": 6.793
+          "30-year-fixed": 6.731,
+          "20-year-fixed": 6.016,
+          "15-year-fixed": 5.752,
+          "30-year-fha": 6.304,
+          "30-year-jumbo": 6.704
         },
         "texas": {
-          "30-year-fixed": 6.833,
-          "20-year-fixed": 6.213,
-          "15-year-fixed": 5.843,
-          "30-year-fha": 6.478,
-          "30-year-jumbo": 6.801
+          "30-year-fixed": 6.89,
+          "20-year-fixed": 6.037,
+          "15-year-fixed": 5.848,
+          "30-year-fha": 6.43,
+          "30-year-jumbo": 6.818
         },
         "florida": {
-          "30-year-fixed": 6.908,
-          "20-year-fixed": 6.092,
-          "15-year-fixed": 5.841,
-          "30-year-fha": 6.46,
-          "30-year-jumbo": 6.953
+          "30-year-fixed": 6.877,
+          "20-year-fixed": 6.158,
+          "15-year-fixed": 6.032,
+          "30-year-fha": 6.481,
+          "30-year-jumbo": 6.902
         },
         "colorado": {
-          "30-year-fixed": 6.615,
-          "20-year-fixed": 6.128,
-          "15-year-fixed": 5.768,
-          "30-year-fha": 6.406,
-          "30-year-jumbo": 6.966
+          "30-year-fixed": 6.848,
+          "20-year-fixed": 6.037,
+          "15-year-fixed": 5.896,
+          "30-year-fha": 6.522,
+          "30-year-jumbo": 6.851
         }
       }
     },
     {
-      "date": "2026-04-22",
+      "date": "2026-07-11",
       "states": {
         "utah": {
-          "30-year-fixed": 6.863,
-          "20-year-fixed": 6.245,
-          "15-year-fixed": 5.983,
-          "30-year-fha": 6.488,
-          "30-year-jumbo": 6.954
+          "30-year-fixed": 6.686,
+          "20-year-fixed": 6.029,
+          "15-year-fixed": 5.766,
+          "30-year-fha": 6.419,
+          "30-year-jumbo": 6.826
         },
         "idaho": {
-          "30-year-fixed": 6.937,
-          "20-year-fixed": 6.128,
-          "15-year-fixed": 5.832,
-          "30-year-fha": 6.572,
-          "30-year-jumbo": 7.025
+          "30-year-fixed": 6.726,
+          "20-year-fixed": 6.107,
+          "15-year-fixed": 6.071,
+          "30-year-fha": 6.534,
+          "30-year-jumbo": 6.912
         },
         "nevada": {
-          "30-year-fixed": 6.874,
-          "20-year-fixed": 6.393,
-          "15-year-fixed": 6.116,
-          "30-year-fha": 6.693,
-          "30-year-jumbo": 6.999
+          "30-year-fixed": 6.822,
+          "20-year-fixed": 6.369,
+          "15-year-fixed": 6.032,
+          "30-year-fha": 6.729,
+          "30-year-jumbo": 7.098
         },
         "california": {
-          "30-year-fixed": 6.679,
-          "20-year-fixed": 6.024,
-          "15-year-fixed": 5.704,
-          "30-year-fha": 6.323,
-          "30-year-jumbo": 6.68
+          "30-year-fixed": 6.545,
+          "20-year-fixed": 5.912,
+          "15-year-fixed": 5.861,
+          "30-year-fha": 6.509,
+          "30-year-jumbo": 6.882
         },
         "texas": {
-          "30-year-fixed": 6.766,
-          "20-year-fixed": 6.107,
-          "15-year-fixed": 6.014,
-          "30-year-fha": 6.514,
-          "30-year-jumbo": 6.89
+          "30-year-fixed": 6.689,
+          "20-year-fixed": 6.052,
+          "15-year-fixed": 6.016,
+          "30-year-fha": 6.529,
+          "30-year-jumbo": 6.938
+        },
+        "florida": {
+          "30-year-fixed": 6.756,
+          "20-year-fixed": 6.165,
+          "15-year-fixed": 5.946,
+          "30-year-fha": 6.673,
+          "30-year-jumbo": 7.07
+        },
+        "colorado": {
+          "30-year-fixed": 6.675,
+          "20-year-fixed": 6.059,
+          "15-year-fixed": 5.831,
+          "30-year-fha": 6.534,
+          "30-year-jumbo": 6.921
+        }
+      }
+    },
+    {
+      "date": "2026-07-12",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.833,
+          "20-year-fixed": 6.096,
+          "15-year-fixed": 5.886,
+          "30-year-fha": 6.417,
+          "30-year-jumbo": 6.773
+        },
+        "idaho": {
+          "30-year-fixed": 6.747,
+          "20-year-fixed": 6.076,
+          "15-year-fixed": 5.908,
+          "30-year-fha": 6.562,
+          "30-year-jumbo": 7.055
+        },
+        "nevada": {
+          "30-year-fixed": 7.012,
+          "20-year-fixed": 6.293,
+          "15-year-fixed": 6.083,
+          "30-year-fha": 6.649,
+          "30-year-jumbo": 7.022
+        },
+        "california": {
+          "30-year-fixed": 6.758,
+          "20-year-fixed": 6.125,
+          "15-year-fixed": 5.878,
+          "30-year-fha": 6.277,
+          "30-year-jumbo": 6.698
+        },
+        "texas": {
+          "30-year-fixed": 6.875,
+          "20-year-fixed": 6.054,
+          "15-year-fixed": 5.898,
+          "30-year-fha": 6.415,
+          "30-year-jumbo": 6.785
+        },
+        "florida": {
+          "30-year-fixed": 6.905,
+          "20-year-fixed": 6.283,
+          "15-year-fixed": 5.967,
+          "30-year-fha": 6.664,
+          "30-year-jumbo": 6.825
+        },
+        "colorado": {
+          "30-year-fixed": 6.634,
+          "20-year-fixed": 6.134,
+          "15-year-fixed": 5.73,
+          "30-year-fha": 6.577,
+          "30-year-jumbo": 6.739
+        }
+      }
+    },
+    {
+      "date": "2026-07-13",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.707,
+          "20-year-fixed": 6.097,
+          "15-year-fixed": 5.892,
+          "30-year-fha": 6.388,
+          "30-year-jumbo": 6.861
+        },
+        "idaho": {
+          "30-year-fixed": 6.92,
+          "20-year-fixed": 6.272,
+          "15-year-fixed": 5.865,
+          "30-year-fha": 6.592,
+          "30-year-jumbo": 7.075
+        },
+        "nevada": {
+          "30-year-fixed": 6.844,
+          "20-year-fixed": 6.199,
+          "15-year-fixed": 6.103,
+          "30-year-fha": 6.563,
+          "30-year-jumbo": 6.902
+        },
+        "california": {
+          "30-year-fixed": 6.675,
+          "20-year-fixed": 5.968,
+          "15-year-fixed": 5.761,
+          "30-year-fha": 6.309,
+          "30-year-jumbo": 6.761
+        },
+        "texas": {
+          "30-year-fixed": 6.851,
+          "20-year-fixed": 6.191,
+          "15-year-fixed": 5.917,
+          "30-year-fha": 6.481,
+          "30-year-jumbo": 6.95
         },
         "florida": {
           "30-year-fixed": 6.925,
-          "20-year-fixed": 6.135,
-          "15-year-fixed": 5.861,
-          "30-year-fha": 6.692,
-          "30-year-jumbo": 7.016
+          "20-year-fixed": 6.12,
+          "15-year-fixed": 5.841,
+          "30-year-fha": 6.668,
+          "30-year-jumbo": 6.924
         },
         "colorado": {
-          "30-year-fixed": 6.838,
-          "20-year-fixed": 6.111,
-          "15-year-fixed": 5.744,
-          "30-year-fha": 6.36,
+          "30-year-fixed": 6.785,
+          "20-year-fixed": 6.097,
+          "15-year-fixed": 5.765,
+          "30-year-fha": 6.517,
+          "30-year-jumbo": 6.909
+        }
+      }
+    },
+    {
+      "date": "2026-07-14",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.796,
+          "20-year-fixed": 6.011,
+          "15-year-fixed": 5.991,
+          "30-year-fha": 6.424,
+          "30-year-jumbo": 6.888
+        },
+        "idaho": {
+          "30-year-fixed": 6.734,
+          "20-year-fixed": 6.268,
+          "15-year-fixed": 5.997,
+          "30-year-fha": 6.695,
+          "30-year-jumbo": 7.014
+        },
+        "nevada": {
+          "30-year-fixed": 6.98,
+          "20-year-fixed": 6.351,
+          "15-year-fixed": 6.125,
+          "30-year-fha": 6.561,
+          "30-year-jumbo": 7.1
+        },
+        "california": {
+          "30-year-fixed": 6.729,
+          "20-year-fixed": 5.965,
+          "15-year-fixed": 5.783,
+          "30-year-fha": 6.29,
+          "30-year-jumbo": 6.692
+        },
+        "texas": {
+          "30-year-fixed": 6.848,
+          "20-year-fixed": 6.176,
+          "15-year-fixed": 5.798,
+          "30-year-fha": 6.554,
+          "30-year-jumbo": 6.785
+        },
+        "florida": {
+          "30-year-fixed": 6.749,
+          "20-year-fixed": 6.226,
+          "15-year-fixed": 6.072,
+          "30-year-fha": 6.523,
+          "30-year-jumbo": 7.075
+        },
+        "colorado": {
+          "30-year-fixed": 6.637,
+          "20-year-fixed": 6.044,
+          "15-year-fixed": 5.824,
+          "30-year-fha": 6.386,
+          "30-year-jumbo": 6.783
+        }
+      }
+    },
+    {
+      "date": "2026-07-15",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.836,
+          "20-year-fixed": 6.008,
+          "15-year-fixed": 5.798,
+          "30-year-fha": 6.597,
+          "30-year-jumbo": 6.815
+        },
+        "idaho": {
+          "30-year-fixed": 6.851,
+          "20-year-fixed": 6.304,
+          "15-year-fixed": 6.039,
+          "30-year-fha": 6.58,
+          "30-year-jumbo": 7.032
+        },
+        "nevada": {
+          "30-year-fixed": 7,
+          "20-year-fixed": 6.203,
+          "15-year-fixed": 6.124,
+          "30-year-fha": 6.709,
+          "30-year-jumbo": 6.951
+        },
+        "california": {
+          "30-year-fixed": 6.566,
+          "20-year-fixed": 5.979,
+          "15-year-fixed": 5.758,
+          "30-year-fha": 6.355,
+          "30-year-jumbo": 6.712
+        },
+        "texas": {
+          "30-year-fixed": 6.749,
+          "20-year-fixed": 6.21,
+          "15-year-fixed": 5.96,
+          "30-year-fha": 6.447,
+          "30-year-jumbo": 6.776
+        },
+        "florida": {
+          "30-year-fixed": 6.847,
+          "20-year-fixed": 6.285,
+          "15-year-fixed": 6.042,
+          "30-year-fha": 6.558,
+          "30-year-jumbo": 7.065
+        },
+        "colorado": {
+          "30-year-fixed": 6.741,
+          "20-year-fixed": 6.211,
+          "15-year-fixed": 5.736,
+          "30-year-fha": 6.581,
+          "30-year-jumbo": 6.885
+        }
+      }
+    },
+    {
+      "date": "2026-07-16",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.851,
+          "20-year-fixed": 6.094,
+          "15-year-fixed": 5.873,
+          "30-year-fha": 6.51,
+          "30-year-jumbo": 6.897
+        },
+        "idaho": {
+          "30-year-fixed": 6.791,
+          "20-year-fixed": 6.213,
+          "15-year-fixed": 5.895,
+          "30-year-fha": 6.681,
+          "30-year-jumbo": 6.86
+        },
+        "nevada": {
+          "30-year-fixed": 6.994,
+          "20-year-fixed": 6.386,
+          "15-year-fixed": 6.037,
+          "30-year-fha": 6.705,
+          "30-year-jumbo": 6.919
+        },
+        "california": {
+          "30-year-fixed": 6.661,
+          "20-year-fixed": 6.014,
+          "15-year-fixed": 5.886,
+          "30-year-fha": 6.451,
+          "30-year-jumbo": 6.812
+        },
+        "texas": {
+          "30-year-fixed": 6.719,
+          "20-year-fixed": 6.078,
+          "15-year-fixed": 5.809,
+          "30-year-fha": 6.581,
+          "30-year-jumbo": 6.86
+        },
+        "florida": {
+          "30-year-fixed": 6.793,
+          "20-year-fixed": 6.174,
+          "15-year-fixed": 6.058,
+          "30-year-fha": 6.538,
+          "30-year-jumbo": 6.892
+        },
+        "colorado": {
+          "30-year-fixed": 6.674,
+          "20-year-fixed": 5.988,
+          "15-year-fixed": 5.731,
+          "30-year-fha": 6.415,
+          "30-year-jumbo": 6.864
+        }
+      }
+    },
+    {
+      "date": "2026-07-17",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.75,
+          "20-year-fixed": 6.125,
+          "15-year-fixed": 5.875,
+          "30-year-fha": 6.5,
+          "30-year-jumbo": 6.875
+        },
+        "idaho": {
+          "30-year-fixed": 6.825,
+          "20-year-fixed": 6.2,
+          "15-year-fixed": 5.95,
+          "30-year-fha": 6.575,
+          "30-year-jumbo": 6.95
+        },
+        "nevada": {
+          "30-year-fixed": 6.9,
+          "20-year-fixed": 6.275,
+          "15-year-fixed": 6.025,
+          "30-year-fha": 6.65,
+          "30-year-jumbo": 7.025
+        },
+        "california": {
+          "30-year-fixed": 6.65,
+          "20-year-fixed": 6.025,
+          "15-year-fixed": 5.775,
+          "30-year-fha": 6.4,
+          "30-year-jumbo": 6.775
+        },
+        "texas": {
+          "30-year-fixed": 6.775,
+          "20-year-fixed": 6.15,
+          "15-year-fixed": 5.9,
+          "30-year-fha": 6.525,
+          "30-year-jumbo": 6.9
+        },
+        "florida": {
+          "30-year-fixed": 6.825,
+          "20-year-fixed": 6.2,
+          "15-year-fixed": 5.95,
+          "30-year-fha": 6.575,
+          "30-year-jumbo": 6.95
+        },
+        "colorado": {
+          "30-year-fixed": 6.725,
+          "20-year-fixed": 6.1,
+          "15-year-fixed": 5.85,
+          "30-year-fha": 6.475,
+          "30-year-jumbo": 6.85
+        }
+      }
+    },
+    {
+      "date": "2026-07-18",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.812,
+          "20-year-fixed": 6.243,
+          "15-year-fixed": 5.984,
+          "30-year-fha": 6.497,
+          "30-year-jumbo": 6.853
+        },
+        "idaho": {
+          "30-year-fixed": 6.892,
+          "20-year-fixed": 6.294,
+          "15-year-fixed": 5.837,
+          "30-year-fha": 6.638,
+          "30-year-jumbo": 6.915
+        },
+        "nevada": {
+          "30-year-fixed": 6.966,
+          "20-year-fixed": 6.223,
+          "15-year-fixed": 6.067,
+          "30-year-fha": 6.716,
+          "30-year-jumbo": 6.972
+        },
+        "california": {
+          "30-year-fixed": 6.693,
+          "20-year-fixed": 6.026,
+          "15-year-fixed": 5.658,
+          "30-year-fha": 6.517,
+          "30-year-jumbo": 6.842
+        },
+        "texas": {
+          "30-year-fixed": 6.661,
+          "20-year-fixed": 6.057,
+          "15-year-fixed": 5.824,
+          "30-year-fha": 6.634,
+          "30-year-jumbo": 6.93
+        },
+        "florida": {
+          "30-year-fixed": 6.845,
+          "20-year-fixed": 6.122,
+          "15-year-fixed": 5.905,
+          "30-year-fha": 6.537,
+          "30-year-jumbo": 6.825
+        },
+        "colorado": {
+          "30-year-fixed": 6.786,
+          "20-year-fixed": 6.066,
+          "15-year-fixed": 5.868,
+          "30-year-fha": 6.579,
+          "30-year-jumbo": 6.92
+        }
+      }
+    },
+    {
+      "date": "2026-07-19",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.769,
+          "20-year-fixed": 6.13,
+          "15-year-fixed": 5.914,
+          "30-year-fha": 6.434,
+          "30-year-jumbo": 6.996
+        },
+        "idaho": {
+          "30-year-fixed": 6.928,
+          "20-year-fixed": 6.304,
+          "15-year-fixed": 5.861,
+          "30-year-fha": 6.546,
+          "30-year-jumbo": 6.859
+        },
+        "nevada": {
+          "30-year-fixed": 6.95,
+          "20-year-fixed": 6.153,
+          "15-year-fixed": 6.031,
+          "30-year-fha": 6.688,
+          "30-year-jumbo": 6.923
+        },
+        "california": {
+          "30-year-fixed": 6.698,
+          "20-year-fixed": 5.94,
+          "15-year-fixed": 5.799,
+          "30-year-fha": 6.445,
+          "30-year-jumbo": 6.707
+        },
+        "texas": {
+          "30-year-fixed": 6.826,
+          "20-year-fixed": 6.16,
+          "15-year-fixed": 6.006,
+          "30-year-fha": 6.494,
+          "30-year-jumbo": 6.899
+        },
+        "florida": {
+          "30-year-fixed": 6.788,
+          "20-year-fixed": 6.174,
+          "15-year-fixed": 5.996,
+          "30-year-fha": 6.584,
+          "30-year-jumbo": 6.966
+        },
+        "colorado": {
+          "30-year-fixed": 6.753,
+          "20-year-fixed": 6.203,
+          "15-year-fixed": 5.896,
+          "30-year-fha": 6.376,
+          "30-year-jumbo": 6.916
+        }
+      }
+    },
+    {
+      "date": "2026-07-20",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.803,
+          "20-year-fixed": 6.056,
+          "15-year-fixed": 5.943,
+          "30-year-fha": 6.55,
+          "30-year-jumbo": 6.882
+        },
+        "idaho": {
+          "30-year-fixed": 6.738,
+          "20-year-fixed": 6.153,
+          "15-year-fixed": 6.056,
+          "30-year-fha": 6.519,
+          "30-year-jumbo": 7.055
+        },
+        "nevada": {
+          "30-year-fixed": 7.008,
+          "20-year-fixed": 6.281,
+          "15-year-fixed": 6.041,
+          "30-year-fha": 6.761,
+          "30-year-jumbo": 7.022
+        },
+        "california": {
+          "30-year-fixed": 6.699,
+          "20-year-fixed": 5.955,
+          "15-year-fixed": 5.712,
+          "30-year-fha": 6.339,
+          "30-year-jumbo": 6.687
+        },
+        "texas": {
+          "30-year-fixed": 6.804,
+          "20-year-fixed": 6.159,
+          "15-year-fixed": 5.827,
+          "30-year-fha": 6.61,
+          "30-year-jumbo": 6.895
+        },
+        "florida": {
+          "30-year-fixed": 6.879,
+          "20-year-fixed": 6.114,
+          "15-year-fixed": 5.828,
+          "30-year-fha": 6.505,
+          "30-year-jumbo": 6.883
+        },
+        "colorado": {
+          "30-year-fixed": 6.778,
+          "20-year-fixed": 6.182,
+          "15-year-fixed": 5.86,
+          "30-year-fha": 6.456,
+          "30-year-jumbo": 6.771
+        }
+      }
+    },
+    {
+      "date": "2026-07-21",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.747,
+          "20-year-fixed": 6.088,
+          "15-year-fixed": 5.916,
+          "30-year-fha": 6.402,
+          "30-year-jumbo": 6.967
+        },
+        "idaho": {
+          "30-year-fixed": 6.854,
+          "20-year-fixed": 6.189,
+          "15-year-fixed": 5.864,
+          "30-year-fha": 6.548,
+          "30-year-jumbo": 6.857
+        },
+        "nevada": {
+          "30-year-fixed": 6.81,
+          "20-year-fixed": 6.396,
+          "15-year-fixed": 6.148,
+          "30-year-fha": 6.574,
+          "30-year-jumbo": 6.902
+        },
+        "california": {
+          "30-year-fixed": 6.546,
+          "20-year-fixed": 6.061,
+          "15-year-fixed": 5.701,
+          "30-year-fha": 6.487,
+          "30-year-jumbo": 6.66
+        },
+        "texas": {
+          "30-year-fixed": 6.748,
+          "20-year-fixed": 6.063,
+          "15-year-fixed": 6.006,
+          "30-year-fha": 6.488,
+          "30-year-jumbo": 6.996
+        },
+        "florida": {
+          "30-year-fixed": 6.913,
+          "20-year-fixed": 6.247,
+          "15-year-fixed": 5.907,
+          "30-year-fha": 6.47,
+          "30-year-jumbo": 6.988
+        },
+        "colorado": {
+          "30-year-fixed": 6.82,
+          "20-year-fixed": 6.116,
+          "15-year-fixed": 5.786,
+          "30-year-fha": 6.465,
           "30-year-jumbo": 6.757
         }
       }
     },
     {
-      "date": "2026-04-23",
+      "date": "2026-07-22",
       "states": {
         "utah": {
-          "30-year-fixed": 6.719,
-          "20-year-fixed": 6.059,
-          "15-year-fixed": 5.833,
-          "30-year-fha": 6.395,
+          "30-year-fixed": 6.833,
+          "20-year-fixed": 6.014,
+          "15-year-fixed": 5.785,
+          "30-year-fha": 6.566,
+          "30-year-jumbo": 6.831
+        },
+        "idaho": {
+          "30-year-fixed": 6.84,
+          "20-year-fixed": 6.323,
+          "15-year-fixed": 6.035,
+          "30-year-fha": 6.651,
+          "30-year-jumbo": 6.895
+        },
+        "nevada": {
+          "30-year-fixed": 6.822,
+          "20-year-fixed": 6.306,
+          "15-year-fixed": 6.128,
+          "30-year-fha": 6.693,
+          "30-year-jumbo": 6.915
+        },
+        "california": {
+          "30-year-fixed": 6.756,
+          "20-year-fixed": 6.01,
+          "15-year-fixed": 5.896,
+          "30-year-fha": 6.362,
+          "30-year-jumbo": 6.658
+        },
+        "texas": {
+          "30-year-fixed": 6.738,
+          "20-year-fixed": 6.09,
+          "15-year-fixed": 5.953,
+          "30-year-fha": 6.508,
+          "30-year-jumbo": 6.911
+        },
+        "florida": {
+          "30-year-fixed": 6.754,
+          "20-year-fixed": 6.128,
+          "15-year-fixed": 6.04,
+          "30-year-fha": 6.54,
+          "30-year-jumbo": 6.829
+        },
+        "colorado": {
+          "30-year-fixed": 6.746,
+          "20-year-fixed": 6.116,
+          "15-year-fixed": 5.818,
+          "30-year-fha": 6.388,
+          "30-year-jumbo": 6.761
+        }
+      }
+    },
+    {
+      "date": "2026-07-23",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.729,
+          "20-year-fixed": 6.199,
+          "15-year-fixed": 5.995,
+          "30-year-fha": 6.582,
+          "30-year-jumbo": 6.991
+        },
+        "idaho": {
+          "30-year-fixed": 6.752,
+          "20-year-fixed": 6.274,
+          "15-year-fixed": 5.826,
+          "30-year-fha": 6.655,
+          "30-year-jumbo": 6.826
+        },
+        "nevada": {
+          "30-year-fixed": 6.919,
+          "20-year-fixed": 6.259,
+          "15-year-fixed": 5.998,
+          "30-year-fha": 6.753,
+          "30-year-jumbo": 7.068
+        },
+        "california": {
+          "30-year-fixed": 6.659,
+          "20-year-fixed": 5.919,
+          "15-year-fixed": 5.832,
+          "30-year-fha": 6.475,
+          "30-year-jumbo": 6.835
+        },
+        "texas": {
+          "30-year-fixed": 6.746,
+          "20-year-fixed": 6.226,
+          "15-year-fixed": 5.902,
+          "30-year-fha": 6.492,
+          "30-year-jumbo": 7.023
+        },
+        "florida": {
+          "30-year-fixed": 6.849,
+          "20-year-fixed": 6.084,
+          "15-year-fixed": 5.826,
+          "30-year-fha": 6.543,
+          "30-year-jumbo": 6.862
+        },
+        "colorado": {
+          "30-year-fixed": 6.828,
+          "20-year-fixed": 6.169,
+          "15-year-fixed": 5.966,
+          "30-year-fha": 6.532,
+          "30-year-jumbo": 6.868
+        }
+      }
+    },
+    {
+      "date": "2026-07-24",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.75,
+          "20-year-fixed": 6.125,
+          "15-year-fixed": 5.875,
+          "30-year-fha": 6.5,
+          "30-year-jumbo": 6.875
+        },
+        "idaho": {
+          "30-year-fixed": 6.825,
+          "20-year-fixed": 6.2,
+          "15-year-fixed": 5.95,
+          "30-year-fha": 6.575,
+          "30-year-jumbo": 6.95
+        },
+        "nevada": {
+          "30-year-fixed": 6.9,
+          "20-year-fixed": 6.275,
+          "15-year-fixed": 6.025,
+          "30-year-fha": 6.65,
+          "30-year-jumbo": 7.025
+        },
+        "california": {
+          "30-year-fixed": 6.65,
+          "20-year-fixed": 6.025,
+          "15-year-fixed": 5.775,
+          "30-year-fha": 6.4,
+          "30-year-jumbo": 6.775
+        },
+        "texas": {
+          "30-year-fixed": 6.775,
+          "20-year-fixed": 6.15,
+          "15-year-fixed": 5.9,
+          "30-year-fha": 6.525,
+          "30-year-jumbo": 6.9
+        },
+        "florida": {
+          "30-year-fixed": 6.825,
+          "20-year-fixed": 6.2,
+          "15-year-fixed": 5.95,
+          "30-year-fha": 6.575,
+          "30-year-jumbo": 6.95
+        },
+        "colorado": {
+          "30-year-fixed": 6.725,
+          "20-year-fixed": 6.1,
+          "15-year-fixed": 5.85,
+          "30-year-fha": 6.475,
+          "30-year-jumbo": 6.85
+        }
+      }
+    },
+    {
+      "date": "2026-07-25",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.708,
+          "20-year-fixed": 6.183,
+          "15-year-fixed": 5.988,
+          "30-year-fha": 6.457,
+          "30-year-jumbo": 6.91
+        },
+        "idaho": {
+          "30-year-fixed": 6.789,
+          "20-year-fixed": 6.164,
+          "15-year-fixed": 5.862,
+          "30-year-fha": 6.559,
+          "30-year-jumbo": 7.01
+        },
+        "nevada": {
+          "30-year-fixed": 7.017,
+          "20-year-fixed": 6.275,
+          "15-year-fixed": 6.072,
+          "30-year-fha": 6.66,
+          "30-year-jumbo": 7.122
+        },
+        "california": {
+          "30-year-fixed": 6.721,
+          "20-year-fixed": 6.085,
+          "15-year-fixed": 5.749,
+          "30-year-fha": 6.349,
+          "30-year-jumbo": 6.898
+        },
+        "texas": {
+          "30-year-fixed": 6.737,
+          "20-year-fixed": 6.213,
+          "15-year-fixed": 5.928,
+          "30-year-fha": 6.564,
+          "30-year-jumbo": 7.024
+        },
+        "florida": {
+          "30-year-fixed": 6.866,
+          "20-year-fixed": 6.221,
+          "15-year-fixed": 5.984,
+          "30-year-fha": 6.512,
+          "30-year-jumbo": 7.013
+        },
+        "colorado": {
+          "30-year-fixed": 6.645,
+          "20-year-fixed": 6.214,
+          "15-year-fixed": 5.786,
+          "30-year-fha": 6.471,
+          "30-year-jumbo": 6.725
+        }
+      }
+    },
+    {
+      "date": "2026-07-26",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.749,
+          "20-year-fixed": 6.032,
+          "15-year-fixed": 5.92,
+          "30-year-fha": 6.561,
+          "30-year-jumbo": 6.999
+        },
+        "idaho": {
+          "30-year-fixed": 6.759,
+          "20-year-fixed": 6.25,
+          "15-year-fixed": 5.831,
+          "30-year-fha": 6.46,
+          "30-year-jumbo": 6.866
+        },
+        "nevada": {
+          "30-year-fixed": 6.797,
+          "20-year-fixed": 6.341,
+          "15-year-fixed": 6.081,
+          "30-year-fha": 6.601,
+          "30-year-jumbo": 7.058
+        },
+        "california": {
+          "30-year-fixed": 6.72,
+          "20-year-fixed": 6.026,
+          "15-year-fixed": 5.659,
+          "30-year-fha": 6.322,
+          "30-year-jumbo": 6.746
+        },
+        "texas": {
+          "30-year-fixed": 6.715,
+          "20-year-fixed": 6.223,
+          "15-year-fixed": 5.89,
+          "30-year-fha": 6.414,
+          "30-year-jumbo": 6.87
+        },
+        "florida": {
+          "30-year-fixed": 6.771,
+          "20-year-fixed": 6.199,
+          "15-year-fixed": 5.991,
+          "30-year-fha": 6.533,
+          "30-year-jumbo": 6.849
+        },
+        "colorado": {
+          "30-year-fixed": 6.657,
+          "20-year-fixed": 6.079,
+          "15-year-fixed": 5.91,
+          "30-year-fha": 6.407,
+          "30-year-jumbo": 6.922
+        }
+      }
+    },
+    {
+      "date": "2026-07-27",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.704,
+          "20-year-fixed": 6.227,
+          "15-year-fixed": 5.987,
+          "30-year-fha": 6.524,
+          "30-year-jumbo": 6.782
+        },
+        "idaho": {
+          "30-year-fixed": 6.704,
+          "20-year-fixed": 6.129,
+          "15-year-fixed": 5.893,
+          "30-year-fha": 6.519,
+          "30-year-jumbo": 7.045
+        },
+        "nevada": {
+          "30-year-fixed": 6.916,
+          "20-year-fixed": 6.179,
+          "15-year-fixed": 6.142,
+          "30-year-fha": 6.634,
+          "30-year-jumbo": 7.095
+        },
+        "california": {
+          "30-year-fixed": 6.623,
+          "20-year-fixed": 6.063,
+          "15-year-fixed": 5.84,
+          "30-year-fha": 6.466,
+          "30-year-jumbo": 6.717
+        },
+        "texas": {
+          "30-year-fixed": 6.813,
+          "20-year-fixed": 6.075,
+          "15-year-fixed": 5.778,
+          "30-year-fha": 6.503,
+          "30-year-jumbo": 6.969
+        },
+        "florida": {
+          "30-year-fixed": 6.95,
+          "20-year-fixed": 6.268,
+          "15-year-fixed": 5.868,
+          "30-year-fha": 6.473,
+          "30-year-jumbo": 6.871
+        },
+        "colorado": {
+          "30-year-fixed": 6.612,
+          "20-year-fixed": 6.215,
+          "15-year-fixed": 5.805,
+          "30-year-fha": 6.572,
+          "30-year-jumbo": 6.967
+        }
+      }
+    },
+    {
+      "date": "2026-07-28",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.739,
+          "20-year-fixed": 6.096,
+          "15-year-fixed": 5.921,
+          "30-year-fha": 6.418,
+          "30-year-jumbo": 6.875
+        },
+        "idaho": {
+          "30-year-fixed": 6.705,
+          "20-year-fixed": 6.107,
+          "15-year-fixed": 5.95,
+          "30-year-fha": 6.516,
+          "30-year-jumbo": 6.909
+        },
+        "nevada": {
+          "30-year-fixed": 7.002,
+          "20-year-fixed": 6.265,
+          "15-year-fixed": 5.958,
+          "30-year-fha": 6.694,
+          "30-year-jumbo": 6.96
+        },
+        "california": {
+          "30-year-fixed": 6.617,
+          "20-year-fixed": 5.94,
+          "15-year-fixed": 5.842,
+          "30-year-fha": 6.516,
+          "30-year-jumbo": 6.66
+        },
+        "texas": {
+          "30-year-fixed": 6.743,
+          "20-year-fixed": 6.158,
+          "15-year-fixed": 5.869,
+          "30-year-fha": 6.56,
+          "30-year-jumbo": 6.937
+        },
+        "florida": {
+          "30-year-fixed": 6.923,
+          "20-year-fixed": 6.116,
+          "15-year-fixed": 5.871,
+          "30-year-fha": 6.68,
+          "30-year-jumbo": 6.953
+        },
+        "colorado": {
+          "30-year-fixed": 6.726,
+          "20-year-fixed": 6.189,
+          "15-year-fixed": 5.882,
+          "30-year-fha": 6.449,
+          "30-year-jumbo": 6.782
+        }
+      }
+    },
+    {
+      "date": "2026-07-29",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.729,
+          "20-year-fixed": 6.071,
+          "15-year-fixed": 5.984,
+          "30-year-fha": 6.416,
+          "30-year-jumbo": 6.784
+        },
+        "idaho": {
+          "30-year-fixed": 6.771,
+          "20-year-fixed": 6.264,
+          "15-year-fixed": 5.89,
+          "30-year-fha": 6.562,
+          "30-year-jumbo": 7.058
+        },
+        "nevada": {
+          "30-year-fixed": 6.779,
+          "20-year-fixed": 6.391,
+          "15-year-fixed": 6.054,
+          "30-year-fha": 6.675,
+          "30-year-jumbo": 7.019
+        },
+        "california": {
+          "30-year-fixed": 6.746,
+          "20-year-fixed": 5.966,
+          "15-year-fixed": 5.661,
+          "30-year-fha": 6.506,
+          "30-year-jumbo": 6.703
+        },
+        "texas": {
+          "30-year-fixed": 6.714,
+          "20-year-fixed": 6.253,
+          "15-year-fixed": 5.777,
+          "30-year-fha": 6.545,
+          "30-year-jumbo": 6.843
+        },
+        "florida": {
+          "30-year-fixed": 6.867,
+          "20-year-fixed": 6.155,
+          "15-year-fixed": 6.042,
+          "30-year-fha": 6.691,
+          "30-year-jumbo": 6.848
+        },
+        "colorado": {
+          "30-year-fixed": 6.695,
+          "20-year-fixed": 6.007,
+          "15-year-fixed": 5.971,
+          "30-year-fha": 6.52,
+          "30-year-jumbo": 6.732
+        }
+      }
+    },
+    {
+      "date": "2026-07-30",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.75,
+          "20-year-fixed": 6.125,
+          "15-year-fixed": 5.875,
+          "30-year-fha": 6.5,
+          "30-year-jumbo": 6.875
+        },
+        "idaho": {
+          "30-year-fixed": 6.825,
+          "20-year-fixed": 6.2,
+          "15-year-fixed": 5.95,
+          "30-year-fha": 6.575,
+          "30-year-jumbo": 6.95
+        },
+        "nevada": {
+          "30-year-fixed": 6.9,
+          "20-year-fixed": 6.275,
+          "15-year-fixed": 6.025,
+          "30-year-fha": 6.65,
+          "30-year-jumbo": 7.025
+        },
+        "california": {
+          "30-year-fixed": 6.65,
+          "20-year-fixed": 6.025,
+          "15-year-fixed": 5.775,
+          "30-year-fha": 6.4,
+          "30-year-jumbo": 6.775
+        },
+        "texas": {
+          "30-year-fixed": 6.775,
+          "20-year-fixed": 6.15,
+          "15-year-fixed": 5.9,
+          "30-year-fha": 6.525,
+          "30-year-jumbo": 6.9
+        },
+        "florida": {
+          "30-year-fixed": 6.825,
+          "20-year-fixed": 6.2,
+          "15-year-fixed": 5.95,
+          "30-year-fha": 6.575,
+          "30-year-jumbo": 6.95
+        },
+        "colorado": {
+          "30-year-fixed": 6.725,
+          "20-year-fixed": 6.1,
+          "15-year-fixed": 5.85,
+          "30-year-fha": 6.475,
+          "30-year-jumbo": 6.85
+        }
+      }
+    },
+    {
+      "date": "2026-07-31",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.807,
+          "20-year-fixed": 6.208,
+          "15-year-fixed": 5.979,
+          "30-year-fha": 6.483,
+          "30-year-jumbo": 6.982
+        },
+        "idaho": {
+          "30-year-fixed": 6.783,
+          "20-year-fixed": 6.31,
+          "15-year-fixed": 5.894,
+          "30-year-fha": 6.63,
+          "30-year-jumbo": 7.03
+        },
+        "nevada": {
+          "30-year-fixed": 6.949,
+          "20-year-fixed": 6.227,
+          "15-year-fixed": 6.025,
+          "30-year-fha": 6.665,
+          "30-year-jumbo": 7.117
+        },
+        "california": {
+          "30-year-fixed": 6.572,
+          "20-year-fixed": 6.069,
+          "15-year-fixed": 5.816,
+          "30-year-fha": 6.447,
+          "30-year-jumbo": 6.873
+        },
+        "texas": {
+          "30-year-fixed": 6.692,
+          "20-year-fixed": 6.174,
+          "15-year-fixed": 5.888,
+          "30-year-fha": 6.427,
+          "30-year-jumbo": 6.835
+        },
+        "florida": {
+          "30-year-fixed": 6.793,
+          "20-year-fixed": 6.277,
+          "15-year-fixed": 5.828,
+          "30-year-fha": 6.482,
+          "30-year-jumbo": 6.878
+        },
+        "colorado": {
+          "30-year-fixed": 6.785,
+          "20-year-fixed": 6.081,
+          "15-year-fixed": 5.823,
+          "30-year-fha": 6.424,
+          "30-year-jumbo": 6.747
+        }
+      }
+    },
+    {
+      "date": "2026-08-01",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.648,
+          "20-year-fixed": 6.114,
+          "15-year-fixed": 5.869,
+          "30-year-fha": 6.456,
+          "30-year-jumbo": 6.97
+        },
+        "idaho": {
+          "30-year-fixed": 6.77,
+          "20-year-fixed": 6.3,
+          "15-year-fixed": 5.864,
+          "30-year-fha": 6.662,
+          "30-year-jumbo": 6.886
+        },
+        "nevada": {
+          "30-year-fixed": 6.937,
+          "20-year-fixed": 6.354,
+          "15-year-fixed": 5.992,
+          "30-year-fha": 6.675,
+          "30-year-jumbo": 6.928
+        },
+        "california": {
+          "30-year-fixed": 6.53,
+          "20-year-fixed": 5.911,
+          "15-year-fixed": 5.711,
+          "30-year-fha": 6.443,
+          "30-year-jumbo": 6.758
+        },
+        "texas": {
+          "30-year-fixed": 6.871,
+          "20-year-fixed": 6.155,
+          "15-year-fixed": 5.785,
+          "30-year-fha": 6.425,
+          "30-year-jumbo": 6.833
+        },
+        "florida": {
+          "30-year-fixed": 6.803,
+          "20-year-fixed": 6.188,
+          "15-year-fixed": 5.964,
+          "30-year-fha": 6.469,
+          "30-year-jumbo": 6.971
+        },
+        "colorado": {
+          "30-year-fixed": 6.802,
+          "20-year-fixed": 6.042,
+          "15-year-fixed": 5.858,
+          "30-year-fha": 6.487,
+          "30-year-jumbo": 6.901
+        }
+      }
+    },
+    {
+      "date": "2026-08-02",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.668,
+          "20-year-fixed": 6.043,
+          "15-year-fixed": 5.768,
+          "30-year-fha": 6.484,
+          "30-year-jumbo": 6.944
+        },
+        "idaho": {
+          "30-year-fixed": 6.918,
+          "20-year-fixed": 6.121,
+          "15-year-fixed": 5.85,
+          "30-year-fha": 6.619,
+          "30-year-jumbo": 6.934
+        },
+        "nevada": {
+          "30-year-fixed": 6.993,
+          "20-year-fixed": 6.347,
+          "15-year-fixed": 5.902,
+          "30-year-fha": 6.633,
+          "30-year-jumbo": 7.024
+        },
+        "california": {
+          "30-year-fixed": 6.745,
+          "20-year-fixed": 6.098,
+          "15-year-fixed": 5.841,
+          "30-year-fha": 6.33,
+          "30-year-jumbo": 6.771
+        },
+        "texas": {
+          "30-year-fixed": 6.812,
+          "20-year-fixed": 6.268,
+          "15-year-fixed": 6.008,
+          "30-year-fha": 6.632,
+          "30-year-jumbo": 6.899
+        },
+        "florida": {
+          "30-year-fixed": 6.754,
+          "20-year-fixed": 6.088,
+          "15-year-fixed": 5.949,
+          "30-year-fha": 6.615,
+          "30-year-jumbo": 6.921
+        },
+        "colorado": {
+          "30-year-fixed": 6.67,
+          "20-year-fixed": 6.068,
+          "15-year-fixed": 5.952,
+          "30-year-fha": 6.44,
+          "30-year-jumbo": 6.892
+        }
+      }
+    },
+    {
+      "date": "2026-08-03",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.853,
+          "20-year-fixed": 6.218,
+          "15-year-fixed": 5.881,
+          "30-year-fha": 6.551,
+          "30-year-jumbo": 6.989
+        },
+        "idaho": {
+          "30-year-fixed": 6.878,
+          "20-year-fixed": 6.208,
+          "15-year-fixed": 6.064,
+          "30-year-fha": 6.635,
+          "30-year-jumbo": 6.953
+        },
+        "nevada": {
+          "30-year-fixed": 6.958,
+          "20-year-fixed": 6.37,
+          "15-year-fixed": 5.931,
+          "30-year-fha": 6.768,
+          "30-year-jumbo": 6.903
+        },
+        "california": {
+          "30-year-fixed": 6.656,
+          "20-year-fixed": 5.915,
+          "15-year-fixed": 5.728,
+          "30-year-fha": 6.289,
+          "30-year-jumbo": 6.708
+        },
+        "texas": {
+          "30-year-fixed": 6.746,
+          "20-year-fixed": 6.193,
+          "15-year-fixed": 6.01,
+          "30-year-fha": 6.49,
+          "30-year-jumbo": 6.882
+        },
+        "florida": {
+          "30-year-fixed": 6.929,
+          "20-year-fixed": 6.262,
+          "15-year-fixed": 5.978,
+          "30-year-fha": 6.498,
+          "30-year-jumbo": 6.879
+        },
+        "colorado": {
+          "30-year-fixed": 6.77,
+          "20-year-fixed": 6.214,
+          "15-year-fixed": 5.778,
+          "30-year-fha": 6.591,
+          "30-year-jumbo": 6.843
+        }
+      }
+    },
+    {
+      "date": "2026-08-04",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.865,
+          "20-year-fixed": 6.015,
+          "15-year-fixed": 5.842,
+          "30-year-fha": 6.524,
+          "30-year-jumbo": 6.972
+        },
+        "idaho": {
+          "30-year-fixed": 6.728,
+          "20-year-fixed": 6.313,
+          "15-year-fixed": 5.905,
+          "30-year-fha": 6.691,
+          "30-year-jumbo": 6.846
+        },
+        "nevada": {
+          "30-year-fixed": 6.98,
+          "20-year-fixed": 6.37,
+          "15-year-fixed": 5.901,
+          "30-year-fha": 6.769,
+          "30-year-jumbo": 6.952
+        },
+        "california": {
+          "30-year-fixed": 6.583,
+          "20-year-fixed": 6.094,
+          "15-year-fixed": 5.813,
+          "30-year-fha": 6.487,
+          "30-year-jumbo": 6.697
+        },
+        "texas": {
+          "30-year-fixed": 6.737,
+          "20-year-fixed": 6.114,
+          "15-year-fixed": 5.997,
+          "30-year-fha": 6.426,
+          "30-year-jumbo": 6.988
+        },
+        "florida": {
+          "30-year-fixed": 6.767,
+          "20-year-fixed": 6.139,
+          "15-year-fixed": 6.027,
+          "30-year-fha": 6.594,
+          "30-year-jumbo": 6.972
+        },
+        "colorado": {
+          "30-year-fixed": 6.723,
+          "20-year-fixed": 6.105,
+          "15-year-fixed": 5.868,
+          "30-year-fha": 6.44,
+          "30-year-jumbo": 6.875
+        }
+      }
+    },
+    {
+      "date": "2026-08-05",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.854,
+          "20-year-fixed": 6.224,
+          "15-year-fixed": 5.828,
+          "30-year-fha": 6.402,
           "30-year-jumbo": 6.983
         },
         "idaho": {
-          "30-year-fixed": 6.901,
-          "20-year-fixed": 6.322,
-          "15-year-fixed": 5.96,
-          "30-year-fha": 6.665,
-          "30-year-jumbo": 7.014
+          "30-year-fixed": 6.906,
+          "20-year-fixed": 6.102,
+          "15-year-fixed": 5.901,
+          "30-year-fha": 6.652,
+          "30-year-jumbo": 7.038
         },
         "nevada": {
-          "30-year-fixed": 6.932,
-          "20-year-fixed": 6.19,
-          "15-year-fixed": 5.989,
-          "30-year-fha": 6.595,
-          "30-year-jumbo": 6.913
+          "30-year-fixed": 6.799,
+          "20-year-fixed": 6.382,
+          "15-year-fixed": 5.918,
+          "30-year-fha": 6.581,
+          "30-year-jumbo": 7.134
         },
         "california": {
-          "30-year-fixed": 6.586,
-          "20-year-fixed": 6.01,
-          "15-year-fixed": 5.82,
-          "30-year-fha": 6.405,
-          "30-year-jumbo": 6.661
+          "30-year-fixed": 6.714,
+          "20-year-fixed": 5.969,
+          "15-year-fixed": 5.787,
+          "30-year-fha": 6.296,
+          "30-year-jumbo": 6.801
         },
         "texas": {
-          "30-year-fixed": 6.747,
-          "20-year-fixed": 6.097,
-          "15-year-fixed": 5.907,
-          "30-year-fha": 6.458,
-          "30-year-jumbo": 6.838
+          "30-year-fixed": 6.671,
+          "20-year-fixed": 6.219,
+          "15-year-fixed": 5.996,
+          "30-year-fha": 6.501,
+          "30-year-jumbo": 6.864
         },
         "florida": {
-          "30-year-fixed": 6.844,
-          "20-year-fixed": 6.287,
-          "15-year-fixed": 5.846,
-          "30-year-fha": 6.552,
-          "30-year-jumbo": 6.909
+          "30-year-fixed": 6.883,
+          "20-year-fixed": 6.104,
+          "15-year-fixed": 5.927,
+          "30-year-fha": 6.689,
+          "30-year-jumbo": 6.971
         },
         "colorado": {
-          "30-year-fixed": 6.736,
-          "20-year-fixed": 5.997,
-          "15-year-fixed": 5.851,
+          "30-year-fixed": 6.685,
+          "20-year-fixed": 6.12,
+          "15-year-fixed": 5.81,
+          "30-year-fha": 6.563,
+          "30-year-jumbo": 6.969
+        }
+      }
+    },
+    {
+      "date": "2026-08-06",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.745,
+          "20-year-fixed": 6.001,
+          "15-year-fixed": 5.804,
+          "30-year-fha": 6.612,
+          "30-year-jumbo": 6.884
+        },
+        "idaho": {
+          "30-year-fixed": 6.79,
+          "20-year-fixed": 6.163,
+          "15-year-fixed": 5.928,
+          "30-year-fha": 6.452,
+          "30-year-jumbo": 6.963
+        },
+        "nevada": {
+          "30-year-fixed": 6.828,
+          "20-year-fixed": 6.291,
+          "15-year-fixed": 6.073,
+          "30-year-fha": 6.564,
+          "30-year-jumbo": 7.071
+        },
+        "california": {
+          "30-year-fixed": 6.603,
+          "20-year-fixed": 6.076,
+          "15-year-fixed": 5.892,
+          "30-year-fha": 6.312,
+          "30-year-jumbo": 6.826
+        },
+        "texas": {
+          "30-year-fixed": 6.822,
+          "20-year-fixed": 6.094,
+          "15-year-fixed": 5.935,
+          "30-year-fha": 6.476,
+          "30-year-jumbo": 6.822
+        },
+        "florida": {
+          "30-year-fixed": 6.746,
+          "20-year-fixed": 6.249,
+          "15-year-fixed": 5.844,
+          "30-year-fha": 6.526,
+          "30-year-jumbo": 6.841
+        },
+        "colorado": {
+          "30-year-fixed": 6.789,
+          "20-year-fixed": 6.065,
+          "15-year-fixed": 5.77,
+          "30-year-fha": 6.372,
+          "30-year-jumbo": 6.748
+        }
+      }
+    },
+    {
+      "date": "2026-08-07",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.829,
+          "20-year-fixed": 6.247,
+          "15-year-fixed": 5.779,
+          "30-year-fha": 6.454,
+          "30-year-jumbo": 6.751
+        },
+        "idaho": {
+          "30-year-fixed": 6.713,
+          "20-year-fixed": 6.186,
+          "15-year-fixed": 5.881,
+          "30-year-fha": 6.551,
+          "30-year-jumbo": 6.929
+        },
+        "nevada": {
+          "30-year-fixed": 7.013,
+          "20-year-fixed": 6.341,
+          "15-year-fixed": 6.145,
+          "30-year-fha": 6.632,
+          "30-year-jumbo": 7.098
+        },
+        "california": {
+          "30-year-fixed": 6.657,
+          "20-year-fixed": 6.035,
+          "15-year-fixed": 5.805,
+          "30-year-fha": 6.498,
+          "30-year-jumbo": 6.721
+        },
+        "texas": {
+          "30-year-fixed": 6.794,
+          "20-year-fixed": 6.188,
+          "15-year-fixed": 5.783,
+          "30-year-fha": 6.51,
+          "30-year-jumbo": 6.871
+        },
+        "florida": {
+          "30-year-fixed": 6.746,
+          "20-year-fixed": 6.273,
+          "15-year-fixed": 5.847,
+          "30-year-fha": 6.465,
+          "30-year-jumbo": 7.032
+        },
+        "colorado": {
+          "30-year-fixed": 6.697,
+          "20-year-fixed": 6.159,
+          "15-year-fixed": 5.911,
+          "30-year-fha": 6.563,
+          "30-year-jumbo": 6.862
+        }
+      }
+    },
+    {
+      "date": "2026-08-08",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.815,
+          "20-year-fixed": 6.093,
+          "15-year-fixed": 5.865,
+          "30-year-fha": 6.582,
+          "30-year-jumbo": 6.784
+        },
+        "idaho": {
+          "30-year-fixed": 6.869,
+          "20-year-fixed": 6.26,
+          "15-year-fixed": 5.996,
+          "30-year-fha": 6.457,
+          "30-year-jumbo": 6.9
+        },
+        "nevada": {
+          "30-year-fixed": 6.98,
+          "20-year-fixed": 6.397,
+          "15-year-fixed": 6.138,
+          "30-year-fha": 6.603,
+          "30-year-jumbo": 6.961
+        },
+        "california": {
+          "30-year-fixed": 6.76,
+          "20-year-fixed": 6.098,
+          "15-year-fixed": 5.811,
+          "30-year-fha": 6.45,
+          "30-year-jumbo": 6.876
+        },
+        "texas": {
+          "30-year-fixed": 6.719,
+          "20-year-fixed": 6.061,
+          "15-year-fixed": 5.783,
+          "30-year-fha": 6.617,
+          "30-year-jumbo": 7.017
+        },
+        "florida": {
+          "30-year-fixed": 6.864,
+          "20-year-fixed": 6.139,
+          "15-year-fixed": 5.865,
+          "30-year-fha": 6.491,
+          "30-year-jumbo": 6.95
+        },
+        "colorado": {
+          "30-year-fixed": 6.637,
+          "20-year-fixed": 6.155,
+          "15-year-fixed": 5.771,
+          "30-year-fha": 6.394,
+          "30-year-jumbo": 6.825
+        }
+      }
+    },
+    {
+      "date": "2026-08-09",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.75,
+          "20-year-fixed": 6.125,
+          "15-year-fixed": 5.875,
+          "30-year-fha": 6.5,
+          "30-year-jumbo": 6.875
+        },
+        "idaho": {
+          "30-year-fixed": 6.825,
+          "20-year-fixed": 6.2,
+          "15-year-fixed": 5.95,
+          "30-year-fha": 6.575,
+          "30-year-jumbo": 6.95
+        },
+        "nevada": {
+          "30-year-fixed": 6.9,
+          "20-year-fixed": 6.275,
+          "15-year-fixed": 6.025,
+          "30-year-fha": 6.65,
+          "30-year-jumbo": 7.025
+        },
+        "california": {
+          "30-year-fixed": 6.65,
+          "20-year-fixed": 6.025,
+          "15-year-fixed": 5.775,
+          "30-year-fha": 6.4,
+          "30-year-jumbo": 6.775
+        },
+        "texas": {
+          "30-year-fixed": 6.775,
+          "20-year-fixed": 6.15,
+          "15-year-fixed": 5.9,
+          "30-year-fha": 6.525,
+          "30-year-jumbo": 6.9
+        },
+        "florida": {
+          "30-year-fixed": 6.825,
+          "20-year-fixed": 6.2,
+          "15-year-fixed": 5.95,
+          "30-year-fha": 6.575,
+          "30-year-jumbo": 6.95
+        },
+        "colorado": {
+          "30-year-fixed": 6.725,
+          "20-year-fixed": 6.1,
+          "15-year-fixed": 5.85,
+          "30-year-fha": 6.475,
+          "30-year-jumbo": 6.85
+        }
+      }
+    },
+    {
+      "date": "2026-08-10",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.845,
+          "20-year-fixed": 6.113,
+          "15-year-fixed": 5.803,
+          "30-year-fha": 6.489,
+          "30-year-jumbo": 6.977
+        },
+        "idaho": {
+          "30-year-fixed": 6.913,
+          "20-year-fixed": 6.128,
+          "15-year-fixed": 5.908,
+          "30-year-fha": 6.484,
+          "30-year-jumbo": 7.072
+        },
+        "nevada": {
+          "30-year-fixed": 7.01,
+          "20-year-fixed": 6.368,
+          "15-year-fixed": 6.074,
+          "30-year-fha": 6.695,
+          "30-year-jumbo": 7.004
+        },
+        "california": {
+          "30-year-fixed": 6.632,
+          "20-year-fixed": 5.962,
+          "15-year-fixed": 5.653,
+          "30-year-fha": 6.433,
+          "30-year-jumbo": 6.846
+        },
+        "texas": {
+          "30-year-fixed": 6.725,
+          "20-year-fixed": 6.139,
+          "15-year-fixed": 6.012,
+          "30-year-fha": 6.631,
+          "30-year-jumbo": 7.011
+        },
+        "florida": {
+          "30-year-fixed": 6.83,
+          "20-year-fixed": 6.321,
+          "15-year-fixed": 5.912,
+          "30-year-fha": 6.461,
+          "30-year-jumbo": 6.957
+        },
+        "colorado": {
+          "30-year-fixed": 6.64,
+          "20-year-fixed": 6.015,
+          "15-year-fixed": 5.923,
+          "30-year-fha": 6.498,
+          "30-year-jumbo": 6.91
+        }
+      }
+    },
+    {
+      "date": "2026-08-11",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.676,
+          "20-year-fixed": 6.16,
+          "15-year-fixed": 5.794,
+          "30-year-fha": 6.608,
+          "30-year-jumbo": 6.979
+        },
+        "idaho": {
+          "30-year-fixed": 6.812,
+          "20-year-fixed": 6.113,
+          "15-year-fixed": 5.958,
+          "30-year-fha": 6.675,
+          "30-year-jumbo": 6.962
+        },
+        "nevada": {
+          "30-year-fixed": 6.861,
+          "20-year-fixed": 6.361,
+          "15-year-fixed": 5.911,
+          "30-year-fha": 6.739,
+          "30-year-jumbo": 6.982
+        },
+        "california": {
+          "30-year-fixed": 6.537,
+          "20-year-fixed": 5.932,
+          "15-year-fixed": 5.865,
+          "30-year-fha": 6.501,
+          "30-year-jumbo": 6.7
+        },
+        "texas": {
+          "30-year-fixed": 6.802,
+          "20-year-fixed": 6.228,
+          "15-year-fixed": 6.007,
+          "30-year-fha": 6.459,
+          "30-year-jumbo": 7.006
+        },
+        "florida": {
+          "30-year-fixed": 6.931,
+          "20-year-fixed": 6.185,
+          "15-year-fixed": 5.92,
+          "30-year-fha": 6.578,
+          "30-year-jumbo": 6.882
+        },
+        "colorado": {
+          "30-year-fixed": 6.662,
+          "20-year-fixed": 6.007,
+          "15-year-fixed": 5.898,
+          "30-year-fha": 6.56,
+          "30-year-jumbo": 6.75
+        }
+      }
+    },
+    {
+      "date": "2026-08-12",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.804,
+          "20-year-fixed": 6.18,
+          "15-year-fixed": 5.895,
+          "30-year-fha": 6.467,
+          "30-year-jumbo": 6.937
+        },
+        "idaho": {
+          "30-year-fixed": 6.776,
+          "20-year-fixed": 6.315,
+          "15-year-fixed": 5.873,
+          "30-year-fha": 6.678,
+          "30-year-jumbo": 6.94
+        },
+        "nevada": {
+          "30-year-fixed": 6.861,
+          "20-year-fixed": 6.159,
+          "15-year-fixed": 6.003,
+          "30-year-fha": 6.763,
+          "30-year-jumbo": 7.141
+        },
+        "california": {
+          "30-year-fixed": 6.531,
+          "20-year-fixed": 5.946,
+          "15-year-fixed": 5.883,
+          "30-year-fha": 6.395,
+          "30-year-jumbo": 6.832
+        },
+        "texas": {
+          "30-year-fixed": 6.729,
+          "20-year-fixed": 6.12,
+          "15-year-fixed": 5.873,
+          "30-year-fha": 6.409,
+          "30-year-jumbo": 6.854
+        },
+        "florida": {
+          "30-year-fixed": 6.89,
+          "20-year-fixed": 6.188,
+          "15-year-fixed": 5.89,
+          "30-year-fha": 6.592,
+          "30-year-jumbo": 6.866
+        },
+        "colorado": {
+          "30-year-fixed": 6.748,
+          "20-year-fixed": 6.078,
+          "15-year-fixed": 5.867,
+          "30-year-fha": 6.547,
+          "30-year-jumbo": 6.889
+        }
+      }
+    },
+    {
+      "date": "2026-08-13",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.75,
+          "20-year-fixed": 6.125,
+          "15-year-fixed": 5.875,
+          "30-year-fha": 6.5,
+          "30-year-jumbo": 6.875
+        },
+        "idaho": {
+          "30-year-fixed": 6.825,
+          "20-year-fixed": 6.2,
+          "15-year-fixed": 5.95,
+          "30-year-fha": 6.575,
+          "30-year-jumbo": 6.95
+        },
+        "nevada": {
+          "30-year-fixed": 6.9,
+          "20-year-fixed": 6.275,
+          "15-year-fixed": 6.025,
+          "30-year-fha": 6.65,
+          "30-year-jumbo": 7.025
+        },
+        "california": {
+          "30-year-fixed": 6.65,
+          "20-year-fixed": 6.025,
+          "15-year-fixed": 5.775,
+          "30-year-fha": 6.4,
+          "30-year-jumbo": 6.775
+        },
+        "texas": {
+          "30-year-fixed": 6.775,
+          "20-year-fixed": 6.15,
+          "15-year-fixed": 5.9,
+          "30-year-fha": 6.525,
+          "30-year-jumbo": 6.9
+        },
+        "florida": {
+          "30-year-fixed": 6.825,
+          "20-year-fixed": 6.2,
+          "15-year-fixed": 5.95,
+          "30-year-fha": 6.575,
+          "30-year-jumbo": 6.95
+        },
+        "colorado": {
+          "30-year-fixed": 6.725,
+          "20-year-fixed": 6.1,
+          "15-year-fixed": 5.85,
+          "30-year-fha": 6.475,
+          "30-year-jumbo": 6.85
+        }
+      }
+    },
+    {
+      "date": "2026-08-14",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.665,
+          "20-year-fixed": 6.154,
+          "15-year-fixed": 5.919,
+          "30-year-fha": 6.412,
+          "30-year-jumbo": 6.849
+        },
+        "idaho": {
+          "30-year-fixed": 6.935,
+          "20-year-fixed": 6.157,
+          "15-year-fixed": 5.907,
+          "30-year-fha": 6.539,
+          "30-year-jumbo": 6.852
+        },
+        "nevada": {
+          "30-year-fixed": 7.007,
+          "20-year-fixed": 6.347,
+          "15-year-fixed": 6.076,
+          "30-year-fha": 6.756,
+          "30-year-jumbo": 7.025
+        },
+        "california": {
+          "30-year-fixed": 6.757,
+          "20-year-fixed": 5.901,
+          "15-year-fixed": 5.694,
+          "30-year-fha": 6.47,
+          "30-year-jumbo": 6.887
+        },
+        "texas": {
+          "30-year-fixed": 6.712,
+          "20-year-fixed": 6.194,
+          "15-year-fixed": 5.778,
+          "30-year-fha": 6.576,
+          "30-year-jumbo": 6.911
+        },
+        "florida": {
+          "30-year-fixed": 6.874,
+          "20-year-fixed": 6.311,
+          "15-year-fixed": 5.947,
+          "30-year-fha": 6.466,
+          "30-year-jumbo": 6.97
+        },
+        "colorado": {
+          "30-year-fixed": 6.749,
+          "20-year-fixed": 6.169,
+          "15-year-fixed": 5.86,
+          "30-year-fha": 6.386,
+          "30-year-jumbo": 6.817
+        }
+      }
+    },
+    {
+      "date": "2026-08-15",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.75,
+          "20-year-fixed": 6.125,
+          "15-year-fixed": 5.875,
+          "30-year-fha": 6.5,
+          "30-year-jumbo": 6.875
+        },
+        "idaho": {
+          "30-year-fixed": 6.825,
+          "20-year-fixed": 6.2,
+          "15-year-fixed": 5.95,
+          "30-year-fha": 6.575,
+          "30-year-jumbo": 6.95
+        },
+        "nevada": {
+          "30-year-fixed": 6.9,
+          "20-year-fixed": 6.275,
+          "15-year-fixed": 6.025,
+          "30-year-fha": 6.65,
+          "30-year-jumbo": 7.025
+        },
+        "california": {
+          "30-year-fixed": 6.65,
+          "20-year-fixed": 6.025,
+          "15-year-fixed": 5.775,
+          "30-year-fha": 6.4,
+          "30-year-jumbo": 6.775
+        },
+        "texas": {
+          "30-year-fixed": 6.775,
+          "20-year-fixed": 6.15,
+          "15-year-fixed": 5.9,
+          "30-year-fha": 6.525,
+          "30-year-jumbo": 6.9
+        },
+        "florida": {
+          "30-year-fixed": 6.825,
+          "20-year-fixed": 6.2,
+          "15-year-fixed": 5.95,
+          "30-year-fha": 6.575,
+          "30-year-jumbo": 6.95
+        },
+        "colorado": {
+          "30-year-fixed": 6.725,
+          "20-year-fixed": 6.1,
+          "15-year-fixed": 5.85,
+          "30-year-fha": 6.475,
+          "30-year-jumbo": 6.85
+        }
+      }
+    },
+    {
+      "date": "2026-08-16",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.84,
+          "20-year-fixed": 6.123,
+          "15-year-fixed": 5.87,
+          "30-year-fha": 6.516,
+          "30-year-jumbo": 6.841
+        },
+        "idaho": {
+          "30-year-fixed": 6.927,
+          "20-year-fixed": 6.185,
+          "15-year-fixed": 6.023,
+          "30-year-fha": 6.695,
+          "30-year-jumbo": 7.011
+        },
+        "nevada": {
+          "30-year-fixed": 6.945,
+          "20-year-fixed": 6.298,
+          "15-year-fixed": 6.061,
+          "30-year-fha": 6.735,
+          "30-year-jumbo": 6.926
+        },
+        "california": {
+          "30-year-fixed": 6.611,
+          "20-year-fixed": 5.937,
+          "15-year-fixed": 5.895,
+          "30-year-fha": 6.346,
+          "30-year-jumbo": 6.764
+        },
+        "texas": {
+          "30-year-fixed": 6.834,
+          "20-year-fixed": 6.153,
+          "15-year-fixed": 5.943,
+          "30-year-fha": 6.404,
+          "30-year-jumbo": 6.786
+        },
+        "florida": {
+          "30-year-fixed": 6.888,
+          "20-year-fixed": 6.097,
+          "15-year-fixed": 5.874,
+          "30-year-fha": 6.696,
+          "30-year-jumbo": 7.046
+        },
+        "colorado": {
+          "30-year-fixed": 6.804,
+          "20-year-fixed": 6.045,
+          "15-year-fixed": 5.738,
+          "30-year-fha": 6.575,
+          "30-year-jumbo": 6.757
+        }
+      }
+    },
+    {
+      "date": "2026-08-17",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.75,
+          "20-year-fixed": 6.125,
+          "15-year-fixed": 5.875,
+          "30-year-fha": 6.5,
+          "30-year-jumbo": 6.875
+        },
+        "idaho": {
+          "30-year-fixed": 6.825,
+          "20-year-fixed": 6.2,
+          "15-year-fixed": 5.95,
+          "30-year-fha": 6.575,
+          "30-year-jumbo": 6.95
+        },
+        "nevada": {
+          "30-year-fixed": 6.9,
+          "20-year-fixed": 6.275,
+          "15-year-fixed": 6.025,
+          "30-year-fha": 6.65,
+          "30-year-jumbo": 7.025
+        },
+        "california": {
+          "30-year-fixed": 6.65,
+          "20-year-fixed": 6.025,
+          "15-year-fixed": 5.775,
+          "30-year-fha": 6.4,
+          "30-year-jumbo": 6.775
+        },
+        "texas": {
+          "30-year-fixed": 6.775,
+          "20-year-fixed": 6.15,
+          "15-year-fixed": 5.9,
+          "30-year-fha": 6.525,
+          "30-year-jumbo": 6.9
+        },
+        "florida": {
+          "30-year-fixed": 6.825,
+          "20-year-fixed": 6.2,
+          "15-year-fixed": 5.95,
+          "30-year-fha": 6.575,
+          "30-year-jumbo": 6.95
+        },
+        "colorado": {
+          "30-year-fixed": 6.725,
+          "20-year-fixed": 6.1,
+          "15-year-fixed": 5.85,
+          "30-year-fha": 6.475,
+          "30-year-jumbo": 6.85
+        }
+      }
+    },
+    {
+      "date": "2026-08-18",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.764,
+          "20-year-fixed": 6.01,
+          "15-year-fixed": 5.955,
+          "30-year-fha": 6.461,
+          "30-year-jumbo": 6.919
+        },
+        "idaho": {
+          "30-year-fixed": 6.935,
+          "20-year-fixed": 6.166,
+          "15-year-fixed": 5.98,
+          "30-year-fha": 6.456,
+          "30-year-jumbo": 7.018
+        },
+        "nevada": {
+          "30-year-fixed": 6.815,
+          "20-year-fixed": 6.186,
+          "15-year-fixed": 6.088,
+          "30-year-fha": 6.649,
+          "30-year-jumbo": 7.093
+        },
+        "california": {
+          "30-year-fixed": 6.548,
+          "20-year-fixed": 5.938,
+          "15-year-fixed": 5.726,
+          "30-year-fha": 6.414,
+          "30-year-jumbo": 6.796
+        },
+        "texas": {
+          "30-year-fixed": 6.768,
+          "20-year-fixed": 6.127,
+          "15-year-fixed": 5.832,
+          "30-year-fha": 6.551,
+          "30-year-jumbo": 6.834
+        },
+        "florida": {
+          "30-year-fixed": 6.88,
+          "20-year-fixed": 6.164,
+          "15-year-fixed": 5.856,
+          "30-year-fha": 6.457,
+          "30-year-jumbo": 7.025
+        },
+        "colorado": {
+          "30-year-fixed": 6.671,
+          "20-year-fixed": 6.216,
+          "15-year-fixed": 5.799,
+          "30-year-fha": 6.533,
+          "30-year-jumbo": 6.795
+        }
+      }
+    },
+    {
+      "date": "2026-08-19",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.727,
+          "20-year-fixed": 6.15,
+          "15-year-fixed": 5.929,
+          "30-year-fha": 6.615,
+          "30-year-jumbo": 6.756
+        },
+        "idaho": {
+          "30-year-fixed": 6.945,
+          "20-year-fixed": 6.216,
+          "15-year-fixed": 5.846,
+          "30-year-fha": 6.542,
+          "30-year-jumbo": 6.997
+        },
+        "nevada": {
+          "30-year-fixed": 6.836,
+          "20-year-fixed": 6.276,
+          "15-year-fixed": 6.093,
+          "30-year-fha": 6.641,
+          "30-year-jumbo": 6.981
+        },
+        "california": {
+          "30-year-fixed": 6.767,
+          "20-year-fixed": 6.004,
+          "15-year-fixed": 5.697,
+          "30-year-fha": 6.359,
+          "30-year-jumbo": 6.865
+        },
+        "texas": {
+          "30-year-fixed": 6.847,
+          "20-year-fixed": 6.26,
+          "15-year-fixed": 5.981,
+          "30-year-fha": 6.641,
+          "30-year-jumbo": 6.866
+        },
+        "florida": {
+          "30-year-fixed": 6.795,
+          "20-year-fixed": 6.275,
+          "15-year-fixed": 5.877,
+          "30-year-fha": 6.64,
+          "30-year-jumbo": 7.062
+        },
+        "colorado": {
+          "30-year-fixed": 6.653,
+          "20-year-fixed": 6.085,
+          "15-year-fixed": 5.974,
+          "30-year-fha": 6.425,
+          "30-year-jumbo": 6.931
+        }
+      }
+    },
+    {
+      "date": "2026-08-20",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.659,
+          "20-year-fixed": 6.161,
+          "15-year-fixed": 5.925,
+          "30-year-fha": 6.393,
+          "30-year-jumbo": 6.953
+        },
+        "idaho": {
+          "30-year-fixed": 6.712,
+          "20-year-fixed": 6.321,
+          "15-year-fixed": 6.028,
+          "30-year-fha": 6.543,
+          "30-year-jumbo": 6.848
+        },
+        "nevada": {
+          "30-year-fixed": 6.776,
+          "20-year-fixed": 6.253,
+          "15-year-fixed": 5.976,
+          "30-year-fha": 6.666,
+          "30-year-jumbo": 7.104
+        },
+        "california": {
+          "30-year-fixed": 6.595,
+          "20-year-fixed": 6.148,
+          "15-year-fixed": 5.818,
+          "30-year-fha": 6.371,
+          "30-year-jumbo": 6.835
+        },
+        "texas": {
+          "30-year-fixed": 6.88,
+          "20-year-fixed": 6.263,
+          "15-year-fixed": 5.808,
+          "30-year-fha": 6.634,
+          "30-year-jumbo": 6.899
+        },
+        "florida": {
+          "30-year-fixed": 6.733,
+          "20-year-fixed": 6.245,
+          "15-year-fixed": 6.02,
+          "30-year-fha": 6.452,
+          "30-year-jumbo": 6.981
+        },
+        "colorado": {
+          "30-year-fixed": 6.643,
+          "20-year-fixed": 6.171,
+          "15-year-fixed": 5.797,
+          "30-year-fha": 6.413,
+          "30-year-jumbo": 6.728
+        }
+      }
+    },
+    {
+      "date": "2026-08-21",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.792,
+          "20-year-fixed": 6.23,
+          "15-year-fixed": 5.992,
+          "30-year-fha": 6.378,
+          "30-year-jumbo": 6.98
+        },
+        "idaho": {
+          "30-year-fixed": 6.839,
+          "20-year-fixed": 6.116,
+          "15-year-fixed": 5.827,
+          "30-year-fha": 6.534,
+          "30-year-jumbo": 6.827
+        },
+        "nevada": {
+          "30-year-fixed": 6.785,
+          "20-year-fixed": 6.288,
+          "15-year-fixed": 6.013,
+          "30-year-fha": 6.747,
+          "30-year-jumbo": 7.141
+        },
+        "california": {
+          "30-year-fixed": 6.745,
+          "20-year-fixed": 6.001,
+          "15-year-fixed": 5.713,
           "30-year-fha": 6.462,
-          "30-year-jumbo": 6.731
+          "30-year-jumbo": 6.876
+        },
+        "texas": {
+          "30-year-fixed": 6.713,
+          "20-year-fixed": 6.032,
+          "15-year-fixed": 5.809,
+          "30-year-fha": 6.577,
+          "30-year-jumbo": 6.862
+        },
+        "florida": {
+          "30-year-fixed": 6.713,
+          "20-year-fixed": 6.322,
+          "15-year-fixed": 6.012,
+          "30-year-fha": 6.593,
+          "30-year-jumbo": 6.947
+        },
+        "colorado": {
+          "30-year-fixed": 6.76,
+          "20-year-fixed": 6.152,
+          "15-year-fixed": 5.887,
+          "30-year-fha": 6.51,
+          "30-year-jumbo": 6.849
+        }
+      }
+    },
+    {
+      "date": "2026-08-22",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.742,
+          "20-year-fixed": 6.218,
+          "15-year-fixed": 5.977,
+          "30-year-fha": 6.459,
+          "30-year-jumbo": 6.8
+        },
+        "idaho": {
+          "30-year-fixed": 6.779,
+          "20-year-fixed": 6.307,
+          "15-year-fixed": 5.979,
+          "30-year-fha": 6.601,
+          "30-year-jumbo": 6.9
+        },
+        "nevada": {
+          "30-year-fixed": 6.857,
+          "20-year-fixed": 6.199,
+          "15-year-fixed": 5.912,
+          "30-year-fha": 6.674,
+          "30-year-jumbo": 7.042
+        },
+        "california": {
+          "30-year-fixed": 6.534,
+          "20-year-fixed": 6.021,
+          "15-year-fixed": 5.791,
+          "30-year-fha": 6.484,
+          "30-year-jumbo": 6.797
+        },
+        "texas": {
+          "30-year-fixed": 6.724,
+          "20-year-fixed": 6.241,
+          "15-year-fixed": 5.905,
+          "30-year-fha": 6.546,
+          "30-year-jumbo": 6.973
+        },
+        "florida": {
+          "30-year-fixed": 6.816,
+          "20-year-fixed": 6.256,
+          "15-year-fixed": 5.977,
+          "30-year-fha": 6.676,
+          "30-year-jumbo": 6.976
+        },
+        "colorado": {
+          "30-year-fixed": 6.828,
+          "20-year-fixed": 6.079,
+          "15-year-fixed": 5.97,
+          "30-year-fha": 6.538,
+          "30-year-jumbo": 6.799
+        }
+      }
+    },
+    {
+      "date": "2026-08-23",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.666,
+          "20-year-fixed": 6.043,
+          "15-year-fixed": 5.769,
+          "30-year-fha": 6.515,
+          "30-year-jumbo": 6.824
+        },
+        "idaho": {
+          "30-year-fixed": 6.749,
+          "20-year-fixed": 6.182,
+          "15-year-fixed": 5.956,
+          "30-year-fha": 6.599,
+          "30-year-jumbo": 6.95
+        },
+        "nevada": {
+          "30-year-fixed": 6.876,
+          "20-year-fixed": 6.253,
+          "15-year-fixed": 6.032,
+          "30-year-fha": 6.527,
+          "30-year-jumbo": 7.081
+        },
+        "california": {
+          "30-year-fixed": 6.566,
+          "20-year-fixed": 6.067,
+          "15-year-fixed": 5.811,
+          "30-year-fha": 6.409,
+          "30-year-jumbo": 6.829
+        },
+        "texas": {
+          "30-year-fixed": 6.68,
+          "20-year-fixed": 6.138,
+          "15-year-fixed": 6.002,
+          "30-year-fha": 6.588,
+          "30-year-jumbo": 6.881
+        },
+        "florida": {
+          "30-year-fixed": 6.92,
+          "20-year-fixed": 6.136,
+          "15-year-fixed": 5.931,
+          "30-year-fha": 6.519,
+          "30-year-jumbo": 7.04
+        },
+        "colorado": {
+          "30-year-fixed": 6.62,
+          "20-year-fixed": 6.078,
+          "15-year-fixed": 5.823,
+          "30-year-fha": 6.461,
+          "30-year-jumbo": 6.913
+        }
+      }
+    },
+    {
+      "date": "2026-08-24",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.754,
+          "20-year-fixed": 6.193,
+          "15-year-fixed": 5.912,
+          "30-year-fha": 6.562,
+          "30-year-jumbo": 6.753
+        },
+        "idaho": {
+          "30-year-fixed": 6.931,
+          "20-year-fixed": 6.214,
+          "15-year-fixed": 5.976,
+          "30-year-fha": 6.566,
+          "30-year-jumbo": 6.937
+        },
+        "nevada": {
+          "30-year-fixed": 7.014,
+          "20-year-fixed": 6.293,
+          "15-year-fixed": 6.008,
+          "30-year-fha": 6.73,
+          "30-year-jumbo": 6.917
+        },
+        "california": {
+          "30-year-fixed": 6.54,
+          "20-year-fixed": 6.142,
+          "15-year-fixed": 5.872,
+          "30-year-fha": 6.323,
+          "30-year-jumbo": 6.83
+        },
+        "texas": {
+          "30-year-fixed": 6.737,
+          "20-year-fixed": 6.227,
+          "15-year-fixed": 5.826,
+          "30-year-fha": 6.482,
+          "30-year-jumbo": 6.863
+        },
+        "florida": {
+          "30-year-fixed": 6.837,
+          "20-year-fixed": 6.083,
+          "15-year-fixed": 5.865,
+          "30-year-fha": 6.626,
+          "30-year-jumbo": 6.894
+        },
+        "colorado": {
+          "30-year-fixed": 6.674,
+          "20-year-fixed": 6.199,
+          "15-year-fixed": 5.914,
+          "30-year-fha": 6.546,
+          "30-year-jumbo": 6.782
+        }
+      }
+    },
+    {
+      "date": "2026-08-25",
+      "states": {
+        "utah": {
+          "30-year-fixed": 6.75,
+          "20-year-fixed": 6.125,
+          "15-year-fixed": 5.875,
+          "30-year-fha": 6.5,
+          "30-year-jumbo": 6.875
+        },
+        "idaho": {
+          "30-year-fixed": 6.825,
+          "20-year-fixed": 6.2,
+          "15-year-fixed": 5.95,
+          "30-year-fha": 6.575,
+          "30-year-jumbo": 6.95
+        },
+        "nevada": {
+          "30-year-fixed": 6.9,
+          "20-year-fixed": 6.275,
+          "15-year-fixed": 6.025,
+          "30-year-fha": 6.65,
+          "30-year-jumbo": 7.025
+        },
+        "california": {
+          "30-year-fixed": 6.65,
+          "20-year-fixed": 6.025,
+          "15-year-fixed": 5.775,
+          "30-year-fha": 6.4,
+          "30-year-jumbo": 6.775
+        },
+        "texas": {
+          "30-year-fixed": 6.775,
+          "20-year-fixed": 6.15,
+          "15-year-fixed": 5.9,
+          "30-year-fha": 6.525,
+          "30-year-jumbo": 6.9
+        },
+        "florida": {
+          "30-year-fixed": 6.825,
+          "20-year-fixed": 6.2,
+          "15-year-fixed": 5.95,
+          "30-year-fha": 6.575,
+          "30-year-jumbo": 6.95
+        },
+        "colorado": {
+          "30-year-fixed": 6.725,
+          "20-year-fixed": 6.1,
+          "15-year-fixed": 5.85,
+          "30-year-fha": 6.475,
+          "30-year-jumbo": 6.85
         }
       }
     }

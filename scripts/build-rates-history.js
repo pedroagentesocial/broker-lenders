@@ -56,8 +56,10 @@ function dedupeByDay(points) {
 function buildFromGit() {
   console.log('🔎 Reconstruyendo historial desde git...');
 
+  // --full-history evita la simplificación de git en los merges: sin ella, tras
+  // un merge solo se ven los commits de una rama y el historial queda con huecos.
   const revs = execSync(
-    'git log --format=%H --follow -- src/data/rates-data.json',
+    'git log --full-history --format=%H -- src/data/rates-data.json',
     { cwd: ROOT, encoding: 'utf8', maxBuffer: 32 * 1024 * 1024 }
   )
     .split('\n')
