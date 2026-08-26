@@ -1,4 +1,5 @@
 ---
+import OnlineImg from '../assets/OnlineSection.jpg';
 import en from '../translations/online-section/en.json';
 import es from '../translations/online-section/es.json';
 const enB64 = Buffer.from(JSON.stringify(en)).toString('base64');
@@ -36,9 +37,13 @@ const esB64 = Buffer.from(JSON.stringify(es)).toString('base64');
       
       <!-- Right side - Image -->
       <div>
-        <img 
-          src="https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=happy%20elderly%20couple%20sitting%20together%20looking%20at%20laptop%20computer%2C%20smiling%2C%20home%20office%20setting%2C%20warm%20lighting%2C%20professional%20photography&image_size=landscape_4_3" 
-          alt="Happy elderly couple using laptop together" 
+        <img
+          src={OnlineImg.src}
+          width={OnlineImg.width}
+          height={OnlineImg.height}
+          alt="Couple reviewing their loan online together at home"
+          loading="lazy"
+          decoding="async"
           class="w-full h-80 lg:h-96 object-cover rounded-2xl shadow-lg"
         />
       </div>
