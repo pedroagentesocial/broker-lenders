@@ -64,8 +64,8 @@
     "p1": "Cada situación es diferente. Estas cifras son solo para fines de estimación y pueden no reflejar los términos exactos de su préstamo. Esto no constituye un compromiso de préstamo.",
     "p2Strong": "Préstamo fijo a 30 años:",
     "p2Rest": " El pago asume una relación préstamo-valor (LTV) de 80.00%.",
-    "p3Strong": "Préstamo fijo a 20 años:",
-    "p3Rest": " El pago asume una relación préstamo-valor (LTV) de 80.00%.",
+    "p3Strong": "Préstamo fijo USDA a 30 años:",
+    "p3Rest": " El pago asume una relación préstamo-valor (LTV) del 100.00%. Los préstamos USDA requieren una comisión de garantía inicial y una comisión anual, que no están reflejadas en la tasa mostrada.",
     "p4Strong": "Préstamo FHA fijo a 30 años:",
     "p4Rest": " El pago asume una relación préstamo-valor (LTV) de 80.00%.",
     "p5": "El pago incluye una prima de seguro hipotecario inicial única del 1.75% del monto base del préstamo y una prima de seguro hipotecario mensual (MIP) calculada al 0.5% del monto base del préstamo. Para hipotecas con una relación préstamo-valor (LTV) de 80.00%, el MIP mensual del 0.5% se pagará durante los primeros 11 años del plazo hipotecario. Posteriormente, el pago mensual del préstamo consistirá en pagos mensuales iguales de capital e interés hasta el final del préstamo.",
@@ -75,14 +75,14 @@
     "p7Rest": " El pago asume una relación préstamo-valor (LTV) de 80.00%.",
     "p8": "Los préstamos VA no requieren PMI. El préstamo VA es un beneficio del servicio militar y solo se ofrece a veteranos, cónyuges sobrevivientes y militares en servicio activo.",
     "assumptionsTitle": "Supuestos",
-    "assumptionsIntro": "Para todas las tasas mostradas, salvo que se indique lo contrario, asumimos:",
+    "assumptionsIntro": "Las tasas mostradas son un promedio nacional publicado por un tercero, no una cotización para tu préstamo. Para el pago mensual estimado, asumimos:",
     "assumptions": [
       "Está comprando una casa unifamiliar que es su residencia principal.",
       "Los costos de cierre se pagarán por adelantado, no se agregarán al préstamo.",
       "Su relación deuda-ingresos es inferior al 43%.",
       "Su puntaje de crédito es 740.",
       "Tendrá una cuenta de depósito en garantía para el pago de impuestos y seguros.",
-      "Un punto equivale al uno por ciento del monto del préstamo."
+      "Un importe de préstamo de $350,000, o $1,100,000 en el ejemplo jumbo."
     ]
   },
   "faqs": {

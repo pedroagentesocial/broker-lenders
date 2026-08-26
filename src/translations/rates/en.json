@@ -64,8 +64,8 @@
     "p1": "Every situation is different. These figures are for estimation purposes only and may not reflect the exact terms of your loan. This is not a commitment to lend.",
     "p2Strong": "30-year Fixed-Rate Loan:",
     "p2Rest": " Payment assumes a loan-to-value (LTV) of 80.00%.",
-    "p3Strong": "20-year Fixed-Rate Loan:",
-    "p3Rest": " Payment assumes a loan-to-value (LTV) of 80.00%.",
+    "p3Strong": "30-year USDA Fixed-Rate Loan:",
+    "p3Rest": " Payment assumes a loan-to-value (LTV) of 100.00%. USDA loans require an upfront guarantee fee and an annual fee, which are not reflected in the rate shown.",
     "p4Strong": "30-year FHA Fixed-Rate Loan:",
     "p4Rest": " Payment assumes a loan-to-value (LTV) of 80.00%.",
     "p5": "Payment includes a one-time upfront mortgage insurance premium at 1.75% of the base loan amount and a monthly mortgage insurance premium (MIP) calculated at 0.5% of the base loan amount. For mortgages with a loan-to-value (LTV) ratio of 80.00%, the 0.5% monthly MIP will be paid for the first 11 years of the mortgage term. Thereafter, the monthly loan payment will consist of equal monthly principal and interest payments until the end of the loan.",
@@ -75,14 +75,14 @@
     "p7Rest": " Payment assumes a loan-to-value (LTV) of 80.00%.",
     "p8": "VA loans do not require PMI. The VA loan is a benefit of military service and only offered to veterans, surviving spouses and active duty military.",
     "assumptionsTitle": "Assumptions",
-    "assumptionsIntro": "For all rates shown, unless otherwise noted, we assumed:",
+    "assumptionsIntro": "The rates shown are a national index average published by a third party, not a quote for your loan. For the estimated monthly payment, we assumed:",
     "assumptions": [
       "You're buying a single-family home that's your primary residence.",
       "Closing costs will be paid up front, not rolled into the loan.",
       "Your debt-to-income ratio is less than 43%.",
       "Your credit score is 740.",
       "You'll have an escrow account for payment of taxes and insurance.",
-      "One point is equal to one percent of the loan amount."
+      "A loan amount of $350,000, or $1,100,000 for the jumbo example."
     ]
   },
   "faqs": {
