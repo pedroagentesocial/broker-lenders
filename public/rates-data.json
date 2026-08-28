@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-27T21:32:20.081Z",
-  "asOf": "2026-08-26",
+  "timestamp": "2026-08-28T21:37:21.377Z",
+  "asOf": "2026-08-27",
   "source": {
     "name": "ICE Mortgage Technology (Optimal Blue) — OBMMI",
     "via": "FRED, Federal Reserve Bank of St. Louis",
@@ -10,163 +10,163 @@
   },
   "national": {
     "30-year-fixed": {
-      "rate": "6.655%"
+      "rate": "6.678%"
     },
     "15-year-fixed": {
-      "rate": "5.987%"
+      "rate": "5.919%"
     },
     "30-year-fha": {
       "rate": "6.479%"
     },
     "30-year-va": {
-      "rate": "6.270%"
+      "rate": "6.291%"
     },
     "30-year-usda": {
-      "rate": "6.383%"
+      "rate": "6.425%"
     },
     "30-year-jumbo": {
-      "rate": "6.701%"
+      "rate": "6.617%"
     }
   },
   "states": {
     "utah": {
       "30-year-fixed": {
-        "rate": "6.655%"
+        "rate": "6.678%"
       },
       "15-year-fixed": {
-        "rate": "5.987%"
+        "rate": "5.919%"
       },
       "30-year-fha": {
         "rate": "6.479%"
       },
       "30-year-va": {
-        "rate": "6.270%"
+        "rate": "6.291%"
       },
       "30-year-usda": {
-        "rate": "6.383%"
+        "rate": "6.425%"
       },
       "30-year-jumbo": {
-        "rate": "6.701%"
+        "rate": "6.617%"
       }
     },
     "idaho": {
       "30-year-fixed": {
-        "rate": "6.655%"
+        "rate": "6.678%"
       },
       "15-year-fixed": {
-        "rate": "5.987%"
+        "rate": "5.919%"
       },
       "30-year-fha": {
         "rate": "6.479%"
       },
       "30-year-va": {
-        "rate": "6.270%"
+        "rate": "6.291%"
       },
       "30-year-usda": {
-        "rate": "6.383%"
+        "rate": "6.425%"
       },
       "30-year-jumbo": {
-        "rate": "6.701%"
+        "rate": "6.617%"
       }
     },
     "nevada": {
       "30-year-fixed": {
-        "rate": "6.655%"
+        "rate": "6.678%"
       },
       "15-year-fixed": {
-        "rate": "5.987%"
+        "rate": "5.919%"
       },
       "30-year-fha": {
         "rate": "6.479%"
       },
       "30-year-va": {
-        "rate": "6.270%"
+        "rate": "6.291%"
       },
       "30-year-usda": {
-        "rate": "6.383%"
+        "rate": "6.425%"
       },
       "30-year-jumbo": {
-        "rate": "6.701%"
+        "rate": "6.617%"
       }
     },
     "california": {
       "30-year-fixed": {
-        "rate": "6.655%"
+        "rate": "6.678%"
       },
       "15-year-fixed": {
-        "rate": "5.987%"
+        "rate": "5.919%"
       },
       "30-year-fha": {
         "rate": "6.479%"
       },
       "30-year-va": {
-        "rate": "6.270%"
+        "rate": "6.291%"
       },
       "30-year-usda": {
-        "rate": "6.383%"
+        "rate": "6.425%"
       },
       "30-year-jumbo": {
-        "rate": "6.701%"
+        "rate": "6.617%"
       }
     },
     "texas": {
       "30-year-fixed": {
-        "rate": "6.655%"
+        "rate": "6.678%"
       },
       "15-year-fixed": {
-        "rate": "5.987%"
+        "rate": "5.919%"
       },
       "30-year-fha": {
         "rate": "6.479%"
       },
       "30-year-va": {
-        "rate": "6.270%"
+        "rate": "6.291%"
       },
       "30-year-usda": {
-        "rate": "6.383%"
+        "rate": "6.425%"
       },
       "30-year-jumbo": {
-        "rate": "6.701%"
+        "rate": "6.617%"
       }
     },
     "florida": {
       "30-year-fixed": {
-        "rate": "6.655%"
+        "rate": "6.678%"
       },
       "15-year-fixed": {
-        "rate": "5.987%"
+        "rate": "5.919%"
       },
       "30-year-fha": {
         "rate": "6.479%"
       },
       "30-year-va": {
-        "rate": "6.270%"
+        "rate": "6.291%"
       },
       "30-year-usda": {
-        "rate": "6.383%"
+        "rate": "6.425%"
       },
       "30-year-jumbo": {
-        "rate": "6.701%"
+        "rate": "6.617%"
       }
     },
     "colorado": {
       "30-year-fixed": {
-        "rate": "6.655%"
+        "rate": "6.678%"
       },
       "15-year-fixed": {
-        "rate": "5.987%"
+        "rate": "5.919%"
       },
       "30-year-fha": {
         "rate": "6.479%"
       },
       "30-year-va": {
-        "rate": "6.270%"
+        "rate": "6.291%"
       },
       "30-year-usda": {
-        "rate": "6.383%"
+        "rate": "6.425%"
       },
       "30-year-jumbo": {
-        "rate": "6.701%"
+        "rate": "6.617%"
       }
     }
   }
