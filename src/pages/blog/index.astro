@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import BlogLegal from '../../components/blog/BlogLegal.astro';
 import '../../styles/blog.css';
 import { resolveLang, withLang } from '../../lib/lang';
 import { getPublishedPosts, getUpcoming, formatDate } from '../../lib/blog';
@@ -198,9 +199,5 @@ const breadcrumbJsonLd = {
     </div>
   </section>
 
-  <section class="bg-gray-50 py-8">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <p class="text-xs text-gray-500 leading-relaxed">{t.disclaimer}</p>
-    </div>
-  </section>
+  <BlogLegal lang={lang} />
 </Layout>

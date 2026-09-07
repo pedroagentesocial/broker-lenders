@@ -1,6 +1,8 @@
 ---
 import { render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
+import RateContext from '../../components/blog/RateContext.astro';
+import BlogLegal from '../../components/blog/BlogLegal.astro';
 import '../../styles/blog.css';
 import { resolveLang, withLang } from '../../lib/lang';
 import { getPost, getRelated, formatDate } from '../../lib/blog';
@@ -144,6 +146,16 @@ const breadcrumbJsonLd =
             )}
             {' · '}{t.readTime(data.readingMinutes)}
           </p>
+
+          {data.rateExample && (
+            <RateContext
+              lang={lang}
+              rate={data.rateExample.rate}
+              loanAmount={data.rateExample.loanAmount}
+              termYears={data.rateExample.termYears}
+              series={data.rateExample.series}
+            />
+          )}
         </div>
       </header>
 
@@ -252,9 +264,5 @@ const breadcrumbJsonLd =
     </div>
   </section>
 
-  <section class="bg-gray-50 py-8">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-      <p class="text-xs text-gray-500 leading-relaxed">{t.disclaimer}</p>
-    </div>
-  </section>
+  <BlogLegal lang={lang} />
 </Layout>

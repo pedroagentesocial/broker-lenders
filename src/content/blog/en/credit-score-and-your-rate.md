@@ -6,6 +6,11 @@ category: "Credit"
 kicker: "Credit score"
 readingMinutes: 8
 keywords: "credit score for mortgage, 620 credit score, 580 FHA credit score, improve credit score before buying a house, credit utilization, what affects your FICO score"
+rateExample:
+  rate: 6.5
+  loanAmount: 388000
+  termYears: 30
+  series: "30-year-fixed"
 sources:
   - label: "CFPB — What is a credit score?"
     url: "https://www.consumerfinance.gov/ask-cfpb/what-is-a-credit-score-en-315/"

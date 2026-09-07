@@ -6,6 +6,11 @@ category: "Crédito"
 kicker: "Puntaje de crédito"
 readingMinutes: 8
 keywords: "puntaje de crédito para hipoteca, 620 de crédito, 580 FHA crédito, mejorar crédito antes de comprar casa, uso de crédito, qué afecta tu FICO"
+rateExample:
+  rate: 6.5
+  loanAmount: 388000
+  termYears: 30
+  series: "30-year-fixed"
 sources:
   - label: "CFPB — ¿Qué es un puntaje de crédito?"
     url: "https://www.consumerfinance.gov/ask-cfpb/what-is-a-credit-score-en-315/"

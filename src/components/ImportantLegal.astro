@@ -3,6 +3,13 @@ import en from '../translations/important-legal/en.json';
 import es from '../translations/important-legal/es.json';
 const enB64 = Buffer.from(JSON.stringify(en)).toString('base64');
 const esB64 = Buffer.from(JSON.stringify(es)).toString('base64');
+// El año y la fecha de revisión salen del build: estaban congelados en 2024.
+const currentYear = new Date().getFullYear();
+const reviewedOn = new Intl.DateTimeFormat('en-US', {
+  year: 'numeric',
+  month: 'long',
+  timeZone: 'UTC',
+}).format(new Date());
 ---
 
 <section class="py-8 bg-white">
@@ -51,14 +58,28 @@ const esB64 = Buffer.from(JSON.stringify(es)).toString('base64');
           <p data-i18n="interest_rates_disclaimer">
             Interest rates and Annual Percentage Rates (APRs) are based on current market conditions and may change. The actual rate you receive may be higher or lower depending on your credit profile and other factors.
           </p>
+
+          <p>
+            <span data-i18n="licensed_states">
+              Licensed in Utah, Idaho, Nevada, California, Texas, Florida and Colorado. Not all programs are available in every state. You can verify our licensing at NMLS Consumer Access.
+            </span>
+            <a
+              href="https://www.nmlsconsumeraccess.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="underline hover:text-gray-900"
+              data-i18n="nmls_consumer_access"
+            >NMLS Consumer Access</a>
+          </p>
           
           <p>
             <strong data-i18n="privacy_policy">Privacy Policy:</strong> <span data-i18n="privacy_policy_text">We are committed to protecting your privacy. We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as described in our Privacy Policy.</span>
           </p>
           
           <div class="pt-2 border-t border-gray-100">
-            <p class="text-xs text-gray-500" data-i18n="copyright_notice">
-              © 2024 Broker Lenders. All rights reserved. Last updated: December 2024.
+            <p class="text-xs text-gray-500">
+              &copy; {currentYear} <span data-i18n="copyright_notice">Broker Lenders. All rights reserved.</span>
+              <span data-i18n="last_reviewed">Disclosures last reviewed:</span> {reviewedOn}
             </p>
           </div>
         </div>

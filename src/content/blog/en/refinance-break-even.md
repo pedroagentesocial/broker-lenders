@@ -6,6 +6,11 @@ category: "Refinance"
 kicker: "Refinancing"
 readingMinutes: 8
 keywords: "refinance break even, should I refinance, refinance calculator, cash out refinance, drop PMI refinance, refinance closing costs, mortgage refinance rules"
+rateExample:
+  rate: 6.25
+  loanAmount: 340000
+  termYears: 30
+  series: "30-year-fixed"
 sources:
   - label: "CFPB — Owning a Home: the mortgage process"
     url: "https://www.consumerfinance.gov/owning-a-home/"

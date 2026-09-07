@@ -5,6 +5,8 @@ const enB64 = Buffer.from(JSON.stringify(en)).toString('base64');
 const esB64 = Buffer.from(JSON.stringify(es)).toString('base64');
 export interface Props { lang?: string }
 const { lang = 'en' } = Astro.props;
+// El año sale del build: el aviso de copyright ya se quedó congelado una vez.
+const currentYear = new Date().getFullYear();
 ---
 
 <footer id="footer" class="bg-black text-white" data-lang={lang}>
@@ -82,7 +84,7 @@ const { lang = 'en' } = Astro.props;
     <div class="border-t border-gray-700 mt-8 pt-8">
       <div class="flex justify-center items-center">
         <div class="text-sm text-gray-400">
-          <p data-i18n="copyright">&copy; 2025 Broker Lenders. All rights reserved.</p>
+          <p>&copy; {currentYear} <span data-i18n="copyright">Broker Lenders. All rights reserved.</span></p>
         </div>
       </div>
       

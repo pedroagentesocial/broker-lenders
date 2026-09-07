@@ -1,0 +1,89 @@
+---
+import { ui } from '../../lib/blog-ui';
+import type { Lang } from '../../lib/lang';
+
+/**
+ * Divulgaciones legales del blog.
+ *
+ * Va aparte de `ImportantLegal.astro` (el del resto del sitio) porque el blog
+ * publica cifras — pagos de ejemplo, tasas del día, límites de programa — y
+ * eso exige aclaraciones que las páginas comerciales no necesitan.
+ *
+ * Usa `<details>` nativo: sin JavaScript, accesible, y el contenido sigue
+ * estando en el HTML para los buscadores aunque esté colapsado.
+ */
+export interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = ui(lang);
+const legal = t.legal;
+
+// La fecha de revisión sale del build, así que no se queda congelada en un año
+// viejo como pasó con las divulgaciones anteriores.
+const reviewedOn = new Intl.DateTimeFormat(lang === 'es' ? 'es-US' : 'en-US', {
+  year: 'numeric',
+  month: 'long',
+  timeZone: 'UTC',
+}).format(new Date());
+---
+
+<section class="bg-gray-50 py-10">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <details class="group rounded-3xl border border-gray-200 bg-white p-6">
+      <summary class="flex cursor-pointer list-none items-start gap-3">
+        <svg
+          class="mt-0.5 h-5 w-5 flex-none text-gray-400 transition-transform group-open:rotate-180"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+        <span>
+          <span class="block font-semibold text-gray-900">{legal.title}</span>
+          <span class="mt-1 block text-xs leading-relaxed text-gray-500">{legal.summary}</span>
+        </span>
+      </summary>
+
+      <div class="mt-6 space-y-5 border-t border-gray-100 pt-6">
+        {legal.items.map((item) => (
+          <div>
+            <p class="text-xs font-bold uppercase tracking-wide text-gray-900">{item.heading}</p>
+            <p class="mt-1.5 text-xs leading-relaxed text-gray-600">{item.body}</p>
+          </div>
+        ))}
+
+        <p class="text-xs leading-relaxed text-gray-600">
+          <a
+            href={legal.nmlsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="font-semibold underline decoration-red-600 decoration-2 underline-offset-4 hover:text-red-600"
+          >
+            {legal.nmlsLabel}
+          </a>
+        </p>
+
+        <div class="flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-gray-100 pt-4">
+          <p class="text-xs text-gray-500">{legal.reviewed}: {reviewedOn}</p>
+          <a href={lang === 'es' ? '/legal/disclosures?lang=es' : '/legal/disclosures'} class="text-xs text-gray-500 underline hover:text-red-600">
+            {lang === 'es' ? 'Divulgaciones y licencias' : 'Disclosures and licenses'}
+          </a>
+          <a href={lang === 'es' ? '/legal/privacy?lang=es' : '/legal/privacy'} class="text-xs text-gray-500 underline hover:text-red-600">
+            {lang === 'es' ? 'Política de privacidad' : 'Privacy policy'}
+          </a>
+        </div>
+      </div>
+    </details>
+  </div>
+</section>
+
+<style>
+  /* Safari todavía pinta el triángulo por defecto sin esto. */
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+</style>

@@ -6,6 +6,11 @@ category: "Costos"
 kicker: "Seguro hipotecario"
 readingMinutes: 8
 keywords: "PMI, prima de seguro hipotecario, cuándo se quita el PMI, cancelar PMI 80 por ciento, MIP FHA de por vida, cuota de financiamiento VA, cuota anual USDA, Homeowners Protection Act"
+rateExample:
+  rate: 6.5
+  loanAmount: 388000
+  termYears: 30
+  series: "30-year-fixed"
 sources:
   - label: "CFPB — ¿Qué es el seguro hipotecario privado (PMI)?"
     url: "https://www.consumerfinance.gov/ask-cfpb/what-is-private-mortgage-insurance-en-122/"

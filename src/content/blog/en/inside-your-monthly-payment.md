@@ -6,6 +6,11 @@ category: "Buying"
 kicker: "Monthly payment"
 readingMinutes: 7
 keywords: "PITI, what is in a mortgage payment, escrow account, property taxes mortgage, escrow shortage, why did my mortgage payment go up, homeowners insurance escrow"
+rateExample:
+  rate: 6.5
+  loanAmount: 388000
+  termYears: 30
+  series: "30-year-fixed"
 sources:
   - label: "CFPB — What is an escrow or impound account?"
     url: "https://www.consumerfinance.gov/ask-cfpb/what-is-an-escrow-or-impound-account-en-140/"

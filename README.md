@@ -113,3 +113,43 @@ podría no ser generada por el escáner de Tailwind. Bloques disponibles: `bl-fi
 - Cada artículo emite JSON-LD `BlogPosting` (con `author`, `citation` y `isPartOf`) y
   `BreadcrumbList`; el índice emite `Blog`.
 - `hreflang` en-US / es-US / x-default vía el prop `hreflangPath` del Layout.
+
+### Tasas reales dentro de los artículos
+
+Cinco guías construyen sus gráficas sobre una tasa concreta. Esas cuentas son **fijas a
+propósito**: si la tasa se moviera, los números de las gráficas y los del texto dejarían
+de cuadrar entre sí. Para que el artículo no se desfase de la realidad, el frontmatter
+declara el ejemplo:
+
+```yaml
+rateExample:
+  rate: 6.5          # la tasa que usan las gráficas
+  loanAmount: 388000
+  termYears: 30
+  series: "30-year-fixed"
+```
+
+`src/components/blog/RateContext.astro` pinta entonces una franja arriba del artículo que
+compara esa tasa con la **tasa real del día** y recalcula el pago del mismo préstamo con
+ella. El dato sale de `src/data/rates-data.json`, que el cron diario de GitHub Actions
+regenera desde FRED (índices OBMMI de ICE/Optimal Blue): **no hay que actualizar nada a
+mano**. Si el JSON falla o cambia de forma, la franja simplemente no se pinta — es
+contexto, nunca debe tumbar un artículo.
+
+Al añadir una guía con tasas, agrega el bloque `rateExample`; sin él la franja no aparece.
+
+### Divulgaciones legales
+
+`src/components/blog/BlogLegal.astro` va en `/blog` y en cada artículo. Es aparte de
+`ImportantLegal.astro` (el del resto del sitio) porque el blog publica cifras — pagos de
+ejemplo, tasas del día, límites de programa — y eso exige aclaraciones que una página
+comercial no necesita: que los ejemplos no son cotizaciones, que las tasas son promedios
+nacionales sin puntos ni cuotas (o sea, no son una APR), y que los límites citados eran
+correctos en la fecha de publicación de esa guía.
+
+El texto vive en `src/lib/blog-ui.ts` bajo `legal`, en los dos idiomas. Usa `<details>`
+nativo: sin JavaScript, accesible, y el contenido sigue en el HTML aunque esté colapsado.
+
+**Las fechas se calculan en el build.** El aviso de copyright del footer se había quedado
+en 2025 y el de `ImportantLegal` en «Last updated: December 2024»; ahora ambos toman el
+año del sistema y las cadenas traducidas ya no llevan la fecha adentro.

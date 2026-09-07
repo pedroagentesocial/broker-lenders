@@ -27,6 +27,24 @@ const blog = defineCollection({
     sources: z
       .array(z.object({ label: z.string(), url: z.string().url() }))
       .min(1),
+    /**
+     * Artículos cuyas gráficas usan una tasa concreta. Las cuentas del artículo
+     * son fijas a propósito (si se movieran, las gráficas dejarían de cuadrar),
+     * así que `RateContext.astro` pinta arriba una franja que compara esa tasa
+     * con la tasa real del día y recalcula el pago del ejemplo.
+     */
+    rateExample: z
+      .object({
+        /** La tasa que usan las gráficas del artículo, en porcentaje. */
+        rate: z.number(),
+        loanAmount: z.number(),
+        termYears: z.number().int().positive().default(30),
+        /** Serie de rates-data.json contra la que se compara. */
+        series: z
+          .enum(['30-year-fixed', '15-year-fixed', '30-year-fha', '30-year-va', '30-year-usda', '30-year-jumbo'])
+          .default('30-year-fixed'),
+      })
+      .optional(),
   }),
 });
 

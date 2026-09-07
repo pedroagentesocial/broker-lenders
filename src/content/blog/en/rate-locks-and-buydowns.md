@@ -6,6 +6,11 @@ category: "Rates"
 kicker: "Rate strategy"
 readingMinutes: 8
 keywords: "rate lock, mortgage discount points, 2-1 buydown, temporary buydown, should I buy points, float down, rate lock extension, break even points mortgage"
+rateExample:
+  rate: 6.5
+  loanAmount: 388000
+  termYears: 30
+  series: "30-year-fixed"
 sources:
   - label: "CFPB — What is a lock-in rate?"
     url: "https://www.consumerfinance.gov/ask-cfpb/what-is-a-lock-in-rate-en-143/"

@@ -6,6 +6,11 @@ category: "Tasas"
 kicker: "Estrategia de tasa"
 readingMinutes: 8
 keywords: "bloqueo de tasa, puntos de descuento hipoteca, buydown 2-1, buydown temporal, conviene comprar puntos, float down, extensión de bloqueo, punto de equilibrio puntos hipoteca"
+rateExample:
+  rate: 6.5
+  loanAmount: 388000
+  termYears: 30
+  series: "30-year-fixed"
 sources:
   - label: "CFPB — ¿Qué es un bloqueo de tasa?"
     url: "https://www.consumerfinance.gov/ask-cfpb/what-is-a-lock-in-rate-en-143/"

@@ -1,0 +1,183 @@
+---
+import { getRatesData } from '../../utils/ratesData.js';
+import type { Lang } from '../../lib/lang';
+
+/**
+ * Franja de contexto de tasa.
+ *
+ * Las gráficas de algunos artículos usan una tasa fija (si se moviera, los
+ * números de las gráficas y del texto dejarían de cuadrar entre sí). Esta
+ * franja mantiene el artículo honesto sin tocar las gráficas: muestra la tasa
+ * real del día y recalcula el pago del mismo ejemplo con esa tasa.
+ *
+ * El dato viene de rates-data.json, que el cron diario de GitHub Actions
+ * regenera desde FRED. No hay que actualizar nada a mano.
+ */
+export interface Props {
+  lang: Lang;
+  rate: number;
+  loanAmount: number;
+  termYears: number;
+  series: string;
+}
+
+const { lang, rate, loanAmount, termYears, series } = Astro.props;
+
+/** Pago mensual de capital e interés. */
+function monthlyPayment(principal: number, annualRatePct: number, years: number): number {
+  const r = annualRatePct / 100 / 12;
+  const n = years * 12;
+  if (r === 0) return principal / n;
+  const growth = Math.pow(1 + r, n);
+  return (principal * r * growth) / (growth - 1);
+}
+
+const parsePct = (value: unknown): number | null => {
+  const n = parseFloat(String(value ?? '').replace('%', '').trim());
+  return Number.isFinite(n) ? n : null;
+};
+
+// Si el JSON de tasas falla o cambia de forma, la franja simplemente no se
+// pinta: es contexto, nunca debe tumbar un artículo.
+let live: { rate: number; asOf: string; sourceName: string; sourceVia: string; sourceUrl: string } | null = null;
+try {
+  const data = await getRatesData();
+  const parsed = parsePct(data?.national?.[series]?.rate);
+  if (parsed !== null) {
+    live = {
+      rate: parsed,
+      asOf: data.asOf,
+      sourceName: data.source?.name ?? 'ICE Mortgage Technology (Optimal Blue) — OBMMI',
+      sourceVia: data.source?.via ?? 'FRED, Federal Reserve Bank of St. Louis',
+      sourceUrl: data.source?.url ?? 'https://fred.stlouisfed.org/series/OBMMIC30YF',
+    };
+  }
+} catch {
+  live = null;
+}
+
+const money = (value: number) =>
+  new Intl.NumberFormat(lang === 'es' ? 'es-US' : 'en-US', {
+    style: 'currency',
+    currency: 'USD',
+    maximumFractionDigits: 0,
+  }).format(value);
+
+// Las tasas del índice traen 3 decimales (6.744%) y las de los ejemplos 2
+// (6.50%). Se formatea a 3 y se recorta el cero sobrante para no escribir
+// "6.500%", que se lee como una precisión que el ejemplo no tiene.
+const pct = (value: number) => {
+  const fixed = value.toFixed(3);
+  return `${fixed.endsWith('0') ? fixed.slice(0, -1) : fixed}%`;
+};
+
+const examplePayment = monthlyPayment(loanAmount, rate, termYears);
+const livePayment = live ? monthlyPayment(loanAmount, live.rate, termYears) : null;
+const delta = livePayment !== null ? livePayment - examplePayment : null;
+
+const asOfLabel = live
+  ? new Intl.DateTimeFormat(lang === 'es' ? 'es-US' : 'en-US', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+      timeZone: 'UTC',
+    }).format(new Date(`${live.asOf}T00:00:00Z`))
+  : '';
+
+const seriesLabels: Record<string, { en: string; es: string }> = {
+  '30-year-fixed': { en: '30-year fixed', es: '30 años fijos' },
+  '15-year-fixed': { en: '15-year fixed', es: '15 años fijos' },
+  '30-year-fha': { en: '30-year FHA', es: 'FHA a 30 años' },
+  '30-year-va': { en: '30-year VA', es: 'VA a 30 años' },
+  '30-year-usda': { en: '30-year USDA', es: 'USDA a 30 años' },
+  '30-year-jumbo': { en: '30-year jumbo', es: 'Jumbo a 30 años' },
+};
+const seriesLabel = (seriesLabels[series] ?? seriesLabels['30-year-fixed'])[lang];
+
+const t =
+  lang === 'es'
+    ? {
+        kicker: 'Contexto de tasas · se actualiza a diario',
+        intro: `Las gráficas de esta guía usan ${pct(rate)} para que las cuentas se puedan seguir de principio a fin.`,
+        liveIntro: `El promedio nacional a ${seriesLabel} hoy es`,
+        exampleLabel: 'Tasa del ejemplo',
+        liveLabel: 'Promedio de hoy',
+        paymentLabel: `El mismo préstamo de ${money(loanAmount)} hoy`,
+        deltaMore: 'más al mes que el ejemplo',
+        deltaLess: 'menos al mes que el ejemplo',
+        deltaSame: 'prácticamente igual que el ejemplo',
+        note: 'Promedio nacional, no es una cotización: tu tasa depende de tu crédito, el monto, el financiamiento sobre el valor, el plazo y el tipo de propiedad.',
+        cta: 'Ver todas las tasas de hoy',
+        asOf: 'al',
+      }
+    : {
+        kicker: 'Rate context · updated daily',
+        intro: `The charts in this guide use ${pct(rate)} so the math stays consistent all the way through.`,
+        liveIntro: `Today's national ${seriesLabel} average is`,
+        exampleLabel: 'Rate in the example',
+        liveLabel: "Today's average",
+        paymentLabel: `The same ${money(loanAmount)} loan today`,
+        deltaMore: 'more per month than the example',
+        deltaLess: 'less per month than the example',
+        deltaSame: 'essentially the same as the example',
+        note: "National average, not a quote: your rate depends on your credit, loan amount, loan-to-value, term and property type.",
+        cta: "See today's full rate table",
+        asOf: 'as of',
+      };
+
+const ratesHref = lang === 'es' ? '/rates?lang=es' : '/rates';
+const deltaRounded = delta !== null ? Math.round(delta) : null;
+const deltaWord =
+  deltaRounded === null || Math.abs(deltaRounded) < 5
+    ? t.deltaSame
+    : deltaRounded > 0
+      ? t.deltaMore
+      : t.deltaLess;
+---
+
+{live && (
+  <aside class="mt-8 rounded-3xl border border-gray-200 bg-gray-50 p-6" aria-label={t.kicker}>
+    <p class="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-red-600">
+      <span class="h-0.5 w-6 bg-red-600" aria-hidden="true"></span>
+      {t.kicker}
+    </p>
+
+    <p class="mt-3 text-sm text-gray-700">
+      {t.intro} {t.liveIntro} <strong class="text-gray-900">{pct(live.rate)}</strong>.
+    </p>
+
+    <div class="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-3">
+      <div class="rounded-2xl bg-white px-4 py-3 border border-gray-200">
+        <p class="text-xs text-gray-500">{t.exampleLabel}</p>
+        <p class="mt-1 text-xl font-bold text-gray-900">{pct(rate)}</p>
+        <p class="text-xs text-gray-500">{money(examplePayment)}/{lang === 'es' ? 'mes' : 'mo'}</p>
+      </div>
+      <div class="rounded-2xl bg-white px-4 py-3 border border-gray-200">
+        <p class="text-xs text-gray-500">{t.liveLabel}</p>
+        <p class="mt-1 text-xl font-bold text-red-600">{pct(live.rate)}</p>
+        <p class="text-xs text-gray-500">{asOfLabel ? `${t.asOf} ${asOfLabel}` : ''}</p>
+      </div>
+      <div class="rounded-2xl bg-white px-4 py-3 border border-gray-200">
+        <p class="text-xs text-gray-500">{t.paymentLabel}</p>
+        <p class="mt-1 text-xl font-bold text-gray-900">
+          {livePayment !== null ? `${money(livePayment)}/${lang === 'es' ? 'mes' : 'mo'}` : '—'}
+        </p>
+        <p class="text-xs text-gray-500">
+          {deltaRounded !== null && Math.abs(deltaRounded) >= 5
+            ? `${money(Math.abs(deltaRounded))} ${deltaWord}`
+            : deltaWord}
+        </p>
+      </div>
+    </div>
+
+    <p class="mt-4 text-xs leading-relaxed text-gray-500">
+      {t.note}{' '}
+      <a href={live.sourceUrl} target="_blank" rel="noopener noreferrer nofollow" class="underline hover:text-gray-700">
+        {live.sourceName}
+      </a>{' '}
+      · {live.sourceVia}
+      {' · '}
+      <a href={ratesHref} class="font-semibold text-gray-700 underline hover:text-red-600">{t.cta}</a>
+    </p>
+  </aside>
+)}

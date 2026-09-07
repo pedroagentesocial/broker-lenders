@@ -6,6 +6,11 @@ category: "Costs"
 kicker: "Mortgage insurance"
 readingMinutes: 8
 keywords: "PMI, mortgage insurance premium, when does PMI go away, cancel PMI 80 percent, FHA MIP life of loan, VA funding fee, USDA annual fee, Homeowners Protection Act"
+rateExample:
+  rate: 6.5
+  loanAmount: 388000
+  termYears: 30
+  series: "30-year-fixed"
 sources:
   - label: "CFPB — What is private mortgage insurance?"
     url: "https://www.consumerfinance.gov/ask-cfpb/what-is-private-mortgage-insurance-en-122/"

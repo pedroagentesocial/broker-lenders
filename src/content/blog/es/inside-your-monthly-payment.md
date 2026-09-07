@@ -6,6 +6,11 @@ category: "Comprar"
 kicker: "Pago mensual"
 readingMinutes: 7
 keywords: "PITI, qué incluye el pago hipotecario, cuenta de plica escrow, impuestos de propiedad hipoteca, déficit de escrow, por qué subió mi pago de hipoteca, seguro de casa"
+rateExample:
+  rate: 6.5
+  loanAmount: 388000
+  termYears: 30
+  series: "30-year-fixed"
 sources:
   - label: "CFPB — ¿Qué es una cuenta de plica (escrow)?"
     url: "https://www.consumerfinance.gov/ask-cfpb/what-is-an-escrow-or-impound-account-en-140/"

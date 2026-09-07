@@ -35,8 +35,40 @@ export const blogUi = {
     emptyState: 'The first guides are on their way. Check back soon.',
     notFoundTitle: 'That guide does not exist',
     notFoundBody: 'The link may be broken or the guide may have been renamed. Everything we have published is one click away.',
-    disclaimer:
-      'Educational content only. Not a commitment to lend, and not financial, tax or legal advice. Loan programs, rates and limits shown were accurate on the publication date and are subject to change. Equal Housing Lender.',
+    legal: {
+      title: 'Important legal disclosures',
+      summary:
+        'Educational content only. Not a commitment to lend. Equal Housing Lender. Pedro Lira NMLS #318973 · Xpert Home Lending NMLS #2179191.',
+      items: [
+        {
+          heading: 'This is education, not advice',
+          body: 'These guides are general educational content. They are not a commitment to lend, not an offer or solicitation to enter into any particular loan, and not financial, tax or legal advice. Talk to your own tax preparer or attorney about how any of this applies to your situation.',
+        },
+        {
+          heading: 'About the payment examples',
+          body: 'Payment figures in these guides are illustrations calculated from the loan amount, rate and term stated in each chart. They are not quotes and no one is being offered these terms. Your actual rate and payment depend on your credit score, loan amount, loan-to-value, occupancy, property type, loan term, discount points and other factors, and can only be determined after a complete application and credit review.',
+        },
+        {
+          heading: 'About the rate data',
+          body: 'Where a guide shows a current rate, it comes from the ICE Mortgage Technology (Optimal Blue) OBMMI indices published by FRED, Federal Reserve Bank of St. Louis, and is refreshed daily. Those figures are national averages, not an offer of credit, and are not available to every borrower. They exclude points, fees, mortgage insurance and closing costs, so they are not an APR.',
+        },
+        {
+          heading: 'Programs, limits and guidelines change',
+          body: 'All loan programs are subject to credit approval and property appraisal. Rates, program terms and conditions are subject to change without notice. Not all products are available in all states or for all loan amounts, and other restrictions apply. Loan limits, mortgage insurance premiums, funding fees and underwriting guidelines cited in a guide were accurate on that guide’s publication date and are revised periodically by the agencies that set them — always confirm the current figure with the linked source before you rely on it.',
+        },
+        {
+          heading: 'Links to other sites',
+          body: 'Each guide links to the primary sources behind its numbers, including federal agencies and industry publications. Those sites are provided for reference. We do not control them, we are not responsible for their content, and a link is not an endorsement.',
+        },
+        {
+          heading: 'Licensing',
+          body: 'Broker Lenders is a registered trademark. Pedro Lira NMLS #318973 and Xpert Home Lending NMLS #2179191. Licensed in Utah, Idaho, Nevada, California, Texas, Florida and Colorado. Licensed by the California Department of Financial Protection and Innovation under the California Residential Mortgage Lending Act. Equal Housing Lender — we do business in accordance with the Federal Fair Housing Law and the Equal Credit Opportunity Act. You can verify our licensing at NMLS Consumer Access.',
+        },
+      ],
+      nmlsLabel: 'NMLS Consumer Access',
+      nmlsUrl: 'https://www.nmlsconsumeraccess.org/',
+      reviewed: 'Disclosures last reviewed',
+    },
   },
   es: {
     breadcrumbHome: 'Inicio',
@@ -67,8 +99,40 @@ export const blogUi = {
     emptyState: 'Las primeras guías vienen en camino. Vuelve pronto.',
     notFoundTitle: 'Esa guía no existe',
     notFoundBody: 'Puede que el enlace esté roto o que la guía haya cambiado de nombre. Todo lo que hemos publicado está a un clic.',
-    disclaimer:
-      'Contenido educativo únicamente. No es un compromiso de préstamo ni asesoría financiera, fiscal o legal. Los programas, tasas y límites mostrados eran correctos en la fecha de publicación y pueden cambiar. Prestamista de Vivienda Justa.',
+    legal: {
+      title: 'Divulgaciones legales importantes',
+      summary:
+        'Contenido educativo únicamente. No es un compromiso de préstamo. Prestamista de Vivienda Justa. Pedro Lira NMLS #318973 · Xpert Home Lending NMLS #2179191.',
+      items: [
+        {
+          heading: 'Esto es educación, no asesoría',
+          body: 'Estas guías son contenido educativo general. No son un compromiso de préstamo, no son una oferta ni una solicitud para contratar ningún préstamo en particular, y no son asesoría financiera, fiscal ni legal. Habla con tu propio preparador de impuestos o abogado sobre cómo aplica todo esto a tu situación.',
+        },
+        {
+          heading: 'Sobre los ejemplos de pago',
+          body: 'Las cifras de pago de estas guías son ilustraciones calculadas con el monto, la tasa y el plazo indicados en cada gráfica. No son cotizaciones y no se le están ofreciendo estos términos a nadie. Tu tasa y tu pago reales dependen de tu puntaje de crédito, el monto del préstamo, el financiamiento sobre el valor, si vas a vivir ahí, el tipo de propiedad, el plazo, los puntos de descuento y otros factores, y solo se pueden determinar después de una solicitud completa y una revisión de crédito.',
+        },
+        {
+          heading: 'Sobre los datos de tasas',
+          body: 'Cuando una guía muestra una tasa vigente, viene de los índices OBMMI de ICE Mortgage Technology (Optimal Blue) publicados por FRED, del Banco de la Reserva Federal de St. Louis, y se actualiza a diario. Esas cifras son promedios nacionales, no una oferta de crédito, y no están disponibles para todos los prestatarios. No incluyen puntos, cuotas, seguro hipotecario ni costos de cierre, así que no son una APR.',
+        },
+        {
+          heading: 'Los programas, límites y guías cambian',
+          body: 'Todos los programas de préstamo están sujetos a aprobación crediticia y a un avalúo de la propiedad. Las tasas, términos y condiciones pueden cambiar sin previo aviso. No todos los productos están disponibles en todos los estados ni para todos los montos, y aplican otras restricciones. Los límites de préstamo, las primas de seguro hipotecario, las cuotas de financiamiento y las guías de evaluación citadas en una guía eran correctos en la fecha de publicación de esa guía y las agencias que los fijan los revisan periódicamente — confirma siempre la cifra vigente con la fuente enlazada antes de tomar una decisión.',
+        },
+        {
+          heading: 'Enlaces a otros sitios',
+          body: 'Cada guía enlaza a las fuentes primarias detrás de sus números, incluyendo agencias federales y publicaciones del sector. Esos sitios se ofrecen como referencia. No los controlamos, no somos responsables de su contenido, y un enlace no significa que los respaldemos.',
+        },
+        {
+          heading: 'Licencias',
+          body: 'Broker Lenders es una marca registrada. Pedro Lira NMLS #318973 y Xpert Home Lending NMLS #2179191. Con licencia en Utah, Idaho, Nevada, California, Texas, Florida y Colorado. Licenciado por el Departamento de Protección Financiera e Innovación de California bajo la Ley de Préstamos Hipotecarios Residenciales de California. Prestamista de Vivienda Justa — operamos conforme a la Ley Federal de Vivienda Justa y a la Ley de Igualdad de Oportunidades de Crédito. Puedes verificar nuestras licencias en NMLS Consumer Access.',
+        },
+      ],
+      nmlsLabel: 'NMLS Consumer Access',
+      nmlsUrl: 'https://www.nmlsconsumeraccess.org/',
+      reviewed: 'Divulgaciones revisadas por última vez',
+    },
   },
 } as const;
 

@@ -6,6 +6,11 @@ category: "Refinanciar"
 kicker: "Refinanciamiento"
 readingMinutes: 8
 keywords: "punto de equilibrio refinanciamiento, conviene refinanciar, calculadora de refinanciamiento, refinanciamiento con retiro de efectivo, quitar PMI refinanciando, costos de cierre refinanciamiento"
+rateExample:
+  rate: 6.25
+  loanAmount: 340000
+  termYears: 30
+  series: "30-year-fixed"
 sources:
   - label: "CFPB — Owning a Home: el proceso hipotecario"
     url: "https://www.consumerfinance.gov/owning-a-home/"
