@@ -29,3 +29,4 @@ Disallow: /
 
 # Sitemap
 Sitemap: https://brokerlenders.com/sitemap-index.xml
+Sitemap: https://brokerlenders.com/sitemap-blog.xml
