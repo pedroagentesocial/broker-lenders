@@ -6,7 +6,7 @@ import { getPublishedPosts } from '../lib/blog';
 // segunda línea `Sitemap:` en public/robots.txt.
 export const prerender = false;
 
-const SITE_URL = 'https://brokerlenders.com';
+const SITE_URL = 'https://www.brokerlenders.com';
 
 const escape = (value: string) =>
   value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');

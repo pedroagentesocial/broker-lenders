@@ -28,5 +28,5 @@ User-agent: Google-Extended
 Disallow: /
 
 # Sitemap
-Sitemap: https://brokerlenders.com/sitemap-index.xml
-Sitemap: https://brokerlenders.com/sitemap-blog.xml
+Sitemap: https://www.brokerlenders.com/sitemap-index.xml
+Sitemap: https://www.brokerlenders.com/sitemap-blog.xml

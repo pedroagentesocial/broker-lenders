@@ -30,7 +30,7 @@ const data = post?.entry.data;
 const Content = post ? (await render(post.entry)).Content : null;
 const related = post ? await getRelated(post.slug, lang, 3) : [];
 
-const SITE_URL = 'https://brokerlenders.com';
+const SITE_URL = 'https://www.brokerlenders.com';
 const postUrl = post ? `${SITE_URL}/blog/${post.slug}` : `${SITE_URL}/blog`;
 
 const articleJsonLd =
@@ -255,7 +255,7 @@ const breadcrumbJsonLd =
           {t.ctaPrimary}
         </a>
         <a
-          href="tel:8013070273"
+          href="tel:+18017557181"
           class="border border-white px-8 py-3 rounded-[48px] font-semibold hover:bg-white hover:text-black transition-colors"
         >
           {t.ctaSecondary}

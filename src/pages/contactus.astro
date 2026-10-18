@@ -14,7 +14,7 @@ const recaptchaSiteKey =
 
 <Layout
   title="Contact Us - Broker Lenders | Talk to a Licensed Mortgage Broker"
-  description="Get in touch with Broker Lenders. Call (801) 307-0273 or send a message to speak with a licensed mortgage broker about your home loan options. NMLS #318973."
+  description="Get in touch with Broker Lenders. Call (801) 755-7181 or send a message to speak with a licensed mortgage broker about your home loan options. NMLS #318973."
   keywords="contact mortgage broker, home loan consultation, broker lenders contact, mortgage broker Utah"
   hreflangPath="/contactus"
 >
@@ -39,11 +39,11 @@ const recaptchaSiteKey =
         We're here to help you with all your mortgage needs. Get in touch with our experienced team today.
       </p>
       <div class="flex items-center justify-center gap-4">
-        <a href="tel:8013070273" class="bg-black text-white px-8 py-3 rounded-[48px] font-semibold hover:bg-red-600 hover:text-white transition-colors inline-flex items-center justify-center">
+        <a href="tel:+18017557181" class="bg-black text-white px-8 py-3 rounded-[48px] font-semibold hover:bg-red-600 hover:text-white transition-colors inline-flex items-center justify-center">
           <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
           </svg>
-          <span data-i18n="hero.cta.callFull">Call (801) 307-0273</span>
+          <span data-i18n="hero.cta.callFull">Call (801) 755-7181</span>
         </a>
         <a id="heroSendBtn" href="#contact-form" class="bg-white text-black border border-black px-8 py-3 rounded-[48px] font-semibold hover:bg-black hover:text-white transition-colors inline-flex items-center justify-center">
           <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -75,8 +75,8 @@ const recaptchaSiteKey =
           </div>
           <h3 class="text-xl font-semibold text-gray-900 mb-2" data-i18n="cards.phone.title">Call Us</h3>
           <p class="text-gray-600 mb-4" data-i18n="cards.phone.desc">Speak with our mortgage experts directly</p>
-          <a href="tel:8013070273" class="text-black hover:text-red-600 font-semibold text-lg">
-            (801) 307-0273
+          <a href="tel:+18017557181" class="text-black hover:text-red-600 font-semibold text-lg">
+            (801) 755-7181
           </a>
           <p class="text-sm text-gray-500 mt-2" data-i18n="cards.phone.hours">Mon-Fri: 8AM-6PM MST</p>
         </div>
@@ -90,8 +90,8 @@ const recaptchaSiteKey =
           </div>
           <h3 class="text-xl font-semibold text-gray-900 mb-2" data-i18n="cards.email.title">Email Us</h3>
           <p class="text-gray-600 mb-4" data-i18n="cards.email.desc">Send us your questions anytime</p>
-          <a href="mailto:info@brokerlenders.com" class="text-black hover:text-red-600 font-semibold">
-            info@brokerlenders.com
+          <a href="mailto:support@brokerlenders.com" class="text-black hover:text-red-600 font-semibold">
+            support@brokerlenders.com
           </a>
           <p class="text-sm text-gray-500 mt-2" data-i18n="cards.email.response">Response within 24 hours</p>
         </div>
@@ -271,7 +271,7 @@ const recaptchaSiteKey =
         hero: {
           title: 'Contact Us',
           description: "We're here to help you with all your mortgage needs. Get in touch with our experienced team today.",
-          cta: { callFull: 'Call (801) 307-0273', send: 'Send Message' },
+          cta: { callFull: 'Call (801) 755-7181', send: 'Send Message' },
           mailtoSubject: 'Contact Request from website',
           mailtoIntro: 'Hello Broker Lenders,\n\nI would like to get in touch.',
           mailtoUtm: 'UTM Attribution',
@@ -314,7 +314,7 @@ const recaptchaSiteKey =
         hero: {
           title: 'Contáctanos',
           description: 'Estamos aquí para ayudarte con todas tus necesidades hipotecarias. Ponte en contacto con nuestro equipo experimentado hoy mismo.',
-          cta: { callFull: 'Llamar (801) 307-0273', send: 'Enviar mensaje' },
+          cta: { callFull: 'Llamar (801) 755-7181', send: 'Enviar mensaje' },
           mailtoSubject: 'Solicitud de contacto desde el sitio web',
           mailtoIntro: 'Hola Broker Lenders,\n\nMe gustaría ponerme en contacto.',
           mailtoUtm: 'Atribución UTM',
@@ -581,7 +581,7 @@ const recaptchaSiteKey =
       const formSection = document.getElementById('contact-form');
       formSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-      const email = 'info@brokerlenders.com';
+      const email = 'support@brokerlenders.com';
       const lang: 'en' | 'es' = (localStorage.getItem('lang') || document.documentElement.getAttribute('lang')) === 'es' ? 'es' : 'en';
       const dict = translations[lang] || translations.en;
       const subject = encodeURIComponent(dict.hero.mailtoSubject);

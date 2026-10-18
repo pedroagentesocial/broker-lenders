@@ -12,8 +12,8 @@
     "trustBadgeStates": "Confianza de agentes en 7 estados",
     "trustBadgeNmls": "NMLS #318973",
     "primaryCta": "Agenda una demo de 15 minutos",
-    "secondaryCta": "Llama al (801) 307-0273",
-    "secondaryCtaAria": "Llamar a Broker Lenders al 801 307 0273",
+    "secondaryCta": "Llama al (801) 755-7181",
+    "secondaryCtaAria": "Llamar a Broker Lenders al 801 755 7181",
     "microcopy": "Sin tarjeta de crédito · Llamada de 15 minutos · Estrategia gratis",
     "floatingCard": "Preaprobación lista en 24 horas",
     "imageAlt": "Agente inmobiliario reunido con clientes"
@@ -240,8 +240,8 @@
     "subheadline": "Alíate con un lender que cierra rápido, comunica constantemente y ayuda a tus clientes a ganar.",
     "primaryCta": "Agenda mi llamada de 15 minutos",
     "primaryCtaAria": "Agenda una llamada de 15 minutos para aliarte con Broker Lenders",
-    "secondaryCta": "Llama al (801) 307-0273",
-    "secondaryCtaAria": "Llamar a Broker Lenders al 801 307 0273",
+    "secondaryCta": "Llama al (801) 755-7181",
+    "secondaryCtaAria": "Llamar a Broker Lenders al 801 755 7181",
     "microcopy": "Sin tarjeta de crédito · Sin compromiso · Llamada de 15 minutos",
     "responseIndicator": "Normalmente responde en 1 hora",
     "trustNmls": "NMLS #318973",
@@ -257,9 +257,9 @@
       "heading": "¿Aún tienes preguntas?",
       "body": "Escríbenos directo — normalmente respondemos en una hora en horas de oficina.",
       "emailCta": "Escríbenos",
-      "emailAria": "Escríbele a Broker Lenders a pedro@brokerlenders.com",
-      "phoneCta": "Llama al (801) 307-0273",
-      "phoneAria": "Llamar a Broker Lenders al 801 307 0273"
+      "emailAria": "Escríbele a Broker Lenders a support@brokerlenders.com",
+      "phoneCta": "Llama al (801) 755-7181",
+      "phoneAria": "Llamar a Broker Lenders al 801 755 7181"
     },
     "items": [
       {
@@ -356,7 +356,7 @@
   "mobileCTA": {
     "primary": "Agenda Demo",
     "primaryAria": "Agenda una demo de 15 minutos con Broker Lenders",
-    "secondaryAria": "Llamar a Broker Lenders al 801 307 0273",
+    "secondaryAria": "Llamar a Broker Lenders al 801 755 7181",
     "regionLabel": "Acciones rápidas"
   },
   "pricing": {

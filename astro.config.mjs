@@ -18,7 +18,7 @@ const changefreq = (value) =>
   /** @type {import('sitemap').EnumChangefreq} */ (/** @type {unknown} */ (value));
 
 export default defineConfig({
-  site: isGhPages ? 'https://pedroagentesocial.github.io' : 'https://brokerlenders.com',
+  site: isGhPages ? 'https://pedroagentesocial.github.io' : 'https://www.brokerlenders.com',
   base: isGhPages ? '/broker-lenders' : undefined,
   output: isGhPages ? 'static' : 'server',
   adapter: isGhPages ? undefined : vercel(),

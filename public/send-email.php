@@ -34,7 +34,7 @@ $language = 'es';
 $hostName = $_SERVER['HTTP_HOST'] ?? 'brokerlenders.com';
 $logoUrl = "https://{$hostName}/logo.png";
 $brandName = 'Broker Lenders';
-$brandEmail = 'info@brokerlenders.com';
+$brandEmail = 'support@brokerlenders.com';
 if (is_array($data)) {
     $firstName = isset($data['firstName']) ? trim($data['firstName']) : '';
     $lastName = isset($data['lastName']) ? trim($data['lastName']) : '';
