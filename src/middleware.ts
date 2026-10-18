@@ -1,4 +1,5 @@
 import type { MiddlewareHandler } from 'astro';
+import { applySecurityHeaders } from './lib/securityHeaders';
 
 /**
  * Redirección al dominio canónico.
@@ -30,7 +31,7 @@ function debeRedirigir(host: string): boolean {
   return true;
 }
 
-export const onRequest: MiddlewareHandler = (context, next) => {
+export const onRequest: MiddlewareHandler = async (context, next) => {
   const url = new URL(context.request.url);
 
   if (debeRedirigir(url.hostname)) {
@@ -41,5 +42,5 @@ export const onRequest: MiddlewareHandler = (context, next) => {
     return context.redirect(url.toString(), 301);
   }
 
-  return next();
+  return applySecurityHeaders(await next());
 };
