@@ -1,0 +1,36 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "_comment": [
+    "Cabeceras de seguridad a nivel de plataforma.",
+    "Hacen falta aquí y no solo en src/middleware.ts porque 30 de las 32",
+    "páginas son prerenderizadas (prerender = true): Vercel las sirve como",
+    "HTML estático desde la CDN, sin invocar la función, así que el middleware",
+    "de Astro nunca llega a ejecutarse para ellas.",
+    "El middleware se mantiene para las rutas dinámicas y la redirección al",
+    "dominio canónico; esto cubre todo lo demás.",
+    "Sobre la CSP: solo las directivas que no pueden romper nada. Falta",
+    "script-src, que exigiría quitar los scripts inline o firmarlos con nonce."
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), accelerometer=()"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "frame-ancestors 'self'; base-uri 'self'; object-src 'none'; form-action 'self'"
+        }
+      ]
+    }
+  ]
+}
