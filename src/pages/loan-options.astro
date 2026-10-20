@@ -11,6 +11,13 @@ export const prerender = true;
 const lang = 'en';
 const dict = enLO;
 
+// Las traducciones se pasan al cliente por el DOM, codificadas, en vez de que
+// el script las importe. Un `import` dentro de <script type="module"> no lo
+// empaqueta Astro: queda como URL y en producción daba 404, así que el
+// selector de idioma de esta página no hacía nada. Mismo patrón que rates.astro.
+const enB64 = Buffer.from(JSON.stringify(enLO)).toString('base64');
+const esB64 = Buffer.from(JSON.stringify(esLO)).toString('base64');
+
 // Prerender estático, el cliente maneja idioma
 ---
 
@@ -260,13 +267,25 @@ const dict = enLO;
 
 	<!-- Important Legal Disclosures -->
 	<ImportantLegal />
+  <!-- Traducciones para el script de abajo. Van por el DOM porque ese script
+       lleva type="module", y eso hace que Astro lo trate como inline y no
+       procese sus imports: quedaban como URL y daban 404 en producción. -->
+  <div id="i18n-loan-options" data-en={enB64} data-es={esB64} style="display:none"></div>
+
   <script type="module">
-  // Rutas relativas, no '/src/...': la absoluta solo la resuelve Vite en
-  // desarrollo. En producción el navegador la pedía tal cual y devolvía 404,
-  // así que las traducciones no cargaban y el cambio de idioma no hacía nada.
-  import enLO from '../translations/loan-options/en.json';
-  import esLO from '../translations/loan-options/es.json';
   (() => {
+    const i18nEl = document.getElementById('i18n-loan-options');
+    const decode = (b64) => {
+      try {
+        return JSON.parse(new TextDecoder().decode(
+          Uint8Array.from(atob(b64), (c) => c.charCodeAt(0))
+        ));
+      } catch {
+        return {};
+      }
+    };
+    const enLO = decode(i18nEl?.dataset.en || '');
+    const esLO = decode(i18nEl?.dataset.es || '');
     const translations = { en: enLO, es: esLO };
     const getInitialLang = () => {
       const urlLang = new URLSearchParams(window.location.search).get('lang');
