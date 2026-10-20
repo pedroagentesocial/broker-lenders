@@ -261,8 +261,11 @@ const dict = enLO;
 	<!-- Important Legal Disclosures -->
 	<ImportantLegal />
   <script type="module">
-  import enLO from '/src/translations/loan-options/en.json';
-  import esLO from '/src/translations/loan-options/es.json';
+  // Rutas relativas, no '/src/...': la absoluta solo la resuelve Vite en
+  // desarrollo. En producción el navegador la pedía tal cual y devolvía 404,
+  // así que las traducciones no cargaban y el cambio de idioma no hacía nada.
+  import enLO from '../translations/loan-options/en.json';
+  import esLO from '../translations/loan-options/es.json';
   (() => {
     const translations = { en: enLO, es: esLO };
     const getInitialLang = () => {
