@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import WhatsAppFloat from '../components/WhatsAppFloat.astro';
 
 export interface Props {
 	title: string;
@@ -162,6 +163,7 @@ const websiteJsonLd = {
 			<slot />
 		</main>
 		<Footer lang={lang} />
+		<WhatsAppFloat />
 	</body>
 </html>
 
