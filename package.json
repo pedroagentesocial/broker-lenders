@@ -15,15 +15,15 @@
     "fetch-rates": "node scripts/fetch-rates.js"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.7.2",
+    "@astrojs/sitemap": "^3.7.4",
     "@tailwindcss/vite": "^4.1.16",
-    "astro": "^5.15.2",
+    "astro": "^7.4.1",
     "dotenv": "^16.3.1",
-    "nodemailer": "^6.9.7",
+    "nodemailer": "^10.1.7",
     "swiper": "^12.1.4",
     "tailwindcss": "^4.1.16"
   },
   "devDependencies": {
-    "@astrojs/vercel": "^9.0.5"
+    "@astrojs/vercel": "^11.0.16"
   }
 }
