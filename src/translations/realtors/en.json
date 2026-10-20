@@ -12,8 +12,8 @@
     "trustBadgeStates": "Trusted by Realtors in 7 states",
     "trustBadgeNmls": "NMLS #318973",
     "primaryCta": "Book a 15-Minute Demo",
-    "secondaryCta": "Call (801) 755-7181",
-    "secondaryCtaAria": "Call Broker Lenders at 801 755 7181",
+    "secondaryCta": "Call (385) 308-0273",
+    "secondaryCtaAria": "Call Broker Lenders at 385 308 0273",
     "microcopy": "No credit card required · 15-minute call · Free strategy",
     "floatingCard": "Pre-approval ready in 24 hours",
     "imageAlt": "Real estate agent meeting with clients"
@@ -240,8 +240,8 @@
     "subheadline": "Partner with a lender that closes fast, communicates constantly, and helps your clients win.",
     "primaryCta": "Book my 15-minute call",
     "primaryCtaAria": "Book a 15-minute call to partner with Broker Lenders",
-    "secondaryCta": "Call (801) 755-7181",
-    "secondaryCtaAria": "Call Broker Lenders at 801 755 7181",
+    "secondaryCta": "Call (385) 308-0273",
+    "secondaryCtaAria": "Call Broker Lenders at 385 308 0273",
     "microcopy": "No credit card required · No commitment · 15-minute call",
     "responseIndicator": "Typically replies within 1 hour",
     "trustNmls": "NMLS #318973",
@@ -258,8 +258,8 @@
       "body": "Reach out directly — we usually reply within an hour during business hours.",
       "emailCta": "Email us",
       "emailAria": "Email Broker Lenders at support@brokerlenders.com",
-      "phoneCta": "Call (801) 755-7181",
-      "phoneAria": "Call Broker Lenders at 801 755 7181"
+      "phoneCta": "Call (385) 308-0273",
+      "phoneAria": "Call Broker Lenders at 385 308 0273"
     },
     "items": [
       {
@@ -356,7 +356,7 @@
   "mobileCTA": {
     "primary": "Book a Demo",
     "primaryAria": "Book a 15-minute demo with Broker Lenders",
-    "secondaryAria": "Call Broker Lenders at 801 755 7181",
+    "secondaryAria": "Call Broker Lenders at 385 308 0273",
     "regionLabel": "Quick actions"
   },
   "pricing": {
