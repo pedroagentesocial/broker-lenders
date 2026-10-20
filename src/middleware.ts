@@ -33,10 +33,14 @@ function debeRedirigir(host: string): boolean {
 
 export const onRequest: MiddlewareHandler = async (context, next) => {
   // @astrojs/vercel v9 deja que la cabecera `x-astro-path` decida qué ruta se
-  // renderiza, sin comprobar nada (GHSA, "Unauthenticated Path Override"). Las
-  // páginas de este sitio se prerenderizan y salen del CDN, así que el riesgo
-  // se limita a las rutas SSR (/api/*), pero no cuesta nada cerrarlo: ningún
-  // cliente legítimo manda esa cabecera, solo la pone el adaptador por dentro.
+  // renderiza, sin comprobar nada (GHSA, "Unauthenticated Path Override").
+  //
+  // Medido en producción: el adaptador reescribe la ruta ANTES de llegar aquí,
+  // así que este rechazo no intercepta la reescritura. Lo que sí acota el daño
+  // es que casi todo el sitio se prerenderiza: la función solo conoce /api/*,
+  // y apuntar la cabecera a una página estática devuelve 404 en vez de
+  // servirla. Se deja el rechazo porque cubre las peticiones que sí llegan al
+  // middleware y no cuesta nada: ningún cliente legítimo manda esa cabecera.
   //
   // Lo arregla de raíz subir a @astrojs/vercel v11 (rama chore/astro7).
   const req = context.request.headers;
