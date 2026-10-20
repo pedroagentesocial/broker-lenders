@@ -6,9 +6,11 @@ import ImportantLegal from '../components/ImportantLegal.astro';
 
 export const prerender = true;
 
-const recaptchaSiteKey =
-  import.meta.env.PUBLIC_GOOGLE_RECAPTCHA_SITE_KEY ??
-  '6Ldmv7wsAAAAAIIhaZeMzTcSWxtjP8EblO7izC9Z';
+// Sin fallback a una clave escrita en el código: el par de claves que estaba
+// aquí quedó publicado en el historial de este repo, que es público, y hay que
+// rotarlo. Si la variable no está configurada, el formulario se muestra
+// deshabilitado en vez de cargar un captcha que el servidor no puede verificar.
+const recaptchaSiteKey = import.meta.env.PUBLIC_GOOGLE_RECAPTCHA_SITE_KEY ?? '';
 ---
 
 
@@ -208,6 +210,20 @@ const recaptchaSiteKey =
           <div id="recaptchaContainer" class="mb-6 hidden justify-center" aria-hidden="true"></div>
 
           <div class="text-center flex flex-col items-center relative" id="submitContainer">
+            {!recaptchaSiteKey && (
+              <p
+                id="captchaUnavailable"
+                class="mb-4 max-w-md rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900"
+              >
+                El formulario no está disponible en este momento. Llámanos al
+                {' '}<a class="font-semibold underline" href="tel:+13853080273">(385) 308-0273</a>{' '}
+                o escríbenos por{' '}
+                <a class="font-semibold underline" href="https://wa.me/13853080273" target="_blank" rel="noopener noreferrer">WhatsApp</a>.
+                <span class="block mt-1 text-amber-800">
+                  This form is temporarily unavailable. Call us or message us on WhatsApp.
+                </span>
+              </p>
+            )}
             <div id="submitHint" class="hidden absolute -top-12 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-xs px-3 py-2 rounded-lg shadow-lg">
               <span data-i18n="form.validationConsent"></span>
               <span class="absolute left-1/2 -bottom-1 h-2 w-2 -translate-x-1/2 rotate-45 bg-gray-900"></span>

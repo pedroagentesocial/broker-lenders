@@ -92,11 +92,16 @@ export const POST: APIRoute = async ({ request }) => {
     });
 
     const webhookUrl = import.meta.env.CONTACT_WEBHOOK_URL as string | undefined;
-    if (webhookUrl) {
-      await sendWebhook(webhookUrl, payload);
-    } else {
-      console.warn('CONTACT_WEBHOOK_URL not configured - webhook delivery skipped');
+    if (!webhookUrl) {
+      // Antes se respondía ok:true y el mensaje se perdía en silencio: el
+      // visitante veía "enviado" y nadie recibía nada. Mejor fallar a la vista.
+      console.error('CONTACT_WEBHOOK_URL no configurado — el mensaje NO se entregó');
+      return new Response(
+        JSON.stringify({ error: 'Contact delivery is not configured. Please call us at (385) 308-0273.' }),
+        { status: 503, headers: { 'Content-Type': 'application/json' } },
+      );
     }
+    await sendWebhook(webhookUrl, payload);
 
     return new Response(JSON.stringify({ ok: true }), {
       status: 200,
