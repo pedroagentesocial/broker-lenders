@@ -4,5 +4,7 @@
   "bookTitle": "Book an appointment",
   "bookDescription": "Schedule a call with one of our loan officers to discuss your options.",
   "callTitle": "Call us",
-  "callDescription": "Speak with a loan officer right now to get started on your home purchase."
+  "callDescription": "Speak with a loan officer right now to get started on your home purchase.",
+  "whatsappTitle": "WhatsApp",
+  "whatsappDescription": "Message us on WhatsApp and get a reply without waiting on the phone."
 }
