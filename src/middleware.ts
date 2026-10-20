@@ -32,6 +32,18 @@ function debeRedirigir(host: string): boolean {
 }
 
 export const onRequest: MiddlewareHandler = async (context, next) => {
+  // @astrojs/vercel v9 deja que la cabecera `x-astro-path` decida qué ruta se
+  // renderiza, sin comprobar nada (GHSA, "Unauthenticated Path Override"). Las
+  // páginas de este sitio se prerenderizan y salen del CDN, así que el riesgo
+  // se limita a las rutas SSR (/api/*), pero no cuesta nada cerrarlo: ningún
+  // cliente legítimo manda esa cabecera, solo la pone el adaptador por dentro.
+  //
+  // Lo arregla de raíz subir a @astrojs/vercel v11 (rama chore/astro7).
+  const req = context.request.headers;
+  if (req.has('x-astro-path') || req.has('x_astro_path')) {
+    return new Response('Bad Request', { status: 400 });
+  }
+
   const url = new URL(context.request.url);
 
   if (debeRedirigir(url.hostname)) {
