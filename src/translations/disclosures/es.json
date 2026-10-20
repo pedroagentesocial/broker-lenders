@@ -36,12 +36,30 @@
           "title": "California",
           "p": "Licenciado por el Departamento de Protección e Innovación Financiera bajo la Ley de Préstamos Hipotecarios Residenciales de California. Licenciado por el Departamento de Protección e Innovación Financiera bajo la Licencia de Financiamiento de California."
         },
-        "utah": { "title": "Utah", "p": "Licenciado por el Departamento de Instituciones Financieras de Utah. Licencia de Prestamista Hipotecario de Utah." },
-        "idaho": { "title": "Idaho", "p": "Licenciado por el Departamento de Finanzas de Idaho. Licencia de Corredor/Prestamista Hipotecario de Idaho." },
-        "texas": { "title": "Texas", "p": "Licenciado por el Departamento de Ahorros y Préstamos Hipotecarios de Texas. Licencia de Originador de Préstamos Hipotecarios Residenciales de Texas." },
-        "nevada": { "title": "Nevada", "p": "Licenciado por la División de Préstamos Hipotecarios de Nevada. Licencia de Corredor Hipotecario de Nevada." },
-        "florida": { "title": "Florida", "p": "Licenciado por la Oficina de Regulación Financiera de Florida. Licencia de Prestamista Hipotecario de Florida." },
-        "colorado": { "title": "Colorado", "p": "Licenciado por la División de Bienes Raíces de Colorado. Licencia de Originador de Préstamos Hipotecarios de Colorado." }
+        "utah": {
+          "title": "Utah",
+          "p": "Licenciado por el Departamento de Instituciones Financieras de Utah. Licencia de Prestamista Hipotecario de Utah."
+        },
+        "idaho": {
+          "title": "Idaho",
+          "p": "Licenciado por el Departamento de Finanzas de Idaho. Licencia de Corredor/Prestamista Hipotecario de Idaho."
+        },
+        "texas": {
+          "title": "Texas",
+          "p": "Licenciado por el Departamento de Ahorros y Préstamos Hipotecarios de Texas. Licencia de Originador de Préstamos Hipotecarios Residenciales de Texas."
+        },
+        "nevada": {
+          "title": "Nevada",
+          "p": "Licenciado por la División de Préstamos Hipotecarios de Nevada. Licencia de Corredor Hipotecario de Nevada."
+        },
+        "florida": {
+          "title": "Florida",
+          "p": "Licenciado por la Oficina de Regulación Financiera de Florida. Licencia de Prestamista Hipotecario de Florida."
+        },
+        "colorado": {
+          "title": "Colorado",
+          "p": "Licenciado por la División de Bienes Raíces de Colorado. Licencia de Originador de Préstamos Hipotecarios de Colorado."
+        }
       },
       "additional_title": "Estados Adicionales",
       "additional_p": "Podemos mantener licencias en estados adicionales según lo requiera la ley. La información específica de licencias para cada estado puede verificarse a través del sitio web NMLS Consumer Access.",
@@ -162,9 +180,12 @@
       "property_p": "Todos los préstamos están sujetos a tasación de la propiedad y pueden requerir inspecciones adicionales de la propiedad. La propiedad debe cumplir con las directrices del prestamista e inversionista para el programa de préstamo específico.",
       "questions_title": "¿Preguntas o Comentarios?",
       "questions_p": "Si tienes preguntas sobre estas divulgaciones o nuestras prácticas de préstamos, por favor contáctanos:",
-      "questions_labels": { "phone": "Teléfono:", "email": "Email:" },
-      "footer_effective": "Estas divulgaciones son efectivas desde diciembre de 2024 y están sujetas a cambios según lo requiera la ley.",
-      "footer_copy": "© 2024 Broker Lenders. Todos los derechos reservados. Pedro Lira NMLS #318973, Xpert Home Lending NMLS #2179191. Prestamista de Vivienda Igualitaria."
+      "questions_labels": {
+        "phone": "Teléfono:",
+        "email": "Email:"
+      },
+      "footer_effective": "Estas divulgaciones son efectivas desde octubre de 2026 y están sujetas a cambios según lo requiera la ley.",
+      "footer_copy": "© 2026 Broker Lenders. Todos los derechos reservados. Pedro Lira NMLS #318973, Xpert Home Lending NMLS #2179191. Prestamista de Vivienda Igualitaria."
     }
   },
   "sidebar": {

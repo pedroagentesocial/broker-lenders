@@ -130,7 +130,7 @@
       "pEnd": "Si nos damos cuenta de que hemos recopilado información personal de un menor de 18 años, tomaremos medidas para eliminar dicha información de manera rápida."
     },
     "changes": {
-      "title": "10. Cambios a esta Política de Privacidad",
+      "title": "13. Cambios a esta Política de Privacidad",
       "p1": "Podemos actualizar esta Política de Privacidad periódicamente para reflejar cambios en nuestras prácticas o leyes aplicables. Te notificaremos cualquier cambio material mediante:",
       "items": {
         "i1": "Publicar la política actualizada en nuestro sitio web",
@@ -140,7 +140,7 @@
       "pEnd": "El uso continuo de nuestro sitio o servicios después de cualquier cambio indica que aceptas la Política de Privacidad actualizada."
     },
     "contact": {
-      "title": "11. Información de Contacto",
+      "title": "14. Información de Contacto",
       "p1": "Si tienes preguntas sobre esta Política de Privacidad o nuestras prácticas, contáctanos:",
       "box": {
         "name": "Broker Lenders",
@@ -153,15 +153,31 @@
         },
         "values": {
           "phone": "(385) 308-0273",
-          "email": "support@brokerlenders.com",
+          "email": "support@agentesocial.com",
           "website": "www.brokerlenders.com"
         }
       },
       "pEnd": "Responderemos a tu consulta en un plazo razonable y de acuerdo con la ley aplicable."
     },
     "footer": {
-      "effective": "Esta Política de Privacidad es efectiva desde diciembre de 2024 y aplica a toda información recopilada por Broker Lenders.",
-      "copy": "© 2024 Broker Lenders. Todos los derechos reservados. Prestamista de Vivienda Igualitaria."
+      "effective": "Esta Política de Privacidad es efectiva desde octubre de 2026 y aplica a toda información recopilada por Broker Lenders.",
+      "copy": "© 2026 Broker Lenders. Todos los derechos reservados. Prestamista de Vivienda Igualitaria."
+    },
+    "communications": {
+      "title": "10. Llamadas, mensajes de texto y correos",
+      "p1": "Cuando usted nos deja su número de teléfono en un formulario, en el chat o por cualquier otro medio, nos autoriza expresamente a comunicarnos con usted a ese número — incluso si aparece en el Registro Nacional No Llame — por llamada y por mensaje de texto (SMS), incluidos los sistemas de marcación automática y los mensajes pregrabados, con el fin de responder a su solicitud y darle seguimiento sobre productos hipotecarios.",
+      "p2": "Esta autorización no es condición para comprar ni para obtener ningún servicio. Puede recibir hasta 10 mensajes al mes; la frecuencia varía. Pueden aplicar cargos de mensajes y datos de su operador.",
+      "p3": "Puede revocar su consentimiento en cualquier momento: responda STOP o BAJA a cualquier mensaje de texto para dejar de recibirlos, responda HELP o AYUDA para obtener asistencia, use el enlace para darse de baja en cualquier correo, o escríbanos a support@agentesocial.com. Procesamos las revocaciones con prontitud; solo seguiremos enviando los mensajes estrictamente necesarios para una solicitud en curso."
+    },
+    "financialInformation": {
+      "title": "11. Información financiera y de crédito (GLBA)",
+      "p1": "Como intermediarios hipotecarios, la información financiera personal que usted nos confía es información personal no pública sujeta a la Ley Gramm-Leach-Bliley (GLBA) y al Reglamento P. La usamos únicamente para evaluar y gestionar su solicitud, y la compartimos con prestamistas, aseguradoras, proveedores de avalúo y proveedores de servicios estrictamente en la medida necesaria para procesarla, o cuando la ley lo permita o lo exija.",
+      "p2": "El puntaje crediticio que usted introduce en nuestras calculadoras es una estimación que usted mismo reporta: no es una consulta a su reporte de crédito. Ninguna consulta formal (hard inquiry) se realiza sin su autorización expresa y por separado, conforme a la Ley de Informe Justo de Crédito (FCRA).",
+      "p3": "No vendemos su información personal ni la compartimos con terceros para su publicidad conductual entre sitios. Respetamos la señal Global Privacy Control (GPC) de su navegador como una solicitud válida de exclusión cuando la ley aplicable así lo exige."
+    },
+    "securityIncidents": {
+      "title": "12. Notificación de incidentes de seguridad",
+      "p1": "Si ocurriera un acceso no autorizado que comprometa su información personal, se lo notificaremos y daremos aviso a las autoridades correspondientes en los plazos y la forma que exija la ley del estado donde usted resida."
     }
   },
   "sidebar": {

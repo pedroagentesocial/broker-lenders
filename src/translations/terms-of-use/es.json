@@ -85,10 +85,56 @@
       "p3": "Si un tribunal declara inválida o inaplicable alguna disposición de estos Términos, las disposiciones restantes seguirán en vigor."
     },
     "changes": {
-      "title": "12. Cambios a los Términos",
+      "title": "18. Cambios a los Términos",
       "p1": "Nos reservamos el derecho, a nuestro exclusivo criterio, de modificar o reemplazar estos Términos en cualquier momento. Si una revisión es material, proporcionaremos al menos 30 días de aviso antes de que entren en vigor los nuevos términos.",
       "p2": "Lo que constituye un cambio material será determinado a nuestra entera discreción. Al continuar accediendo o utilizando nuestro sitio web después de que entren en vigor las revisiones, usted acepta estar sujeto a los términos revisados.",
       "p3": "Si no está de acuerdo con los nuevos términos, ya no está autorizado para usar el sitio web."
+    },
+    "licensing": {
+      "title": "12. Licencias y avisos regulatorios",
+      "p1": "Pedro Lira NMLS #318973 | Xpert Home Lending NMLS #2179191. Puede verificar nuestras licencias en NMLS Consumer Access (nmlsconsumeraccess.org). Operamos únicamente en los estados donde contamos con licencia vigente; la lista aparece en nuestra página de Divulgaciones y Licencias.",
+      "p2": "Igualdad de Oportunidades de Vivienda. Cumplimos con la Ley de Vivienda Justa y la Ley de Igualdad de Oportunidades de Crédito. No discriminamos por raza, color, religión, origen nacional, sexo, discapacidad, estado familiar, edad, estado civil, orientación sexual, identidad de género ni por recibir ingresos de programas de asistencia pública.",
+      "p3": "Aviso para residentes de Texas: las quejas sobre compañías hipotecarias deben enviarse al Departamento de Ahorros y Préstamos Hipotecarios de Texas, 2601 North Lamar, Suite 201, Austin, Texas 78705. En sml.texas.gov está publicado el formulario y el procedimiento, incluido el acceso al fondo de recuperación."
+    },
+    "noAdvice": {
+      "title": "13. Las herramientas son estimaciones, no una oferta de crédito",
+      "p1": "Las calculadoras, tasas, comparadores y resultados de precalificación del Sitio son estimaciones con fines informativos y educativos. Dependen de los datos que usted introduce y de supuestos generales sobre impuestos, seguros y condiciones del mercado.",
+      "items": {
+        "i1": "No constituyen una oferta de crédito, un compromiso de préstamo ni una aprobación.",
+        "i2": "No son una Estimación de Préstamo (Loan Estimate) conforme a TILA-RESPA. Solo la Estimación de Préstamo que emita un prestamista tras una solicitud completa refleja términos reales.",
+        "i3": "Las tasas mostradas son referenciales, cambian sin previo aviso y dependen de su perfil, del programa y del bloqueo de tasa.",
+        "i4": "Nada en el Sitio constituye asesoría legal, fiscal, contable ni de inversión. Consulte a un profesional con licencia en su estado."
+      }
+    },
+    "electronicCommunications": {
+      "title": "14. Comunicaciones electrónicas (E-SIGN)",
+      "p1": "Al usar el Sitio, usted consiente recibir de forma electrónica los avisos, contratos, divulgaciones y demás comunicaciones relacionadas con los Servicios, conforme a la Ley E-SIGN. Esas comunicaciones electrónicas satisfacen cualquier requisito legal de constar por escrito. Para recibirlas necesita un dispositivo con acceso a internet, un navegador actualizado y una cuenta de correo válida. Puede retirar este consentimiento o pedir una copia en papel escribiendo a support@agentesocial.com."
+    },
+    "arbitration": {
+      "title": "15. Arbitraje vinculante y renuncia a demandas colectivas",
+      "p1": "LEA ESTA SECCIÓN CON ATENCIÓN: AFECTA SUS DERECHOS. Cualquier controversia que surja de estos Términos o del uso del Sitio se resolverá mediante arbitraje individual y vinculante, administrado por la American Arbitration Association conforme a sus Reglas de Arbitraje del Consumidor, y no ante un tribunal, salvo las excepciones indicadas abajo. La Ley Federal de Arbitraje rige la interpretación de esta sección.",
+      "items": {
+        "i1": "Usted y nosotros renunciamos al juicio por jurado.",
+        "i2": "Las reclamaciones se presentan a título individual. Ninguna de las partes puede actuar como demandante o miembro de clase en una demanda colectiva o representativa, ni consolidar reclamaciones de varias personas.",
+        "i3": "Quedan fuera del arbitraje las reclamaciones que puedan presentarse en un tribunal de menor cuantía y las acciones para proteger propiedad intelectual mediante medidas cautelares.",
+        "i4": "Antes de iniciar un arbitraje, la parte que reclama enviará un aviso escrito describiendo la controversia y dará 30 días para resolverla de buena fe."
+      },
+      "pEnd": "Derecho a excluirse: puede rechazar esta cláusula de arbitraje enviando un aviso escrito a support@agentesocial.com dentro de los 30 días siguientes a su primer uso del Sitio, indicando su nombre, domicilio y su decisión de excluirse. Excluirse no afecta ninguna otra parte de estos Términos. Si la renuncia a demandas colectivas se declarara inejecutable, toda esta sección de arbitraje quedaría sin efecto."
+    },
+    "timeToClaim": {
+      "title": "16. Plazo para reclamar",
+      "p1": "Cualquier reclamación derivada del uso del Sitio o de estos Términos debe presentarse dentro de UN (1) AÑO contado desde el hecho que la origina, en la medida en que la ley aplicable permita pactar ese plazo. Transcurrido ese tiempo, la reclamación queda definitivamente excluida."
+    },
+    "generalProvisions": {
+      "title": "17. Disposiciones generales",
+      "items": {
+        "i1": "Divisibilidad: si una disposición se declara inválida, el resto sigue en pleno vigor.",
+        "i2": "No renuncia: el hecho de que no exijamos el cumplimiento de una disposición no implica renunciar a ella.",
+        "i3": "Cesión: usted no puede ceder estos Términos sin nuestro consentimiento escrito; nosotros sí podemos cederlos en el marco de una reorganización o venta del negocio.",
+        "i4": "Acuerdo íntegro: estos Términos y la Política de Privacidad constituyen el acuerdo completo entre usted y nosotros respecto del Sitio.",
+        "i5": "Fuerza mayor: no respondemos por incumplimientos derivados de causas fuera de nuestro control razonable.",
+        "i6": "Foro: salvo lo dispuesto en la sección de arbitraje, los tribunales estatales y federales del Condado de Salt Lake, Utah, tienen jurisdicción exclusiva."
+      }
     }
   },
   "contact": {
@@ -99,8 +145,8 @@
     "phone_label": "Teléfono:",
     "phone": "(385) 308-0273",
     "email_label": "Correo:",
-    "email": "support@brokerlenders.com",
-    "copyright": "© 2024 Broker Lenders. Todos los derechos reservados. Equal Housing Lender."
+    "email": "support@agentesocial.com",
+    "copyright": "© 2026 Broker Lenders. Todos los derechos reservados. Equal Housing Lender."
   },
   "sidebar": {
     "legal_info": "Información Legal",

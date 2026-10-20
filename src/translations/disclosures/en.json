@@ -36,12 +36,30 @@
           "title": "California",
           "p": "Licensed by the Department of Financial Protection and Innovation under the California Residential Mortgage Lending Act. Licensed by the Department of Financial Protection and Innovation under the California Financing Law License."
         },
-        "utah": { "title": "Utah", "p": "Licensed by the Utah Department of Financial Institutions. Utah Mortgage Lender License." },
-        "idaho": { "title": "Idaho", "p": "Licensed by the Idaho Department of Finance. Idaho Mortgage Broker/Lender License." },
-        "texas": { "title": "Texas", "p": "Licensed by the Texas Department of Savings and Mortgage Lending. Texas Residential Mortgage Loan Originator License." },
-        "nevada": { "title": "Nevada", "p": "Licensed by the Nevada Division of Mortgage Lending. Nevada Mortgage Broker License." },
-        "florida": { "title": "Florida", "p": "Licensed by the Florida Office of Financial Regulation. Florida Mortgage Lender License." },
-        "colorado": { "title": "Colorado", "p": "Licensed by the Colorado Division of Real Estate. Colorado Mortgage Loan Originator License." }
+        "utah": {
+          "title": "Utah",
+          "p": "Licensed by the Utah Department of Financial Institutions. Utah Mortgage Lender License."
+        },
+        "idaho": {
+          "title": "Idaho",
+          "p": "Licensed by the Idaho Department of Finance. Idaho Mortgage Broker/Lender License."
+        },
+        "texas": {
+          "title": "Texas",
+          "p": "Licensed by the Texas Department of Savings and Mortgage Lending. Texas Residential Mortgage Loan Originator License."
+        },
+        "nevada": {
+          "title": "Nevada",
+          "p": "Licensed by the Nevada Division of Mortgage Lending. Nevada Mortgage Broker License."
+        },
+        "florida": {
+          "title": "Florida",
+          "p": "Licensed by the Florida Office of Financial Regulation. Florida Mortgage Lender License."
+        },
+        "colorado": {
+          "title": "Colorado",
+          "p": "Licensed by the Colorado Division of Real Estate. Colorado Mortgage Loan Originator License."
+        }
       },
       "additional_title": "Additional States",
       "additional_p": "We may maintain licenses in additional states as required by law. Specific licensing information for each state can be verified through the NMLS Consumer Access website.",
@@ -162,9 +180,12 @@
       "property_p": "All loans are subject to property appraisal and may require additional property inspections. Property must meet lender and investor guidelines for the specific loan program.",
       "questions_title": "Questions or Concerns?",
       "questions_p": "If you have any questions about these disclosures or our lending practices, please contact us:",
-      "questions_labels": { "phone": "Phone:", "email": "Email:" },
-      "footer_effective": "These disclosures are effective as of December 2024 and are subject to change as required by law.",
-      "footer_copy": "© 2024 Broker Lenders. All rights reserved. Pedro Lira NMLS #318973, Xpert Home Lending NMLS #2179191. Equal Housing Lender."
+      "questions_labels": {
+        "phone": "Phone:",
+        "email": "Email:"
+      },
+      "footer_effective": "These disclosures are effective as of October 2026 and are subject to change as required by law.",
+      "footer_copy": "© 2026 Broker Lenders. All rights reserved. Pedro Lira NMLS #318973, Xpert Home Lending NMLS #2179191. Equal Housing Lender."
     }
   },
   "sidebar": {

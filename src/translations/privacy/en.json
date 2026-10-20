@@ -130,7 +130,7 @@
       "pEnd": "If we become aware that we have collected personal information from a child under 18, we will take steps to delete such information promptly."
     },
     "changes": {
-      "title": "10. Changes to This Privacy Policy",
+      "title": "13. Changes to This Privacy Policy",
       "p1": "We may update this Privacy Policy from time to time to reflect changes in our practices or applicable laws. We will notify you of any material changes by:",
       "items": {
         "i1": "Posting the updated policy on our website",
@@ -140,7 +140,7 @@
       "pEnd": "Your continued use of our website or services after any changes indicates your acceptance of the updated Privacy Policy."
     },
     "contact": {
-      "title": "11. Contact Information",
+      "title": "14. Contact Information",
       "p1": "If you have any questions about this Privacy Policy or our privacy practices, please contact us:",
       "box": {
         "name": "Broker Lenders",
@@ -153,15 +153,31 @@
         },
         "values": {
           "phone": "(385) 308-0273",
-          "email": "support@brokerlenders.com",
+          "email": "support@agentesocial.com",
           "website": "www.brokerlenders.com"
         }
       },
       "pEnd": "We will respond to your inquiry within a reasonable timeframe and in accordance with applicable law."
     },
     "footer": {
-      "effective": "This Privacy Policy is effective as of December 2024 and applies to all information collected by Broker Lenders.",
-      "copy": "© 2024 Broker Lenders. All rights reserved. Equal Housing Lender."
+      "effective": "This Privacy Policy is effective as of October 2026 and applies to all information collected by Broker Lenders.",
+      "copy": "© 2026 Broker Lenders. All rights reserved. Equal Housing Lender."
+    },
+    "communications": {
+      "title": "10. Calls, Text Messages and Email",
+      "p1": "When you give us your phone number through a form, the chat or any other channel, you expressly authorize us to contact you at that number — even if it appears on the National Do Not Call Registry — by phone call and text message (SMS), including through automatic telephone dialing systems and prerecorded messages, in order to respond to your request and follow up about mortgage products.",
+      "p2": "This authorization is not a condition of any purchase or of receiving any service. You may receive up to 10 messages per month; frequency varies. Message and data rates may apply.",
+      "p3": "You can revoke your consent at any time: reply STOP to any text message to stop receiving them, reply HELP for assistance, use the unsubscribe link in any email, or write to support@agentesocial.com. We process revocations promptly; we will continue to send only the messages strictly necessary for an application already in progress."
+    },
+    "financialInformation": {
+      "title": "11. Financial and Credit Information (GLBA)",
+      "p1": "As a mortgage intermediary, the personal financial information you entrust to us is nonpublic personal information subject to the Gramm-Leach-Bliley Act (GLBA) and Regulation P. We use it solely to evaluate and manage your application, and we share it with lenders, insurers, appraisal providers and service providers strictly to the extent needed to process it, or where the law permits or requires it.",
+      "p2": "The credit score you enter in our calculators is a self-reported estimate: it is not a pull of your credit report. No hard inquiry is made without your express, separate authorization, as required by the Fair Credit Reporting Act (FCRA).",
+      "p3": "We do not sell your personal information, and we do not share it with third parties for cross-context behavioral advertising. We honor the Global Privacy Control (GPC) signal from your browser as a valid opt-out request where applicable law requires it."
+    },
+    "securityIncidents": {
+      "title": "12. Security Incident Notification",
+      "p1": "If unauthorized access were to compromise your personal information, we will notify you and the appropriate authorities within the timeframes and in the manner required by the law of the state where you reside."
     }
   },
   "sidebar": {
