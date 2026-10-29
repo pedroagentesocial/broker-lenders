@@ -1,3 +1,4 @@
+[2026-10-29T17:51:58.031Z] Tasas reales desde FRED, dato del 2026-10-28
 [2026-10-28T17:44:24.439Z] Tasas reales desde FRED, dato del 2026-10-27
 [2026-10-27T17:09:23.430Z] Tasas reales desde FRED, dato del 2026-10-26
 [2026-10-26T18:01:15.400Z] Tasas reales desde FRED, dato del 2026-10-23
