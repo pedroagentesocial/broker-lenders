@@ -1,7 +1,7 @@
 ---
 title: "When refinancing is worth it: the break-even math nobody shows you"
 description: "Forget the 1% rule. There is one calculation that answers the question, four legitimate reasons to refinance, and three traps that make a lower rate cost you more money over time."
-publishDate: 2027-03-15T13:00:00Z
+publishDate: 2026-03-30T13:00:00Z
 category: "Refinance"
 kicker: "Refinancing"
 readingMinutes: 8

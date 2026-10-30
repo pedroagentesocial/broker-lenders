@@ -1,7 +1,7 @@
 ---
 title: "Closing costs, line by line: what you're paying for and what you can negotiate"
 description: "About $12,000 on a $400,000 home — but only some of it is the lender's, and the law protects you differently on each part. Here is the full breakdown, which fees can legally change before closing, and how much a seller is allowed to pay."
-publishDate: 2026-11-09T13:00:00Z
+publishDate: 2026-07-13T13:00:00Z
 category: "Costs"
 kicker: "Closing costs"
 readingMinutes: 8

@@ -1,7 +1,7 @@
 ---
 title: "The document list that gets you approved — W-2 employee vs self-employed"
 description: "Exactly what to gather before you apply, why the underwriter asks for each piece, and the math that turns a self-employed borrower's $180,000 business into $105,500 of qualifying income."
-publishDate: 2027-02-01T13:00:00Z
+publishDate: 2026-05-04T13:00:00Z
 category: "Process"
 kicker: "Documents"
 readingMinutes: 8

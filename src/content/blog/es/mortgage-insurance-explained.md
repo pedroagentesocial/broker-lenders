@@ -1,7 +1,7 @@
 ---
 title: "Seguro hipotecario: cuánto cuesta y exactamente cuándo se quita"
 description: "PMI, MIP, cuota de garantía y cuota de financiamiento son cuatro cosas distintas con cuatro salidas distintas. Aquí está cuánto cuesta cada una, cuáles terminan por ley, y el mes en que tu PMI convencional está programado para desaparecer."
-publishDate: 2026-12-21T13:00:00Z
+publishDate: 2026-06-08T13:00:00Z
 category: "Costos"
 kicker: "Seguro hipotecario"
 readingMinutes: 8
