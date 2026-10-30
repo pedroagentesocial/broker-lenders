@@ -3,8 +3,6 @@ import type { Lang } from './lang';
 
 export type BlogEntry = CollectionEntry<'blog'>;
 
-/** Cadencia editorial: un artículo nuevo cada 21 días. */
-export const CADENCE_DAYS = 21;
 /** Cuánto tiempo un artículo lleva el sello "Nuevo". */
 export const NEW_BADGE_DAYS = 21;
 
@@ -92,22 +90,6 @@ export async function getPost(slug: string, lang: Lang, now: Date = new Date()):
       isNew: now.getTime() - publishDate.getTime() < NEW_BADGE_DAYS * DAY_MS,
     },
   };
-}
-
-/** Siguientes artículos programados, para el bloque "próximamente" del índice. */
-export async function getUpcoming(lang: Lang, limit = 2, now: Date = new Date()) {
-  const dates = await schedule();
-  const upcoming: { slug: string; publishDate: Date; entry: BlogEntry }[] = [];
-
-  for (const entry of await allEntries()) {
-    const parsed = parseId(entry.id);
-    if (parsed.lang !== lang) continue;
-    const publishDate = dates.get(parsed.slug);
-    if (!publishDate || publishDate <= now) continue;
-    upcoming.push({ slug: parsed.slug, publishDate, entry });
-  }
-
-  return upcoming.sort((a, b) => a.publishDate.getTime() - b.publishDate.getTime()).slice(0, limit);
 }
 
 /** Artículos relacionados: misma categoría primero, luego los más recientes. */

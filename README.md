@@ -46,7 +46,7 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 
 ## Blog (guías hipotecarias)
 
-Blog bilingüe con **publicación automática cada 21 días**. Sólo se enlaza desde el footer;
+Blog bilingüe con **todos los artículos publicados**. Sólo se enlaza desde el footer;
 no aparece en el header a propósito.
 
 ### Cómo funciona
@@ -67,22 +67,22 @@ no aparece en el header a propósito.
   a diferencia del resto del sitio, que traduce en el cliente con `data-i18n`. Es contenido
   largo y queremos que Google indexe cada versión.
 
-### Calendario actual
+### Fechas de publicación
 
-| # | Slug | Publicación |
-|---|------|-------------|
-| 1 | `how-much-house-can-i-afford` | 2026-07-27 |
-| 2 | `down-payment-myths` | 2026-08-17 |
-| 3 | `loan-types-compared` | 2026-09-07 |
-| 4 | `credit-score-and-your-rate` | 2026-09-28 |
-| 5 | `inside-your-monthly-payment` | 2026-10-19 |
-| 6 | `closing-costs-explained` | 2026-11-09 |
-| 7 | `prequalification-vs-preapproval` | 2026-11-30 |
-| 8 | `mortgage-insurance-explained` | 2026-12-21 |
-| 9 | `home-buying-timeline` | 2027-01-11 |
-| 10 | `documents-you-need` | 2027-02-01 |
-| 11 | `rate-locks-and-buydowns` | 2027-02-22 |
-| 12 | `refinance-break-even` | 2027-03-15 |
+| Slug | Publicación |
+|------|-------------|
+| `refinance-break-even` | 2026-03-30 |
+| `rate-locks-and-buydowns` | 2026-04-13 |
+| `documents-you-need` | 2026-05-04 |
+| `home-buying-timeline` | 2026-05-18 |
+| `mortgage-insurance-explained` | 2026-06-08 |
+| `prequalification-vs-preapproval` | 2026-06-29 |
+| `closing-costs-explained` | 2026-07-13 |
+| `how-much-house-can-i-afford` | 2026-07-27 |
+| `down-payment-myths` | 2026-08-17 |
+| `loan-types-compared` | 2026-09-07 |
+| `credit-score-and-your-rate` | 2026-09-28 |
+| `inside-your-monthly-payment` | 2026-10-19 |
 
 Todas las fechas usan `T13:00:00Z` (7am hora de Utah). Para mover un artículo basta con
 cambiar `publishDate` en el archivo `en/` — no hace falta redeploy si ya está en producción.

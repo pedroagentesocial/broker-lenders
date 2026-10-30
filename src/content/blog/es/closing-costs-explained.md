@@ -1,7 +1,7 @@
 ---
 title: "Costos de cierre, línea por línea: qué estás pagando y qué se puede negociar"
 description: "Cerca de $12,000 en una casa de $400,000 — pero solo una parte es del prestamista, y la ley te protege distinto en cada parte. Aquí está el desglose completo, qué cuotas pueden cambiar legalmente antes del cierre, y cuánto puede pagar el vendedor."
-publishDate: 2026-11-09T13:00:00Z
+publishDate: 2026-07-13T13:00:00Z
 category: "Costos"
 kicker: "Costos de cierre"
 readingMinutes: 8

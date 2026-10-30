@@ -1,7 +1,7 @@
 ---
 title: "Mortgage insurance: what it costs, and exactly when it goes away"
 description: "PMI, MIP, guarantee fees and funding fees are four different things with four different exits. Here is what each one costs, which ones end by law, and the month your conventional PMI is scheduled to disappear."
-publishDate: 2026-12-21T13:00:00Z
+publishDate: 2026-06-08T13:00:00Z
 category: "Costs"
 kicker: "Mortgage insurance"
 readingMinutes: 8

@@ -1,7 +1,7 @@
 ---
 title: "Rate locks, points and 2-1 buydowns: what you're actually buying"
 description: "Three different ways to deal with an interest rate you don't love, and they solve different problems. When to lock, what a discount point really costs per month, and the math on a temporary buydown — including who should pay for it."
-publishDate: 2027-02-22T13:00:00Z
+publishDate: 2026-04-13T13:00:00Z
 category: "Rates"
 kicker: "Rate strategy"
 readingMinutes: 8

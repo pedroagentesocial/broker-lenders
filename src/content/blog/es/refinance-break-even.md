@@ -1,7 +1,7 @@
 ---
 title: "Cuándo sí conviene refinanciar: la cuenta del punto de equilibrio que nadie te enseña"
 description: "Olvida la regla del 1%. Hay un solo cálculo que responde la pregunta, cuatro razones legítimas para refinanciar, y tres trampas que hacen que una tasa más baja te cueste más dinero con el tiempo."
-publishDate: 2027-03-15T13:00:00Z
+publishDate: 2026-03-30T13:00:00Z
 category: "Refinanciar"
 kicker: "Refinanciamiento"
 readingMinutes: 8

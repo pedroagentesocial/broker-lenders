@@ -1,7 +1,7 @@
 ---
 title: "La lista de documentos que te aprueban — empleado con W-2 vs trabajador independiente"
 description: "Exactamente qué juntar antes de aplicar, por qué el evaluador pide cada cosa, y la cuenta que convierte el negocio de $180,000 de un trabajador independiente en $105,500 de ingreso calificable."
-publishDate: 2027-02-01T13:00:00Z
+publishDate: 2026-05-04T13:00:00Z
 category: "El proceso"
 kicker: "Documentos"
 readingMinutes: 8

@@ -3,7 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import BlogLegal from '../../components/blog/BlogLegal.astro';
 import '../../styles/blog.css';
 import { resolveLang, withLang } from '../../lib/lang';
-import { getPublishedPosts, getUpcoming, formatDate } from '../../lib/blog';
+import { getPublishedPosts, formatDate } from '../../lib/blog';
 import { ui } from '../../lib/blog-ui';
 
 // SSR obligatorio: el filtro por fecha corre en cada request, así el artículo
@@ -14,7 +14,6 @@ const lang = resolveLang(Astro.url, Astro.cookies);
 const t = ui(lang);
 
 const posts = await getPublishedPosts(lang);
-const upcoming = await getUpcoming(lang, 2);
 const [featured, ...rest] = posts;
 
 const SITE_URL = 'https://www.brokerlenders.com';
@@ -146,30 +145,6 @@ const breadcrumbJsonLd = {
               </p>
             </a>
           ))}
-        </div>
-      </div>
-    </section>
-  )}
-
-  <!-- Próximamente: hace visible el calendario editorial -->
-  {upcoming.length > 0 && (
-    <section class="pb-20">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="rounded-[32px] border border-dashed border-gray-300 p-8">
-          <div class="flex flex-wrap items-baseline justify-between gap-3">
-            <h2 class="text-xl font-bold text-gray-900">{t.upcomingTitle}</h2>
-            <p class="text-sm text-gray-500">{t.upcomingNote}</p>
-          </div>
-          <ul class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
-            {upcoming.map((item) => (
-              <li class="rounded-2xl bg-gray-50 px-5 py-4">
-                <p class="text-xs font-semibold uppercase tracking-wide text-red-600">
-                  {formatDate(item.publishDate, lang)}
-                </p>
-                <p class="mt-1 font-semibold text-gray-900">{item.entry.data.title}</p>
-              </li>
-            ))}
-          </ul>
         </div>
       </div>
     </section>

@@ -1,7 +1,7 @@
 ---
 title: "De la oferta aceptada a las llaves: el calendario de 30 a 45 días, semana por semana"
 description: "Qué pasa realmente entre el día que el vendedor dice que sí y el día que firmas. Quién trabaja, qué tienes que entregar y cuándo, la regla de tres días que no se puede saltar, y las cinco cosas que atrasan un cierre."
-publishDate: 2027-01-11T13:00:00Z
+publishDate: 2026-05-18T13:00:00Z
 category: "El proceso"
 kicker: "El proceso de cierre"
 readingMinutes: 8
