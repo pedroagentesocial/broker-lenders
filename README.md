@@ -83,6 +83,10 @@ no aparece en el header a propósito.
 | `loan-types-compared` | 2026-09-07 |
 | `credit-score-and-your-rate` | 2026-09-28 |
 | `inside-your-monthly-payment` | 2026-10-19 |
+| `fixed-vs-adjustable-rate` | 2026-10-26 |
+| `student-loans-and-buying-a-home` | 2026-10-28 |
+| `low-appraisal` | 2026-10-30 |
+| `heloc-vs-cash-out-refinance` | 2026-11-02 |
 
 Todas las fechas usan `T13:00:00Z` (7am hora de Utah). Para mover un artículo basta con
 cambiar `publishDate` en el archivo `en/` — no hace falta redeploy si ya está en producción.
