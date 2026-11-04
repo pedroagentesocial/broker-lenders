@@ -87,6 +87,8 @@ no aparece en el header a propósito.
 | `student-loans-and-buying-a-home` | 2026-10-28 |
 | `low-appraisal` | 2026-10-30 |
 | `heloc-vs-cash-out-refinance` | 2026-11-02 |
+| `buying-after-bankruptcy-or-foreclosure` | 2026-11-03 |
+| `buying-a-condo` | 2026-11-04 |
 
 Todas las fechas usan `T13:00:00Z` (7am hora de Utah). Para mover un artículo basta con
 cambiar `publishDate` en el archivo `en/` — no hace falta redeploy si ya está en producción.
