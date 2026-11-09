@@ -93,6 +93,8 @@ no aparece en el header a propósito.
 | `assumable-mortgages` | 2026-11-05 |
 | `renovation-loans` | 2026-11-06 |
 | `buying-with-a-co-borrower` | 2026-11-06 |
+| `closing-wire-fraud` | 2026-11-09 |
+| `second-home-vs-investment-property` | 2026-11-09 |
 
 Todas las fechas usan `T13:00:00Z` (7am hora de Utah). Para mover un artículo basta con
 cambiar `publishDate` en el archivo `en/` — no hace falta redeploy si ya está en producción.
