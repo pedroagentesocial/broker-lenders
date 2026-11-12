@@ -97,6 +97,10 @@ no aparece en el header a propósito.
 | `second-home-vs-investment-property` | 2026-11-09 |
 | `homeowners-and-flood-insurance` | 2026-11-10 |
 | `gift-funds-for-down-payment` | 2026-11-10 |
+| `va-loans-explained` | 2026-11-12 |
+| `loan-limits-and-jumbo-loans` | 2026-11-12 |
+| `behind-on-mortgage-payments` | 2026-11-12 |
+| `down-payment-assistance-programs` | 2026-11-12 |
 
 Todas las fechas usan `T13:00:00Z` (7am hora de Utah). Para mover un artículo basta con
 cambiar `publishDate` en el archivo `en/` — no hace falta redeploy si ya está en producción.
