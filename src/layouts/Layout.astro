@@ -33,7 +33,11 @@ const origin = Astro.site?.origin || SITE_URL;
 // Build canonical without tracking/lang params to avoid duplicate-content
 const cleanPath = Astro.url.pathname.replace(/\/+$/, '') || '/';
 const currentUrl = canonical || `${origin}${cleanPath === '/' ? '/' : cleanPath + '/'}`;
-const ogImageAbsolute = ogImage.startsWith('http') ? ogImage : `${origin}${ogImage}`;
+// hreflang tiene que apuntar a la URL canónica, que lleva barra final.
+const hreflangHref = hreflangPath
+  ? `${origin}${hreflangPath === '/' ? '/' : hreflangPath.replace(/\/+$/, '') + '/'}`
+  : '';
+const ogImageAbsolute =ogImage.startsWith('http') ? ogImage : `${origin}${ogImage}`;
 
 // Pedro Lira tiene un solo @id en todos los sitios de sus marcas: la página
 // oficial en senordelascasas.com/about. No cambiarlo sin cambiarlo en todos.
@@ -142,9 +146,9 @@ const websiteJsonLd = {
 
 		{hreflangPath && (
 			<>
-				<link rel="alternate" hreflang="en-US" href={`${origin}${hreflangPath}`} />
-				<link rel="alternate" hreflang="es-US" href={`${origin}${hreflangPath}?lang=es`} />
-				<link rel="alternate" hreflang="x-default" href={`${origin}${hreflangPath}`} />
+				<link rel="alternate" hreflang="en-US" href={hreflangHref} />
+				<link rel="alternate" hreflang="es-US" href={`${hreflangHref}?lang=es`} />
+				<link rel="alternate" hreflang="x-default" href={hreflangHref} />
 			</>
 		)}
 

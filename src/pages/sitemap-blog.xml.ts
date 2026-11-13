@@ -30,10 +30,10 @@ export const GET: APIRoute = async () => {
   const newest = posts[0]?.publishDate ?? new Date();
 
   const entries = [
-    urlEntry('/blog', newest.toISOString(), '0.8', 'weekly'),
+    urlEntry('/blog/', newest.toISOString(), '0.8', 'weekly'),
     ...posts.map((post) =>
       urlEntry(
-        `/blog/${post.slug}`,
+        `/blog/${post.slug}/`,
         (post.entry.data.updatedDate ?? post.publishDate).toISOString(),
         '0.7',
         'monthly',
