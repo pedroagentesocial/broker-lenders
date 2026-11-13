@@ -7,13 +7,7 @@ import ImportantLegal from '../components/ImportantLegal.astro';
 import RewardsCard from '../components/RewardsCard.astro';
 import WaysHelp from '../components/WaysHelp.astro';
 import Contact from '../components/Contact.astro';
-import UtahImg from '../assets/Utah.webp';
-import CaliforniaImg from '../assets/California.webp';
-import IdahoImg from '../assets/Idaho.webp';
-import ColoradoImg from '../assets/Colorado.webp';
-import FloridaImg from '../assets/Florida.webp';
-import TexasImg from '../assets/Texas.webp';
-import NevadaImg from '../assets/Nevada.webp';
+import { heroImages } from '../lib/heroImages';
 import ImgHouseExterior from '../assets/stock/house-exterior.webp';
 
 // Prerender estático: el cliente resuelve idioma
@@ -46,15 +40,7 @@ try {
   console.warn('[i18n][buy][SSR] dict log error', e);
 }
 
-const images = [
-  { img: UtahImg, label: "Utah", alt: "Downtown Salt Lake City skyline, Utah" },
-  { img: IdahoImg, label: "Idaho", alt: "Sawtooth Mountains, Idaho" },
-  { img: NevadaImg, label: "Nevada", alt: "Las Vegas Strip at dusk, Nevada" },
-  { img: CaliforniaImg, label: "California", alt: "Golden Gate Bridge, California" },
-  { img: TexasImg, label: "Texas", alt: "The Alamo, Texas" },
-  { img: FloridaImg, label: "Florida", alt: "Miami Beach, Florida" },
-  { img: ColoradoImg, label: "Colorado", alt: "Downtown Denver skyline, Colorado" }
-];
+const images = heroImages;
 
 // Inline payload for client-side i18n
 const enB64 = Buffer.from(JSON.stringify(dicts.en)).toString('base64');
@@ -245,7 +231,10 @@ const esB64 = Buffer.from(JSON.stringify(dicts.es)).toString('base64');
 					<figure class={`absolute inset-0 transition-opacity duration-700 ${i === 0 ? 'opacity-100' : 'opacity-0'}`} data-index={i}>
 						<img
 							src={i === 0 ? img.img.src : undefined}
+							srcset={i === 0 ? img.srcset : undefined}
+							sizes="100vw"
 							data-src={img.img.src}
+							data-srcset={img.srcset}
 							width={img.img.width}
 							height={img.img.height}
 							alt={img.alt}
@@ -300,7 +289,10 @@ const esB64 = Buffer.from(JSON.stringify(dicts.es)).toString('base64');
     const slide = slides[index];
     if (!slide) return;
     const el = slide.querySelector('img');
-    if (el && !el.getAttribute('src') && el.dataset.src) el.setAttribute('src', el.dataset.src);
+    if (el && !el.getAttribute('src') && el.dataset.src) {
+      if (el.dataset.srcset) el.setAttribute('srcset', el.dataset.srcset);
+      el.setAttribute('src', el.dataset.src);
+    }
   }
   function show(index) {
     load(index);
