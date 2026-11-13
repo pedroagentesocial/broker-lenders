@@ -35,6 +35,25 @@ const cleanPath = Astro.url.pathname.replace(/\/+$/, '') || '/';
 const currentUrl = canonical || `${origin}${cleanPath === '/' ? '/' : cleanPath + '/'}`;
 const ogImageAbsolute = ogImage.startsWith('http') ? ogImage : `${origin}${ogImage}`;
 
+// Pedro Lira tiene un solo @id en todos los sitios de sus marcas: la página
+// oficial en senordelascasas.com/about. No cambiarlo sin cambiarlo en todos.
+const PEDRO_URL = 'https://www.senordelascasas.com/about';
+const PEDRO_ID = `${PEDRO_URL}#pedro-lira`;
+
+const pedroJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': PEDRO_ID,
+  name: 'Pedro Lira',
+  alternateName: ['El Señor de las Casas', 'Pedro Lira El Señor de las Casas'],
+  url: PEDRO_URL,
+  image: 'https://www.senordelascasas.com/images/pedro-lira-el-senor-de-las-casas.jpg',
+  jobTitle: 'Loan Officer',
+  identifier: { '@type': 'PropertyValue', propertyID: 'NMLS', value: '318973' },
+  // Sin worksFor: el empleador oficial (Xpert Home Lending) se declara solo en
+  // la página oficial; aquí la relación va en el `employee` de la marca.
+};
+
 // Global Organization JSON-LD (rendered once, helps Knowledge Panel + brand SERP)
 const organizationJsonLd = {
   '@context': 'https://schema.org',
@@ -59,10 +78,14 @@ const organizationJsonLd = {
     { '@type': 'State', name: 'Florida' },
     { '@type': 'State', name: 'Colorado' },
   ],
+  // Pedro es el loan officer de la marca (tabla 0.6 del manual SEO/IA), no fundador.
+  employee: { '@id': PEDRO_ID },
+  // Mismos perfiles que enlaza el footer; los anteriores no coincidían con ellos.
   sameAs: [
-    'https://www.facebook.com/brokerlenders',
-    'https://www.instagram.com/brokerlenders',
-    'https://www.linkedin.com/company/broker-lenders',
+    'https://www.facebook.com/profile.php?id=61560605613928',
+    'https://www.instagram.com/brokerlenders/',
+    'https://www.youtube.com/@BrokerLenders',
+    'https://www.tiktok.com/@brokerlenders01',
   ],
 };
 
@@ -128,6 +151,7 @@ const websiteJsonLd = {
 		<!-- Global structured data -->
 		<script type="application/ld+json" is:inline set:html={JSON.stringify(organizationJsonLd)} />
 		<script type="application/ld+json" is:inline set:html={JSON.stringify(websiteJsonLd)} />
+		<script type="application/ld+json" is:inline set:html={JSON.stringify(pedroJsonLd)} />
 
 		<slot name="head" />
     <!-- Early i18n sync: persist SSR lang to localStorage/cookie and URL -->

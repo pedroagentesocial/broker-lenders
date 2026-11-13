@@ -45,6 +45,8 @@ const faqJsonLd = {
 const orgJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'FinancialService',
+  // Mismo @id que el Layout, para que no cuente como una segunda empresa.
+  '@id': 'https://www.brokerlenders.com/#organization',
   'name': 'Broker Lenders',
   'description': dict.metaDescription,
   'url': Astro.url.origin,
