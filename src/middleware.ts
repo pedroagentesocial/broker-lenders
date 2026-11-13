@@ -58,5 +58,18 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
     return context.redirect(url.toString(), 301);
   }
 
+  // El blog es lo único que se sirve en el servidor, y respondía 200 con y sin
+  // barra final. La URL canónica del sitio lleva barra, así que la otra se
+  // redirige conservando la query (?lang=es, utm...). Las páginas estáticas
+  // ya declaran el canonical con barra y no pasan por aquí.
+  if (
+    !context.isPrerendered &&
+    (url.pathname === '/blog' || url.pathname.startsWith('/blog/')) &&
+    !url.pathname.endsWith('/')
+  ) {
+    url.pathname += '/';
+    return context.redirect(url.toString(), 301);
+  }
+
   return applySecurityHeaders(await next());
 };

@@ -19,7 +19,7 @@ const lookup = await getPost(slug!, lang);
 
 // Slug real pero aún sin publicar → al índice, para no filtrar el calendario
 // editorial ni dejar un 404 que Google recuerde.
-if (lookup.status === 'scheduled') return Astro.redirect(withLang('/blog', lang), 302);
+if (lookup.status === 'scheduled') return Astro.redirect(withLang('/blog/', lang), 302);
 
 // Slug inexistente → 404 de verdad (no se puede hacer rewrite de una ruta SSR
 // a la página /404 prerenderizada), así que lo renderizamos aquí mismo.
@@ -31,7 +31,7 @@ const Content = post ? (await render(post.entry)).Content : null;
 const related = post ? await getRelated(post.slug, lang, 3) : [];
 
 const SITE_URL = 'https://www.brokerlenders.com';
-const postUrl = post ? `${SITE_URL}/blog/${post.slug}` : `${SITE_URL}/blog`;
+const postUrl = post ? `${SITE_URL}/blog/${post.slug}/` : `${SITE_URL}/blog/`;
 
 const articleJsonLd =
   post && data
@@ -70,7 +70,7 @@ const breadcrumbJsonLd =
         '@type': 'BreadcrumbList',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: t.breadcrumbHome, item: `${SITE_URL}/` },
-          { '@type': 'ListItem', position: 2, name: t.breadcrumbBlog, item: `${SITE_URL}/blog` },
+          { '@type': 'ListItem', position: 2, name: t.breadcrumbBlog, item: `${SITE_URL}/blog/` },
           { '@type': 'ListItem', position: 3, name: data.title, item: postUrl },
         ],
       }
@@ -98,7 +98,7 @@ const breadcrumbJsonLd =
       <nav class="text-sm" aria-label="Breadcrumb">
         <a href={withLang('/', lang)} class="text-gray-700 hover:text-red-600">{t.breadcrumbHome}</a>
         <span class="mx-2 text-gray-400">/</span>
-        <a href={withLang('/blog', lang)} class="text-gray-700 hover:text-red-600">{t.breadcrumbBlog}</a>
+        <a href={withLang('/blog/', lang)} class="text-gray-700 hover:text-red-600">{t.breadcrumbBlog}</a>
         {data && (
           <>
             <span class="mx-2 text-gray-400">/</span>
@@ -116,7 +116,7 @@ const breadcrumbJsonLd =
         <h1 class="mt-4 text-4xl font-bold text-gray-900">{t.notFoundTitle}</h1>
         <p class="mt-4 text-lg text-gray-600">{t.notFoundBody}</p>
         <a
-          href={withLang('/blog', lang)}
+          href={withLang('/blog/', lang)}
           class="mt-8 inline-block bg-black text-white px-8 py-3 rounded-[48px] font-semibold hover:bg-red-600 transition-colors"
         >
           {t.breadcrumbBlog}
@@ -222,7 +222,7 @@ const breadcrumbJsonLd =
         <div class="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
           {related.map((item) => (
             <a
-              href={withLang(`/blog/${item.slug}`, lang)}
+              href={withLang(`/blog/${item.slug}/`, lang)}
               class="group rounded-2xl border border-gray-200 p-5 transition-colors hover:border-gray-900"
             >
               <p class="text-xs font-semibold uppercase tracking-wide text-gray-500">{item.entry.data.category}</p>
@@ -233,7 +233,7 @@ const breadcrumbJsonLd =
           ))}
         </div>
         <p class="mt-6">
-          <a href={withLang('/blog', lang)} class="text-sm font-semibold text-gray-700 hover:text-red-600">
+          <a href={withLang('/blog/', lang)} class="text-sm font-semibold text-gray-700 hover:text-red-600">
             {t.backToBlog}
           </a>
         </p>
