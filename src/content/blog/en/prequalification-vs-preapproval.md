@@ -124,4 +124,4 @@ The key line is the last one. A pre-approval says *you* are approved; what remai
 
 Before you look at a single house. Not because the letter takes long — it doesn't — but because it's the only way to find the problems while there's still time to fix them. A collection you forgot about, a name mismatch, a deposit you can't document: every one of those is a two-week fix in November and a dead deal in March.
 
-Start the [application](https://pedrolira.my1003app.com/318973/register), or run your numbers first with [the three that decide your ceiling](/blog/how-much-house-can-i-afford) so you walk in knowing what to expect.
+Start the [application](https://pedrolira.my1003app.com/318973/register), or run your numbers first with [the three that decide your ceiling](/blog/how-much-house-can-i-afford) so you walk in knowing what to expect. The step-by-step process with Pedro is on the [mortgage pre-approval](/preapproval/) page.
