@@ -76,8 +76,14 @@ const dict = enDict;
       if (typeof dict.page_title === 'string') document.title = dict.page_title;
       preserveLangOnLocalLinks(lang);
     };
+    // Este script va antes del contenido de la página: si traduce de inmediato no
+    // encuentra los [data-i18n] y ?lang=es se quedaba en inglés. Esperar al DOM.
     const __initLang = getInitialLang();
-    applyTranslations(__initLang);
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => applyTranslations(__initLang), { once: true });
+    } else {
+      applyTranslations(__initLang);
+    }
     document.addEventListener('click', (e) => {
       const a = e.target.closest('a[href*="?lang="]');
       if (!a) return;

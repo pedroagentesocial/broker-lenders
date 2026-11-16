@@ -73,8 +73,14 @@ const esB64 = Buffer.from(JSON.stringify(esDict)).toString('base64');
       if (typeof dict.title === 'string') document.title = dict.title;
       preserveLangOnLocalLinks(lang);
     };
+    // Este script va antes del contenido de la página: si traduce de inmediato no
+    // encuentra los [data-i18n] y ?lang=es se quedaba en inglés. Esperar al DOM.
     const __initLang = getInitialLang();
-    applyTranslations(__initLang);
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => applyTranslations(__initLang), { once: true });
+    } else {
+      applyTranslations(__initLang);
+    }
     try { localStorage.setItem('lang', __initLang); } catch {}
     document.addEventListener('click', (e) => {
       const a = e.target.closest('a[href*="?lang="]');
