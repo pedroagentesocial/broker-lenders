@@ -1,0 +1,69 @@
+{
+  "title": "Mortgage Pre-Approval in Utah and 6 More States | Broker Lenders",
+  "breadcrumb": { "home": "Home", "preapproval": "Pre-approval" },
+  "hero": {
+    "title": "Mortgage pre-approval with Broker Lenders",
+    "lead": "Know your real budget before you tour a single home. Start with a free pre-qualification that takes minutes and does not touch your credit, then get a pre-approval letter sellers take seriously.",
+    "apply": "Start my pre-approval",
+    "call": "Call (385) 308-0273"
+  },
+  "compare": {
+    "title": "Pre-qualification vs. pre-approval",
+    "prequalTitle": "Pre-qualification",
+    "prequalText": "A quick estimate built from what you tell us about your income and debts. Useful to set your price range. Free, and no impact on your credit.",
+    "preapprovalTitle": "Pre-approval",
+    "preapprovalText": "We review your credit, income and assets and issue a letter with an amount and conditions. This is the letter that makes your offer competitive.",
+    "guide": "Read the full guide: why one gets your offer accepted and the other does not"
+  },
+  "steps": {
+    "title": "How it works",
+    "s1Title": "Free pre-qualification",
+    "s1Text": "A short form with your income and debts. In minutes you know your range, with no credit impact.",
+    "s2Title": "Document review",
+    "s2Text": "Pedro Lira reviews your credit, pay stubs and bank statements to confirm what you can finance.",
+    "s3Title": "Your pre-approval letter",
+    "s3Text": "Amount, loan type and expiration, signed with his NMLS number, ready to submit with your offer."
+  },
+  "docs": {
+    "title": "What to have ready",
+    "d1": "Valid photo ID.",
+    "d2": "Pay stubs from the last 30 days.",
+    "d3": "W-2s or tax returns from the last two years.",
+    "d4": "Two months of complete bank statements.",
+    "d5": "Self-employed: two years of returns and business statements.",
+    "d6": "Veterans: your DD214 and, ideally, your Certificate of Eligibility."
+  },
+  "letter": {
+    "title": "What a solid letter shows",
+    "l1": "Maximum loan amount and the purchase price it supports.",
+    "l2": "Loan program (conventional, FHA, VA, USDA, jumbo) and planned down payment.",
+    "l3": "Issue and expiration dates.",
+    "l4": "What was verified and what is still pending.",
+    "l5": "The loan officer's name and NMLS number."
+  },
+  "risks": {
+    "title": "What can undo it",
+    "r1": "Financing a car or opening new credit.",
+    "r2": "Changing jobs, especially W-2 to 1099.",
+    "r3": "Large deposits you cannot document.",
+    "r4": "A late payment during the process.",
+    "r5": "An appraisal that comes in below the price."
+  },
+  "faq": {
+    "title": "Pre-approval FAQs",
+    "q1": "What is the difference between pre-qualification and pre-approval?",
+    "a1": "Pre-qualification is a quick estimate based on what you tell us. Pre-approval reviews your credit, pay stubs and bank statements, and ends in a letter with an amount and conditions you can submit with an offer.",
+    "q2": "Does pre-approval hurt my credit?",
+    "a2": "Pre-qualification does not. Pre-approval usually involves a credit inquiry that can cost a few points, but several mortgage inquiries within a short window count as one.",
+    "q3": "How long is a pre-approval letter good for?",
+    "a3": "Usually 60 to 90 days, because documents and the credit report expire. It can be renewed with updated pay stubs and bank statements.",
+    "q4": "Is a pre-approval a guarantee?",
+    "a4": "No. No letter is a guarantee. Final approval depends on full underwriting, the appraisal and your finances not changing before closing."
+  },
+  "finalCTA": {
+    "title": "Get your numbers before you shop",
+    "getStarted": "Start my pre-approval",
+    "callNow": "Call now"
+  },
+  "legal": "Pedro Lira, NMLS #318973, Xpert Home Lending NMLS #2179191. Licensed in Utah, Idaho, Nevada, California, Texas, Florida and Colorado. A pre-approval is not a loan approval or commitment to lend; final approval depends on underwriting, appraisal and verification of your information. Equal Housing Opportunity."
+}

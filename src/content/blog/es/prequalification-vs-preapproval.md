@@ -124,4 +124,4 @@ La línea clave es la última. Una preaprobación dice que *tú* estás aprobado
 
 Antes de ver una sola casa. No porque la carta tarde — no tarda — sino porque es la única forma de encontrar los problemas cuando todavía hay tiempo de arreglarlos. Una cuenta en cobranza que olvidaste, un nombre que no coincide, un depósito que no puedes documentar: cada uno de esos es un arreglo de dos semanas en noviembre y un trato muerto en marzo.
 
-Empieza la [solicitud](https://pedrolira.my1003app.com/318973/register), o primero corre tus números con [los tres que deciden tu techo](/blog/how-much-house-can-i-afford?lang=es) para llegar sabiendo qué esperar.
+Empieza la [solicitud](https://pedrolira.my1003app.com/318973/register), o primero corre tus números con [los tres que deciden tu techo](/blog/how-much-house-can-i-afford?lang=es) para llegar sabiendo qué esperar. El proceso paso a paso con Pedro está en la página de [pre-aprobación](/preapproval/?lang=es).

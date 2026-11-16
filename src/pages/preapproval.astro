@@ -1,0 +1,288 @@
+---
+// Página de servicio de pre-aprobación (manual SEO/IA, pasos 04-06).
+// Keyword dueña: "mortgage preapproval". La guía larga es
+// /blog/prequalification-vs-preapproval/: aquí se convierte y se enlaza a ella.
+// Solo afirma lo que el sitio ya publica; no promete plazos ni aprobaciones.
+import Layout from '../layouts/Layout.astro';
+import ImportantLegal from '../components/ImportantLegal.astro';
+import enDict from '../translations/preapproval/en.json';
+import esDict from '../translations/preapproval/es.json';
+
+export const prerender = true;
+// Build estático: i18n en cliente; render inicial en inglés (mismo patrón que /loan-options/*).
+const lang = 'en';
+const dict = enDict;
+const enB64 = Buffer.from(JSON.stringify(enDict)).toString('base64');
+const esB64 = Buffer.from(JSON.stringify(esDict)).toString('base64');
+const SITE_URL = 'https://www.brokerlenders.com';
+const APPLY_URL = 'https://pedrolira.my1003app.com/318973/register';
+const faqs = [1, 2, 3, 4].map((n) => ({
+  q: (dict.faq as Record<string, string>)[`q${n}`],
+  a: (dict.faq as Record<string, string>)[`a${n}`],
+  n,
+}));
+const steps = [1, 2, 3].map((n) => ({
+  title: (dict.steps as Record<string, string>)[`s${n}Title`],
+  text: (dict.steps as Record<string, string>)[`s${n}Text`],
+  n,
+}));
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const serviceJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${SITE_URL}/preapproval/#service`,
+  name: 'Mortgage pre-approval',
+  serviceType: 'Mortgage Pre-Approval',
+  url: `${SITE_URL}/preapproval/`,
+  provider: { '@id': `${SITE_URL}/#organization` },
+  broker: { '@id': 'https://www.senordelascasas.com/about#pedro-lira' },
+  areaServed: ['Utah', 'Idaho', 'Nevada', 'California', 'Texas', 'Florida', 'Colorado'].map((name) => ({ '@type': 'State', name })),
+};
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
+    { '@type': 'ListItem', position: 2, name: 'Pre-approval', item: `${SITE_URL}/preapproval/` },
+  ],
+};
+---
+
+<div id="i18n-preapproval" data-en={enB64} data-es={esB64} style="display:none"></div>
+<script is:inline>
+  (() => {
+    const payloadEl = document.getElementById('i18n-preapproval');
+    const decode = (val) => {
+      try {
+        const b64 = val || '';
+        const bin = atob(b64);
+        const bytes = Uint8Array.from({ length: bin.length }, (_, i) => bin.charCodeAt(i) & 0xff);
+        let jsonText = '';
+        try {
+          jsonText = new TextDecoder('utf-8', { fatal: false }).decode(bytes);
+        } catch {
+          try {
+            const percent = Array.from(bin, c => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)).join('');
+            jsonText = decodeURIComponent(percent);
+          } catch {
+            jsonText = bin;
+          }
+        }
+        try { return JSON.parse(jsonText); } catch { return {}; }
+      } catch { return {}; }
+    };
+    const translations = {
+      en: decode(payloadEl?.getAttribute('data-en') || ''),
+      es: decode(payloadEl?.getAttribute('data-es') || ''),
+    };
+    const getInitialLang = () => {
+      const urlLang = new URLSearchParams(window.location.search).get('lang');
+      const stored = localStorage.getItem('lang');
+      return (urlLang || stored || 'en');
+    };
+    const resolvePath = (obj, path) => {
+      try {
+        const parts = (path || '').split('.');
+        let cur = obj;
+        for (const p of parts) {
+          if (cur && typeof cur === 'object' && p in cur) cur = cur[p]; else return null;
+        }
+        return typeof cur === 'string' ? cur : null;
+      } catch { return null; }
+    };
+    const preserveLangOnLocalLinks = (lang) => {
+      try {
+        const localLinks = document.querySelectorAll('a[href^="/"]');
+        localLinks.forEach(a => {
+          const raw = a.getAttribute('href') || '';
+          if (!raw || raw.startsWith('#') || raw.startsWith('tel:') || raw.startsWith('mailto:') || /([?&])lang=/.test(raw)) return;
+          let href;
+          try { href = new URL(a.href, window.location.origin); } catch { return; }
+          if (href.origin !== window.location.origin) return;
+          if (lang) {
+            href.searchParams.set('lang', lang);
+            a.setAttribute('href', href.pathname + href.search + href.hash);
+          }
+        });
+      } catch {}
+    };
+    const applyTranslations = (lang) => {
+      const dict = translations[lang] || translations.en;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        const val = resolvePath(dict, key);
+        if (typeof val === 'string') {
+          if (val.includes('<')) { el.innerHTML = val; } else { el.textContent = val; }
+        }
+      });
+      if (typeof dict.title === 'string') document.title = dict.title;
+      preserveLangOnLocalLinks(lang);
+    };
+    // Este script va antes del contenido de la página: si traduce de inmediato no
+    // encuentra los [data-i18n] y ?lang=es se quedaba en inglés. Esperar al DOM.
+    const __initLang = getInitialLang();
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => applyTranslations(__initLang), { once: true });
+    } else {
+      applyTranslations(__initLang);
+    }
+    document.addEventListener('click', (e) => {
+      const a = e.target.closest('a[href*="?lang="]');
+      if (!a) return;
+      let href;
+      try { href = new URL(a.href, window.location.origin); } catch { return; }
+      const newLang = href.searchParams.get('lang');
+      if (newLang) {
+        applyTranslations(newLang);
+        preserveLangOnLocalLinks(newLang);
+      }
+    });
+    window.addEventListener('popstate', () => {
+      const urlLang = new URLSearchParams(window.location.search).get('lang');
+      const lang = (urlLang || localStorage.getItem('lang') || 'en');
+      applyTranslations(lang);
+      preserveLangOnLocalLinks(lang);
+    });
+    window.addEventListener('storage', (ev) => {
+      if (ev.key === 'lang' && ev.newValue) {
+        applyTranslations(ev.newValue);
+        preserveLangOnLocalLinks(ev.newValue);
+      }
+    });
+  })();
+</script>
+
+<Layout
+  title={dict.title}
+  lang={lang}
+  description="Mortgage pre-approval with Pedro Lira (NMLS #318973): start with a free pre-qualification that does not affect your credit. What to bring and what a solid letter shows."
+  keywords="mortgage preapproval, preapproval letter, mortgage pre-approval Utah, prequalification vs preapproval, Broker Lenders"
+  hreflangPath="/preapproval"
+>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqJsonLd)} slot="head" />
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(serviceJsonLd)} slot="head" />
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbJsonLd)} slot="head" />
+
+  <div class="bg-white py-4">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="text-sm">
+        <a href="/" class="text-gray-700 hover:text-gray-900" data-i18n="breadcrumb.home">{dict.breadcrumb.home}</a>
+        <span class="mx-2 text-gray-500">/</span>
+        <span class="text-gray-700" data-i18n="breadcrumb.preapproval">{dict.breadcrumb.preapproval}</span>
+      </nav>
+    </div>
+  </div>
+
+  <section class="bg-gray-50 py-16 lg:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl lg:text-6xl font-bold text-gray-900" data-i18n="hero.title">{dict.hero.title}</h1>
+      <p class="mt-6 text-lg lg:text-xl text-gray-700" data-i18n="hero.lead">{dict.hero.lead}</p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a href={APPLY_URL} target="_blank" rel="noopener noreferrer" class="bg-black text-white px-8 py-3 rounded-[48px] font-semibold hover:bg-red-600 transition-colors" data-i18n="hero.apply">{dict.hero.apply}</a>
+        <a href="tel:+13853080273" class="bg-white text-black border border-black px-8 py-3 rounded-[48px] font-semibold hover:bg-black hover:text-white transition-colors" data-i18n="hero.call">{dict.hero.call}</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-gray-900 text-center" data-i18n="compare.title">{dict.compare.title}</h2>
+      <div class="mt-10 grid gap-6 md:grid-cols-2">
+        <div class="rounded-2xl border border-gray-200 p-6">
+          <h3 class="text-xl font-bold text-gray-900" data-i18n="compare.prequalTitle">{dict.compare.prequalTitle}</h3>
+          <p class="mt-3 text-gray-700" data-i18n="compare.prequalText">{dict.compare.prequalText}</p>
+        </div>
+        <div class="rounded-2xl border-2 border-red-600 p-6">
+          <h3 class="text-xl font-bold text-gray-900" data-i18n="compare.preapprovalTitle">{dict.compare.preapprovalTitle}</h3>
+          <p class="mt-3 text-gray-700" data-i18n="compare.preapprovalText">{dict.compare.preapprovalText}</p>
+        </div>
+      </div>
+      <p class="mt-6 text-center">
+        <a href="/blog/prequalification-vs-preapproval/" class="text-gray-700 underline underline-offset-4 hover:text-red-600" data-i18n="compare.guide">{dict.compare.guide}</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-gray-900 text-center" data-i18n="steps.title">{dict.steps.title}</h2>
+      <ol class="mt-10 grid gap-6 md:grid-cols-3">
+        {steps.map((s) => (
+          <li class="bg-white rounded-2xl p-6 border border-gray-200">
+            <div class="text-sm font-bold text-red-600">{s.n}</div>
+            <h3 class="mt-2 text-lg font-bold text-gray-900" data-i18n={`steps.s${s.n}Title`}>{s.title}</h3>
+            <p class="mt-2 text-gray-700" data-i18n={`steps.s${s.n}Text`}>{s.text}</p>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-10 lg:grid-cols-3">
+      <div>
+        <h2 class="text-2xl font-bold text-gray-900" data-i18n="docs.title">{dict.docs.title}</h2>
+        <ul class="mt-4 space-y-2 list-disc pl-5 text-gray-700">
+          <li data-i18n="docs.d1">{dict.docs.d1}</li>
+          <li data-i18n="docs.d2">{dict.docs.d2}</li>
+          <li data-i18n="docs.d3">{dict.docs.d3}</li>
+          <li data-i18n="docs.d4">{dict.docs.d4}</li>
+          <li data-i18n="docs.d5">{dict.docs.d5}</li>
+          <li data-i18n="docs.d6">{dict.docs.d6}</li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-2xl font-bold text-gray-900" data-i18n="letter.title">{dict.letter.title}</h2>
+        <ul class="mt-4 space-y-2 list-disc pl-5 text-gray-700">
+          <li data-i18n="letter.l1">{dict.letter.l1}</li>
+          <li data-i18n="letter.l2">{dict.letter.l2}</li>
+          <li data-i18n="letter.l3">{dict.letter.l3}</li>
+          <li data-i18n="letter.l4">{dict.letter.l4}</li>
+          <li data-i18n="letter.l5">{dict.letter.l5}</li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-2xl font-bold text-gray-900" data-i18n="risks.title">{dict.risks.title}</h2>
+        <ul class="mt-4 space-y-2 list-disc pl-5 text-gray-700">
+          <li data-i18n="risks.r1">{dict.risks.r1}</li>
+          <li data-i18n="risks.r2">{dict.risks.r2}</li>
+          <li data-i18n="risks.r3">{dict.risks.r3}</li>
+          <li data-i18n="risks.r4">{dict.risks.r4}</li>
+          <li data-i18n="risks.r5">{dict.risks.r5}</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-gray-900 text-center" data-i18n="faq.title">{dict.faq.title}</h2>
+      <div class="mt-8 space-y-4">
+        {faqs.map((f) => (
+          <details class="bg-white rounded-xl border border-gray-200 p-5">
+            <summary class="font-semibold text-gray-900 cursor-pointer" data-i18n={`faq.q${f.n}`}>{f.q}</summary>
+            <p class="mt-3 text-gray-700" data-i18n={`faq.a${f.n}`}>{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold text-gray-900 mb-8" data-i18n="finalCTA.title">{dict.finalCTA.title}</h2>
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a href={APPLY_URL} target="_blank" rel="noopener noreferrer" class="bg-black text-white px-8 py-3 rounded-[48px] font-semibold hover:bg-red-600 transition-colors" data-i18n="finalCTA.getStarted">{dict.finalCTA.getStarted}</a>
+        <a href="tel:+13853080273" class="bg-white text-black border border-black px-6 py-3 rounded-[48px] font-semibold hover:bg-black hover:text-white transition-colors" data-i18n="finalCTA.callNow">{dict.finalCTA.callNow}</a>
+      </div>
+      <p class="mt-10 text-xs text-gray-500" data-i18n="legal">{dict.legal}</p>
+    </div>
+  </section>
+
+  <ImportantLegal />
+</Layout>

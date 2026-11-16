@@ -1,0 +1,69 @@
+{
+  "title": "Pre-aprobación hipotecaria en Utah y 6 estados más | Broker Lenders",
+  "breadcrumb": { "home": "Inicio", "preapproval": "Pre-aprobación" },
+  "hero": {
+    "title": "Pre-aprobación hipotecaria con Broker Lenders",
+    "lead": "Conoce tu presupuesto real antes de ver una sola casa. Empieza con una pre-calificación gratis, que toma minutos y no toca tu crédito, y luego obtén una carta de pre-aprobación que los vendedores toman en serio.",
+    "apply": "Empezar mi pre-aprobación",
+    "call": "Llamar al (385) 308-0273"
+  },
+  "compare": {
+    "title": "Pre-calificación vs. pre-aprobación",
+    "prequalTitle": "Pre-calificación",
+    "prequalText": "Una estimación rápida con lo que nos cuentas de tus ingresos y deudas. Sirve para saber en qué rango buscar. Gratis y sin afectar tu crédito.",
+    "preapprovalTitle": "Pre-aprobación",
+    "preapprovalText": "Revisamos tu crédito, tus ingresos y tus cuentas y emitimos una carta con un monto y condiciones. Es la carta que hace competitiva tu oferta.",
+    "guide": "Lee la guía completa: por qué una hace que acepten tu oferta y la otra no"
+  },
+  "steps": {
+    "title": "Cómo funciona",
+    "s1Title": "Pre-calificación gratis",
+    "s1Text": "Un formulario corto con tus ingresos y deudas. En minutos sabes tu rango, sin afectar tu crédito.",
+    "s2Title": "Revisión de documentos",
+    "s2Text": "Pedro Lira revisa tu crédito, tus talones de pago y tus estados de cuenta para confirmar lo que puedes financiar.",
+    "s3Title": "Tu carta de pre-aprobación",
+    "s3Text": "Monto, tipo de préstamo y vigencia, firmada con su número NMLS, lista para presentar con tu oferta."
+  },
+  "docs": {
+    "title": "Qué tener a la mano",
+    "d1": "Identificación oficial con foto.",
+    "d2": "Talones de pago de los últimos 30 días.",
+    "d3": "W-2 o declaraciones de impuestos de los últimos dos años.",
+    "d4": "Dos meses de estados de cuenta bancarios completos.",
+    "d5": "Si trabajas por tu cuenta: dos años de declaraciones y estados del negocio.",
+    "d6": "Si eres veterano: tu DD214 y, de preferencia, tu certificado de elegibilidad (COE)."
+  },
+  "letter": {
+    "title": "Qué muestra una buena carta",
+    "l1": "Monto máximo del préstamo y el precio de compra que soporta.",
+    "l2": "Programa de préstamo (convencional, FHA, VA, USDA, jumbo) y enganche contemplado.",
+    "l3": "Fechas de emisión y de vencimiento.",
+    "l4": "Qué se verificó y qué queda pendiente.",
+    "l5": "Nombre y número NMLS del loan officer."
+  },
+  "risks": {
+    "title": "Qué puede tumbarla",
+    "r1": "Financiar un carro o abrir crédito nuevo.",
+    "r2": "Cambiar de empleo, sobre todo de W-2 a 1099.",
+    "r3": "Depósitos grandes que no puedas documentar.",
+    "r4": "Un pago atrasado durante el proceso.",
+    "r5": "Una tasación por debajo del precio."
+  },
+  "faq": {
+    "title": "Preguntas sobre la pre-aprobación",
+    "q1": "¿Cuál es la diferencia entre pre-calificación y pre-aprobación?",
+    "a1": "La pre-calificación es una estimación rápida con lo que nos cuentas. La pre-aprobación revisa tu crédito, tus talones de pago y tus estados de cuenta, y termina en una carta con un monto y condiciones que puedes presentar con una oferta.",
+    "q2": "¿La pre-aprobación afecta mi crédito?",
+    "a2": "La pre-calificación no. La pre-aprobación suele implicar una consulta de crédito que puede costar unos pocos puntos, pero varias consultas de hipoteca en una ventana corta cuentan como una sola.",
+    "q3": "¿Cuánto dura una carta de pre-aprobación?",
+    "a3": "Normalmente entre 60 y 90 días, porque los documentos y el reporte de crédito caducan. Se renueva con talones y estados de cuenta actualizados.",
+    "q4": "¿La pre-aprobación es una garantía?",
+    "a4": "No. Ninguna carta es una garantía. La aprobación final depende de la suscripción completa, de la tasación y de que tus finanzas no cambien antes del cierre."
+  },
+  "finalCTA": {
+    "title": "Conoce tus números antes de buscar",
+    "getStarted": "Empezar mi pre-aprobación",
+    "callNow": "Llamar ahora"
+  },
+  "legal": "Pedro Lira, NMLS #318973, Xpert Home Lending NMLS #2179191. Con licencia en Utah, Idaho, Nevada, California, Texas, Florida y Colorado. Una pre-aprobación no es una aprobación ni un compromiso de préstamo; la aprobación final depende de la suscripción, la tasación y la verificación de tu información. Igualdad de oportunidades en la vivienda."
+}
