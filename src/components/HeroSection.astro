@@ -38,7 +38,7 @@ const images = heroImages;
           <!-- Dots -->
           <div id="heroCarouselDots" class="absolute bottom-4 right-4 flex gap-2">
             {images.map((_, i) => (
-              <button class={`w-2.5 h-2.5 rounded-full border border-white ${i === 0 ? 'bg-white' : 'bg-white/30'}`} data-dot={i} aria-label={`Slide ${i + 1}`}></button>
+              <button class="w-6 h-6 flex items-center justify-center" data-dot={i} aria-label={`Slide ${i + 1}`}><span aria-hidden="true" class={`block w-2.5 h-2.5 rounded-full border border-white ${i === 0 ? 'bg-white' : 'bg-white/30'}`}></span></button>
             ))}
           </div>
         </div>
@@ -89,7 +89,7 @@ const images = heroImages;
                   </svg>
                 </div>
               </div>
-              <span class="absolute -top-2 -right-2 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full" data-i18n="hero.live">
+              <span class="absolute -top-2 -right-2 bg-green-700 text-white text-xs font-bold px-2 py-1 rounded-full" data-i18n="hero.live">
                 Live
               </span>
             </a>
@@ -124,11 +124,11 @@ const images = heroImages;
     });
     dots.forEach((d, i) => {
       if (i === index) {
-        d.classList.add('bg-white');
-        d.classList.remove('bg-white/30');
+        (d.firstElementChild || d).classList.add('bg-white');
+        (d.firstElementChild || d).classList.remove('bg-white/30');
       } else {
-        d.classList.remove('bg-white');
-        d.classList.add('bg-white/30');
+        (d.firstElementChild || d).classList.remove('bg-white');
+        (d.firstElementChild || d).classList.add('bg-white/30');
       }
     });
     current = index;

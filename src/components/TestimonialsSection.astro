@@ -160,13 +160,13 @@ const esB64 = Buffer.from(JSON.stringify(es)).toString('base64');
 				
 				<!-- Navigation dentro del card -->
             <div class="flex justify-between items-center mt-6">
-              <button id="prev-btn" class="text-gray-600 hover:text-gray-900 transition-colors">
+              <button id="prev-btn" aria-label="Previous testimonials" class="text-gray-600 hover:text-gray-900 transition-colors">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
                 </svg>
               </button>
               <div id="testimonial-counter" class="text-gray-600">1-8</div>
-              <button id="next-btn" class="text-gray-600 hover:text-gray-900 transition-colors">
+              <button id="next-btn" aria-label="Next testimonials" class="text-gray-600 hover:text-gray-900 transition-colors">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                 </svg>

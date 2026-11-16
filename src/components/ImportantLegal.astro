@@ -37,6 +37,7 @@ const reviewedOn = new Intl.DateTimeFormat('en-US', {
         id="legal-content" 
         class="overflow-hidden transition-all duration-300 ease-in-out max-h-0"
         aria-hidden="true"
+        inert
       >
         <div class="px-6 pb-6 pt-2 text-sm text-gray-600 space-y-4">
           <p data-i18n="broker_lenders_trademark">
@@ -180,12 +181,14 @@ const reviewedOn = new Intl.DateTimeFormat('en-US', {
           // Collapse
           content.style.maxHeight = '0px';
           content.setAttribute('aria-hidden', 'true');
+          content.inert = true; // que los enlaces ocultos no reciban foco
           toggle.setAttribute('aria-expanded', 'false');
           arrow.style.transform = 'rotate(0deg)';
         } else {
           // Expand
           content.style.maxHeight = content.scrollHeight + 'px';
           content.setAttribute('aria-hidden', 'false');
+          content.inert = false;
           toggle.setAttribute('aria-expanded', 'true');
           arrow.style.transform = 'rotate(180deg)';
         }
