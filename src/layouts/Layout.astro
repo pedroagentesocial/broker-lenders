@@ -1,4 +1,5 @@
 ---
+import Ga4 from '../components/Ga4.astro';
 import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -202,6 +203,7 @@ const websiteJsonLd = {
         }
       })();
     </script>
+	  <Ga4 />
 	</head>
 	<body class="bg-white text-gray-900 font-sans">
 		<Header lang={lang} />
