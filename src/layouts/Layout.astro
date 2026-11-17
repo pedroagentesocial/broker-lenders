@@ -3,6 +3,7 @@ import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import WhatsAppFloat from '../components/WhatsAppFloat.astro';
+import { migasDePan } from '../lib/migas';
 
 export interface Props {
 	title: string;
@@ -38,6 +39,20 @@ const hreflangHref = hreflangPath
   ? `${origin}${hreflangPath === '/' ? '/' : hreflangPath.replace(/\/+$/, '') + '/'}`
   : '';
 const ogImageAbsolute =ogImage.startsWith('http') ? ogImage : `${origin}${ogImage}`;
+// Migas de pan. El blog y /preapproval ya traen las suyas en la página.
+const migas = /^\/(blog|preapproval)(\/|$)/.test(cleanPath)
+  ? null
+  : migasDePan({
+      ruta: cleanPath,
+      inicio: { name: 'Home', url: `${origin}/` },
+      secciones: {
+        '/calculators': { name: 'Calculators', url: `${origin}/calculators/` },
+        '/loan-options': { name: 'Loan Options', url: `${origin}/loan-options/` },
+      },
+      // Nombre corto: lo de antes de " - ", " | ", " — " o ":".
+      actual: title.split(/ - | \| | — |: /)[0],
+      urlActual: currentUrl,
+    });
 
 // Pedro Lira tiene un solo @id en todos los sitios de sus marcas: la página
 // oficial en senordelascasas.com/about. No cambiarlo sin cambiarlo en todos.
@@ -158,6 +173,7 @@ const websiteJsonLd = {
 		<script type="application/ld+json" is:inline set:html={JSON.stringify(organizationJsonLd)} />
 		<script type="application/ld+json" is:inline set:html={JSON.stringify(websiteJsonLd)} />
 		<script type="application/ld+json" is:inline set:html={JSON.stringify(pedroJsonLd)} />
+		{migas && <script type="application/ld+json" is:inline set:html={JSON.stringify(migas)} />}
 
 		<slot name="head" />
     <!-- Early i18n sync: persist SSR lang to localStorage/cookie and URL -->
