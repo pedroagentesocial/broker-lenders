@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-16",
+  "updatedAt": "2026-11-17",
   "maxPoints": 90,
   "source": {
     "name": "ICE Mortgage Technology (Optimal Blue) — OBMMI",
@@ -9,67 +9,6 @@
     "note": "Promedio nacional. No es una cotizacion: tu tasa depende de importe, LTV, plazo y perfil crediticio."
   },
   "points": [
-    {
-      "date": "2026-07-09",
-      "states": {
-        "utah": {
-          "30-year-fixed": 6.542,
-          "15-year-fixed": 5.929,
-          "30-year-fha": 6.366,
-          "30-year-va": 6.167,
-          "30-year-usda": 6.369,
-          "30-year-jumbo": 6.73
-        },
-        "idaho": {
-          "30-year-fixed": 6.542,
-          "15-year-fixed": 5.929,
-          "30-year-fha": 6.366,
-          "30-year-va": 6.167,
-          "30-year-usda": 6.369,
-          "30-year-jumbo": 6.73
-        },
-        "nevada": {
-          "30-year-fixed": 6.542,
-          "15-year-fixed": 5.929,
-          "30-year-fha": 6.366,
-          "30-year-va": 6.167,
-          "30-year-usda": 6.369,
-          "30-year-jumbo": 6.73
-        },
-        "california": {
-          "30-year-fixed": 6.542,
-          "15-year-fixed": 5.929,
-          "30-year-fha": 6.366,
-          "30-year-va": 6.167,
-          "30-year-usda": 6.369,
-          "30-year-jumbo": 6.73
-        },
-        "texas": {
-          "30-year-fixed": 6.542,
-          "15-year-fixed": 5.929,
-          "30-year-fha": 6.366,
-          "30-year-va": 6.167,
-          "30-year-usda": 6.369,
-          "30-year-jumbo": 6.73
-        },
-        "florida": {
-          "30-year-fixed": 6.542,
-          "15-year-fixed": 5.929,
-          "30-year-fha": 6.366,
-          "30-year-va": 6.167,
-          "30-year-usda": 6.369,
-          "30-year-jumbo": 6.73
-        },
-        "colorado": {
-          "30-year-fixed": 6.542,
-          "15-year-fixed": 5.929,
-          "30-year-fha": 6.366,
-          "30-year-va": 6.167,
-          "30-year-usda": 6.369,
-          "30-year-jumbo": 6.73
-        }
-      }
-    },
     {
       "date": "2026-07-10",
       "states": {
@@ -5496,6 +5435,67 @@
           "30-year-va": 6.881,
           "30-year-usda": 7.073,
           "30-year-jumbo": 7.557
+        }
+      }
+    },
+    {
+      "date": "2026-11-17",
+      "states": {
+        "utah": {
+          "30-year-fixed": 7.286,
+          "15-year-fixed": 6.512,
+          "30-year-fha": 7.045,
+          "30-year-va": 6.955,
+          "30-year-usda": 6.897,
+          "30-year-jumbo": 7.677
+        },
+        "idaho": {
+          "30-year-fixed": 7.286,
+          "15-year-fixed": 6.512,
+          "30-year-fha": 7.045,
+          "30-year-va": 6.955,
+          "30-year-usda": 6.897,
+          "30-year-jumbo": 7.677
+        },
+        "nevada": {
+          "30-year-fixed": 7.286,
+          "15-year-fixed": 6.512,
+          "30-year-fha": 7.045,
+          "30-year-va": 6.955,
+          "30-year-usda": 6.897,
+          "30-year-jumbo": 7.677
+        },
+        "california": {
+          "30-year-fixed": 7.286,
+          "15-year-fixed": 6.512,
+          "30-year-fha": 7.045,
+          "30-year-va": 6.955,
+          "30-year-usda": 6.897,
+          "30-year-jumbo": 7.677
+        },
+        "texas": {
+          "30-year-fixed": 7.286,
+          "15-year-fixed": 6.512,
+          "30-year-fha": 7.045,
+          "30-year-va": 6.955,
+          "30-year-usda": 6.897,
+          "30-year-jumbo": 7.677
+        },
+        "florida": {
+          "30-year-fixed": 7.286,
+          "15-year-fixed": 6.512,
+          "30-year-fha": 7.045,
+          "30-year-va": 6.955,
+          "30-year-usda": 6.897,
+          "30-year-jumbo": 7.677
+        },
+        "colorado": {
+          "30-year-fixed": 7.286,
+          "15-year-fixed": 6.512,
+          "30-year-fha": 7.045,
+          "30-year-va": 6.955,
+          "30-year-usda": 6.897,
+          "30-year-jumbo": 7.677
         }
       }
     }
