@@ -101,6 +101,10 @@ no aparece en el header a propósito.
 | `loan-limits-and-jumbo-loans` | 2026-11-12 |
 | `behind-on-mortgage-payments` | 2026-11-12 |
 | `down-payment-assistance-programs` | 2026-11-12 |
+| `usda-loans-explained` | 2026-11-18 |
+| `buying-new-construction` | 2026-11-18 |
+| `mortgage-servicing-transfer` | 2026-11-18 |
+| `utah-property-taxes` | 2026-11-18 |
 
 Todas las fechas usan `T13:00:00Z` (7am hora de Utah). Para mover un artículo basta con
 cambiar `publishDate` en el archivo `en/` — no hace falta redeploy si ya está en producción.
