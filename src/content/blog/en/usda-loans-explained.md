@@ -1,5 +1,6 @@
 ---
 title: "USDA loans, explained: zero down outside the big cities, the income limit, and the fees nobody mentions"
+seoTitle: 'USDA loans explained: zero down, income limits and fees'
 description: "A USDA guaranteed loan can finance 100% of the price of a home in an eligible area. Here is how the location map and the household income limit work, what the 1% upfront and 0.35% annual fees cost in dollars, the 29/41 payment ratios, and when another loan is the better fit."
 publishDate: 2026-11-18T13:00:00Z
 category: "Loan options"

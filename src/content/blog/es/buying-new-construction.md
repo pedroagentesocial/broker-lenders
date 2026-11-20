@@ -1,5 +1,6 @@
 ---
 title: "Comprar una casa nueva de constructora: incentivos, el prestamista preferido y las sorpresas después de mudarte"
+seoTitle: 'Comprar casa nueva de constructora: incentivos y prestamista'
 description: "Las constructoras muchas veces ofrecen créditos para los costos de cierre o una tasa más baja si usas a su prestamista. Aquí está cómo comparar esa oferta de forma justa, qué dicen las reglas federales sobre prestamistas afiliados, cómo funcionan los bloqueos de tasa en una casa que todavía no está construida y por qué el primer recibo de impuestos puede engañar."
 publishDate: 2026-11-18T14:00:00Z
 category: "Comprar"

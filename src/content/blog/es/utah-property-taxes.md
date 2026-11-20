@@ -1,5 +1,6 @@
 ---
 title: "Impuestos a la propiedad en Utah: la exención de 45% para tu residencia principal, el aviso de valuación y cómo apelar"
+seoTitle: 'Impuestos a la propiedad en Utah: exención del 45% y apelación'
 description: "En Utah, la residencia principal paga impuestos sobre el 55% de su valor de mercado, pero sólo si el condado sabe que ahí vives. Aquí está cómo funciona la exención, el calendario de cada año del 1 de enero al recibo de noviembre, cómo apelar la valuación a tiempo y los programas de alivio para personas mayores, veteranos y propietarios de bajos ingresos."
 publishDate: 2026-11-18T16:00:00Z
 category: "Costos"

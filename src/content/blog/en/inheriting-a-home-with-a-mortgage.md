@@ -1,5 +1,6 @@
 ---
 title: "Inheriting a home that still has a mortgage: your rights with the servicer, and why you usually don't have to refinance"
+seoTitle: 'Inheriting a home with a mortgage: your rights with the servicer'
 description: "When a parent or spouse dies and the house still has a loan, federal law protects family members who inherit it. Here is what the lender can and can't do, how to get recognized by the servicer, your options to keep or sell the home, and what changes if it was a reverse mortgage."
 publishDate: 2026-11-19T13:00:00Z
 category: "Process"

@@ -1,5 +1,6 @@
 ---
 title: "La deducción de intereses hipotecarios: a quién le sirve de verdad, el límite de $750,000, los puntos y la deducción del PMI que regresa en 2026"
+seoTitle: 'Deducción de intereses hipotecarios: a quién le sirve en 2026'
 description: "Tener casa no baja tus impuestos automáticamente. La deducción de intereses hipotecarios sólo ayuda si detallas tus deducciones, y la deducción estándar es alta. Aquí están las cuentas para un comprador soltero y para una pareja casada, los límites del IRS para intereses y préstamos sobre plusvalía, cómo funcionan los puntos y la deducción del seguro hipotecario que vuelve en 2026."
 publishDate: 2026-11-19T14:00:00Z
 category: "Costos"

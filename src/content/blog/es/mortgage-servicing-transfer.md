@@ -1,5 +1,6 @@
 ---
 title: "Tu hipoteca pasó a otra compañía: qué cambia, qué no y la protección de 60 días"
+seoTitle: 'Tu hipoteca pasó a otra compañía: qué cambia y qué no'
 description: "Recibir una carta que dice que tu préstamo tiene un nuevo administrador es normal, y las reglas federales dicen cómo debe pasar. Aquí están los avisos y sus plazos, el periodo de gracia de 60 días para pagos enviados a la compañía anterior, qué revisar del pago automático, el escrow y el seguro, y cómo detectar una carta de transferencia falsa."
 publishDate: 2026-11-18T15:00:00Z
 category: "El proceso"

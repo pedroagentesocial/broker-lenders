@@ -1,5 +1,6 @@
 ---
 title: "Hipotecas inversas explicadas: cómo funciona un HECM, cuánto cuesta de verdad y qué pasa después con la casa"
+seoTitle: 'Hipotecas inversas: cómo funciona un HECM y cuánto cuesta'
 description: "Una hipoteca inversa les permite a los propietarios de 62 años o más convertir la plusvalía de su casa en efectivo sin pago mensual de hipoteca, pero el saldo crece y las obligaciones no desaparecen. Aquí están las reglas de HUD, el límite de 2026, el seguro inicial y anual en dólares, las formas de recibir el dinero y qué pasa con el cónyuge y los herederos."
 publishDate: 2026-11-19T15:00:00Z
 category: "Opciones de préstamo"

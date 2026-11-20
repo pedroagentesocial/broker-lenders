@@ -1,5 +1,6 @@
 ---
 title: "Heredar una casa que todavía tiene hipoteca: tus derechos con el administrador y por qué casi nunca tienes que refinanciar"
+seoTitle: 'Heredar una casa con hipoteca: tus derechos y si refinanciar'
 description: "Cuando muere un papá o tu pareja y la casa todavía debe dinero, la ley federal protege a los familiares que la heredan. Aquí está lo que el prestamista puede y no puede hacer, cómo lograr que el administrador te reconozca, tus opciones para quedarte con la casa o venderla, y qué cambia si era una hipoteca inversa."
 publishDate: 2026-11-19T13:00:00Z
 category: "El proceso"

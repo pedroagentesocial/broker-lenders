@@ -1,5 +1,6 @@
 ---
 title: "Reverse mortgages, explained: how a HECM works, what it really costs, and what happens to the house later"
+seoTitle: 'Reverse mortgages explained: how a HECM works and what it costs'
 description: "A reverse mortgage lets homeowners 62 and older turn home equity into cash without a monthly mortgage payment, but the balance grows and the obligations don't go away. Here are the HUD rules, the 2026 limit, the upfront and annual insurance in dollars, the payout options, and what happens for a spouse and heirs."
 publishDate: 2026-11-19T15:00:00Z
 category: "Loan options"

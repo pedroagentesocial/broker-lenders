@@ -1,5 +1,6 @@
 ---
 title: "Buying a new-construction home: builder incentives, the preferred lender, and the surprises after move-in"
+seoTitle: 'Buying new construction: builder incentives and preferred lenders'
 description: "Builders often dangle closing-cost credits or a lower rate if you use their lender. Here is how to compare that offer fairly, what federal rules say about affiliated lenders, how long rate locks work on a home that isn't built yet, and why the first property tax bill can be misleading."
 publishDate: 2026-11-18T14:00:00Z
 category: "Buying"

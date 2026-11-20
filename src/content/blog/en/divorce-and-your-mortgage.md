@@ -1,5 +1,6 @@
 ---
 title: "Divorce and your mortgage: keeping the house, buying out your spouse, and getting approved for your next home"
+seoTitle: 'Divorce and your mortgage: keep the house or buy out your spouse'
 description: "A divorce decree can give one spouse the house, but it doesn't take the other off the loan. Here is the difference between title and the mortgage, the three ways to handle the house, how a buyout refinance works, and how lenders treat alimony, child support and debts assigned in the decree when you buy again."
 publishDate: 2026-11-19T16:00:00Z
 category: "Process"

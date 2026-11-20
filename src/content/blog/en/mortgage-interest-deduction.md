@@ -1,5 +1,6 @@
 ---
 title: "The mortgage interest deduction: who actually benefits, the $750,000 limit, points, and the PMI deduction that's back for 2026"
+seoTitle: 'Mortgage interest deduction: who benefits and the 2026 rules'
 description: "Owning a home doesn't automatically lower your taxes. The mortgage interest deduction only helps if you itemize, and the standard deduction is high. Here is the math for a single buyer and a married couple, the IRS limits on interest and home equity loans, how points work, and the mortgage insurance deduction reinstated for 2026."
 publishDate: 2026-11-19T14:00:00Z
 category: "Costs"

@@ -1,5 +1,6 @@
 ---
 title: "Your mortgage was transferred to a new company: what changes, what doesn't, and the 60-day protection"
+seoTitle: 'Mortgage transferred to a new servicer? The 60-day protection'
 description: "Getting a letter that says your loan has a new servicer is normal, and federal rules control how it happens. Here is the notice timeline, the 60-day grace period for payments sent to the old company, what to check on autopay, escrow and insurance, and how to spot a fake transfer letter."
 publishDate: 2026-11-18T15:00:00Z
 category: "Process"

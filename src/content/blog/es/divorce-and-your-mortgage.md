@@ -1,5 +1,6 @@
 ---
 title: "El divorcio y tu hipoteca: quedarte con la casa, pagarle su parte a tu ex y que te aprueben para tu próxima casa"
+seoTitle: 'El divorcio y tu hipoteca: quedarte con la casa o pagarle a tu ex'
 description: "Una sentencia de divorcio le puede dar la casa a uno de los dos, pero no saca al otro del préstamo. Aquí está la diferencia entre el título y la hipoteca, las tres formas de resolver lo de la casa, cómo funciona un refinanciamiento para pagarle su parte a tu ex, y cómo ven los prestamistas la pensión alimenticia, la manutención de los hijos y las deudas asignadas en la sentencia cuando vuelves a comprar."
 publishDate: 2026-11-19T16:00:00Z
 category: "El proceso"

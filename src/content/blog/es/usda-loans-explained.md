@@ -1,5 +1,6 @@
 ---
 title: "Préstamos USDA explicados: cero enganche fuera de las grandes ciudades, el límite de ingreso y las cuotas que nadie menciona"
+seoTitle: 'Préstamos USDA: cero enganche, límite de ingreso y cuotas'
 description: "Un préstamo garantizado USDA puede financiar el 100% del precio de una casa en una zona elegible. Aquí está cómo funcionan el mapa de zonas y el límite de ingreso del hogar, cuánto cuestan en dólares la cuota inicial de 1% y la anual de 0.35%, las proporciones 29/41 y cuándo te conviene más otro préstamo."
 publishDate: 2026-11-18T13:00:00Z
 category: "Opciones de préstamo"

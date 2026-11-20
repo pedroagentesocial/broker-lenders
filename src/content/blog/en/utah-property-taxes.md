@@ -1,5 +1,6 @@
 ---
 title: "Utah property taxes for homeowners: the 45% primary residence exemption, your valuation notice and how to appeal"
+seoTitle: 'Utah property taxes: the 45% exemption and how to appeal'
 description: "In Utah, a primary residence is taxed on 55% of its market value, but only if the county knows it's your home. Here is how the exemption works, the yearly calendar from January 1 to the November bill, how to appeal a valuation by the deadline, and the relief programs for seniors, veterans and low-income owners."
 publishDate: 2026-11-18T16:00:00Z
 category: "Costs"
