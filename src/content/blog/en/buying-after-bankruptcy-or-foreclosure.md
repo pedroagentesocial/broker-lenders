@@ -1,5 +1,6 @@
 ---
 title: "Buying a home after bankruptcy or foreclosure: how long you really have to wait"
+seoTitle: 'Buying a home after bankruptcy or foreclosure: how long to wait'
 description: "A bankruptcy or foreclosure doesn't end your chances of owning a home. Depending on the loan, the wait can be 2 years instead of 7. Here are the waiting periods for conventional, FHA and VA loans, when they can be shortened, and how to use the time."
 publishDate: 2026-11-03T13:00:00Z
 category: "Credit"

@@ -1,5 +1,6 @@
 ---
 title: "Wire fraud at closing: the email that can cost you your down payment, and how to stop it"
+seoTitle: 'Wire fraud at closing: how to protect your down payment'
 description: "In 2025 the FBI received 12,368 real estate fraud complaints, with $275 million in losses. Most come from one trick: a fake email with new wiring instructions days before closing. Here is how it works, the warning signs, and exactly what to do if you've already sent the money."
 publishDate: 2026-11-09T13:00:00Z
 category: "Process"

@@ -1,5 +1,6 @@
 ---
 title: "Usar un regalo para tu enganche: quién te lo puede dar, la carta de regalo y el rastro de papeles que pide el prestamista"
+seoTitle: 'Regalo para el enganche: quién puede darlo y la carta de regalo'
 description: "El dinero de la familia puede cubrir todo tu enganche en muchos préstamos, pero solo si está bien documentado. Aquí está quién puede regalar, qué debe decir la carta de regalo, cómo mover el dinero, el límite del impuesto sobre regalos para 2026 y los errores que retrasan los cierres."
 publishDate: 2026-11-10T14:00:00Z
 category: "Comprar"

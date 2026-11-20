@@ -75,10 +75,14 @@ const breadcrumbJsonLd =
         ],
       }
     : null;
+
+// Google corta alrededor de 60 caracteres: la marca solo si cabe.
+const tituloCorto = data ? (data.seoTitle ?? data.title) : t.notFoundTitle;
+const metaTitle = tituloCorto.length <= 48 ? `${tituloCorto} | Broker Lenders` : tituloCorto;
 ---
 
 <Layout
-  title={data ? `${data.title} | Broker Lenders` : `${t.notFoundTitle} | Broker Lenders`}
+  title={metaTitle}
   description={data?.description ?? t.notFoundBody}
   lang={lang}
   keywords={data?.keywords}

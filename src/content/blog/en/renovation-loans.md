@@ -1,5 +1,6 @@
 ---
 title: "Renovation loans: how to buy a fixer-upper and finance the repairs in one mortgage"
+seoTitle: 'Renovation loans: buy a fixer-upper and finance the repairs'
 description: "FHA 203(k) and Fannie Mae HomeStyle loans put the price of the home and the cost of the work into a single loan. Here is how they differ, the current limits, what the process really looks like, and when a renovation loan is the wrong choice."
 publishDate: 2026-11-06T13:00:00Z
 category: "Loan options"

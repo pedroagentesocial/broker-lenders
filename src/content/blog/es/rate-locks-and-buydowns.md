@@ -1,5 +1,6 @@
 ---
 title: "Bloqueo de tasa, puntos y buydown 2-1: qué estás comprando realmente"
+seoTitle: 'Bloqueo de tasa, puntos y buydown 2-1: qué estás comprando'
 description: "Tres formas distintas de lidiar con una tasa de interés que no te gusta, y cada una resuelve un problema diferente. Cuándo bloquear, cuánto cuesta de verdad un punto de descuento al mes, y la cuenta de un buydown temporal — incluyendo quién debería pagarlo."
 publishDate: 2026-04-13T13:00:00Z
 category: "Tasas"

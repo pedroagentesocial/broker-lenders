@@ -1,5 +1,6 @@
 ---
 title: "¿HELOC o refinanciamiento con retiro de efectivo? Cómo sacar tu plusvalía sin perder tu tasa baja"
+seoTitle: '¿HELOC o cash-out? Saca tu plusvalía sin perder tu tasa baja'
 description: "Los dos convierten el valor acumulado de tu casa en efectivo, pero funcionan al revés. Con un saldo de $250,000 al 3.5%, escoger mal te puede costar miles al año en intereses. Aquí está cómo funciona cada uno, un ejemplo lado a lado, los límites y cuándo gana cada uno."
 publishDate: 2026-11-02T13:00:00Z
 category: "Refinanciar"

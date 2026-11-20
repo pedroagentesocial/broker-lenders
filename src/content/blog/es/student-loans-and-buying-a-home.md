@@ -1,5 +1,6 @@
 ---
 title: "Préstamos estudiantiles y comprar casa: el pago que cuenta el prestamista no siempre es el que tú pagas"
+seoTitle: 'Préstamos estudiantiles y comprar casa: el pago que cuenta'
 description: "¿En diferimiento, en un plan según tus ingresos o pagando $0? Cada programa cuenta tu deuda estudiantil distinto — y con $60,000 en préstamos la diferencia puede acercarse a $95,000 de poder de compra. Aquí están las reglas exactas para préstamos convencionales, FHA y VA."
 publishDate: 2026-10-28T13:00:00Z
 category: "Crédito"

@@ -1,5 +1,6 @@
 ---
 title: "Using a gift for your down payment: who can give it, the gift letter, and the paper trail lenders need"
+seoTitle: 'Gift funds for a down payment: rules, gift letter and paper trail'
 description: "Family money can cover your whole down payment on many loans, but only if it's documented correctly. Here is who can give, what the gift letter must say, how to move the money, the gift tax limit for 2026, and the mistakes that delay closings."
 publishDate: 2026-11-10T14:00:00Z
 category: "Buying"

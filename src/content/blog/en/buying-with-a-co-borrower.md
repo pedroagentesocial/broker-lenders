@@ -1,5 +1,6 @@
 ---
 title: "Buying a home with help from family: co-borrower or co-signer, and what each one really risks"
+seoTitle: 'Co-borrower or co-signer: buying a home with help from family'
 description: "A parent's income can turn a 58% debt-to-income ratio into 41%. But signing the note makes them fully responsible for the loan. Here is how co-borrowers and co-signers differ, the FHA and conventional rules, and how to get them off the loan later."
 publishDate: 2026-11-06T14:00:00Z
 category: "Buying"

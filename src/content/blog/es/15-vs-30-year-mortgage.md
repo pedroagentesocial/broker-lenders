@@ -1,5 +1,6 @@
 ---
 title: "¿Hipoteca a 15 o a 30 años? Y por qué pagar un poco más podría ganarles a las dos"
+seoTitle: '¿Hipoteca a 15 o a 30 años? Y por qué pagar un poco más ayuda'
 description: "En un préstamo de $350,000, el plazo de 15 años ahorra unos $273,000 de intereses, pero cuesta $694 más al mes. Aquí está la comparación completa, lo que de verdad logran los pagos extra, el precio de conservar tu flexibilidad y cuándo no conviene adelantar pagos."
 publishDate: 2026-11-04T14:00:00Z
 category: "Costos"

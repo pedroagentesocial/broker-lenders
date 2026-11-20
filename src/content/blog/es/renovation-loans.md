@@ -1,5 +1,6 @@
 ---
 title: "Préstamos de renovación: cómo comprar una casa para arreglar y financiar las reparaciones en una sola hipoteca"
+seoTitle: 'Préstamos de renovación: compra y repara con una sola hipoteca'
 description: "Los préstamos FHA 203(k) y HomeStyle de Fannie Mae juntan el precio de la casa y el costo de la obra en un solo préstamo. Aquí está en qué se diferencian, los límites actuales, cómo es el proceso de verdad y cuándo un préstamo de renovación no es la mejor opción."
 publishDate: 2026-11-06T13:00:00Z
 category: "Opciones de préstamo"

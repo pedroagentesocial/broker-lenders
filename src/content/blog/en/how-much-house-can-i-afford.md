@@ -1,5 +1,6 @@
 ---
 title: "How much house can you actually afford? The three numbers that decide it"
+seoTitle: 'How much house can you afford? The three numbers that decide'
 description: "Lenders don't guess. They run three numbers: your debt-to-income ratio, the cash you can put on the table, and the payment you can live with. Here is exactly how each one works, with the math."
 publishDate: 2026-07-27T13:00:00Z
 category: "Buying"

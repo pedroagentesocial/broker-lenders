@@ -1,5 +1,6 @@
 ---
 title: "From accepted offer to keys: the 30-to-45 day timeline, week by week"
+seoTitle: 'From accepted offer to keys: the 30-to-45 day timeline'
 description: "What actually happens between the day a seller says yes and the day you sign. Who is working, what you have to deliver and when, the three-day rule that can't be waived, and the five things that push a closing date."
 publishDate: 2026-05-18T13:00:00Z
 category: "Process"

@@ -1,5 +1,6 @@
 ---
 title: "Fraude de transferencias al cierre: el correo que te puede costar tu enganche, y cómo evitarlo"
+seoTitle: 'Fraude de transferencias al cierre: cómo proteger tu enganche'
 description: "En 2025 el FBI recibió 12,368 denuncias de fraude inmobiliario, con $275 millones en pérdidas. Casi todas vienen de un solo truco: un correo falso con nuevas instrucciones de transferencia días antes del cierre. Aquí está cómo funciona, las señales de alerta y qué hacer exactamente si ya mandaste el dinero."
 publishDate: 2026-11-09T13:00:00Z
 category: "El proceso"

@@ -1,5 +1,6 @@
 ---
 title: "El avalúo salió bajo. Estas son tus cinco opciones — con las cuentas de cada una"
+seoTitle: '¿El avalúo salió bajo? Tus cinco opciones con las cuentas'
 description: "Cuando una casa se valúa en menos de lo que ofreciste, el prestamista presta sobre el número más bajo y la diferencia te toca a ti. Aquí está cómo se calcula esa diferencia, las protecciones que tienen los compradores FHA y VA, cómo impugnar el valor y cómo decidir entre renegociar, pagar o retirarte."
 publishDate: 2026-10-30T13:00:00Z
 category: "El proceso"

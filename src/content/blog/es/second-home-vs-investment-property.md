@@ -1,5 +1,6 @@
 ---
 title: "¿Segunda casa o propiedad de inversión? Por qué la etiqueta cambia tu enganche, tu tasa y tu aprobación"
+seoTitle: '¿Segunda casa o propiedad de inversión? Por qué importa'
 description: "La misma casa de $400,000 puede pedir $20,000, $40,000 o $60,000 de enganche, según cómo la vayas a usar. Aquí están las reglas para casa principal, segunda casa y renta, qué puedes y qué no puedes rentar, y la estrategia de 2 a 4 unidades que te deja empezar con 3.5% de enganche."
 publishDate: 2026-11-09T14:00:00Z
 category: "Comprar"

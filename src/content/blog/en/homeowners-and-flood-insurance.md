@@ -1,5 +1,6 @@
 ---
 title: "Homeowners and flood insurance: what your lender requires, what it doesn't cover, and the policy you didn't choose"
+seoTitle: 'Homeowners and flood insurance: what your lender requires'
 description: "Your lender requires insurance, but a standard policy won't cover a flood, and the deductible can be up to 5% of the coverage. Here is what has to be covered, when flood insurance is mandatory, the 30-day wait, and how to avoid force-placed insurance."
 publishDate: 2026-11-10T13:00:00Z
 category: "Costs"

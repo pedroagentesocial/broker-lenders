@@ -1,5 +1,6 @@
 ---
 title: "Seguro de casa y contra inundaciones: lo que exige tu prestamista, lo que no cubre y la póliza que no escogiste"
+seoTitle: 'Seguro de casa e inundaciones: lo que exige tu prestamista'
 description: "Tu prestamista exige seguro, pero una póliza normal no cubre inundaciones, y el deducible puede llegar a 5% de la cobertura. Aquí está qué tiene que cubrir, cuándo el seguro contra inundaciones es obligatorio, la espera de 30 días y cómo evitar el seguro impuesto por el administrador."
 publishDate: 2026-11-10T13:00:00Z
 category: "Costos"

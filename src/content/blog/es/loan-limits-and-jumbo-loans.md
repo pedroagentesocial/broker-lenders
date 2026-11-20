@@ -1,5 +1,6 @@
 ---
 title: "Límites de préstamo 2026: cuándo tu hipoteca se vuelve jumbo y cómo quedarte por debajo de la línea"
+seoTitle: 'Límites de préstamo 2026: cuándo tu hipoteca se vuelve jumbo'
 description: "En 2026 el límite conforme es de $832,750 en casi todo el país y de hasta $1,249,125 en zonas de alto costo. Pásate un dólar y entras en territorio jumbo. Aquí están los límites convencionales, FHA y VA, qué cambia con un préstamo jumbo y cómo planear alrededor de la línea."
 publishDate: 2026-11-12T14:00:00Z
 category: "Opciones de préstamo"

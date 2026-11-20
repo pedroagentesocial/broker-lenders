@@ -1,5 +1,6 @@
 ---
 title: "Comprar casa después de una bancarrota o ejecución hipotecaria: cuánto tienes que esperar de verdad"
+seoTitle: 'Comprar casa después de bancarrota o ejecución: cuánto esperar'
 description: "Una bancarrota o una ejecución hipotecaria no acaban con tu oportunidad de tener casa. Según el préstamo, la espera puede ser de 2 años en lugar de 7. Aquí están los plazos para préstamos convencionales, FHA y VA, cuándo se pueden acortar y cómo aprovechar el tiempo."
 publishDate: 2026-11-03T13:00:00Z
 category: "Crédito"
