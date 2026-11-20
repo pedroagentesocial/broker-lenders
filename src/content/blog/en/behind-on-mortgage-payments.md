@@ -1,5 +1,6 @@
 ---
 title: "Behind on your mortgage? What happens day by day, your federal protections and the options to keep your home"
+seoTitle: 'Behind on your mortgage? Your protections and options'
 description: "A servicer generally can't start foreclosure until you're more than 120 days behind, and federal rules require them to contact you and review you for help. Here is the timeline, what forbearance and a loan modification really mean, and the scams to avoid."
 publishDate: 2026-11-12T15:00:00Z
 category: "Process"

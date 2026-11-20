@@ -1,5 +1,6 @@
 ---
 title: "Ayuda para el enganche: cómo funcionan los programas, las letras chiquitas y dónde empezar en Utah, Idaho, Nevada, California, Texas, Florida y Colorado"
+seoTitle: 'Ayuda para el enganche: cómo funcionan los programas'
 description: "Las agencias estatales de vivienda ofrecen subvenciones, préstamos diferidos y créditos fiscales que pueden cubrir buena parte de tu enganche. Aquí están los tipos principales, cómo se combinan con préstamos FHA y convencionales, qué preguntar antes de firmar y la agencia oficial de cada estado donde trabajamos."
 publishDate: 2026-11-12T16:00:00Z
 category: "Comprar"

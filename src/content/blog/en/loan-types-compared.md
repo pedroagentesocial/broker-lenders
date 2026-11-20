@@ -1,5 +1,6 @@
 ---
 title: "Conventional, FHA, VA, USDA or jumbo: which loan is actually yours"
+seoTitle: 'Conventional, FHA, VA, USDA or jumbo: which loan is yours'
 description: "Five loan programs, one house, five different monthly payments. A decision map, a side-by-side comparison, and the one factor that decides it more often than anything else: how long you pay mortgage insurance."
 publishDate: 2026-09-07T13:00:00Z
 category: "Loan options"

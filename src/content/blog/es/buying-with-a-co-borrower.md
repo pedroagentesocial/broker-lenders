@@ -1,5 +1,6 @@
 ---
 title: "Comprar casa con ayuda de la familia: co-prestatario o co-firmante, y lo que de verdad arriesga cada uno"
+seoTitle: 'Co-prestatario o co-firmante: comprar casa con ayuda familiar'
 description: "El ingreso de un papá o una mamá puede bajar tu relación deuda-ingreso de 58% a 41%. Pero firmar el pagaré los hace responsables de todo el préstamo. Aquí está la diferencia entre co-prestatario y co-firmante, las reglas de FHA y convencional, y cómo salir del préstamo después."
 publishDate: 2026-11-06T14:00:00Z
 category: "Comprar"

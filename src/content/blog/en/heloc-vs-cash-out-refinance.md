@@ -1,5 +1,6 @@
 ---
 title: "HELOC or cash-out refinance? How to pull equity without giving up your low rate"
+seoTitle: 'HELOC or cash-out refinance? Pull equity, keep your low rate'
 description: "Both turn your home equity into cash, but they work in opposite ways. On a $250,000 balance at 3.5%, the wrong choice can cost you thousands a year in interest. Here is how each one works, a side-by-side example, the limits, and when each one wins."
 publishDate: 2026-11-02T13:00:00Z
 category: "Refinance"

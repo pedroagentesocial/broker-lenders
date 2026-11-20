@@ -1,5 +1,6 @@
 ---
 title: "Fixed or adjustable rate? What an ARM really saves — and the worst case nobody shows you"
+seoTitle: 'Fixed or adjustable rate? What an ARM really saves'
 description: "An adjustable-rate mortgage can save you about $190 a month for five years on a $400,000 loan. Here is exactly how it resets, the caps that limit it, the worst-case payment, and the one question that decides which loan is right for you."
 publishDate: 2026-10-26T13:00:00Z
 category: "Loan options"

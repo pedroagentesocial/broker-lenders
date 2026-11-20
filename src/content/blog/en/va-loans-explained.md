@@ -1,5 +1,6 @@
 ---
 title: "VA loans, explained: the funding fee, your entitlement and why there's no mortgage insurance"
+seoTitle: 'VA loans explained: funding fee, entitlement and no PMI'
 description: "A VA loan can mean no down payment and no monthly mortgage insurance, but it has a one-time funding fee of 1.25% to 3.3%, unless you're exempt. Here is the full fee table, how entitlement works, what residual income is, and how to get your certificate of eligibility."
 publishDate: 2026-11-12T13:00:00Z
 category: "Loan options"

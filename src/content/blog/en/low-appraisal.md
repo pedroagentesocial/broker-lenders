@@ -1,5 +1,6 @@
 ---
 title: "The appraisal came in low. Here are your five options — with the math on each"
+seoTitle: 'Low appraisal? Your five options, with the math on each'
 description: "When a home appraises for less than you offered, the lender lends on the lower number and the gap lands on you. Here is how that gap is calculated, the protections FHA and VA buyers have, how to challenge the value, and how to decide between renegotiating, paying, or walking away."
 publishDate: 2026-10-30T13:00:00Z
 category: "Process"

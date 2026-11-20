@@ -1,5 +1,6 @@
 ---
 title: "Precalificación vs preaprobación: por qué una hace que acepten tu oferta y la otra no"
+seoTitle: 'Precalificación vs preaprobación: cuál hace que acepten tu oferta'
 description: "Las dos producen una carta. Solo una significa que un prestamista revisó algo. Aquí está qué se verifica en cada nivel, cuánto tarda, y qué hace que un agente de venta tome tu oferta en serio."
 publishDate: 2026-06-29T13:00:00Z
 category: "El proceso"

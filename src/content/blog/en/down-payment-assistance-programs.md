@@ -1,5 +1,6 @@
 ---
 title: "Down payment assistance: how the programs work, the catches, and where to start in Utah, Idaho, Nevada, California, Texas, Florida and Colorado"
+seoTitle: 'Down payment assistance: how programs work and where to start'
 description: "State housing agencies offer grants, deferred loans and tax credits that can cover much of your down payment. Here are the main types, how they combine with FHA and conventional loans, what to ask before you sign, and the official agency for each state we serve."
 publishDate: 2026-11-12T16:00:00Z
 category: "Buying"

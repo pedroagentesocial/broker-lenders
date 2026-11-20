@@ -1,5 +1,6 @@
 ---
 title: "Assumable mortgages: how to take over a seller's low rate, and the gap that stops most buyers"
+seoTitle: 'Assumable mortgages: how to take over a seller''s low rate'
 description: "FHA and VA loans can be transferred to a qualified buyer, rate included. On a $450,000 home, that can mean a far lower payment, but you have to cover the seller's equity. Here is who can assume, what it costs, and the risks for both sides."
 publishDate: 2026-11-05T13:00:00Z
 category: "Buying"

@@ -14,6 +14,8 @@ const blog = defineCollection({
   loader: glob({ base: './src/content/blog', pattern: '**/*.md' }),
   schema: z.object({
     title: z.string(),
+    /** Título corto para Google y la pestaña cuando `title` pasa de ~65 caracteres. El H1 y el schema usan `title`. */
+    seoTitle: z.string().max(65).optional(),
     description: z.string(),
     /** Momento de publicación. Antes de esa fecha el artículo no existe para el visitante. */
     publishDate: z.coerce.date(),

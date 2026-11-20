@@ -1,5 +1,6 @@
 ---
 title: "Second home or investment property? Why the label changes your down payment, your rate and your approval"
+seoTitle: 'Second home or investment property? Why the label matters'
 description: "The same $400,000 house can take $20,000, $40,000 or $60,000 down, depending on how you'll use it. Here are the rules for primary homes, second homes and rentals, what you can and can't rent out, and the 2-4 unit strategy that lets you start with 3.5% down."
 publishDate: 2026-11-09T14:00:00Z
 category: "Buying"

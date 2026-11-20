@@ -1,5 +1,6 @@
 ---
 title: "¿Tasa fija o ajustable? Lo que de verdad ahorra un ARM — y el peor escenario que nadie te enseña"
+seoTitle: '¿Tasa fija o ajustable? Lo que de verdad ahorra un ARM'
 description: "Una hipoteca de tasa ajustable puede ahorrarte unos $190 al mes durante cinco años en un préstamo de $400,000. Aquí está cómo se reajusta, los topes que la limitan, el pago en el peor escenario y la pregunta que decide cuál préstamo te conviene."
 publishDate: 2026-10-26T13:00:00Z
 category: "Opciones de préstamo"

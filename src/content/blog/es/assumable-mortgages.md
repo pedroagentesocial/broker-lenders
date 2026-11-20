@@ -1,5 +1,6 @@
 ---
 title: "Hipotecas asumibles: cómo quedarte con la tasa baja del vendedor, y la diferencia que frena a casi todos"
+seoTitle: 'Hipotecas asumibles: cómo quedarte con la tasa baja del vendedor'
 description: "Los préstamos FHA y VA se pueden traspasar a un comprador que califique, con todo y tasa. En una casa de $450,000 eso puede significar un pago mucho más bajo, pero tienes que cubrir la plusvalía del vendedor. Aquí está quién puede asumir, cuánto cuesta y los riesgos para ambos lados."
 publishDate: 2026-11-05T13:00:00Z
 category: "Comprar"

@@ -1,5 +1,6 @@
 ---
 title: "¿Atrasado con tu hipoteca? Qué pasa día por día, tus protecciones federales y las opciones para conservar tu casa"
+seoTitle: '¿Atrasado con tu hipoteca? Tus protecciones y opciones'
 description: "Por lo general, el administrador del préstamo no puede iniciar una ejecución hipotecaria hasta que tengas más de 120 días de atraso, y las reglas federales lo obligan a contactarte y revisar si te puede ayudar. Aquí está el calendario, qué significan de verdad la indulgencia y la modificación del préstamo, y las estafas que hay que evitar."
 publishDate: 2026-11-12T15:00:00Z
 category: "El proceso"

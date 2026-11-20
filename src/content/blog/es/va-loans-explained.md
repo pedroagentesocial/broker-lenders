@@ -1,5 +1,6 @@
 ---
 title: "Préstamos VA explicados: la cuota de financiamiento, tu derecho y por qué no hay seguro hipotecario"
+seoTitle: 'Préstamos VA explicados: cuota de financiamiento y sin PMI'
 description: "Un préstamo VA puede significar cero enganche y nada de seguro hipotecario mensual, pero tiene una cuota única de financiamiento de 1.25% a 3.3%, a menos que estés exento. Aquí está la tabla completa, cómo funciona el derecho (entitlement), qué es el ingreso residual y cómo sacar tu certificado de elegibilidad."
 publishDate: 2026-11-12T13:00:00Z
 category: "Opciones de préstamo"

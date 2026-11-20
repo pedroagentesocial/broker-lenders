@@ -74,7 +74,7 @@ export const blogUi = {
     indexTitle: 'Guías hipotecarias que sí te explican los números',
     indexSubtitle:
       'Guías cortas y visuales sobre cómo funcionan de verdad los préstamos de vivienda, escritas por Pedro Lira, oficial de préstamos con licencia NMLS #318973. Sin tecnicismos y sin venta: las mismas cuentas que hacemos con nuestros clientes.',
-    indexMetaTitle: 'Blog Hipotecario — Guías de Préstamos de Vivienda | Broker Lenders',
+    indexMetaTitle: 'Blog Hipotecario: Guías de Préstamos para Casa | Broker Lenders',
     indexMetaDescription:
       'Guías visuales y en español claro sobre enganche, puntaje de crédito, costos de cierre, seguro hipotecario, precalificación y refinanciamiento.',
     newBadge: 'Nuevo',

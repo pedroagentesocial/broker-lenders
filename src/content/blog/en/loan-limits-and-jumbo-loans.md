@@ -1,5 +1,6 @@
 ---
 title: "2026 loan limits: when your mortgage becomes a jumbo loan, and how to stay under the line"
+seoTitle: '2026 loan limits: when your mortgage becomes a jumbo loan'
 description: "In 2026 the conforming limit is $832,750 in most of the country and up to $1,249,125 in high-cost areas. Go one dollar over and you're in jumbo territory. Here are the conventional, FHA and VA limits, what changes with a jumbo loan, and how to plan around the line."
 publishDate: 2026-11-12T14:00:00Z
 category: "Loan options"

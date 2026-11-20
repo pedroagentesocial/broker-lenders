@@ -1,5 +1,6 @@
 ---
 title: "No necesitas 20% de enganche: esto es lo que cada préstamo pide de verdad"
+seoTitle: 'No necesitas 20% de enganche: lo que pide cada préstamo'
 description: "La regla del 20% le cuesta años de espera a mucha gente, sin razón. Aquí está el enganche mínimo real de cada programa, cuál es el intercambio, y de dónde puede salir legalmente ese dinero."
 publishDate: 2026-08-17T13:00:00Z
 category: "Comprar"

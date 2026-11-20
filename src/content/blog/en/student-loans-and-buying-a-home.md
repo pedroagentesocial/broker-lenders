@@ -1,5 +1,6 @@
 ---
 title: "Student loans and buying a home: the payment the lender counts isn't always the one you pay"
+seoTitle: 'Student loans and buying a home: the payment lenders count'
 description: "Deferred, on an income-driven plan, or paying $0? Each loan program counts your student debt differently — and on $60,000 of loans the difference can be close to $95,000 of buying power. Here are the exact rules for conventional, FHA and VA loans."
 publishDate: 2026-10-28T13:00:00Z
 category: "Credit"

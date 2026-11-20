@@ -1,5 +1,6 @@
 ---
 title: "Pre-qualification vs pre-approval: why one gets your offer accepted and the other doesn't"
+seoTitle: 'Pre-qualification vs pre-approval: which gets offers accepted'
 description: "Both produce a letter. Only one of them means a lender checked anything. Here is what actually gets verified at each level, how long it takes, and what makes a listing agent take your offer seriously."
 publishDate: 2026-06-29T13:00:00Z
 category: "Process"

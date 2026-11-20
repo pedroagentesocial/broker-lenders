@@ -1,5 +1,6 @@
 ---
 title: "¿Cuánta casa puedes pagar realmente? Los tres números que lo deciden"
+seoTitle: '¿Cuánta casa puedes pagar? Los tres números que lo deciden'
 description: "Los prestamistas no adivinan. Corren tres números: tu relación deuda-ingreso, el efectivo que puedes poner sobre la mesa y el pago con el que puedes vivir. Aquí está cómo funciona cada uno, con las cuentas."
 publishDate: 2026-07-27T13:00:00Z
 category: "Comprar"

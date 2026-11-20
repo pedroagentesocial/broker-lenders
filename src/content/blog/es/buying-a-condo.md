@@ -1,5 +1,6 @@
 ---
 title: "Comprar un condominio: por qué el edificio también tiene que ser aprobado"
+seoTitle: 'Comprar un condominio: por qué el edificio debe ser aprobado'
 description: "Con un condominio, el prestamista te revisa a ti y a todo el edificio. Aquí está qué puede hacer que rechacen un proyecto, cómo las cuotas de HOA te quitan unos $63,000 de poder de compra, los cambios de reglas de 2026 y 2027, y qué pedir antes de hacer una oferta."
 publishDate: 2026-11-04T13:00:00Z
 category: "Comprar"

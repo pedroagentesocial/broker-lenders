@@ -1,5 +1,6 @@
 ---
 title: "Convencional, FHA, VA, USDA o jumbo: cuál préstamo es realmente el tuyo"
+seoTitle: 'Convencional, FHA, VA, USDA o jumbo: cuál préstamo es el tuyo'
 description: "Cinco programas de préstamo, una casa, cinco pagos mensuales distintos. Un mapa de decisión, una comparación lado a lado y el factor que decide más seguido que cualquier otro: cuántos años pagas seguro hipotecario."
 publishDate: 2026-09-07T13:00:00Z
 category: "Opciones de préstamo"

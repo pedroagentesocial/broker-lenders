@@ -1,5 +1,6 @@
 ---
 title: "15-year or 30-year mortgage? And why paying a little extra might beat both"
+seoTitle: '15-year or 30-year mortgage? And why paying extra might win'
 description: "On a $350,000 loan, a 15-year term saves about $273,000 in interest but costs $694 more a month. Here is the full comparison, what extra payments really do, the price of keeping your flexibility, and when you shouldn't pay ahead at all."
 publishDate: 2026-11-04T14:00:00Z
 category: "Costs"
