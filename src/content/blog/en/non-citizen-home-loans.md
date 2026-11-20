@@ -1,5 +1,6 @@
 ---
 title: "Buying a home without U.S. citizenship: green card, work visa, DACA or ITIN, and which loans are still open to you"
+seoTitle: 'Mortgages for non-citizens: green card, work visa, DACA or ITIN'
 description: "You don't have to be a U.S. citizen to get a mortgage, but your immigration status decides which loans you can use. Since May 2025, FHA only insures loans to citizens, green card holders and citizens of three Pacific nations. Here is what FHA, Fannie Mae and USDA require, what changed, and what to ask a lender if you have a work visa, DACA or only an ITIN."
 publishDate: 2026-11-20T16:00:00Z
 category: "Buying"

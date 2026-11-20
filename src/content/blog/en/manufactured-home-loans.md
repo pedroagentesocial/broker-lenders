@@ -1,5 +1,6 @@
 ---
 title: "Manufactured home loans: mortgage or chattel, the FHA and Fannie Mae requirements, and why owning the land changes everything"
+seoTitle: 'Manufactured home loans: mortgage or chattel, FHA and Fannie Mae'
 description: "A manufactured home can be financed like a house or like a vehicle, and the difference shows up in your rate, your protections and your chances of approval. Here is what makes a manufactured home eligible for an FHA or conventional mortgage, the FHA Title I loan limits, and what the CFPB found about chattel loans."
 publishDate: 2026-11-20T15:00:00Z
 category: "Loan options"

@@ -1,5 +1,6 @@
 ---
 title: "Comprar tu próxima casa antes de vender la que tienes: dos pagos, préstamos puente y las reglas para rentar la anterior"
+seoTitle: 'Comprar antes de vender: dos pagos, préstamo puente y rentar'
 description: "Cambiarte de casa es un problema de tiempos. Mientras tu casa actual no se venda, el prestamista puede contar los dos pagos, y tu plusvalía sigue atrapada en la casa anterior. Aquí está cuándo se puede dejar fuera el pago anterior, cómo funcionan el dinero de la venta y los préstamos puente, las reglas de Fannie Mae y la FHA para convertir la casa anterior en renta y la condición del contrato de Utah para comprar sujeto a una venta."
 publishDate: 2026-11-20T14:00:00Z
 category: "Comprar"

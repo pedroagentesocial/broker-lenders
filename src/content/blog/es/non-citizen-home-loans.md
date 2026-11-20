@@ -1,5 +1,6 @@
 ---
 title: "Comprar casa sin ser ciudadano de EE.UU.: green card, visa de trabajo, DACA o ITIN, y qué préstamos siguen abiertos para ti"
+seoTitle: 'Hipoteca sin ser ciudadano: green card, visa, DACA o ITIN'
 description: "No tienes que ser ciudadano para conseguir una hipoteca, pero tu estatus migratorio decide qué préstamos puedes usar. Desde mayo de 2025, la FHA sólo asegura préstamos a ciudadanos, residentes permanentes y ciudadanos de tres países del Pacífico. Aquí está lo que piden la FHA, Fannie Mae y USDA, qué cambió y qué preguntarle a un prestamista si tienes visa de trabajo, DACA o sólo un ITIN."
 publishDate: 2026-11-20T16:00:00Z
 category: "Comprar"

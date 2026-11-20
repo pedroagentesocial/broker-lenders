@@ -1,5 +1,6 @@
 ---
 title: "Buying your next home before selling the one you have: two payments, bridge loans and the rules for renting out the old one"
+seoTitle: 'Buying before selling: two payments, bridge loans and rentals'
 description: "Moving up is a timing problem. Until your current home sells, a lender may count both payments, and your equity is stuck in the old house. Here is when the old payment can be left out, how sale proceeds and bridge loans work, the Fannie Mae and FHA rules for turning the old home into a rental, and the Utah contract condition for buying subject to a sale."
 publishDate: 2026-11-20T14:00:00Z
 category: "Buying"

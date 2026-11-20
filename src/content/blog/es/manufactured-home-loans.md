@@ -1,5 +1,6 @@
 ---
 title: "Préstamos para casas prefabricadas: hipoteca o préstamo chattel, los requisitos de la FHA y Fannie Mae, y por qué ser dueño del terreno lo cambia todo"
+seoTitle: 'Préstamos para casas prefabricadas: hipoteca o chattel'
 description: "Una casa prefabricada (manufactured home) se puede financiar como una casa o como un vehículo, y la diferencia se nota en tu tasa, tus protecciones y tus probabilidades de aprobación. Aquí está lo que hace que una casa prefabricada califique para una hipoteca FHA o convencional, los límites del programa Title I de la FHA y lo que encontró el CFPB sobre los préstamos chattel."
 publishDate: 2026-11-20T15:00:00Z
 category: "Opciones de préstamo"

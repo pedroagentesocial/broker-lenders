@@ -1,5 +1,6 @@
 ---
 title: "La inspección de la casa: qué revisa, por qué el avalúo no la reemplaza y el plazo de Utah que protege tu depósito de buena fe"
+seoTitle: 'La inspección de la casa: qué revisa y el plazo de Utah'
 description: "El avalúo protege al prestamista. La inspección te protege a ti, pero sólo si la pides y actúas antes de tu plazo de due diligence. Aquí está lo que cubre una inspección, la prueba de radón que conviene agregar en Utah y cómo el contrato de compra de Utah decide si te devuelven tu depósito de buena fe."
 publishDate: 2026-11-20T13:00:00Z
 category: "El proceso"

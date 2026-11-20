@@ -1,5 +1,6 @@
 ---
 title: "The home inspection: what it checks, why the appraisal doesn't replace it, and the Utah deadline that protects your earnest money"
+seoTitle: 'Home inspection: what it checks and the Utah deadline'
 description: "The appraisal protects the lender. The home inspection protects you, but only if you order it and act on it before your due diligence deadline. Here is what an inspection covers, the radon test most Utah buyers should add, and how the Utah purchase contract decides whether you get your earnest money back."
 publishDate: 2026-11-20T13:00:00Z
 category: "Process"
