@@ -8,8 +8,8 @@ kicker: "Documents"
 readingMinutes: 8
 keywords: "mortgage documents needed, self employed mortgage, qualifying income self employed, bank statements mortgage, large deposit letter of explanation, W2 mortgage documents, Schedule C add backs"
 sources:
-  - label: "Fannie Mae Selling Guide B3-3.2-01 — Underwriting Factors and Documentation for a Self-Employed Borrower"
-    url: "https://selling-guide.fanniemae.com/sel/b3-3.2-01/underwriting-factors-and-documentation-self-employed-borrower"
+  - label: "Fannie Mae Selling Guide B3-3.5-01 — Underwriting Factors and Documentation for a Self-Employed Borrower"
+    url: "https://selling-guide.fanniemae.com/sel/b3-3.5-01/underwriting-factors-and-documentation-self-employed-borrower"
   - label: "Fannie Mae Selling Guide B3-6-02 — Debt-to-Income Ratios"
     url: "https://selling-guide.fanniemae.com/sel/b3-6-02/debt-income-ratios"
   - label: "CFPB — Prepare to shop for a mortgage"
