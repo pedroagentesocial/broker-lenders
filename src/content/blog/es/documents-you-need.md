@@ -8,8 +8,8 @@ kicker: "Documentos"
 readingMinutes: 8
 keywords: "documentos para hipoteca, hipoteca para trabajador independiente, ingreso calificable independiente, estados de banco hipoteca, carta de explicación depósito grande, documentos W2 hipoteca, deducciones Schedule C"
 sources:
-  - label: "Fannie Mae Selling Guide B3-3.2-01 — Documentación para prestatarios independientes"
-    url: "https://selling-guide.fanniemae.com/sel/b3-3.2-01/underwriting-factors-and-documentation-self-employed-borrower"
+  - label: "Fannie Mae Selling Guide B3-3.5-01 — Documentación para prestatarios independientes"
+    url: "https://selling-guide.fanniemae.com/sel/b3-3.5-01/underwriting-factors-and-documentation-self-employed-borrower"
   - label: "Fannie Mae Selling Guide B3-6-02 — Relaciones deuda-ingreso"
     url: "https://selling-guide.fanniemae.com/sel/b3-6-02/debt-income-ratios"
   - label: "CFPB — Prepárate para buscar una hipoteca"
