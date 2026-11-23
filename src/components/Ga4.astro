@@ -7,8 +7,10 @@
  * Configuración restrictiva a propósito (marcas de salud y finanzas):
  *  - sin señales de Google ni personalización de anuncios;
  *  - la URL se manda sin parámetros (?…) ni ancla (#…);
- *  - solo se miden visitas y clics en "llamar" (click_call). Nunca datos de
- *    formularios ni texto escrito por el visitante.
+ *  - solo se miden visitas, clics en "llamar" (click_call) y WhatsApp
+ *    (click_whatsapp) y envíos exitosos de formularios (generate_lead, con
+ *    el nombre fijo del formulario). Nunca datos de formularios ni texto
+ *    escrito por el visitante.
  * gtag.js llega con la primera interacción o 4 s después de cargar, para no
  * frenar la página; lo anterior espera en dataLayer y se envía igual.
  */
@@ -28,10 +30,12 @@ const GA4 = import.meta.env.PUBLIC_GA4_ID;
         allow_google_signals: false,
         allow_ad_personalization_signals: false,
       });
-      // Clic en un enlace tel: — sin el número ni datos del visitante.
+      // Clic en un enlace tel: o de WhatsApp — sin el número ni datos del visitante.
       document.addEventListener('click', function (e) {
         var a = e.target instanceof Element ? e.target.closest('a[href^="tel:"]') : null;
         if (a) gtag('event', 'click_call', { page_location: pagina });
+        var wa = e.target instanceof Element ? e.target.closest('a[href^="https://wa.me/"], a[href^="https://api.whatsapp.com/"]') : null;
+        if (wa) gtag('event', 'click_whatsapp', { page_location: pagina });
       });
       var cargado = false;
       function cargar() {

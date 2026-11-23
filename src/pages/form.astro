@@ -806,6 +806,10 @@ import WhatsAppFloat from '../components/WhatsAppFloat.astro';
                 try { responseData = JSON.parse(responseText); } catch {}
                 const responseSuccess = response.ok && (responseData.success !== false);
                 if (responseSuccess) {
+                    // Conversión para GA4: solo el nombre fijo del formulario, sin datos de la persona.
+                    if (typeof window.gtag === 'function') {
+                        window.gtag('event', 'generate_lead', { form: 'formulario_2_pasos' });
+                    }
                     // Store submitted data
                     personalInfo.name = name;
                     personalInfo.phone = phone;
