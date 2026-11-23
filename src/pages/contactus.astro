@@ -667,6 +667,11 @@ const recaptchaSiteKey = import.meta.env.PUBLIC_GOOGLE_RECAPTCHA_SITE_KEY ?? '';
 
       try {
         await submitToBackend(fdWithTs);
+        // Conversión para GA4: solo el nombre fijo del formulario, sin datos de la persona.
+        const w = window as unknown as { gtag?: (...args: unknown[]) => void };
+        if (typeof w.gtag === 'function') {
+          w.gtag('event', 'generate_lead', { form: 'contacto' });
+        }
         // Mostrar mensaje éxito con animación (texto ya controlado por i18n)
         // Ocultar mensaje de error si estuviera visible
         errorEl?.classList.add('hidden');
