@@ -117,6 +117,10 @@ no aparece en el header a propósito.
 | `changing-jobs-and-your-mortgage` | 2026-11-23 |
 | `retirement-income-and-your-mortgage` | 2026-11-23 |
 | `buying-a-home-with-solar-panels` | 2026-11-23 |
+| `mortgage-application-denied` | 2026-11-24 |
+| `second-job-and-part-time-income` | 2026-11-24 |
+| `buying-a-home-on-parental-or-medical-leave` | 2026-11-24 |
+| `paying-off-your-mortgage` | 2026-11-24 |
 
 Todas las fechas usan `T13:00:00Z` (7am hora de Utah). Para mover un artículo basta con
 cambiar `publishDate` en el archivo `en/` — no hace falta redeploy si ya está en producción.
