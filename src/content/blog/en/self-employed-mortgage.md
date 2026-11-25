@@ -2,7 +2,7 @@
 title: "Getting a mortgage when you're self-employed: the two-year rule, which tax returns count and how your write-offs shrink your income"
 seoTitle: 'Self-employed mortgage: tax returns, two-year rule, write-offs'
 description: "If you own 25% or more of a business, a lender treats you as self-employed and qualifies you on your tax returns, not your revenue. Fannie Mae usually wants two years of history, accepts 12 months in some cases, and sometimes needs only one year of returns. Here is which returns you need, what gets added back to your income, how K-1 income is handled and what to fix before you apply."
-publishDate: 2026-11-26T13:00:00Z
+publishDate: 2026-11-25T15:00:00Z
 category: "Buying"
 kicker: "Self-employed"
 readingMinutes: 7

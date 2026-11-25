@@ -2,7 +2,7 @@
 title: "Buying a duplex, triplex or fourplex to live in: the down payment, how the rent helps you qualify and FHA's self-sufficiency test"
 seoTitle: 'Buying a duplex or fourplex to live in: down payment and rent'
 description: "If you live in one unit, a two- to four-unit home can be financed as your primary residence, with 5% down on a conventional loan through Fannie Mae's automated system or 3.5% down with FHA. Here is how much down each option needs, how lenders count the rent from the other units, the reserves you'll need and the extra test FHA puts on three- and four-unit homes."
-publishDate: 2026-11-26T14:00:00Z
+publishDate: 2026-11-25T16:00:00Z
 category: "Buying"
 kicker: "2–4 units"
 readingMinutes: 6

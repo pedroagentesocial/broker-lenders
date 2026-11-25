@@ -2,7 +2,7 @@
 title: "Hipoteca cuando trabajas por tu cuenta: la regla de los dos años, qué declaraciones de impuestos cuentan y cómo tus deducciones achican tu ingreso"
 seoTitle: 'Hipoteca si trabajas por tu cuenta: impuestos y deducciones'
 description: "Si eres dueño del 25% o más de un negocio, el prestamista te considera trabajador por cuenta propia y te califica con tus declaraciones de impuestos, no con tus ventas. Fannie Mae normalmente pide dos años de historial, acepta 12 meses en algunos casos y a veces sólo necesita un año de declaraciones. Aquí te explico qué declaraciones necesitas, qué se le suma a tu ingreso, cómo se maneja el ingreso del K-1 y qué arreglar antes de solicitar."
-publishDate: 2026-11-26T13:00:00Z
+publishDate: 2026-11-25T15:00:00Z
 category: "Comprar"
 kicker: "Por cuenta propia"
 readingMinutes: 7

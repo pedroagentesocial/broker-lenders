@@ -2,7 +2,7 @@
 title: "Comprar un dúplex, tríplex o cuádruplex para vivir ahí: el enganche, cómo te ayuda la renta a calificar y la prueba de autosuficiencia de FHA"
 seoTitle: 'Comprar un dúplex o cuádruplex para vivir: enganche y renta'
 description: "Si vives en una de las unidades, una propiedad de dos a cuatro unidades se puede financiar como tu residencia principal, con 5% de enganche en un préstamo convencional aprobado por el sistema automatizado de Fannie Mae o con 3.5% en FHA. Aquí te explico cuánto enganche pide cada opción, cómo cuentan los prestamistas la renta de las otras unidades, las reservas que vas a necesitar y la prueba extra que pone FHA a las propiedades de tres y cuatro unidades."
-publishDate: 2026-11-26T14:00:00Z
+publishDate: 2026-11-25T16:00:00Z
 category: "Comprar"
 kicker: "De 2 a 4 unidades"
 readingMinutes: 6
