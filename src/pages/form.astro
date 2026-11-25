@@ -825,27 +825,15 @@ import Ga4 from '../components/Ga4.astro';
                         showStep(2);
                     }, 1200);
                 } else {
-                    const isHtmlResponse = typeof responseText === 'string' && /<!doctype html|<html/i.test(responseText);
-                    const apiMessages = {
-                        es: isHtmlResponse
-                            ? 'El servidor devolvió HTML. Esto indica que send-email.php no se está ejecutando como PHP.'
-                            : 'No se pudo enviar en este momento. Revisa el servicio de correo.',
-                        en: isHtmlResponse
-                            ? 'The server returned HTML. This means send-email.php is not running as PHP.'
-                            : 'We could not submit right now. Please check the email service.'
-                    };
-                    const detailText = responseData && (responseData.detail || responseData.message)
-                        ? ` ${responseData.detail || responseData.message}`
-                        : responseText ? ` ${responseText.slice(0, 200)}` : '';
-                    showSubmitError(`${apiMessages[currentLanguage]}${detailText}`);
+                    // El envío no está configurado (send-email.php no existe en Vercel).
+                    // El detalle técnico va a la consola; a la persona se le da otra vía
+                    // para no perder el lead: WhatsApp con sus datos ya escritos, o llamar.
+                    console.error('Form delivery failed:', response.status, responseText.slice(0, 200));
+                    showContactFallback(name, phone);
                 }
             } catch (error) {
                 console.error('Error submitting form:', error);
-                const errorMessages = {
-                    es: 'No se pudo conectar con el servicio de envío. Revisa tu conexión.',
-                    en: 'Could not reach the delivery service. Check your connection.'
-                };
-                showSubmitError(errorMessages[currentLanguage]);
+                showContactFallback(name, phone);
             } finally {
                 // Remove loading state only if not successful
                 if (!successCompleted) {
@@ -866,6 +854,52 @@ import Ga4 from '../components/Ga4.astro';
             submitBtn.disabled = true;
             submitBtn.style.display = 'none';
             successDiv.classList.add('show');
+        }
+
+        // Respaldo cuando el formulario no puede entregar: botones de WhatsApp
+        // (mensaje con nombre y teléfono ya escritos) y de llamar. Se arma con
+        // nodos del DOM, nunca con innerHTML, porque lleva texto del visitante.
+        function showContactFallback(name, phone) {
+            const texts = {
+                es: {
+                    intro: 'No pudimos enviar tu solicitud por aquí. Para no perderla, mándanosla por WhatsApp (ya va escrita) o llámanos:',
+                    wa: 'Enviar por WhatsApp',
+                    call: 'Llamar al (385) 308-0273',
+                    msg: `Hola Broker Lenders, soy ${name}. Quiero que me contacten sobre un préstamo. Mi teléfono es ${phone}.`
+                },
+                en: {
+                    intro: "We couldn't send your request from here. So it doesn't get lost, send it to us on WhatsApp (already written) or call us:",
+                    wa: 'Send on WhatsApp',
+                    call: 'Call (385) 308-0273',
+                    msg: `Hi Broker Lenders, I'm ${name}. I'd like to be contacted about a loan. My phone is ${phone}.`
+                }
+            };
+            const t = texts[currentLanguage] || texts.es;
+            const submitError = document.getElementById('submitError');
+            const submitErrorText = document.getElementById('submitErrorText');
+            submitErrorText.textContent = '';
+            const p = document.createElement('span');
+            p.textContent = t.intro;
+            const links = document.createElement('span');
+            links.style.cssText = 'display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:0.5rem';
+            const wa = document.createElement('a');
+            wa.href = 'https://wa.me/13853080273?text=' + encodeURIComponent(t.msg);
+            wa.target = '_blank';
+            wa.rel = 'noopener noreferrer';
+            wa.textContent = t.wa;
+            const call = document.createElement('a');
+            call.href = 'tel:+13853080273';
+            call.textContent = t.call;
+            [wa, call].forEach((a) => {
+                a.style.cssText = 'display:inline-block;padding:0.5rem 0.9rem;border-radius:999px;background:var(--error-color);color:#fff;text-decoration:none;font-weight:600';
+                links.appendChild(a);
+            });
+            const box = document.createElement('span');
+            box.style.cssText = 'display:flex;flex-direction:column';
+            box.appendChild(p);
+            box.appendChild(links);
+            submitErrorText.appendChild(box);
+            submitError.classList.add('show');
         }
 
         function showSubmitError(message) {
