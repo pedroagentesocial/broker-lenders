@@ -121,6 +121,7 @@ no aparece en el header a propósito.
 | `second-job-and-part-time-income` | 2026-11-24 |
 | `buying-a-home-on-parental-or-medical-leave` | 2026-11-24 |
 | `paying-off-your-mortgage` | 2026-11-24 |
+| `fha-loans-explained` | 2026-11-25 |
 
 Todas las fechas usan `T13:00:00Z` (7am hora de Utah). Para mover un artículo basta con
 cambiar `publishDate` en el archivo `en/` — no hace falta redeploy si ya está en producción.
