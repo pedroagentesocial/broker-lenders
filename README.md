@@ -124,6 +124,7 @@ no aparece en el header a propósito.
 | `fha-loans-explained` | 2026-11-25 |
 | `earnest-money-deposit` | 2026-11-25 |
 | `self-employed-mortgage` | 2026-11-26 |
+| `buying-a-multi-unit-home` | 2026-11-26 |
 
 Todas las fechas usan `T13:00:00Z` (7am hora de Utah). Para mover un artículo basta con
 cambiar `publishDate` en el archivo `en/` — no hace falta redeploy si ya está en producción.
