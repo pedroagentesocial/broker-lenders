@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import BlogLegal from '../../components/blog/BlogLegal.astro';
+import BlogPager from '../../components/BlogPager.astro';
 import '../../styles/blog.css';
 import { resolveLang, withLang } from '../../lib/lang';
 import { getPublishedPosts, formatDate } from '../../lib/blog';
@@ -90,9 +91,12 @@ const breadcrumbJsonLd = {
     </section>
   )}
 
+  <!-- Listado paginado: el destacado cuenta como la primera tarjeta, así solo
+       aparece en la página 1 (destacado + 8) y las demás muestran 9. -->
+  <div data-blog-grid>
   <!-- Artículo destacado -->
   {featured && (
-    <section class="pb-12">
+    <section class="pb-12" data-blog-card>
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <a
           href={withLang(`/blog/${featured.slug}/`, lang)}
@@ -129,6 +133,7 @@ const breadcrumbJsonLd = {
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {rest.map((post) => (
             <a
+              data-blog-card
               href={withLang(`/blog/${post.slug}/`, lang)}
               class="group flex flex-col rounded-3xl border border-gray-200 p-7 transition-colors hover:border-gray-900"
             >
@@ -146,9 +151,11 @@ const breadcrumbJsonLd = {
             </a>
           ))}
         </div>
+        <BlogPager locale={lang === 'es' ? 'es' : 'en'} />
       </div>
     </section>
   )}
+  </div>
 
   <!-- CTA -->
   <section class="bg-black py-16 text-white">
