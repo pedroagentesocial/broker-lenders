@@ -128,6 +128,7 @@ no aparece en el header a propósito.
 | `title-insurance-explained` | 2026-11-26 |
 | `apr-vs-interest-rate` | 2026-11-26 |
 | `comparing-loan-estimates` | 2026-11-27 |
+| `homebuyer-education-and-housing-counseling` | 2026-11-27 |
 
 Todas las fechas usan `T13:00:00Z` (7am hora de Utah). Para mover un artículo basta con
 cambiar `publishDate` en el archivo `en/` — no hace falta redeploy si ya está en producción.
